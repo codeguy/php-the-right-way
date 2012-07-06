@@ -231,7 +231,7 @@ $pdo-&gt;query(&quot;SELECT * FROM users WHERE id = &quot; . $_GET['id']); // <-
             <pre>&lt;?php
 $pdo = new PDO('sqlite:users.db');
 $stmt = $pdo-&gt;prepare('SELECT * FROM users WHERE id = :id');
-$stmt-&gt;bindParam(':id', (int)$_GET['id'], PDO::PARARM_INT);
+$stmt-&gt;bindParam(':id', (int)$_GET['id'], PDO::PARAM_INT);
 $stmt-&gt;execute();</pre>
             <p>
                 This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign
