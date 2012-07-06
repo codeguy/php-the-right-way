@@ -2,7 +2,7 @@
 
 ## What?
 
-There's a lot of bad information on the Web (I'm looking at you, W3Schools) that leads new PHP users astray, propagating bad practices and bad code. This must stop. _PHP: The Right Way_ provides an easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoratative tutorials around the Web.
+There's a lot of bad information on the Web (I'm looking at you, W3Schools) that leads new PHP users astray, propagating bad practices and bad code. This must stop. _PHP: The Right Way_ provides an easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative tutorials around the Web.
 
 ## Where?
 
