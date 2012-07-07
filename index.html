@@ -283,11 +283,13 @@ $stmt-&gt;execute();</pre>
                 not have a good way to manage these project dependencies. Even if you managed them manually,
                 you still had to worry about autoloaders. No more.
             </p>
+
+            <h3>Composer and Packagist</h3>
             <p>
                 Composer is a <strong>brilliant</strong> dependency manager for PHP. List your project's
                 dependencies in a <code>composer.json</code> file and, with a few simple commands,
                 Composer will automatically download your project's dependencies and setup autoloading
-                for you. It's quite brilliant.
+                for you.
             </p>
             <p>
                 There are already a lot of PHP libraries that are compatible with Composer, ready
@@ -295,7 +297,7 @@ $stmt-&gt;execute();</pre>
                 the official repository for Composer-compatible PHP libraries.
             </p>
 
-            <h3>How to Install Composer</h3>
+            <h4>How to Install Composer</h4>
             <p>
                 You can install Composer locally (in your current working directory) or globally (e.g. /usr/local/bin).
                 Let's assume you want to install Composer locally. From your project's root directory:
@@ -306,7 +308,7 @@ $stmt-&gt;execute();</pre>
                 to manage your project dependencies.
             </p>
 
-            <h3>How to Define and Install Dependencies</h3>
+            <h4>How to Define and Install Dependencies</h4>
             <p>
                 First, create a <code>composer.json</code> file in the same directory as <code>composer.phar</code>.
                 Here's an example that lists <a href="http://twig.sensiolabs.org">Twig</a> as a project dependency.
@@ -329,9 +331,16 @@ $stmt-&gt;execute();</pre>
             <p>
                 Now you can use your project dependencies, and they'll be autoloaded on demand.
             </p>
+
+            <h3>PEAR</h3>
+            <p>
+                Another veteran package manager is <a href="#">PEAR</a>. It behaves much the same way, and is also
+                worth researching for your projects.
+            </p>
+
             <ul>
                 <li><a href="http://getcomposer.org/doc/00-intro.md">Learn about Composer</a></li>
-                <li><a href="http://packagist.org/">Learn about Packagist</a></li>
+                <li><a href="http://pear.php.net/">Learn about PEAR</a></li>
             </ul>
             <a class="top" href="#top">&uarr; Back to Top</a>
         </section>
