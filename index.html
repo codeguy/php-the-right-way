@@ -290,6 +290,41 @@ $stmt-&gt;execute();</pre>
                 to be used in your project. These "packages" are listed on <a href="http://packagist.org/">Packagist</a>,
                 the official repository for Composer-compatible PHP libraries.
             </p>
+
+            <h3>How to Install Composer</h3>
+            <p>
+                You can install Composer locally (in your current working directory) or globally (e.g. /usr/local/bin).
+                Let's assume you want to install Composer locally. From your project's root directory:
+            </p>
+            <pre>curl -s http://getcomposer.org/installer | php</pre>
+            <p>
+                This will download <code>composer.phar</code> (a PHP binary archive). You can run this with <code>php</code>
+                to manage your project dependencies.
+            </p>
+
+            <h3>How to Define and Install Dependencies</h3>
+            <p>
+                First, create a <code>composer.json</code> file in the same directory as <code>composer.phar</code>.
+                Here's an example that lists <a href="http://twig.sensiolabs.org">Twig</a> as a project dependency.
+            </p>
+            <pre>{
+    "require": {
+        "twig/twig": ">=1.8.0"
+    }
+}</pre>
+            <p>
+                Next, run this command from your project root directory.
+            </p>
+            <pre>php composer.phar install</pre>
+            <p>
+                This will download and install the project dependencies into a <code>vendors/</code> directory.
+                Next, add this line to your application's primary PHP file; this will
+                tell PHP to use Composer's autoloader for your project dependencies.
+            </p>
+            <pre>&lt;?php require 'vendor/autoload.php'; ?&gt;</pre>
+            <p>
+                Now you can use your project dependencies, and they'll be autoloaded on demand.
+            </p>
             <ul>
                 <li><a href="http://getcomposer.org/doc/00-intro.md">Learn about Composer</a></li>
                 <li><a href="http://packagist.org/">Learn about Packagist</a></li>
