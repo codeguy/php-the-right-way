@@ -22,7 +22,7 @@ First, create a `composer.json` file in the same directory as `composer.phar`. H
 
     {
         "require": {
-            "twig/twig": ">=1.8.0"
+            "twig/twig": ">=1.8.0,<2.0-dev"
         }
     }
 
