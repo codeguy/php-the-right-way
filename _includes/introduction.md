@@ -12,6 +12,14 @@ This is a living document and will continue to be updated with more helpful info
 
 Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
 
+## Spread the Word!
+
+_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
+developers know where to find good information!
+
+[See Banner Images][2]
+
 [Back to Top](#top){.top}
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
+[2]: http://www.phptherightway.com/banners.html
