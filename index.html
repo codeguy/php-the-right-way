@@ -183,6 +183,12 @@
                 It is important for you to namespace your code so that it may be used by other developers without
                 fear of colliding with other libraries.
             </p>
+            <p>
+                <strong>Warning:</strong> namespaces are only supported by PHP 5.3 and up. If you are writing code
+                that will be reused by others, it is not a good idea to rely on namespaces for partitioning off
+                your code - especially shared hosting setups may run versions of PHP that do not support this
+                feature yet. It may even break your code.
+            </p>
             <ul>
                 <li><a href="http://php.net/manual/en/language.namespaces.php">Read about Namespaces</a></li>
             </ul>
