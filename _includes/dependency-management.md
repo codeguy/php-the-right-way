@@ -12,7 +12,7 @@ There are already a lot of PHP libraries that are compatible with Composer, read
 
 You can install Composer locally (in your current working directory) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
 
-    curl -s http://getcomposer.org/installer | php
+    > curl -s http://getcomposer.org/installer | php
 
 This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
 
@@ -28,7 +28,7 @@ First, create a `composer.json` file in the same directory as `composer.phar`. H
 
 Next, run this command from your project root directory.
 
-    php composer.phar install
+    > php composer.phar install
 
 This will download and install the project dependencies into a `vendors/` directory. Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
 
