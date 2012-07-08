@@ -100,7 +100,7 @@
                     <li><a href="#code-style-guide">Code Style Guide</a></li>
                     <li><a href="#namespaces">Namespaces</a></li>
                     <li><a href="#input-filtering">Input Filtering</a></li>
-                    <li><a href="#databases-and-pdo">Databases and PDO</a></li>
+                    <li><a href="#databases">Databases and PDO</a></li>
                     <li><a href="#password-hashing">Password Hashing with Bcrypt</a></li>
                     <li><a href="#dependency-management">Dependency Management</a></li>
                     <li><a href="#security">Web Application Security</a></li>
@@ -145,19 +145,20 @@
             <p>
                 The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components.
                 It is common for PHP developers to choose several of these and combine them into a single project. It is
-                important that PHP code adhere (as close as possible) to a common code style to make it easy for developers
-                to mix and match various libraries for their projects.
+                important that PHP code adhere (as close as possible) to a proper code style to make code more readable
+                and easier to work with. Readability is everything.
             </p>
             <p>
                 The <a href="https://github.com/php-fig/fig-standards">Framework Interop Group</a> (a.k.a. PHP Standards Group) has proposed and approved
                 a code style standard — <a href="https://github.com/pmjones/fig-standards/blob/psr-1-style-guide/proposed/PSR-1-basic.md">PSR-1</a>
                 and <a href="https://github.com/pmjones/fig-standards/blob/psr-1-style-guide/proposed/PSR-2-advanced.md">PSR-2</a>. Don't let the
-                funny names confuse you. These two standards are merely a "shared set of rules and expectations about how to
+                funny names confuse you. These two standards are merely a "shared set of rules and expectations about how to properly 
                 format PHP code." That's all.
             </p>
             <p>
-                You should write PHP code that adheres to one or both of these standards so that other developers
-                can easily read and work with your code.
+                While it is a good idea to adhere to defined standards such as the above, it may sometimes be necessary to develop your own style, 
+                to make your code as readable as possible. Don't be afraid to stray from defined standards if it improves your code readability.
+                Just be careful to consider the readability to others, not just to yourself.
             </p>
             <ul>
                 <li><a href="https://github.com/pmjones/fig-standards/blob/psr-1-style-guide/proposed/PSR-1-basic.md">Read about PSR-1</a></li>
@@ -183,6 +184,12 @@
                 It is important for you to namespace your code so that it may be used by other developers without
                 fear of colliding with other libraries.
             </p>
+            <p>
+                <strong>Warning:</strong> namespaces are only supported by PHP 5.3 and up. If you are writing code
+                that will be reused by others, it is not a good idea to rely on namespaces for partitioning off
+                your code - especially shared hosting setups may run versions of PHP that do not support this
+                feature yet. It may even break your code.
+            </p>
             <ul>
                 <li><a href="http://php.net/manual/en/language.namespaces.php">Read about Namespaces</a></li>
             </ul>
@@ -202,7 +209,14 @@
             </p>
             <p>
                 For example, if you accept code from an HTML form, you'll want to use <code>filter_input</code>
-                before inserting the input into a database or inserting the input into an HTML response.
+                after retrieving the data from your database again, to ensure it is properly sanitized before
+                you use it elsewhere. 
+            </p>
+            <p>
+                You should <strong>never</strong> filter input <em>before</em> you insert it to
+                the database. Having filtered data in your database means that the data is mangled
+                by default - which means you cannot decide to filter it differently later on, as you
+                no longer have the original input.
             </p>
             <ul>
                 <li><a href="http://php.net/manual/en/function.filter-var.php">Learn about <code>filter_var</code></a></li>
@@ -211,13 +225,16 @@
             <a class="top" href="#top">&uarr; Back to Top</a>
         </section>
 
-        <section class="content" id="databases-and-pdo">
-            <h2>Databases and PDO</h2>
+        <section class="content" id="databases">
+            <h2>Databases</h2>
+            
             <p>
-                Many times your PHP code will use a database to persist information. If you use a database,
+                Many times your PHP code will use a database to persist information. If you use a database, the best option is to
                 use <code>PDO</code> to talk with it. PDO is a database abstraction library &mdash; (usually) built-into
                 PHP &mdash; that provides a common interface to talk with many different databases.
             </p>
+            
+            <h3>PDO</h3>
             <p>
                 More importantly, <code>PDO</code> allows you to safely inject foreign input (e.g. IDs)
                 into your SQL queries without worrying about database SQL injection attacks. This is possible
@@ -247,6 +264,31 @@ $stmt-&gt;execute();</pre>
             <ul>
                 <li><a href="http://www.php.net/manual/en/book.pdo.php">Learn about PDO</a></li>
             </ul>
+            
+            <h3>Working with mysql_query()</h3>
+            
+            <p>
+		<strong>Important:</strong> This section is only intended to explain how to work with old code. Do <em>not</em>
+		use these functions in your own code.
+            </p>
+            
+            <p>
+		You may end up having to work with older code that still uses <code>mysql_query()</code> to communicate with a MySQL
+		database. As such, it's important to know how to deal with sanitation when using the conventional
+		MySQL library.
+            </p>
+            
+            <p>
+		The <code>mysql_query()</code> function does not do any input filtering. For this, you will need the
+		<code>mysql_real_escape_string()</code> function. Instead of directly using a variable in a query,
+		filter it first. Additionally, always enclose a value in a MySQL query in apostrophes, even if it's
+		a number.
+            </p>
+            
+            <pre>&lt;?php 
+$value = $_POST['name'];
+$safe_value = mysql_real_escape_string($value);
+mysql_query("SELECT * FROM users WHERE `display_name` = '{$safe_value}'"); </pre>
             <a class="top" href="#top">&uarr; Back to Top</a>
         </section>
 
