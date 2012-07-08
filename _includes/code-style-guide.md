@@ -12,5 +12,5 @@ You should write PHP code that adheres to one or both of these standards so that
 [Back to Top](#top){.top}
 
 [1]: https://github.com/php-fig/fig-standards
-[2]: https://github.com/pmjones/fig-standards/blob/psr-1-style-guide/proposed/PSR-1-basic.md
-[3]: https://github.com/pmjones/fig-standards/blob/psr-1-style-guide/proposed/PSR-2-advanced.md
+[2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
+[3]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
