@@ -14,4 +14,4 @@ Help make this website the best resource for new PHP programmers! [Contribute on
 
 [Back to Top](#top){.top}
 
-[1]: https://github.com/codeguy/php-the-right-way
+[1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
