@@ -16,6 +16,9 @@ body{
     line-height: 100px;
     font-weight: normal;
 }
+.site-title a{
+    text-decoration: none;
+}
 .site-slogan{
     font-family: 'Droid Serif';
     font-weight: normal;
