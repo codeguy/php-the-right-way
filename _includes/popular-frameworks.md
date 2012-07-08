@@ -14,11 +14,13 @@ _You do not need to use a framework for every project_. Sometimes, plain PHP is 
 * [CodeIgniter](http://codeigniter.com/)
 * [Zend](http://framework.zend.com/)
 * [Cake PHP](http://cakephp.org/)
+* [Lithium](http://lithify.me/)
 
 ## Micro Frameworks
 
 * [Silex](http://silex.sensiolabs.org/)
 * [Slim](http://www.slimframework.com/)
 * [Fat-Free](http://bcosca.github.com/fatfree/)
+* [Limonade](http://limonade-php.github.com/)
 
 [Back to Top](#top){.top}
