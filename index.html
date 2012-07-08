@@ -202,7 +202,14 @@
             </p>
             <p>
                 For example, if you accept code from an HTML form, you'll want to use <code>filter_input</code>
-                before inserting the input into a database or inserting the input into an HTML response.
+                after retrieving the data from your database again, to ensure it is properly sanitized before
+                you use it elsewhere. 
+            </p>
+            <p>
+                You should <strong>never</strong> filter input <em>before</em> you insert it to
+                the database. Having filtered data in your database means that the data is mangled
+                by default - which means you cannot decide to filter it differently later on, as you
+                no longer have the original input.
             </p>
             <ul>
                 <li><a href="http://php.net/manual/en/function.filter-var.php">Learn about <code>filter_var</code></a></li>
