@@ -15,7 +15,7 @@ This is terrible code. You are inserting a raw query parameter into a SQL query.
     <?php
     $pdo = new PDO('sqlite:users.db');
     $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-    $stmt->bindParam(':id', (int)$_GET['id'], PDO::PARAM_INT);
+    $stmt->bindParam(':id', filter_input(FILTER_GET, 'id', FILTER_SANITIZE_NUMBER_INT), PDO::PARAM_INT);
     $stmt->execute();
 
 This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the database preventing potential SQL injection attacks.
