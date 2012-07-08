@@ -99,7 +99,7 @@
                     <li><a href="#introduction">Introduction</a></li>
                     <li><a href="#code-style-guide">Code Style Guide</a></li>
                     <li><a href="#namespaces">Namespaces</a></li>
-                    <li><a href="#input-filtering">Input Filtering</a></li>
+                    <li><a href="#output-filtering">Output Filtering</a></li>
                     <li><a href="#databases-and-pdo">Databases and PDO</a></li>
                     <li><a href="#password-hashing">Password Hashing with Bcrypt</a></li>
                     <li><a href="#dependency-management">Dependency Management</a></li>
@@ -189,20 +189,38 @@
             <a class="top" href="#top">&uarr; Back to Top</a>
         </section>
 
-        <section class="content" id="input-filtering">
-            <h2>Input Filtering</h2>
+        <section class="content" id="output-filtering">
+            <h2>Output Filtering</h2>
             <p>
-                Never ever (<em>ever</em>) trust foreign input introduced to your PHP code. That leads to dark
-                and dangerous places. Instead, always filter foreign input before you use it in your code.
+                Never ever (<em>ever</em>) trust foreign input when outputing data in your PHP code. That leads
+                to dark and dangerous places. Instead, always filter foreign input before you use it in your code.
             </p>
             <p>
+                It is easy to be short sighted when thinking what is a foreign input and written output. Form data
+                is of course foreign input as it is provided by an user of your web application, but like is so
+                almost all HTTP request data originating from the user, data obtained from third party RSS feeds
+                or web services, uploaded or downloaded files and else.
+            </p>
+            <p>
+                This foreign input often ends in the output. Most basic case is that you are writing data as
+                part of a page content. Or it may be included in response HTTP header, filepath that you want
+                to access, shell command you want to execute or SQL statement for the database.
+            </p>
+            <p>
+                You must not trust foreign input, you need to filter it so it is guaranted that only safe input
+                is included in the output. Not filtering your output leads to many types of security attacks, most
+                popular ones being Cross-site scripting or SQL Injections.
+            </p>
+            <p>            
                 PHP provides the <code>filter_var</code> and <code>filter_input</code> functions to help
                 you do this. These two functions can sanitize text, verify formats (e.g. email addresses),
-                and escape characters.
+                and escape characters. Other kinds of outputs may require more context sensitive filtering.
             </p>
             <p>
                 For example, if you accept code from an HTML form, you'll want to use <code>filter_input</code>
-                before inserting the input into a database or inserting the input into an HTML response.
+                before inserting the input into an HTML response. If you know you are going to use this data
+                only for this, you may save some computation and save (cache) the filtered data to the database
+                so you do not need to filter it each time.
             </p>
             <ul>
                 <li><a href="http://php.net/manual/en/function.filter-var.php">Learn about <code>filter_var</code></a></li>
