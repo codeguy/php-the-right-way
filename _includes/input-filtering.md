@@ -1,6 +1,6 @@
 # Input Filtering
 
-Never ever (ever) trust foreign input introduced to your PHP code. That lead's to dark and dangerous places. Instead, always filter foreign input before you use it in your code.
+Never ever (ever) trust foreign input introduced to your PHP code. That leads to dark and dangerous places. Instead, always filter foreign input before you use it in your code.
 
 PHP provides the `filter_var` and `filter_input` functions to help you do this. These two functions can sanitize text, verify formats (e.g. email addresses), and escape characters.
 
