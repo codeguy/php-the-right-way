@@ -1,6 +1,6 @@
 # Code Style Guide
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for PHP developers to choose several of these and combine them into a single project. Is is important that PHP code adhere (as close as possible) to a common code style to make it easy for developers to mix and match various libraries for their projects.
+The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere (as close as possible) to a common code style to make it easy for developers to mix and match various libraries for their projects.
 
 The [Framework Interop Group][1] (a.k.a. PHP Standards Group) has proposed and approved a code style standard — [PSR-1][2] and [PSR-2][3]. Don't let the funny names confuse you. These two standards are merely a "shared set of rules and expectations about how to format PHP code." That's all.
 
