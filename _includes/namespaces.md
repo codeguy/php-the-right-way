@@ -6,8 +6,12 @@ _Namespaces_ solve this problem. As described in the PHP reference manual, names
 
 It is important for you to namespace your code so that it may be used by other developers without fear of colliding with other libraries.
 
+[PSR-0][2] defines how you should structure your class name to achieve autoloader interoperability.
+
 * [Read about Namespaces][1]
+* [Read about PSR-0][2]
 
 [Back to Top](#top){.top}
 
 [1]: http://php.net/manual/en/language.namespaces.php
+[2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
