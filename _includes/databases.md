@@ -8,13 +8,13 @@ Let's assume a PHP script receives a numeric ID as a query parameter. This ID sh
 
     <?php
     $pdo = new PDO('sqlite:users.db');
-    $pdo->query("SELECT * FROM users WHERE id = " . $_GET['id']); // <-- NO!
+    $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 
 This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a heartbeat. Instead, you should sanitize the ID input using PDO bound parameters.
 
     <?php
     $pdo = new PDO('sqlite:users.db');
-    $stmt = $pdo->prepare('SELECT * FROM users WHERE id = :id');
+    $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
     $stmt->bindParam(':id', (int)$_GET['id'], PDO::PARAM_INT);
     $stmt->execute();
 
