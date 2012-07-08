@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% capture introduction_content %}{% include introduction.md %}{% endcapture %}
+{{ introduction_content|markdownify }}
+
+{% capture codestyleguide_content %}{% include code-style-guide.md %}{% endcapture %}
+{{ codestyleguide_content|markdownify }}
+
+{% capture namespaces_content %}{% include namespaces.md %}{% endcapture %}
+{{ namespaces_content|markdownify }}
+
+{% capture inputfiltering_content %}{% include input-filtering.md %}{% endcapture %}
+{{ inputfiltering_content|markdownify }}
+
+{% capture databases_content %}{% include databases.md %}{% endcapture %}
+{{ databases_content|markdownify }}
+
+{% capture passwords_content %}{% include passwords.md %}{% endcapture %}
+{{ passwords_content|markdownify }}
+
+{% capture dependencies_content %}{% include dependency-management.md %}{% endcapture %}
+{{ dependencies_content|markdownify }}
+
+{% capture security_content %}{% include web-application-security.md %}{% endcapture %}
+{{ security_content|markdownify }}
+
+{% capture frameworks_content %}{% include popular-frameworks.md %}{% endcapture %}
+{{ frameworks_content|markdownify }}
+
+{% capture links_content %}{% include links-and-resources.md %}{% endcapture %}
+{{ links_content|markdownify }}
