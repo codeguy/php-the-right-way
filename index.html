@@ -225,13 +225,16 @@
             <a class="top" href="#top">&uarr; Back to Top</a>
         </section>
 
-        <section class="content" id="databases-and-pdo">
-            <h2>Databases and PDO</h2>
+        <section class="content" id="databases">
+            <h2>Databases</h2>
+            
             <p>
-                Many times your PHP code will use a database to persist information. If you use a database,
+                Many times your PHP code will use a database to persist information. If you use a database, the best option is to
                 use <code>PDO</code> to talk with it. PDO is a database abstraction library &mdash; (usually) built-into
                 PHP &mdash; that provides a common interface to talk with many different databases.
             </p>
+            
+            <h3>PDO</h3>
             <p>
                 More importantly, <code>PDO</code> allows you to safely inject foreign input (e.g. IDs)
                 into your SQL queries without worrying about database SQL injection attacks. This is possible
@@ -261,6 +264,31 @@ $stmt-&gt;execute();</pre>
             <ul>
                 <li><a href="http://www.php.net/manual/en/book.pdo.php">Learn about PDO</a></li>
             </ul>
+            
+            <h3>Working with mysql_query()</h3>
+            
+            <p>
+		<strong>Important:</strong> This section is only intended to explain how to work with old code. Do <em>not</em>
+		use these functions in your own code.
+            </p>
+            
+            <p>
+		You may end up having to work with older code that still uses <code>mysql_query()</code> to communicate with a MySQL
+		database. As such, it's important to know how to deal with sanitation when using the conventional
+		MySQL library.
+            </p>
+            
+            <p>
+		The <code>mysql_query()</code> function does not do any input filtering. For this, you will need the
+		<code>mysql_real_escape_string()</code> function. Instead of directly using a variable in a query,
+		filter it first. Additionally, always enclose a value in a MySQL query in apostrophes, even if it's
+		a number.
+            </p>
+            
+            <pre>&lt;?php 
+$value = $_POST['name'];
+$safe_value = mysql_real_escape_string($value);
+mysql_query("SELECT * FROM users WHERE `display_name` = '{$safe_value}'"); </pre>
             <a class="top" href="#top">&uarr; Back to Top</a>
         </section>
 
