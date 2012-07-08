@@ -6,7 +6,7 @@ description: "Spread the word! Use these banner to let new PHP programmers know 
 
 # Web Banners
 
-Spread the word! Use these banner to let new PHP programmers know about _PHP: The Right Way_.
+Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers where to find good information.
 
 ## Button 1 (120x90)
 
