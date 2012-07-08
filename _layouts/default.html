@@ -31,16 +31,9 @@
             <div class="site-slogan">The Right Way.</div>
             <nav>
                 <ul class="toc">
-                    <li><a href="#introduction">Introduction</a></li>
-                    <li><a href="#code_style_guide">Code Style Guide</a></li>
-                    <li><a href="#namespaces">Namespaces</a></li>
-                    <li><a href="#input_filtering">Input Filtering</a></li>
-                    <li><a href="#databases_and_pdo">Databases and PDO</a></li>
-                    <li><a href="#password_hashing_with_bcrypt">Password Hashing with Bcrypt</a></li>
-                    <li><a href="#dependency_management">Dependency Management</a></li>
-                    <li><a href="#web_application_security">Web Application Security</a></li>
-                    <li><a href="#popular_frameworks">Popular Frameworks</a></li>
-                    <li><a href="#links_and_resources">Links &amp; Resources</a></li>
+                    {% for post in site.posts reversed %}
+                        <li><a href="#{{ post.title|downcase|replace:' ','_' }}">{{ post.title }}</a></li>
+                    {% endfor %}
                 </ul>
             </nav>
             <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.phptherightway.com/" data-size="large" data-hashtags="php">Tweet</a>
