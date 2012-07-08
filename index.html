@@ -26,6 +26,9 @@ layout: default
 {% capture security_content %}{% include web-application-security.md %}{% endcapture %}
 {{ security_content|markdownify }}
 
+{% capture cli_content %}{% include command-line-interface.md %}{% endcapture %}
+{{ cli_content|markdownify }}
+
 {% capture frameworks_content %}{% include popular-frameworks.md %}{% endcapture %}
 {{ frameworks_content|markdownify }}
 
