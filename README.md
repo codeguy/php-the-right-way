@@ -14,7 +14,7 @@ This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 _PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
 developers know where to find good information!
 
-[See Banner Images](/banners.html)
+[See Banner Images](http://www.phptherightway.com/banners.html)
 
 ## How to Contribute
 
