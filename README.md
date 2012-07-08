@@ -9,6 +9,13 @@ This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 * Section files are written in Markdown.
 * Section files are included in `index.html`.
 
+## Spread the Word!
+
+_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
+developers know where to find good information!
+
+[See Banner Images](/banners.html)
+
 ## How to Contribute
 
 1. Fork and edit
