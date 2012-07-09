@@ -12,6 +12,7 @@ _You do not need to use a framework for every project_. Sometimes, plain PHP is 
 * [Kohana](http://kohanaframework.org/)
 * [Laravel](http://laravel.com/)
 * [Lithium](http://lithify.me/)
+* [SolarPHP](http://solarphp.com/)
 * [Symfony](http://symfony.com/)
 * [Yii](http://www.yiiframework.com/)
 * [Zend](http://framework.zend.com/)
