@@ -14,17 +14,11 @@ layout: default
 {% capture dependencies_content %}{% include dependency-management.md %}{% endcapture %}
 {{ dependencies_content|markdownify }}
 
-{% capture inputfiltering_content %}{% include input-filtering.md %}{% endcapture %}
-{{ inputfiltering_content|markdownify }}
-
 {% capture databases_content %}{% include databases.md %}{% endcapture %}
 {{ databases_content|markdownify }}
 
-{% capture security_content %}{% include web-application-security.md %}{% endcapture %}
+{% capture security_content %}{% include security.md %}{% endcapture %}
 {{ security_content|markdownify }}
-
-{% capture passwords_content %}{% include passwords.md %}{% endcapture %}
-{{ passwords_content|markdownify }}
 
 {% capture testing_content %}{% include testing.md %}{% endcapture %}
 {{ testing_content|markdownify }}
@@ -32,8 +26,8 @@ layout: default
 {% capture cli_content %}{% include command-line-interface.md %}{% endcapture %}
 {{ cli_content|markdownify }}
 
-{% capture frameworks_content %}{% include popular-frameworks.md %}{% endcapture %}
+{% capture frameworks_content %}{% include libraries-and-frameworks.md %}{% endcapture %}
 {{ frameworks_content|markdownify }}
 
-{% capture links_content %}{% include links-and-resources.md %}{% endcapture %}
-{{ links_content|markdownify }}
+{% capture resources_content %}{% include resources.md %}{% endcapture %}
+{{ resources_content|markdownify }}
