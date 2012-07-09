@@ -101,7 +101,7 @@
                     <li><a href="#namespaces">Namespaces</a></li>
                     <li><a href="#input-filtering">Input Filtering</a></li>
                     <li><a href="#databases-and-pdo">Databases and PDO</a></li>
-                    <li><a href="#password-hashing">Password Hashing with Bcrypt</a></li>
+                    <li><a href="#password-hashing">Password Hashing with PBKDF2</a></li>
                     <li><a href="#dependency-management">Dependency Management</a></li>
                     <li><a href="#security">Web Application Security</a></li>
                     <li><a href="#frameworks">Popular Frameworks</a></li>
@@ -251,7 +251,7 @@ $stmt-&gt;execute();</pre>
         </section>
 
         <section class="content" id="password-hashing">
-            <h2>Password Hashing with Bcrypt</h2>
+            <h2>Password Hashing with PBKDF2</h2>
             <p>
                 Eventually everyone builds a PHP application that relies on user login. Usernames and
                 (hashed) passwords are stored in a database and later used to authenticate users upon login.
@@ -262,16 +262,24 @@ $stmt-&gt;execute();</pre>
                 third-party, all user accounts are now compromised.
             </p>
             <p>
-                <strong>Hash passwords with Bcrypt</strong>. It's super simple, and (for all
-                intents and purposes) Bcrypt makes it impossible for someone to reverse-engineer the
-                plain-text version of a password should the database be compromised.
+                <strong>Hash passwords with PBKDF2</strong>. It's super simple, has been well-reviewed by the 
+                crypto community, is widely used in the industry, and (for all intents and purposes) PBKDF2 
+                makes it impossible for someone to reverse-engineer the plain-text version of a password 
+                should the database be compromised.
             </p>
             <p>
-                There are several Bcrypt libraries for PHP that you may use.
+                Make sure to use sufficient PBKDF2 iterations. As of July 2012, ~100K SHA512 iterations 
+                yields a hash time of ~0.5s on modern hardware, more than sufficient to securely hash 
+                passwords.</p>
+            <p>
+                Why not Bcrypt?  Bcrypt has had serious issues with with extended character sets
+                since it uses blowfish as its block cipher, which can lead to corrupt passwords.  In 
+                addition, Bcrypt weakens on very long passphrases.
             </p>
             <ul>
-                <li><a href="http://codahale.com/how-to-safely-store-a-password/">Read "How to Safely Store a Password" by Coda Hale</a></li>
-                <li><a href="http://www.openwall.com/phpass/">Use Bcrypt with PHPAss</a> (odd name, I know)</li>
+                <li><a href="http://en.wikipedia.org/wiki/PBKDF2">Read more on PBKDF2 at Wikipedia</a></li>
+                <li><a href="https://defuse.ca/php-pbkdf2.htm">A PBKDF2 implementation in PHP</a></li>
+                <li><a href="http://www.openwall.com/lists/announce/2011/06/21/1">Example Blowfish bug</a></li>
             </ul>
             <a class="top" href="#top">&uarr; Back to Top</a>
         </section>
