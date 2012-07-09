@@ -66,14 +66,9 @@ To run our script, above, from the command line:
     > php hello.php world
     Hello, world
 
-### Built-in, command line web server
-
-Starting with PHP 5.4, you can develop locally on a PHP-enabled web server without the hassle of installing and configuring a full-fledged web server. To start the server, from your web root:
-
-    > php -S localhost:8000
 
  * [Learn about running PHP from the command line][php-cli]
- * [Learn about the built-in, command line web server][cli-server]
+ * [Learn about setting up Windows to run PHP from the command line][php-cli-windows]
 
 [Back to Top](#top){.top}
 
@@ -90,5 +85,5 @@ Starting with PHP 5.4, you can develop locally on a PHP-enabled web server witho
 [cli-options]: http://www.php.net/manual/en/features.commandline.options.php
 [argc]: http://php.net/manual/en/reserved.variables.argc.php
 [argv]: http://php.net/manual/en/reserved.variables.argv.php
-[cli-server]: http://www.php.net/manual/en/features.commandline.webserver.php
 [php-cli]: http://php.net/manual/en/features.commandline.php
+[php-cli-windows]: http://www.php.net/manual/en/install.windows.commandline.php
