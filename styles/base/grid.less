@@ -1,0 +1,231 @@
+/**
+ * Hybrid Grid Sytem
+ *
+ * Blend of the Semantic Grid System and Zurb Foundation with a little Twitter Bootstrap
+ */
+
+/* Settings */
+
+@import 'variables.less';
+
+/*
+@fixed-column-width: 40px;
+@fixed-gutter-width: 20px;
+@fixed-columns: 12;
+
+@fluid-column-width: 4.3%;
+@fluid-gutter-width: 4.4%;
+@fluid-columns: 12;
+
+@mobile-break-width: 480px;
+@mobile-column-width: 8.6%;
+@mobile-gutter-width: 8.8%;
+@mobile-columns: 6;
+*/
+
+/* Grid */
+
+#grid {
+
+    .cols(@cols,@width,@gutter){
+        .border-box();
+        width: ((@cols * @width) + ((@cols - 1) * @gutter));
+        margin-left: @gutter;
+        position: relative;
+        display: inline;
+        float: left;
+        min-height: 1px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            float: right;
+        }
+    }
+
+}
+
+.grid-fixed,.grid-fluid {
+    .clearfix;
+    .row {
+        .border-box();
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        .clearfix;
+
+        .center,.center:last-child {
+            float: none;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.grid-fixed {
+    @total-width: (@fixed-column-width*@fixed-columns) + (@fixed-gutter-width*(@fixed-columns - 1));
+    @column-width: @fixed-column-width;
+    @gutter-width: @fixed-gutter-width;
+    @columns: @fixed-columns;
+    width: @total-width;
+
+    /* This is duplicated in both classes. Unavoidable. */
+    .colX (@index) when (@index > 0) {
+        (~".col@{index}") {
+            #grid > .cols(@index,@column-width,@gutter-width);
+        }
+        .colX(@index - 1);
+    }
+    .colX (0) {}
+    .colX(@columns);
+
+    .offsetX (@index) when (@index > 0) {
+        (~".offset@{index}") {
+            margin-left: (@index * @column-width) + ((@index + 1) * @gutter-width);
+        }
+        .offsetX(@index - 1);
+    }
+    .offsetX (0) {}
+    .offsetX(@columns - 1);
+
+    .pushX (@index) when (@index > 0) {
+        (~".push@{index}") {
+            left: @index * (@column-width + @gutter-width);
+        }
+        .pushX(@index - 1);
+    }
+    .pushX (0) {}
+    .pushX(@columns - 1);
+
+    .pullX (@index) when (@index > 0) {
+        (~".pull@{index}") {
+            right: @index * (@column-width + @gutter-width);
+        }
+        .pullX(@index - 1);
+    }
+    .pullX (0) {}
+    .pullX(@columns - 1);
+}
+
+
+.grid-fluid {
+    @total-width: 100%;
+    @column-width: @fluid-column-width;
+    @gutter-width: @fluid-gutter-width;
+    @columns: @fluid-columns;
+    width: @total-width;
+
+    /* This is duplicated in both classes. Unavoidable. */
+    .colX (@index) when (@index > 0) {
+        (~".col@{index}") {
+            #grid > .cols(@index,@column-width,@gutter-width);
+        }
+        .colX(@index - 1);
+    }
+    .colX (0) {}
+    .colX(@columns);
+
+    .offsetX (@index) when (@index > 0) {
+        (~".offset@{index}") {
+            margin-left: (@index * @column-width) + ((@index + 1) * @gutter-width);
+        }
+        .offsetX(@index - 1);
+    }
+    .offsetX (0) {}
+    .offsetX(@columns - 1);
+
+    .pushX (@index) when (@index > 0) {
+        (~".push@{index}") {
+            left: @index * (@column-width + @gutter-width);
+        }
+        .pushX(@index - 1);
+    }
+    .pushX (0) {}
+    .pushX(@columns - 1);
+
+    .pullX (@index) when (@index > 0) {
+        (~".pull@{index}") {
+            right: @index * (@column-width + @gutter-width);
+        }
+        .pullX(@index - 1);
+    }
+    .pullX (0) {}
+    .pullX(@columns - 1);
+}
+
+
+@media all and (max-width: @mobile-break-width) {
+
+    // Reset all columns to full width
+    .grid-fixed {
+        .colX (@index) when (@index > 0) {
+            (~".col@{index}") {
+                width: 100%;
+                margin: 0;
+                left: 0;
+                right: 0;
+            }
+            .colX(@index - 1);
+        }
+        .colX (0) {}
+        .colX(@fixed-columns);
+    }
+    .grid-fluid {
+        .colX (@index) when (@index > 0) {
+            (~".col@{index}") {
+                width: 100%;
+                margin: 0;
+                left: 0;
+                right: 0;
+            }
+            .colX(@index - 1);
+        }
+        .colX (0) {}
+        .colX(@fluid-columns);
+    }
+
+    .grid-fixed, .grid-fluid {
+        @total-width: 100%;
+        @column-width: @mobile-column-width;
+        @gutter-width: @mobile-gutter-width;
+        @columns: @mobile-columns;
+        width: @total-width;
+
+        .m-colX (@index) when (@index > 0) {
+            (~".m-col@{index}") {
+                #grid > .cols(@index,@column-width,@gutter-width);
+            }
+            .m-colX(@index - 1);
+        }
+        .m-colX (0) {}
+        .m-colX(@mobile-columns);
+
+        .m-offsetX (@index) when (@index > 0) {
+            (~".m-offset@{index}") {
+                margin-left: (@index * @column-width) + ((@index + 1) * @gutter-width);
+            }
+            .m-offsetX(@index - 1);
+        }
+        .m-offsetX (0) {}
+        .m-offsetX(@columns - 1);
+
+        .m-pushX (@index) when (@index > 0) {
+            (~".m-push@{index}") {
+                left: @index * (@column-width + @gutter-width);
+            }
+            .m-pushX(@index - 1);
+        }
+        .m-pushX (0) {}
+        .m-pushX(@columns - 1);
+
+        .m-pullX (@index) when (@index > 0) {
+            (~".m-pull@{index}") {
+                right: @index * (@column-width + @gutter-width);
+            }
+            .m-pullX(@index - 1);
+        }
+        .m-pullX (0) {}
+        .m-pullX(@columns - 1);
+    }
+
+}
