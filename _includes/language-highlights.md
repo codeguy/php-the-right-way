@@ -14,15 +14,13 @@ It is important for you to namespace your code so that it may be used by other d
 
 PHP is a flexible, dynamic language that supports a variety of techniques. It has evolved dramatically over the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 (2009), and traits (or mixins) in PHP 5.4 (2012).
 
- * Object-oriented Programming
+* Object-oriented Programming
   * [Read about Object-oriented PHP][oop]
   * [Read about Traits (also known as Mixins)][traits]
-
- * Functional Programming
+* Functional Programming
   * [Read about Anonymous functions][anonymous-functions]
   * Read about dynamically invoking functions with [`call_user_func_array`][call-user-func-array]
-
- * Meta Programming
+* Meta Programming
   * [Read about Magic Methods][magic-methods]
   * [Read about Reflection][reflection]
 
