@@ -1,6 +1,6 @@
 # Command Line Interface
 
-PHP was created primarily to write web applications, but it's also useful for scripting command line interface (CLI) programs, too. Command line PHP programs can help you automate common tasks like testing, deployment, and application administrativia. 
+PHP was created primarily to write web applications, but it's also useful for scripting command line interface (CLI) programs, too. Command line PHP programs can help you automate common tasks like testing, deployment, and application administrativia.
 
 CLI PHP programs are powerful because you can use your app's code directly without having to create and secure a web GUI for it. Just be sure not to put your CLI PHP scripts in your public web root!
 
@@ -20,7 +20,7 @@ Let's write a simple "Hello, $name" CLI program. To try it out, create a file na
     echo "Hello, $name\n";
 
 PHP sets up two special variables based on the arguments your script is run with. [`$argc`][2] is an integer variable containing the argument *count* and [`$argv`][3] is an array variable containing each argument's *value*. The first argument is always the name of your PHP script file, in this case `hello.php`.
-    
+
 To run our script, above, from the command line:
 
     > php hello.php
@@ -36,6 +36,8 @@ Starting with PHP 5.4, you can develop locally on a PHP-enabled web server witho
 
  * [Learn about running PHP from the command line][5]
  * [Learn about the built-in, command line web server][4]
+
+[Back to Top](#top){.top}
 
 [0]: http://php.net/manual/en/function.phpinfo.php
 [1]: http://www.php.net/manual/en/features.commandline.options.php
