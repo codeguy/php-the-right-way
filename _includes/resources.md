@@ -1,6 +1,4 @@
-# Links and Resources
-
-Here are some miscellaneous resources that are worth a read.
+# Resources
 
 ## From the Source
 
