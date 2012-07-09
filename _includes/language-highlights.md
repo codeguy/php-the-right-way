@@ -12,12 +12,12 @@ It is important for you to namespace your code so that it may be used by other d
 
 ## Programming Paradigms
 
-PHP is a flexible, dynamic language that supports a variety of techniques. It has evolved dramatically over the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 (2009), and traits (or mixins) in PHP 5.4 (2012).
+PHP is a flexible, dynamic language that supports a variety of techniques. It has evolved dramatically over the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 (2009), and traits in PHP 5.4 (2012).
 
 ### Object-oriented Programming
 
 * [Read about Object-oriented PHP][oop]
-* [Read about Traits (also known as Mixins)][traits]
+* [Read about Traits][traits]
 
 ### Functional Programming
 
@@ -82,7 +82,7 @@ Starting with PHP 5.4, you can develop locally on a PHP-enabled web server witho
 [anonymous-functions]: http://www.php.net/manual/en/functions.anonymous.php
 [magic-methods]: http://php.net/manual/en/language.oop5.magic.php
 [reflection]: http://www.php.net/manual/en/intro.reflection.php
-[traits]: http://www.php.net/manual/en/language.traits.php
+[traits]: http://php.net/traits
 [call-user-func-array]: http://php.net/manual/en/function.call-user-func-array.php
 
 [phpinfo]: http://php.net/manual/en/function.phpinfo.php
