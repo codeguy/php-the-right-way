@@ -15,6 +15,16 @@ You can start learning PHP without the hassle of installing and configuring a fu
 [php-release]: http://www.php.net/downloads.php
 [cli-server]: http://www.php.net/manual/en/features.commandline.webserver.php
 
+## Mac Setup
+
+OS X comes prepackaged with PHP. As of Mountain Lion, it is _not_ the current stable version of PHP, though. You can get the PHP executable through a number of Mac [package managers][mac-package-managers] or [compile it yourself][mac-compile] (if compiling, be sure to have Xcode installed, or Apple's substitude ["Command Line Tools for Xcode" downloadable from Apple Developer][apple-developer]). For a complete Apache, MySQL, and PHP installation check out [MAMP2][mamp-downloads].
+
+[mac-package-managers]: http://www.php.net/manual/en/install.macosx.packages.php
+[mac-compile]: http://www.php.net/manual/en/install.macosx.compile.php
+[xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
+[apple-developer]: https://developer.apple.com/downloads
+[mamp-downloads]: http://www.mamp.info/en/downloads/index.html
+
 ## Windows Setup
 
 You can install PHP on windows from an install executable found on the official [PHP Downloads][php-downloads] page. For a complete Apache, MySQL, and PHP installation check out [WAMP][wamp-installer].
@@ -25,14 +35,5 @@ You can install PHP on windows from an install executable found on the official 
 [windows-installer]: http://www.php.net/manual/en/install.windows.installer.msi.php
 [wamp-installer]: http://www.wampserver.com/
 
-## Mac Setup
-
-OS X comes prepackaged with PHP. As of Mountain Lion, it is _not_ the current stable version of PHP, though. You can get the PHP executable through a number of Mac [package managers][mac-package-managers] or [compile it yourself][mac-compile] (if compiling, be sure to have Xcode installed, or Apple's substitude ["Command Line Tools for Xcode" downloadable from Apple Developer][apple-developer]). For a complete Apache, MySQL, and PHP installation check out [MAMP2][mamp-downloads].
-
-[mac-package-managers]: http://www.php.net/manual/en/install.macosx.packages.php
-[mac-compile]: http://www.php.net/manual/en/install.macosx.compile.php
-[xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
-[apple-developer]: https://developer.apple.com/downloads
-[mamp-downloads]: http://www.mamp.info/en/downloads/index.html
 
 [Back to Top](#top){.top}
