@@ -44,33 +44,40 @@ CLI PHP programs are powerful because you can use your app's code directly witho
 
 Try running PHP from your command line:
 
+{% highlight bash %}
     > php -i
+{% endhighlight %}
 
 The `-i` option will print your PHP configuration just like the [`phpinfo`][phpinfo] function. There are a number of other useful [command line options][cli-options], too.
 
 Let's write a simple "Hello, $name" CLI program. To try it out, create a file named `hello.php`, as below.
 
+{% highlight php %}
     <?php
     if($argc != 2) {
         die("Usage: php hello.php [name].\n");
     }
     $name = $argv[1];
     echo "Hello, $name\n";
+{% endhighlight %}
 
 PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer variable containing the argument *count* and [`$argv`][argv] is an array variable containing each argument's *value*. The first argument is always the name of your PHP script file, in this case `hello.php`.
 
 To run our script, above, from the command line:
 
+{% highlight bash %}
     > php hello.php
     Usage: php hello.php [name]
     > php hello.php world
     Hello, world
-
+{% endhighlight %}
 ### Built-in, command line web server
 
 Starting with PHP 5.4, you can develop locally on a PHP-enabled web server without the hassle of installing and configuring a full-fledged web server. To start the server, from your web root:
 
+{% highlight bash %}
     > php -S localhost:8000
+{% endhighlight %}
 
  * [Learn about running PHP from the command line][php-cli]
  * [Learn about the built-in, command line web server][cli-server]

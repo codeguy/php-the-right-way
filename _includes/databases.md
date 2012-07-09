@@ -6,17 +6,21 @@ More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) int
 
 Let's assume a PHP script receives a numeric ID as a query parameter. This ID should be used to fetch a user record from a database. This is the `wrong` way to do this:
 
+{% highlight php %}
     <?php
     $pdo = new PDO('sqlite:users.db');
     $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
+{% endhighlight %}
 
 This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a heartbeat. Instead, you should sanitize the ID input using PDO bound parameters.
 
+{% highlight php %}
     <?php
     $pdo = new PDO('sqlite:users.db');
     $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
     $stmt->bindParam(':id', filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT), PDO::PARAM_INT);
     $stmt->execute();
+{% endhighlight %}
 
 This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the database preventing potential SQL injection attacks.
 
