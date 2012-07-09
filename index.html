@@ -8,8 +8,8 @@ layout: default
 {% capture codestyleguide_content %}{% include code-style-guide.md %}{% endcapture %}
 {{ codestyleguide_content|markdownify }}
 
-{% capture namespaces_content %}{% include namespaces.md %}{% endcapture %}
-{{ namespaces_content|markdownify }}
+{% capture highlights_content %}{% include language-highlights.md %}{% endcapture %}
+{{ highlights_content|markdownify }}
 
 {% capture dependencies_content %}{% include dependency-management.md %}{% endcapture %}
 {{ dependencies_content|markdownify }}
@@ -22,9 +22,6 @@ layout: default
 
 {% capture testing_content %}{% include testing.md %}{% endcapture %}
 {{ testing_content|markdownify }}
-
-{% capture cli_content %}{% include command-line-interface.md %}{% endcapture %}
-{{ cli_content|markdownify }}
 
 {% capture frameworks_content %}{% include libraries-and-frameworks.md %}{% endcapture %}
 {{ frameworks_content|markdownify }}
