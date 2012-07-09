@@ -71,6 +71,7 @@ To run our script, above, from the command line:
     > php hello.php world
     Hello, world
 {% endhighlight %}
+
 ### Built-in, command line web server
 
 Starting with PHP 5.4, you can develop locally on a PHP-enabled web server without the hassle of installing and configuring a full-fledged web server. To start the server, from your web root:
