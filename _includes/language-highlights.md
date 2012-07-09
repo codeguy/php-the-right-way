@@ -22,7 +22,7 @@ PHP is a flexible, dynamic language that supports a variety of techniques. It ha
 ### Functional Programming
 
 * [Read about Anonymous functions][anonymous-functions]
-* Read about dynamically invoking functions with [`call_user_func_array`][call-user-func-array]
+* [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
 
 ### Meta Programming
 
