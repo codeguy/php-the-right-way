@@ -1,0 +1,94 @@
+/**
+ * New Media Campaigns Idioms
+ *
+ * These are common patterns we use in all of our
+ * projects. They are consolidated here to keep code DRY.
+ *
+ * Listing
+ *    * .no-text, .text-replace
+ *    * .no-list
+ *    * .no-form
+ *    * .fixed-width(@width)
+ *    * .column-width(@width)
+ *    * .column-left(@width)
+ *    * .column-right(@width)
+ *    * .full-size
+ *    * .absolute-default
+ *    * .absolute-fullsize
+ *    * .clearfix
+ */
+
+/*  Hides text when using image replacement */
+.no-text, .text-replace{
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+/*  Removes bullets, margin, and padding from list */
+.no-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Removes webkit styling from form element */
+.no-form{
+    border: none;
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+}
+
+/*  Center a fixed width container */
+.fixed-width(@width) {
+    margin: 0 auto;
+    width: @width;
+}
+
+/*  Adds left or right columns (e.g. content and sidebar) */
+.column-width(@width){
+    display: inline;
+    width: @width;
+}
+.column-left(@width){
+    .column-width(@width);
+    float: left;
+}
+.column-right(@width){
+    .column-width(@width);
+    float: right;
+}
+
+/*  Set width and height of element to that of its parent */
+.full-size{
+    height: 100%;
+    width: 100%;
+}
+
+/*  Position element absolutely to 0,0 */
+.absolute-default{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/*  Position element absolutely and set its width and height to that of its parent (useful for slideshows) */
+.absolute-fullsize{
+    .absolute-default;
+    .full-size;
+}
+
+/*  The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix {
+    *zoom:1;
+
+    &:before,
+    &:after {
+        content:"";
+        display:table;
+    }
+    &:after {
+        clear:both;
+    }
+}

@@ -2,35 +2,35 @@
 layout: default
 ---
 
-{% capture introduction_content %}{% include introduction.md %}{% endcapture %}
-{{ introduction_content|markdownify }}
+{% capture welcome_content %}{% include welcome.md %}{% endcapture %}
+{{ welcome_content|markdownify }}
+
+{% capture getting_started_content %}{% include getting-started.md %}{% endcapture %}
+{{ getting_started_content|markdownify }}
 
 {% capture codestyleguide_content %}{% include code-style-guide.md %}{% endcapture %}
 {{ codestyleguide_content|markdownify }}
 
-{% capture namespaces_content %}{% include namespaces.md %}{% endcapture %}
-{{ namespaces_content|markdownify }}
-
-{% capture inputfiltering_content %}{% include input-filtering.md %}{% endcapture %}
-{{ inputfiltering_content|markdownify }}
-
-{% capture databases_content %}{% include databases.md %}{% endcapture %}
-{{ databases_content|markdownify }}
-
-{% capture passwords_content %}{% include passwords.md %}{% endcapture %}
-{{ passwords_content|markdownify }}
+{% capture highlights_content %}{% include language-highlights.md %}{% endcapture %}
+{{ highlights_content|markdownify }}
 
 {% capture dependencies_content %}{% include dependency-management.md %}{% endcapture %}
 {{ dependencies_content|markdownify }}
 
-{% capture security_content %}{% include web-application-security.md %}{% endcapture %}
+{% capture databases_content %}{% include databases.md %}{% endcapture %}
+{{ databases_content|markdownify }}
+
+{% capture security_content %}{% include security.md %}{% endcapture %}
 {{ security_content|markdownify }}
 
-{% capture cli_content %}{% include command-line-interface.md %}{% endcapture %}
-{{ cli_content|markdownify }}
+{% capture testing_content %}{% include testing.md %}{% endcapture %}
+{{ testing_content|markdownify }}
 
-{% capture frameworks_content %}{% include popular-frameworks.md %}{% endcapture %}
+{% capture servers_and_deployment_content %}{% include servers-and-deployment.md %}{% endcapture %}
+{{ servers_and_deployment_content|markdownify }}
+
+{% capture frameworks_content %}{% include libraries-and-frameworks.md %}{% endcapture %}
 {{ frameworks_content|markdownify }}
 
-{% capture links_content %}{% include links-and-resources.md %}{% endcapture %}
-{{ links_content|markdownify }}
+{% capture resources_content %}{% include resources.md %}{% endcapture %}
+{{ resources_content|markdownify }}

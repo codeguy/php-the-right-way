@@ -1,6 +1,4 @@
-# Links and Resources
-
-Here are some miscellaneous resources that are worth a read.
+# Resources
 
 ## From the Source
 
@@ -23,5 +21,6 @@ Here are some miscellaneous resources that are worth a read.
 * [Red Hat OpenShift Platform](http://www.redhat.com/products/cloud-computing/openshift/)
 * [dotCloud](http://docs.dotcloud.com/services/php/)
 * [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/)
+* [cloudControl](https://www.cloudcontrol.com/)
 
 [Back to Top](#top){.top}
