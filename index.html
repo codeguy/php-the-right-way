@@ -2,8 +2,8 @@
 layout: default
 ---
 
-{% capture introduction_content %}{% include introduction.md %}{% endcapture %}
-{{ introduction_content|markdownify }}
+{% capture welcome_content %}{% include welcome.md %}{% endcapture %}
+{{ welcome_content|markdownify }}
 
 {% capture codestyleguide_content %}{% include code-style-guide.md %}{% endcapture %}
 {{ codestyleguide_content|markdownify }}

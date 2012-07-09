@@ -1,4 +1,4 @@
-# Introduction
+# Welcome 
 
 There's a lot of bad information on the Web (I'm looking at you, W3Schools) that leads new PHP users astray, propagating bad practices and bad code. This must stop. _PHP: The Right Way_ is an easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative tutorials around the Web.
 
