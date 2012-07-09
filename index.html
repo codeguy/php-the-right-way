@@ -26,6 +26,9 @@ layout: default
 {% capture testing_content %}{% include testing.md %}{% endcapture %}
 {{ testing_content|markdownify }}
 
+{% capture servers_and_deployment_content %}{% include servers-and-deployment.md %}{% endcapture %}
+{{ servers_and_deployment_content|markdownify }}
+
 {% capture frameworks_content %}{% include libraries-and-frameworks.md %}{% endcapture %}
 {{ frameworks_content|markdownify }}
 
