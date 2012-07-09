@@ -40,19 +40,26 @@ When you come across documentation that states to run Composer as `php composer.
 
 First, create a `composer.json` file in the same directory as `composer.phar`. Here's an example that lists [Twig][2] as a project dependency.
 
+{% highlight json %}
     {
         "require": {
             "twig/twig": ">=1.8.0,<2.0-dev"
         }
     }
+{% endhighlight %}
 
 Next, run this command from your project root directory.
 
+{% highlight bash %}
     > php composer.phar install
+{% endhighlight %}
 
 This will download and install the project dependencies into a `vendors/` directory. Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
 
+{% highlight php %}
+<?php
     require 'vendor/autoload.php';
+{% endhighlight %}
 
 Now you can use your project dependencies, and they'll be autoloaded on demand.
 
