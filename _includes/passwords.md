@@ -11,7 +11,14 @@ There are several Bcrypt libraries for PHP that you may use.
 * [Read "How to Safely Store a Password" by Coda Hale][1]
 * [Use Bcrypt with PHPAss][2] (odd name, I know)
 
+**PBKDF2 is another strong password hash**. Like Bcrypt, it is easy to use and an effective way to hash salted passwords.
+
+For further reading about hashing, and PBKDF2 in particular:
+
+* [Salted Password Hashing - Doing it Right][3] (includes PHP example code)
+
 [Back to Top](#top){.top}
 
 [1]: http://codahale.com/how-to-safely-store-a-password/
 [2]: http://www.openwall.com/phpass/
+[3]: http://crackstation.net/hashing-security.htm
