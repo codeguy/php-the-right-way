@@ -2,7 +2,7 @@
 
 ## Programming Paradigms
 
-PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 (2009), and traits in PHP 5.4 (2012).
+PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 (2009), and traits in PHP 5.4 (2012). 
 
 ### Object-oriented Programming
 
@@ -27,7 +27,10 @@ _Namespaces_ solve this problem. As described in the PHP reference manual, names
 
 It is important for you to namespace your code so that it may be used by other developers without fear of colliding with other libraries.
 
+One recommended way to use namespaces is outlined in [PSR-0](psr0), which aims to provide a standard file, class and namespace convention to allow plug-and-play code.
+
 * [Read about Namespaces][namespaces]
+* [Read about PSR-0][psr0]
 
 
 ## Standard PHP Library
@@ -73,6 +76,7 @@ To run our script, above, from the command line:
 [Back to Top](#top){.top}
 
 [namespaces]: http://php.net/manual/en/language.namespaces.php
+[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [oop]: http://www.php.net/manual/en/language.oop5.php
 [spl]: http://php.net/manual/en/book.spl.php 
 [anonymous-functions]: http://www.php.net/manual/en/functions.anonymous.php
