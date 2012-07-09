@@ -10,6 +10,8 @@ Try running PHP from your command line:
 
 The `-i` option will print your PHP configuration just like the [`phpinfo`][0] function. There are a number of other useful [command line options][1], too.
 
+Please note the `php -i` command line interface [may not easily available in Windows][6], you way need to do some extra mile in order to make CLI Work in Windows.
+
 Let's write a simple "Hello, $name" CLI program. To try it out, create a file named `hello.php`, as below.
 
     <?php
@@ -45,3 +47,4 @@ Starting with PHP 5.4, you can develop locally on a PHP-enabled web server witho
 [3]: http://php.net/manual/en/reserved.variables.argv.php
 [4]: http://www.php.net/manual/en/features.commandline.webserver.php
 [5]: http://php.net/manual/en/features.commandline.php
+[6]: http://www.php.net/manual/en/features.commandline.introduction.php
