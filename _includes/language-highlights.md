@@ -1,18 +1,8 @@
 # Language Highlights
 
-## Namespaces
-
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP code may use the same class name as another library. When both libraries are used in the same namespace, they collide and cause trouble.
-
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating system directories that _namespace_ files; two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces. It's as simple as that.
-
-It is important for you to namespace your code so that it may be used by other developers without fear of colliding with other libraries.
-
-* [Read about Namespaces][namespaces]
-
 ## Programming Paradigms
 
-PHP is a flexible, dynamic language that supports a variety of techniques. It has evolved dramatically over the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 (2009), and traits (or mixins) in PHP 5.4 (2012).
+PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 (2009), and traits (or mixins) in PHP 5.4 (2012).
 
 ### Object-oriented Programming
 
@@ -28,6 +18,17 @@ PHP is a flexible, dynamic language that supports a variety of techniques. It ha
 
 * [Read about Magic Methods][magic-methods]
 * [Read about Reflection][reflection]
+
+## Namespaces
+
+As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP code may use the same class name as another library. When both libraries are used in the same namespace, they collide and cause trouble.
+
+_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating system directories that _namespace_ files; two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces. It's as simple as that.
+
+It is important for you to namespace your code so that it may be used by other developers without fear of colliding with other libraries.
+
+* [Read about Namespaces][namespaces]
+
 
 ## Standard PHP Library
 
