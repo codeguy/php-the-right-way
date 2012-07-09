@@ -5,6 +5,9 @@ layout: default
 {% capture welcome_content %}{% include welcome.md %}{% endcapture %}
 {{ welcome_content|markdownify }}
 
+{% capture getting_started_content %}{% include getting-started.md %}{% endcapture %}
+{{ getting_started_content|markdownify }}
+
 {% capture codestyleguide_content %}{% include code-style-guide.md %}{% endcapture %}
 {{ codestyleguide_content|markdownify }}
 
@@ -22,6 +25,9 @@ layout: default
 
 {% capture testing_content %}{% include testing.md %}{% endcapture %}
 {{ testing_content|markdownify }}
+
+{% capture servers_and_deployment_content %}{% include servers-and-deployment.md %}{% endcapture %}
+{{ servers_and_deployment_content|markdownify }}
 
 {% capture frameworks_content %}{% include libraries-and-frameworks.md %}{% endcapture %}
 {{ frameworks_content|markdownify }}

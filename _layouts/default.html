@@ -28,8 +28,17 @@
     </head>
     <body>
         <nav class="site-navigation">
+            <div class="build-date">Last Updated: {{ site.time }}</div>
             <ul>
                 <li><a href="#site-header">Welcome</a></li>
+                <li><a href="#getting_started">Getting Started</a>
+                    <ul>
+                        <li><a href="#use_the_current_stable_version_54">Use the Current Stable Version (5.4)</a></li>
+                        <li><a href="#builtin_web_server">Built-in Web Server</a></li>
+                        <li><a href="#mac_setup">Mac Setup</a></li>
+                        <li><a href="#windows_setup">Windows Setup</a></li>
+                    </ul>
+                </li>
                 <li><a href="#code_style_guide">Code Style Guide</a></li>
                 <li><a href="#language_highlights">Language Highlights</a>
                     <ul>
@@ -54,6 +63,13 @@
                     </ul>
                 </li>
                 <li><a href="#testing">Testing</a></li>
+                <li><a href="#servers_and_deployment">Servers and Deployment</a>
+                    <ul>
+                        <li><a href="#platform_as_a_service_paas">Platform as a Service (PaaS)</a></li>
+                        <li><a href="#virtual_or_dedicated_servers">Virtual or Dedicated Servers</a></li>
+                        <li><a href="#shared_servers">Shared Servers</a></li>
+                    </ul>
+                </li>
                 <li><a href="#libraries_and_frameworks">Libraries and Frameworks</a></li>
                 <li><a href="#resources">Resources</a></li>
             </ul>
