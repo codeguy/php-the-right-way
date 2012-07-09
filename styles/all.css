@@ -53,9 +53,9 @@ h1,h2,h3,h4,h5,h6,ul,ol,dl,p,blockquote,table,form,pre{margin-bottom:20px !impor
 .all-headers{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;}
 h1,.alpha{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:35px;line-height:40px !important;}
 h2,.beta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:24.5px;line-height:40px !important;}
-h3,.gamma{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:21px;line-height:40px !important;}
-h4,.delta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:21px;line-height:40px !important;margin-bottom:0px !important;}
-h5,.epsilon{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:16.8px;line-height:20px !important;margin-bottom:0px !important;}
+h3,.gamma{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:16.8px;line-height:40px !important;margin-bottom:0px !important;}
+h4,.delta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:14px;line-height:40px !important;margin-bottom:0px !important;}
+h5,.epsilon{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:14px;line-height:20px !important;margin-bottom:0px !important;}
 h6,.zeta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:14px;line-height:20px !important;margin-bottom:0px !important;}
 .giga{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:84px;line-height:80px;}
 .mega{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:70px;line-height:60px;}
