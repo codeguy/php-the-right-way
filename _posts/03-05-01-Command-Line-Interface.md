@@ -11,7 +11,7 @@ CLI PHP programs are powerful because you can use your app's code directly witho
 Try running PHP from your command line:
 
 {% highlight bash %}
-php -i
+> php -i
 {% endhighlight %}
 
 The `-i` option will print your PHP configuration just like the [`phpinfo`][phpinfo] function. There are a number of other useful [command line options][cli-options], too.
@@ -32,9 +32,9 @@ PHP sets up two special variables based on the arguments your script is run with
 To run our script, above, from the command line:
 
 {% highlight bash %}
-php hello.php
+> php hello.php
 Usage: php hello.php [name]
-php hello.php world
+> php hello.php world
 Hello, world
 {% endhighlight %}
 
