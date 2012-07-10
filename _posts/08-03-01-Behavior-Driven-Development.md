@@ -12,7 +12,7 @@ is Behat, which is inspired by Ruby's [Cucumber](http://cukes.info/) project and
 for describing feature behavior.
 
 With SpecBDD, you write specifications that describe how your actual code should behave. Instead of testing
-a function or method, you are describing how that function or method should behave. This framework is inspired
+a function or method, you are describing how that function or method should behave. PHP offers the PHPSpec framework for this purpose. This framework is inspired
 by the [RSpec project](http://rspec.info/) for Ruby.
 
 ### BDD Links    
