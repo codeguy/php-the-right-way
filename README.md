@@ -34,6 +34,6 @@ There's been a lot of discussion lately about how the PHP community lacks suffic
 
 My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
 
-## Copyright
+## License
 
-[MIT](http://opensource.org/licenses/MIT)
+[Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License][http://creativecommons.org/licenses/by-nc-sa/3.0/]
