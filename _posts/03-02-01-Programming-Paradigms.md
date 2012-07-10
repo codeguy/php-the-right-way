@@ -19,8 +19,7 @@ PHP has had annonymous functions since PHP 5.3:
 
 {% highlight php %}
 <?php
-$greet = function($name)
-{
+$greet = function ($name) {
     print("Hello {$name}");
 };
 
