@@ -1,6 +1,6 @@
 # Databases and PDO
 
-Many times your PHP code will use a database to persist information. If you use a database, use `PDO` to talk with it. PDO is a database abstraction library &mdash; (usually) built into PHP &mdash; that provides a common interface to talk with many different databases.
+Many times your PHP code will use a database to persist information. If you use a database, use `PDO` to talk with it. PDO is a database access abstraction library &mdash; (usually) built into PHP &mdash; that provides a common interface to talk with many different databases.  PDO allows you to use the same PHP calls to talk to many different databases, but does not translate SQL to different dialects.
 
 More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying about database SQL injection attacks. This is possible using PDOStatements and bound parameters.
 
