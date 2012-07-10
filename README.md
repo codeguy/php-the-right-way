@@ -37,6 +37,8 @@ To avoid fragmentation and reader confusion, please choose one of these options:
 
 If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
 
+When your translation is ready, open an issue on the Issue Tracker to let us know.
+
 ## Why
 
 There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
