@@ -14,7 +14,9 @@ Try running PHP from your command line:
 > php -i
 {% endhighlight %}
 
-The `-i` option will print your PHP configuration just like the [`phpinfo`][phpinfo] function. There are a number of other useful [command line options][cli-options], too.
+The `-i` option will print your PHP configuration just like the [`phpinfo`][phpinfo] function. 
+
+The `-a` option provides an interactive shell, similar to ruby's IRB or python's interactive shell. There are a number of other useful [command line options][cli-options], too.
 
 Let's write a simple "Hello, $name" CLI program. To try it out, create a file named `hello.php`, as below.
 
