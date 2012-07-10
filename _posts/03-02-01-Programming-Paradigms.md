@@ -30,6 +30,44 @@ $greet('World');
 * [Read about Anonymous functions][anonymous-functions]
 * [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
 
+PHP has long been able to do accomplish higher-order function application through the use of the function [create_function][create-function]; however,
+this has always been inelegant and error-prone. PHP 5.3 introduced [anonymous functions and closures][anonymous-functions]. Although the PHP manual
+alludes to anonymous functions and closures being synonymous, this is slightly misleading. A closure is an anonymous function that is capable of
+capturing the current run-time state for later use. Below are a few examples of anonymous functions and closures used as higher-order functions.
+
+annonymous functions:
+
+{% highlight php %}
+<?php
+
+  $days_of_week = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+
+  $start_with_t = array_filter($days_of_week, function($day){
+    return $day[0] === 't';
+  });
+
+  $start_with_t = array_map(function($day){
+    return strtoupper($day);
+  }, $start_with_t);
+
+  echo 'Days beginning with the letter "T": ', join(', ', $start_with_t);
+{% endhighlight %}
+
+closures:
+
+{% highlight php %}
+<?php
+
+  $starts_with  = 's';
+  $days_of_week = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+
+  $results      = array_filter($days_of_week, function($day) use($starts_with){
+    return $day[0] === $starts_with;
+  });
+
+  echo "Days beginning with the letter '{$starts_with}': ", join(', ', $results);
+{% endhighlight %}
+
 ### Meta Programming
 
 Ruby developers often say that PHP is lacking `method_missing`, but it is available as `__call()`. There are many Magic Methods available 
@@ -46,3 +84,5 @@ like `__get()`, `__set()`, `__clone()`, `__toString()`, etc.
 [reflection]: http://www.php.net/manual/en/intro.reflection.php
 [traits]: http://www.php.net/traits
 [call-user-func-array]: http://php.net/manual/en/function.call-user-func-array.php
+[create-function]: http://php.net/create_function
+[anonymous-functions]: http://php.net/functions.anonymous
