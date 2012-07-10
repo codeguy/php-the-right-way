@@ -5,9 +5,9 @@
 This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 
 * This website is a Jekyll project.
-* Each section has a separate file in `_includes/`.
-* Section files are written in Markdown.
-* Section files are included in `index.html`.
+* Each section and sub-section are a Markdown file in `_posts/`.
+* Sub-sections have `isChild: true` in their front matter.
+* The navigation and page structure are automatically generated.
 
 ## Spread the Word!
 
