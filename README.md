@@ -28,7 +28,14 @@ developers know where to find good information!
 
 ### Translations
 
-If you are interested in translating _PHP: The Right Way_, feel free to fork a copy on github and publish to your own GitHub Pages account. We'll link to translations from the primary document.
+If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
+
+To avoid fragmentation and reader confusion, please choose one of these options:
+
+1. We link to your GitHub Pages fork with `[username].github.com/php-the-right-way`
+2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
+
+If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
 
 ## Why
 
