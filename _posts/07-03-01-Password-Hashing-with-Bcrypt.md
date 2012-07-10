@@ -13,7 +13,7 @@ It is important that you properly _hash_ passwords that are stored in a database
 There are several Bcrypt libraries for PHP that you may use.
 
 * [Read "How to Safely Store a Password" by Coda Hale][3]
-* [Use Bcrypt with PHPAss][4] (odd name, I know)
+* [Use Bcrypt with PHPass][4]
 
 [3]: http://codahale.com/how-to-safely-store-a-password/
 [4]: http://www.openwall.com/phpass/
