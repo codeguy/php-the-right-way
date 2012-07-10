@@ -1,3 +1,4 @@
 # Caching
 
-PHP applications on their own are relatively slow, but thankfully there's various (easy) ways to speed things up by using caching on various levels.
+PHP is pretty quick by itself, but bottlenecks can arise when you make remote connections, load files, etc. 
+Thankfully, there are various tools available to speed up certain parts of your application, or reduce the number of times these various time consuming tasks need to run.
