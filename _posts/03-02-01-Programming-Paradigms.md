@@ -18,23 +18,72 @@ interfaces, inheritence, constructors, cloning, exceptions, and more.
 
 ### Functional Programming
 
-PHP has had support for anonymous functions and closures since PHP 5.3:
+PHP supports first-class functions. It is possible to define a new function and assign it to a variable name and built-in functions
+can be referenced and called dynamically. Functions can be passed as arguments to other functions (Higher-order functions) and function
+can return other functions. New anonymous functions (also known as Closures) are present since PHP 5.3 (2009).
 
 {% highlight php %}
 <?php
-$greet = function($name)
+/**
+ * Takes two single variable functions f and g, and creates a new function f∘g
+ */
+function combine($f, $g)
 {
-    print("Hello {$name}");
+    return function($x) use ($f, $g)
+    {
+        return $f($g($x));
+    };
+}
+
+// Define a new function x+1 and assign it to a variable
+$plus_one = function($x)
+{
+    return $x+1;
 };
 
-$greet('World');
+// Assign resulting function of combining x+1 and built-in sin(x)
+// Resulting function is mathematically the same as sin(x)+1
+$sin_plus_one = combine($plus_one, "sin");
+
+// Evaluate for x equals Pi, should be 1
+print $sin_plus_one(M_PI);{% endhighlight %}
 {% endhighlight %}
+
+The most common usage of higher-order functions is when implementing the strategy pattern. Built-in `array_filter` function asks both
+for the input array (data) and a function (strategy, callback) used as a filter criteria on each array item.
+
+Closures may be used to cross the variable scope without using any global variables. In the following example we have a function able
+to return a single criteria function out of the family of functions, and then put it in use with `array_filter`:
+
+{% highlight php %}
+<?php
+/**
+ * Creates an anonymous criteria function accepting items > $min
+ */
+function criteria_greater_than($min)
+{
+    return function($item) use ($min)
+    {
+        return $item > $min;
+    };
+}
+
+$input = array(1, 2, 3, 4, 5, 6);
+$output = array_filter($input, criteria_greater_than(3));
+
+print_r($output); // items > 3
+{% endhighlight %}
+
+Early binding is used by default for importing `$min` variable into the created function. For true closures with late binding one should use
+a reference when importing. This can be used with some templating or input validation libraries, where anonymous function is defined to capture
+out-of-scope variables and access them later when the anonymous function is evaluated.
 
 PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
 can be used interchangeably with anonymous functions in almost all cases.
 
 * [Read about Anonymous Functions][anonymous-functions]
 * [Read about the Closure class][closure-class]
+* [More details in the Closures RFC][closures-rfc]
 * [Read about Callables][callables]
 * [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
 
@@ -58,3 +107,4 @@ available as `__call()` and `__callStatic()`.
 [reflection]: http://www.php.net/manual/en/intro.reflection.php
 [traits]: http://www.php.net/traits
 [call-user-func-array]: http://php.net/manual/en/function.call-user-func-array.php
+[closures-rfc]: https://wiki.php.net/rfc/closures
