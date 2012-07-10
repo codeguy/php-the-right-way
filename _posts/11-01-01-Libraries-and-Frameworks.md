@@ -18,6 +18,7 @@ _You do not need to use a framework for every project_. Sometimes, plain PHP is 
 * [Symfony](http://symfony.com/)
 * [Yii](http://www.yiiframework.com/)
 * [Zend](http://framework.zend.com/)
+* [Laravel](http://laravel.com/)
 
 ### Micro Frameworks
 
