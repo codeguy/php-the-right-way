@@ -41,13 +41,11 @@ When you come across documentation that states to run Composer as `php composer.
 
 First, create a `composer.json` file in the same directory as `composer.phar`. Here's an example that lists [Twig][2] as a project dependency.
 
-{% highlight json %}
-{
-    "require": {
-        "twig/twig": "1.8.*"
-    }
-}
-{% endhighlight %}
+	{
+	    "require": {
+	        "twig/twig": "1.8.*"
+	    }
+	}
 
 Next, run this command from your project root directory.
 

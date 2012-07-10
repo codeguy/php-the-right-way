@@ -18,7 +18,7 @@ var_dump() in a test.php, which is no way to build an application - large or sma
 
 The other use for unit tests is contributing to open source. If you can write a test that shows broken 
 functionality, then fix it, and show the test working, patches are much more likely to be accepted. If 
-you run a project who accepts pull requests, you should suggest this as a requirement for pull requests.
+you run a project which accepts pull requests then you should suggest this as a requirement.
 
 PHPUnit is the most popular and has become a de facto standard with its popular adoption amongst [PHP 
 frameworks][phpfws] and [Composer][composer] component developers, but there are a few alternatives around.
