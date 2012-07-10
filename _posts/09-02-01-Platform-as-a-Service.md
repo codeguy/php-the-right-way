@@ -5,4 +5,8 @@ isChild: true
 
 ## Platform as a Service (PaaS) 
 
-In recent years cloud platforms have become popular ways of deploying, hosting, and scaling PHP applications. These can be a great if you're learning PHP and don't have experience or interest in server admin work, too. You can find a list of [PHP PaaS "Platform as a Service" providers](#php_paas_providers) in our [resources section](#resources). 
+PaaS provides the system and network architecture necessary to run PHP applications on the web. This means little to no 
+configuration for launching PHP applications or PHP frameworks. 
+
+Recently PaaS has become a popular method for deploying, hosting, and scaling PHP applications of all sizes. You can 
+find a list of [PHP PaaS "Platform as a Service" providers](#php_paas_providers) in our [resources section](#resources). 
