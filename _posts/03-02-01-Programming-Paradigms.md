@@ -30,10 +30,10 @@ $greet('World');
 * [Read about Anonymous functions][anonymous-functions]
 * [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
 
-PHP has long been able to do accomplish higher-order function application through the use of the function [create_function][create-function]; however,
-this has always been inelegant and error-prone. PHP 5.3 introduced [anonymous functions and closures][anonymous-functions]. Although the PHP manual
-alludes to anonymous functions and closures being synonymous, this is slightly misleading. A closure is an anonymous function that is capable of
-capturing the current run-time state for later use. Below are a few examples of anonymous functions and closures used as higher-order functions.
+PHP has long been able to accomplish higher-order function application through the use of the function [create_function][create-function]; however,
+this has always been less-than elegant and error-prone. PHP 5.3 introduced [anonymous functions and closures][anonymous-functions]. Although the
+PHP manual alludes to these being synonymous, this is slightly misleading. A closure is an anonymous function that is capable of capturing the
+current run-time state for later use. Below are examples of anonymous functions and closures used for higher-order function application.
 
 annonymous functions:
 
