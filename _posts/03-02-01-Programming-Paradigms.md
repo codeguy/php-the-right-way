@@ -76,13 +76,12 @@ like `__get()`, `__set()`, `__clone()`, `__toString()`, etc.
 * [Read about Magic Methods][magic-methods]
 * [Read about Reflection][reflection]
 
-[namespaces]: http://php.net/manual/en/language.namespaces.php
-[overloading]: http://uk.php.net/manual/en/language.oop5.overloading.php
-[oop]: http://www.php.net/manual/en/language.oop5.php
-[anonymous-functions]: http://www.php.net/manual/en/functions.anonymous.php
-[magic-methods]: http://php.net/manual/en/language.oop5.magic.php
-[reflection]: http://www.php.net/manual/en/intro.reflection.php
-[traits]: http://www.php.net/traits
-[call-user-func-array]: http://php.net/manual/en/function.call-user-func-array.php
-[create-function]: http://php.net/create_function
+[namespaces]: http://php.net/namespaces
+[overloading]: http://php.net/language.oop5.overloading
+[oop]: http://php.net/language.oop5
 [anonymous-functions]: http://php.net/functions.anonymous
+[magic-methods]: http://php.net/language.oop5.magic
+[reflection]: http://php.net/intro.reflection
+[traits]: http://php.net/traits
+[call-user-func-array]: http://php.net/function.call-user-func-array
+[create-function]: http://php.net/create_function
