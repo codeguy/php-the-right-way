@@ -17,7 +17,7 @@ _You do not need to use a framework for every project_. Sometimes, plain PHP is 
 * [SolarPHP](http://solarphp.com/)
 * [Symfony](http://symfony.com/)
 * [Yii](http://www.yiiframework.com/)
-* [Zend](http://framework.zend.com/)
+* [Zend Framework](http://framework.zend.com/)
 
 ### Micro Frameworks
 

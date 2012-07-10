@@ -12,6 +12,7 @@
 * [Derick Rethans](http://twitter.com/derickr)
 * [Chris Shiflett](http://twitter.com/shiflett)
 * [Sebastian Bergmann](http://twitter.com/s_bergmann)
+* [Matthew Weier O'Phinney](http://twitter.com/weierophinney)
 
 ## Mentoring
 
