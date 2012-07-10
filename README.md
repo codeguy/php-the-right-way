@@ -26,6 +26,10 @@ developers know where to find good information!
 
 <http://www.phptherightway.com>
 
+### Translations
+
+If you are interested in translating _PHP: The Right Way_, feel free to fork a copy on github and publish to your own GitHub Pages account. We'll link to translations from the primary document.
+
 ## Why
 
 There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
