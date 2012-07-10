@@ -1,10 +1,6 @@
-# Servers and Deployment
-
-PHP applications can be deployed and run on production web servers in a number of ways.
-
-## Platform as a Service (PaaS) 
-
-In recent years cloud platforms have become popular ways of deploying, hosting, and scaling PHP applications. These can be a great if you're learning PHP and don't have experience or interest in server admin work, too. You can find a list of [PHP PaaS "Platform as a Service" providers](#php_paas_providers) in our [resources section](#resources). 
+---
+isChild: true
+---
 
 ## Virtual or Dedicated Servers
 
@@ -21,9 +17,3 @@ PHP, via PHP's built-in FastCGI Process Manager (FPM), pairs really nicely with 
 ### Apache and PHP
 
 PHP and Apache have a long history together. Apache is wildly configurable and allows sites to control their configurations dynamically, via `.htaccess` files, on a per-directory basis. This has made it a popular choice for shared servers and an easy setup for PHP frameworks and open source apps like WordPress. Unfortunately, Apache uses more resources than nginx and cannot handle as many visitors at the same time. If you are on your own virtual/dedicated server and do not need the configurability of Apache, choose nginx and PHP-FPM.
-
-## Shared Servers
-
-PHP has shared servers to thank for its popularity. It is hard to find a host without PHP installed, but be sure it's the latest version. Shared servers allow you and other developers to deploy websites to a single machine. The upside to this is that it has become a cheap commodity. The downside is that you never know what kind of a ruckus your neighboring tenants are going to create; loading down the server or opening up security holes are the main concerns. If your project's budget can afford to avoid shared servers you should.
-
-[Back to Top](#top){.top}

@@ -29,8 +29,6 @@ This is correct code. It uses a bound parameter on a PDO statement. This escapes
 * [ZF2 Db][4]
 * [ZF1 Db][3]
 
-[Back to Top](#top){.top}
-
 [1]: http://www.php.net/manual/en/book.pdo.php
 [2]: http://www.doctrine-project.org/projects/dbal.html
 [3]: http://framework.zend.com/manual/en/zend.db.html

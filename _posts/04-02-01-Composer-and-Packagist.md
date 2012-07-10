@@ -1,6 +1,6 @@
-# Dependency Management
-
-There are a ton of PHP libraries, frameworks, and components to choose from. Your project will likely use several of them — these are project dependencies. Until recently, PHP did not have a good way to manage these project dependencies. Even if you managed them manually, you still had to worry about autoloaders. No more.
+---
+isChild: true
+---
 
 ## Composer and Packagist
 
@@ -62,16 +62,8 @@ require 'vendor/autoload.php';
 
 Now you can use your project dependencies, and they'll be autoloaded on demand.
 
-## PEAR
-
-Another veteran package manager that many PHP developers enjoy is [PEAR][3]. It behaves much the same way, and is also worth researching for your projects.
-
-* [Learn about Composer][4]
-* [Learn about PEAR][3]
-
-[Back to Top](#top){.top}
+* [Learn about Composer][3]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org
-[3]: http://pear.php.net/
-[4]: http://getcomposer.org/doc/00-intro.md
+[3]: http://getcomposer.org/doc/00-intro.md

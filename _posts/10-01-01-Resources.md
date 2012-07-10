@@ -22,5 +22,4 @@
 * [dotCloud](http://docs.dotcloud.com/services/php/)
 * [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/)
 * [cloudControl](https://www.cloudcontrol.com/)
-
-[Back to Top](#top){.top}
+* [Windows Azure](http://www.windowsazure.com/)
