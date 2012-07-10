@@ -1,0 +1,17 @@
+---
+isChild: true
+---
+
+## Bytecode Cache
+
+When PHP file is executed, under the hood it is first compiled to bytecode (also known as opcode) and only then, the bytecode is executed.
+If PHP file is not modified, then bytecode will always be same, which means that compilation step is a waste of CPU resources.
+
+This is where Bytecode cache comes in - it prevents redundant compilation by storing bytecode in memory and reusing it on successive calls.
+Setting up bytecode cache is a matter of minutes and your application will speed up significantly, there's really no reason not to use it.
+
+Popular bytecodes caches are:
+
+[APC](http://php.net/manual/en/book.apc.php)
+[xCache](http://xcache.lighttpd.net/)
+[Zend Optimizer+](http://www.zend.com/products/server/) (part of Zend Server package)
