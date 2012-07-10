@@ -23,6 +23,7 @@ _You do not need to use a framework for every project_. Sometimes, plain PHP is 
 
 * [Fat-Free](http://bcosca.github.com/fatfree/)
 * [Limonade](http://limonade-php.github.com/)
+* [MicroMVC](http://micromvc.com/)
 * [Silex](http://silex.sensiolabs.org/)
 * [Slim](http://www.slimframework.com/)
 
