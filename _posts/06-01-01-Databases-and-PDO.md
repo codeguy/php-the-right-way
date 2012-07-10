@@ -1,3 +1,7 @@
+---
+title: Databases and PDO
+---
+
 # Databases and PDO
 
 Many times your PHP code will use a database to persist information. If you use a database, use `PDO` to talk with it. PDO is a 
