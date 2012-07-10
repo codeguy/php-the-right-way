@@ -36,4 +36,4 @@ My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [S
 
 ## License
 
-[Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License][http://creativecommons.org/licenses/by-nc-sa/3.0/]
+[Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)
