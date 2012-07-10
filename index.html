@@ -102,7 +102,8 @@
                     <li><a href="#input-filtering">Input Filtering</a></li>
                     <li><a href="#databases-and-pdo">Databases and PDO</a></li>
                     <li><a href="#password-hashing">Password Hashing with Bcrypt</a></li>
-                    <li><a href="#dependency-management">Dependency Management with Composer</a></li>
+                    <li><a href="#dependency-management">Dependency Management</a></li>
+                    <li><a href="#security">Web Application Security</a></li>
                     <li><a href="#frameworks">Popular Frameworks</a></li>
                     <li><a href="#links-and-resources">Links &amp; Resources</a></li>
                 </ul>
@@ -117,6 +118,10 @@
                 new PHP users astray, propagating bad practices and bad code. This must stop. <em>PHP: The Right Way</em> provides an
                 easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to
                 authoritative tutorials around the Web.
+            </p>
+            <p>
+                It is important to understand <em>there is no canonical way to use PHP</em>. That's the beauty of it.
+                This website introduces new PHP developers to best practices, available options, and good information.
             </p>
 
             <h3>Disclaimer</h3>
@@ -139,7 +144,7 @@
             <h2>Code Style Guide</h2>
             <p>
                 The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components.
-                It is common for PHP developers to choose several of these and combine them into a single project. Is is
+                It is common for PHP developers to choose several of these and combine them into a single project. It is
                 important that PHP code adhere (as close as possible) to a common code style to make it easy for developers
                 to mix and match various libraries for their projects.
             </p>
@@ -187,12 +192,12 @@
         <section class="content" id="input-filtering">
             <h2>Input Filtering</h2>
             <p>
-                Never ever (<em>ever</em>) trust foreign input introduced to your PHP code. That lead's to dark
+                Never ever (<em>ever</em>) trust foreign input introduced to your PHP code. That leads to dark
                 and dangerous places. Instead, always filter foreign input before you use it in your code.
             </p>
             <p>
-                PHP provides the <code>filter_var</code> and <code>filter_input</code> methods to help
-                you do this. These two methods can sanitize text, verify formats (e.g. email addresses),
+                PHP provides the <code>filter_var</code> and <code>filter_input</code> functions to help
+                you do this. These two functions can sanitize text, verify formats (e.g. email addresses),
                 and escape characters.
             </p>
             <p>
@@ -272,27 +277,83 @@ $stmt-&gt;execute();</pre>
         </section>
 
         <section class="content" id="dependency-management">
-            <h2>Dependency Management with Composer</h2>
+            <h2>Dependency Management</h2>
             <p>
                 There are a ton of PHP libraries, frameworks, and components to choose from. Your project
                 will likely use several of them — these are project dependencies. Until recently, PHP did
                 not have a good way to manage these project dependencies. Even if you managed them manually,
                 you still had to worry about autoloaders. No more.
             </p>
+
+            <h3>Composer and Packagist</h3>
             <p>
                 Composer is a <strong>brilliant</strong> dependency manager for PHP. List your project's
                 dependencies in a <code>composer.json</code> file and, with a few simple commands,
                 Composer will automatically download your project's dependencies and setup autoloading
-                for you. It's quite brilliant.
+                for you.
             </p>
             <p>
                 There are already a lot of PHP libraries that are compatible with Composer, ready
                 to be used in your project. These "packages" are listed on <a href="http://packagist.org/">Packagist</a>,
                 the official repository for Composer-compatible PHP libraries.
             </p>
+
+            <h4>How to Install Composer</h4>
+            <p>
+                You can install Composer locally (in your current working directory) or globally (e.g. /usr/local/bin).
+                Let's assume you want to install Composer locally. From your project's root directory:
+            </p>
+            <pre>curl -s http://getcomposer.org/installer | php</pre>
+            <p>
+                This will download <code>composer.phar</code> (a PHP binary archive). You can run this with <code>php</code> to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
+            </p>
+
+            <h4>How to Define and Install Dependencies</h4>
+            <p>
+                First, create a <code>composer.json</code> file in the same directory as <code>composer.phar</code>.
+                Here's an example that lists <a href="http://twig.sensiolabs.org">Twig</a> as a project dependency.
+            </p>
+            <pre>{
+    "require": {
+        "twig/twig": ">=1.8.0,<2.0-dev"
+    }
+}</pre>
+            <p>
+                Next, run this command from your project root directory.
+            </p>
+            <pre>php composer.phar install</pre>
+            <p>
+                This will download and install the project dependencies into a <code>vendors/</code> directory.
+                Next, add this line to your application's primary PHP file; this will
+                tell PHP to use Composer's autoloader for your project dependencies.
+            </p>
+            <pre>&lt;?php require 'vendor/autoload.php'; ?&gt;</pre>
+            <p>
+                Now you can use your project dependencies, and they'll be autoloaded on demand.
+            </p>
+
+            <h3>PEAR</h3>
+            <p>
+                Another veteran package manager that many PHP developers enjoy is <a href="http://pear.php.net/">PEAR</a>. It behaves much the same way, and is also worth researching for your projects.
+            </p>
+
             <ul>
                 <li><a href="http://getcomposer.org/doc/00-intro.md">Learn about Composer</a></li>
-                <li><a href="http://packagist.org/">Learn about Packagist</a></li>
+                <li><a href="http://pear.php.net/">Learn about PEAR</a></li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <section class="content" id="security">
+            <h2>Web Application Security</h2>
+            <p>
+                There are bad people ready and willing to exploit your web application. It is important that you
+                take necessary precautions to harden your web application's security. Luckily, the fine folks at
+                <a href="https://www.owasp.org/">The Open Web Application Security Project</a> (OWASP) have compiled a comprehensive list of known security issues and methods to protect yourself against them. This is a must read
+                for the security-conscious developer.
+            </p>
+            <ul>
+                <li><a href="https://www.owasp.org/index.php/Guide_Table_of_Contents">Read the OWASP Security Guide</a></li>
             </ul>
             <a class="top" href="#top">&uarr; Back to Top</a>
         </section>
@@ -307,22 +368,26 @@ $stmt-&gt;execute();</pre>
             <p>
                 <em>You do not need to use a framework for every project</em>. Sometimes, plain
                 PHP is the right way to go. But if you do need a framework, here are a few
-                of the most popular ones:
+                of the most popular ones (in alphabetical order):
             </p>
 
             <h3>Full-Stack Frameworks</h3>
             <ul>
-                <li><a href="http://www.symfony-project.org/">Symfony</a></li>
-                <li><a href="http://codeigniter.com/">CodeIgnitor</a></li>
-                <li><a href="http://cakephp.org/">Cake PHP</a></li>
-                <li><a href="http://framework.zend.com/">Zend</a></li>
-                <li><a href="http://www.yiiframework.com/">Yii</a></li>
-                <li><a href="http://fuelphp.com/">Fuel</a></li>
+                <li><a href="http://cakephp.org/">CakePHP</a></li>
+                <li><a href="http://codeigniter.com/">CodeIgniter</a></li>
+                <li><a href="http://fuelphp.com/">FuelPHP</a></li>
+                <li><a href="http://kohanaframework.org/">Kohana</a></li>
                 <li><a href="http://laravel.com/">Laravel</a></li>
+                <li><a href="http://lithify.me/">Lithium</a></li>
+                <li><a href="http://www.symfony.com/">Symfony</a></li>
+                <li><a href="http://www.yiiframework.com/">Yii</a></li>
+                <li><a href="http://framework.zend.com/">Zend</a></li>
             </ul>
 
             <h3>Micro Frameworks</h3>
             <ul>
+                <li><a href="http://bcosca.github.com/fatfree/">Fat-Free</a></li>
+                <li><a href="http://limonade-php.github.com/">Limonade</a></li>
                 <li><a href="http://silex.sensiolabs.org/">Silex</a></li>
                 <li><a href="http://www.slimframework.com/">Slim</a></li>
             </ul>
@@ -361,6 +426,7 @@ $stmt-&gt;execute();</pre>
                 <li><a href="https://pagodabox.com/">PagodaBox</a></li>
                 <li><a href="https://phpfog.com/">PHP Fog</a></li>
                 <li><a href="http://www.engineyard.com/products/orchestra/">Engine Yard Orchestra PHP Platform</a></li>
+                <li><a href="http://www.redhat.com/products/cloud-computing/openshift/">Red Hat OpenShift Platform</a></li>
             </ul>
             <a class="top" href="#top">&uarr; Back to Top</a>
         </section>
