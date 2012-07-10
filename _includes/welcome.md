@@ -22,4 +22,4 @@ developers know where to find good information!
 [Back to Top](#top){.top}
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: http://www.phptherightway.com/banners.html
+[2]: /banners.html
