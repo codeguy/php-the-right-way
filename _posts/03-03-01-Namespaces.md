@@ -10,7 +10,7 @@ _Namespaces_ solve this problem. As described in the PHP reference manual, names
 
 It is important for you to namespace your code so that it may be used by other developers without fear of colliding with other libraries.
 
-One recommended way to use namespaces is outlined in [PSR-0](psr0), which aims to provide a standard file, class and namespace convention to allow plug-and-play code.
+One recommended way to use namespaces is outlined in [PSR-0][psr0], which aims to provide a standard file, class and namespace convention to allow plug-and-play code.
 
 * [Read about Namespaces][namespaces]
 * [Read about PSR-0][psr0]
