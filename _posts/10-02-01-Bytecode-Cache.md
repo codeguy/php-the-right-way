@@ -15,3 +15,4 @@ Popular bytecodes caches are:
 [APC](http://php.net/manual/en/book.apc.php)
 [XCache](http://xcache.lighttpd.net/)
 [Zend Optimizer+](http://www.zend.com/products/server/) (part of Zend Server package)
+[WinCache](http://www.iis.net/download/wincacheforphp) (extension for MS Windows Server)
