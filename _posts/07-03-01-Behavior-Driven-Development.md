@@ -8,4 +8,4 @@ With BDD, you write human-readable stories that describe the behavior of your ap
 can then be run as actual tests against your application.
 
 * [Behat](http://behat.org/) is inspired by Ruby's [Cucumber](http://cukes.info/) project 
-* [Selenium](http://seleniumhq.org/) is a browser automation tool, which automates the "clicking around the site" method of testing. It can also be [combined with PHPUnit](http://www.phpunit.de/manual/3.1/en/selenium.html)
+* [Selenium](http://seleniumhq.org/) is a browser automation tool, which can be [integrated with PHPUnit](http://www.phpunit.de/manual/3.1/en/selenium.html)
