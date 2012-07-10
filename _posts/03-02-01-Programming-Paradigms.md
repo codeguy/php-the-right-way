@@ -20,7 +20,7 @@ interfaces, inheritence, constructors, cloning, exceptions, and more.
 
 PHP supports first-class functions. It is possible to define a new function and assign it to a variable name and built-in functions
 can be referenced and called dynamically. Functions can be passed as arguments to other functions (Higher-order functions) and function
-can return other functions. New anonymous functions (also known as Closures) are present since PHP 5.3 (2009).
+can return other functions. New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
 
 {% highlight php %}
 <?php
@@ -49,7 +49,7 @@ $sin_plus_one = combine($plus_one, "sin");
 print $sin_plus_one(M_PI);{% endhighlight %}
 {% endhighlight %}
 
-The most common usage of higher-order functions is when implementing the strategy pattern. Built-in `array_filter` function asks both
+The most common usage of higher-order functions like `combine` above is when implementing the strategy pattern. Built-in `array_filter` function asks both
 for the input array (data) and a function (strategy, callback) used as a filter criteria on each array item.
 
 Closures may be used to cross the variable scope without using any global variables. In the following example we have a function able
