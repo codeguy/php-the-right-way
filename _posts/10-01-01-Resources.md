@@ -13,6 +13,10 @@
 * [Chris Shiflett](http://twitter.com/shiflett)
 * [Sebastian Bergmann](http://twitter.com/s_bergmann)
 
+## Mentoring
+
+* [phpmentoring.org](http://phpmentoring.org/) - Formal, peer to peer mentoring in the PHP community.
+
 ## PHP PaaS Providers
 
 * [PagodaBox](https://pagodabox.com/)
