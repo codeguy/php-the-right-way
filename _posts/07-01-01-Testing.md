@@ -9,5 +9,3 @@ Some common tools are:
 * [PHPUnit](http://phpunit.de)
 * [Behat](http://behat.org)
 * [Selenium](http://seleniumhq.org/)
-
-[Back to Top](#top){.top}
