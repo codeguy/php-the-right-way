@@ -270,3 +270,4 @@ select{min-width:30%;}
 .top{background:#333;display:inline-block;float:right;margin-right:-40px;padding:4px 8px;color:#FFF;font-size:12px;text-decoration:none !important;}
 .site-footer{clear:both;padding-top:40px !important;font-size:13px;text-align:center;}
 .site-footer img{margin-left:2px;position:relative;top:-2px;vertical-align:middle;}
+.site-footer ul{list-style:none;margin-right:0px !important;margin-left:0px !important;padding-right:0px !important;padding-left:0px !important;}
