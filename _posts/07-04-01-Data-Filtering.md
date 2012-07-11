@@ -14,7 +14,7 @@ PHP provides the `filter_var` and `filter_input` functions to help you do this. 
 
 ### Sanitization
 
-Sanitization removes (or escapes) illegal or unsafe characters from foreign input. For example, you should sanitize foreign input before including the input in HTML or inserting it into a raw SQL query. When you use bound parameters with [PDO](#databases_and_pdo), it will sanitize the input for you.
+Sanitization removes (or escapes) illegal or unsafe characters from foreign input. For example, you should sanitize foreign input before including the input in HTML or inserting it into a raw SQL query. When you use bound parameters with [PDO](#databases), it will sanitize the input for you.
 
 [See Sanitization Filters][2]
 

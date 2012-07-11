@@ -1,13 +1,23 @@
 ---
-title: Databases and PDO
+title: Databases
 ---
 
-# Databases and PDO
+# Databases
 
-Many times your PHP code will use a database to persist information. If you use a database, use `PDO` to talk with it. PDO is a 
-database connection abstraction library &mdash; built into PHP since 5.1.0 &mdash; that provides a common interface to talk with 
-many different databases. PDO will not translate your SQL queries or emulate missing features, it is purely for connecting to multiple 
-types of database with the same API.
+Many times your PHP code will use a database to persist information. If you use a database you have a few options to connect and interact 
+with your database. The recommended option until PHP 5.1.0 was always to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
+
+Native drivers are great if you are only using ONE database in your application, but if for example you are using MySQL and a little bit of MSSQL, or need to connect to an Oracle database, then you will not be able to use the same drivers. You'll need to learn a brand new API for 
+each database and that can get silly.
+
+As an extra note on native drivers, the mysql extension for PHP is currently deprecated as of PHP 5.4.0 and will be removed entirely in PHP 5.5.0. That means if you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite when 
+you upgrade to the next version. You can rewrite this application now to use the [MySQLi extension][mysqli], or use PDO.
+
+## PDO
+
+PDO is a database connection abstraction library &mdash;  built into PHP since 5.1.0 &mdash; that provides a common interface to talk with 
+many different databases. PDO will not translate your SQL queries or emulate missing features, it is purely for connecting to multiple types 
+of database with the same API.
 
 More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying about database SQL injection attacks. This is possible using PDOStatements and bound parameters.
 
@@ -52,3 +62,7 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [2]: http://www.doctrine-project.org/projects/dbal.html
 [3]: http://framework.zend.com/manual/en/zend.db.html
 [4]: http://packages.zendframework.com/docs/latest/manual/en/zend.db.html
+
+[mysql]: http://uk.php.net/mysql
+[mysqli]: http://uk.php.net/mysqli
+[pgsql]: http://uk.php.net/pgsql
