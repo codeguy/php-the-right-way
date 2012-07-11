@@ -50,17 +50,17 @@ input,select{vertical-align:middle;}
 .lhn{line-height:0px !important;}
 html,body{font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;color:#666666;font-size:14px;line-height:20px !important;}
 h1,h2,h3,h4,h5,h6,ul,ol,dl,p,blockquote,table,form,pre{margin-bottom:20px !important;}
-.all-headers{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;}
-h1,.alpha{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:35px;line-height:40px !important;}
-h2,.beta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:24.5px;line-height:40px !important;}
-h3,.gamma{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:16.8px;line-height:40px !important;margin-bottom:0px !important;}
-h4,.delta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:14px;line-height:40px !important;margin-bottom:0px !important;}
-h5,.epsilon{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:14px;line-height:20px !important;margin-bottom:0px !important;}
-h6,.zeta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:14px;line-height:20px !important;margin-bottom:0px !important;}
-.giga{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:84px;line-height:80px;}
-.mega{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:70px;line-height:60px;}
-.kilo{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:56px;line-height:60px;}
-.milli{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:bold;font-size:11.200000000000001px;}
+.all-headers{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;}
+h1,.alpha{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:35px;line-height:40px !important;}
+h2,.beta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:24.5px;line-height:40px !important;}
+h3,.gamma{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:16.8px;line-height:40px !important;margin-bottom:0px !important;}
+h4,.delta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:14px;line-height:40px !important;margin-bottom:0px !important;}
+h5,.epsilon{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:14px;line-height:20px !important;margin-bottom:0px !important;}
+h6,.zeta{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:14px;line-height:20px !important;margin-bottom:0px !important;}
+.giga{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:84px;line-height:80px;}
+.mega{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:70px;line-height:60px;}
+.kilo{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:56px;line-height:60px;}
+.milli{color:#111111;font-family:"Droid Serif",Georgia,"Times New Roman",Times,serif;font-weight:700;font-size:11.200000000000001px;}
 a{color:#000000;}
 a:link{text-decoration:underline;}
 a:hover{text-decoration:none;}
@@ -258,7 +258,7 @@ select{min-width:30%;}
 .btn-s,.btn-single{height:30px;font-size:15px;line-height:30px;}
 .btn-d,.btn-double{height:40px;font-size:20px;line-height:40px;}
 .site-header{text-align:center;}
-.site-title{margin-bottom:0px !important;font-family:'Alfa Slab One';font-size:80px;line-height:100px !important;}.site-title a{text-decoration:none;}
+h1.site-title{margin-bottom:0px !important;font-family:'Alfa Slab One';font-size:80px;font-weight:normal !important;line-height:100px !important;}h1.site-title a{text-decoration:none;}
 .site-slogan{font-weight:normal;}
 .site-navigation{background:#EEE;-webkit-box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;-moz-box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;padding-top:20px !important;padding-right:20px !important;padding-bottom:20px !important;padding-left:20px !important;position:fixed;top:0;bottom:0;overflow:auto;width:240px;}
 .build-date{margin-bottom:20px !important;color:#AAA;font-family:Helvetica,Arial,sans-serif;font-size:11px;}
