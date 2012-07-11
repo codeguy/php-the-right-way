@@ -17,3 +17,11 @@ PHP, via PHP's built-in FastCGI Process Manager (FPM), pairs really nicely with 
 ### Apache and PHP
 
 PHP and Apache have a long history together. Apache is wildly configurable and allows sites to control their configurations dynamically, via `.htaccess` files, on a per-directory basis. This has made it a popular choice for shared servers and an easy setup for PHP frameworks and open source apps like WordPress. Unfortunately, Apache uses more resources than nginx and cannot handle as many visitors at the same time.
+
+Apache has several possible configurations for running PHP. The most common and easiest to setup is the [prefork MPM](http://httpd.apache.org/docs/2.0/mod/prefork.html) with mod_php5. While it isn't the most memory efficient, it is the simplest to get working and to use. This is probably the best choice if you don't want to dig too deeply into the server administration aspects.
+
+Alternatively, if you want to squeeze more performance out of Apache then you can take advantage of the same FPM system as nginx and run the [worker MPM](http://httpd.apache.org/docs/2.0/mod/worker.html) with mod_fastcgi or mod_fcgid. This configuration will be significantly more memory efficient and probably a bit faster but it is more work to set up and limits you to using only thread-safe code.
+
+* [Read more on Apache](http://httpd.apache.org/)
+* [Read more on Multi-Processing Modules](http://httpd.apache.org/docs/2.0/mpm.html)
+* [Read more on mod_fastcgi](http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html)
