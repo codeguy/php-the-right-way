@@ -36,12 +36,20 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a heartbeat. Instead,
 you should sanitize the ID input using PDO bound parameters.
 
+The best way using PDO prepare function:
 {% highlight php %}
 <?php
 $pdo = new PDO('sqlite:users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$stmt->bindParam(':id', filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT), PDO::PARAM_INT);
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT);
 $stmt->execute();
+{% endhighlight %}
+
+Otherwise, at least use filter_input in raw query.
+{% highlight php %}
+<?php
+$pdo = new PDO('sqlite:users.db');
+$pdo->query("SELECT name FROM users WHERE id = " . filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT));
 {% endhighlight %}
 
 This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the
