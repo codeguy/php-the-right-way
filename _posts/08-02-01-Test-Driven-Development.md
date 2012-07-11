@@ -4,6 +4,14 @@ isChild: true
 
 ## Test Driven Development
 
+From Wikipedia:
+
+>> Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes a failing automated test case that defines a desired improvement or new function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck, who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple designs and inspires confidence
+
+There are several different types of testing that you can do for your application
+
+### Unit Testing
+
 Unit Testing is a programmatical approach to ensure functions, classes and methods are working as 
 expected, from the point you build them all the way through the development cycle. By checking 
 values going in and out of various functions and methods, you can make sure the internal logic is 
@@ -19,12 +27,31 @@ The other use for unit tests is contributing to open source. If you can write a 
 functionality (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If 
 you run a project which accepts pull requests then you should suggest this as a requirement.
 
-PHPUnit is the most popular and has become a de facto standard with its popular adoption amongst [PHP 
-frameworks][phpfws] and [Composer][composer] component developers, but there are a few alternatives around.
+[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
+applications, but there are several alternatives
 
-* [PHPUnit](http://phpunit.de/)
+* [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
 
-[phpfws]: /#libraries_and_frameworks
-[composer]: /#composer_and_packagist
+### Integration Testing
+
+From Wikipedia:
+
+>> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
+
+Many of the same tools that can be used for unit testing can be used for integration testing as many 
+of the same principles are used.
+
+### Functional Testing
+
+Sometimes also known as acceptance testing, functional testing consists of using tools to create automated 
+tests that actually use your application instead of just verifying that individual units of code are behaving 
+correctly and that individual units can speak to each other correctly. These tools typically work using real 
+data and simulating actual users of the application.
+
+#### Functional Testing Tools
+
+* [Selenium](http://seleniumhq.com)
+* [Mink](http://mink.behat.org)
+* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
