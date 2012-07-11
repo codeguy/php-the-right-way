@@ -15,3 +15,55 @@
 @import "site/site-navigation.less";
 @import "site/site-content.less";
 @import "site/site-footer.less";
+
+/* Tablets and Smartphones */
+
+@media only screen and (max-width : 1024px) {
+    .build-date{
+        text-align: center;
+    }
+    .site-header{
+        height: 220px;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+    }
+    .site-navigation{
+        margin-top: 240px;
+        padding: 20px;
+        position: relative;
+        width: auto;
+
+        ul{
+            border: 1px solid #999;
+            border-bottom: none;
+        }
+        li{
+            .man;
+            .pan;
+        }
+        a{
+            background: #CCC;
+            display: block;
+            border-bottom: 1px solid #999;
+            padding: 10px;
+            text-decoration: none;
+        }
+        ul ul{
+            border: none;
+            .man;
+            .pan;
+        }
+        ul ul a{
+            background: transparent;
+        }
+    }
+    .site-content{
+        padding: 20px;
+    }
+    .top{
+        display: inline-block;
+        float: none;
+    }
+}
