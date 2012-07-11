@@ -4,7 +4,7 @@ isChild: true
 
 ## Test Driven Development
 
-From Wikipedia:
+From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
 
 >> Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes a failing automated test case that defines a desired improvement or new function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck, who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple designs and inspires confidence
 
@@ -36,7 +36,7 @@ applications, but there are several alternatives
 
 ### Integration Testing
 
-From Wikipedia:
+From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 
 >> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
 
