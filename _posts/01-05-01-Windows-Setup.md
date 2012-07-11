@@ -24,6 +24,8 @@ sounds tricky, but using [Vagrant][vagrant] you can set up simple wrappers, then
 [php-downloads]: http://windows.php.net
 [phpmanager]: http://phpmanager.codeplex.com/
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
+[xampp]: http://www.apachefriends.org/en/xampp.html
+[wamp]: http://www.wampserver.com/
 [php-iis]: http://php.iis.net/
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/
