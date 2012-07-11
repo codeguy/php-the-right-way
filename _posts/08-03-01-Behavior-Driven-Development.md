@@ -19,4 +19,4 @@ by the [RSpec project](http://rspec.info/) for Ruby.
 
 * [Behat](http://behat.org/) is inspired by Ruby's [Cucumber](http://cukes.info/) project 
 * [PHPSpec](http://www.phpspec.net/) the SpecBDD framework for PHP
-* [Selenium](http://seleniumhq.org/) is a browser automation tool, which can be [integrated with PHPUnit](http://www.phpunit.de/manual/3.1/en/selenium.html)
+* [Codeception](http://www.codeception.com) is a full-stack testing framework that uses BDD principles
