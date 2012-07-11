@@ -257,9 +257,11 @@ select{min-width:30%;}
 .btn-h,.btn-half{height:20px;font-size:12px;line-height:20px;}
 .btn-s,.btn-single{height:30px;font-size:15px;line-height:30px;}
 .btn-d,.btn-double{height:40px;font-size:20px;line-height:40px;}
-.site-header{text-align:center;}
+.site-header{position:relative;z-index:1;text-align:center;}
 h1.site-title{margin-bottom:0px !important;font-family:'Alfa Slab One';font-size:80px;font-weight:normal !important;line-height:100px !important;}h1.site-title a{text-decoration:none;}
 .site-slogan{font-weight:normal;}
+.fork-me,.fork-me img{position:absolute;top:0;right:0;}
+.fork-me{z-index:2;}
 .site-navigation{background:#EEE;-webkit-box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;-moz-box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;padding-top:20px !important;padding-right:20px !important;padding-bottom:20px !important;padding-left:20px !important;position:fixed;top:0;bottom:0;overflow:auto;width:240px;}
 .build-date{margin-bottom:20px !important;color:#AAA;font-family:Helvetica,Arial,sans-serif;font-size:11px;}
 .site-navigation ul{margin-top:0px !important;margin-right:0px !important;margin-bottom:0px !important;margin-left:0px !important;padding-top:0px !important;padding-right:0px !important;padding-bottom:0px !important;padding-left:0px !important;list-style:none;margin:0;padding:0;font-size:16px;}
