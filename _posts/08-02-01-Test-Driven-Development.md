@@ -12,10 +12,10 @@ There are several different types of testing that you can do for your applicatio
 
 ### Unit Testing
 
-Unit Testing is a programmatical approach to ensure functions, classes and methods are working as 
+Unit Testing is a programming approach to ensure functions, classes and methods are working as 
 expected, from the point you build them all the way through the development cycle. By checking 
 values going in and out of various functions and methods, you can make sure the internal logic is 
-working correctly. By using Dependecy Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
 
 When you create a class or function you should create a unit test for each behaviour it must have. At a very basic level you should 
 make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments. 
