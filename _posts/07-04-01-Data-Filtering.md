@@ -5,35 +5,30 @@ isChild: true
 ## Data Filtering
 
 Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate
-foreign input before using it in code.
-
-PHP functions `filter_var` and `filter_input` can sanitize text and validate text formats (e.g.
+foreign input before using it in code. The `filter_var` and `filter_input` functions can sanitize text and validate text formats (e.g.
 email addresses).
 
-Foreign input can be anything, from `$_GET` and `$_POST` form input data, some values in `$_SERVER`,
-the HTTP body via `fopen('php://input', 'r')`, etc are all considered foreign inputs. It is not 
-limited to form data submitted by the user, both uploaded and downloaded files, session values and
-cookies count too. Data from third party web services should also be considered foreign input.
+Foreign input can be anything: `$_GET` and `$_POST` form input data, some values in the `$_SERVER`
+superglobal, and the HTTP request body via `fopen('php://input', 'r')`. Remember, foreign input is not
+limited to form data submitted by the user. Uploaded and downloaded files, session values, cookie data,
+and data from third-party web services are foreign input, too.
 
-While foreign data can be stored, combined and accessed later, it is still a foreign input. Every
-time you process, output, concatenate or include some data in your code you should ask yourself if
+While foreign data can be stored, combined, and accessed later, it is still foreign input. Every
+time you process, output, concatenate, or include data in your code, ask yourself if
 the data is filtered properly and can it be trusted.
 
-Filtering is tailored to the specific data usage. For example, when foreign input is passed
-to a HTML page output it can execute HTML and JavaScript on your site! This is known as Cross-Site
-Scripting (XSS) and can be a very dangerous attack. One way to avoid this is to sanitize all HTML tags
-in the input, removing tags or escaping them.
+Data may be _filtered_ differently based on its purpose. For example, when unfiltered foreign input is passed
+into HTML page output, it can execute HTML and JavaScript on your site! This is known as Cross-Site
+Scripting (XSS) and can be a very dangerous attack. One way to avoid XSS is to sanitize all HTML tags
+in the input by removing tags or escaping them into HTML entities.
 
-That is of course one instance of filtering against a specific type of attach. Another example would be 
-when passing options to be executed on the command line. This can be extremely dangerous and is usually bad 
-idea, but you can use the built-in `escapeshellarg` function to sanitize the arguments. 
+Another example is passing options to be executed on the command line. This can be extremely dangerous
+(and is usually a bad idea), but you can use the built-in `escapeshellarg` function to sanitize the executed
+command's arguments.
 
-One last example would be accepting foreign input to determine a file to load. This could be expoited by 
-changing the filename to a file path, so you need to remove / or other characters from the path, so it cant load potentially
-hidden or sensitive files.
-
-For performance, you can store filtered data and have it ready for usage next time. Just remember
-that data filtered for one kind of the output may not be sufficiently filtered for the other.
+One last example is accepting foreign input to determine a file to load from the filesystem. This can be exploited by
+changing the filename to a file path. You need to remove "/", "../", or other characters from the file path so it can't
+load hidden, non-public, or sensitive files.
 
 * [Learn about data filtering][1]
 * [Learn about `filter_var`][4]
