@@ -34,13 +34,14 @@ load hidden, non-public, or sensitive files.
 * [Learn about `filter_var`][4]
 * [Learn about `filter_input`][5]
 
-### Escaping and Sanitization
+### Escaping And Sanitization
 
-Sanitization removes illegal or unsafe characters from foreign input. Escaping does not alter the value of the input but instead converts certain special characters into a safer escaped form, e.g. using HTML hexadecimal or named entities to prevent the injection of angle brackets that might allow new tags to be introduced into a HTML document.
+Sanitization removes illegal or unsafe characters from foreign input. Escaping does not alter the meaning of the input value but instead converts certain special characters into a safer escaped form, e.g. using HTML hexadecimal or named entities to prevent the injection of angle brackets that might allow new tags to be introduced into a HTML document while ensuring that angle brackets
+can still be included in the rendered text.
 
-For example, you should escape foreign input before including the input in 
-HTML or inserting it into a raw SQL query. When you use bound parameters with
-[PDO](#databases), it will escape the input for you.
+For example, you should escape and/or sanitize foreign input before outputting it into 
+HTML or inserting it into a raw SQL query (for output to the database). When 
+you use bound parameters with [PDO](#databases), it will escape the input for you.
 
 The escaping required of foreign input will depend on the HTML context it is
 injected into. Escaping for HTML text differs from escaping for Javascript or
@@ -55,10 +56,11 @@ without the help of [HTML Purifier][html-purifier] which is considered the
 safest HTML sanitizer in PHP.
 
 Some programmers try to avoid the need for HTML sanitisation altogether by using
-restricted formatting languages like Markdown or BBCode. You should be
-aware, however, that these languages are intended to make it easier to
+formatting languages like Markdown or BBCode. You should be
+aware, however, that these languages are only intended to make it easier to
 write HTML by removing the complexity of HTML syntax as an editing
-barrier. The result of converting such languages to HTML will very likely still
+barrier (e.g. in blog comments or forum posts). The result of converting such 
+languages to HTML will very likely still
 require post-processing by [HTML Purifier][html-purifier] to remove potential
 Cross-Site Scripting (XSS) or UI Redress attempts by unfriendly users. When
 in doubt, use HTML sanitisation and you can't go wrong.
