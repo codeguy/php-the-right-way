@@ -13,6 +13,14 @@
 * [Chris Shiflett](http://twitter.com/shiflett)
 * [Sebastian Bergmann](http://twitter.com/s_bergmann)
 * [Matthew Weier O'Phinney](http://twitter.com/weierophinney)
+* [Paul M JOnes](http://twitter.com/pmjones)
+* [Elizabeth Naramore](http://twitter.com/ElizabethN)
+* [Lorna Mitchell](http://twitter.com/lornajane)
+* [Cal Evans](http://twitter.com/CalEvans)
+* [Lukas Kahwe Smith](http://twitter.com/lsmith)
+* [David Coallier](http://twitter.com/davidcoallier)
+
+are a few, [but not limited](https://twitter.com/#!/search/users/php).
 
 ## Mentoring
 

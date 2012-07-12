@@ -1,5 +1,14 @@
 # Libraries and Frameworks
 
+### Libraries
+A framework independent PHP classes. Some of them are 
+
+* [Aura Project](https://github.com/auraphp)
+* [Symfony](http://symfony.com/doc/current/components/index.html)
+* [Zend Framework](http://framework.zend.com/)
+
+You can search [packagist.org](http://packagist.org) for more independent libraries
+
 ## Web Frameworks
 
 Rather than re-invent the wheel, many PHP developers use _frameworks_ to build out web applications. Frameworks abstract away many of the low-level concerns and provide helpful, easy-to-use interfaces to complete common tasks.
@@ -8,6 +17,7 @@ _You do not need to use a framework for every project_. Sometimes, plain PHP is 
 
 ### Full-Stack Frameworks
 
+* [Aura PHP](https://github.com/auraphp/system)
 * [CakePHP](http://cakephp.org/)
 * [CodeIgniter](http://codeigniter.com/)
 * [FuelPHP](http://fuelphp.com/)
