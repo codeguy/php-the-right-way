@@ -10,11 +10,11 @@ foreign input before using it in code.
 PHP functions `filter_var` and `filter_input` can sanitize text and validate text formats (e.g.
 email addresses).
 
-Foreign input comes in many different ways. HTML form data provided by the users is straight
-forward. But most of HTTP request data, data from foreign web services, both uploaded and downloaded
-files and much else are too. While foreign input may be stored, combined and accessed later, it is
-still foreign input. Every time you process, output, concatenate or include some data you should ask
-yourself if the data is filtered properly and can it be trusted.
+Foreign input is not just the HTML form data submitted by the user. Most of HTTP request data, data
+from foreign web services, both uploaded and downloaded files and much else are foreign inputs too.
+While foreign input can be stored, combined and accessed later, it is still a foreign input. Every
+time you process, output, concatenate or include some data in your code you should ask yourself if
+the data is filtered properly and can it be trusted.
 
 Filtering is tailored to the specific data usage. When including foreign input into the HTML page,
 one way to protect from Cross-Site Scripting (XSS) attack is to sanitize by removing all HTML tags
@@ -39,7 +39,7 @@ into a raw SQL query. When you use bound parameters with [PDO](#databases), it w
 sanitize the input for you.
 
 Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML
-page. This is very hard to do and many avoid it by using other more restricted formattings like
+page. This is very hard to do and many avoid it by using other more restricted formatting like
 Markdown or BBCode, although whitelisting libraries like [HTML Purifier][html-purifier] exists for
 this reason.
 
