@@ -27,12 +27,13 @@ Another example is passing options to be executed on the command line. This can 
 command's arguments.
 
 One last example is accepting foreign input to determine a file to load from the filesystem. This can be exploited by
-changing the filename to a file path. You need to remove "/", "../", or other characters from the file path so it can't
+changing the filename to a file path. You need to remove "/", "../", [null bytes][6], or other characters from the file path so it can't
 load hidden, non-public, or sensitive files.
 
 * [Learn about data filtering][1]
 * [Learn about `filter_var`][4]
 * [Learn about `filter_input`][5]
+* [Learn about handling null bytes][6]
 
 ### Sanitization
 
@@ -61,4 +62,5 @@ email address, a phone number, or age when processing a registration submission.
 [3]: http://www.php.net/manual/en/filter.filters.validate.php
 [4]: http://php.net/manual/en/function.filter-var.php
 [5]: http://www.php.net/manual/en/function.filter-input.php
+[6]: http://php.net/manual/en/security.filesystem.nullbytes.php
 [html-purifier]: http://htmlpurifier.org/
