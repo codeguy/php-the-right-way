@@ -6,7 +6,7 @@ meetings and Conferences all over the world.
 
 If you plan on being a serious developer who wishes to grow professionally, participating in these efforts are a fail
 safe path to success. User Groups are present in many places of the world, from Brazil to the US, over to Europe and all
-the way down in Australia. Work is still ongoing to have a centralized list, so google and meetup are your best places
+the way down in Australia. Work is still ongoing to have a centralized list, so Google and Meetup are your best places
 to start a search.
 
 Around the community we have a saying: *"If you can't find a User Group in your area, its your turn to start one"*. We
