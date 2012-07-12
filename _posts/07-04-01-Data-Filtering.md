@@ -10,18 +10,27 @@ foreign input before using it in code.
 PHP functions `filter_var` and `filter_input` can sanitize text and validate text formats (e.g.
 email addresses).
 
-Foreign input is not just the HTML form data submitted by the user. Most of HTTP request data, data
-from foreign web services, both uploaded and downloaded files and much else are foreign inputs too.
-While foreign input can be stored, combined and accessed later, it is still a foreign input. Every
+Foreign input can be anything, from `$_GET` and `$_POST` form input data, some values in `$_SERVER`,
+the HTTP body via `fopen('php://input', 'r')`, etc are all considered foriegn inputs. It is not 
+limited to form data submitted by the user, both uploaded and downloaded files, session values and
+cookies count too.
+
+While foreign data can be stored, combined and accessed later, it is still a foreign input. Every
 time you process, output, concatenate or include some data in your code you should ask yourself if
 the data is filtered properly and can it be trusted.
 
-Filtering is tailored to the specific data usage. When including foreign input into the HTML page,
-one way to protect from Cross-Site Scripting (XSS) attack is to sanitize by removing all HTML tags
-in the input. But when using the same foreign input as a shell command argument removing HTML is
-pointless, and the built-in `escapeshellarg` function may be used for sanitization. Or input may be
-used as a concatenated filepath part, allowing only number or nothing, which can be done with
-validation.
+Filtering is tailored to the specific data usage. For example, when including foreign input is passed 
+to a HTML page output it can execute HTML and JavaScript on your site! This is known as Cross-Site 
+Scripting (XSS) and can be a very dangerous attack. One way to avoid this is to sanitize all HTML tags
+in the input, or encode them.
+
+That is of course one instance of filtering against a specific type of attach. Another example would be 
+when passing options to be executed on the command line. This can be extremely dangers and is usually bad 
+idea, but you can use the built-in `escapeshellarg` function to sanitize the arguments. 
+
+One last example would be accepting foreign input to determine a file to load. This could be expoited by 
+changing the filename to a file path, so you need to remove and / from the path, so it cant load potentially 
+hidden or sensitive files.
 
 For performance, you can store filtered data and have it ready for usage next time. Just remember
 that data filtered for one kind of the output may not be sufficiently filtered for the other.
