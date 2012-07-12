@@ -9,8 +9,8 @@ In short, IDEs are the all-in-one solution for developers.
 
 #### Cross-platform
 * [Apanta Studio](http://netbeans.com/) - Freeware
-* [Dreamweaver](http://www.adobe.com/products/dreamweaver/) - Shareware
-* [Eclipse PDT](http://www.eclipse.org/projects/project.php?id=tools.pdt) - Freeware
+* [Dreamweaver](http://adobe.com/products/dreamweaver/) - Shareware
+* [Eclipse PDT](http://eclipse.org/projects/project.php?id=tools.pdt) - Freeware
 * [Komodo IDE](http://activestate.com/komodo-ide/) - Shareware
 * [Netbeans](http://netbeans.com/) - Freeware
 * [PhpStorm](http://jetbrains.com/phpstorm/) - Shareware
@@ -18,7 +18,7 @@ In short, IDEs are the all-in-one solution for developers.
 
 #### Windows
 * [PhpED](http://nusphere.com/) - Shareware
-* [PHPEdit](http://www.phpedit.com/en) - Shareware
+* [PHPEdit](http://phpedit.com/en) - Shareware
 
 ## Text editors
 
@@ -28,17 +28,17 @@ of an IDE.
 
 #### Cross-platform
 * [Bluefish](http://bluefish.openoffice.nl/)  - Freeware
-* [Emacs](http://www.gnu.org/software/emacs/) - Freeware
+* [Emacs](http://gnu.org/software/emacs/) - Freeware
 * [Komodo Edit](http://activestate.com/komodo-edit/) - Freeware
 * [Sublime Text](http://sublimetext.com/) - Trialware (non-expiring)
-* [Vim](http://www.vim.org/) - Freeware
+* [Vim](http://vim.org/) - Freeware
 
 #### Mac
-* [Coda](http://www.panic.com/coda/) - Shareware
+* [Coda](http://panic.com/coda/) - Shareware
 * [TextMate](http://macromates.com/) - Shareware
 
 #### Online
-* [Codeanywhere](https://codeanywhere.net/)  - Freeware
+* [Codeanywhere](https://codeanywhere.net/)  - Freeware/Paid plans
 * [ShiftEdit](http://shiftedit.net/)  - Freeware
 
 #### Linux
@@ -46,6 +46,6 @@ of an IDE.
 
 #### Windows
 * [Geany](http://geany.org/) - Freeware
-* [Notepad++](http://www.notepad-plus-plus.org/) - Freeware
+* [Notepad++](http://notepad-plus-plus.org/) - Freeware
 
 For more IDEs and text editors, visit [List of PHP editors](http://en.wikipedia.org/wiki/List_of_PHP_editors)
