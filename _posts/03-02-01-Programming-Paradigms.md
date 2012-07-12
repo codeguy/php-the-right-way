@@ -15,7 +15,7 @@ PHP 5.4 (2012).
 
 ### Functional Programming
 
-PHP has had annonymous functions since PHP 5.3:
+PHP has had anonymous functions since PHP 5.3:
 
 {% highlight php %}
 <?php
