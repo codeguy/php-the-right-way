@@ -36,7 +36,11 @@ load hidden, non-public, or sensitive files.
 
 ### Escaping And Sanitization
 
-Sanitization removes illegal or unsafe characters from foreign input. Escaping does not alter the meaning of the input value but instead converts certain special characters into a safer escaped form, e.g. using HTML hexadecimal or named entities to prevent the injection of angle brackets that might allow new tags to be introduced into a HTML document while ensuring that angle brackets
+Sanitization removes illegal or unsafe characters from foreign input. Escaping 
+does not alter the meaning of the input value but instead converts certain 
+special characters into a safer escaped form, e.g. using HTML hexadecimal or 
+named entities to prevent the injection of angle brackets that might allow new 
+tags to be introduced into a HTML document while ensuring that angle brackets
 can still be included in the rendered text.
 
 For example, you should escape and/or sanitize foreign input before outputting it into 
