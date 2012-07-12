@@ -39,6 +39,7 @@
                     <li><a href="/#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
                     {% assign lastIsChild = post.isChild %}
                 {% endfor %}
+                <li><a href="/#site-footer">Credits</a></li>
             </ul>
         </nav>
         <div class="site-content">
@@ -55,7 +56,7 @@
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.phptherightway.com/" data-size="large" data-hashtags="php">Tweet</a>
             </header>
             {{ content }}
-            <footer class="site-footer">
+            <footer class="site-footer" id="site-footer">
                 <h2 class="epsilon">Created and maintained by</h2>
                 <ul>
                     <li><a href="http://twitter.com/codeguy">Josh Lockhart</a></li>
