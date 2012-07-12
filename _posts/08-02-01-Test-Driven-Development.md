@@ -15,7 +15,7 @@ There are several different types of testing that you can do for your applicatio
 Unit Testing is a programming approach to ensure functions, classes and methods are working as
 expected, from the point you build them all the way through the development cycle. By checking
 values going in and out of various functions and methods, you can make sure the internal logic is
-working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+working correctly.
 
 When you create a class or function you should create a unit test for each behaviour it must have. At a very basic level you should
 make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments.
@@ -23,9 +23,20 @@ This will help ensure that when you make changes to this class or function later
 cycle that the old functionality continues to work as expected. The only alternative to this would be
 var_dump() in a test.php, which is no way to build an application - large or small.
 
-The other use for unit tests is contributing to open source. If you can write a test that shows broken
-functionality (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If
-you run a project which accepts pull requests then you should suggest this as a requirement.
+It is supposed that the test you write is isolated from other parts of system. 
+This is done to make sure each unit of your code works by itself. 
+The emulation of dependent modules is done by replacing them with [Stubs and Mocks](http://martinfowler.com/articles/mocksArentStubs.html). 
+
+In some cases it's hard to remove all the dependencies from test. 
+For testing database manipulation methods you might need a database. 
+For testing controller built with a framework you might need to use classes of this framework. 
+This is done when to make sure a method runs correctly on current database and correctly uses methods of current framework. 
+These are the [Integration tests](http://en.wikipedia.org/wiki/Integration_testing) and they are supposed to test connection between modules and thrid-party backends. 
+They are much similar to unit tests and they use same frameworks for testing.
+
+Unit tests is a must when contributing to open source. 
+When you prove your code works with a tests attached, patches are much more likely to be accepted.
+If you run a project which accepts pull requests then you should suggest this as a requirement.
 
 [PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
 applications, but there are several alternatives
@@ -33,15 +44,7 @@ applications, but there are several alternatives
 * [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
-
-### Integration Testing
-
-From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
-
-> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
-
-Many of the same tools that can be used for unit testing can be used for integration testing as many
-of the same principles are used.
+* [Atoum](https://github.com/mageekguy/atoum)
 
 ### Functional Testing
 
@@ -52,6 +55,6 @@ data and simulating actual users of the application.
 
 #### Functional Testing Tools
 
-* [Selenium](http://seleniumhq.com)
-* [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
+* [Selenium](http://seleniumhq.com) - standalone tool for running automated scenarios in browser.
+* [Mink](http://mink.behat.org) - integration of various testing backends into test framework
+* [Codeception](http://codeception.com) - a full-stack testing framework that includes acceptance testing tools
