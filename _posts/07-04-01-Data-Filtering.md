@@ -11,25 +11,25 @@ PHP functions `filter_var` and `filter_input` can sanitize text and validate tex
 email addresses).
 
 Foreign input can be anything, from `$_GET` and `$_POST` form input data, some values in `$_SERVER`,
-the HTTP body via `fopen('php://input', 'r')`, etc are all considered foriegn inputs. It is not 
+the HTTP body via `fopen('php://input', 'r')`, etc are all considered foreign inputs. It is not 
 limited to form data submitted by the user, both uploaded and downloaded files, session values and
-cookies count too.
+cookies count too. Data from third party web services should also be considered foreign input.
 
 While foreign data can be stored, combined and accessed later, it is still a foreign input. Every
 time you process, output, concatenate or include some data in your code you should ask yourself if
 the data is filtered properly and can it be trusted.
 
-Filtering is tailored to the specific data usage. For example, when including foreign input is passed 
-to a HTML page output it can execute HTML and JavaScript on your site! This is known as Cross-Site 
+Filtering is tailored to the specific data usage. For example, when foreign input is passed
+to a HTML page output it can execute HTML and JavaScript on your site! This is known as Cross-Site
 Scripting (XSS) and can be a very dangerous attack. One way to avoid this is to sanitize all HTML tags
-in the input, or encode them.
+in the input, removing tags or escaping them.
 
 That is of course one instance of filtering against a specific type of attach. Another example would be 
-when passing options to be executed on the command line. This can be extremely dangers and is usually bad 
+when passing options to be executed on the command line. This can be extremely dangerous and is usually bad 
 idea, but you can use the built-in `escapeshellarg` function to sanitize the arguments. 
 
 One last example would be accepting foreign input to determine a file to load. This could be expoited by 
-changing the filename to a file path, so you need to remove and / from the path, so it cant load potentially 
+changing the filename to a file path, so you need to remove / or other characters from the path, so it cant load potentially
 hidden or sensitive files.
 
 For performance, you can store filtered data and have it ready for usage next time. Just remember
