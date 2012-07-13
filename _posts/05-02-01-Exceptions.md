@@ -26,16 +26,11 @@ $email->subject('My Subject');
 $email->body('How the heck are you?');
 $email->to('guy@example.com', 'Some Guy');
 
-try
-{
+try {
     $email->send();
-}
-catch(Fuel\Email\ValidationFailedException $e)
-{
+} catch(Fuel\Email\ValidationFailedException $e) {
     // The validation failed
-}
-catch(Fuel\Email\SendingFailedException $e)
-{
+} catch(Fuel\Email\SendingFailedException $e) {
     // The driver could not send the email
 }
 {% endhighlight %}
@@ -46,7 +41,10 @@ An Exception by default has no meaning and the most common to give it meaning is
 
 {% highlight php %}
 <?php
-class ValidationException extends Exception {}
+namespace YourCompany\SomeComponent;
+class ValidationException extends \Exception
+{
+}
 {% endhighlight %}
 
 This means you can add multiple catch blocks and handle different Exceptions differently. This can lead to 
@@ -54,7 +52,7 @@ the creation of a <em>lot</em> of custom Exceptions, some of which could have be
 provided in the [SPL extension][splext]. 
 
 If for example you use the `__call()` Magic Method and an invalid method is requested then instead of throwing a standard 
-Exception which is vague, or creating a custom Exception just for that, you could just `throw new BadFunctionCallException;`.
+Exception which is vague, or creating a custom Exception just for that, you could just `throw new \BadFunctionCallException;`.
 
 * [Read about Exceptions][exceptions]
 * [Read about SPL Exceptions][splexe]
