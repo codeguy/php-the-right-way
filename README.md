@@ -24,10 +24,14 @@ developers know where to find good information!
 
 ### Contributor Style Guide
 
+All pull requests to the *primary repo* should:
+
 1. Use American English spelling.
 2. Use four (4) spaces to indent text; do not use tabs.
 3. Wrap all text to 120 characters.
 4. Code samples should adhere to PSR-1 or higher.
+
+If you are contributing to a translated version of this repo, consult the translated repo's owner for instructions.
 
 ## Where
 
