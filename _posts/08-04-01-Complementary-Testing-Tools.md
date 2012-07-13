@@ -4,7 +4,7 @@ isChild: true
 
 ## Complementary Testing Tools
 
-Besides individual testing and behaviour driven frameworks, there are also a number of generic frameworks and helper libraries useful for any preferred approach taken.
+Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper libraries useful for any preferred approach taken.
 
 ### Tool Links
 
