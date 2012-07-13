@@ -50,7 +50,7 @@ Higher-order Anonymous Function Application:
 
   // function accepts `$day` as a parameter and returns only days that start with the letter 't'
   $start_with_t = array_filter($days_of_week, function($day){
-    return $day[0] === 't';
+    return preg_match('/^t/ui', $day);
   });
 
   // function accepts `$day` as a parameter and returns name of day as an uppercase string
@@ -77,7 +77,7 @@ easy to reason about. The white-list is defined by using the `use(...)` keyword.
 
   // function accepts `$day` as a parameter and returns only days that start with the letter assigned to `$starts_with`
   $results      = array_filter($days_of_week, function($day) use($starts_with){
-    return $day[0] === $starts_with;
+    return preg_match("/^{$starts_with}/ui", $day);
   });
 
   // Days beginning with the letter 's': sun, sat
