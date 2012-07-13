@@ -30,6 +30,7 @@
     <body>
         <nav class="site-navigation">
             <div class="build-date">Last Updated: {{ site.time }}</div>
+            {% if page.url == "/index.html" %}
             <ul>
                 <li><a href="/#site-header">Welcome</a></li>
                 {% assign lastIsChild = false %}
@@ -41,6 +42,11 @@
                 {% endfor %}
                 <li><a href="/#site-footer">Credits</a></li>
             </ul>
+            {% else %}
+            <ul>
+                <li><a href="/#site-header">Back to Main Page</a></li>
+            </ul>
+            {% endif %}
         </nav>
         <div class="site-content">
 
@@ -57,6 +63,7 @@
             </header>
             {{ content }}
             <footer class="site-footer" id="site-footer">
+            {% if page.url == "/index.html" %}
                 <h2 class="epsilon">Created and maintained by</h2>
                 <ul>
                     <li><a href="http://twitter.com/codeguy">Josh Lockhart</a></li>
@@ -75,7 +82,7 @@
                 <ul class="mbd">
                     <li><a href="http://www.newmediacampaigns.com">New Media Campaigns</a></li>
                 </ul>
-
+            {% endif %}
                 <p>
                     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">PHP: The Right Way</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.twitter.com/codeguy" property="cc:attributionName" rel="cc:attributionURL">Josh Lockhart</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://www.phptherightway.com" rel="dct:source">www.phptherightway.com</a>.
                 </p>
