@@ -35,7 +35,7 @@ this has always been less-than elegant and error-prone. PHP 5.3 introduced [anon
 PHP manual alludes to these being synonymous, this is slightly misleading. A closure is an anonymous function that is capable of capturing the
 current run-time state for later use. Below are examples of anonymous functions and closures used for higher-order function application.
 
-annonymous functions:
+Anonymous Functions:
 
 {% highlight php %}
 <?php
@@ -53,7 +53,7 @@ annonymous functions:
   echo 'Days beginning with the letter "T": ', join(', ', $start_with_t);
 {% endhighlight %}
 
-closures:
+Closures:
 
 {% highlight php %}
 <?php
