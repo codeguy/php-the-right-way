@@ -7,7 +7,7 @@ isChild: true
 There are times when it can be beneficial to cache individual objects in your code, such as with data that is expensive
 to get or database calls where the result is unlikely to change. You can use object caching software to hold these
 pieces of data in memory for extremely fast access later on. If you save these items to a data store after you retrieve
-them, then pull them directly from the cache for following requests you can gain a significant improvement in
+them, then pull them directly from the cache for following requests, you can gain a significant improvement in
 performance as well as reduce the load on your database servers.
 
 Many of the popular bytecode caching solutions let you cache custom data as well, so there's even more reason to take
@@ -27,12 +27,16 @@ Example logic using APC:
 
 {% highlight php %}
 <?php
+// check if there is data saved as 'expensive_data' in cache
 $data = apc_fetch('expensive_data');
 if (!$data)
 {
+        // data not in cache, do expensive call and save for later use
 	$data = get_expensive_data();
 	apc_store('expensive_data', $data);
 }
+
+print_r($data);
 {% endhighlight %}
 
 Learn more about popular object caching systems:
