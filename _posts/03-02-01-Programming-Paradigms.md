@@ -53,7 +53,7 @@ print_r($output);
 
 Closure is an anonymous function that can access variables imported from the outside scope without using any global
 variables. Theoretically, a closure is a function with some arguments closed (e.g. fixed) by the environment when it is 
-defined. This is used to cross variable scope restrictions in a very clean way.
+defined. Closures can work around variable scope restrictions in a clean way.
 
 In the next example we use closures to define a function returning a single filter function for `array_filter`, out of
 a family of filter functions.
