@@ -10,8 +10,6 @@ Ideally you should write PHP code that adheres to one or more of these standards
 * [Read about PSR-1][psr1]
 * [Read about PSR-2][psr2]
 
-[Back to Top](#top)
-
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
