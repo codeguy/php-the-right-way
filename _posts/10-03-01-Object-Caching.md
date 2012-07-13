@@ -31,9 +31,9 @@ Example logic using APC:
 $data = apc_fetch('expensive_data');
 if (!$data)
 {
-        // data not in cache, do expensive call and save for later use
-	$data = get_expensive_data();
-	apc_store('expensive_data', $data);
+    // data not in cache, do expensive call and save for later use
+    $data = get_expensive_data();
+    apc_store('expensive_data', $data);
 }
 
 print_r($data);
