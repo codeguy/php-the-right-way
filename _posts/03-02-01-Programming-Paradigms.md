@@ -15,7 +15,14 @@ PHP 5.4 (2012).
 
 ### Functional Programming
 
-PHP has had annonymous functions since PHP 5.3:
+PHP supports first-class and higher-order functions. This means that a function literal (or lambda expression or anonymous function)
+can be assigned to a variable or passed as a parameter to another function. Variables containing functions can be invoked on-the-fly.
+
+Anonymous Functions:
+
+PHP has long supported on-the-fly function creation through the use of the [create_function][create-function] function; however, this is
+less-than elegant, error-prone, and generally not recommended. It is recommended that you instead use the literal [anonymous function support][anonymous-functions]
+introduced with the release of [PHP 5.3 (2009)][changelog-53].
 
 {% highlight php %}
 <?php
@@ -27,33 +34,40 @@ $greet = function($name)
 $greet('World');
 {% endhighlight %}
 
-* [Read about Anonymous functions][anonymous-functions]
-* [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
+Higher-order Functions:
 
-PHP has long been able to accomplish higher-order function application through the use of the function [create_function][create-function]; however,
-this has always been less-than elegant and error-prone. PHP 5.3 introduced [anonymous functions and closures][anonymous-functions]. Although the
-PHP manual alludes to these being synonymous, this is slightly misleading. A closure is an anonymous function that is capable of capturing the
-current run-time state for later use. Below are examples of anonymous functions and closures used for higher-order function application.
+A function is a higher-order function if it does one of the following:
 
-Anonymous Functions:
+-   accepts a function as an input parameter
+-   outputs a function
+
+Higher-order Anonymous Function Application:
 
 {% highlight php %}
 <?php
 
   $days_of_week = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
+  // function accepts `$day` as a parameter and returns only days that start with the letter 't'
   $start_with_t = array_filter($days_of_week, function($day){
     return $day[0] === 't';
   });
 
+  // function accepts `$day` as a parameter and returns name of day as an uppercase string
   $start_with_t = array_map(function($day){
     return strtoupper($day);
   }, $start_with_t);
 
+  // Days beginning with the letter "T": TUE, THU
   echo 'Days beginning with the letter "T": ', join(', ', $start_with_t);
 {% endhighlight %}
 
-Closures:
+Higher-order Function (Closure) Application:
+
+Although the PHP manual alludes to anonymous functions and closures as being synonymous, this is misleading. A closure is an anonymous function
+that has captured the state of variables that are available in the scope in which the function was defined. In some languages, all in-scope
+variables are captured; however, PHP allows the developer to "white-list" the variables that are captured. This makes PHP closures extremely
+easy to reason about. The white-list is defined by using the `use(...)` keyword.
 
 {% highlight php %}
 <?php
@@ -61,17 +75,43 @@ Closures:
   $starts_with  = 's';
   $days_of_week = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
+  // function accepts `$day` as a parameter and returns only days that start with the letter assigned to `$starts_with`
   $results      = array_filter($days_of_week, function($day) use($starts_with){
     return $day[0] === $starts_with;
   });
 
+  // Days beginning with the letter 's': sun, sat
   echo "Days beginning with the letter '{$starts_with}': ", join(', ', $results);
 {% endhighlight %}
 
+A common use of higher-order functions is to implement the strategy pattern. The built-in `array_filter` function asks for both the input
+input array (data) and a function (strategy) used as a predicate (function returning a boolean result) on each array item.
+
+{% highlight php %}
+<?php
+
+  function criteria_greater_than($min) {
+    return function($item) use ($min) {
+        return $item > $min;
+    };
+  }
+
+  $input  = [1, 2, 3, 4, 5, 6];
+  $output = array_filter($input, criteria_greater_than(3));
+
+  // Numbers greater than 3: 4, 5, 6
+  echo "Numbers greater than 3: ", join(', ', $output);
+{% endhighlight %}
+
+* [Read about Anonymous functions][anonymous-functions]
+* [More details in the Closures RFC][closures-rfc]
+* [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
+
 ### Meta Programming
 
-Ruby developers often say that PHP is lacking `method_missing`, but it is available as `__call()`. There are many Magic Methods available 
-like `__get()`, `__set()`, `__clone()`, `__toString()`, etc.
+Similar to Ruby's `method_missing` PHP has `__call()`.
+
+There are many Magic Methods available such as `__get()`, `__set()`, `__clone()`, `__toString()`.
 
 * [Read about Magic Methods][magic-methods]
 * [Read about Reflection][reflection]
@@ -85,3 +125,5 @@ like `__get()`, `__set()`, `__clone()`, `__toString()`, etc.
 [traits]: http://php.net/traits
 [call-user-func-array]: http://php.net/function.call-user-func-array
 [create-function]: http://php.net/create_function
+[changelog-53]: http://php.net/ChangeLog-5.php#5.3.0
+[closures-rfc]: https://wiki.php.net/rfc/closures
