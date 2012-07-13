@@ -18,42 +18,36 @@ interfaces, inheritence, constructors, cloning, exceptions, and more.
 
 ### Functional Programming
 
-PHP supports first-class functions. It is possible to define a new function and assign it to a variable name and built-in functions
-can be referenced and called dynamically. Functions can be passed as arguments to other functions (Higher-order functions) and function
-can return other functions. New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
+PHP supports first-class function, meaning that a function itself can be assigned to a variable, both user-defined and built-in. Those
+functions referenced by a variable can be invoked dynamically. Functions can be passed as arguments to other functions (feature called
+Higher-order functions) and function can return other functions.
+
+New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
+
+The most common usage of higher-order functions is when implementing a strategy pattern. Built-in `array_filter` function asks both
+for the input array (data) and a function (strategy, callback) used as a filter criteria on each array item.
 
 {% highlight php %}
 <?php
-/**
- * Takes two single variable functions f and g, and creates a new function f∘g
- */
-function combine($f, $g)
-{
-    return function($x) use ($f, $g)
-    {
-        return $f($g($x));
-    };
-}
+$input = array(1, 2, 3, 4, 5, 6);
 
-// Define a new function x+1 and assign it to a variable
-$plus_one = function($x)
-{
-    return $x+1;
+// Creates new anonymous function and assigns it to a variable
+$criteria_even = function($item) {
+    return ($item % 2) == 0;
 };
 
-// Assign resulting function of combining x+1 and built-in sin(x)
-// Resulting function is mathematically the same as sin(x)+1
-$sin_plus_one = combine($plus_one, "sin");
+// Built-in array_filter accepts both the data and the function
+$output = array_filter($input, $criteria_even);
 
-// Evaluate for x equals Pi, should be 1
-print $sin_plus_one(M_PI);{% endhighlight %}
+print_r($output);
 {% endhighlight %}
 
-The most common usage of higher-order functions like `combine` above is when implementing the strategy pattern. Built-in `array_filter` function asks both
-for the input array (data) and a function (strategy, callback) used as a filter criteria on each array item.
+Closure is an anonymous function that can access selected variables imported from the outside scope without using any global variables.
+Theoretically, a closure is a function that has some arguments closed (like fixed) by the environment when the function is defined. This
+can be used to cross the variable scope restrictions in a very clean way.
 
-Closures may be used to cross the variable scope without using any global variables. In the following example we have a function able
-to return a single criteria function out of the family of functions, and then put it in use with `array_filter`:
+In the next example we use closures to define a function returning a single criteria function for `array_filter`, out of a family of
+criteria functions.
 
 {% highlight php %}
 <?php
@@ -62,17 +56,21 @@ to return a single criteria function out of the family of functions, and then pu
  */
 function criteria_greater_than($min)
 {
-    return function($item) use ($min)
-    {
+    return function($item) use ($min) {
         return $item > $min;
     };
 }
 
 $input = array(1, 2, 3, 4, 5, 6);
+
+// Use array_filter on a input with a selected criteria function
 $output = array_filter($input, criteria_greater_than(3));
 
 print_r($output); // items > 3
 {% endhighlight %}
+
+Each criteria function in the family accepts only elements greater than some minimum value. Single criteria returned by `criteria_greater_than`
+is a closure whith `$min` argument closed by the value existing in the scope (given as argument when `criteria_greater_than` is called).
 
 Early binding is used by default for importing `$min` variable into the created function. For true closures with late binding one should use
 a reference when importing. This can be used with some templating or input validation libraries, where anonymous function is defined to capture
