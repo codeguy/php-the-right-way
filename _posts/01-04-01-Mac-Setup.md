@@ -11,7 +11,7 @@ To update PHP on OSX you can get it installed through a number of Mac [package m
 [php-osx by Liip][php-osx-downloads] being recommended.
 
 The other option is to [compile it yourself][mac-compile], in that case be sure to have installed either Xcode or
-Apple's substitute ["Command Line Tools for Xcode" downloadable from Apple's Mac Developer Center][apple-developer]. 
+Apple's substitute ["Command Line Tools for Xcode"][apple-developer] downloadable from Apple's Mac Developer Center.
 
 For a complete "all-in-one" package including PHP, Apache web server and MySQL database, all this with a nice control
 GUI, try [MAMP][mamp-downloads].
