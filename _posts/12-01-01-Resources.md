@@ -13,6 +13,7 @@
 * [Chris Shiflett](http://twitter.com/shiflett)
 * [Sebastian Bergmann](http://twitter.com/s_bergmann)
 * [Matthew Weier O'Phinney](http://twitter.com/weierophinney)
+* [Nikita Popov](http://twitter.com/nikita_ppv)
 
 ## Mentoring
 
