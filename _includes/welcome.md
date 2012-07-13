@@ -6,8 +6,9 @@ standards, and links to authoritative tutorials around the Web.
 
 ## Disclaimer
 
-It is important to understand _there is no canonical way to use PHP_. That's the beauty of it. This website introduces
-new PHP developers to best practices, available options, and good information.
+_There is no canonical way to use PHP_. However, this website is a humble display of some of the best practices,
+available options, and good information. It aims to introduce new PHP developers and to rethink seasoned pros with fresh
+ideas.
 
 This is a living document and will continue to be updated with more helpful information and examples as they become
 available.
