@@ -21,23 +21,18 @@ of an error, then they can choose how to handle this. E.g:
 
 {% highlight php %}
 <?php
-$email = new Fuel\Email;
-$email->subject('My Subject');
-$email->body('How the heck are you?');
-$email->to('guy@example.com', 'Some Guy');
-
-try
-{
+try {
+    $email = new Vendor\Email;
+    $email->subject('My Subject');
+    $email->body('How the heck are you?');
+    $email->to('guy@example.com', 'Some Guy');
     $email->send();
-}
-catch(Fuel\Email\ValidationFailedException $e)
-{
+} catch(Vendor\Email\ValidationFailedException $e) {
     // The validation failed
-}
-catch(Fuel\Email\SendingFailedException $e)
-{
+} catch(Vendor\Email\SendingFailedException $e) {
     // The driver could not send the email
 }
+
 {% endhighlight %}
 
 ### SPL Exceptions
