@@ -258,10 +258,12 @@ select{min-width:30%;}
 .btn-s,.btn-single{height:30px;font-size:15px;line-height:30px;}
 .btn-d,.btn-double{height:40px;font-size:20px;line-height:40px;}
 .site-header{position:relative;z-index:1;text-align:center;}
-h1.site-title{margin-bottom:0px !important;font-family:'Alfa Slab One';font-size:80px;font-weight:normal !important;line-height:100px !important;}h1.site-title a{text-decoration:none;}
+.site-title{margin-bottom:0px !important;font-family:'Alfa Slab One';font-size:80px;font-weight:normal !important;line-height:100px !important;}.site-title a{text-decoration:none;}
 .site-slogan{font-weight:normal;}
 .fork-me,.fork-me img{position:absolute;top:0;right:0;}
 .fork-me{z-index:2;}
+.interior-site-header{background:#EEE;-webkit-box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;-moz-box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;padding-top:20px !important;padding-right:20px !important;padding-bottom:20px !important;padding-left:20px !important;text-align:center;}.interior-site-header .site-title{font-size:40px;line-height:40px !important;}
+.interior-site-header .site-slogan{margin-bottom:20px !important;}
 .site-navigation{background:#EEE;-webkit-box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;-moz-box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;box-shadow:inset rgba(0, 0, 0, 0.07) 0 0 40px;padding-top:20px !important;padding-right:20px !important;padding-bottom:20px !important;padding-left:20px !important;position:fixed;top:0;bottom:0;overflow:auto;width:240px;}
 .build-date{margin-bottom:20px !important;color:#AAA;font-family:Helvetica,Arial,sans-serif;font-size:11px;}
 .site-navigation ul{margin-top:0px !important;margin-right:0px !important;margin-bottom:0px !important;margin-left:0px !important;padding-top:0px !important;padding-right:0px !important;padding-bottom:0px !important;padding-left:0px !important;list-style:none;margin:0;padding:0;font-size:16px;}
@@ -269,6 +271,7 @@ h1.site-title{margin-bottom:0px !important;font-family:'Alfa Slab One';font-size
 .site-navigation a{text-decoration:underline;}.site-navigation a:hover{text-decoration:none;}
 .site-navigation ul ul{margin-left:20px !important;padding-top:10px !important;font-size:12px;}.site-navigation ul ul a{text-decoration:none;}
 .site-content{padding:20px 40px 40px 320px;}.site-content h1{clear:both;}
+.interior-site-content{padding-top:40px !important;padding-right:40px !important;padding-bottom:40px !important;padding-left:40px !important;}
 .top{background:#333;display:inline-block;float:right;margin-right:-40px;padding:4px 8px;color:#FFF;font-size:12px;text-decoration:none !important;}
 .site-footer{clear:both;padding-top:40px !important;font-size:13px;text-align:center;}
 .site-footer img{margin-left:2px;position:relative;top:-2px;vertical-align:middle;}

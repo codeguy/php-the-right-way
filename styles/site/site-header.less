@@ -3,7 +3,7 @@
     z-index: 1;
     text-align: center;
 }
-h1.site-title{
+.site-title{
     .mbn;
     font-family: 'Alfa Slab One';
     font-size: @baseline * 4;
@@ -24,4 +24,19 @@ h1.site-title{
 }
 .fork-me{
     z-index: 2;
+}
+
+.interior-site-header{
+    background: #EEE;
+    .inner-shadow(fade(#000, 7%) 0 0 40px);
+    .pas;
+    text-align: center;
+
+    .site-title{
+        font-size: @baseline * 2;
+        line-height: @baseline * 2 !important;
+    }
+    .site-slogan{
+        .mbs;
+    }
 }
