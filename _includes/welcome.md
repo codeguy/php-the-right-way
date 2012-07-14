@@ -1,12 +1,12 @@
 # Welcome
 
 There's a lot of outdated information on the Web that leads new PHP users astray, propagating bad practices and bad
-code. This must stop. _PHP: The Right Way_ is an easy-to-read, quick reference for PHP best practices, accepted coding 
+code. This must stop. _PHP: The Right Way_ is an easy-to-read, quick reference for PHP best practices, accepted coding
 standards, and links to authoritative tutorials around the Web.
 
 ## Disclaimer
 
-_There is no canonical way to use PHP_. However, this website is a humble display of some of the best practices,
+_There is no canonical way to use PHP_. However, this website is a humble display of best practices,
 available options, and good information. It aims to introduce new PHP developers and to rethink seasoned pros with fresh
 ideas.
 
