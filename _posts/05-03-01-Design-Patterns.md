@@ -1,3 +1,7 @@
+---
+isChild: true
+---
+
 # Application Design Patterns
 
 There are numerous ways to structure your web applications, and you can put as much or as little thought as you like
