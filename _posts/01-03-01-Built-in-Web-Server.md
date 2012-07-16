@@ -3,7 +3,7 @@ title: Built-in Web Server
 isChild: true
 ---
 
-## Built-in web server
+## 内置Web服务器
 
 You can start learning PHP without the hassle of installing and configuring a full-fledged web server (PHP 5.4 required). To start the server, run the following from your terminal in your project's web root:
 
