@@ -13,6 +13,7 @@ would be available to all of your PHP projects. While PEAR might sound like the 
 are advantages to using a project-by-project approach to your dependencies.
 
 If you use PEAR and PEAR Channel to distribute your project, you can
-use **Onion**, Onion is a dependency manager that can **bundle** PEAR pacakges 
-into a single project, and by defining a short `package.ini`, you can easily 
-install these dependencies.
+use **Onion**, Onion is a dependency manager that can **bundle** PEAR packages 
+into a single project by defining a short `package.ini`. You
+can also use Onion to build the `package.xml` package file
+for PEAR.
