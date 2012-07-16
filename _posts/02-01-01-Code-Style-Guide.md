@@ -10,12 +10,14 @@ Ideally you should write PHP code that adheres to one or more of these standards
 * [Read about PSR-1][psr1]
 * [Read about PSR-2][psr2]
 
-If you wish, you could install and use a PHP_CodeSniffer[phpcs] Coding Standard from https://github.com/klaussilveira/phpcs-psr to check code against these recommendations.
-You might find Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] takes care of most of these issues, saving you from fixing each problem by hand.
+You can use the [phpcs-psr][phpcs-psr] sniff for [PHP_CodeSniffer][phpcs] to check code against these recommendations.
+Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
+conforms with these standards, saving you from fixing each problem by hand.
 
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
+[phpcs-psr]: https://github.com/klaussilveira/phpcs-psr
 [phpcsfixer]: http://cs.sensiolabs.org/
