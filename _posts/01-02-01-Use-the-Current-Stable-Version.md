@@ -1,10 +1,10 @@
 ---
-title: Use the Current Stable Version (5.4)
+title: 使用当前稳定版本 (5.4)
 isChild: true
 ---
 
-## Use the Current Stable Version (5.4)
+## 使用当前稳定版本 (5.4)
 
-If you are just getting started with PHP make sure to start with the current stable release of [PHP 5.4][php-release]. PHP has made great strides adding powerful [new features](#language_highlights) over the last few years. Don't let the minor version number difference between 5.2 and 5.4 fool you, it represents _major_ improvements.
+如果你刚开始学习PHP，请使用最新稳定版本 [PHP 5.4][php-release]. PHP近年来有了巨大的改进，增加了许多强大的新特性  [new features](#language_highlights) 。不要让低版本的PHP如5.2的缺陷误导你，这些新特性是对旧版本的 _major_ 改进。
 
 [php-release]: http://www.php.net/downloads.php
