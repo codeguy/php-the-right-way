@@ -12,8 +12,8 @@ or you need to connect to an Oracle database, then you will not be able to use t
 database &mdash; and that can get silly.
 
 As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and the official status since PHP 5.4.0 is
-"Long term deprecation". This means it will be removed within the next few releases, so by PHP 5.6 (or whatever comes after 5.5) it may well be gone. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the 
-line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development shedules so you won't 
+"Long term deprecation". This means it will be removed within the next few releases, so by PHP 5.6 (or whatever comes after 5.5) it may well be gone. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
+line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development shedules so you won't
 be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
 
 * [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
@@ -43,7 +43,7 @@ you should sanitize the ID input using PDO bound parameters.
 <?php
 $pdo = new PDO('sqlite:users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$stmt->bindParam(':id', filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT), PDO::PARAM_INT);
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); //<-- Automatically sanitized by PDO
 $stmt->execute();
 {% endhighlight %}
 
