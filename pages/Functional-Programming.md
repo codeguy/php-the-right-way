@@ -3,6 +3,8 @@ layout: page
 title: Functional Programming in PHP
 ---
 
+# Functional Programming in PHP
+
 PHP supports first-class function, meaning that a function can be assigned to a variable. Both user defined and built-in 
 functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to other
 functions (feature called Higher-order functions) and function can return other functions.
