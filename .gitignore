@@ -1,2 +1,6 @@
 /_site/
 *.DS_Store
+/.settings
+/.buildpath
+/.gitignore
+/.project
