@@ -19,7 +19,7 @@
 					if (eBottom <= viewBottom) {
 						$('a[href="#'+e.id+'"]').addClass("active");
 					} else {
-						console.log("Start skipping test with "+e.id);
+						//console.log("Start skipping test with "+e.id);
 						return false;
 					}
 				}
