@@ -29,3 +29,9 @@
 * [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/)
 * [cloudControl](https://www.cloudcontrol.com/)
 * [Windows Azure](http://www.windowsazure.com/)
+
+## Criticism
+
+It's not all roses in the world of PHP. While many people think PHP is wonderful. Some have a lot of criticism on it. For example, there is a lot of truth in the article below.
+
+* [PHP: a fractal of bad design](http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/)
