@@ -31,7 +31,8 @@
 		//console.log("They see me scrollin, they hatin");
 
 		//clear highlighting
-		$('.site-navigation a').removeClass("active");
+		var navLinks=$('.site-navigation a')
+		navLinks.removeClass("active");
 
 		//calc current viewport
 		var viewTop = $(window).scrollTop();
@@ -45,7 +46,8 @@
 				var eBottom = eTop + $(e).height();
 				if (eTop >= viewTop) {
 					if (eBottom <= viewBottom) {
-						$('.site-navigation a[href="/#'+e.id+'"]').addClass("active");
+						//filter cached navLinks
+						navLinks.filter('[href="/#'+e.id+'"]').addClass("active");
 					} else {
 						//console.log("Start skipping test with "+e.id);
 						return false;
