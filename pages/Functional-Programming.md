@@ -14,6 +14,9 @@ on iteration.
 
 New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
 
+PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
+can be used interchangeably with anonymous functions in almost all cases.
+
 The most common usage of higher-order functions is when implementing a strategy pattern. Built-in `array_filter`
 function asks both for the input array (data) and a function (a strategy or a callback) used as a filter function on
 each array item.
