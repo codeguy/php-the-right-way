@@ -4,39 +4,61 @@ isChild: true
 
 ## Working with date and time
 
-Working with dates and time is very easy. PHP has a class named DateTime for this. Taking a sting and converting it to a DateTime is possible with the createFromFormat factory method. This method also has a non OO counterpart, named date_create_from_format().
+PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There are
+many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to most
+common uses. It can handle time zones, but that is outside this short introduction.
 
+To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
+or do `new \DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
+output.
 {% highlight php %}
 <?php
-$rawDate = '22/11/1968';
-$date = \DateTime::createFromFormat('d/m/Y', $rawDate);
+$raw = '22. 11. 1968';
+$start = \DateTime::createFromFormat('d. m. Y', $raw);
 
+echo "Start date: " . $start->format('m/d/Y') . "\n";
 {% endhighlight %}
 
-Calculating with DateTime is possible with the DateInterval class. DateTime has functions like add() and sub() that take a DateInterval as an argument. For example, if one would want to add a month to the date we created above:
-
+Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
+take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
+saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference use
+the `diff()` method. It will return new DateInterval, which is super easy to display.
 {% highlight php %}
-$date->add(new \DateInterval('P1M')); // add a Period of one Month
+// create a copy of $start and add one month and 6 days
+$end = clone $start;
+$end->add(new \DateInterval('P1M6D'));
+
+$diff = $end->diff($start);
+echo "Difference: " . $diff->format('%m month, %d days (total: %a days)') . "\n";
+// Difference: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
-The DateTime class has a function to format a date.
-
+On DateTime objects you can use standard comparison:
 {% highlight php %}
-echo $date->format('d/m/Y h:i:s');
+if($start < $end) {
+    echo "Start is before end!\n";
+}
 {% endhighlight %}
-
-One last example that demonstrates converting a Unix timestamp to DateTime and back to Unix timestamp:
-
+    
+One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
+DateTime objects, start and end, and the interval for which it will return all events in between.
 {% highlight php %}
-$unixtime = '1239363000';
-$date = DateTime::createFromFormat('U', $unixtime); // date is now 2009-04-10 11:30:00
-echo $date->format('U'); // outputs 1239363000
+// output all thursdays between $start and $end
+$periodInterval = \DateInterval::createFromDateString('first thursday');
+$periodIterator = new \DatePeriod($start, $periodInterval, $end, \DatePeriod::EXCLUDE_START_DATE);
+foreach($periodIterator as $date)
+{
+    // output each date in the period
+    echo $date->format('m/d/Y') . " ";
+}
 {% endhighlight %}
 
 * [Read about DateTime][datetime]
 * [Read about DateInterval][dateinterval]
-* [Read about formatting date][dateformat]
+* [Read about DatePeriod][dateperiod]
+* [Read about formatting daate][dateformat] (accepted date format string options)
 
-[datetime]: http://php.net/manual/en/language.exceptions.php 
-[dateinterval]: http://www.php.net/manual/en/class.dateinterval.php
-[dateformat]: http://www.php.net/manual/en/function.date.php
+[datetime]: http://www.php.net/manual/language.exceptions.php 
+[dateinterval]: http://www.php.net/manual/class.dateinterval.php
+[dateperiod]: http://www.php.net/manual/class.dateperiod.php
+[dateformat]: http://www.php.net/manual/function.date.php
