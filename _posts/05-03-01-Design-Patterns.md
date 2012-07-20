@@ -13,5 +13,4 @@ lot of the pattern decisions are made for you. But it is still up to you to pick
 code you build on top of the framework. If, on the other hand, you are not using a framework to build your application
 then you have to find the patterns that best suit the type and size of application that you're building.
 
-* [Architectural patterns on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
-* [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
+* Continue reading on [Design Patterns](/pages/Design-Patterns.html)
