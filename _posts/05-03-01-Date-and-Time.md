@@ -24,6 +24,7 @@ take a DateInterval as an argument. Do not write code that expect same number of
 saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference use
 the `diff()` method. It will return new DateInterval, which is super easy to display.
 {% highlight php %}
+<?php
 // create a copy of $start and add one month and 6 days
 $end = clone $start;
 $end->add(new \DateInterval('P1M6D'));
@@ -35,6 +36,7 @@ echo "Difference: " . $diff->format('%m month, %d days (total: %a days)') . "\n"
 
 On DateTime objects you can use standard comparison:
 {% highlight php %}
+<?php
 if($start < $end) {
     echo "Start is before end!\n";
 }
@@ -43,6 +45,7 @@ if($start < $end) {
 One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
 DateTime objects, start and end, and the interval for which it will return all events in between.
 {% highlight php %}
+<?php
 // output all thursdays between $start and $end
 $periodInterval = \DateInterval::createFromDateString('first thursday');
 $periodIterator = new \DatePeriod($start, $periodInterval, $end, \DatePeriod::EXCLUDE_START_DATE);
