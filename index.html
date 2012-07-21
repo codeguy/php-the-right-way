@@ -11,7 +11,6 @@ description: "An easy-to-read, quick reference for PHP best practices, accepted 
     {% if post.isChild != true and loop.first != true %}
     {{ backtotop|markdownify }}
     {% endif %}
-	<div id="{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">
     {{ post.content }}
 {% endfor %}
 {{ backtotop|markdownify }}
