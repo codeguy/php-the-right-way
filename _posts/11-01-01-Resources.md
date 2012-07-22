@@ -29,3 +29,4 @@
 * [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/)
 * [cloudControl](https://www.cloudcontrol.com/)
 * [Windows Azure](http://www.windowsazure.com/)
+* [Zend Developer Cloud](http://my.phpcloud.com/)
