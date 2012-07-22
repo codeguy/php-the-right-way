@@ -31,7 +31,7 @@
         <nav class="site-navigation">
             <div class="build-date">Last Updated: {{ site.time }}</div>
             <ul>
-                <li><a href="#site-header">Welcome</a></li>
+                <li><a href="/php-the-right-way#site-header">Welcome</a></li>
                 {% assign lastIsChild = false %}
                 {% for post in site.posts reversed %}
                     {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
@@ -43,7 +43,7 @@
                     {% endif %}                                        
                     {% assign lastIsChild = post.isChild %}
                 {% endfor %}
-                <li><a href="#site-footer">Credits</a></li>
+                <li><a href="/php-the-right-way#site-footer">Credits</a></li>
             </ul>
         </nav>
         <div class="site-content">
@@ -54,8 +54,8 @@
 
             <header class="site-header" id="site-header">
                 <hgroup>
-                    <h1 class="site-title"><a href="#">PHP</a></h1>
-                    <h2 class="site-slogan">The Right Way.</h2>
+                    <h1 class="site-title"><a href="/php-the-right-way">PHP</a></h1>
+                    <h2 class="site-slogan">正确之路</h2>
                 </hgroup>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.phptherightway.com/" data-size="large" data-hashtags="php">Tweet</a>
             </header>
