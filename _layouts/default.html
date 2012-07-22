@@ -31,19 +31,19 @@
         <nav class="site-navigation">
             <div class="build-date">Last Updated: {{ site.time }}</div>
             <ul>
-                <li><a href="/#site-header">Welcome</a></li>
+                <li><a href="#site-header">Welcome</a></li>
                 {% assign lastIsChild = false %}
                 {% for post in site.posts reversed %}
                     {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
                     {% if lastIsChild and post.isChild != true %}</ul>{% endif %}
                     {% if post.anchorid %}
-                    <li><a href="/#{{ post.anchorid }}">{{ post.title }}</a>
+                    <li><a href="#{{ post.anchorid }}">{{ post.title }}</a>
                     {% else %}
-                    <li><a href="/#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
+                    <li><a href="#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
                     {% endif %}                                        
                     {% assign lastIsChild = post.isChild %}
                 {% endfor %}
-                <li><a href="/#site-footer">Credits</a></li>
+                <li><a href="#site-footer">Credits</a></li>
             </ul>
         </nav>
         <div class="site-content">
