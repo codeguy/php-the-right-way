@@ -1,28 +1,23 @@
 # Welcome
 
-There's a lot of outdated information on the Web that leads new PHP users astray, propagating bad practices and bad
-code. This must stop. _PHP: The Right Way_ is an easy-to-read, quick reference for PHP best practices, accepted coding
-standards, and links to authoritative tutorials around the Web.
+目前网络上充斥着大量的陈旧信息，让PHP新手误入歧途，传播着错误的实践和糟糕的代码，这必须得到纠正。*PHP: 正确之路*网站的
+目标就是搜集PHP最佳实践、编码规范和网络上的权威学习指南，给PHP学习者提供一个易于阅读，快速查找的入口。
 
-## Disclaimer
+## 免责声明
 
-_There is no canonical way to use PHP_. However, this website is a humble display of best practices,
-available options, and good information. It aims to introduce new PHP developers and to rethink seasoned pros with fresh
-ideas.
+*PHP没有规范化的使用方式*，本网站只是展示业界的最佳实践、可用的选项和有用的信息，目的是帮助PHP新手，并对以往的经验进行反思。
 
-This is a living document and will continue to be updated with more helpful information and examples as they become
-available.
+本文档会随着相关技术的发展，持续更新其中的信息和示例。
 
-## How to Contribute
+## 如何参与网站建设
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
+参与我们，让这个网站成为PHP开发者的最好学习资源！[Contribute on GitHub][1]
 
-## Spread the Word!
+## 推广网站
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP developers
-know where to find good information!
+*PHP: 正确之路* 有多个banner宣传图片可以放在你的站点上显示，让更多开发者知道这个网站，找到权威的学习资料！
 
-[See Banner Images][2]
+[查看banner图片][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: /banners.html
+[2]: banners.html
