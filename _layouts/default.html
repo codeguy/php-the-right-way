@@ -37,9 +37,9 @@
                     {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
                     {% if lastIsChild and post.isChild != true %}</ul>{% endif %}
                     {% if post.anchorid %}
-                    <li><a href="#{{ post.anchorid }}">{{ post.title }}</a>
+                    <li><a href="/php-the-right-way#{{ post.anchorid }}">{{ post.title }}</a>
                     {% else %}
-                    <li><a href="#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
+                    <li><a href="/php-the-right-way#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
                     {% endif %}                                        
                     {% assign lastIsChild = post.isChild %}
                 {% endfor %}
