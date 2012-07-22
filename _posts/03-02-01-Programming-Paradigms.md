@@ -2,20 +2,19 @@
 isChild: true
 ---
 
-## Programming Paradigms
+## 编程范式
 
-PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over the years, 
-notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 (2009), and traits in 
-PHP 5.4 (2012). 
+PHP是一个灵活的动态语言，支持多种编程范式。这些年来一直在不断的进化，重要的里程碑包括PHP 5.0 (2004)增加完善的
+面向对象模型、PHP 5.3 (2009)增加匿名函数和命名空间和PHP 5.4 (2012)增加traits. 
 
-### Object-oriented Programming
+### 面向对象编程
 
-* [Read about Object-oriented PHP][oop]
-* [Read about Traits][traits]
+* [学习PHP面向对象编程][oop]
+* [学习Traits][traits]
 
-### Functional Programming
+### 函数式编程
 
-PHP has had anonymous functions since PHP 5.3:
+PHP从5.3版本开始支持匿名函数:
 
 {% highlight php %}
 <?php
@@ -27,16 +26,16 @@ $greet = function($name)
 $greet('World');
 {% endhighlight %}
 
-* [Read about Anonymous functions][anonymous-functions]
-* [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
+* [学习匿名函数][anonymous-functions]
+* [学习动态调用函数`call_user_func_array`][call-user-func-array]
 
-### Meta Programming
+### 元编程
 
-Ruby developers often say that PHP is lacking `method_missing`, but it is available as `__call()`. There are many Magic Methods available 
-like `__get()`, `__set()`, `__clone()`, `__toString()`, etc.
+Ruby开发者经常说PHP没有`method_missing`，实际上`__call()`就是，PHP还有许多其他的魔术方法，如`__get()`, `__set()`,
+`__clone()`, `__toString()`等。
 
-* [Read about Magic Methods][magic-methods]
-* [Read about Reflection][reflection]
+* [学习魔术方法][magic-methods]
+* [学习反射][reflection]
 
 [namespaces]: http://php.net/manual/en/language.namespaces.php
 [overloading]: http://uk.php.net/manual/en/language.oop5.overloading.php

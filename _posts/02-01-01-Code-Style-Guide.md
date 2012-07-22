@@ -1,14 +1,18 @@
 # Code Style Guide
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere (as close as possible) to a common code style to make it easy for developers to mix and match various libraries for their projects.
+PHP社区百花齐放，拥有大量的函数库、框架和组件。PHP开发者通常会在自己的项目中使用若干个外部库，因而PHP代码遵循或尽量接近
+同一个代码风格就非常重要，可以让开发者方便地把多个代码库集成在自己的项目中。
 
-The [Framework Interop Group][fig] (formerly known as the 'PHP Standards Group') has proposed and approved a series of style recommendations, known as [PSR-0][psr0], [PSR-1][psr1] and [PSR-2][psr2]. Don't let the funny names confuse you, these recommendations are merely a set of rules that some projects like Drupal, Zend, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, etc are starting to adopt. You can use them for your own projects, or continue to use your own personal style.
+[框架互操作组][fig](即PHP标准组)发布了一系列代码风格推荐标准，即[PSR-0][psr0]，[PSR-1][psr1]和[PSR-2][psr2]。
+不要让这些名称所混淆，这些推荐仅是一些被其它项目所遵循的规则，如Drupal, Zend, CakePHP, phpBB, AWS SDK, FuelPHP,
+Lithium等，你可以把这些规则用在自己的项目中，或者继续使用你自己的风格。
 
-Ideally you should write PHP code that adheres to one or more of these standards so that other developers can easily read and work with your code. They all add on to the recommendation before, so using PSR-1 requires PSR-0, but does not require PSR-2.
+通常情况下，你的PHP代码应该遵循其中一项或多项标准，从而其他开发者可以方便地阅读和使用你的代码。这些标准都是在前一个标准
+上附加新的规则，所以使用PSR-1就同时要求遵循PSR-0，但可以不遵循PSR-2。
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
+* [阅读PSR-0][psr0]
+* [阅读PSR-1][psr1]
+* [阅读PSR-2][psr2]
 
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md

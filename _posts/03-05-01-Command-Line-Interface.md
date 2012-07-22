@@ -2,23 +2,24 @@
 isChild: true
 ---
 
-## Command Line Interface
+## 命令行接口
 
-PHP was created primarily to write web applications, but it's also useful for scripting command line interface (CLI) programs, too. Command line PHP programs can help you automate common tasks like testing, deployment, and application administrativia.
+PHP的主要目的是开发Web应用，不过它的命令行脚本接口(CLI)也非常有用。PHP命令行编程可以帮你完成自动化的任务，如测试，部署和
+应用管理。
 
-CLI PHP programs are powerful because you can use your app's code directly without having to create and secure a web GUI for it. Just be sure not to put your CLI PHP scripts in your public web root!
+CLI PHP编程非常强大，可以直接调用你自己的app代码而无需创建Web图像界面，需要注意的是不要把CLI PHP脚本放在公开的web目录下！
 
-Try running PHP from your command line:
+在命令行下运行PHP:
 
 {% highlight bash %}
 > php -i
 {% endhighlight %}
 
-The `-i` option will print your PHP configuration just like the [`phpinfo`][phpinfo] function. 
+选项`-i`将会打印PHP配置，类似于[`phpinfo`][phpinfo]函数。 
 
-The `-a` option provides an interactive shell, similar to ruby's IRB or python's interactive shell. There are a number of other useful [command line options][cli-options], too.
+选项`-a`提供交互式shell，和ruby的IRB或python的交互式shell相似，此外还有很多其他有用的[命令行选项][cli-options]。
 
-Let's write a simple "Hello, $name" CLI program. To try it out, create a file named `hello.php`, as below.
+接下来写一个简单的"Hello, $name" CLI程序，先创建名为`hello.php`的脚本：
 
 {% highlight php %}
 <?php
@@ -29,9 +30,10 @@ $name = $argv[1];
 echo "Hello, $name\n";
 {% endhighlight %}
 
-PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer variable containing the argument *count* and [`$argv`][argv] is an array variable containing each argument's *value*. The first argument is always the name of your PHP script file, in this case `hello.php`.
+PHP会在脚本运行时根据参数创建两个特殊的变量，[`$argc`][argc]是一个整数，表示参数*个数*，[`$argv`][argv]是一个数组变量，包含每个参数的*值*，
+它的第一个元素一直是PHP脚本的名字，如本例中为`hello.php`。
 
-To run our script, above, from the command line:
+运行上面的脚本，在命令行输入：
 
 {% highlight bash %}
 > php hello.php
@@ -41,8 +43,8 @@ Hello, world
 {% endhighlight %}
 
 
- * [Learn about running PHP from the command line][php-cli]
- * [Learn about setting up Windows to run PHP from the command line][php-cli-windows]
+ * [学习如何在命令行运行PHP][php-cli]
+ * [学习如何在Windows环境下运行PHP命令行程序][php-cli-windows]
 
 [phpinfo]: http://php.net/manual/en/function.phpinfo.php
 [cli-options]: http://www.php.net/manual/en/features.commandline.options.php

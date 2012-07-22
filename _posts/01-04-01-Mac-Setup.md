@@ -2,19 +2,16 @@
 isChild: true
 ---
 
-## Mac Setup
+## Mac 安装
 
-OSX comes prepackaged with PHP but it is normally a little behind the latest stable. Lion comes with PHP 5.3.6 and
-Mountain Lion has 5.3.10.
+OSX系统会预装PHP，只是版本比最新稳定版低一点。 目前Lion下是PHP 5.3.6，Mountain Lion下是5.3.10.
 
-To update PHP on OSX you can get it installed through a number of Mac [package managers][mac-package-managers], with
-[php-osx by Liip][php-osx-downloads] being recommended.
+要更新OSX中的PHP，你可以通过那些Mac[包管理器][mac-package-managers]来安装，推荐使用[php-osx by Liip][php-osx-downloads]。
 
-The other option is to [compile it yourself][mac-compile], in that case be sure to have installed either Xcode or
-Apple's substitute ["Command Line Tools for Xcode"][apple-developer] downloadable from Apple's Mac Developer Center.
+另外一种方式是[自己编译][mac-compile]，不过要确认已经安装Xcode或["Command Line Tools for Xcode"][apple-developer]，它们可以
+从Apple的Mac Developer Center下载。
 
-For a complete "all-in-one" package including PHP, Apache web server and MySQL database, all this with a nice control
-GUI, try [MAMP][mamp-downloads].
+如果想安装包含了PHP、Apache和MySQL的一键安装包，可以试试[MAMP][mamp-downloads]，里面包含了相应的图形管理工具。
 
 [mac-package-managers]: http://www.php.net/manual/en/install.macosx.packages.php
 [mac-compile]: http://www.php.net/manual/en/install.macosx.compile.php

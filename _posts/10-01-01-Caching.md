@@ -1,4 +1,4 @@
-# Caching
+# 缓存
 
-PHP is pretty quick by itself, but bottlenecks can arise when you make remote connections, load files, etc. 
-Thankfully, there are various tools available to speed up certain parts of your application, or reduce the number of times these various time consuming tasks need to run.
+PHP自身效率很高，但是执行创建远程连接、加载文件等操作时容易出现瓶颈，幸运的是，我们有很多工具来加速这部分操作，或减少
+这些耗时操作的执行次数。

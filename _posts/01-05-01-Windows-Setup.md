@@ -2,24 +2,20 @@
 isChild: true
 ---
 
-## Windows Setup
+## Windows 安装
 
-PHP is available in several ways for Windows. You can [download the binaries](php-downloads) and until recently you could use a '.msi' 
-installer. The installer is no longer supported and stops at PHP 5.3.0.
+Windows下有多种方式来安装PHP，你可以[下载二进制安装包][php-downloads]。
 
-For learning and local development you can use the built in webserver with PHP 5.4 so you don't need to worry about configuring it. If you 
-would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such as the [Web Platform Installer][wpi], 
-[XAMPP][xampp] and [WAMP][wamp] will help get a Windows development environment up and running fast. That said, these tools will be 
-a little different from production so be careful of environment differences if you are working on Windows and deploying to Linux.
+若只是本地开发和学习，可以直接使用PHP 5.4内置的Web服务器，还能省去配置服务器的麻烦。如果你喜欢包含PHP、Apache和MySQL的
+一键安装包，可以下载[Web Platform Installer][wpi]、[XAMPP][xampp]或[WAMP][wamp]，它们可以帮你快速搭建出PHP运行环境。
+不过这些工具和你产品的正式运行环境会有一些差别，特别是你在Windows下开发，而代码最终部署在Linux服务器上的时候。
 
-If you need to run your production system on Windows then IIS7 will give you the most stable and best performance. You can use 
-[phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and managing PHP simple. IIS7 comes with FastCGI built in and ready 
-to go, you just need to configure PHP as a handler. For support and additional resources there is a [dedicated area on iis.net][php-iis] for 
-PHP.
+如果你需要把产品部署在Windows上，那么IIS7将给你最稳定和性能最佳的环境，你可以使用[phpmanager][phpmanager](IIS7下的PHP
+管理插件)来配置和管理PHP。IIS7已经内置FastCGI，你只需把PHP配置为它的处理器即可。更多详情可以参考[dedicated area on iis.net][php-iis]。
 
-Generally running your application on different environment in development and production can lead to strange bugs popping up when you go 
-live. If you are developing on Windows and deploying to Linux (or anything non-Windows) then you should consider using a Virtual Machine. This 
-sounds tricky, but using [Vagrant][vagrant] you can set up simple wrappers, then using [Puppet][puppet] or [Chef][chef] you can provision these boxes and share them with your colleagues to ensure you're all working on the same stack. More on this soon.
+通常情况下，开发环境和部署环境不同的话，容易在产品上线后产生各种奇怪的Bug。如果你是在Windows下开发，但是代码部署在Linux
+或其它平台时，可以考虑使用虚拟机来解决。虽然这听起来很Tricky，不过用[Vagrant][vagrant]建立简单的Wrapper，你就可以通过[Puppet][puppet]
+或[Chef][chef]，把这些虚拟机提供给同事使用，保证大家使用系统的环境进行开发。
 
 [php-downloads]: http://windows.php.net
 [phpmanager]: http://phpmanager.codeplex.com/

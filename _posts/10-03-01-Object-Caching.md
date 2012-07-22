@@ -2,28 +2,22 @@
 isChild: true
 ---
 
-## Object Caching
+## 对象缓存
 
-There are times when it can be beneficial to cache individual objects in your code, such as with data that is expensive
-to get or database calls where the result is unlikely to change. You can use object caching software to hold these
-pieces of data in memory for extremely fast access later on. If you save these items to a data store after you retrieve
-them, then pull them directly from the cache for following requests, you can gain a significant improvement in
-performance as well as reduce the load on your database servers.
+很多时候，在代码中缓存对象可以带来很大的收益，例如获取代价很大的数据和查询结果很少变化的数据库调用。我们可以使用对象
+缓存系统缓存这些数据，大大加快后续的同类访问请求。如果你在取得这些数据之后，把它们缓存在系统中，在后续对这些数据的请求
+中，就可以直接使用缓存中的对象，这么做可以很大的提示系统性能，减少服务器的负载。
 
-Many of the popular bytecode caching solutions let you cache custom data as well, so there's even more reason to take
-advantage of them. APC, XCache, and WinCache all provide APIs to save data from your PHP code to their memory cache.
+很多流行的字节码缓存方案也允许你缓存自定义数据，因此我们更应该充分利用对象缓存功能。APC、XCache和WinCache都提供API，
+让你把数据缓存在他们的内存cache中。
 
-The most commonly used memory object caching systems are APC and memcached. APC is an excellent choice for object
-caching, it includes a simple API for adding your own data to its memory cache and is very easy to setup and use. The
-one real limitation of APC is that it is tied to the server it's installed on. Memcached on the other hand is installed
-as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
-store in a central location and many different systems can pull from it.
+使用最多的内存对象缓存系统是APC和memcached，APC是很好的一个对象缓存方案，它提供了简单的API来让你把对象存储在内存中，而且
+配置和使用都非常容易，它的一个缺点是只能在本机使用。Memcached则是另外一种方式，它是一个单独的服务，可以通过网络访问，这
+意味着可以在一个地方写入数据，然后在不同的系统中访问这份数据。
 
-In a networked configuration APC will usually outperform memcached in terms of access speed, but memcached will be able
-to scale up faster and further. If you do not expect to have multiple servers running your application, or do not need
-the extra features that memcached offers then APC is probably your best choice for object caching.
+在单机性能上，APC通常比Memcached更高，如果你不需要多台服务器或者其他Memcached的高级功能，APC可能是你的最佳选择。
 
-Example logic using APC:
+APC的示例:
 
 {% highlight php %}
 <?php
@@ -39,7 +33,7 @@ if (!$data)
 print_r($data);
 {% endhighlight %}
 
-Learn more about popular object caching systems:
+学习更多对象缓存系统：
 
 * [APC Functions](http://php.net/manual/en/ref.apc.php)
 * [Memcached](http://memcached.org/)

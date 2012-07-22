@@ -1,4 +1,4 @@
-# Resources
+# 资源
 
 ## From the Source
 
@@ -19,7 +19,7 @@
 
 * [phpmentoring.org](http://phpmentoring.org/) - Formal, peer to peer mentoring in the PHP community.
 
-## PHP PaaS Providers
+## PHP PaaS供应商
 
 * [PagodaBox](https://pagodabox.com/)
 * [PHP Fog](https://phpfog.com/)

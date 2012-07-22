@@ -2,22 +2,17 @@
 isChild: true
 ---
 
-## Exceptions
+## 异常
 
-Exceptions are a standard part of most popular programming languages, but they are often overlooked by PHP programmers. 
-Languages like Ruby are extremely Exception heavy, so whenever something goes wrong such as a HTTP request failing, or 
-a DB query goes wrong, or even if an image asset could not be found, Ruby (or the gems being used) will throw an 
-exception to the screen meaning you instantly know there is a mistake. 
+异常是大部分流行语言的标准特性，但是PHP开发者却不太重视。其他语言如 Ruby极度倚赖异常，在任何错误发生的时候，如HTTP请求失败
+、DB查询错误，甚至图片资源未找到，都会抛出一个异常，以及时提示那里发生了一个错误。
 
-PHP itself is fairly lax with this, and a call to `file_get_contents()` will usually just get you a `FALSE` and a warning.
-Many older PHP frameworks like CodeIgniter will just return a false, log a message to their proprietary logs and maybe 
-let you use a method like `$this->upload->get_error()` to see what went wrong. The problem here is that you have to go 
-looking for a mistake and check the docs to see what the error method is for this class, instead of having it made extremely 
-obvious.
+PHP则对此很宽松，如调用`file_get_contents()`失败，只是返回`FALSE`并提示一个warning信息而已。很多老的PHP框架，如
+CodeIgniter会返回false，然后在自己的日志里记录一个消息，开发者需要使用如`$this->upload->get_error()`的方式来查看发生了什么
+错误。这么做需要你自己检查是否有错误，并需要根据不同类调用不同的方法来获取错误消息，而不能让错误明显的显示出来。
 
-Another problem is when classes automatically throw an error to the screen and exit the process. When you do this you 
-stop another developer from being able to dynamically handle that error. Exceptions should be thrown to make a developer aware 
-of an error, then they can choose how to handle this. E.g:
+这种做法的另外一个弊端是当类自动在屏幕打印一个错误，然后退出进程，阻止了其他开发者动态处理该错误的机会。而异常则是让开发者知道
+发生了错误，并让他们选择如何处理：
 
 {% highlight php %}
 <?php
@@ -40,26 +35,25 @@ catch(Fuel\Email\SendingFailedException $e)
 }
 {% endhighlight %}
 
-### SPL Exceptions
+### SPL异常
 
-An Exception by default has no meaning and the most common to give it meaning is by setting its name:
+默认的异常类Exception没有含义，常见的做法是给它设定一个有意义的名字：
 
 {% highlight php %}
 <?php
 class ValidationException extends Exception {}
 {% endhighlight %}
 
-This means you can add multiple catch blocks and handle different Exceptions differently. This can lead to 
-the creation of a <em>lot</em> of custom Exceptions, some of which could have been avoided using the SPL Exceptions 
-provided in the [SPL extension][splext]. 
+这使得你可以包含多个catch子句来处理不同的异常，但是这又会导致创建_很多的_自定义异常类，可以用SPL中的异常类来缓解这个问题
+[SPL扩展][splext]. 
 
-If for example you use the `__call()` Magic Method and an invalid method is requested then instead of throwing a standard 
-Exception which is vague, or creating a custom Exception just for that, you could just `throw new BadFunctionCallException;`.
+如使用`__call()`魔术方法，对不存在的方法调用抛出一个`throw new BadFunctionCallException;`，既避免了抛出含义模糊的
+Exception异常，也省去了自定义异常类的麻烦。
 
-* [Read about Exceptions][exceptions]
-* [Read about SPL Exceptions][splexe]
-* [Nesting Exceptions In PHP][nesting-exceptions-in-php]
-* [Exception Best Practices in PHP 5.3][exception-best-practices53]
+* [学习更多Exceptions][exceptions]
+* [了解跟多SPL Exceptions][splexe]
+* [PHP中的异常嵌套][nesting-exceptions-in-php]
+* [PHP 5.3异常最佳实践][exception-best-practices53]
 
 [exceptions]: http://php.net/manual/en/language.exceptions.php
 [splexe]: http://php.net/manual/en/spl.exceptions.php

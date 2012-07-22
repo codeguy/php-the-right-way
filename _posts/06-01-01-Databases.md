@@ -1,34 +1,29 @@
 ---
-title: Databases
+title: 数据库
 ---
 
-# Databases
+# 数据库
 
-Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option _until PHP 5.1.0_ was to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
+通常PHP代码使用数据库来持久化存储数据，并有多种方式去连接和操作数据库。在_PHP 5.1.0_之前，推荐的方式有[mysql][mysql]、
+[mysqli][mysqli]和[pgsql][pgsql]等。
 
-Native drivers are great if you are only using ONE database in your application, but if, for example, you are using MySQL and a little bit of MSSQL,
-or you need to connect to an Oracle database, then you will not be able to use the same drivers. You'll need to learn a brand new API for each
-database &mdash; and that can get silly.
+如果应用只是使用一个数据库的话，原生驱动就工作的非常好，否则使用MySQL的同时，还需要使用MSSQL或Oracle数据库的话，那么
+就没有办法只使用一个原生驱动了，只能分别学习各个数据库驱动的API，这非常令人生厌。
 
-As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and the official status since PHP 5.4.0 is
-"Long term deprecation". This means it will be removed within the next few releases, so by PHP 5.6 (or whatever comes after 5.5) it may well be gone. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the 
-line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development shedules so you won't 
-be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
+另外需要注意，mysql这个原生驱动已经不在活跃开发状态了，从PHP 5.4.0开始被标记为不推荐使用，意味着将来版本如PHP 5.6可能会
+移除这个扩展。如果你正在使用`mysql_connect()`和`mysql_query()`，那么将来可能要重写部分代码，所以最好用mysqli或PDO来
+代替。_如果你正在开发新项目，请不要用mysql扩展，尝试用[MySQLi扩展][mysqli]或PDO来替代_
 
-* [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
+* [PHP: 选择MySQL API](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
 ## PDO
 
-PDO is a database connection abstraction library &mdash;  built into PHP since 5.1.0 &mdash; that provides a common interface to talk with
-many different databases. PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types
-of database with the same API.
+PDO是数据库连接抽象库，从PHP 5.1.0开始提供，提供多种数据库的统一的操作接口。PDO不会转化你的SQL查询或者模拟缺失特性；
+它只是提供统一的API去连接不同的数据库而已。
 
-More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying about database SQL injection attacks.
-This is possible using PDO statements and bound parameters.
+更重要的是，`PDO`允许你绑定SQL查询语句中的变量，而无需担心SQL注入问题，这主要通过PDO statements和变量绑定来实现。
 
-Let's assume a PHP script receives a numeric ID as a query parameter. This ID should be used to fetch a user record from a database. This is the `wrong`
-way to do this:
+假设PHP脚本接收一个数字ID作为查询参数，从数据库取回一条记录。下面是一种错误的做法：
 
 {% highlight php %}
 <?php
@@ -36,8 +31,8 @@ $pdo = new PDO('sqlite:users.db');
 $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
-This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a heartbeat. Instead,
-you should sanitize the ID input using PDO bound parameters.
+这是非常糟糕的代码，直接在SQL中插入一个原始输入变量，导致潜在的SQL注入风险。相反，你应该使用PDO的绑定参数功能来处理
+ID输入参数。
 
 {% highlight php %}
 <?php
@@ -47,19 +42,17 @@ $stmt->bindParam(':id', filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT
 $stmt->execute();
 {% endhighlight %}
 
-This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the
-database preventing potential SQL injection attacks.
+这才是正确的代码，在PDO statement中绑定一个参数，使得查询被发给数据库之前，对输入参数进行转义，防止SQL注入攻击。
 
-* [Learn about PDO][1]
+* [学习PDO][1]
 
-## Abstraction Layers
+## 抽象层
 
-Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
-one database system that another is missing form another by wrapping your queries in PHP methods, giving you actual database abstraction.
-This will of course add a little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and
-SQLite then a little overhead will be worth it the sake of code cleanliness.
+很多框架都提供了自己的数据库抽象层，有的是基于PDO，有的不是。它们通过PHP方法来包装实际的查询，能够模拟出只存在于
+某些数据库系统的特性，给你一个真正的数据库抽象层。这么做会带来一些性能的损失，但是在一个需要支持MySQL、PostgreSQL
+和SQLite的应用中，这个损失相对于由此带来的代码一致性而言是可以接受的。
 
-Some abstraction layers have been built using the PSR-0 namespace standard so can be installed in any application you like:
+有些抽象层遵循PSR-0命名空间标准，可以集成在任意的应用中：
 
 * [Doctrine2 DBAL][2]
 * [ZF2 Db][4]

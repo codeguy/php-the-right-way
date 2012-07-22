@@ -1,12 +1,13 @@
 ---
-title:   Standard PHP Library
+title:   标准PHP库
 isChild: true
 ---
 
-## Standard PHP Library
+## 标准PHP库
 
-The Standard PHP Library (SPL) is packaged with PHP and provides a collection of classes and interfaces. It is made up primarily of commonly needed datastructure classes (stack, queue, heap, and so on), and iterators which can traverse over these datastructures or your own classes which implement SPL interfaces.
+标准PHP库(SPL)和PHP一起发布，提供了一组类和接口，包括了常用的数据结构如栈，队列和堆等，以及遍历这些数据结构的迭代器，
+或者你还可以自己实现SPL接口。
 
-* [Read about the SPL][spl]
+* [学习更多SPL][spl]
 
 [spl]: http://php.net/manual/en/book.spl.php 

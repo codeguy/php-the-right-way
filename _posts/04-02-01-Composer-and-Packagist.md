@@ -4,42 +4,45 @@ isChild: true
 
 ## Composer and Packagist
 
-Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and, with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for you.
+Composer是一个**出色**的PHP依赖管理器，把项目的依赖列在`composer.json`文件中，然后通过一些简单的命令，Composer就会
+自动的帮你下载这些依赖，并配置好自动加载路径。
 
-There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These "packages" are listed on [Packagist][1], the official repository for Composer-compatible PHP libraries.
+现在已经有很多PHP库支持Composer，可以在项目中使用它们，具体列表可以[点击查看][1]，这是官方支持的Composer兼容的PHP库。
 
-### How to Install Composer
+### 如何安装Composer
 
-You can install Composer locally (in your current working directory; though this is no longer recommended) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
+Composer可以安装在本地(在当前工作目录，不推荐这种方式)，也可以安装在系统中(如/usr/local/bin)。假设你要在本地安装，在
+项目的根目录执行：
 
     curl -s http://getcomposer.org/installer | php
 
-This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
+它会下载`composer.phar`(PHP二进制文档)，然后你就可以用`php`运行它来完成项目依赖的管理。 <strong>请注意:</strong>如果
+你通过管道直接把下载的代码传给PHP解释器，请先在线阅读代码以确保该代码是安全的。
 
-### How to Install Composer (manually)
+### 如何手动安装Composer
 
-Manually installing composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
+手动安装composer有点麻烦，不过很多开发者可能更喜欢这种安装方式。使用交互式安装程序，它会检查你安装的PHP:
 
-- a sufficient version of PHP is being used
-- `.phar` files can be executed correctly
-- certain directory permissions are sufficient
-- certain problematic extensions are not loaded
-- certain `php.ini` settings are set
+- PHP版本满足要求
+- `.phar`文件可以正确执行
+- 相关目录的权限设置正确
+- 没有加载某些不兼容的扩展
+- 相应的`php.ini`设置正确
 
-Since a manual installation performs none of these checks, you have to decide whether the trade-off is worth it for you. As such, below is how to obtain Composer manually:
+而手动安装则需要你自己做这些事情，你必须自己权衡利弊，以决定是否手动安装。下面是手动获取Composer的方法:
 
     curl -s http://getcomposer.org/composer.phar -o $HOME/local/bin/composer
     chmod +x $HOME/local/bin/composer
 
-The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment variable. This will result in a `composer` command being available.
+目录`$HOME/local/bin`(或你自己选择其它目录)应该在你的`$PATH`环境变量中，从而可以直接运行`composer`命令。
 
-When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
+这样文档中描述的运行Composer的命令`php composer.phar install`，就可以用如下命令替代：
 
     composer install
 
-### How to Define and Install Dependencies
+### 如何定义和安装依赖
 
-First, create a `composer.json` file in the same directory as `composer.phar`. Here's an example that lists [Twig][2] as a project dependency.
+首先，在`composer.phar`所在目录创建文件`composer.json`，下面是一个依赖[Twig][2]例子：
 
 	{
 	    "require": {
@@ -47,20 +50,20 @@ First, create a `composer.json` file in the same directory as `composer.phar`. H
 	    }
 	}
 
-Next, run this command from your project root directory.
+第二步：在项目根目录运行：
 
     php composer.phar install
 
-This will download and install the project dependencies into a `vendors/` directory. Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
+这会在`vendors/`下载和安装项目依赖。最后在应用的PHP入口文件添加下面代码，告诉PHP使用Composer自动加载器加载项目的依赖库：
 
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 {% endhighlight %}
 
-Now you can use your project dependencies, and they'll be autoloaded on demand.
+现在你就可以使用项目依赖的库了，它们会在需要的时候自动加载。
 
-* [Learn about Composer][3]
+* [学习Composer][3]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org

@@ -2,15 +2,14 @@
 isChild: true
 ---
 
-## Password Hashing with Bcrypt
+## 使用Bcrypt做密码哈希
 
-Eventually everyone builds a PHP application that relies on user login. Usernames and (hashed) passwords are stored in a database and later used to authenticate users upon login.
+一个存在用户登录的PHP应用，用户名和密码(哈希后的)会保存在数据库中，用于将来登录时进行身份验证。因而对存储在数据库中的
+密码进行正确的_哈希_非常重要。如果密码没有哈希，那么数据库被黑或者非法访问时，所有的用户帐号都将泄漏。
 
-It is important that you properly _hash_ passwords that are stored in a database. If passwords are not hashed, and your database is hacked or accessed by an unauthorized third-party, all user accounts are now compromised.
+**使用Bcrypt做密码哈希**，Bcrypt非常简单，并可以确保数据库被攻击后，无法反向工程恢复密码的明文。
 
-**Hash passwords with Bcrypt**. It's super simple, and (for all intents and purposes) Bcrypt makes it impossible for someone to reverse-engineer the plain-text version of a password should the database be compromised.
-
-There are several Bcrypt libraries for PHP that you may use.
+下面是几个PHP的Bcrypt库：
 
 * [Read "How to Safely Store a Password" by Coda Hale][3]
 * [Use Bcrypt with PHPass][4]

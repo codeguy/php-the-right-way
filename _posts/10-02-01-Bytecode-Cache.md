@@ -2,15 +2,15 @@
 isChild: true
 ---
 
-## Bytecode Cache
+## 字节码缓存
 
-When a PHP file is executed, under the hood it is first compiled to bytecode (also known as opcode) and, only then, the bytecode is executed.
-If a PHP file is not modified, the bytecode will always be the same. This means that the compilation step is a waste of CPU resources.
+W在一个PHP文件被执行时，它先被编译为字节码(也称opcode)，然后这些字节码被执行。如果文件没有修改，那么字节码也会保持不变，
+这意味着编译这一步白白浪费了CPU资源。
 
-This is where Bytecode cache comes in. It prevents redundant compilation by storing bytecode in memory and reusing it on successive calls.
-Setting up bytecode cache is a matter of minutes, and your application will speed up significantly. There's really no reason not to use it.
+这就是引入字节码缓存的原因，通过把字节码保存在内存中来消除冗余的编译，重用它们完成后续的调用。配置字节码缓存非常简单，
+而且可以极大地提高应用的执行效率，没有理由不使用字节码缓存。
 
-Popular bytecodes caches are:
+流行的字节码缓存方案有：
 
 * [APC](http://php.net/manual/en/book.apc.php)
 * [XCache](http://xcache.lighttpd.net/)

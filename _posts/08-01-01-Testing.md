@@ -1,9 +1,7 @@
-# Testing
+# 测试
 
-Writing automated tests for your PHP code is considered a best practice and can lead to well-built
-applications. Automated tests are a great tool for making sure your application
-does not break when you are making changes or adding new functionality and should not be ignored.
+为PHP代码编写自动化测试被认为是一个最佳实践，可以帮助你构建出高质量的应用。自动化测试可以帮助你确认没有因为重构或添加
+新功能而破坏原有功能，所以应该重视自动化测试。
 
-There are several different types of testing tools (or frameworks) available for PHP, which use 
-different approaches - all of which are trying to avoid manual testing and the need for large 
-Quality Assurance teams, just to make sure recent changes didn't break existing functionality.
+PHP有多种类型的测试工具和框架可以使用，具体方法各有区别——但是它们的目标都是避免手工测试，满足大型QA组织的需求，保证最新的
+更改没有破坏已有功能。
