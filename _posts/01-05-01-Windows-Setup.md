@@ -1,8 +1,10 @@
 ---
+title: Windows 安装
+anchorid: windows_setup
 isChild: true
 ---
 
-## Windows 安装
+<h2 id="windows_setup">Windows 安装</h2>
 
 Windows下有多种方式来安装PHP，你可以[下载二进制安装包][php-downloads]。
 

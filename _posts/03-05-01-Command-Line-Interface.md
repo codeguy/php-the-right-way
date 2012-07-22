@@ -1,8 +1,10 @@
 ---
+title: 命令行接口
+anchorid: command_line_interface
 isChild: true
 ---
 
-## 命令行接口
+<h2 id="command_line_interface">命令行接口</h2>
 
 PHP的主要目的是开发Web应用，不过它的命令行脚本接口(CLI)也非常有用。PHP命令行编程可以帮你完成自动化的任务，如测试，部署和
 应用管理。

@@ -1,4 +1,9 @@
-# Code Style Guide
+---
+title: 代码风格指南
+anchorid: code_style_guide
+---
+
+<h1 id="code_style_guide">代码风格指南</h1>
 
 PHP社区百花齐放，拥有大量的函数库、框架和组件。PHP开发者通常会在自己的项目中使用若干个外部库，因而PHP代码遵循或尽量接近
 同一个代码风格就非常重要，可以让开发者方便地把多个代码库集成在自己的项目中。

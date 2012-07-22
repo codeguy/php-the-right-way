@@ -1,8 +1,10 @@
 ---
+title: 编程范式
+anchorid: programming_paradigms
 isChild: true
 ---
 
-## 编程范式
+<h2 id="programming_paradigms">编程范式</h2>
 
 PHP是一个灵活的动态语言，支持多种编程范式。这些年来一直在不断的进化，重要的里程碑包括PHP 5.0 (2004)增加完善的
 面向对象模型、PHP 5.3 (2009)增加匿名函数和命名空间和PHP 5.4 (2012)增加traits. 

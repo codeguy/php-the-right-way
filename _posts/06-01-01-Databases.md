@@ -1,8 +1,9 @@
 ---
 title: 数据库
+anchorid: databases
 ---
 
-# 数据库
+<h1 id="databases">数据库</h1>
 
 通常PHP代码使用数据库来持久化存储数据，并有多种方式去连接和操作数据库。在_PHP 5.1.0_之前，推荐的方式有[mysql][mysql]、
 [mysqli][mysqli]和[pgsql][pgsql]等。

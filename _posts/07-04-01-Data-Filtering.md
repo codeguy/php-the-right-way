@@ -1,8 +1,10 @@
 ---
+title: 数据过滤
+anchorid: data_filtering
 isChild: true
 ---
 
-## 数据过滤
+<h2 id="data_filtering">数据过滤</h2>
 
 永远不要在PHP代码中信任外部输入，在使用之前一定要先过滤和验证，`filter_var`和`filter_input`函数可以帮助过滤文本和
 验证文本格式(如邮箱地址)。

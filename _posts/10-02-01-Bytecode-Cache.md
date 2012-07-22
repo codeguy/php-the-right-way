@@ -1,8 +1,10 @@
 ---
+title: 字节码缓存
+anchorid: bytecode_cache
 isChild: true
 ---
 
-## 字节码缓存
+<h2 id="bytecode_cache">字节码缓存</h2>
 
 W在一个PHP文件被执行时，它先被编译为字节码(也称opcode)，然后这些字节码被执行。如果文件没有修改，那么字节码也会保持不变，
 这意味着编译这一步白白浪费了CPU资源。

@@ -1,8 +1,10 @@
 ---
+title: Web应用安全
+anchorid: password_hashing_bcrypt
 isChild: true
 ---
 
-## 使用Bcrypt做密码哈希
+<h2 id="password_hashing_bcrypt">使用Bcrypt做密码哈希</h2>
 
 一个存在用户登录的PHP应用，用户名和密码(哈希后的)会保存在数据库中，用于将来登录时进行身份验证。因而对存储在数据库中的
 密码进行正确的_哈希_非常重要。如果密码没有哈希，那么数据库被黑或者非法访问时，所有的用户帐号都将泄漏。

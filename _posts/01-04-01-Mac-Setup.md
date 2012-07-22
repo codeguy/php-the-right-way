@@ -1,8 +1,10 @@
 ---
+title: Mac 安装
+anchorid: mac_setup
 isChild: true
 ---
 
-## Mac 安装
+<h2 id="mac_setup">Mac 安装</h2>
 
 OSX系统会预装PHP，只是版本比最新稳定版低一点。 目前Lion下是PHP 5.3.6，Mountain Lion下是5.3.10.
 
