@@ -1,4 +1,5 @@
 ---
+title: Configuración en Mac
 isChild: true
 ---
 

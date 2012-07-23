@@ -2,6 +2,11 @@
 isChild: true
 ---
 
+---
+title: Configuración en Windows (5.4)
+isChild: true
+---
+
 ## Configuración en Windows
 
 Hay un sinnúmero de maneras de configurar PHP en el sistema Windows. Usted puede [descargar los binarios](php-downloads) y recientemente el paquete de instalación estaba disponible en el formato '.msi'. Este paquete de instalación ya no se actualiza y la última versión fue PHP 5.3.0.

@@ -13,9 +13,9 @@
         <meta property="og:type" content="website"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <link href='http://fonts.googleapis.com/css?family=Alfa+Slab+One|Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="/styles/all.css"/>
-        <link rel="stylesheet" href="/styles/syntax.css"/>
-        <link rel="icon" href="/images/favicon.png" type="image/png"/>
+        <link rel="stylesheet" href="/php-the-right-way/styles/all.css"/>
+        <link rel="stylesheet" href="/php-the-right-way/styles/syntax.css"/>
+        <link rel="icon" href="/php-the-right-way/images/favicon.png" type="image/png"/>
         <script>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-362072-7']);
@@ -31,15 +31,15 @@
         <nav class="site-navigation">
             <div class="build-date">Last Updated: {{ site.time }}</div>
             <ul>
-                <li><a href="/#site-header">Welcome</a></li>
+                <li><a href="/php-the-right-way/#site-header">Bienvenido</a></li>
                 {% assign lastIsChild = false %}
                 {% for post in site.posts reversed %}
                     {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
                     {% if lastIsChild and post.isChild != true %}</ul>{% endif %}
-                    <li><a href="/#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
+                    <li><a href="/php-the-right-way/#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
                     {% assign lastIsChild = post.isChild %}
                 {% endfor %}
-                <li><a href="/#site-footer">Credits</a></li>
+                <li><a href="/php-the-right-way/#site-footer">Credits</a></li>
             </ul>
         </nav>
         <div class="site-content">
