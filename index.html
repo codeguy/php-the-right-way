@@ -13,5 +13,6 @@ description: "An easy-to-read, quick reference for PHP best practices, accepted 
     {% endif %}
     <div id="{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">
     {{ post.content }}
+    </div>
 {% endfor %}
 {{ backtotop|markdownify }}
