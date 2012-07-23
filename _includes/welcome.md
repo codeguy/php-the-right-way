@@ -4,6 +4,13 @@ There's a lot of outdated information on the Web that leads new PHP users astray
 code. This must stop. _PHP: The Right Way_ is an easy-to-read, quick reference for PHP best practices, accepted coding
 standards, and links to authoritative tutorials around the Web.
 
+## Translations
+
+_PHP: The Right Way_ is (or soon will be) translated into many different languages:
+
+* [English](http://www.phptherightway.com)
+* [Chinese](http://wulijun.github.com/php-the-right-way)
+
 ## Disclaimer
 
 _There is no canonical way to use PHP_. However, this website is a humble display of best practices,

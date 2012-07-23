@@ -33,6 +33,9 @@ developers know where to find good information!
 
 <http://www.phptherightway.com>
 
+* [English](http://www.phptherightway.com)
+* [Chinese](http://wulijun.github.com/php-the-right-way)
+
 ### Translations
 
 If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
