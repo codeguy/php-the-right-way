@@ -4,7 +4,7 @@ Hoy en día existe mucha información anticuada acerca de PHP que guía a nuevos
 
 ## Traducciones
 
-_PHP: La Manera Correcta_ está (o muy pronto será) traducida a diferentes lenguajes:
+_PHP: La Manera Correcta_ ha sido (o muy pronto será) traducido a diferentes lenguajes:
 
 * [Inglés](http://www.phptherightway.com)
 * [Chino](http://wulijun.github.com/php-the-right-way)
@@ -18,13 +18,13 @@ Consideramos este sitio como un documento vivo y se continuará actualizando con
 
 ## Como Contribuir
 
-¡Ayude a que este sitio se convierta en el mejor recurso para nuevos programadores en PHP! [Contribute on GitHub][1]
+¡Ayude a que este sitio se convierta en el mejor recurso para nuevos programadores en PHP! [Contribuya en GitHub][1]
 
 ## ¡Corra la voz!
 
 _PHP: La Manera Correcta_ hace disponibles imágenes de pancarta que puede usar en su sitio web personal. ¡Demuestre su apoyo y déjele saber a nuevos desarrolladores en PHP donde es que pueden encontrar buena información!
 
-[See Banner Images][2]
+[Ver las imágenes de pancarta][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
 [2]: /banners.html
