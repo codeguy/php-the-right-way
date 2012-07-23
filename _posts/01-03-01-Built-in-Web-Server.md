@@ -1,14 +1,14 @@
 ---
-title: Built-in Web Server
+title: Servidor Web Embebido
 isChild: true
 ---
 
-## Built-in web server
+## Servidor Web Embebido
 
-You can start learning PHP without the hassle of installing and configuring a full-fledged web server (PHP 5.4 required). To start the server, run the following from your terminal in your project's web root:
+Usted puede comenzar a aprender PHP sin tener que instalar y configurar un servidor web completo (se requiere la versión PHP 5.4). Para iniciar el servidor embebido se necesita correr el siguiente comando en la terminal desde el directorio raíz de su proyecto:
 
     > php -S localhost:8000
 
-* [Learn about the built-in, command line web server][cli-server]
+* [Aprenda más acerca del servidor web embebido][cli-server]
 
 [cli-server]: http://www.php.net/manual/en/features.commandline.webserver.php
