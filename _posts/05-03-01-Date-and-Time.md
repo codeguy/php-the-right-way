@@ -57,11 +57,7 @@ foreach($periodIterator as $date)
 {% endhighlight %}
 
 * [Read about DateTime][datetime]
-* [Read about DateInterval][dateinterval]
-* [Read about DatePeriod][dateperiod]
 * [Read about date formatting][dateformat] (accepted date format string options)
 
-[datetime]: http://www.php.net/manual/language.exceptions.php 
-[dateinterval]: http://www.php.net/manual/class.dateinterval.php
-[dateperiod]: http://www.php.net/manual/class.dateperiod.php
+[datetime]: http://www.php.net/manual/book.datetime.php
 [dateformat]: http://www.php.net/manual/function.date.php
