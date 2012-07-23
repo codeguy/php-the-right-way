@@ -1,3 +1,7 @@
+---
+title: Guía de Estilo de Código
+---
+
 # Guía de Estilo de Código
 
 La comunidad detrás de PHP es enorme y diversa, compuesta de innumerables librerías, armazones de desarrollo (_frameworks_) y componentes. Es común que desarrolladores en PHP escojan de entre estos  y los combinen en un solo proyecto. Por eso es importante que el código PHP se adhiera (lo más cerca posible) a un estilo de código común para que se facilite el trabajo de los desarrolladores al combinar una variedad de librerías para sus proyectos.

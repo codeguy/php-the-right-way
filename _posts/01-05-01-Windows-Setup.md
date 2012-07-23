@@ -1,9 +1,5 @@
 ---
-isChild: true
----
-
----
-title: Configuración en Windows (5.4)
+title: Configuración en Windows
 isChild: true
 ---
 
