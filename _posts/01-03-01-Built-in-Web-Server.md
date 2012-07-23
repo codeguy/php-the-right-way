@@ -11,4 +11,4 @@ Usted puede comenzar a aprender PHP sin tener que instalar y configurar un servi
 
 * [Aprenda más acerca del servidor web embebido][cli-server]
 
-[cli-server]: http://www.php.net/manual/en/features.commandline.webserver.php
+[cli-server]: http://www.php.net/manual/es/features.commandline.webserver.php
