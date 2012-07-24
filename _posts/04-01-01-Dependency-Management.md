@@ -8,8 +8,8 @@ Existen un sinnúmero de librerías, armazones de desarrollo (frameworks) y comp
 
 Actualmente hay dos sistemas principales de gestión de paquetes para PHP: Composer y PEAR. ¿Cuál es el adecuado para usted? La respuesta es, ambos.
 
-* Use **Composer** cuando maneje las dependencias de un solo proyecto.
+* Utilice **Composer** cuando maneje las dependencias de un solo proyecto.
 
-* Use **PEAR** cuando maneje las dependencias de todo el sistema de PHP en su plataforma.
+* Utilice **PEAR** cuando maneje las dependencias de todo el sistema de PHP en su plataforma.
 
 Generalmente, los paquetes de Composer solo estarán disponibles en los proyectos que usted especifique explícitamente, mientras que un paquete de PEAR estaría disponible a todos los proyectos bajo el sistema PHP. Puede que PEAR parezca la propuesta más accesible a primera vista, sin embargo, también existen ventajas al manejar las dependencias con Composer en base al proyecto en que se está trabajando.

@@ -1,1 +1,5 @@
-# Coding Practices
+---
+title: Prácticas de Código 
+---
+
+# Prácticas de Código 
