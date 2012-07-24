@@ -1,5 +1,5 @@
 ---
-title: Espacios de Nombre
+title: Espacios de Nombres
 isChild: true
 ---
 
