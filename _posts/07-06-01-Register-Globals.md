@@ -4,15 +4,14 @@ isChild: true
 
 ## Register Globals
 
-<strong>NOTE:</strong> As of the introduction of PHP 5.4, the `register_globals` setting has been removed and can no 
-longer be used.
+<strong>NOTE:</strong> As of PHP 5.4.0 the `register_globals` setting has been removed and can no 
+longer be used. This is only included as a warning for anyone in the process of upgrading a legacy application.
 
 When enabled, the `register_globals` configuration setting that makes several types of variables (including ones from 
-`$_POST`, `$_GET` and `$_REQUEST`) globals, available in the global scope of your application. This can easily lead to 
+`$_POST`, `$_GET` and `$_REQUEST`) available in the global scope of your application. This can easily lead to 
 security issues as your application cannot effectively tell where the data is coming from.
 
-If you are using a version of PHP that's prior to 4.2.0, please be aware that you may still be at risk of this setting 
-causing problems. As of PHP 4.2.0, the `register_globals` setting has been defaulted to "off". To ensure the security 
-of your application, ensure that this setting is <strong>always</strong> set to "off" if available.
+For example: `$_GET['foo']` would be available via `$foo`, which can override variables that have not been declared. 
+If you are using PHP < 5.4.0 __make sure__ that `register_globals` is __off__.
 
 * [Register_globals in the PHP manual](http://www.php.net/manual/en/security.globals.php)
