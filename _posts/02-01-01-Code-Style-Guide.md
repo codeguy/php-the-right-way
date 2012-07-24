@@ -4,7 +4,7 @@ title: Guía de Estilo de Código
 
 # Guía de Estilo de Código
 
-La comunidad detrás de PHP es enorme y diversa, compuesta de innumerables librerías, armazones de desarrollo (_frameworks_) y componentes. Es común que desarrolladores en PHP escojan de entre estos  y los combinen en un solo proyecto. Por eso es importante que el código PHP se adhiera (lo más cerca posible) a un estilo de código común para que se facilite el trabajo de los desarrolladores al combinar una variedad de librerías para sus proyectos.
+La comunidad detrás de PHP es enorme y diversa, compuesta de innumerables librerías, armazones de desarrollo (*frameworks*) y componentes. Es común que desarrolladores en PHP escojan de entre estos  y los combinen en un solo proyecto. Por eso es importante que el código PHP se adhiera (lo más cerca posible) a un estilo de código común para que se facilite el trabajo de los desarrolladores al combinar una variedad de librerías para sus proyectos.
 
 El [Framework Interop Group][fig] (antes conocido como el 'PHP Standards Group') ha propuesto y aprobado una serie de recomendaciones de estilo, conocidas como [PSR-0][psr0], [PSR-1][psr1] y [PSR-2][psr2]. No deje que los títulos raros lo confundan, estas recomendaciones son simplemente un conjunto de normas que algunos proyectos como Drupal, Zend, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, y otros han comenzado a adoptar. Usted puede utilizar estas normas en sus propios proyectos o continuar usando su propio estilo.
 
