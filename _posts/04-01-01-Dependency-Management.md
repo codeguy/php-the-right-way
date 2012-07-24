@@ -1,10 +1,15 @@
-# Dependency Management
+---
+title: Gestión de Dependencias
+---
 
-There are a ton of PHP libraries, frameworks, and components to choose from. Your project will likely use several of them — these are project dependencies. Until recently, PHP did not have a good way to manage these project dependencies. Even if you managed them manually, you still had to worry about autoloaders. No more.
+# Gestión de Dependencias
 
-Currently there are two major package management systems for PHP - Composer and PEAR. Which one is right for you? The answer is both.
+Existen un sinnúmero de librerías, armazones de desarrollo (frameworks) y componentes de PHP de donde escoger y lo más probable es que su proyecto utilice varios de ellos. A estos se les llama dependencias de proyecto. Hasta muy recientemente, PHP no tenía una manera fácil de gestionar tales dependencias. Aun si usted se hacía cargo de estos manualmente, todavía tendría que mantenerse al tanto de los cargadores automáticos (autoloaders). Ahora ya no es así.
 
- * Use **Composer** when managing dependencies for a single project.
- * Use **PEAR** when managing dependencies for PHP as a whole on your system.
+Actualmente hay dos sistemas principales de gestión de paquetes para PHP: Composer y PEAR. ¿Cuál es el adecuado para usted? La respuesta es, ambos.
 
-In general, Composer packages will be available only in the projects that you explicitly specify whereas a PEAR package would be available to all of your PHP projects. While PEAR might sound like the easier approach at first glance, there are advantages to using a project-by-project approach to your dependencies.
+* Use **Composer** cuando maneje las dependencias de un solo proyecto.
+
+* Use **PEAR** cuando maneje las dependencias de todo el sistema de PHP en su plataforma.
+
+Generalmente, los paquetes de Composer solo estarán disponibles en los proyectos que usted especifique explícitamente, mientras que un paquete de PEAR estaría disponible a todos los proyectos bajo el sistema PHP. Puede que PEAR parezca la propuesta más accesible a primera vista, sin embargo, también existen ventajas al manejar las dependencias con Composer en base al proyecto en que se está trabajando.
