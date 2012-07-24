@@ -47,10 +47,10 @@ Hola, mundo
  * [Aprenda como configurar Windows para ejecutar PHP desde la línea de comando][php-cli-windows]
 
 
-[phpinfo]: http://php.net/manual/en/function.phpinfo.php
-[cli-options]: http://www.php.net/manual/en/features.commandline.options.php
-[argc]: http://php.net/manual/en/reserved.variables.argc.php
-[argv]: http://php.net/manual/en/reserved.variables.argv.php
-[php-cli]: http://php.net/manual/en/features.commandline.php
-[php-cli-windows]: http://www.php.net/manual/en/install.windows.commandline.php
+[phpinfo]: http://php.net/manual/es/function.phpinfo.php
+[cli-options]: http://www.php.net/manual/es/features.commandline.options.php
+[argc]: http://php.net/manual/es/reserved.variables.argc.php
+[argv]: http://php.net/manual/es/reserved.variables.argv.php
+[php-cli]: http://php.net/manual/es/features.commandline.php
+[php-cli-windows]: http://www.php.net/manual/es/install.windows.commandline.php
 [exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
