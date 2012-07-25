@@ -1,19 +1,20 @@
 ---
+title: Codificación de contraseñas con Bcrypt
 isChild: true
 ---
 
-## Password Hashing with Bcrypt
+## Codificación de contraseñas con Bcrypt
 
-Eventually everyone builds a PHP application that relies on user login. Usernames and (hashed) passwords are stored in a database and later used to authenticate users upon login.
+Con el tiempo, todo el mundo desarrolla una aplicación PHP que depende de un inicio de sesión (login) de usuario. Nombres de usuarios y contraseñas (codificadas) se guardan en una base de datos y se usan para autenticar a los usuarios cuando inician una nueva sesión.
 
-It is important that you properly _hash_ passwords that are stored in a database. If passwords are not hashed, and your database is hacked or accessed by an unauthorized third-party, all user accounts are now compromised.
+Es importante que _codifique_ apropiadamente las contraseñas que se guardan en una base de datos. Si las contraseñas no están codificadas, y su base de datos es “hackeada” o una tercera persona no autorizada consigue acceso a la información, todas las cuentas de usuario estarían en peligro.
 
-**Hash passwords with Bcrypt**. It's super simple, and (for all intents and purposes) Bcrypt makes it impossible for someone to reverse-engineer the plain-text version of a password should the database be compromised.
+**Codifique las contraseñas con Bcrypt**. Es muy simple, y  en efecto, Bcrypt hace imposible que alguien pueda acceder a la versión en texto de la contraseña si es que su base de datos se ve comprometida.
 
-There are several Bcrypt libraries for PHP that you may use.
+Existen varias librerías de Bcrypt para PHP que puede utilizar. (La siguiente información solo está disponible en inglés.)
 
-* [Read "How to Safely Store a Password" by Coda Hale][3]
-* [Use Bcrypt with PHPass][4]
+* [Leer "How to Safely Store a Password" by Coda Hale][3]
+* [Utilice Bcrypt con PHPass][4]
 
 [3]: http://codahale.com/how-to-safely-store-a-password/
 [4]: http://www.openwall.com/phpass/
