@@ -1,48 +1,38 @@
 ---
+title: Caché de Objetos
 isChild: true
 ---
 
-## Object Caching
+## Caché de Objetos
 
-There are times when it can be beneficial to cache individual objects in your code, such as with data that is expensive
-to get or database calls where the result is unlikely to change. You can use object caching software to hold these
-pieces of data in memory for extremely fast access later on. If you save these items to a data store after you retrieve
-them, then pull them directly from the cache for following requests, you can gain a significant improvement in
-performance as well as reduce the load on your database servers.
+Hay ocasiones en que es de beneficio cachear objetos individualmente en su código, tal como los datos que se obtienen de una base de datos donde sabemos que el resultado no va a cambiar. En estos casos se puede usar el caché de objetos para guardar estos datos en memoria y estén disponibles para rápido acceso después.  Si guarda estos datos en un almacén de datos después de que los solicita de la base de datos, y solo los recupera del almacén en futuras ocasiones, se puede obtener una mejora significativa en rendimiento, así como reducir la carga en los servidores de bases de datos.
 
-Many of the popular bytecode caching solutions let you cache custom data as well, so there's even more reason to take
-advantage of them. APC, XCache, and WinCache all provide APIs to save data from your PHP code to their memory cache.
+Muchas de las soluciones de caché de bytecode populares también le permiten cachear datos personalizados, así que con más razón debe tomar ventaja de estos. APC, XCache y WinCache, proporcionan APIs para guardar al caché de memoria los datos que provienen de su código PHP.
 
-The most commonly used memory object caching systems are APC and memcached. APC is an excellent choice for object
-caching, it includes a simple API for adding your own data to its memory cache and is very easy to setup and use. The
-one real limitation of APC is that it is tied to the server it's installed on. Memcached on the other hand is installed
-as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
-store in a central location and many different systems can pull from it.
+Los sistemas de caché más utilizados son APC y memcached. APC es una gran elección para implementar caché de objetos, ya que incluye un API simple para añadir sus propios datos al caché de memoria y tiene una configuración muy simple. La una limitación de APC es que está vinculado al servidor donde ha sido configurado. Por otro lado, memcached, puede ser configurado como un servicio por separado y se puede acceder a través de la red, lo que significa que pueden guardarse objetos en un almacén de datos de alta velocidad y en una ubicación central y muchos otros sistemas pueden recurrir a él.
 
-In a networked configuration APC will usually outperform memcached in terms of access speed, but memcached will be able
-to scale up faster and further. If you do not expect to have multiple servers running your application, or do not need
-the extra features that memcached offers then APC is probably your best choice for object caching.
+En una configuración de red, APC generalmente mostrará más rendimiento que memcached en lo que se refiere a la velocidad de acceso, pero es posible ampliar memcached a una capacidad mayor. Si no espera requerir de servidores múltiples para ejecutar su aplicación, o no necesita las características adicionales que le ofrece memcached, entonces APC es su mejor alternativa para el cacheo de objetos.
 
-Example logic using APC:
+Ejemplo de lógica que utiliza APC:
 
 {% highlight php %}
 <?php
-// check if there is data saved as 'expensive_data' in cache
-$data = apc_fetch('expensive_data');
-if (!$data)
+// Verificar que los datos guardados como ‘datos_costosos’ existen en el caché
+$datos = apc_fetch('datos_costosos');
+if (!$datos)
 {
-    // data not in cache, do expensive call and save for later use
-    $data = get_expensive_data();
-    apc_store('expensive_data', $data);
+    // Los datos no se encuentran en el caché, realiza llamada costosa y guárdala para después
+    $datos = obten_datos_costosos();
+    apc_store('datos_costosos', $datos);
 }
 
-print_r($data);
+print_r($datos);
 {% endhighlight %}
 
-Learn more about popular object caching systems:
+Aprenda acerca de los sistemas de caché de objetos más populares:
 
-* [APC Functions](http://php.net/manual/en/ref.apc.php)
+* [Funciónes de APC](http://php.net/manual/es/ref.apc.php)
 * [Memcached](http://memcached.org/)
 * [Redis](http://redis.io/)
 * [XCache APIs](http://xcache.lighttpd.net/wiki/XcacheApi)
-* [WinCache Functions](http://www.php.net/manual/en/ref.wincache.php)
+* [Funciónes de WinCache](http://www.php.net/manual/es/ref.wincache.php)

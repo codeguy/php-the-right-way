@@ -24,6 +24,6 @@ Es posible configurar Apache para ejecutar PHP de diferentes maneras. La más co
 Alternativamente, si desea sacar más rendimiento y estabilidad de Apache, entones puede tomar ventaja del mismo sistema de FPM que usa nginx y utilizar el [worker MPM](http://httpd.apache.org/docs/2.4/mod/worker.html) o el [event MPM](http://httpd.apache.org/docs/2.4/mod/event.html) con mod_fastcgi o mod_fcgid. Esto le proporcionara una configuración más eficiente en memoria y mucho más rápida, aunque es más difícil de configurar.
 
 * [Leer más sobre](http://httpd.apache.org/)
-* [Leer más sobre los módulos Multi-Processing](http://httpd.apache.org/docs/2.4/mod/mpm_common.html)
+* [Leer más sobre los módulos para Multi-Processing](http://httpd.apache.org/docs/2.4/mod/mpm_common.html)
 * [Leer más sobre mod_fastcgi](http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html)
 * [Leer más sobre mod_fcgid](http://httpd.apache.org/mod_fcgid/)

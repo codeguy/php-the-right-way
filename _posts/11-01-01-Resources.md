@@ -6,8 +6,8 @@ title: Recursos
 
 ## Directamente de la fuente
 
-* [PHP Website](http://php.net/)
-* [PHP Documentation](http://php.net/docs.php)
+* [Sitio web de PHP](http://php.net/)
+* [Documentación de PHP](http://www.php.net/manual/es/)
 
 ## Gente a seguir
 
