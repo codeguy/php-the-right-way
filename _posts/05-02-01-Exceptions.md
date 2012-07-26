@@ -58,6 +58,6 @@ throw new BadFunctionCallException;
 
 [exceptions]: http://php.net/manual/es/language.exceptions.php
 [splexe]: http://php.net/manual/es/spl.exceptions.php
-[splext]: /php-the-right-way/#biblioteca_estándar_de_php
+[splext]: /#biblioteca_estándar_de_php
 [exception-best-practices53]: http://ralphschindler.com/2010/09/15/exception-best-practices-in-php-5-3
 [nesting-exceptions-in-php]: http://www.brandonsavage.net/exceptional-php-nesting-exceptions-in-php/

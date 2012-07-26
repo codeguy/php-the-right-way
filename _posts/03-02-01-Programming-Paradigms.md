@@ -24,7 +24,7 @@ Las funciones anónimas (con soporte para cierres) están presentes en PHP desde
 
 En PHP 5.4 añadió la habilidad para vincular cierres al ámbito de un objeto y también se mejoró el soporte de funciones de tipo _callable_ para que puedan intercambiarse con funciones anónimas en casi todos los casos.
 
-* Continúe leyendo acerca de la  [programación funcional en PHP](/php-the-right-way/pages/Functional-Programming.html)
+* Continúe leyendo acerca de la  [programación funcional en PHP](/pages/Functional-Programming.html)
 * [Leer acerca de las funciones anónimas][anonymous-functions]
 * [Leer acerca de la clase Cierre (Closure)][closure-class]
 * [Mas detalles definidos en el RFC de Cierres (Closures)][closures-rfc]

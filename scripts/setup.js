@@ -31,7 +31,7 @@
     /** helper for highlighting */
     function highlightNav(navLinks,id)
     {
-        navLinks.filter('[href="/php-the-right-way/#'+id+'"]').addClass("active");
+        navLinks.filter('[href="/#'+id+'"]').addClass("active");
     }
 
     $(window).scroll(function() {

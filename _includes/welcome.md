@@ -7,8 +7,8 @@ Hoy en día existe mucha información anticuada acerca de PHP que guía a nuevos
 _PHP: La Manera Correcta_ ha sido (o muy pronto será) traducido a diferentes lenguajes:
 
 * [Inglés](http://www.phptherightway.com)
-* [Chino](http://wulijun.github.com/php-the-right-way)
-* [Español](http://ederweber.github.com/php-the-right-way)
+* [Chino](http://wulijun.github.com)
+* [Español](http://es.phptherightway.com)
 
 ## Advertencia
 

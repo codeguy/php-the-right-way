@@ -26,7 +26,7 @@ Un último ejemplo es el de aceptar la entrada de datos para determinar que arch
 
 El saneamiento remueve (o evita) los caracteres ilegales o inseguros que provienen de la entrada de datos externa.
 
-Por ejemplo, debería sanear la entrada de datos antes de incluirla en el código HTML o insertarla a una consulta de SQL. Cuando utiliza parámetros consolidados con [PDO](/php-the-right-way/#bases_de_datos), este saneara la entrada de datos automáticamente.
+Por ejemplo, debería sanear la entrada de datos antes de incluirla en el código HTML o insertarla a una consulta de SQL. Cuando utiliza parámetros consolidados con [PDO](/#bases_de_datos), este saneara la entrada de datos automáticamente.
 
 En veces es requerido que permita que algunas etiquetas de HTML que se consideren inofensivas puedan ser incluidas en la entrada de datos para una página de su sitio. Esto es algo muy difícil de realizar de una manera segura y muchos lo evitan al usar otros estándares de formato de texto más restrictivos como Markdown o BBCode, aunque librerías que proveen una lista blanca de etiquetas como el [HTML Purifier][html-purifier] se concibieron para este propósito.
 
