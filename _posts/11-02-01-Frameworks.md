@@ -1,19 +1,22 @@
-# Frameworks
+---
+title: Armazones
+---
 
-Rather than re-invent the wheel, many PHP developers use frameworks to build out web applications. Frameworks abstract away many of the low-level concerns and provide helpful, easy-to-use interfaces to complete common tasks.
+# Armazones
 
-You do not need to use a framework for every project. Sometimes plain PHP is the right way to go, but if you do need a framework then there are three main types available:
+En lugar de reinventar la rueda, muchos desarrolladores de PHP usan **armazones** para desarrollar nuevas aplicaciones web. Los armazones abstraen mucho del funcionamiento fundamental de la aplicación y proveen interfaces útiles y fáciles de usar para desempeñar tareas comunes.
 
-* Micro Frameworks
-* Full-Stack Frameworks
-* Component Frameworks
+No es necesario usar un armazón en todos sus proyectos. A veces la mejor alternativa es utilizar puro PHP, pero si cree que necesita un armazón tiene hay tres tipos disponibles:
 
-Micro-frameworks are essentially a  wrapper to route a HTTP request to a callback, controller, method, etc as quickly as possible, and sometimes come with a few extra libraries to assist development such as basic database wrappers and the like. They are prominently used 
-to build remote HTTP services.
+* Micro Armazones
+* Armazones Completos
+* Armazones de Componentes
 
-Many frameworks add a considerable number of features on top of what is available in a micro-framework and these are known Full-Stack 
-Frameworks. These often come bundled with ORMs, Authentication packages, etc.
+Los **micro armazones** son, en esencia, una envoltura para dirigir las solicitudes de HTTP a un controlador o método lo más rápido posible, y en veces incluyen otras librerías para asistir en el desarrollo, tal como envolturas básicas para bases de datos y así por el estilo. Estos armazones son utilizados en su mayoría para desarrollar servicios remotos de HTTP. 
 
-Component-based frameworks are collections of specialized and single-purpose libraries. Disparate component-based frameworks can be used together to make a micro- or full-stack framework.
+Muchos armazones añaden un número considerable de funciones y características sobre la base disponible en un micro armazón. A estos se les conoce como **armazones completos**. A menudo, estos armazones incluyen paquetes ORM para bases de datos, paquetes de autenticación, y otros.
 
-* [Popular PHP Frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
+Los **armazones de componentes** son colecciones de librerías especializadas para un propósito en particular. Los componentes de estos armazones pueden utilizarse con otras librerías para construir micro armazones o armazones completos.
+
+
+* [Armazones populares de PHP](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
