@@ -1,3 +1,7 @@
+---
+title: Comunidad
+---
+
 # Comunidad
 
 La comunidad de PHP es una comunidad grande  y con mucha diversidad. Sus miembros están listos y dispuestos para apoyar a los nuevos programadores en PHP. Usted debería considerar la posibilidad de unirse a un grupo local de usuarios de PHP (PUG, con sus siglas en inglés) o atender una de las conferencias enfocadas en PHP para aprender más acerca de las mejores prácticas expuestas en esta página. También puede asociarse en el canal de IRC, #phpc, disponible en irc.freenode.com y seguir la cuenta de twitter [@phpc][phpc-twitter]. Le exhortamos a que conozca a otros desarrolladores, aprenda más acerca de otros tópicos y, sobre todo, entable nuevas amistades.
