@@ -31,8 +31,8 @@ print_r($datos);
 
 Aprenda acerca de los sistemas de caché de objetos más populares:
 
-* [Funciónes de APC](http://php.net/manual/es/ref.apc.php)
+* [Funciones de APC](http://php.net/manual/es/ref.apc.php)
 * [Memcached](http://memcached.org/)
 * [Redis](http://redis.io/)
 * [XCache APIs](http://xcache.lighttpd.net/wiki/XcacheApi)
-* [Funciónes de WinCache](http://www.php.net/manual/es/ref.wincache.php)
+* [Funciones de WinCache](http://www.php.net/manual/es/ref.wincache.php)
