@@ -14,6 +14,7 @@ _PHP: The Right Way_ is (or soon will be) translated into many different languag
 * Portuguese (Coming Soon)
 * Russian (Coming Soon)
 * Spanish (Coming Soon)
+* Ukrainian (Coming Soon)
 
 ## Disclaimer
 
