@@ -68,7 +68,7 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [1]: http://www.php.net/manual/en/book.pdo.php
 [2]: http://www.doctrine-project.org/projects/dbal.html
 [3]: http://framework.zend.com/manual/en/zend.db.html
-[4]: http://packages.zendframework.com/docs/latest/manual/en/zend.db.html
+[4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 
 [mysql]: http://uk.php.net/mysql
 [mysqli]: http://uk.php.net/mysqli
