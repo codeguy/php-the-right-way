@@ -1,7 +1,8 @@
 ---
+title: Servidores Compartidos
 isChild: true
 ---
 
-## Shared Servers
+## Servidores Compartidos
 
-PHP has shared servers to thank for its popularity. It is hard to find a host without PHP installed, but be sure it's the latest version. Shared servers allow you and other developers to deploy websites to a single machine. The upside to this is that it has become a cheap commodity. The downside is that you never know what kind of a ruckus your neighboring tenants are going to create; loading down the server or opening up security holes are the main concerns. If your project's budget can afford to avoid shared servers you should.
+PHP es un lenguaje popular gracias a su proliferación en servidores compartidos. Es difícil encontrarse con un servicio de alojamiento que no incluya PHP en sus opciones, sin embargo es importante que sea la versión más nueva. Los servidores compartidos le permiten a varios desarrolladores desplegar sitios web en un solo sistema. La ventaja de esto es que se ha convertido en una mercancía barata. La desventaja es que nunca sabe qué tipo de alboroto crearan sus inquilinos vecinos; La sobrecarga del servidor y los huecos abiertos de seguridad serían sus preocupaciones principales. Por esta razón, es recomendable evitar este tipo de servicios si el presupuesto de su proyecto lo permite.
