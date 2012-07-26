@@ -1,12 +1,13 @@
 ---
+title: Herramientas Complementarias de Pruebas
 isChild: true
 ---
 
-## Complementary Testing Tools
+## Herramientas Complementarias de Pruebas
 
-Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper libraries useful for any preferred approach taken.
+Además de armazones para pruebas individuales y guiados por comportamiento, también existen varios armazones genéricos y librerías auxiliares que son útiles para cualquier enfoque que se tome.
 
-### Tool Links
+### Enlaces de herramientas
 
-* [Selenium](http://seleniumhq.org/) is a browser automation tool which can be [integrated with PHPUnit](http://www.phpunit.de/manual/3.1/en/selenium.html)
-* [Mockery](https://github.com/padraic/mockery) is a Mock Object Framework which can be integrated with [PHPUnit](http://phpunit.de/) or [PHPSpec](http://www.phpspec.net/)
+* [Selenium](http://seleniumhq.org/) es una herramienta de automatización del navegador que puede ser [integrada a PHPUnit](http://www.phpunit.de/manual/3.1/en/selenium.html)
+* [Mockery](https://github.com/padraic/mockery) es un armazón para objetos de maqueta que puede ser integrado con [PHPUnit](http://phpunit.de/) o [PHPSpec](http://www.phpspec.net/)

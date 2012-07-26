@@ -1,9 +1,8 @@
-# Testing
+---
+title: Pruebas
+---
+# Pruebas
 
-Writing automated tests for your PHP code is considered a best practice and can lead to well-built
-applications. Automated tests are a great tool for making sure your application
-does not break when you are making changes or adding new functionality and should not be ignored.
+La creación de pruebas automatizadas para su código PHP es considerada una buena práctica y conduce a aplicaciones sólidamente construidas. Las pruebas automatizadas son una gran herramienta que asegura que su aplicación no sea afectada negativamente al hacer cambios o al añadir nuevas características a su código; estas son ventajas que no se puede ignorar.
 
-There are several different types of testing tools (or frameworks) available for PHP, which use 
-different approaches - all of which are trying to avoid manual testing and the need for large 
-Quality Assurance teams, just to make sure recent changes didn't break existing functionality.
+Existen diferentes tipos de herramientas (o armazones) para pruebas disponibles en PHP, las cuales tiene enfoques diferentes, pero todas intentan eliminar las pruebas manuales y la necesidad de disponer grandes equipos de Control de Calidad que se encarguen de asegurar que la aplicación sigue trabajando bien cuando introduce nuevos cambios al código.
