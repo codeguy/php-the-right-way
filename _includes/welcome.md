@@ -10,10 +10,10 @@ _PHP: The Right Way_ is (or soon will be) translated into many different languag
 
 * [English](http://www.phptherightway.com)
 * [Chinese](http://wulijun.github.com/php-the-right-way)
-* Japanese (Coming Soon)
+* [Japanese](http://ja.phptherightway.com)
 * Portuguese (Coming Soon)
 * Russian (Coming Soon)
-* Spanish (Coming Soon)
+* [Spanish](http://es.phptherightway.com)
 * Ukrainian (Coming Soon)
 
 ## Disclaimer
