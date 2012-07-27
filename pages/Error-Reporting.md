@@ -35,23 +35,25 @@ reporting handler to provide more features.
 
 Custom error handler can display fallback content or some error text without sensitive internal details to the user.
 
-For PHP 5.3, set `error_reporting = E_ALL | E_STRICT`.
+For PHP 5.3, it is recommended to set `error_reporting = E_ALL | E_STRICT`.
 
-In PHP 5.4 `E_STRICT` is included in `E_ALL`, so it is enough to set `error_reporting = E_ALL`.
+In PHP 5.4 `E_STRICT` is included in `E_ALL`, so setting `error_reporting = E_ALL` is enough.
 
-Configuration directive `display_errors` __must be off__ in the production environment as it can expose details about
-your application to the attacker, making it __easier to exploit any security issues__ in it. In some cases where foreign
+Configuration directive `display_errors` __must be Off__ in the production environment as it can expose details about
+your application to the attacker, making it __easier to exploit any security issues__ in it. In cases where foreign
 input is included in the error context, having this directive enabled may enable Cross-Site Scripting attacks.
 
-If you are developing simple web or CLI applications, setting this directive on in the development may help you see
-errors more easily. Your code will be better without any errors reported. For example, to prevent reported notices about
-undefined variables or array indices use `isset()` or `empty()` and initialize variables before accessing them.
+In the development, with `display_errors` disabled you will need to constantly monitor the log for any errors reported
+in your code. This does not have to be hard, a simple terminal window tailing the log file will be just fine. If that is
+not right for you or if you are developing only simple web or CLI applications, you __may set `display_errors = On` only
+for your local development environment__ to help you see and fix reported errors more easily.
 
-More experienced developers may prefer to configure error logging so it easy to monitor all reported errors in the log
-and __disable `display_errors` in the development too__. Imagine writing code to respond on AJAX requests with a
-structured output format like JSON, or working with binary formats while outputting dynamically generated images. If
-reported errors are displayed at random places in the output it will break the output format, making it invalid and the
-error text may be hard to read. All this will make development and testing very frustrating.
+In some cases displaying errors can break your output making reported errors hard to read. This is why some developers
+may prefer to look at log for errors and disable `display_errors` in the development too. Imagine writing code to
+respond on AJAX requests with a structured output format like JSON, or working with binary formats while outputting
+dynamically generated images. If reported errors are displayed at random places in the output it will break the output
+format, making it invalid and the error text may be hard to read. All this will make development and testing very
+frustrating.
 
 There are browser extensions and third party error reporting handlers to log reported errors from a web application
 directly to the web browser console. This may be used in the development if one finds separate error logging too
