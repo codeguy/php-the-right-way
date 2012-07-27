@@ -22,6 +22,12 @@ You can use the [phpcs-psr][phpcs-psr] sniff for [PHP_CodeSniffer][phpcs] to che
 Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
 conforms with these standards, saving you from fixing each problem by hand.
 
+And last but not least. There's only one language, in which you should write your code - and that rule it's basically the same for almost all programming languages. And that language is **English**. 
+
+Use English names for variables, classes, interfaces, even comments - basically everything, which is not translation files of course ;). Why? Let  me quote an answer from [StackOverflow's question][so]:
+
+> Most (not to say all) of my colleagues are Dutch, like me, however, you never know who will be looking at your code a year from now. I think it's just good practice not to limit your code to people who speak the same language.
+
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
@@ -29,3 +35,4 @@ conforms with these standards, saving you from fixing each problem by hand.
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [phpcs-psr]: https://github.com/klaussilveira/phpcs-psr
 [phpcsfixer]: http://cs.sensiolabs.org/
+[so]: http://stackoverflow.com/questions/440052/should-identifiers-and-comments-be-always-in-english-or-in-the-native-language-o
