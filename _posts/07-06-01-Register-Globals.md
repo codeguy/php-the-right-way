@@ -4,7 +4,7 @@ isChild: true
 
 ## Register Globals
 
-<strong>NOTE:</strong> As of PHP 5.4.0 the `register_globals` setting has been removed and can no 
+**NOTE:** As of PHP 5.4.0 the `register_globals` setting has been removed and can no 
 longer be used. This is only included as a warning for anyone in the process of upgrading a legacy application.
 
 When enabled, the `register_globals` configuration setting that makes several types of variables (including ones from 
