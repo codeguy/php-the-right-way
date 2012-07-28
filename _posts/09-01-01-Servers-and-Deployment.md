@@ -1,3 +1,8 @@
-# Servers and Deployment
+---
+title: 服务器和部署
+anchorid: servers_and_deployment
+---
 
-PHP applications can be deployed and run on production web servers in a number of ways.
+<h1 id="servers_and_deployment">服务器和部署</h1>
+
+部署PHP应用到线上Web服务器的方式有很多种。

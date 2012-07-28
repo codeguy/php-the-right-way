@@ -1,56 +1,50 @@
 ---
+title: 测试驱动开发
+anchorid: test_driven_development
 isChild: true
 ---
 
-## Test Driven Development
+<h2 id="test_driven_development">测试驱动开发</h2>
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
+[Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development)的定义:
 
-> Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes a failing automated test case that defines a desired improvement or new function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck, who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple designs and inspires confidence
+> 测试驱动开发(TDD)是以非常短的开发周期，不断进行迭代的软件开发流程：首先开发者针对改进或新功能编写失败的自动化测试用例，然后编写代码使测试用例通过，
+> 最后重构代码，让代码满足可接受的标准。Kent Beck，该技术的创建者或者说重新发现者，在2003年声明TDD鼓励简单的设计和提振信心。
 
-There are several different types of testing that you can do for your application
+目前对应用有多种类型的测试：
 
-### Unit Testing
+### 单元测试
 
-Unit Testing is a programming approach to ensure functions, classes and methods are working as
-expected, from the point you build them all the way through the development cycle. By checking
-values going in and out of various functions and methods, you can make sure the internal logic is
-working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+单元测试是从编写开始，贯穿于整个开发周期的一种用于保证函数、类和方法的行为与预期一致的编程方法。通过检查各个函数和方法的输入和输出值，你可以保证它们
+内部逻辑已经正确执行；通过依赖注入、编写mock类和stubs，你可以验证依赖是否已经正确处理，提高测试覆盖率。
 
-When you create a class or function you should create a unit test for each behavior it must have. At a very basic level you should
-make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments.
-This will help ensure that when you make changes to this class or function later on in the development
-cycle that the old functionality continues to work as expected. The only alternative to this would be
-var_dump() in a test.php, which is no way to build an application - large or small.
+在编写一个类或函数的时候，应该为它的每一个行为创建一个单元测试，至少你要保证它收到错误参数时能够触发错误，而参数正确时能正常工作。这可以帮你在后面
+修改类或函数的时候，确认已有功能仍然正常工作。PHP中var_dump()的功能与此类似，但是它是无法用于创建应用的。
 
-The other use for unit tests is contributing to open source. If you can write a test that shows broken
-functionality (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If
-you run a project which accepts pull requests then you should suggest this as a requirement.
+单元测试的另外一个用武之地是在给开源项目贡献代码时，如果你编写一个测试，证明代码存在bug，然后修复代码，让测试通过，这样该补丁被接受的概率要高很多。
+如果你的项目接受人家的补丁，你应该把单元测试作为项目的一项要求。
 
-[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
-applications, but there are several alternatives
+[PHPUnit](http://phpunit.de)是PHP应用的单元测试框架的业界标准，其他几个可选框架是：
 
 * [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
 
-### Integration Testing
+### 集成测试
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
+[Wikipedia](http://en.wikipedia.org/wiki/Integration_testing)的定义:
 
-> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
+> 集成测试(也称集成与测试，缩写为I&T)是把各个独立模块集成在一起，作为一个整体进行测试的软件测试阶段，它处于单元测试和验收测试之间。集成测试把已经
+> 做过单元测试的模块集成在一块，然后运行集成测试用例，最终输出一个可以进行系统测试的系统。
 
-Many of the same tools that can be used for unit testing can be used for integration testing as many
-of the same principles are used.
+很多单元测试工具同时也可以用于集成测试，并且原理也是相通的。
 
-### Functional Testing
+### 功能测试
 
-Sometimes also known as acceptance testing, functional testing consists of using tools to create automated
-tests that actually use your application instead of just verifying that individual units of code are behaving
-correctly and that individual units can speak to each other correctly. These tools typically work using real
-data and simulating actual users of the application.
+有时也称为验收测试，使用工具创建自动化的测试用例，然后在真实的系统上运行，这一点与单元测试验证单个模块的正确性和集成测试验证模块间交互的正确性是有
+区别的，这些工具通常使用真实的数据集来模拟真实用户的使用行为来验证系统的正确性。
 
-#### Functional Testing Tools
+#### 功能测试工具
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)

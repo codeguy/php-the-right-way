@@ -1,21 +1,20 @@
 ---
+title: 行为驱动开发
+anchorid: behavior_driven_development
 isChild: true
 ---
 
-## Behavior Driven Development
+<h2 id="behavior_driven_development">行为驱动开发</h2>
 
-There are two different types of Behavior-Driven Development (BDD): SpecBDD and StoryBDD. SpecBDD focuses on technical behavior or code, while StoryBDD focuses on business or feature behaviors or interactions. PHP has frameworks for both types of BDD.
+行为驱动开发(BDD)有两种方式：SpecBDD和StoryBDD。SpecBDD关注技术行为或代码，而StoryBDD关注业务、特性和交互，这两种方式都有对应的PHP框架。
 
-With StoryBDD, you write human-readable stories that describe the behavior of your application. These stories 
-can then be run as actual tests against your application. The framework used in PHP applications for StoryBDD
-is Behat, which is inspired by Ruby's [Cucumber](http://cukes.info/) project and implements the Gherkin DSL
-for describing feature behavior.
+采用StoryBDD，开发者编写人类可读的故事来描述应用的行为，然后这些故事可以作为应用的测试用例。PHP中用于StoryBDD编程的框架是Behat，从Ruby
+的[Cucumber](http://cukes.info/)项目演化而来，实现了Gherkin DSL来描述特性行为。
 
-With SpecBDD, you write specifications that describe how your actual code should behave. Instead of testing
-a function or method, you are describing how that function or method should behave. PHP offers the PHPSpec framework for this purpose. This framework is inspired
-by the [RSpec project](http://rspec.info/) for Ruby.
+采用SpecBDD，开发者编写规格说明来描述实际代码的行为，与测试一个函数或方法不同，规格描述了一个函数或方法应该具有的行为。PHP中的PHPSpec框
+架提供该编程方式的支持，它也是从Ruby的[RSpec project](http://rspec.info/)演化而来。
 
-### BDD Links    
+### BDD链接    
 
 * [Behat](http://behat.org/) is inspired by Ruby's [Cucumber](http://cukes.info/) project 
 * [PHPSpec](http://www.phpspec.net/) the SpecBDD framework for PHP
