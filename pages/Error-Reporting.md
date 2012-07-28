@@ -29,12 +29,6 @@ logging and `error_log` tells if errors should be logged into a file, to the web
 facility. Another directive `display_errors` configures if reported errors will be displayed in the output (e.g. in
 the web page content).
 
-It is possible to override default error reporting with a custom error handler using the `set_error_handler()` function.
-Many frameworks do have their own error handlers enabled by default. Some PHP extensions may change the default error
-reporting handler to provide more features.
-
-Custom error handler can display fallback content or some error text without sensitive internal details to the user.
-
 For PHP 5.3, it is recommended to set `error_reporting = E_ALL | E_STRICT`.
 
 In PHP 5.4 `E_STRICT` is included in `E_ALL`, so setting `error_reporting = E_ALL` is enough.
@@ -54,6 +48,14 @@ respond on AJAX requests with a structured output format like JSON, or working w
 dynamically generated images. If reported errors are displayed at random places in the output it will break the output
 format, making it invalid and the error text may be hard to read. All this will make development and testing very
 frustrating.
+
+It is possible to override default error reporting with a custom error handler using the `set_error_handler()` function.
+Many frameworks do have their own error handlers enabled by default with different settings for the developing and the
+production environment. Some PHP extensions may change the default error reporting handler to provide more features.
+
+Custom error handler can display fallback content or a custom error text without sensitive internal details to the user.
+There are errors that may be triggered before custom error handler is set in code so you still need to configure
+`display_errors` and other directives as recommended.
 
 There are browser extensions and third party error reporting handlers to log reported errors from a web application
 directly to the web browser console. This may be used in the development if one finds separate error logging too
