@@ -29,8 +29,7 @@ Example logic using APC:
 <?php
 // check if there is data saved as 'expensive_data' in cache
 $data = apc_fetch('expensive_data');
-if (!$data)
-{
+if (!$data) {
     // data not in cache, do expensive call and save for later use
     $data = get_expensive_data();
     apc_store('expensive_data', $data);

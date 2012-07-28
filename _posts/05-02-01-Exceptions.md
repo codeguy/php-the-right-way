@@ -26,16 +26,11 @@ $email->subject('My Subject');
 $email->body('How the heck are you?');
 $email->to('guy@example.com', 'Some Guy');
 
-try
-{
+try {
     $email->send();
-}
-catch(Fuel\Email\ValidationFailedException $e)
-{
+} catch(Fuel\Email\ValidationFailedException $e) {
     // The validation failed
-}
-catch(Fuel\Email\SendingFailedException $e)
-{
+} catch(Fuel\Email\SendingFailedException $e) {
     // The driver could not send the email
 }
 {% endhighlight %}
@@ -46,7 +41,9 @@ An Exception by default has no meaning and the most common to give it meaning is
 
 {% highlight php %}
 <?php
-class ValidationException extends Exception {}
+class ValidationException extends Exception
+{
+}
 {% endhighlight %}
 
 This means you can add multiple catch blocks and handle different Exceptions differently. This can lead to 
