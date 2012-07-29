@@ -26,7 +26,8 @@ CLI PHP编程非常强大，可以直接调用你自己的app代码而无需创�
 {% highlight php %}
 <?php
 if($argc != 2) {
-    die("Usage: php hello.php [name].\n");
+    echo "Usage: php hello.php [name].\n";
+    exit(1);
 }
 $name = $argv[1];
 echo "Hello, $name\n";
@@ -34,6 +35,8 @@ echo "Hello, $name\n";
 
 PHP会在脚本运行时根据参数创建两个特殊的变量，[`$argc`][argc]是一个整数，表示参数*个数*，[`$argv`][argv]是一个数组变量，包含每个参数的*值*，
 它的第一个元素一直是PHP脚本的名字，如本例中为`hello.php`。
+
+命令运行失败时，可以通过`exit()`表达式返回一个非0整数来通知shell，常用的exit返回码可以查看[列表][exit-codes]
 
 运行上面的脚本，在命令行输入：
 
@@ -54,3 +57,4 @@ Hello, world
 [argv]: http://php.net/manual/en/reserved.variables.argv.php
 [php-cli]: http://php.net/manual/en/features.commandline.php
 [php-cli-windows]: http://www.php.net/manual/en/install.windows.commandline.php
+[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits

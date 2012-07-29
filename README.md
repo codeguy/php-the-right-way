@@ -1,4 +1,4 @@
-# PHP: The Right Way
+# PHP之道
 
 ## Overview
 
@@ -32,6 +32,9 @@ developers know where to find good information!
 ## Where
 
 <http://www.phptherightway.com>
+
+* [English](http://www.phptherightway.com)
+* [Chinese](http://wulijun.github.com/php-the-right-way)
 
 ### Translations
 
