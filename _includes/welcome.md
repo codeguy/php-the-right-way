@@ -31,5 +31,5 @@
 
 [查看banner图片][2]
 
-[1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
+[1]: https://github.com/wulijun/php-the-right-way/tree/gh-pages
 [2]: banners.html
