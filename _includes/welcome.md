@@ -11,6 +11,7 @@ _PHP: The Right Way_ is (or soon will be) translated into many different languag
 * [English](http://www.phptherightway.com)
 * [Chinese](http://wulijun.github.com/php-the-right-way)
 * [Japanese](http://ja.phptherightway.com)
+* Polish (Coming Soon)
 * Portuguese (Coming Soon)
 * Russian (Coming Soon)
 * [Spanish](http://es.phptherightway.com)
