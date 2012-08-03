@@ -37,8 +37,7 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
 This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a heartbeat. 
-All a hacker needs to do is to pass fabricated ID parameter:
-
+All the hacker needs to do is to pass a fabricated ID parameter:
 
 ``http://myserver.com/?id=1 OR 1=1``
 
@@ -53,7 +52,7 @@ $pdo = new PDO('sqlite:users.db');
 $pdo->query("SELECT name FROM users WHERE id =1;drop database db;"); // <-- THE REAL NO!
 {% endhighlight %}
 
-It's a good practice to grant proper access rights to database user - such as SELECT and UPDATE, but not DROP!
+It's a good practice to grant proper access rights to the database user of your application - such as SELECT and UPDATE, but not DROP!
 
 Instead of using pure query() method, 
 you should sanitize the ID input using PDO bound parameters.
