@@ -4,7 +4,7 @@ isChild: true
 
 ## Error Reporting
 
-Error logging can be useful in finding the problem spots in your application, but it can also expose infromation about 
+Error logging can be useful in finding the problem spots in your application, but it can also expose information about 
 the structure of your application to the outside world. To effectively protect your application from issues that could 
 be caused by the output of these messages, you need to configure your server differently in development versus 
 production (live).
