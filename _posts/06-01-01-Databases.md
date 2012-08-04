@@ -52,6 +52,14 @@ database preventing potential SQL injection attacks.
 
 * [Learn about PDO][1]
 
+You should also be aware that database connections use up resources and it was not unheard-of to have resources
+exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you
+can implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted,
+ie. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends
+unless of course you are using persistent connections.
+
+* [Learn about PDO connections][5]
+
 ## Abstraction Layers
 
 Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
@@ -69,6 +77,7 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [2]: http://www.doctrine-project.org/projects/dbal.html
 [3]: http://framework.zend.com/manual/en/zend.db.html
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
+[5]: http://php.net/manual/en/pdo.connections.php
 
 [mysql]: http://uk.php.net/mysql
 [mysqli]: http://uk.php.net/mysqli
