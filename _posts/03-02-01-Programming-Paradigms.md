@@ -48,7 +48,7 @@ available as `__call()` and `__callStatic()`.
 * [Read about Reflection][reflection]
 
 [namespaces]: http://php.net/manual/en/language.namespaces.php
-[overloading]: http://uk.php.net/manual/en/language.oop5.overloading.php
+[overloading]: http://php.net/manual/en/language.oop5.overloading.php
 [oop]: http://www.php.net/manual/en/language.oop5.php
 [anonymous-functions]: http://www.php.net/manual/en/functions.anonymous.php
 [closure-class]: http://php.net/manual/en/class.closure.php
