@@ -53,7 +53,7 @@ if ($str !== false) {
 
 No type casting will occur, and that's why your logic is fine.
 
-### Unnecessary if/else and ternary
+### Unneded if/else and ternary
 
 Beginners very often tend to write following code:
 
