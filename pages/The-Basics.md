@@ -257,7 +257,7 @@ strings without the need for concatenating.
 <?php
 $a = 'Variables';
 
-$str = <<<'EOD'             // initialized by <<<
+$str = <<<EOD               // initialized by <<<
 Example of string
 spanning multiple lines
 using nowdoc syntax.
