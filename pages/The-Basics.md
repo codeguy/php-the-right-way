@@ -7,7 +7,7 @@ title: The Basics
 
 ## Comparison operators
 
-Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such 
+Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
 problem stems from strict comparisons (the comparison of booleans as integers).
 
 {% highlight php %}
@@ -40,8 +40,8 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 
 ### If statements
 
-While using 'if/else' statements within a function or class, there is a common misconception that 'else' must be used 
-in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not 
+While using 'if/else' statements within a function or class, there is a common misconception that 'else' must be used
+in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
 necessary as 'return' will end the function, causing 'else' to become moot.
 
 {% highlight php %}
@@ -104,7 +104,7 @@ function test($a)
 
 ## Global namespace
 
-While using namespaces, you may find your code being executed in the wrong scope for internal methods. To fix this, 
+While using namespaces, you may find your code being executed in the wrong scope for internal methods. To fix this,
 define the method globally by using a backslash before the method.
 
 {% highlight php %}
@@ -153,12 +153,12 @@ $a = 'Multi-line example'      // concatenation operator (.)
 
 ### String types
 
-String types are a constant feature within the PHP community, but hopefully this section will explain the 
+String types are a constant feature within the PHP community, but hopefully this section will explain the
 differences between the string types and their benefits/uses.
 
 #### Single quotes
 
-Single quotes are the simplest way to define a string and are often the quickest. Their quickness stems from PHP not 
+Single quotes are the simplest way to define a string and are often the quickest. Their quickness stems from PHP not
 parsing the string (doesn't parse for variables). They're best suited for:
 
 - Strings that do not need to be parsed
@@ -179,7 +179,7 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
 
 #### Double quotes
 
-Double quotes are the Swiss army knife of strings, but are slower due to the string being parsed. They're best 
+Double quotes are the Swiss army knife of strings, but are slower due to the string being parsed. They're best
 suited for:
 
 - Escaped strings
@@ -198,8 +198,8 @@ echo "phptherightway's is $adjective.\n I love learning $code!"  // Instead of m
                                                                  // enables us to use a parsable string
 {% endhighlight %}
 
-While using double quotes that contain variables, it's often the case that the variable will be touching another 
-character. This will result in PHP not parsing the variable due to the variable being camouflaged. To fix this problem, 
+While using double quotes that contain variables, it's often the case that the variable will be touching another
+character. This will result in PHP not parsing the variable due to the variable being camouflaged. To fix this problem,
 wrap the variable within a pair of curly brackets.
 
 {% highlight php %}
@@ -224,7 +224,7 @@ echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 
 #### Nowdoc syntax
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it's suited toward the 
+Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it's suited toward the
 use of multi-line strings without the need for concatenating.
 
 {% highlight php %}
@@ -250,7 +250,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 #### Heredoc syntax
 
-Heredoc syntax internally behaves the same way as double quotes except it's suited toward the use of multi-line 
+Heredoc syntax internally behaves the same way as double quotes except it's suited toward the use of multi-line
 strings without the need for concatenating.
 
 {% highlight php %}
@@ -278,7 +278,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 ## Ternary operators
 
-Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be 
+Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
 stacked/nested, it is advised to use one per line for readability.
 
 {% highlight php %}
@@ -305,18 +305,18 @@ echo ($a == 5) ? return true : return false;    // this example will output an e
 
 ## Variable declarations
 
-At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What 
-this does in reality is to double the memory consumption of said script. For the example below, let's say 
-$_GET\['about_me'\] contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
+At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
+this does in reality is to double the memory consumption of said script. For the example below, let's say
+an example string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
 
 {% highlight php %}
 <?php
-$about = $_GET['about_me'];    // uses 2MB memory
+$about = 'A very long string of text';    // uses 2MB memory
 echo $about;
 
 vs.
 
-echo $_GET['about_me'];        // uses 1MB memory
+echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
 * [Performace tips](https://developers.google.com/speed/articles/optimizing-php)
