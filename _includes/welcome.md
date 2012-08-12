@@ -10,6 +10,7 @@
 * [English](http://www.phptherightway.com)
 * [中文版](http://wulijun.github.com/php-the-right-way)
 * [日文版](http://ja.phptherightway.com)
+* Polish (Coming Soon)
 * Portuguese (Coming Soon)
 * Russian (Coming Soon)
 * [西班牙语](http://es.phptherightway.com)

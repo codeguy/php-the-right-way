@@ -32,8 +32,9 @@ $pdo = new PDO('sqlite:users.db');
 $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
-这是非常糟糕的代码，直接在SQL中插入一个原始输入变量，导致潜在的SQL注入风险。相反，你应该使用PDO的绑定参数功能来处理
-ID输入参数。
+这是非常糟糕的代码，直接在SQL中插入一个原始输入变量，导致潜在的SQL注入风险。假如黑客构造URL：
+`http://domain.com/?id=1%3BDELETE+FROM+users`来传入恶意参数id，则`$_GET['id']`的变量值为`id=1;DELETE FROM users`，
+这将删除数据表中的所有用户！因此，你应该使用PDO的绑定参数功能来处理ID输入参数。
 
 {% highlight php %}
 <?php
@@ -46,6 +47,12 @@ $stmt->execute();
 这才是正确的代码，在PDO statement中绑定一个参数，使得查询被发给数据库之前，对输入参数进行转义，防止SQL注入攻击。
 
 * [学习PDO][1]
+
+另外一个要注意的问题是，如果数据库连接没有隐式地关闭，那么数据库连接数可能会超过数据库服务器的限制而连接失败，这种
+错误在其他编程语言中比较常见。PDO对象在销毁的时候会隐式的关闭数据库连接，只要你把指向它的引用全部删除即可，如设置
+为NULL。如果没有，PHP也会在脚本结束时关闭所有非持久化的数据库连接。
+
+* [了解更多PDO连接][5]
 
 ## 抽象层
 
@@ -63,6 +70,7 @@ $stmt->execute();
 [2]: http://www.doctrine-project.org/projects/dbal.html
 [3]: http://framework.zend.com/manual/en/zend.db.html
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
+[5]: http://php.net/manual/en/pdo.connections.php
 
 [mysql]: http://uk.php.net/mysql
 [mysqli]: http://uk.php.net/mysqli

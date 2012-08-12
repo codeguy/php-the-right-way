@@ -1,9 +1,10 @@
 ---
 title: 框架
 anchorid: frameworks
+isChild: true
 ---
 
-<h1 id="frameworks">框架</h1>
+<h2 id="frameworks">框架</h2>
 
 大量的PHP开发者使用框架，而不是重复发明轮子来创建自己的Web应用。框架抽象出底层通用的业务逻辑，给使用者了提供简单易用的接口。
 
