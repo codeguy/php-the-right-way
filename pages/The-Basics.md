@@ -14,10 +14,10 @@ problem stems from strict comparisons (the comparison of booleans as integers).
 <?php
 $a = 5;   // 5 as an integer
 
-var_dump($a == 5);       // compares value; return true
-var_dump($a == '5');     // compares value (ignore type); return true
-var_dump($a === 5);      // compares type/value (integer vs. integer); return true
-var_dump($a === '5');    // compares type/value (integer vs. string); return false
+var_dump($a == 5);       // compare value; return true
+var_dump($a == '5');     // compare value (ignore type); return true
+var_dump($a === 5);      // compare type/value (integer vs. integer); return true
+var_dump($a === '5');    // compare type/value (integer vs. string); return false
 
 /**
  * Strict comparisons
@@ -113,14 +113,14 @@ namespace phptherightway;
 
 function fopen()
 {
-    $file = \fopen();    // our function name is the same as an internal function.
-                         // execute globally by adding "\".
+    $file = \fopen();    // our function name is the same as an internal function
+                         // execute globally by adding '\'.
 }
 
 function array()
 {
     $iterator = new \ArrayIterator();    // ArrayIterator is an internal class. Using it without a backslash
-                                         // will execute it within the namespace scope.
+                                         // will execute it within the namespace scope
 }
 {% endhighlight %}
 
@@ -158,7 +158,7 @@ differences between the string types and their benefits/uses.
 
 #### Single quotes
 
-Single quotes are the simplest way to define a string and are often the quickest. Their quickness stems from PHP not
+Single quotes are the simplest way to define a string and are often the quickest. Their speed stems from PHP not
 parsing the string (doesn't parse for variables). They're best suited for:
 
 - Strings that do not need to be parsed
@@ -188,14 +188,14 @@ suited for:
 
 {% highlight php %}
 <?php
-echo 'phptherightway\'s is ' . $adjective . '.'     // a single quotes example that uses multiple concatenating for
-    . "\n"                                          // variables and escaped string
+echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that uses multiple concatenating for
+    . "\n"                                       // variables and escaped string
     . 'I love learning' . $code . '!';
 
 vs.
 
-echo "phptherightway's is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
-                                                                 // enables us to use a parsable string
+echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
+                                                               // enables us to use a parsable string
 {% endhighlight %}
 
 While using double quotes that contain variables, it's often the case that the variable will be touching another
@@ -216,7 +216,7 @@ echo "I drank some juice made of {$juice}s";    // $juice will be parsed
  * Complex variables will also be parsed within curly brackets
  */
 
-$juice = array('apple', 'orange', 'juice');
+$juice = array('apple', 'orange', 'plum');
 echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 {% endhighlight %}
 
@@ -260,7 +260,7 @@ $a = 'Variables';
 $str = <<<EOD               // initialized by <<<
 Example of string
 spanning multiple lines
-using nowdoc syntax.
+using heredoc syntax.
 $a are parsed.
 EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
 
@@ -269,7 +269,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  *
  * Example of string
  * spanning multiple lines
- * using nowdoc syntax.
+ * using heredoc syntax.
  * Variables are parsed.
  */
 {% endhighlight %}
@@ -307,7 +307,8 @@ echo ($a == 5) ? return true : return false;    // this example will output an e
 
 At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
 this does in reality is to double the memory consumption of said script. For the example below, let's say
-an example string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
+an example string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to
+2MB.
 
 {% highlight php %}
 <?php
