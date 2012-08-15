@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Data Filtering
+## Input Validation And Filtering
 
 Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate
 foreign input before using it in code. The `filter_var` and `filter_input` functions can sanitize text and validate text formats (e.g.
@@ -35,18 +35,40 @@ load hidden, non-public, or sensitive files.
 * [Learn about `filter_input`][5]
 * [Learn about handling null bytes][6]
 
-### Sanitization
+### Escaping And Sanitization
 
-Sanitization removes (or escapes) illegal or unsafe characters from foreign input.
+Sanitization removes illegal or unsafe characters from foreign input. Escaping 
+does not alter the meaning of the input value but instead converts certain 
+special characters into a safer escaped form, e.g. using HTML hexadecimal or 
+named entities to prevent the injection of angle brackets that might allow new 
+tags to be introduced into a HTML document while ensuring that angle brackets
+can still be included in the rendered text.
 
-For example, you should sanitize foreign input before including the input in HTML or inserting it
-into a raw SQL query. When you use bound parameters with [PDO](#databases), it will
-sanitize the input for you.
+For example, you should escape and/or sanitize foreign input before outputting it into 
+HTML or inserting it into a raw SQL query (for output to the database). When 
+you use bound parameters with [PDO](#databases), it will escape the input for you.
 
-Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML
-page. This is very hard to do and many avoid it by using other more restricted formatting like
-Markdown or BBCode, although whitelisting libraries like [HTML Purifier][html-purifier] exists for
-this reason.
+The escaping required of foreign input will depend on the HTML context it is
+injected into. Escaping for HTML text differs from escaping for Javascript or
+URL strings. You can find a reference implementation for context-specific
+escaping functions in this [Zend Escaper class](https://github.com/zendframework/zf2/blob/master/library/Zend/Escaper/Escaper.php).
+
+Sometimes it is required to allow some safe HTML tags (i.e. unescaped)
+in the input when 
+including it in the HTML page (as part of that page's markup). This is extremely difficult to do without introducing security vulnerabilities and 
+programmers should not attempt to sanitise HTML in this manner
+without the help of [HTML Purifier][html-purifier] which is considered the 
+safest HTML sanitizer in PHP.
+
+Some programmers try to avoid the need for HTML sanitisation altogether by using
+formatting languages like Markdown or BBCode. You should be
+aware, however, that these languages are only intended to make it easier to
+write HTML by removing the complexity of HTML syntax as an editing
+barrier (e.g. in blog comments or forum posts). The result of converting such 
+languages to HTML will very likely still
+require post-processing by [HTML Purifier][html-purifier] to remove potential
+Cross-Site Scripting (XSS) or UI Redress attempts by unfriendly users. When
+in doubt, use HTML sanitisation and you can't go wrong.
 
 [See Sanitization Filters][2]
 
