@@ -18,7 +18,7 @@ not require PSR-2.
 * [Read about PSR-1][psr1]
 * [Read about PSR-2][psr2]
 
-You can use the [phpcs-psr][phpcs-psr] sniff for [PHP_CodeSniffer][phpcs] to check code against these recommendations.
+You can use [PHP_CodeSniffer][phpcs] to check code against these recommendations.
 Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
 conforms with these standards, saving you from fixing each problem by hand.
 
