@@ -16,7 +16,7 @@ output.
 $raw = '22. 11. 1968';
 $start = \DateTime::createFromFormat('d. m. Y', $raw);
 
-echo "Start date: " . $start->format('m/d/Y') . "\n";
+echo 'Start date: ' . $start->format('m/d/Y') . "\n";
 {% endhighlight %}
 
 Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
@@ -30,18 +30,18 @@ $end = clone $start;
 $end->add(new \DateInterval('P1M6D'));
 
 $diff = $end->diff($start);
-echo "Difference: " . $diff->format('%m month, %d days (total: %a days)') . "\n";
+echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
 // Difference: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
 On DateTime objects you can use standard comparison:
 {% highlight php %}
 <?php
-if($start < $end) {
+if ($start < $end) {
     echo "Start is before end!\n";
 }
 {% endhighlight %}
-    
+
 One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
 DateTime objects, start and end, and the interval for which it will return all events in between.
 {% highlight php %}
@@ -49,10 +49,9 @@ DateTime objects, start and end, and the interval for which it will return all e
 // output all thursdays between $start and $end
 $periodInterval = \DateInterval::createFromDateString('first thursday');
 $periodIterator = new \DatePeriod($start, $periodInterval, $end, \DatePeriod::EXCLUDE_START_DATE);
-foreach($periodIterator as $date)
-{
+foreach ($periodIterator as $date) {
     // output each date in the period
-    echo $date->format('m/d/Y') . " ";
+    echo $date->format('m/d/Y') . ' ';
 }
 {% endhighlight %}
 
