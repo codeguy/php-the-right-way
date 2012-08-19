@@ -10,7 +10,7 @@ component repositories exist, the main two of which are:
 * [Packagist](/#composer_and_packagist)
 * [PEAR](/#pear)
 
-Both of these repositories have command line tools associated with them to help the installaiton and upgrade processes, and have been 
+Both of these repositories have command line tools associated with them to help the installation and upgrade processes, and have been 
 explained in more detail in the [Dependency Management][dm] section.
 
 There are also component-based frameworks, which allow you to use their components with minimal (or no) requirements. For example, you 
