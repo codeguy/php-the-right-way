@@ -1,12 +1,12 @@
 ---
+title: 基础知识
+anchorid: the_basics
 isChild: true
 ---
 
-## The Basics
+<h2 id="the_basics">基础知识</h2>
 
-PHP is a vast language that allows coders of all levels the ability to produce code not only quickly, but efficiently. 
-However while advancing through the language, we often forget the basics that we first learnt (or overlooked) in favor 
-of short cuts and/or bad habits. To help combat this common issue, this section is aimed at reminding coders of the 
-basic coding practices within PHP.
+PHP是一个伟大的语言，可以让各个层次的程序员都能够快速高效地完成编码任务。虽然如此，我们还是经常会因为临时救急或者
+坏习惯而忽视了PHP的基础。为了解决这个问题，这部分专门给开发者回顾一下PHP的基础编码实践。
 
-* Continue reading on [The Basics](/pages/The-Basics.html)
+* 继续阅读[基础知识](pages/The-Basics.html)
