@@ -24,15 +24,12 @@ APC的示例:
 {% highlight php %}
 <?php
 // check if there is data saved as 'expensive_data' in cache
-$data = apc_fetch('expensive_data');
-if (!$data)
-{
-    // data not in cache, do expensive call and save for later use
-    $data = get_expensive_data();
-    apc_store('expensive_data', $data);
+if (apc_fetch('expensive_data') === false) {
+    // data is not in cache; save expensive call for later use
+    apc_add('expensive_data', get_expensive_data());
 }
 
-print_r($data);
+print_r(apc_fetch('expensive_data'));
 {% endhighlight %}
 
 学习更多对象缓存系统：

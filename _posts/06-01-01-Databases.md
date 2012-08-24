@@ -72,6 +72,6 @@ $stmt->execute();
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [5]: http://php.net/manual/en/pdo.connections.php
 
-[mysql]: http://uk.php.net/mysql
-[mysqli]: http://uk.php.net/mysqli
-[pgsql]: http://uk.php.net/pgsql
+[mysql]: http://php.net/mysql
+[mysqli]: http://php.net/mysqli
+[pgsql]: http://php.net/pgsql

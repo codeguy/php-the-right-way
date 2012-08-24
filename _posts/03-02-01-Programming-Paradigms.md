@@ -43,7 +43,7 @@ PHP通过反射API和魔术方法机制，支持多种方式的元编程。开�
 * [学习反射][reflection]
 
 [namespaces]: http://php.net/manual/en/language.namespaces.php
-[overloading]: http://uk.php.net/manual/en/language.oop5.overloading.php
+[overloading]: http://php.net/manual/en/language.oop5.overloading.php
 [oop]: http://www.php.net/manual/en/language.oop5.php
 [anonymous-functions]: http://www.php.net/manual/en/functions.anonymous.php
 [closure-class]: http://php.net/manual/en/class.closure.php
