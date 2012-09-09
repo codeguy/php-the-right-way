@@ -19,6 +19,10 @@ one real limitation of APC is that it is tied to the server it's installed on. M
 as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
 store in a central location and many different systems can pull from it.
 
+Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP processes will have its own
+cache, i.e. APC data is not shared between your worker processes. In these cases, you might want to consider using
+memcached instead, as it's not tied to the PHP processes.
+
 In a networked configuration APC will usually outperform memcached in terms of access speed, but memcached will be able
 to scale up faster and further. If you do not expect to have multiple servers running your application, or do not need
 the extra features that memcached offers then APC is probably your best choice for object caching.
