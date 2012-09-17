@@ -14,7 +14,7 @@ production (live).
 To show errors in your <strong>development</strong> environment, configure the following settings in your `php.ini`:
 
 - display_errors: On
-- error_reporting: E_ALL
+- error_reporting: -1
 - log_errors: On
 
 ### Production
