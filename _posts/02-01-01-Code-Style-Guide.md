@@ -22,6 +22,8 @@ You can use the [phpcs-psr][phpcs-psr] sniff for [PHP_CodeSniffer][phpcs] to che
 Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
 conforms with these standards, saving you from fixing each problem by hand.
 
+English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily readable by all current and future parties who may be working on the codebase.
+
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
@@ -29,3 +31,4 @@ conforms with these standards, saving you from fixing each problem by hand.
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [phpcs-psr]: https://github.com/klaussilveira/phpcs-psr
 [phpcsfixer]: http://cs.sensiolabs.org/
+
