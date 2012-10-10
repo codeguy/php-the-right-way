@@ -14,8 +14,23 @@ production (live).
 To show errors in your <strong>development</strong> environment, configure the following settings in your `php.ini`:
 
 - display_errors: On
-- error_reporting: E_ALL
+- error_reporting: -1
 - log_errors: On
+
+From [php.net](http://php.net/manual/function.error-reporting.php):
+
+> Passing in the value -1 will show every possible error, even when new levels and constants are added in future PHP versions. The E_ALL constant also behaves this way as of PHP 5.4.
+
+The `E_STRICT` error level constant was introduced in 5.3.0 and is not 
+part of `E_ALL`, however it became part of `E_ALL` in 5.4.0. What does this mean? 
+In terms of reporting every possible error in version 5.3 it means you must 
+use either `-1` or `E_ALL | E_STRICT`. 
+
+**Reporting Every Possibly Error by PHP Version**
+
+* < 5.3 `-1` or `E_ALL`
+*   5.3 `-1` or `E_ALL | E_STRICT`
+* > 5.3 `-1` or `E_ALL`
 
 ### Production
 
