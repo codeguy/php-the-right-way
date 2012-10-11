@@ -293,12 +293,17 @@ $b = 10;
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
 {% endhighlight %}
 
-Ternary operators also have their limitations and cannot be used to 'return' a value.
+To 'return' a value with ternary operators use the correct syntax.
 
 {% highlight php %}
 <?php
 $a = 5;
 echo ($a == 5) ? return true : return false;    // this example will output an error
+
+vs.
+
+$a = 5;
+return ($a == 5) ? true : false;    // this example will return true
 {% endhighlight %}
 
 * [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
