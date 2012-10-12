@@ -303,7 +303,7 @@ echo ($a == 5) ? return true : return false;    // this example will output an e
 vs.
 
 $a = 5;
-return ($a == 5) ? true : false;    // this example will return true
+return ($a == 5) ? 'yay' : 'nope';    // this example will return true
 {% endhighlight %}
 
 * [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
