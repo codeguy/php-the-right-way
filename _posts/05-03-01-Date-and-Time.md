@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Date and Time
+## Date and Time {#date_and_time_title}
 
 PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There are
 many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to most
