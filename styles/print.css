@@ -1,0 +1,12 @@
+body, .site-title, h1, h2, h3{
+	font-family: 'Georgia' !important;
+}
+
+
+nav.site-navigation, a.fork-me, a.top{
+	display:none;
+}
+
+div.site-content{
+	padding: 20px 40px 40px 20px;
+}
