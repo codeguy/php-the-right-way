@@ -11,8 +11,8 @@ these recommendations are merely a set of rules that some projects like Drupal, 
 Lithium, etc are starting to adopt. You can use them for your own projects, or continue to use your own personal style.
 
 Ideally you should write PHP code that adheres to one or more of these standards so that other developers can easily
-read and work with your code. They all add on to the recommendation before, so using PSR-1 requires PSR-0, but does
-not require PSR-2.
+read and work with your code, and applications that implement the components can have consistency even when working with 
+lots of third-party code. The first few recommendations are designed to be a super-set of the previews recomendation.
 
 * [Read about PSR-0][psr0]
 * [Read about PSR-1][psr1]
