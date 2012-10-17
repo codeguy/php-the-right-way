@@ -12,7 +12,7 @@ Lithium, etc are starting to adopt. You can use them for your own projects, or c
 
 Ideally you should write PHP code that adheres to one or more of these standards so that other developers can easily
 read and work with your code, and applications that implement the components can have consistency even when working with 
-lots of third-party code. The first few recommendations are designed to be a super-set of the previews recomendation.
+lots of third-party code. The first few recommendations are designed to be a super-set of the previous recomendation.
 
 * [Read about PSR-0][psr0]
 * [Read about PSR-1][psr1]
