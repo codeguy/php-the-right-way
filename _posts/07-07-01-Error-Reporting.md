@@ -29,7 +29,7 @@ use either `-1` or `E_ALL | E_STRICT`.
 **Reporting Every Possibly Error by PHP Version**
 
 * < 5.3 `-1` or `E_ALL`
-*   5.3 `-1` or `E_ALL | E_STRICT`
+* 5.3 `-1` or `E_ALL | E_STRICT`
 * > 5.3 `-1` or `E_ALL`
 
 ### Production
