@@ -5,19 +5,19 @@ title: Functional Programming in PHP
 
 # Functional Programming in PHP
 
-PHP supports first-class function, meaning that a function can be assigned to a variable. Both user defined and built-in 
+PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and built-in 
 functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to other
-functions (feature called Higher-order functions) and function can return other functions.
+functions (a feature called higher-order functions) and a function can return other functions.
 
-Recursion, a feature that allows a function to call itself is supported by the language, but most of the PHP code focus
-on iteration.
+Recursion, a feature that allows a function to call itself, is supported by the language, but most of the PHP code focus
+is on iteration.
 
-New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
+Anonymous functions (with support for closures) have been present since PHP 5.3 (2009).
 
 PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
 can be used interchangeably with anonymous functions in almost all cases.
 
-The most common usage of higher-order functions is when implementing a strategy pattern. Built-in `array_filter`
+The most common usage of higher-order functions is when implementing a strategy pattern. The built-in `array_filter`
 function asks both for the input array (data) and a function (a strategy or a callback) used as a filter function on
 each array item.
 
@@ -41,7 +41,7 @@ $output = array_filter($input, function($item) {
 print_r($output);
 {% endhighlight %}
 
-Closure is an anonymous function that can access variables imported from the outside scope without using any global
+A closure is an anonymous function that can access variables imported from the outside scope without using any global
 variables. Theoretically, a closure is a function with some arguments closed (e.g. fixed) by the environment when it is 
 defined. Closures can work around variable scope restrictions in a clean way.
 
@@ -75,7 +75,7 @@ Each filter function in the family accepts only elements greater than some minim
 `criteria_greater_than` is called).
 
 Early binding is used by default for importing `$min` variable into the created function. For true closures with late
-binding one should use a reference when importing. Imagine a templating or input validation libraries, where closure is 
+binding one should use a reference when importing. Imagine a templating or input validation library, where closure is 
 defined to capture variables in scope and access them later when the anonymous function is evaluated.
 
 * [Read about Anonymous functions][anonymous-functions]
