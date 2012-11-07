@@ -33,6 +33,11 @@ developers know where to find good information!
 
 <http://www.phptherightway.com>
 
+* [English](http://www.phptherightway.com)
+* [Chinese](http://wulijun.github.com/php-the-right-way)
+* [Ukrainian](http://iflista.github.com/php-the-right-way)
+* [Portuguese](http://br.phptherightway.com/)
+
 ### Translations
 
 If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
@@ -62,3 +67,4 @@ My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [S
 ## License
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+
