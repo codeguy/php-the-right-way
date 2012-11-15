@@ -55,6 +55,7 @@
             var eTop = $(e).offset().top;
             var eBottom = eTop + $(e).height();
             var id=e.id;
+            id = id.replace("_title", "");
 
             if (eTop >= viewTop) {
                 //if we are passed the view and no heading was highlighted yet, store previous one as fallback
