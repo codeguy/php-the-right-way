@@ -17,10 +17,6 @@ isChild: true
 配置和使用都非常容易，它的一个缺点是只能在本机使用。Memcached则是另外一种方式，它是一个单独的服务，可以通过网络访问，这
 意味着可以在一个地方写入数据，然后在不同的系统中访问这份数据。
 
-Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP processes will have its own
-cache, i.e. APC data is not shared between your worker processes. In these cases, you might want to consider using
-memcached instead, as it's not tied to the PHP processes.
-
 在单机性能上，APC通常比Memcached更高，如果你不需要多台服务器或者其他Memcached的高级功能，APC可能是你的最佳选择。
 
 APC的示例:
