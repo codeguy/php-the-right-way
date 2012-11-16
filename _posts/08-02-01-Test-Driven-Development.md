@@ -29,6 +29,7 @@ isChild: true
 * [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
+* [atoum](https://github.com/mageekguy/atoum)
 
 ### 集成测试
 
