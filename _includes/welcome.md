@@ -14,7 +14,7 @@
 * [Portuguese](http://br.phptherightway.com/)
 * Russian (Coming Soon)
 * [西班牙语](http://es.phptherightway.com)
-* Ukrainian (http://iflista.github.com/php-the-right-way/)
+* [Ukrainian](http://iflista.github.com/php-the-right-way/)
 
 ## 免责声明
 
