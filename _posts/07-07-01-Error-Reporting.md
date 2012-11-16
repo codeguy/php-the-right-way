@@ -14,8 +14,21 @@ isChild: true
 要在**开发环境**显示错误提示，需要在`php.ini`中配置以下配置项:
 
 - display_errors: On
-- error_reporting: E_ALL
+- error_reporting: -1
 - log_errors: On
+
+来自[php.net](http://php.net/manual/function.error-reporting.php):
+
+> -1表示显示各种错误，包括将来增加的新错误类型，和PHP 5.4中的E_ALL行为相同。
+
+`E_STRICT`错误级别在5.3.0版本引入，不在`E_ALL`中，不过5.4.0版本开始，`E_ALL`包含`E_STRICT`级别的错误。所以在5.3版本中，要显示
+所有错误，需要把`error_reporting`设置为`-1`或者`E_ALL | E_STRICT`。 
+
+**各PHP版本显示所有错误的配置**
+
+* &lt; 5.3 `-1` or `E_ALL`
+* &nbsp; 5.3 `-1` or `E_ALL | E_STRICT`
+* &gt; 5.3 `-1` or `E_ALL`
 
 ### 线上环境
 

@@ -19,7 +19,15 @@ Lithium等，你可以把这些规则用在自己的项目中，或者继续使�
 * [阅读PSR-1][psr1]
 * [阅读PSR-2][psr2]
 
+可以使用[PHP_CodeSniffer][phpcs]来检查代码是否符合这些标准。如果不符合规范，可以使用Fabien Potencier提供的工
+具[PHP Coding Standards Fixer][phpcsfixer]自动修复，不用自己手工修复。
+
+变量名和代码结构建议使用英文符号编写，注释则可以使用各种语言，没有限制。
+
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+[phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
+[phpcs-psr]: https://github.com/klaussilveira/phpcs-psr
+[phpcsfixer]: http://cs.sensiolabs.org/

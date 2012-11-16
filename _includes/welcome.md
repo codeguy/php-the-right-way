@@ -11,10 +11,10 @@
 * [中文版](http://wulijun.github.com/php-the-right-way)
 * [日文版](http://ja.phptherightway.com)
 * Polish (Coming Soon)
-* Portuguese (Coming Soon)
+* [Portuguese](http://br.phptherightway.com/)
 * Russian (Coming Soon)
 * [西班牙语](http://es.phptherightway.com)
-* Ukrainian (Coming Soon)
+* Ukrainian (http://iflista.github.com/php-the-right-way/)
 
 ## 免责声明
 

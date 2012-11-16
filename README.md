@@ -36,6 +36,7 @@ developers know where to find good information!
 * [English](http://www.phptherightway.com)
 * [Chinese](http://wulijun.github.com/php-the-right-way)
 * [Ukrainian](http://iflista.github.com/php-the-right-way)
+* [Portuguese](http://br.phptherightway.com/)
 
 ### Translations
 
