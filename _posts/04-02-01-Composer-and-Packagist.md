@@ -14,7 +14,7 @@ Composer是一个**出色**的PHP依赖管理器，把项目的依赖列在`comp
 Composer可以安装在本地(在当前工作目录，不推荐这种方式)，也可以安装在系统中(如/usr/local/bin)。假设你要在本地安装，在
 项目的根目录执行：
 
-    curl -s http://getcomposer.org/installer | php
+    curl -s https://getcomposer.org/installer | php
 
 它会下载`composer.phar`(PHP二进制文档)，然后你就可以用`php`运行它来完成项目依赖的管理。 <strong>请注意:</strong>如果
 你通过管道直接把下载的代码传给PHP解释器，请先在线阅读代码以确保该代码是安全的。
@@ -31,7 +31,7 @@ Composer可以安装在本地(在当前工作目录，不推荐这种方式)，�
 
 而手动安装则需要你自己做这些事情，你必须自己权衡利弊，以决定是否手动安装。下面是手动获取Composer的方法:
 
-    curl -s http://getcomposer.org/composer.phar -o $HOME/local/bin/composer
+    curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
     chmod +x $HOME/local/bin/composer
 
 目录`$HOME/local/bin`(或你自己选择其它目录)应该在你的`$PATH`环境变量中，从而可以直接运行`composer`命令。
