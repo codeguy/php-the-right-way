@@ -4,15 +4,16 @@ isChild: true
 
 ## Building and Deploying your Application {#build_title}
 
-If you find yourself doing manual database schema changes or running your tests manually before updating your files (manually), 
-think twice! With every additional manual task needed to deploy a new version of your app, the chances for potentially 
-fatal mistakes increase. Whether you're dealing with a simple update, a comprehensive build process or even a continuous 
-integration strategy, build tools are your friend.
+If you find yourself doing manual database schema changes or running your tests manually before updating your files 
+(manually), think twice! With every additional manual task needed to deploy a new version of your app, the chances for 
+potentially fatal mistakes increase. Whether you're dealing with a simple update, a comprehensive build process or even 
+a continuous integration strategy, build tools are your friend.
 
 ### Phing - Deployment with XML and PHP
 
-[Phing](http://www.phing.info/) is the easiest way to get started with automated deployment in the PHP world. With Phing you can control your packaging, deployment or testing process from within a simple 
-XML build file. Phing provides a rich set of tasks usually needed to install or update a web app and can be extended 
+[Phing](http://www.phing.info/) is the easiest way to get started with automated deployment in the PHP world. 
+With Phing you can control your packaging, deployment or testing process from within a simple XML build file. 
+Phing provides a rich set of tasks usually needed to install or update a web app and can be extended 
 with additional custom tasks, written in PHP.
 
 Example of a Phing script (build.xml):
@@ -60,15 +61,19 @@ Example of a Phing script (build.xml):
 
 ### Capistrano - The powerful Ruby alternative
 
-[Capistrano](https://github.com/capistrano/capistrano/wiki) is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way on one or more remote machines.
+[Capistrano](https://github.com/capistrano/capistrano/wiki) is a system for *intermediate-to-advanced programmers* 
+to execute commands in a structured, repeatable way on one or more remote machines.
 
-It is pre-configured for deploying Ruby on Rails applications, however people are **successfully deploying PHP systems** with it. Successful use of Capistrano depends on a working knowledge of Ruby and Rake.
+It is pre-configured for deploying Ruby on Rails applications, however people are **successfully deploying PHP systems** 
+with it. Successful use of Capistrano depends on a working knowledge of Ruby and Rake.
 
-Dave Gardner's blog post [PHP Deployment with Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/) is a good starting point for PHP developers interested in Capistrano.
+Dave Gardner's blog post [PHP Deployment with Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/) 
+is a good starting point for PHP developers interested in Capistrano.
 
 ###Chef - Ruby based system integration framework
 
-[Chef](http://www.opscode.com/chef/) is more than a deployment framework, it is a very powerful Ruby based system integration framework that doesn't just deploy your app but can build your whole server environment or virtual boxes.
+[Chef](http://www.opscode.com/chef/) is more than a deployment framework, it is a very powerful Ruby based system 
+integration framework that doesn't just deploy your app but can build your whole server environment or virtual boxes.
 
 Chef resources for PHP developers:
 
@@ -83,7 +88,10 @@ approach leads to significantly reduced integration problems and allows a team t
 
 *Martin Fowler*
 
-There are different ways to implement continuous integration for PHP. Recently [Travis CI](https://travis-ci.org/) has done a great job of making continuous integration a reality even for small projects. Travis CI is a hosted continuous integration service for the open source community. It is integrated with GitHub and offers first class support for many languages including PHP. 
+There are different ways to implement continuous integration for PHP. Recently [Travis CI](https://travis-ci.org/) has 
+done a great job of making continuous integration a reality even for small projects. Travis CI is a hosted continuous 
+integration service for the open source community. It is integrated with GitHub and offers first class support for many 
+languages including PHP. 
 
 Example of a Travis CI build script:
 
