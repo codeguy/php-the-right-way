@@ -1,2 +1,2 @@
-# Getting Started {#getting_started_title}
+# Getting Started {#getting_started_title}**
 
