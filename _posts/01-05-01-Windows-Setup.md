@@ -4,7 +4,7 @@ isChild: true
 
 ## Windows Setup {#windows_setup_title}
 
-PHP is available in several ways for Windows. You can [download the binaries](php-downloads) and until recently you could use a '.msi' 
+PHP is available in several ways for Windows. You can [download the binaries][php-downloads] and until recently you could use a '.msi' 
 installer. The installer is no longer supported and stops at PHP 5.3.0.
 
 For learning and local development you can use the built in webserver with PHP 5.4 so you don't need to worry about configuring it. If you 
