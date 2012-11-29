@@ -25,7 +25,7 @@
 
 * [PagodaBox](https://pagodabox.com/)
 * [AppFog](https://appfog.com/)
-* [fortrabbit](https://fortrabbit.com/)
+* [fortrabbit](http://fortrabbit.com/)
 * [Engine Yard Orchestra PHP Platform](http://www.engineyard.com/products/orchestra/)
 * [Red Hat OpenShift Platform](http://www.redhat.com/products/cloud-computing/openshift/)
 * [dotCloud](http://docs.dotcloud.com/services/php/)
