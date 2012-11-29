@@ -22,12 +22,15 @@ Among the tasks you might want to automate are:
 ### Build Automation Tools
 
 Build tools can be described as a collection of scripts that handle common tasks of software deployment. The build tool 
-is not a part of your software, it acts on your software from 'outside'. 
+is not a part of your software, it acts on your software from 'outside'.
+
+There are many open source tools available to help you with build automation, some are written in PHP others aren't. 
+This shouldn't hold you back from using them, if they're better suited for the specific job. Here are a few examples:
 
 [Phing](http://www.phing.info/) is the easiest way to get started with automated deployment in the PHP world. 
 With Phing you can control your packaging, deployment or testing process from within a simple XML build file. 
-Phing provides a rich set of tasks usually needed to install or update a web app and can be extended 
-with additional custom tasks, written in PHP.
+Phing (which is based on [Apache Ant](http://ant.apache.org/)) provides a rich set of tasks usually needed to install or 
+update a web app and can be extended with additional custom tasks, written in PHP.
 
 [Capistrano](https://github.com/capistrano/capistrano/wiki) is a system for *intermediate-to-advanced programmers* 
 to execute commands in a structured, repeatable way on one or more remote machines.
@@ -44,6 +47,11 @@ Chef resources for PHP developers:
 
 * [Three part blog series about deploying a LAMP application with Chef, Vagrant, and EC2](http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/)
 * [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system](https://github.com/opscode-cookbooks/php)
+
+Further reading:
+
+* [Automate your project with Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/)
+* [Maven](http://maven.apache.org/), a build framework based on Ant and [how to use it with PHP](http://www.php-maven.org/)
 
 ### Continuous Integration
 
