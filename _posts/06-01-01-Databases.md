@@ -71,6 +71,7 @@ SQLite then a little overhead will be worth it the sake of code cleanliness.
 
 Some abstraction layers have been built using the PSR-0 namespace standard so can be installed in any application you like:
 
+* [Aura SQL][6]
 * [Doctrine2 DBAL][2]
 * [ZF2 Db][4]
 * [ZF1 Db][3]
@@ -80,6 +81,7 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [3]: http://framework.zend.com/manual/en/zend.db.html
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [5]: http://php.net/manual/en/pdo.connections.php
+[6]: https://github.com/auraphp/Aura.Sql
 
 [mysql]: http://php.net/mysql
 [mysqli]: http://php.net/mysqli
