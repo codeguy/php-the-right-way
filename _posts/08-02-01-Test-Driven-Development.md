@@ -33,7 +33,7 @@ applications, but there are several alternatives
 * [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
-* [atoum](https://github.com/mageekguy/atoum)
+* [atoum](https://github.com/atoum/atoum)
 
 ### Integration Testing
 
