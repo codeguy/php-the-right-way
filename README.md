@@ -1,8 +1,8 @@
 # PHP: The Right Way
 
-## Overview
+## Pregled
 
-This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+Ovo je Git Hub strana repozitorijuma za projekat _PHP: The Right Way_ .
 
 * This website is a Jekyll project.
 * Each section and sub-section are a Markdown file in `_posts/`.
