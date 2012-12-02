@@ -11,12 +11,12 @@ a continuous integration strategy, [build automation](http://en.wikipedia.org/wi
 
 Among the tasks you might want to automate are:
 
-* dependency management
-* compilation, minification of your assets
-* running tests
-* creation of documentation
-* packaging
-* deployment
+* Dependency management
+* Compilation, minification of your assets
+* Running tests
+* Creation of documentation
+* Packaging
+* Deployment
 
 
 ### Build Automation Tools
