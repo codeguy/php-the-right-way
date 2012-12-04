@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Test Driven Development
+## Test Driven Development {#test_driven_development_title}
 
 From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
 
@@ -17,7 +17,7 @@ expected, from the point you build them all the way through the development cycl
 values going in and out of various functions and methods, you can make sure the internal logic is
 working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
 
-When you create a class or function you should create a unit test for each behaviour it must have. At a very basic level you should
+When you create a class or function you should create a unit test for each behavior it must have. At a very basic level you should
 make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments.
 This will help ensure that when you make changes to this class or function later on in the development
 cycle that the old functionality continues to work as expected. The only alternative to this would be
@@ -33,6 +33,7 @@ applications, but there are several alternatives
 * [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
+* [atoum](https://github.com/atoum/atoum)
 
 ### Integration Testing
 

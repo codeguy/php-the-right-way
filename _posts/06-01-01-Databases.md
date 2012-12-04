@@ -2,7 +2,7 @@
 title: Databases
 ---
 
-# Databases
+# Databases {#databases_title}
 
 Many times your PHP code will use a database to persist information. You have a few options to connect and interact
 with your database. The recommended option _until PHP 5.1.0_ was to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
@@ -11,9 +11,12 @@ Native drivers are great if you are only using ONE database in your application,
 or you need to connect to an Oracle database, then you will not be able to use the same drivers. You'll need to learn a brand new API for each
 database &mdash; and that can get silly.
 
-As an extra note on native drivers, the mysql extension for PHP is currently deprecated as of PHP 5.4.0 and will be removed entirely in PHP 5.5.0.
-That means if you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite when you upgrade to
-the next version. You can rewrite this application now to use the [MySQLi extension][mysqli], or use PDO.
+As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and the official status since PHP 5.4.0 is
+"Long term deprecation". This means it will be removed within the next few releases, so by PHP 5.6 (or whatever comes after 5.5) it may well be gone. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
+line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development shedules so you won't
+be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
+
+* [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
 ## PDO
 
@@ -33,14 +36,16 @@ $pdo = new PDO('sqlite:users.db');
 $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
-This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a heartbeat. Instead,
-you should sanitize the ID input using PDO bound parameters.
+This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
+heartbeat. Just imagine if a hacker passes in an inventive `id` parameter by calling a URL like
+`http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `id=1;DELETE FROM users`
+which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
 
 {% highlight php %}
 <?php
 $pdo = new PDO('sqlite:users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$stmt->bindParam(':id', filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT), PDO::PARAM_INT);
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); //<-- Automatically sanitized by PDO
 $stmt->execute();
 {% endhighlight %}
 
@@ -48,6 +53,14 @@ This is correct code. It uses a bound parameter on a PDO statement. This escapes
 database preventing potential SQL injection attacks.
 
 * [Learn about PDO][1]
+
+You should also be aware that database connections use up resources and it was not unheard-of to have resources
+exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you
+can implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted,
+ie. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends
+unless of course you are using persistent connections.
+
+* [Learn about PDO connections][5]
 
 ## Abstraction Layers
 
@@ -58,6 +71,7 @@ SQLite then a little overhead will be worth it the sake of code cleanliness.
 
 Some abstraction layers have been built using the PSR-0 namespace standard so can be installed in any application you like:
 
+* [Aura SQL][6]
 * [Doctrine2 DBAL][2]
 * [ZF2 Db][4]
 * [ZF1 Db][3]
@@ -65,8 +79,10 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [1]: http://www.php.net/manual/en/book.pdo.php
 [2]: http://www.doctrine-project.org/projects/dbal.html
 [3]: http://framework.zend.com/manual/en/zend.db.html
-[4]: http://packages.zendframework.com/docs/latest/manual/en/zend.db.html
+[4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
+[5]: http://php.net/manual/en/pdo.connections.php
+[6]: https://github.com/auraphp/Aura.Sql
 
-[mysql]: http://uk.php.net/mysql
-[mysqli]: http://uk.php.net/mysqli
-[pgsql]: http://uk.php.net/pgsql
+[mysql]: http://php.net/mysql
+[mysqli]: http://php.net/mysqli
+[pgsql]: http://php.net/pgsql

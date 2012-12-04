@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Password Hashing with Bcrypt
+## Password Hashing with Bcrypt {#password_hashing_with_bcrypt_title}
 
 Eventually everyone builds a PHP application that relies on user login. Usernames and (hashed) passwords are stored in a database and later used to authenticate users upon login.
 
