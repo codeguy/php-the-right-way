@@ -5,7 +5,7 @@
 Ovo je Git Hub strana repozitorijuma za projekat _PHP: The Right Way_ .
 
 * Ovaj sajt je Jekyll projekat.
-* Each section and sub-section are a Markdown file in `_posts/`.
+* Svaka sekcija and sub-section are a Markdown file in `_posts/`.
 * Sub-sections have `isChild: true` in their front matter.
 * Navigacija i struktura stranice se automatski generišu.
 
