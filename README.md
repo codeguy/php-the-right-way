@@ -1,13 +1,13 @@
-# PHP: The Right Way
+﻿# PHP: The Right Way
 
 ## Pregled
 
 Ovo je Git Hub strana repozitorijuma za projekat _PHP: The Right Way_ .
 
-* This website is a Jekyll project.
+* Ovaj sajt je Jekyll projekat.
 * Each section and sub-section are a Markdown file in `_posts/`.
 * Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+* Navigacija i struktura stranice se automatski generišu.
 
 ## Spread the Word!
 
