@@ -34,7 +34,7 @@ is based on [Apache Ant](http://ant.apache.org/)) provides a rich set of tasks u
 web app and can be extended with additional custom tasks, written in PHP.
 
 [Capistrano](https://github.com/capistrano/capistrano/wiki) is a system for *intermediate-to-advanced programmers* to 
-execute commands in a structured, repeatable way on one or more remote machines.It is pre-configured for deploying 
+execute commands in a structured, repeatable way on one or more remote machines. It is pre-configured for deploying 
 Ruby on Rails applications, however people are **successfully deploying PHP systems** with it. Successful use of 
 Capistrano depends on a working knowledge of Ruby and Rake.
 
@@ -61,9 +61,12 @@ Further reading:
 > approach leads to significantly reduced integration problems and allows a team to develop cohesive software more 
 > rapidly.
 
-*Martin Fowler*
+*-- Martin Fowler*
 
-There are different ways to implement continuous integration for PHP. Recently [Travis CI](https://travis-ci.org/) has done a great job of making continuous integration a reality even for small projects. Travis CI is a hosted continuous integration service for the open source community. It is integrated with GitHub and offers first class support for many languages including PHP.
+There are different ways to implement continuous integration for PHP. Recently [Travis CI](https://travis-ci.org/) has 
+done a great job of making continuous integration a reality even for small projects. Travis CI is a hosted continuous 
+integration service for the open source community. It is integrated with GitHub and offers first class support for many 
+languages including PHP.
 
 Further reading:
 
