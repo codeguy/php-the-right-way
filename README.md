@@ -32,10 +32,10 @@ _PHP: The Right Way_ ima slike za web banere koje možete da koristite na svom s
 
 <http://www.phptherightway.com>
 
-* [English](http://www.phptherightway.com)
-* [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Ukrainian](http://iflista.github.com/php-the-right-way)
-* [Portuguese](http://br.phptherightway.com/)
+* [Engleski](http://www.phptherightway.com)
+* [Kineski](http://wulijun.github.com/php-the-right-way)
+* [Ukrajinski](http://iflista.github.com/php-the-right-way)
+* [Portugalski](http://br.phptherightway.com/)
 
 ### Prevodi
 
