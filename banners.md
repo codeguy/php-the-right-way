@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Website Banners
-description: "Spread the word! Use these banner to let new PHP programmers know about PHP: The Right Way"
+description: "Proširite vest! Upotrebite ove banere da biste obavestili nove PHP programere o PHP: The Right Way"
 ---
 
-# Web Banners
+# Web baneri
 
-Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers where to find good information.
+Proširite vest sa _PHP: The Right Way_ banner slikama! Pokažite novim PHP developerima gde da pronadu kvalitetne informacije.
 
-## Button 1 (120x90)
+## Dugme 1 (120x90)
 
 <p><img src="/images/banners/btn1-120x90.png" alt="PHP: The Right Way"/></p>
 
@@ -16,7 +16,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
         <img src="http://www.phptherightway.com/images/banners/btn1-120x90.png" alt="PHP: The Right Way"/>
     </a>
 
-## Button 2 (120x60)
+## Dugme 2 (120x60)
 
 <p><img src="/images/banners/btn2-120x60.png" alt="PHP: The Right Way"/></p>
 
@@ -32,7 +32,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
         <img src="http://www.phptherightway.com/images/banners/leaderboard-728x90.png" alt="PHP: The Right Way"/>
     </a>
 
-## Large Rectangle (386x280)
+## Veliki pravougaonik (386x280)
 
 <p><img src="/images/banners/lg-rect-386x280.png" alt="PHP: The Right Way"/></p>
 
@@ -40,7 +40,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
         <img src="http://www.phptherightway.com/images/banners/lg-rect-386x280.png" alt="PHP: The Right Way"/>
     </a>
 
-## Medium Rectangle (300x250)
+## Srednji pravougaonik (300x250)
 
 <p><img src="/images/banners/med-rect-300x250.png" alt="PHP: The Right Way"/></p>
 
@@ -48,7 +48,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
         <img src="http://www.phptherightway.com/images/banners/med-rect-300x250.png" alt="PHP: The Right Way"/>
     </a>
 
-## Rectangle (180x150)
+## Pravougaonik (180x150)
 
 <p><img src="/images/banners/rect-180x150.png" alt="PHP: The Right Way"/></p>
 
@@ -56,7 +56,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
         <img src="http://www.phptherightway.com/images/banners/rect-180x150.png" alt="PHP: The Right Way"/>
     </a>
 
-## Square Button (125x125)
+## Kvadratno Dugme (125x125)
 
 <p><img src="/images/banners/sq-btn-125x125.png" alt="PHP: The Right Way"/></p>
 
@@ -64,7 +64,7 @@ Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers
         <img src="http://www.phptherightway.com/images/banners/sq-btn-125x125.png" alt="PHP: The Right Way"/>
     </a>
 
-## Vertical Rectangle (240x400)
+## Vertikalni pravougaonik (240x400)
 
 <p><img src="/images/banners/vert-rect-240x400.png" alt="PHP: The Right Way"/></p>
 
