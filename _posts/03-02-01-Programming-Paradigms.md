@@ -5,7 +5,7 @@ isChild: true
 
 ## Paradigmas de Programación
 
-PHP es un lenguaje flexible y dinámico que permite usar una variedad de técnicas de programación. El lenguaje ha evolucionado dramáticamente a través de los años. Se añadió un modelo de objetos (object-oriented) solido en la versión 5.0 (2004), funciones anónimas y espacios de nombres (namespaces) en PHP 5.3, y rasgos (traits) en PHP 5.4 (2012). 
+PHP es un lenguaje flexible y dinámico que permite usar una variedad de técnicas de programación. El lenguaje ha evolucionado dramáticamente a través de los años. Se añadió un modelo de objetos (object-oriented) sólido en la versión 5.0 (2004), funciones anónimas y espacios de nombres (namespaces) en PHP 5.3, y rasgos (traits) en PHP 5.4 (2012). 
 
 ### Programación Orientada a Objetos
 
@@ -18,11 +18,11 @@ PHP tiene un conjunto muy completo de aspectos que facilitan la programación or
 
 PHP tiene la capacidad de declarar funciones de primera clase, en otras palabras, una función puede ser asignada a un variable. Las funciones definidas por el usuario, así como las funciones internas (incluidas), tiene la habilidad de ser referenciadas por un variable e invocadas dinámicamente. Las funciones pueden ser pasadas como argumentos a otras funciones (un aspecto llamado funciones de orden superior)  y funciones pueden devolver otras funciones.
 
-La recursión es un aspecto que le permite a una función a llamarse a sí misma. El lenguaje PHP habilita este tipo de algoritmos, sin embargo, la mayoría del código PHP se enfoca en iteración.
+La recursividad es un aspecto que le permite a una función a llamarse a sí misma. El lenguaje PHP habilita este tipo de algoritmos, sin embargo, la mayoría del código PHP se enfoca en iteración.
 
 Las funciones anónimas (con soporte para cierres) están presentes en PHP desde la versión 5.3 (2009).
 
-En PHP 5.4 añadió la habilidad para vincular cierres al ámbito de un objeto y también se mejoró el soporte de funciones de tipo _callable_ para que puedan intercambiarse con funciones anónimas en casi todos los casos.
+En PHP 5.4 se añadió la habilidad para vincular cierres al ámbito de un objeto y también se mejoró el soporte de funciones de tipo _callable_ para que puedan intercambiarse con funciones anónimas en casi todos los casos.
 
 * Continúe leyendo acerca de la  [programación funcional en PHP](/pages/Functional-Programming.html)
 * [Leer acerca de las funciones anónimas][anonymous-functions]
