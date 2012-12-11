@@ -104,8 +104,8 @@ function test($a)
 
 ## Global namespace
 
-While using namespaces, you may find your code being executed in the wrong scope for internal methods. To fix this,
-define the method globally by using a backslash before the method.
+When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this,
+refer to the global function by using a backslash before the function name.
 
 {% highlight php %}
 <?php
@@ -113,14 +113,14 @@ namespace phptherightway;
 
 function fopen()
 {
-    $file = \fopen();    // our function name is the same as an internal function
-                         // execute globally by adding '\'.
+    $file = \fopen();    // Our function name is the same as an internal function.
+                         // Execute the function from the global space by adding '\'.
 }
 
 function array()
 {
-    $iterator = new \ArrayIterator();    // ArrayIterator is an internal class. Using it without a backslash
-                                         // will execute it within the namespace scope
+    $iterator = new \ArrayIterator();    // ArrayIterator is an internal class. Using its name without a backslash
+                                         // will attempt to resolve it within your namespace.
 }
 {% endhighlight %}
 
