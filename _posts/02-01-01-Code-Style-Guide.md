@@ -14,7 +14,7 @@ Sería ideal que escribiera código PHP que se adhiere a uno o más de estos est
 * [Lea acerca de PSR-1][psr1]
 * [Lea acerca de PSR-2][psr2]
 
-Puede usar la configuración de [phpcs-psr][phpcs-psr] para la herramienta [phpcs-psr][phpcs-psr] y checar que su código se adhiera a las normas y recomendaciones estipuladas en estos estándares. También puede usar el [PHP Coding Standards Fixer][phpcsfixer] de Fabien Potencier para modificar el sintaxis de su código y así automáticamente se conforme a estos estándares, ahorrándole el tiempo y esfuerzo que requeriría arreglar el problema a mano.
+Puede usar la configuración de [phpcs-psr][phpcs-psr] para la herramienta [phpcs-psr][phpcs-psr] y verificar que su código se adhiera a las normas y recomendaciones estipuladas en estos estándares. También puede usar el [PHP Coding Standards Fixer][phpcsfixer] de Fabien Potencier para modificar el sintaxis de su código y así automáticamente se conforme a estos estándares, ahorrándole el tiempo y esfuerzo que requeriría arreglar el problema a mano.
 
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
