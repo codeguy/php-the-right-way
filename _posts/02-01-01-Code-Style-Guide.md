@@ -10,9 +10,9 @@ El [Framework Interop Group][fig] (antes conocido como el 'PHP Standards Group')
 
 Sería ideal que escribiera código PHP que se adhiere a uno o más de estos estándares para que otros desarrolladores puedan leer y trabajar con su código fácilmente. Los estándares añaden al estándar previo, asi que usar PSR-1 requiere el uso de PSR-0, pero no requiere PSR-2.
 
-* [Léa acerca de PSR-0][psr0]
-* [Léa acerca de PSR-1][psr1]
-* [Léa acerca de PSR-2][psr2]
+* [Lea acerca de PSR-0][psr0]
+* [Lea acerca de PSR-1][psr1]
+* [Lea acerca de PSR-2][psr2]
 
 Puede usar la configuración de [phpcs-psr][phpcs-psr] para la herramienta [phpcs-psr][phpcs-psr] y checar que su código se adhiera a las normas y recomendaciones estipuladas en estos estándares. También puede usar el [PHP Coding Standards Fixer][phpcsfixer] de Fabien Potencier para modificar el sintaxis de su código y así automáticamente se conforme a estos estándares, ahorrándole el tiempo y esfuerzo que requeriría arreglar el problema a mano.
 
