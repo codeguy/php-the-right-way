@@ -20,14 +20,14 @@ PHP tiene la capacidad de declarar funciones de primera clase, en otras palabras
 
 La recursividad es un aspecto que le permite a una función a llamarse a sí misma. El lenguaje PHP habilita este tipo de algoritmos, sin embargo, la mayoría del código PHP se enfoca en iteración.
 
-Las funciones anónimas (con soporte para cierres) están presentes en PHP desde la versión 5.3 (2009).
+Las funciones anónimas (con soporte para closures) están presentes en PHP desde la versión 5.3 (2009).
 
-En PHP 5.4 se añadió la habilidad para vincular cierres al ámbito de un objeto y también se mejoró el soporte de funciones de tipo _callable_ para que puedan intercambiarse con funciones anónimas en casi todos los casos.
+En PHP 5.4 se añadió la habilidad para vincular closure al ámbito de un objeto y también se mejoró el soporte de funciones de tipo _callable_ para que puedan intercambiarse con funciones anónimas en casi todos los casos.
 
-* Continúe leyendo acerca de la  [programación funcional en PHP](/pages/Functional-Programming.html)
+* Continúe leyendo acerca de la [programación funcional en PHP](/pages/Functional-Programming.html)
 * [Leer acerca de las funciones anónimas][anonymous-functions]
-* [Leer acerca de la clase Cierre (Closure)][closure-class]
-* [Mas detalles definidos en el RFC de Cierres (Closures)][closures-rfc]
+* [Leer acerca de la clase Closure][closure-class]
+* [Mas detalles definidos en el RFC de closures][closures-rfc]
 * [Leer acerca de funciones tipo Callable][callables]
 * [Leer acerca de cómo invocar funciones con `call_user_func_array`][call-user-func-array]
 
