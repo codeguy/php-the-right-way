@@ -18,9 +18,9 @@ Below we hash a string, we then check the hash against a new string. Because our
 <?php                                                                                                                                                                                                            
 require 'password.php';
 
-$passwordhash = password_hash('secret-password', PASSWORD_DEFAULT);
+$passwordHash = password_hash('secret-password', PASSWORD_DEFAULT);
 
-if (password_verify('bad-password', $password-hash)) {
+if (password_verify('bad-password', $passwordHash)) {
     //Correct Password
 } else {
     //Wrong password
