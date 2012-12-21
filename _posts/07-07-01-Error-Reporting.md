@@ -43,7 +43,7 @@ To hide errors on your <strong>production</strong> environment, configure your `
 With these settings in production, errors will still be logged to the error logs for the web server, but will not be 
 shown to the user. For more information on these settings, see the PHP manual:
 
-* [error_reporting](http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting)
-* [display_errors](http://www.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)
+* [error_reporting](http://php.net/manual/errorfunc.configuration.php#ini.error-reporting)
+* [display_errors](http://php.net/manual/errorfunc.configuration.php#ini.display-errors)
 * [display_startup_errors](http://php.net/manual/errorfunc.configuration.php#ini.display-startup-errors)
-* [log_errors](http://www.php.net/manual/en/errorfunc.configuration.php#ini.log-errors)
+* [log_errors](http://php.net/manual/errorfunc.configuration.php#ini.log-errors)
