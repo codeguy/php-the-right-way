@@ -38,7 +38,7 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 
 This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
 heartbeat. Just imagine if a hacker passes in an inventive `id` parameter by calling a URL like
-`http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `id=1;DELETE FROM users`
+`http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `1;DELETE FROM users`
 which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
 
 {% highlight php %}
