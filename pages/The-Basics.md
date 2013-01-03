@@ -325,4 +325,4 @@ vs.
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
-* [Performace tips](https://developers.google.com/speed/articles/optimizing-php)
+* [Performance tips](https://developers.google.com/speed/articles/optimizing-php)
