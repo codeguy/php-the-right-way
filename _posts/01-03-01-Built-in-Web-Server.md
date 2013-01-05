@@ -3,9 +3,9 @@ title: Built-in Web Server
 isChild: true
 ---
 
-## Built-in web server {#builtin_web_server_title}
+## Ugrađeni web server {#builtin_web_server_title}
 
-Možete da počnete sa učenjem PHP-a bez maltretiranja oko instalacije i podešavanja samostalnog web servera (PHP 5.4 je neophodan/potreban/obavezan). Da biste pokrenuli/startovali server, pokrenite sledeće sa svog terminala u your project's web root:
+Možete da počnete sa učenjem PHP-a bez maltretiranja oko instalacije i podešavanja samostalnog web servera (PHP 5.4 je neophodan/potreban/obavezan). Da biste pokrenuli/startovali server, pokrenite sledeće sa svog terminala u korenom direktorijumu vašeg web projekta:
 
     > php -S localhost:8000
 

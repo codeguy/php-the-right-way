@@ -5,19 +5,19 @@
 Ovo je Git Hub strana repozitorijuma za projekat _PHP: The Right Way_ .
 
 * Ovaj sajt je Jekyll projekat.
-* Svaka sekcija i podsekcija su a Markdown file in `_posts/`.
+* Svaka sekcija i podsekcija su Markdown file in `_posts/`.
 * Podsekcije imaju `isChild: true` in their front matter.
 * Navigacija i struktura stranice se automatski generišu.
 
 ## Proširite vest!
 
-_PHP: The Right Way_ ima slike za web banere koje možete da koristite na svom sajtu. Pružite podršku, i omogućite novim PHP programerima da saznaju gde mogu da pronađu kvalitetne informacije!
+_PHP: The Right Way_ ima slike za web banere koje možete da koristite na svom sajtu. Pružite nam podršku, i omogućite novim PHP programerima da saznaju gde mogu da pronađu kvalitetne informacije!
 
 [pogledaj slike za banere](http://www.phptherightway.com/banners.html)
 
 ## Kako možete da doprinesete
 
-1. Fork and edit
+1. Forkujte i edit
 2. Opciono instalirajte [Ruby](https://rvm.io/rvm/install/) sa [Jekyll](https://github.com/mojombo/jekyll/) gem da biste mogli da preview u lokalu
 3. Pošaljite zahtev za pull na razmatranje
 
@@ -46,13 +46,13 @@ Da biste izbegli fragmentaciju i zabunu kod čitalaca, molimo vas izaberite jedn
 1. Da stavimo link ka vašim GitHub stranicama pomoću  `[username].github.com/php-the-right-way`
 2. Da postavimo link ka vašim GitHub stranicama preko poddomena (npr "ru.phptherightway.com")
 
-Ako koristite poddomen, unesite njegov naziv u `CNAME` dokument, i tražite od nas da podesimo DNS za vas. Ako ne koristite poddomen, izbrišite `CNAME` dokument kompletno, inače se vaš fork neće build when pushed.
+Ako koristite poddomen, unesite njegov naziv u `CNAME` dokument, i tražite od nas da podesimo DNS za vas. Ako ne koristite poddomen, izbrišite `CNAME` dokument kompletno, inače se vaš fork neće build (formirati?) kada bude poslat (when pushed).
 
 Kada vaš prevod bude spreman, otvorite issue na Issue Tracker da biste nas obavestili.
 
 ## Zašto
 
-U poslednje vreme ima puno rasprava o tome kako PHP zajednici nedostaje verodostojna i validna informacija za programere koji su novi u PHP. Cilj ovog repozitorijuma je da reši taj problem.
+U poslednje vreme u toku je puno rasprava o tome kako PHP zajednici nedostaju verodostojne i validne informacije za programere koji su početnici u PHP. Cilj ovog repozitorijuma je da reši taj problem.
 
 ## Ko
 

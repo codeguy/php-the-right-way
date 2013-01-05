@@ -1,12 +1,12 @@
----
+Ôªø---
 layout: default
 title: Website Banners
-description: "Proöirite vest! Upotrebite ove banere da biste obavestili nove PHP programere o PHP: The Right Way"
+description: "Pro≈°irite vest! Upotrebite ove banere da biste obavestili nove PHP programere o PHP: The Right Way"
 ---
 
 # Web baneri
 
-Proöirite vest sa _PHP: The Right Way_ banner slikama! Pokaûite novim PHP developerima gde da pronadu kvalitetne informacije.
+Pro≈°irite vest sa _PHP: The Right Way_ banner slikama! Poka≈æite novim PHP developerima gde da pronaƒëu kvalitetne informacije.
 
 ## Dugme 1 (120x90)
 
@@ -23,8 +23,8 @@ Proöirite vest sa _PHP: The Right Way_ banner slikama! Pokaûite novim PHP develo
     <a href="http://www.phptherightway.com">
         <img src="http://www.phptherightway.com/images/banners/btn2-120x60.png" alt="PHP: The Right Way"/>
     </a>
-
 ## Leaderboard (728x90)
+
 
 <p><img src="/images/banners/leaderboard-728x90.png" alt="PHP: The Right Way"/></p>
 
@@ -56,7 +56,7 @@ Proöirite vest sa _PHP: The Right Way_ banner slikama! Pokaûite novim PHP develo
         <img src="http://www.phptherightway.com/images/banners/rect-180x150.png" alt="PHP: The Right Way"/>
     </a>
 
-## Kvadratno Dugme (125x125)
+## Kvadratno dugme (125x125)
 
 <p><img src="/images/banners/sq-btn-125x125.png" alt="PHP: The Right Way"/></p>
 

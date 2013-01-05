@@ -1,20 +1,17 @@
----
+﻿---
 isChild: true
 ---
 
-## Mac Setup  {#mac_setup_title}
+## Mac podešavanje  {#mac_setup_title}
 
-OSX comes prepackaged with PHP but it is normally a little behind the latest stable. Lion comes with PHP 5.3.6 and
-Mountain Lion has 5.3.10.
+OSX dolazi u paketu sa PHP-om ali je obicno malo u zakašnjenju u odnosu na najnoviju stabilnu verziju. Lion dolazi sa PHP 5.3.6 a Mountain Lion sadrži 5.3.10.
 
-To update PHP on OSX you can get it installed through a number of Mac [package managers][mac-package-managers], with
-[php-osx by Liip][php-osx-downloads] being recommended.
+Da biste ažurirali PHP na OSX možete ga instalirati preko brojnih Mac [package managers][mac-package-managers], sa
+[php-osx od Liip][php-osx-downloads] koji je preporučen.
 
-The other option is to [compile it yourself][mac-compile], in that case be sure to have installed either Xcode or
-Apple's substitute ["Command Line Tools for Xcode"][apple-developer] downloadable from Apple's Mac Developer Center.
+Druga opcija je da ga [sami kompajlirate][mac-compile], u tom slučaju je neophodno da imate instaliran bilo Xcode ili Apple-ovu zamenu ["Alati sa komandne linije za Xcode"][apple-developer] koji se mogu skinuti preko Apple Mac Developer Center.
 
-For a complete "all-in-one" package including PHP, Apache web server and MySQL database, all this with a nice control
-GUI, try [MAMP][mamp-downloads].
+Za kompletan "sve-u-jednom" paket koji uključuje PHP, Apache web server i MySQL bazu podataka, i sve ovo sa finim kontrolnim GUI, probajte [MAMP][mamp-downloads].
 
 [mac-package-managers]: http://www.php.net/manual/en/install.macosx.packages.php
 [mac-compile]: http://www.php.net/manual/en/install.macosx.compile.php
