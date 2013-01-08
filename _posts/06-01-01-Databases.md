@@ -65,7 +65,7 @@ unless of course you are using persistent connections.
 ## Abstraction Layers
 
 Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
-one database system that another is missing form another by wrapping your queries in PHP methods, giving you actual database abstraction.
+one database system that another is missing from another by wrapping your queries in PHP methods, giving you actual database abstraction.
 This will of course add a little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and
 SQLite then a little overhead will be worth it the sake of code cleanliness.
 
