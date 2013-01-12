@@ -1,6 +1,6 @@
 # Community {#community_title}
 
-The PHP community is as diverse as it is large, and it's members are ready and willing to support new PHP programmers. You should consider joining your local PHP user group (PUG) or attending larger PHP conferences to learn more about the best practices shown here. You can also hang out on IRC in the #phpc channel on irc.freenode.com and follow the [@phpc][phpc-twitter] twitter account. Get out there, meet new developers, learn new topics and, above all, make new friends. Also there is a large Google+ Community for PHP Prorammers where 9,000+ PHP Programmers are available to discuss about your problem and solving other problem. You can also join there on Google+ community for [PHP Programmer][php-programmers-gplus]
+The PHP community is as diverse as it is large, and it's members are ready and willing to support new PHP programmers. You should consider joining your local PHP user group (PUG) or attending larger PHP conferences to learn more about the best practices shown here. You can also hang out on IRC in the #phpc channel on irc.freenode.com and follow the [@phpc][phpc-twitter] twitter account. Get out there, meet new developers, learn new topics and, above all, make new friends. Also there is a large Google+ Community for PHP Programmers where 9,000+ PHP Programmers are available to discuss about problem and solving others problem by each other. You can also join there on Google+ community for [PHP Programmer][php-programmers-gplus]
 
 [Read the Official PHP Events Calendar][php-calendar]
 
