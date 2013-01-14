@@ -101,8 +101,9 @@ request lifecycle in a web application. This typically occurs when we have globa
 class) or a shared resource (such as an event queue).
 
 You should be wary when using the singleton pattern, as by its very nature it introduces global state into your 
-application, reducing testability. In most cases, dependency injection can (and should) be used in place of 
-singleton objects.
+application, reducing testability. In most cases, dependency injection can (and should) be used in place of a 
+singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our 
+application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
 
 * [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
 
