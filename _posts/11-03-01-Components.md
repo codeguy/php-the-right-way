@@ -22,4 +22,5 @@ just another repository for reusable components:
 
 * [Aura](http://auraphp.github.com/)
 * [FuelPHP (2.0 only)](https://github.com/fuelphp)
+* [Laravel's "Illuminate Components"](https://github.com/illuminate)
 * [Symfony Components](http://symfony.com/doc/current/components/index.html)
