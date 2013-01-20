@@ -6,7 +6,7 @@ PHP developers to choose several of these and combine them into a single project
 their projects.
 
 The [Framework Interop Group][fig] (formerly known as the 'PHP Standards Group') has proposed and approved a series of
-style recommendations, known as [PSR-0][psr0], [PSR-1][psr1] and [PSR-2][psr2]. Don't let the funny names confuse you,
+style recommendations, known as [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-3][psr3]. Don't let the funny names confuse you,
 these recommendations are merely a set of rules that some projects like Drupal, Zend, CakePHP, phpBB, AWS SDK, FuelPHP,
 Lithium, etc are starting to adopt. You can use them for your own projects, or continue to use your own personal style.
 
@@ -17,6 +17,7 @@ lots of third-party code. The first few recommendations are designed to be a sup
 * [Read about PSR-0][psr0]
 * [Read about PSR-1][psr1]
 * [Read about PSR-2][psr2]
+* [Read about PSR-3][psr3]
 
 You can use [PHP_CodeSniffer][phpcs] to check code against these recommendations.
 Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
@@ -28,6 +29,7 @@ English is preferred for all symbol names and code infrastructure. Comments may 
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+[psr3]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [phpcs-psr]: https://github.com/klaussilveira/phpcs-psr
 [phpcsfixer]: http://cs.sensiolabs.org/
