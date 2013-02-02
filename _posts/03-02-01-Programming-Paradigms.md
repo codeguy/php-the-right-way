@@ -11,7 +11,7 @@ the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anony
 ### Object-oriented Programming
 
 PHP has a very complete set of object-oriented programming features including support for classes, abstract classes,
-interfaces, inheritence, constructors, cloning, exceptions, and more.
+interfaces, inheritance, constructors, cloning, exceptions, and more.
 
 * [Read about Object-oriented PHP][oop]
 * [Read about Traits][traits]
