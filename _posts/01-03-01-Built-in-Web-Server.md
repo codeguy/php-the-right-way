@@ -5,7 +5,7 @@ isChild: true
 
 ## Ugrađeni web server {#builtin_web_server_title}
 
-Možete da počnete sa učenjem PHP-a bez maltretiranja oko instalacije i podešavanja samostalnog web servera (PHP 5.4 je neophodan/potreban/obavezan). Da biste pokrenuli/startovali server, pokrenite sledeće sa svog terminala u korenom direktorijumu vašeg web projekta:
+Možete da počnete sa učenjem PHP-a bez maltretiranja oko instalacije i podešavanja samostalnog web servera (od verzije PHP 5.4). Da biste pokrenuli server, pozicionirajte se na _root_ direktorijum vašeg web projekta u terminalu i unesite sledeću komandu:
 
     > php -S localhost:8000
 
