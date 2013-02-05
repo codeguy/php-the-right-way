@@ -1,1 +1,1 @@
-# Language Highlights {#language_highlights_title}
+﻿# Specifičnosti PHP jezika {#language_highlights_title}

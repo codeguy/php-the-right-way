@@ -1,31 +1,25 @@
----
+﻿---
 isChild: true
 ---
 
-## Programming Paradigms {#programming_paradigms_title}
+## Programske paradigme {#programming_paradigms_title}
 
-PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over
-the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 
-(2009), and traits in PHP 5.4 (2012). 
+PHP je fleksibilan, dinamičan jezik koji podržava razne tehnike programiranja. Poslednjih godina se značajno razvio, naročito dodatkom solidnog objektno-orijentisanog modela u verziji PHP 5.0 (2004), i anonimnih (anonimus) funkcija i prostora imena u verziji PHP 5.3 (2009), kao i tipova u PHP 5.4 (2012).
 
-### Object-oriented Programming
+### Objektno-orijentisano programiranje
 
-PHP has a very complete set of object-oriented programming features including support for classes, abstract classes,
-interfaces, inheritence, constructors, cloning, exceptions, and more.
+PHP ima vrlo upotpunjen set karakteristika za objektno-orijentisano programiranje, uključujući podršku za klase, apstraktne klase, interfejse, nasleđivanje, konstruktore, kloniranje, izuzetke i drugo.
 
-* [Read about Object-oriented PHP][oop]
-* [Read about Traits][traits]
+* [Pročitajte o Objektno-orijentisanom PHP][oop]
+* [Pročitajte o Tipovima][traits]
 
-### Functional Programming
+### Funkcionalno programiranje
 
-PHP supports first-class function, meaning that a function can be assigned to a variable. Both user defined and built-in 
-functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to other
-functions (feature called Higher-order functions) and function can return other functions.
+PHP podržava funkcije prve klase, što znači da funkcija može biti dodeljena promenljivoj. I korisnički definisane i ugrađene funkcije mogu biti referencirane promenljivom i pozvane dinamički. Funkcije se mogu prosleđivati kao argumenti drugim funkcijama (osobina koja se naziva Funkcije višeg reda) i funkcija može vratiti druge funkcije.
 
-Recursion, a feature that allows a function to call itself is supported by the language, but most of the PHP code focus
-on iteration.
+Rekurzija, osobina koja omogućava fukciji da poziva samu sebe, se podržava u jeziku, ali se većina PHP koda fokusira na iteracije.
 
-New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
+Nove anonimne funkcije (sa podrškom za closures) su prisutne od verzije PHP 5.3 (2009).
 
 PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
 can be used interchangeably with anonymous functions in almost all cases.
