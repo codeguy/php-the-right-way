@@ -7,7 +7,7 @@ their projects.
 
 The [Framework Interop Group][fig] (formerly known as the 'PHP Standards Group') has proposed and approved a series of
 style recommendations, known as [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-3][psr3]. Don't let the funny names confuse you,
-these recommendations are merely a set of rules that some projects like Drupal, Zend, CakePHP, phpBB, AWS SDK, FuelPHP,
+these recommendations are merely a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP,
 Lithium, etc are starting to adopt. You can use them for your own projects, or continue to use your own personal style.
 
 Ideally you should write PHP code that adheres to one or more of these standards so that other developers can easily
