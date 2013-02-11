@@ -119,7 +119,7 @@ and gives you a central place to hook in code that should be run for every reque
 ## Model-View-Controller
 
 The model-view-controller (MVC) pattern and its relatives HMVC and MVVM let you break up code into logical objects that
-serve very specific purposes. Models serve as a data access layer where data it fetched and returned in formats usable
+serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats usable
 throughout your application. Controllers handle the request, process the data returned from models and load views to
 send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the web
 browser.
