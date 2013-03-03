@@ -13,9 +13,10 @@ isChild: true
 
 要在**开发环境**显示错误提示，需要在`php.ini`中配置以下配置项:
 
-- display_errors: On
-- error_reporting: -1
-- log_errors: On
+    display_errors = On
+    display_startup_errors = On
+    error_reporting = -1
+    log_errors = On
 
 来自[php.net](http://php.net/manual/function.error-reporting.php):
 
@@ -34,12 +35,14 @@ isChild: true
 
 要在线上环境隐藏错误提示，需要在`php.ini`中配置以下配置项:
 
-- display_errors: Off
-- error_reporting: E_ALL
-- log_errors: On
+    display_errors = Off
+    display_startup_errors = Off
+    error_reporting = E_ALL
+    log_errors = On
 
 这样设置后，线上错误会记录到Web服务器的错误日志中，而不是直接显示给用户。如果想了解更多错误提示相关的设置，请参考手册：
 
-* [Error_reporting](http://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting)
-* [Display_errors](http://www.php.net/manual/en/errorfunc.configuration.php#ini.display-errors)
-* [Log_errors](http://www.php.net/manual/en/errorfunc.configuration.php#ini.log-errors)
+* [error_reporting](http://php.net/manual/errorfunc.configuration.php#ini.error-reporting)
+* [display_errors](http://php.net/manual/errorfunc.configuration.php#ini.display-errors)
+* [display_startup_errors](http://php.net/manual/errorfunc.configuration.php#ini.display-startup-errors)
+* [log_errors](http://php.net/manual/errorfunc.configuration.php#ini.log-errors)

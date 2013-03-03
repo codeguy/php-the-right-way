@@ -33,7 +33,7 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
 这是非常糟糕的代码，直接在SQL中插入一个原始输入变量，导致潜在的SQL注入风险。假如黑客构造URL：
-`http://domain.com/?id=1%3BDELETE+FROM+users`来传入恶意参数id，则`$_GET['id']`的变量值为`id=1;DELETE FROM users`，
+`http://domain.com/?id=1%3BDELETE+FROM+users`来传入恶意参数id，则`$_GET['id']`的变量值为`1;DELETE FROM users`，
 这将删除数据表中的所有用户！因此，你应该使用PDO的绑定参数功能来处理ID输入参数。
 
 {% highlight php %}
@@ -62,6 +62,7 @@ $stmt->execute();
 
 有些抽象层遵循PSR-0命名空间标准，可以集成在任意的应用中：
 
+* [Aura SQL][6]
 * [Doctrine2 DBAL][2]
 * [ZF2 Db][4]
 * [ZF1 Db][3]
@@ -71,6 +72,7 @@ $stmt->execute();
 [3]: http://framework.zend.com/manual/en/zend.db.html
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [5]: http://php.net/manual/en/pdo.connections.php
+[6]: https://github.com/auraphp/Aura.Sql
 
 [mysql]: http://php.net/mysql
 [mysqli]: http://php.net/mysqli

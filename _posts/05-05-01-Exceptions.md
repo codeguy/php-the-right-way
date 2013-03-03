@@ -37,7 +37,7 @@ catch(Fuel\Email\SendingFailedException $e)
 
 ### SPL异常
 
-默认的异常类Exception没有含义，常见的做法是给它设定一个有意义的名字：
+默认的异常类Exception包含的上下文信息很少，对于debug不方便，常见的做法是创建更具体的子类：
 
 {% highlight php %}
 <?php
