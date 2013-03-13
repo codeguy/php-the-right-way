@@ -64,45 +64,87 @@ yourself a lot of trouble down the road by using factories.
 
 ## Singleton
 
-When designing web applications, it often makes sense conceptually and architecturally to allow access to one and 
+When designing web applications, it often makes sense conceptually and architecturally to allow access to one and
 only one instance of a particular class. The singleton pattern enables us to do this.
 
 {% highlight php %}
-<?php 
+<?php
 class Singleton
 {
-    static $instance;
+    /**
+     * Returns the *Singleton* instance of this class.
+     *
+     * @staticvar Singleton $instance The *Singleton* instances of this class.
+     *
+     * @return Singleton The *Singleton* instance.
+     */
+    public static function getInstance()
+    {
+        static $instance = null;
+        if (null === $instance) {
+            $instance = new static;
+        }
 
-    private function __construct()
+        return $instance;
+    }
+
+    /**
+     * Protected constructor to prevent creating a new instance of the
+     * *Singleton* via the `new` operator from outside of this class.
+     */
+    protected function __construct()
     {
     }
 
-    public static function getInstance()
+    /**
+     * Private clone method to prevent cloning of the instance of the
+     * *Singleton* instance.
+     *
+     * @return void
+     */
+    private function __clone()
     {
-        if (!isset(self::$instance)) {
-            self::$instance = new self();
-        }
+    }
 
-        return self::$instance;
+    /**
+     * Private unserialize method to prevent unserializing of the *Singleton*
+     * instance.
+     *
+     * @return void
+     */
+    private function __wakeup()
+    {
     }
 }
 
-$instance1 = Singleton::getInstance();
-$instance2 = Singleton::getInstance();
+class SingletonChild extends Singleton
+{
+}
 
-echo $instance1 === $instance2; // outputs 1
+$obj = Singleton::getInstance();
+\var_dump($obj === Singleton::getInstance());             // bool(true)
+
+$anotherObj = SingletonChild::getInstance();
+\var_dump($anotherObj === Singleton::getInstance());      // bool(false)
+
+\var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
 {% endhighlight %}
 
-The code above implements the singleton pattern using a statically scoped variable and the `getInstance()` method. 
-Note that the constructor is declared as private to prevent instantiation outside of the class via `new` keyword.
+The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
+Note the following:
 
-The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire 
-request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration 
+* The constructor [`__construct`](http://php.net/language.oop5.decon#object.construct) is declared as protected to prevent creating a new instance outside of the class via the `new` operator.
+* The magic method [`__clone`](http://php.net/language.oop5.cloning#object.clone) is declared as private to prevent cloning of an instance of the class via the [`clone`](http://php.net/language.oop5.cloning) operator.
+* The magic method [`__wakeup`](http://php.net/language.oop5.magic#object.wakeup) is declared as private to prevent unserializing of an instance of the class via the global function [`\unserialize()`](http://php.net/function.unserialize).
+* A new instance is created via [late static binding](http://php.net/language.oop5.late-static-bindings) in the static creation method `getInstance()` with the keyword `static`. This allows the subclassing of the class `Singleton` in the example.
+
+The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire
+request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration
 class) or a shared resource (such as an event queue).
 
-You should be wary when using the singleton pattern, as by its very nature it introduces global state into your 
-application, reducing testability. In most cases, dependency injection can (and should) be used in place of a 
-singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our 
+You should be wary when using the singleton pattern, as by its very nature it introduces global state into your
+application, reducing testability. In most cases, dependency injection can (and should) be used in place of a
+singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
 application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
 
 * [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
