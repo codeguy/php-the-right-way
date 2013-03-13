@@ -64,11 +64,11 @@ yourself a lot of trouble down the road by using factories.
 
 ## Singleton
 
-When designing web applications, it often makes sense conceptually and architecturally to allow access to one and 
+When designing web applications, it often makes sense conceptually and architecturally to allow access to one and
 only one instance of a particular class. The singleton pattern enables us to do this.
 
 {% highlight php %}
-<?php 
+<?php
 class Singleton
 {
     static $instance;
@@ -93,16 +93,16 @@ $instance2 = Singleton::getInstance();
 echo $instance1 === $instance2; // outputs 1
 {% endhighlight %}
 
-The code above implements the singleton pattern using a statically scoped variable and the `getInstance()` method. 
+The code above implements the singleton pattern using a statically scoped variable and the `getInstance()` method.
 Note that the constructor is declared as private to prevent instantiation outside of the class via `new` keyword.
 
-The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire 
-request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration 
+The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire
+request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration
 class) or a shared resource (such as an event queue).
 
-You should be wary when using the singleton pattern, as by its very nature it introduces global state into your 
-application, reducing testability. In most cases, dependency injection can (and should) be used in place of a 
-singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our 
+You should be wary when using the singleton pattern, as by its very nature it introduces global state into your
+application, reducing testability. In most cases, dependency injection can (and should) be used in place of a
+singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
 application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
 
 * [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
