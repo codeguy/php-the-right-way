@@ -1,45 +1,45 @@
----
+﻿---
 isChild: true
 ---
 
-## Composer and Packagist {#composer_and_packagist_title}
+## Composer i Packagist {#composer_and_packagist_title}
 
-Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and, with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for you.
+Composer je **sjajan** dependency manager za PHP. Izlistajte dependencies vašeg projekta u `composer.json` fajlu i sa par jednostavnih komandi, Composer će automatski download dependencies vašeg projekta i podesiti autoučitavanje umesto vas.
 
-There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These "packages" are listed on [Packagist][1], the official repository for Composer-compatible PHP libraries.
+Već postoji dosta PHP biblioteka koje su kompatibilne sa Composer, spremne da se koriste u vašem projektu. Ovi "paketi" su nabrojani u [Packagist][1], zvaničnom repozitorijumu za PHP biblioteke kompatibilne sa Composer-om.
 
-### How to Install Composer
+### Kako instalirati Composer
 
-You can install Composer locally (in your current working directory; though this is no longer recommended) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
+Možete da instalirate Composer u lokalu (u vašem trenutnom radnom direktorijumu; ali se to više ne preporučuje) ili globalno (npr /usr/local/bin). hajde da pretpostavimo da želite da instalirate Composer u lokalu. Iz vašeg korenog direktorijuma projekta:
 
     curl -s https://getcomposer.org/installer | php
 
-This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
+Ovo će download `composer.phar` (PHP binarnu arhivu). Možete je pokrenuti pomoću `php` radi upravljanja (zavisnostima?) dependencies vašeg projekta. <strong>Zapamtite:</strong> If you pipe downloaded kod direktno u interpreter, molimo vas prvo pročitajte kod online da biste proverili da li je bezbedan.
 
-### How to Install Composer (manually)
+###Kako instalirati Composer (ručno)
 
-Manually installing composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
+Ručna instalacija composera je napredna tehnika; međutim, postoje razni razlozi zašto bi se developer pre odlučio za ovu opciju nego za interaktivnu proceduru instalacije. Interaktivna instalacija proverava vašu PHP  installation da bi obezbedila da:
 
-- a sufficient version of PHP is being used
-- `.phar` files can be executed correctly
-- certain directory permissions are sufficient
-- certain problematic extensions are not loaded
-- certain `php.ini` settings are set
+- se koristi (odgovarajuća?)dovoljno visoka verzija PHP
+- `.phar` fajlovi mogu da se ispravno izvrše
+- postoje dovoljna ovlašćenja nad određenim direktorijumima
+- određene problematične ekstenzije nisu učitane
+- određena `php.ini` podešavanja su podešena (? settings are set)
 
-Since a manual installation performs none of these checks, you have to decide whether the trade-off is worth it for you. As such, below is how to obtain Composer manually:
+Pošto ručna instalacija ne vrši nijednu od ovih provera, morate doneti odluku da li vam se ovaj kompromis isplati. imajući to u vidu, evo uputstva kako nabaviti Composer ručno:
 
     curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
     chmod +x $HOME/local/bin/composer
 
-The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment variable. This will result in a `composer` command being available.
+Putanja `$HOME/local/bin` (ili direktorijum po vašem izboru) bi trebalo da se nalazi u vašoj environment? promenljivoj `$PATH`. Time će komanda `composer` postati dostupna.
 
-When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
+Kada se sretnete sa dokumentacijom koja pokreće Composer kao `php composer.phar install`, to možete zameniti sa:
 
     composer install
 
-### How to Define and Install Dependencies
+### Kako definisati i instalirati Dependencies
 
-First, create a `composer.json` file in the same directory as `composer.phar`. Here's an example that lists [Twig][2] as a project dependency.
+Najpre, napravite `composer.json` fajl u direktorijumu gde se nalazi `composer.phar`. Evo primera koji lists [Twig][2] as a project dependency.
 
 	{
 	    "require": {
@@ -47,7 +47,7 @@ First, create a `composer.json` file in the same directory as `composer.phar`. H
 	    }
 	}
 
-Next, run this command from your project root directory.
+ZatimNext, run this command from your project root directory.
 
     php composer.phar install
 

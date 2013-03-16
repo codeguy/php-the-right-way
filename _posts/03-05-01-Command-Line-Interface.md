@@ -1,24 +1,24 @@
----
+﻿---
 isChild: true
 ---
 
-## Command Line Interface {#command_line_interface_title}
+## Interfejs sa komandne linije (Command Line Interface) {#command_line_interface_title}
 
-PHP was created primarily to write web applications, but it's also useful for scripting command line interface (CLI) programs. Command line PHP programs can help you automate common tasks like testing, deployment, and application administrativia.
+PHP je napravljen prvenstveno radi pisanja web aplikacija, ali je takođe koristan za skriptne programe sa interfejsom sa komandne linije. PHP programi sa komandne linije mogu vam pomoći da automatizujete uobičajene ?tasks kao što su testiranje, ?deployment, i administraciju aplikacije.
 
-CLI PHP programs are powerful because you can use your app's code directly without having to create and secure a web GUI for it. Just be sure not to put your CLI PHP scripts in your public web root!
+CLI PHP programi su moćni jer možete da koristite kod vaše aplikacije direktno, bez potrebe da napravite i obezbedite web za nju. Samo nemojte stavtii vaše CLI PHP skripte u vaš javni koreni direktorijum!
 
-Try running PHP from your command line:
+Pokušajte da pokrenete PHP sa vaše komandne linije:
 
 {% highlight bash %}
 > php -i
 {% endhighlight %}
 
-The `-i` option will print your PHP configuration just like the [`phpinfo`][phpinfo] function. 
+Opcija `-i` će ?ispisati print vašu PHP konfiguraciju isto kao [`phpinfo`][phpinfo] funkcija. 
 
-The `-a` option provides an interactive shell, similar to ruby's IRB or python's interactive shell. There are a number of other useful [command line options][cli-options], too.
+Opcija `-a` provides an interactive shell, similar to ruby's IRB or python's interactive shell. Postoji još dosta korisnih [opcija sa komandne linije][cli-options].
 
-Let's write a simple "Hello, $name" CLI program. To try it out, create a file named `hello.php`, as below.
+Hajde da napišemo jednostavan "Hello, $name" CLI program. Da ga isprobate, napravite fajl sa imenom `hello.php`, kao što je dole prikazano.
 
 {% highlight php %}
 <?php
@@ -30,7 +30,7 @@ $name = $argv[1];
 echo "Hello, $name\n";
 {% endhighlight %}
 
-PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer variable containing the argument *count* and [`$argv`][argv] is an array variable containing each argument's *value*. The first argument is always the name of your PHP script file, in this case `hello.php`.
+PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer variable containing the argument *count* and [`$argv`][argv] is an array variable containing each argument's *value*. Prvi argument je uvek naziv vašeg skript fajla, u ovom slučaju `hello.php`.
 
 The `exit()` expression is used with a non zero number to let the shell know that the command failed. Commonly used exit codes can be found [here][exit-codes]
 
