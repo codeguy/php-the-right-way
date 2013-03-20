@@ -6,7 +6,7 @@ PHP developers to choose several of these and combine them into a single project
 their projects.
 
 The [Framework Interop Group][fig] has proposed and approved a series of style recommendations, known as [PSR-0][psr0], 
-[PSR-1][psr1] and [PSR-2][psr2]. Don't let the funny names confuse you, these recommendations are merely 
+[PSR-1][psr1], [PSR-2][psr2] and [PSR-3][psr3]. Don't let the funny names confuse you, these recommendations are merely 
 a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, etc are starting 
 to adopt. You can use them for your own projects, or continue to use your own personal style.
 
@@ -17,6 +17,7 @@ and applications that implement the components can have consistency even when wo
 * [Read about PSR-0][psr0]
 * [Read about PSR-1][psr1]
 * [Read about PSR-2][psr2]
+* [Read about PSR-3][psr3]
 * [Read about PEAR Coding Standards][pear-cs]
 * [Read about Zend Coding Standards][zend-cs]
 
