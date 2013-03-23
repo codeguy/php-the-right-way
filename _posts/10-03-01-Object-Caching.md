@@ -19,7 +19,7 @@ one real limitation of APC is that it is tied to the server it's installed on. M
 as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
 store in a central location and many different systems can pull from it.
 
-Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP processes will have its own
+Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own
 cache, i.e. APC data is not shared between your worker processes. In these cases, you might want to consider using
 memcached instead, as it's not tied to the PHP processes.
 
@@ -32,12 +32,13 @@ Example logic using APC:
 {% highlight php %}
 <?php
 // check if there is data saved as 'expensive_data' in cache
-if (apc_fetch('expensive_data') === false) {
-    // data is not in cache; save expensive call for later use
-    apc_add('expensive_data', get_expensive_data());
+$data = apc_fetch('expensive_data');
+if ($data === false) {
+    // data is not in cache; save result of expensive call for later use
+    apc_add('expensive_data', $data = get_expensive_data());
 }
 
-print_r(apc_fetch('expensive_data'));
+print_r($data);
 {% endhighlight %}
 
 Learn more about popular object caching systems:

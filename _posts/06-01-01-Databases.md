@@ -13,7 +13,7 @@ database &mdash; and that can get silly.
 
 As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and the official status since PHP 5.4.0 is
 "Long term deprecation". This means it will be removed within the next few releases, so by PHP 5.6 (or whatever comes after 5.5) it may well be gone. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
-line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development shedules so you won't
+line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development schedules so you won't
 be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
 
 * [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
@@ -38,7 +38,7 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 
 This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
 heartbeat. Just imagine if a hacker passes in an inventive `id` parameter by calling a URL like
-`http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `id=1;DELETE FROM users`
+`http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `1;DELETE FROM users`
 which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
 
 {% highlight php %}
@@ -65,12 +65,13 @@ unless of course you are using persistent connections.
 ## Abstraction Layers
 
 Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
-one database system that another is missing form another by wrapping your queries in PHP methods, giving you actual database abstraction.
+one database system that another is missing from another by wrapping your queries in PHP methods, giving you actual database abstraction.
 This will of course add a little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and
 SQLite then a little overhead will be worth it the sake of code cleanliness.
 
 Some abstraction layers have been built using the PSR-0 namespace standard so can be installed in any application you like:
 
+* [Aura SQL][6]
 * [Doctrine2 DBAL][2]
 * [ZF2 Db][4]
 * [ZF1 Db][3]
@@ -80,6 +81,7 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [3]: http://framework.zend.com/manual/en/zend.db.html
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [5]: http://php.net/manual/en/pdo.connections.php
+[6]: https://github.com/auraphp/Aura.Sql
 
 [mysql]: http://php.net/mysql
 [mysqli]: http://php.net/mysqli

@@ -62,6 +62,93 @@ yourself a lot of trouble down the road by using factories.
 
 * [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
+## Singleton
+
+When designing web applications, it often makes sense conceptually and architecturally to allow access to one and
+only one instance of a particular class. The singleton pattern enables us to do this.
+
+{% highlight php %}
+<?php
+class Singleton
+{
+    /**
+     * Returns the *Singleton* instance of this class.
+     *
+     * @staticvar Singleton $instance The *Singleton* instances of this class.
+     *
+     * @return Singleton The *Singleton* instance.
+     */
+    public static function getInstance()
+    {
+        static $instance = null;
+        if (null === $instance) {
+            $instance = new static;
+        }
+
+        return $instance;
+    }
+
+    /**
+     * Protected constructor to prevent creating a new instance of the
+     * *Singleton* via the `new` operator from outside of this class.
+     */
+    protected function __construct()
+    {
+    }
+
+    /**
+     * Private clone method to prevent cloning of the instance of the
+     * *Singleton* instance.
+     *
+     * @return void
+     */
+    private function __clone()
+    {
+    }
+
+    /**
+     * Private unserialize method to prevent unserializing of the *Singleton*
+     * instance.
+     *
+     * @return void
+     */
+    private function __wakeup()
+    {
+    }
+}
+
+class SingletonChild extends Singleton
+{
+}
+
+$obj = Singleton::getInstance();
+\var_dump($obj === Singleton::getInstance());             // bool(true)
+
+$anotherObj = SingletonChild::getInstance();
+\var_dump($anotherObj === Singleton::getInstance());      // bool(false)
+
+\var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
+{% endhighlight %}
+
+The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
+Note the following:
+
+* The constructor [`__construct`](http://php.net/language.oop5.decon#object.construct) is declared as protected to prevent creating a new instance outside of the class via the `new` operator.
+* The magic method [`__clone`](http://php.net/language.oop5.cloning#object.clone) is declared as private to prevent cloning of an instance of the class via the [`clone`](http://php.net/language.oop5.cloning) operator.
+* The magic method [`__wakeup`](http://php.net/language.oop5.magic#object.wakeup) is declared as private to prevent unserializing of an instance of the class via the global function [`\unserialize()`](http://php.net/function.unserialize).
+* A new instance is created via [late static binding](http://php.net/language.oop5.late-static-bindings) in the static creation method `getInstance()` with the keyword `static`. This allows the subclassing of the class `Singleton` in the example.
+
+The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire
+request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration
+class) or a shared resource (such as an event queue).
+
+You should be wary when using the singleton pattern, as by its very nature it introduces global state into your
+application, reducing testability. In most cases, dependency injection can (and should) be used in place of a
+singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
+application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
+
+* [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+
 ## Front Controller
 
 The front controller pattern is where you have a single entrance point for you web application (e.g. index.php) that
@@ -74,7 +161,7 @@ and gives you a central place to hook in code that should be run for every reque
 ## Model-View-Controller
 
 The model-view-controller (MVC) pattern and its relatives HMVC and MVVM let you break up code into logical objects that
-serve very specific purposes. Models serve as a data access layer where data it fetched and returned in formats usable
+serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats usable
 throughout your application. Controllers handle the request, process the data returned from models and load views to
 send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the web
 browser.

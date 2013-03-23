@@ -71,7 +71,7 @@ print_r($output); // items > 3
 {% endhighlight %}
 
 Each filter function in the family accepts only elements greater than some minimum value. Single filter returned by 
-`criteria_greater_than` is a closure whith `$min` argument closed by the value in the scope (given as an argument when 
+`criteria_greater_than` is a closure with `$min` argument closed by the value in the scope (given as an argument when 
 `criteria_greater_than` is called).
 
 Early binding is used by default for importing `$min` variable into the created function. For true closures with late
