@@ -18,11 +18,7 @@ Ovo će download `composer.phar` (PHP binarnu arhivu). Možete je pokrenuti pomo
 
 ###Kako instalirati Composer (ručno)
 
-<<<<<<< HEAD
-Ručna instalacija composera je napredna tehnika; međutim, postoje razni razlozi zašto bi se developer pre odlučio za ovu opciju nego za interaktivnu proceduru instalacije. Interaktivna instalacija proverava vašu PHP  installation da bi obezbedila da:
-=======
-Manually installing Composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
->>>>>>> 1493f8cf3d10937de181ed0e7c2817489db9aff1
+Ručna instalacija composera je napredna tehnika; međutim, postoje razni razlozi zašto bi se developer pre odlučio za ovu opciju nego za interaktivnu proceduru instalacije. Interaktivna instalacija proverava vašu PHP instalaciju da bi obezbedila da:
 
 - se koristi (odgovarajuća?)dovoljno visoka verzija PHP
 - `.phar` fajlovi mogu da se ispravno izvrše
@@ -43,19 +39,11 @@ Kada se sretnete sa dokumentacijom koja pokreće Composer kao `php composer.phar
 
 ### Kako definisati i instalirati Dependencies
 
-<<<<<<< HEAD
-Najpre, napravite `composer.json` fajl u direktorijumu gde se nalazi `composer.phar`. Evo primera koji lists [Twig][2] as a project dependency.
-=======
 Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it by hand if you like, or use Composer itself. The `php composer.phar require` command adds a project dependency and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig][2] as a dependency of your project. Run it in your project's root directory where you've downloaded `composer.phar`:
->>>>>>> 1493f8cf3d10937de181ed0e7c2817489db9aff1
 
 	php composer.phar require twig/twig:~1.8
 
-<<<<<<< HEAD
-ZatimNext, run this command from your project root directory.
-=======
 Alternatively the `php composer.phar init` command will guide you through creating a full `composer.json` file for your project. Either way, once you've created your `composer.json` file you can tell Composer to download and install your dependencies into the `vendors/` directory. This also applies to projects you've downloaded that already provide a `composer.json` file:
->>>>>>> 1493f8cf3d10937de181ed0e7c2817489db9aff1
 
     php composer.phar install
 
