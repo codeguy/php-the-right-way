@@ -42,7 +42,8 @@ catch(Fuel\Email\SendingFailedException $e)
 
 ### SPL Exceptions
 
-An Exception by default has no meaning and the most common to give it meaning is by setting its name:
+The generic `Exception` class provides very little debugging context for the developer; however, to remedy this,
+it is possible to create a specialized `Exception` type by sub-classing the generic `Exception` class:
 
 {% highlight php %}
 <?php
