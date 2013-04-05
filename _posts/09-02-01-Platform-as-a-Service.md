@@ -5,8 +5,8 @@ isChild: true
 
 ## Platform as a Service (PaaS)  {#platform_as_a_service_paas_title}
 
-PaaS provides the system and network architecture necessary to run PHP applications on the web. This means little to no 
-configuration for launching PHP applications or PHP frameworks. 
+PaaS obezbeđuje sistem i mrežnu arhitekturu neophodnu za pokretanje PHP aplikacija na webu. To znači malo ili nimalo
+konfiguracija za pokretanje PHP aplikacija ili PHP framework-a.
 
-Recently PaaS has become a popular method for deploying, hosting, and scaling PHP applications of all sizes. You can 
-find a list of [PHP PaaS "Platform as a Service" providers](#php_paas_providers) in our [resources section](#resources). 
+PaaS je nedavno postao popularan metod za razvijaǌe, hosting i skaliranje PHP aplikacija svih veličina. Možete naći
+spisak [PHP PaaS "Platforma kao servis" usluga](#php_paas_providers) u našoj [sekciji resursa](#resources).  
