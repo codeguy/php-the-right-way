@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 layout: default
 description: "An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web"
@@ -17,3 +18,439 @@ description: "An easy-to-read, quick reference for PHP best practices, accepted 
     </div>
 {% endfor %}
 {{ backtotop|markdownify }}
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>PHP: The Right Way</title>
+        <meta name="description" content="An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web"/>
+        <meta name="robots" content="index,follow,archive"/>
+        <link rel="icon" href="/favicon.png" type="image/png"/>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alfa+Slab+One|Droid+Serif"/>
+        <style>
+            body{
+                background: #EEE;
+            }
+            .site-wrapper{
+                margin: 0 auto;
+                width: 960px;
+            }
+            .site-header{
+                padding: 40px 0;
+                text-align: center;
+            }
+            .site-title{
+                margin: 0 !important;
+                font-family: 'Alfa Slab One';
+                font-size: 100px;
+                line-height: 100px;
+                font-weight: normal;
+                text-shadow: #FFF 0 2px 0;
+            }
+            .site-slogan{
+                font-family: 'Droid Serif';
+                font-weight: normal;
+            }
+            .toc{
+                list-style: none;
+                margin: 0 0 40px 0;
+                padding: 0;
+                font-size: 20px;
+            }
+            .content{
+                border-top: 1px dotted #CCC;
+                margin: 40px;
+                color: #333;
+                font-family: "Droid Serif";
+                font-size: 22px;
+                line-height: 30px;
+            }
+            .top{
+                background: #333;
+                display: inline-block;
+                padding: 0 8px;
+                color: #FFF;
+                font-size: 12px;
+                text-decoration: none;
+            }
+            .site-footer{
+                padding: 0 0 20px 0;
+                font-size: 13px;
+                text-align: center;
+            }
+            h2{
+                color: #000;
+                font-family: 'Droid Serif';
+                font-size: 50px;
+                font-weight: normal;
+                line-height: 60px;
+                letter-spacing: -1px;
+            }
+            a{
+                color: #333;
+            }
+            pre{
+                background: #DDD;
+                border: 1px solid #CCC;
+                margin: 0 20px 20px 20px;
+                padding: 20px;
+                font-size: 18px;
+            }
+        </style>
+        <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-362072-7']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        </script>
+    </head>
+    <body>
+        <header class="site-header">
+            <hgroup>
+                <h1 class="site-title">PHP</h1>
+                <h2 class="site-slogan">(The Right Way)</h2>
+            </hgroup>
+            <nav>
+                <ul class="toc">
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#code-style-guide">Code Style Guide</a></li>
+                    <li><a href="#namespaces">Namespaces</a></li>
+                    <li><a href="#input-filtering">Input Filtering</a></li>
+                    <li><a href="#databases-and-pdo">Databases and PDO</a></li>
+                    <li><a href="#password-hashing">Password Hashing with Bcrypt</a></li>
+                    <li><a href="#dependency-management">Dependency Management</a></li>
+                    <li><a href="#security">Web Application Security</a></li>
+                    <li><a href="#frameworks">Popular Frameworks</a></li>
+                    <li><a href="#links-and-resources">Links &amp; Resources</a></li>
+                </ul>
+            </nav>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.phptherightway.com/" data-size="large" data-hashtags="php">Tweet</a>
+        </header>
+
+        <section class="content" id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                There's a lot of bad information on the Web (I'm looking at you, W3Schools) that leads
+                new PHP users astray, propagating bad practices and bad code. This must stop. <em>PHP: The Right Way</em> provides an
+                easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to
+                authoritative tutorials around the Web.
+            </p>
+            <p>
+                It is important to understand <em>there is no canonical way to use PHP</em>. That's the beauty of it.
+                This website introduces new PHP developers to best practices, available options, and good information.
+            </p>
+
+            <h3>Disclaimer</h3>
+            <p>
+                <small><em>
+                    This is a living document and will continue to be updated with more helpful information and examples
+                    as they become available.
+                </em></small>
+            </p>
+
+            <h3>How to Contribute</h3>
+            <p>
+                <small><em>
+                    Help make this website the best resource for new PHP programmers! <a href="https://github.com/codeguy/php-the-right-way">Contribute on GitHub</a>
+                </em></small>
+            </p>
+        </section>
+
+        <section class="content" id="code-style-guide">
+            <h2>Code Style Guide</h2>
+            <p>
+                The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components.
+                It is common for PHP developers to choose several of these and combine them into a single project. It is
+                important that PHP code adhere (as close as possible) to a common code style to make it easy for developers
+                to mix and match various libraries for their projects.
+            </p>
+            <p>
+                The <a href="https://github.com/php-fig/fig-standards">Framework Interop Group</a> (a.k.a. PHP Standards Group) has proposed and approved
+                a code style standard — <a href="https://github.com/pmjones/fig-standards/blob/psr-1-style-guide/proposed/PSR-1-basic.md">PSR-1</a>
+                and <a href="https://github.com/pmjones/fig-standards/blob/psr-1-style-guide/proposed/PSR-2-advanced.md">PSR-2</a>. Don't let the
+                funny names confuse you. These two standards are merely a "shared set of rules and expectations about how to
+                format PHP code." That's all.
+            </p>
+            <p>
+                You should write PHP code that adheres to one or both of these standards so that other developers
+                can easily read and work with your code.
+            </p>
+            <ul>
+                <li><a href="https://github.com/pmjones/fig-standards/blob/psr-1-style-guide/proposed/PSR-1-basic.md">Read about PSR-1</a></li>
+                <li><a href="https://github.com/pmjones/fig-standards/blob/psr-1-style-guide/proposed/PSR-2-advanced.md">Read about PSR-2</a></li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <section class="content" id="namespaces">
+            <h2>Namespaces</h2>
+            <p>
+                As I mentioned above, the PHP community has a lot of developers creating lots of code. This means
+                that one library's PHP code may use the same <code>class</code> name as another library. When both
+                libraries are used in the same namespace, they collide and cause trouble.
+            </p>
+            <p>
+                <em>Namespaces</em> solve this problem. As described in the PHP reference manual, namespaces may
+                be compared to operating system directories that <em>namespace</em> files; two files with the same
+                name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist
+                in separate PHP namespaces. It's as simple as that.
+            </p>
+            <p>
+                It is important for you to namespace your code so that it may be used by other developers without
+                fear of colliding with other libraries.
+            </p>
+            <ul>
+                <li><a href="http://php.net/manual/en/language.namespaces.php">Read about Namespaces</a></li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <section class="content" id="input-filtering">
+            <h2>Input Filtering</h2>
+            <p>
+                Never ever (<em>ever</em>) trust foreign input introduced to your PHP code. That leads to dark
+                and dangerous places. Instead, always filter foreign input before you use it in your code.
+            </p>
+            <p>
+                PHP provides the <code>filter_var</code> and <code>filter_input</code> functions to help
+                you do this. These two functions can sanitize text, verify formats (e.g. email addresses),
+                and escape characters.
+            </p>
+            <p>
+                For example, if you accept code from an HTML form, you'll want to use <code>filter_input</code>
+                before inserting the input into a database or inserting the input into an HTML response.
+            </p>
+            <ul>
+                <li><a href="http://php.net/manual/en/function.filter-var.php">Learn about <code>filter_var</code></a></li>
+                <li><a href="http://www.php.net/manual/en/function.filter-input.php">Learn about <code>filter_input</code></a></li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <section class="content" id="databases-and-pdo">
+            <h2>Databases and PDO</h2>
+            <p>
+                Many times your PHP code will use a database to persist information. If you use a database,
+                use <code>PDO</code> to talk with it. PDO is a database abstraction library &mdash; (usually) built-into
+                PHP &mdash; that provides a common interface to talk with many different databases.
+            </p>
+            <p>
+                More importantly, <code>PDO</code> allows you to safely inject foreign input (e.g. IDs)
+                into your SQL queries without worrying about database SQL injection attacks. This is possible
+                using PDOStatements and bound parameters.
+            </p>
+            <p>
+                Let's assume a PHP script receives a numeric ID as a query parameter. This ID
+                should be used to fetch a user record from a database. This is the <strong>wrong</strong>
+                way to do this:
+            </p>
+            <pre>&lt;?php
+$pdo = new PDO('sqlite:users.db');
+$pdo-&gt;query(&quot;SELECT * FROM users WHERE id = &quot; . $_GET['id']); // <-- NO!</pre>
+            <p>
+                This is terrible code. You are inserting a raw query parameter into a SQL query. This will get
+                you hacked in a heartbeat. Instead, you should sanitize the ID input using PDO bound parameters.
+            </p>
+            <pre>&lt;?php
+$pdo = new PDO('sqlite:users.db');
+$stmt = $pdo-&gt;prepare('SELECT * FROM users WHERE id = :id');
+$stmt-&gt;bindParam(':id', (int)$_GET['id'], PDO::PARAM_INT);
+$stmt-&gt;execute();</pre>
+            <p>
+                This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign
+                input ID before it is introduced to the database preventing potential SQL injection attacks.
+            </p>
+            <ul>
+                <li><a href="http://www.php.net/manual/en/book.pdo.php">Learn about PDO</a></li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <section class="content" id="password-hashing">
+            <h2>Password Hashing with Bcrypt</h2>
+            <p>
+                Eventually everyone builds a PHP application that relies on user login. Usernames and
+                (hashed) passwords are stored in a database and later used to authenticate users upon login.
+            </p>
+            <p>
+                It is important that you properly <em>hash</em> passwords that are stored in a database.
+                If passwords are not hashed, and your database is hacked or accessed by an unauthorized
+                third-party, all user accounts are now compromised.
+            </p>
+            <p>
+                <strong>Hash passwords with Bcrypt</strong>. It's super simple, and (for all
+                intents and purposes) Bcrypt makes it impossible for someone to reverse-engineer the
+                plain-text version of a password should the database be compromised.
+            </p>
+            <p>
+                There are several Bcrypt libraries for PHP that you may use.
+            </p>
+            <ul>
+                <li><a href="http://codahale.com/how-to-safely-store-a-password/">Read "How to Safely Store a Password" by Coda Hale</a></li>
+                <li><a href="http://www.openwall.com/phpass/">Use Bcrypt with PHPAss</a> (odd name, I know)</li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <section class="content" id="dependency-management">
+            <h2>Dependency Management</h2>
+            <p>
+                There are a ton of PHP libraries, frameworks, and components to choose from. Your project
+                will likely use several of them — these are project dependencies. Until recently, PHP did
+                not have a good way to manage these project dependencies. Even if you managed them manually,
+                you still had to worry about autoloaders. No more.
+            </p>
+
+            <h3>Composer and Packagist</h3>
+            <p>
+                Composer is a <strong>brilliant</strong> dependency manager for PHP. List your project's
+                dependencies in a <code>composer.json</code> file and, with a few simple commands,
+                Composer will automatically download your project's dependencies and setup autoloading
+                for you.
+            </p>
+            <p>
+                There are already a lot of PHP libraries that are compatible with Composer, ready
+                to be used in your project. These "packages" are listed on <a href="http://packagist.org/">Packagist</a>,
+                the official repository for Composer-compatible PHP libraries.
+            </p>
+
+            <h4>How to Install Composer</h4>
+            <p>
+                You can install Composer locally (in your current working directory) or globally (e.g. /usr/local/bin).
+                Let's assume you want to install Composer locally. From your project's root directory:
+            </p>
+            <pre>curl -s http://getcomposer.org/installer | php</pre>
+            <p>
+                This will download <code>composer.phar</code> (a PHP binary archive). You can run this with <code>php</code> to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
+            </p>
+
+            <h4>How to Define and Install Dependencies</h4>
+            <p>
+                First, create a <code>composer.json</code> file in the same directory as <code>composer.phar</code>.
+                Here's an example that lists <a href="http://twig.sensiolabs.org">Twig</a> as a project dependency.
+            </p>
+            <pre>{
+    "require": {
+        "twig/twig": ">=1.8.0,<2.0-dev"
+    }
+}</pre>
+            <p>
+                Next, run this command from your project root directory.
+            </p>
+            <pre>php composer.phar install</pre>
+            <p>
+                This will download and install the project dependencies into a <code>vendors/</code> directory.
+                Next, add this line to your application's primary PHP file; this will
+                tell PHP to use Composer's autoloader for your project dependencies.
+            </p>
+            <pre>&lt;?php require 'vendor/autoload.php'; ?&gt;</pre>
+            <p>
+                Now you can use your project dependencies, and they'll be autoloaded on demand.
+            </p>
+
+            <h3>PEAR</h3>
+            <p>
+                Another veteran package manager that many PHP developers enjoy is <a href="http://pear.php.net/">PEAR</a>. It behaves much the same way, and is also worth researching for your projects.
+            </p>
+
+            <ul>
+                <li><a href="http://getcomposer.org/doc/00-intro.md">Learn about Composer</a></li>
+                <li><a href="http://pear.php.net/">Learn about PEAR</a></li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <section class="content" id="security">
+            <h2>Web Application Security</h2>
+            <p>
+                There are bad people ready and willing to exploit your web application. It is important that you
+                take necessary precautions to harden your web application's security. Luckily, the fine folks at
+                <a href="https://www.owasp.org/">The Open Web Application Security Project</a> (OWASP) have compiled a comprehensive list of known security issues and methods to protect yourself against them. This is a must read
+                for the security-conscious developer.
+            </p>
+            <ul>
+                <li><a href="https://www.owasp.org/index.php/Guide_Table_of_Contents">Read the OWASP Security Guide</a></li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <section class="content" id="frameworks">
+            <h2>Popular Frameworks</h2>
+            <p>
+                Rather than re-invent the wheel, many PHP developers use <em>frameworks</em>
+                to build out web applications. Frameworks abstract away many of the low-level
+                concerns and provide helpful, easy-to-use interfaces to complete common tasks.
+            </p>
+            <p>
+                <em>You do not need to use a framework for every project</em>. Sometimes, plain
+                PHP is the right way to go. But if you do need a framework, here are a few
+                of the most popular ones (in alphabetical order):
+            </p>
+
+            <h3>Full-Stack Frameworks</h3>
+            <ul>
+                <li><a href="http://cakephp.org/">CakePHP</a></li>
+                <li><a href="http://codeigniter.com/">CodeIgniter</a></li>
+                <li><a href="http://fuelphp.com/">FuelPHP</a></li>
+                <li><a href="http://kohanaframework.org/">Kohana</a></li>
+                <li><a href="http://laravel.com/">Laravel</a></li>
+                <li><a href="http://lithify.me/">Lithium</a></li>
+                <li><a href="http://www.symfony.com/">Symfony</a></li>
+                <li><a href="http://www.yiiframework.com/">Yii</a></li>
+                <li><a href="http://framework.zend.com/">Zend</a></li>
+            </ul>
+
+            <h3>Micro Frameworks</h3>
+            <ul>
+                <li><a href="http://bcosca.github.com/fatfree/">Fat-Free</a></li>
+                <li><a href="http://limonade-php.github.com/">Limonade</a></li>
+                <li><a href="http://silex.sensiolabs.org/">Silex</a></li>
+                <li><a href="http://www.slimframework.com/">Slim</a></li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <section class="content" id="links-and-resources">
+            <h2>Links and Resources</h2>
+            <p>
+                Here are some miscellaneous resources that are worth a read.
+            </p>
+
+            <h3>From the Source</h3>
+            <ul>
+                <li><a href="http://php.net/">PHP Website</a></li>
+                <li><a href="http://php.net/docs.php">PHP Documentation</a></li>
+            </ul>
+
+            <h3>People to Follow</h3>
+            <ul>
+                <li><a href="http://twitter.com/rasmus">Rasmus Lerdorf</a></li>
+                <li><a href="http://twitter.com/fabpot">Fabien Potencier</a></li>
+                <li><a href="http://twitter.com/derickr">Derick Rethans</a></li>
+                <li><a href="http://twitter.com/shiflett">Chris Shiflett</a></li>
+                <li><a href="http://twitter.com/s_bergmann">Sebastian Bergmann</a></li>
+            </ul>
+
+            <h3>PHP PaaS Providers</h3>
+            <ul>
+                <li><a href="https://pagodabox.com/">PagodaBox</a></li>
+                <li><a href="https://phpfog.com/">PHP Fog</a></li>
+                <li><a href="http://www.engineyard.com/products/orchestra/">Engine Yard Orchestra PHP Platform</a></li>
+                <li><a href="http://www.redhat.com/products/cloud-computing/openshift/">Red Hat OpenShift Platform</a></li>
+            </ul>
+            <a class="top" href="#top">&uarr; Back to Top</a>
+        </section>
+
+        <footer class="site-footer">
+            <p>Created and Maintained by <a href="http://twitter.com/codeguy">Josh Lockhart</a>. Favicon from <a href="http://pictos.cc/">Pictos</a>.</p>
+        </footer>
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </body>
+</html>
+>>>>>>> upstream/master
