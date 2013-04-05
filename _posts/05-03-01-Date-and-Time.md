@@ -5,7 +5,7 @@ isChild: true
 
 ## Fecha y Hora
 
-PHP dispone de una clase llamada **DateTIme** para asistir en la lectura, escritura, comparación y calculación de la fecha y hora. Existen muchas funciones en PHP relacionadas con la manipulación de la fecha y la hora, sin embargo, la clase **DateTime** provee una mejor interface orientada a objetos para los situaciones más comunes. También tiene la capacidad de utilizar los husos horarios; esta información no se considerará en esta corta introducción.
+PHP dispone de una clase llamada **DateTime** para asistir en la lectura, escritura, comparación y calculación de la fecha y hora. Existen muchas funciones en PHP relacionadas con la manipulación de la fecha y la hora, sin embargo, la clase **DateTime** provee una mejor interface orientada a objetos para los situaciones más comunes. También tiene la capacidad de utilizar los husos horarios; esta información no se considerará en esta corta introducción.
 
 Para comenzar a trabajar con DateTime primero se convierte la cadena de texto que contiene la fecha y la hora a un objeto con el método de fabricación `createFromFormat()` o también se puede crear un objeto con `new \DateTime` que contendrá la fecha y hora actual. Después, puede utilizar el método `format()` para convertir el objeto DateTime de regreso a una cadena de texto e imprimirla:
 
