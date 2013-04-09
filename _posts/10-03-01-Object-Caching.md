@@ -4,44 +4,32 @@ isChild: true
 
 ## Object Caching {#object_caching_title}
 
-There are times when it can be beneficial to cache individual objects in your code, such as with data that is expensive
-to get or database calls where the result is unlikely to change. You can use object caching software to hold these
-pieces of data in memory for extremely fast access later on. If you save these items to a data store after you retrieve
-them, then pull them directly from the cache for following requests, you can gain a significant improvement in
-performance as well as reduce the load on your database servers.
+Postoje momenti kada keširanje pojedinačnih objekata u vašem kodu može biti korisno, kao što je sa podacima skupim za uzimanje ili pozivima ka bazi podataka gde je malo verovatno da će se rezultat promeniti. Možete da koristite softver za keširanje objekata za držanje ovih delova podataka u memoriji, za izuzetno brz pristup kasnije. Ako sačuvate ove delove podataka u skladište podataka nakon što ih preuzmete, a onda ih povučete direktno iz keša za naredne zahteve, možete ostvariti značajno poboljšanje u performansama i smanjiti opterećenje na serverima sa bazama podataka.
 
-Many of the popular bytecode caching solutions let you cache custom data as well, so there's even more reason to take
-advantage of them. APC, XCache, and WinCache all provide APIs to save data from your PHP code to their memory cache.
+Mnoga od popularnih bytecode caching rešenja Vam takođe dopuštaju i keširanje prilagođenih podataka, tako da ima više razloga da iskoristite njihove prednosti. APC, XCache, i WinCache, svi obezbeđuju API-je da sačuvate podatke iz Vašeg PHP koda u njihov memorijski keš.
 
-The most commonly used memory object caching systems are APC and memcached. APC is an excellent choice for object
-caching, it includes a simple API for adding your own data to its memory cache and is very easy to setup and use. The
-one real limitation of APC is that it is tied to the server it's installed on. Memcached on the other hand is installed
-as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
-store in a central location and many different systems can pull from it.
+Najčešće korišćeni sistemi za keširanje objekata su APC i memcached. APC je odličan izbor za memorijsko keširanje, on uključuje jednostavan API za dodavanje Vaših vlastitih podataka svom memorijskom kešu i veoma je lak za podešavanje i korišćenje. Jedino pravo ograničenje je da je APC povezan sa serverom na koji je instaliran. Sa druge strane Memcached je instaliran kao zaseban servis i može mu se pristupiti preko mreže, što znači da možete da sačuvate objekte u hiper-brzo skladište podataka na centralnoj lokaciji iz kojeg mnogo različitih sistema može da povlači podatke.
 
-Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own
-cache, i.e. APC data is not shared between your worker processes. In these cases, you might want to consider using
-memcached instead, as it's not tied to the PHP processes.
+Imajte na umu da kada se radi o PHP-u kao(Fast-)CGI aplikaciji unutar Vašeg webservera, svaki PHP proces će imati svoj keš, odnosno APC podaci nisu podeljeni između Vaših radnih procesa. U ovim slučajevima, možda ćete želeti da razmotrite korišćenje memcached-a, jer nije vezan za PHP procese.
 
-In a networked configuration APC will usually outperform memcached in terms of access speed, but memcached will be able
-to scale up faster and further. If you do not expect to have multiple servers running your application, or do not need
-the extra features that memcached offers then APC is probably your best choice for object caching.
+U umreženoj konfiguraciji APC će obično nadmašiti memcached u smislu pristupne brzine, ali memcached ćete moći
+da skalirate brže i dalje. Ako ne očekujete da će više servera pokretati Vašu aplikaciju, ili vam ne trebaju dodatne funkcije koje nudi memcached, onda je APC verovatno Vaš najbolji izbor za keširanje objekata.
 
-Example logic using APC:
+Primer logike koji koristi APC:
 
 {% highlight php %}
 <?php
-// check if there is data saved as 'expensive_data' in cache
+// proveri da li su podaci u kešu sačuvani kao 'skupi_podaci'
 $data = apc_fetch('expensive_data');
 if ($data === false) {
-    // data is not in cache; save result of expensive call for later use
+    // podaci nisu u kešu; sačuvaj rezultat skupog poziva za kasnije korišćenje
     apc_add('expensive_data', $data = get_expensive_data());
 }
 
 print_r($data);
 {% endhighlight %}
 
-Learn more about popular object caching systems:
+Saznajte više o popularnim object caching sistemima:
 
 * [APC Functions](http://php.net/manual/en/ref.apc.php)
 * [Memcached](http://memcached.org/)
