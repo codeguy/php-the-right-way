@@ -4,18 +4,14 @@ isChild: true
 
 ## Components {#components_title}
 
-As mentioned above "Components" are another approach to the common goal of creating, distributing and implementing shared code. Various 
-component repositories exist, the main two of which are:
+Kao što je već pomenuto "Komponente" su još jedan pristup zajedničkom cilju stvaranja, distribucije i primene zajedničkog koda. Postoje različita skladišta komponenti(repositories), od kojih su dva glavna:
 
 * [Packagist](/#composer_and_packagist)
 * [PEAR](/#pear)
 
-Both of these repositories have command line tools associated with them to help the installation and upgrade processes, and have been 
-explained in more detail in the [Dependency Management][dm] section.
+Oba ova skladišta imaju pridružene komandne linije koje pomažu prilikom instalacije i nadogradnje procesa, pa su detaljnije objašǌene u sekciji [Dependency Management][dm].
 
-There are also component-based frameworks, which allow you to use their components with minimal (or no) requirements. For example, you 
-can use the [FuelPHP Validation package][fuelval], without needing to use the FuelPHP framework itself. These projects are essentially 
-just another repository for reusable components:
+Takođe postoje i component-based frameworks, koje Vam dopuštaju da koristite njihove komponente sa minimalnim (ili bez)zahteva. Na primer, možete koristiti [FuelPHP Validacioni paket][fuelval], bez potrebe da koristite FuelPHP framework. Ovi projekti su u suštini samo još jedno skladište(repository) za višekratnu upotrebu komponenti:
 
   [dm]: /#dependency_management
   [fuelval]: https://github.com/fuelphp/validation
