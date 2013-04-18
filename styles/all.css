@@ -3110,7 +3110,7 @@ select {
   text-decoration: none;
 }
 .site-content {
-  padding: 20px 40px 40px 320px;
+  padding: 20px 320px 40px 40px;
 }
 .site-content h1 {
   clear: both;
