@@ -3112,9 +3112,9 @@ select {
 .site-content {
   padding: 20px 320px 40px 40px;
   position: fixed;
-    top: 0;
-    bottom: 0;
-    overflow: auto;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
 }
 .site-content h1 {
   clear: both;
