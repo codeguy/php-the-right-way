@@ -3111,7 +3111,10 @@ select {
   text-decoration: none;
 }
 .site-content {
-  padding: 20px 320px 40px 40px;
+  top:0;
+  bottom:0;
+  right:320px;
+  position:fixed;
   direction: rtl;
   overflow:scroll; 
 }
