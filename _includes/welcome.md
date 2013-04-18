@@ -1,12 +1,10 @@
-# Welcome
+# مرحباً !
 
-There's a lot of outdated information on the Web that leads new PHP users astray, propagating bad practices and bad
-code. This must stop. _PHP: The Right Way_ is an easy-to-read, quick reference for PHP best practices, accepted coding
-standards, and links to authoritative tutorials around the Web.
+يوجد على شبكة الإنترنت الكثير من المعلومات القديمة التي يمكن أن تضلل المبتدئين في PHP. فهي تنشر ممارسات سيئة تؤثر على جودة المنتوجات. لذلك وجب إيجاد حل. _PHP: الطريقة الصحيحة_ هو مصدر سهل القراءة و مرجع سريع لأفضل ممارسات ال PHP و قواعد تعليماته البرمجية. يحتوي هذا المصدار أيضاً على روابط لدروس موثوقة على الشبكة.
 
-## Translations
+## الترجمات
 
-_PHP: The Right Way_ is (or soon will be) translated into many different languages:
+_PHP: الطريقة الصحيحة_ مترجم ( أو سيترجم قريباً ) إلى عديد من اللغات :
 
 * [English](http://www.phptherightway.com)
 * [Catalan](http://ca.phptherightway.com)
