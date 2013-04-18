@@ -3089,6 +3089,7 @@ select {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  direction: rtl;
 }
 .site-navigation > ul > li {
   margin-bottom: 10px;
@@ -3111,7 +3112,8 @@ select {
   text-decoration: none;
 }
 .site-content {
-  padding: 20px 320px 40px 40px;
+  padding: 20px 40px 40px 320px;
+  direction: rtl;
 }
 .site-content h1 {
   clear: both;
