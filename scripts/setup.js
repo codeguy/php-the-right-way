@@ -1,6 +1,7 @@
 (function ($) {
     // Load contributors
     var $contributors = $('#contributors');
+    document.body.scrollLeft = 1;
     if ( $contributors.length ) {
         var fail = function () {
             $contributors.html('<p>This project would not be possible without the help of <a href="https://github.com/codeguy/php-the-right-way/graphs/contributors">our amazing contributors</a> on GitHub.</p>');
