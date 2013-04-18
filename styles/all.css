@@ -3031,7 +3031,7 @@ select {
 .fork-me img {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
 }
 .fork-me {
   z-index: 2;
