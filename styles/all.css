@@ -91,6 +91,7 @@ video {
 }
 body {
   line-height: 1;
+  overflow: none;
 }
 article,
 aside,
@@ -3111,7 +3112,8 @@ select {
 }
 .site-content {
   padding: 20px 320px 40px 40px;
-  overflow: auto;
+  direction: rtl;
+  overflow:scroll; 
 }
 .site-content h1 {
   clear: both;
