@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^phptherightway.com
+RewriteRule ^(.*)$ http://www.phptherightway.com/$1 [R=301,L]

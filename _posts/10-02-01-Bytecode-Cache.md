@@ -4,11 +4,11 @@ isChild: true
 
 ## Bytecode Cache {#bytecode_cache_title}
 
-When a PHP file is executed, under the hood it is first compiled to bytecode (also known as opcode) and, only then, the bytecode is executed.
-If a PHP file is not modified, the bytecode will always be the same. This means that the compilation step is a waste of CPU resources.
+Kada se PHP fajl izvršava, pod haubom se prvo prevodi(kompajlira) u bytecode (takođe poznat kao opcode), a tek onda se bytecode izvršava.
+Ako PHP fajl nije izmenjen, bytecode uvek ostaje isti. Ovo znači da je postupak prevođenja(kompajliranja) traćenje CPU resursa.
 
-This is where Bytecode cache comes in. It prevents redundant compilation by storing bytecode in memory and reusing it on successive calls.
-Setting up bytecode cache is a matter of minutes, and your application will speed up significantly. There's really no reason not to use it.
+Ovde Bytecode cache stupa na scenu. On sprečava suvišno kompajliranje čuvanjem bytecode-a u memorijiǉ i ponovnim njegovim korišćenjem.
+Postavljanje bytecode cache-a je pitanje minuta, a Vaš zahtev će se značajno ubrzati. Zaista ne postoji razlog da ga ne koristite.
 
 Popular bytecodes caches are:
 

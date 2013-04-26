@@ -2,73 +2,59 @@
 isChild: true
 ---
 
-## Building and Deploying your Application {#build_title}
+## Izgradnja i Razvoj Vaše aplikacije {#build_title}
 
-If you find yourself doing manual database schema changes or running your tests manually before updating your files 
-(manually), think twice! With every additional manual task needed to deploy a new version of your app, the chances for 
-potentially fatal mistakes increase. Whether you're dealing with a simple update, a comprehensive build process or 
-even a continuous integration strategy, [build automation](http://en.wikipedia.org/wiki/Build_automation) is your 
-friend.
+Ako nađete sebe da ručno radite promene šeme baze podataka ili ručno pokrećete testove, pre nego što ažurirate svoje fajlove (ručno), dva puta razmislite! Uz svaki dodatni zadatak potreban da razvijete novu verziju vaše aplikacije, šanse za potencijalno fatalne greške će se povećati. Bez obzira da li se bavite jednostavnim ažuriraǌem, sveobuhvatnom izgradnjom procesa ili čak strategijom kontinuirane integracije, [build automation](http://en.wikipedia.org/wiki/Build_automation) je Vaš prijateǉ.
 
-Among the tasks you might want to automate are:
+Među zadacima koje bi ste možda želeli da automatizujete su:
 
-* Dependency management
-* Compilation, minification of your assets
-* Running tests
-* Creation of documentation
-* Packaging
-* Deployment
+* Upravljanje zavisnostima
+* Kompilacija, minifikacija Vaše aktive
+* Pokretanje testova
+* Pravljenje dokumentacije
+* Pakovanje
+* Angažovanje(Deployment)
 
 
-### Build Automation Tools
+### Build Automation Alati
 
-Build tools can be described as a collection of scripts that handle common tasks of software deployment. The build 
-tool is not a part of your software, it acts on your software from 'outside'.
+Alati za izgradnju mogu biti opisani kao skup skripti koje rukuju zajedničkim zadacima razvoja softvera. Alat za izgradnju nije deo Vašeg softvera, on deluje na Vaš softver 'izvana'.
 
-There are many open source tools available to help you with build automation, some are written in PHP others aren't. 
-This shouldn't hold you back from using them, if they're better suited for the specific job. Here are a few examples:
+Postoji mnogo dostupnih alata otvorenog koda da vam pomogne sa automatizacijom, neki su napisani u PHP-u, drugi nisu.
+To ne treba da Vas sputava da ih koristite, ako više odgovaraju za određeni posao. Evo nekoliko primera:
 
-[Phing](http://www.phing.info/) is the easiest way to get started with automated deployment in the PHP world. With 
-Phing you can control your packaging, deployment or testing process from within a simple XML build file. Phing (which 
-is based on [Apache Ant](http://ant.apache.org/)) provides a rich set of tasks usually needed to install or update a 
-web app and can be extended with additional custom tasks, written in PHP.
+[Phing](http://www.phing.info/) je najlakši način da počnete sa primenom automatizacije u svetu PHP-a. Pomoću Phing-a 
+možete da kontrolišete pakovanje, angažovanje(deployment) ili testiranje procesa unutar jednostavne XML build datoteke. Phing (koji se zasniva na [Apache Ant](http://ant.apache.org/)) obezbeđuje bogat set zadataka, obično potrebnih za instalaciju ili ažuriranje web aplikacija i može se proširiti dodatnim prilagođenim zadacima, pisanim u PHP-u.
 
-[Capistrano](https://github.com/capistrano/capistrano/wiki) is a system for *intermediate-to-advanced programmers* to 
-execute commands in a structured, repeatable way on one or more remote machines. It is pre-configured for deploying 
-Ruby on Rails applications, however people are **successfully deploying PHP systems** with it. Successful use of 
-Capistrano depends on a working knowledge of Ruby and Rake.
+[Capistrano](https://github.com/capistrano/capistrano/wiki) je sistem namenjen *srednjim-do-naprednim programerima* za 
+izvršavanje komandi na struktuiran, ponovljivi način na jednoj ili više udaljenih mašina. Prekonfigurisan je za primenu (deploying) na Ruby on Rails applikacijama, međutim ljudi **uspešno angažuju(deploying) PHP sisteme** sa njim. Uspešno korišćenje Capistrana zavisi od radnog iskustva sa Ruby i Rake.
 
-Dave Gardner's blog post [PHP Deployment with Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/) 
-is a good starting point for PHP developers interested in Capistrano.
+Blog post Dejva Gardnera [PHP Deployment with Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/) 
+je dobra polazna tačka za PHP developere zainteresovane za Capistrano.
 
-[Chef](http://www.opscode.com/chef/) is more than a deployment framework, it is a very powerful Ruby based system 
-integration framework that doesn't just deploy your app but can build your whole server environment or virtual boxes.
+[Chef](http://www.opscode.com/chef/) je više od skeleta(framework) za primenu(deployment), to je veoma moćan Ruby baziran sistemski integracioni skelet(framework) koji ne samo da razvija(deploy) Vaše aplikacije već može da izgradi i celokupno serversko okruženje ili virtuelne kutije(virtual boxes).
 
-Chef resources for PHP developers:
+Chef resursi za PHP developere:
 
-* [Three part blog series about deploying a LAMP application with Chef, Vagrant, and EC2](http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/)
-* [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system](https://github.com/opscode-cookbooks/php)
+* [Trodelna blog serija o angažovanju(deploying) LAMP applikacije sa Chef, Vagrant i EC2](http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/)
+* [Chef Kuvar koji instalira i konfiguriše PHP 5.3 i PEAR sistem za upravljane paketima](https://github.com/opscode-cookbooks/php)
 
-Further reading:
+Dalje čitanje:
 
-* [Automate your project with Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/)
-* [Maven](http://maven.apache.org/), a build framework based on Ant and [how to use it with PHP](http://www.php-maven.org/)
+* [Automatizujte Vaš projekat sa Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/)
+* [Maven](http://maven.apache.org/), build framework baziran na Ant-u i [kako ga koristiti sa PHP](http://www.php-maven.org/)
 
 ### Continuous Integration
 
-> Continuous Integration is a software development practice where members of a team integrate their work frequently, 
-> usually each person integrates at least daily — leading to multiple integrations per day. Many teams find that this 
-> approach leads to significantly reduced integration problems and allows a team to develop cohesive software more 
-> rapidly.
+> Kontinuirana integracija je praksa softverskog razvoja u kojoj članovi tima često integrišu svoj rad, uglavnom svaka
+> osoba integriše najmanje jednom dnevno — što rezultira sa više integracija dnevno. Mnogi timovi nalaze da ovakav 
+> pristup vodi do značajnog smanjenja integracionih problema i omogućava timu da razvija kohezivni softver mnogo brže.
 
 *-- Martin Fowler*
 
-There are different ways to implement continuous integration for PHP. Recently [Travis CI](https://travis-ci.org/) has 
-done a great job of making continuous integration a reality even for small projects. Travis CI is a hosted continuous 
-integration service for the open source community. It is integrated with GitHub and offers first class support for many 
-languages including PHP.
+Postoje različiti načini za implementaciju kontinuirane integracije za PHP. Nedavno je [Travis CI](https://travis-ci.org/) uradio veliki posao čineći od kontinuirane integracije stvarnost čak i za male projekte. Travis CI je hosted servis kontinuirane integracije za open source zajednicu. Integrisan je sa GitHub-om i nudi prvoklasnu podršku za mnoge jezike, uključujući i PHP.
 
-Further reading:
+Dalje čitanje:
 
 * [Continuous Integration with Jenkins](http://jenkins-ci.org/)
 * [Continuous Integration with Teamcity](http://www.jetbrains.com/teamcity/)

@@ -2,6 +2,6 @@
 isChild: true
 ---
 
-## Shared Servers {#shared_servers_title}
+## Deljeni Serveri {#shared_servers_title}
 
-PHP has shared servers to thank for its popularity. It is hard to find a host without PHP installed, but be sure it's the latest version. Shared servers allow you and other developers to deploy websites to a single machine. The upside to this is that it has become a cheap commodity. The downside is that you never know what kind of a ruckus your neighboring tenants are going to create; loading down the server or opening up security holes are the main concerns. If your project's budget can afford to avoid shared servers you should.
+PHP na svojoj popularnosti treba da zahvali deljenim serverima. Teško da možete pronaći host bez instaliranog PHP-a, ali budite sigurni da je to poslednja verzija. Deljeni serveri dopuštaju Vama i drugim programerima da rasporedite sajtove na jednoj mašini. Dobra strana ovoga je da je to postalo jeftino rešenje. Loša strana je da nikad ne znate kakvu vrstu loma će Vaši sustanari napraviti; preopterećenje servera ili otvaranje bezbednosnih rupa su glavni problemi. Ako buǆet nameǌen za projekat to može da obezbedi, treba da izbegnete deljene servere.
