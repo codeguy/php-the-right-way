@@ -2,57 +2,59 @@
 isChild: true
 ---
 
-## Test Driven Development {#test_driven_development_title}
+## Testiranje zasnovano na razvoju {#test_driven_development_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
+Sa [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
 
-> Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes a failing automated test case that defines a desired improvement or new function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck, who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple designs and inspires confidence
+> Testiranje zasnovano na razvoju (TDD) je proces razvoja softvera koji se oslanja na ponavljanje kratkih razvojnih krugova: prvo se piše slučaj neispravanog automatizovanog testa to definiše željeno poboljšanje ili novu funkciju, onda proizvedeni kod prolazi test i na kraju refaktoriše novi kod po prihvatljivim standaradima. Kent Beck, koji je zaslužan za razvoj ili otkirvanje tehnike, izjavio je 2003  da TDD podstiče jednostavan dizajn i odiše poverenjem.
 
-There are several different types of testing that you can do for your application
+Postoji nekoliko različitih tipova testiranja koje možete koristiti za testiranje vaše aplikacije
 
-### Unit Testing
+### Jedinično testiranje
 
-Unit Testing is a programming approach to ensure functions, classes and methods are working as
-expected, from the point you build them all the way through the development cycle. By checking
-values going in and out of various functions and methods, you can make sure the internal logic is
-working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+Jedinično testiranje je programski pristup koji treba da obezbedi da funkcije, klasse i metodi rade
+onako kako smo očekivali, sa stanovišta načina kako smo ih napravili kroz razvojni krug. Proverom vrednosti
+spolja i iznutra raznovrsnih funkcija i metoda, možete proveriti da li je interna logika ispravna.
+Korišćenjem zavisnog ubrizgavanja(Dependency Injection) i pravljenjem "lažnih" klasa i stubova moze se proveriti zavisnost i ispravnost korišćenja za bolju pokrivenost testa.
 
-When you create a class or function you should create a unit test for each behavior it must have. At a very basic level you should
-make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments.
-This will help ensure that when you make changes to this class or function later on in the development
-cycle that the old functionality continues to work as expected. The only alternative to this would be
-var_dump() in a test.php, which is no way to build an application - large or small.
+Kada se kreira klasa ili funkcija treba se kreirati jediničan test koji svako ponašanje treba imati. Na bazičnom nivou potrebno je 
+osigurati greške ukoliko se šalje loš argument i osigurati da to radi ako se šalje validan argument.
+Ovo će pomoći da budemo sigurni da kada kasnije dodje do promene klase ili funkcije u ravojnom krugu
+da stare funkcionalnoti nastave da rade kako se očekuje. Jedina alternativa ovome je 
+var_dump() u test.php, što nije način za izradu aplikacije - manje ili veće.
 
-The other use for unit tests is contributing to open source. If you can write a test that shows broken
-functionality (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If
-you run a project which accepts pull requests then you should suggest this as a requirement.
+Druga upotreba jediničnih testova je doprinosi open sorsu. Ako pišete test koji prikazuje neispravnu
+funkcionalnost (npr neuspeh), onda je porpavite, i prikažite da je test prošao, zakrpe će najverovatnije biti prihvaćene.Ako
+startujemo projekat koji prihvata povučene zahteve onda bi ovo trebalo predložiti kao uslov. 
 
-[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
-applications, but there are several alternatives
-
+[PHPUnit](http://phpunit.de) je de-fakto frejmvork za testiranje za pisanje jediničnih testova za PHP
+aplikcije, ali postoji nekoliko alternativa
+								
 * [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
 * [atoum](https://github.com/atoum/atoum)
 
-### Integration Testing
+### Intergraciono testiranje
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
+Sa [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 
-> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
+> Integraciono testiranje (ponekad zvano Integracija i Testiranje, skraćeno "I&T") je faza u testiranju softvera u kojoj su individualni moduli softvera ukombinovani i testiraju kao grupa. To se dešava posle testiranja jedinice i pre validacije testiranja. Integraciono testrianje predstavlja input modula koji su bili testirani kao jedinica, i grupiše ih u veće agregate, primenjuje testove definisane u planu intergracionog testa u one agregate, i isporučuje ih kao output integrisanog sistema spremnog za sistemsko testiranje.
 
+Mnogi od sličnih alata koji se koriste za testriranje jedinice mogu se koristiti za integraciono testiranje na skoro 
+iste principe.
 Many of the same tools that can be used for unit testing can be used for integration testing as many
 of the same principles are used.
 
-### Functional Testing
+### Funkcionalno testiranje
 
-Sometimes also known as acceptance testing, functional testing consists of using tools to create automated
-tests that actually use your application instead of just verifying that individual units of code are behaving
-correctly and that individual units can speak to each other correctly. These tools typically work using real
-data and simulating actual users of the application.
+Ponekad znano i kao usvojeno testiranje, funkcionalno testiranje se sastoji od korišćenja alata da bi kreirali 
+automacke testove koji u stvarnosti koriste aplikaciju umesto samo vertifikacije indivdualnih jedinica koda koji se
+ponašaju ispravno i individualnih jedinice koje govore svakoj ispravno. Ovi alati tipično rade koristeći prave podatke
+i simuliraju stvarne korisnike aplikacije.
 
-#### Functional Testing Tools
+#### Alzati za funkcionalno testiranje
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
+* [Codeception](http://codeception.com) je potpuni frejmvork za testiranje koji uključuje usvojene alate za testiranje
