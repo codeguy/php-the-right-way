@@ -532,11 +532,10 @@ select {
 @header-font-family: @header-font-family;
 @header-font-weight: @header-font-weight;
 */
-@import url('http://api.mobilis.co.kr/webfonts/v2/css/NanumGothicWeb');
 /* Base */
 html,
 body {
-  font-family: "Droid Serif", Georgia, NanumGothicWeb, "Times New Roman", Times, serif;
+  font-family: NanumGothicWeb, "Droid Serif", Georgia, "Times New Roman", Times, serif;
   color: #666666;
   font-size: 14px;
   line-height: 20px !important;
