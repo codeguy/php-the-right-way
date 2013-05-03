@@ -32,14 +32,14 @@ _이것이 PHP를 사용하는 올바른 방법이다_ 라는 규범은 존재�
 
 ## How to Contribute
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
+여러분의 도움이 있으면 이 사이트를 PHP 프로그래밍을 새로 시작하는 사람들을 위한 최고의 문서로 만들 수 있습니다! [Contribute on GitHub][1]
 
 ## Spread the Word!
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP developers
-know where to find good information!
+여러분의 웹사이트에 걸어둘 수 있는 _PHP: The Right Way_ 배너 이미지들이 있습니다. 여러분이 _PHP: The Right Way_ 를
+성원하고 있다는 것을 보여주고, 또 새로운 PHP 개발자들이 어디에 가면 좋은 정보를 찾을 수 있는지 알 수 있게 해주세요.
 
-[See Banner Images][2]
+[배너 이미지 보기][2]
 
-[1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: /banners.html
+[1]: https://github.com/wafe/php-the-right-way
+[2]: /php-the-right-way/banners.html
