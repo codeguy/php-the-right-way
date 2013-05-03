@@ -535,7 +535,7 @@ select {
 /* Base */
 html,
 body {
-  font-family: NanumGothicWeb, "Droid Serif", Georgia, "Times New Roman", Times, serif;
+  font-family: 'Nanum Gothic', "Droid Serif", Georgia, "Times New Roman", Times, serif;
   color: #666666;
   font-size: 14px;
   line-height: 20px !important;
