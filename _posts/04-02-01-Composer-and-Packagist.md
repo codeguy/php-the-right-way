@@ -2,13 +2,15 @@
 isChild: true
 ---
 
-## Composer and Packagist {#composer_and_packagist_title}
+## Composer와 Packagist {#composer_and_packagist_title}
 
-Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and, with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for you.
+Composer는 **훌륭한** 의존성 관리자입니다. 프로젝트의 의존성을 `composer.json` 파일에 기록하고 간단한 커맨드 몇 개를 사용하면
+Composer가 알아서 다운로드하고 autoloading 설정을 해줍니다.
 
-There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These "packages" are listed on [Packagist][1], the official repository for Composer-compatible PHP libraries.
+이미 Composer와 호환되는 많은 PHP 라이브러리가 있기 때문에 프로젝트에서 바로 사용할 수 있습니다. 그런 패키지들은 
+[Packagist][1]라는 공식 저장소에서 관리됩니다.
 
-### How to Install Composer
+### Composer 설치
 
 You can install Composer locally (in your current working directory; though this is no longer recommended) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
 
