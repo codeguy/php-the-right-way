@@ -2,11 +2,11 @@
 isChild: true
 ---
 
-## Date and Time {#date_and_time_title}
+## 날짜와 시간 {#date_and_time_title}
 
-PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There are
-many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to most
-common uses. It can handle time zones, but that is outside this short introduction.
+날짜와 시간을 읽고, 쓰고, 비교하고, 계산할 때 사용할 수 있는 DateTime 이라는 클래스가 있습니다. PHP에는 DateTime 외에도
+날짜와 시간을 다루는 많은 함수들이 있지만 DateTime 클래스는 일반적인 사용 시나리오에 맞는 괜찮은 개체지향적인 인터페이스를 
+제공합니다. 시간대(time zone)을 다루는 기능도 갖추고 있지만 이 사이트의 짧은 소개에서 다룰만한 범위는 아닙니다.
 
 To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
 or do `new \DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
