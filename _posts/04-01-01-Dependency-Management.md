@@ -1,10 +1,14 @@
-# Dependency Management {#dependency_management_title}
+# 의존성 관리 {#dependency_management_title}
 
-There are a ton of PHP libraries, frameworks, and components to choose from. Your project will likely use several of them — these are project dependencies. Until recently, PHP did not have a good way to manage these project dependencies. Even if you managed them manually, you still had to worry about autoloaders. No more.
+여러분이 선택하여 사용할 수 있는 수많은 라이브러리, 프레임워크, 컴포넌트가 존재하고 있습니다.
+여러분의 프로젝트에서는 그 많은 것들 중에서 몇 가지를 사용하게 될 것입니다. 프로젝트의 의존성을 관리해야 할 필요가 생기는 것이죠.
+얼마전까지도 PHP에는 프로젝트 의존성을 관리할 좋은 방법이 없었습니다. 여러분이 스스로 의존성을 관리한다고 하더라도
+autoloader에 대해 신경을 써야만 합니다. 하지만 이제는 그러지 않아도 됩니다.
 
-Currently there are two major package management systems for PHP - Composer and PEAR. Which one is right for you? The answer is both.
+요즘은 Composer와 PEAR라는 패키지 관리 시스템이 주로 사용되고 있습니다. 어느 것이 여러분의 일에 맞을까요? 아마 둘 다일 것입니다.
 
- * Use **Composer** when managing dependencies for a single project.
- * Use **PEAR** when managing dependencies for PHP as a whole on your system.
+ * 프로젝트 하나의 의존성을 관리할 때에는 **Composer**를 사용하세요.
+ * 시스템 전체의 PHP 의존성을 관리하려고 할 때에는 **PEAR**를 사용하세요.
 
-In general, Composer packages will be available only in the projects that you explicitly specify whereas a PEAR package would be available to all of your PHP projects. While PEAR might sound like the easier approach at first glance, there are advantages to using a project-by-project approach to your dependencies.
+일반적으로, Composer 패키지는 특정 프로젝트에서만 사용하는 방식인 반면 PEAR 패키지는 모든 PHP 프로젝트에서 사용할 수 있습니다.
+슬쩍보기에는 PEAR를 사용하는게 더 간단한 방법이라고 보이지만 프로젝트 단위로 의존성을 관리하는 것에도 장점이 있습니다.
