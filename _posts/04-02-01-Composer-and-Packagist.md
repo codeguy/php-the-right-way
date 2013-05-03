@@ -22,55 +22,72 @@ Composer를 로컬 디렉토리에 설치할 수 있습니다. (즉, 현재 작�
 <strong>Please Note:</strong> 여기서 하는 것처럼 웹에서 다운로드한 코드를 바로 php 인터프리터에 파이프로 전달하여 실행하는 경우에는
 실행하기 전에 먼저 코드 내용을 보고 안전한 코드인 것을 확인한 후에 실행하기 바랍니다.
 
-### How to Install Composer (manually)
+### Composer 설치 (수작업으로)
 
-Manually installing Composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
+Composer를 수작업으로 설치하는 건 고급 기술에 속한다고 할 수 있습니다. 하지만 자동으로 설치해주는 것이 비해서 수작업 설치를 더 좋아할 만한 이유는
+다양하게 있을 수 있을 겁니다. 대화형 자동 설치 과정에서는 다음과 같은 내용을 확인해줍니다.
 
-- a sufficient version of PHP is being used
-- `.phar` files can be executed correctly
-- certain directory permissions are sufficient
-- certain problematic extensions are not loaded
-- certain `php.ini` settings are set
+- 충분한 PHP 버전이 설치되어 있는지
+- `.phar` 파일이 제대로 수행될 수 있는지
+- 필요한 디렉토리의 권한이 제대로 설정되어 있는지
+- 문제를 일으킬만한 익스텐션이 로드되어 있지는 않은지
+- 필요한 세팅이 `php.ini`에 활성화되어 있는지
 
-Since a manual installation performs none of these checks, you have to decide whether the trade-off is worth it for you. As such, below is how to obtain Composer manually:
+수작업으로 설치할 때에는 이러한 내용을 자동으로 확인해주는 과정이 전혀 없기 때문에, 자동 체크 과정을 포기하고도 충분한 이점이 있는지 결정하는 것은
+여러분의 몫입니다. 수작업으로 설치하기로 결정했으면 아래와 같이 실행하면 됩니다.
 
     curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
     chmod +x $HOME/local/bin/composer
 
-The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment variable. This will result in a `composer` command being available.
+`$HOME/local/bin` (이나 여러분이 설치하기로 결정한 다른 디렉토리)는 `$PATH` 환경 변수에 포함되어 있어야 합니다.
+그래야 `composer` 명령어를 실행할 수 있을테니까요.
 
-When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
+이렇게 설치하고 나면 앞에서 Composer를 실행하려고 `php composer.phar install`라고 했던 것을 아래처럼 줄여서 실행할 수 있습니다.
 
     composer install
 
-### How to Define and Install Dependencies
+### 의존관계를 정의하고 설치하기
 
-Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it by hand if you like, or use Composer itself. The `php composer.phar require` command adds a project dependency and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig][2] as a dependency of your project. Run it in your project's root directory where you've downloaded `composer.phar`:
+Composer는 프로젝트의 의존관계 정보를 `composer.json`라는 파일에 기록하여 관리합니다. 이 파일을 직접 수정할 수도 있고
+Composer를 사용하여 수정할 수도 있습니다. `php composer.phar require`라는 명령어는 의존관계 정보를
+추가해줍니다. `composer.json` 파일이 아직 없으면 파일을 생성해서 의존관계 정보를 추가해줍니다. 
+[Twig][2]를 프로젝트 의존관계에 추가하는 예제가 아래에 있습니다. 자동으로 설치할 때 `composer.phar`를 다운로드 했던
+프로젝트의 루트 디렉토리에서 아래와 같이 실행합니다.
 
 	php composer.phar require twig/twig:~1.8
 
-Alternatively the `php composer.phar init` command will guide you through creating a full `composer.json` file for your project. Either way, once you've created your `composer.json` file you can tell Composer to download and install your dependencies into the `vendors/` directory. This also applies to projects you've downloaded that already provide a `composer.json` file:
+이렇게 하는 대신 `php composer.phar init` 명령어를 사용하면 여러분의 프로젝트를 위한 완전한 `composer.json` 파일을 
+만들 수 있게 도와줍니다. 둘 중 어느 방법을 사용하든지, `composer.json` 파일을 만들고 나면 이제 Composer 를 이용하여 
+패키지를 `vendors/` 디렉토리에 설치할 수 있습니다. 
 
     php composer.phar install
 
-Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
+다음으로, 여러분이 작성하는 어플리케이션의 PHP 파일에 아래와 같은 내용을 추가하여 Composer의 autoloader 를 사용한다는 것을
+PHP에게 알려줍니다.
 
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 {% endhighlight %}
 
-Now you can use your project dependencies, and they'll be autoloaded on demand.
+이제 여러분은 필요한 의존 라이브러리를 사용할 수 있습니다. 그 라이브러리들은 필요할 때 자동으로 로드될 것입니다.
 
-### Updating your dependencies
+### 의존관계 정보 업데이트하기
 
-Composer creates a file called `composer.lock` which stores the exact version of each package it downloaded when you first ran `php composer.phar install`. If you share your project with other coders and the `composer.lock` file is part of your distribution, when they run `php composer.phar install` they'll get the same versions as you. To update your dependencies, run `php composer.phar update`.
+`php composer.phar install` 명령어를 처음 실행하면 Composer는 설치한 패키지들의 버전을 기록한 `composer.lock` 파일을 생성합니다.
+여러분의 프로젝트를 다른 개발자와 공유할 때 `composer.lock` 파일을 같이 포함시켜서 공유하면, 다른 개발자가 프로젝트를 받아서
+`php composer.phar install` 명령어를 실행했을 때 여러분이 사용한 것과 동일한 버전의 패키지를 받게 됩니다.
+의존관계 정보를 업데이트하고 싶으면 `php composer.phar update` 명령어를 실행하면 됩니다.
 
-This is most useful when you define your version requirements flexibly. For instance a version requirement of ~1.8  means "anything newer than 1.8.0, but less than 2.0.x-dev". You can also use the `*` wildcard as in `1.8.*`. Now Composer's `php composer.phar update` command will upgrade all your dependencies to the newest version that fits the restrictions you define.
+이런 점은 여러분이 사용하는 패키지 버전을 유연하게 관리하려고 할 때 가장 유용할 것입니다. 예를 들어 ~1.8 이라고 버전을 지정한 것은
+"1.8.0 보다는 높은 버전이지만 2.0.x-dev 버전보다는 낮은 버전"을 의미합니다. `*` 와일드카드 문자를 사용해서 `1.8.*` 이라고
+표현하는 것도 동일한 의미입니다. `php composer.phar update` 명령어를 실행하면 지정된 제한 사항에 맞는 최신 버전으로
+의존관계 정보를 업데이트해 줍니다.
 
-### Checking your dependencies for security issues
+### 의존 패키지들의 보안 이슈 확인하기
 
-The [Security Advisories Checker][3] is a web service and a command-line tool, both will examine your `composer.lock` file and tell you if you need to update any of your dependencies.
+[Security Advisories Checker][3]는 `composer.lock` 파일을 확인하여 여러분의 의존관계를 업데이트해야 하는지 알려주는
+웹 서비스와 커맨드라인 도구입니다.
 
 * [Learn about Composer][4]
 
