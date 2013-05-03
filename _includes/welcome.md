@@ -6,7 +6,7 @@
 
 ## Translations
 
-_PHP: The Right Way_ is (or soon will be) translated into many different languages:
+_PHP: The Right Way_ 아래와 같이 많은 언어로 변역되어 있습니다.
 
 * [English](http://www.phptherightway.com)
 * [Catalan](http://ca.phptherightway.com)
@@ -23,12 +23,12 @@ _PHP: The Right Way_ is (or soon will be) translated into many different languag
 
 ## Disclaimer
 
-_There is no canonical way to use PHP_. However, this website is a humble display of best practices,
-available options, and good information. It aims to introduce new PHP developers and to rethink seasoned pros with fresh
-ideas.
+_이것이 PHP를 사용하는 올바른 방법이다_ 라는 규범은 존재하지 않습니다. 하지만 이 웹사이트는 PHP를 사용하는 
+데 도움이 되는 베트스 프랙티스, 선택가능한 선택지들, 좋은 정보들을 제공하려고 합니다. 새롭게 PHP를 
+시작하는 개발자들과 이미 직업적으로 PHP를 사용하는 개발자 모두에게 새로운 아이디어를 제공할 수 있기를
+기대합니다.
 
-This is a living document and will continue to be updated with more helpful information and examples as they become
-available.
+이 웹사이트는 살아있는 문서이고자 합니다. 좀 더 도움되는 정보와 예제가 있다면 항상 업데이트 될 것입니다.
 
 ## How to Contribute
 
