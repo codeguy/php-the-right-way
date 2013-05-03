@@ -8,9 +8,9 @@ isChild: true
 날짜와 시간을 다루는 많은 함수들이 있지만 DateTime 클래스는 일반적인 사용 시나리오에 맞는 괜찮은 개체지향적인 인터페이스를 
 제공합니다. 시간대(time zone)을 다루는 기능도 갖추고 있지만 이 사이트의 짧은 소개에서 다룰만한 범위는 아닙니다.
 
-To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
-or do `new \DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
-output.
+DateTime 클래스를 사용하려면 문자열 형태로 표현한 날짜와 시간 정보를 `createFromFormat()` 팩토리 메소드를 사용해서
+개체 인스턴스로 변경하거나, `new \DateTime` 생성자로 현재 날짜와 시간 정보를 얻으면 됩니다. 그리고 DateTime 개체를 다시
+문자열로 변경하려면 `format()` 메소드를 사용하면 됩니다.
 {% highlight php %}
 <?php
 $raw = '22. 11. 1968';
