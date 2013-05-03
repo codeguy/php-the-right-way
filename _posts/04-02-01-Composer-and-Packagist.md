@@ -7,16 +7,20 @@ isChild: true
 Composer는 **훌륭한** 의존성 관리자입니다. 프로젝트의 의존성을 `composer.json` 파일에 기록하고 간단한 커맨드 몇 개를 사용하면
 Composer가 알아서 다운로드하고 autoloading 설정을 해줍니다.
 
-이미 Composer와 호환되는 많은 PHP 라이브러리가 있기 때문에 프로젝트에서 바로 사용할 수 있습니다. 그런 패키지들은 
+이미 Composer와 호환되는 많은 PHP 라이브러리가 있기 때문에 프로젝트에서 바로 사용할 수 있습니다. Composer 패키지들은 
 [Packagist][1]라는 공식 저장소에서 관리됩니다.
 
 ### Composer 설치
 
-You can install Composer locally (in your current working directory; though this is no longer recommended) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
+Composer를 로컬 디렉토리에 설치할 수 있습니다. (즉, 현재 작업중인 디렉토리에 설치할 수 있습니다. 하지만 권장할만한 방법은 아닙니다.)
+시스템에 글로벌하게 설치할 수도 있습니다. (즉, /usr/local/bin 에 설치됩니다.) 
+일단 로컬 디렉토리에 설치해봅시다. 프로젝트의 루트 디렉토리에서 아래와 같이 명령을 실행합니다.
 
     curl -s https://getcomposer.org/installer | php
 
-This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
+이렇게 하면 `composer.phar`라는 PHP 바이너리 파일이 다운로드됩니다. `php`로 이 바이너리를 실행하여 프로젝트의 의존성을 관리할 수 있습니다.
+<strong>Please Note:</strong> 여기서 하는 것처럼 웹에서 다운로드한 코드를 바로 php 인터프리터에 파이프로 전달하여 실행하는 경우에는
+실행하기 전에 먼저 코드 내용을 보고 안전한 코드인 것을 확인한 후에 실행하기 바랍니다.
 
 ### How to Install Composer (manually)
 
