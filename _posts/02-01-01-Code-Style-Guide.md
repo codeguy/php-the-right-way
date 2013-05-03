@@ -1,9 +1,9 @@
 # Code Style Guide  {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+PHP 커뮤니티는 매우 거대하고, 수많은 라이브러리와 프레임워크, 컴포넌트들이 존재합니다. 
+이렇게 많은 선택지들 중에 몇 가지를 골라 프로젝트에 적용하는 일은 PHP 개발자에게 일상적인 일입니다.
+다양한 라이브러리를 조합하여 사용하는 일을 수월하게 하려면 가능한한 공통적인 코드 스타일을 적용하는 일이
+중요합니다.
 
 The [Framework Interop Group][fig] has proposed and approved a series of style recommendations, known as [PSR-0][psr0], 
 [PSR-1][psr1] and [PSR-2][psr2]. Don't let the funny names confuse you, these recommendations are merely 
