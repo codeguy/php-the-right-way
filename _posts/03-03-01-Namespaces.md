@@ -2,15 +2,19 @@
 isChild: true
 ---
 
-## Namespaces {#namespaces_title}
+## 네임스페이스 {#namespaces_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP code may use the same class name as another library. When both libraries are used in the same namespace, they collide and cause trouble.
+앞에서 얘기한 것처럼 PHP 커뮤니티에서는 많은 개발자들이 수많은 코드를 만들고 있습니다. 그러므로 서로 다른 PHP 라이브러리에 같은 이름의
+클래스가 포함되어 있을 수 있습니다. 두 라이브러리가 같은 네임스페이스를 사용한다면 서로 충돌이 나서 문제가 됩니다.
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating system directories that _namespace_ files; two files with the same name may co-exist in separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP namespaces. It's as simple as that.
+_네임스페이스_ 기능은 이런 문제를 해결해줍니다. PHP 매뉴얼에 설명된대로, 네임스페이스는 OS의 디렉토리에 비교하여 설명할 수 있습니다.
+두 개의 파일을 각각 다른 디렉토리에 넣는다면 두 파일의 이름이 같아도 상관이 없듯이, 두 개의 PHP 클래스를 각각 다른 네임스페이스에 둔다면
+두 클래스의 이름이 동일해도 상관이 없습니다. 참 쉽죠?
 
-It is important for you to namespace your code so that it may be used by other developers without fear of colliding with other libraries.
+다른 개발자가 사용할 가능성이 있는 코드를 작성한다면, 네임스페이스로 잘 감싸서 다른 라이브러리와 이름 충돌이 발생하지 않게
+하는 것이 좋습니다.
 
-One recommended way to use namespaces is outlined in [PSR-0][psr0], which aims to provide a standard file, class and namespace convention to allow plug-and-play code.
+코드를 자유롭게 넣었다 뺐다하기 좋은 표준적인 파일, 클래스, 네임스페이스 관례를 [PSR-0][psr0]에서 설명하고 있으니 참고하기 바랍니다.
 
 * [Read about Namespaces][namespaces]
 * [Read about PSR-0][psr0]
