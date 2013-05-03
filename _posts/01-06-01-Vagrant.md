@@ -4,20 +4,21 @@ isChild: true
 
 ## Vagrant {#vagrant_title}
 
-Running your application on different environments in development and production can lead to strange bugs 
-popping up when you go live. It's also tricky to keep different development environments up to date with the same 
-version for all libraries used when working with a team of developers. 
+개발환경과 운영환경을 서로 다르게 사용하면 운영환경에 어플리케이션을 배포했을 때 의도하지 않은 이상한 
+버그를 만날 가능성이 높습니다. 또 여러 사람이 같이 개발할 때 서로 다른 환경에서 모두 동일한 라이브러리
+버전을 최신으로 유지하며 관리하는 일은 성가신 일이 되기도 합니다.
 
-If you are developing on Windows and deploying to Linux (or anything non-Windows) or are developing in a team, you 
-should consider using a virtual machine. This sounds tricky, but using [Vagrant][vagrant] you can set up a simple 
-virtual machine with only a few steps. These base boxes can then be set up manually, or you can use "provisioning" 
-software such as [Puppet][puppet] or [Chef][chef] to do this for you. Provisioning the base box is a great way to 
-ensure that multiple boxes are set up in an identical fashion and removes the need for you to maintain complicated 
-"set up" command lists. You can also "destroy" your base box and recreate it without many manual steps, making it
-easy to create a "fresh" installation.
+Windows에서 개발하면서 Linux 등의 Windows가 아닌 환경에 배포하여 운영하거나, 팀을 이뤄 개발할 때에는
+가상 머신을 사용하는 게 나을 수도 있습니다. 가상 머신을 사용한다는게 복잡하게 들릴 수도 있겠지만, 
+[Vagrant][vagrant]를 사용하면 단지 몇 단계만으로 간단한 가상 머신을 구성할 수 있습니다.
+이렇게 만든 "기본 가상 머신"에서 출발하여 수작업으로 환경을 설정할 수도 있고, 
+[Puppet][puppet]이나 [Chef][chef] 같은 "프로비저닝(provisioning)" 도구로 설정할 수도 있습니다.
+프로비저닝 도구를 사용하면 여러개의 기본 가상 머신을 동일한 방식으로 설정할 수 있습니다.
+또한 복잡한 "초기 설정" 커맨드 목록을 직접 관리하지 않아도되어 편리합니다. 그리고 기본 가상 머신을
+"파괴"하고 "깨끗한" 상태로 새로 만드는 작업도 간단히 할 수 있게 도와줍니다.
 
-Vagrant creates shared folders used to share your code between your host and your virtual machine, meaning you can 
-create and edit your files on your host machine and then run the code inside your virtual machine.
+Vagrant는 여러분의 호스트 컴퓨터와 가상 머신 사이에 공유 폴더를 만들어줍니다. 그래서 호스트 컴퓨터에서
+파일을 수정하고 가상 머신에서 실행하는 식으로 작업할 수 있습니다.
 
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/
