@@ -2,57 +2,43 @@
 isChild: true
 ---
 
-## Test Driven Development {#test_driven_development_title}
+## 테스트 주도 개발 {#test_driven_development_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
+From [Wikipedia](http://ko.wikipedia.org/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8_%EC%A3%BC%EB%8F%84_%EA%B0%9C%EB%B0%9C):
 
-> Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes a failing automated test case that defines a desired improvement or new function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck, who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple designs and inspires confidence
+> 테스트 주도 개발(test-driven development, TDD)은 매우 짧은 개발 사이클을 반복하는 소프트웨어 개발 프로세스 중 하나이다. 우선 개발자는 수정하고자 하는 개선 사항 또는 새로운 함수를 정의하는 자동화된 테스트 케이스를 작성한다. 그런 후에, 그 케이스를 통과하기 위한 최소한의 양의 코드를 생성한다. 그리고 마지막으로 그 새 코드를 코딩 스타일 표준에 맞도록 리팩토링한다. 이 기법을 개발했거나 '재발견' 한 것으로 인정되는 Kent Beck은 2003년에 TDD가 단순한 설계를 장려하고 자신감을 불어넣어준다고 말하였다.
 
-There are several different types of testing that you can do for your application
+어플리케이션 작성 시 도움이 되는 여러가지 서로 다른 유형의 테스트 기법이 존재합니다.
 
-### Unit Testing
+### 유닛 테스트
 
-Unit Testing is a programming approach to ensure functions, classes and methods are working as
-expected, from the point you build them all the way through the development cycle. By checking
-values going in and out of various functions and methods, you can make sure the internal logic is
-working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+유닛 테스트(Unit Testing)는 함수, 클래스, 메소드가 기대한 대로 동작하는지를 검증하는 프래그래밍 측면의 접근 방법으로서, 개발을 시작하는 시점부터 계속해서 유닛 테스트를 만들어 나가게 됩니다. 함수나 메소드의 입출력을 검사함으로써 내부 로직이 올바르게 동작하는지를 테스트하는 방식입니다. 의존성 주입(Dependency Injection) 기법을 활용하면서 "모의(mock)" 개체와 스텁(stub)들을 사용하여 서로 의존 관계에 있는 클래스들이 올바르게 연동되어 있는지 테스트함으로써 테스트 커버리지를 더 높일 수 있습니다.
 
-When you create a class or function you should create a unit test for each behavior it must have. At a very basic level you should
-make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments.
-This will help ensure that when you make changes to this class or function later on in the development
-cycle that the old functionality continues to work as expected. The only alternative to this would be
-var_dump() in a test.php, which is no way to build an application - large or small.
+클래스나 함수를 만들 때, 그 클래스나 함수의 동작을 검증하는 유닛 테스트도 항상 같이 만들어야 합니다. 아주 기초적인 레벨에서 보면, 잘못된 인자를 함수에 전달한 경우 그 함수는 에러를 발생시켜야 한다는 것을 테스트하고, 적절한 인자를 전달한 경우에는 올바르게 동작한다는 것을 테스트 합니다. 이렇게 해 두면 나중에 이 클래스나 함수를 변경할 일이 생겼을 때에도 기존의 기능이 변함없이 제대로 동작하고 있다는 것을 확신할 수 있습니다.
 
-The other use for unit tests is contributing to open source. If you can write a test that shows broken
-functionality (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If
-you run a project which accepts pull requests then you should suggest this as a requirement.
+유닛 테스트는 오픈 소스 프로젝트에 기여하는 방식에도 도움을 줍니다. 만약 여러분이 기능 결함을 재현시키는 유닛 테스트(즉 실패하는 유닛 테스트 케이스)를 작성할 수 있고 그 결함을 고친 후 테스트가 통과되는 것을 보여준다면, 여러분의 패치 제안을 오픈 소스 프로젝트 관리자가 받아들여줄 가능성이 훨씬 높을 것입니다. 만약 여러분이 GitHub 등에서 프로젝트를 관리하고 있고 다른 사람들의 pull request 를 받을 생각이라면, pull request 를 보내는 사람들에게 기본적으로 이러한 유닛 테스트를 포함시켜 보내라고 가이드하는 것이 좋습니다.
 
-[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
-applications, but there are several alternatives
+[PHPUnit](http://phpunit.de) 이라는 테스트 프레임워크가 PHP 에서는 거의 업계 표준적인 위치에 있지만 다른 유닛 테스트 프레임워크들도 상당수 존재합니다.
 
 * [SimpleTest](http://simpletest.org)
 * [Enhance PHP](http://www.enhance-php.com/)
 * [PUnit](http://punit.smf.me.uk/)
 * [atoum](https://github.com/atoum/atoum)
 
-### Integration Testing
+### 통합 테스트
 
 From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 
-> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
+> 통합 테스트(Integration testing, 때로는 통합과 테스트(Integration and Testing)이라고 하며 줄여서 I&T)는 개별적인 소프트웨어 모듈을 결합시켜 테스트하는 단계이다. 통합 테스트는 유닛 테스트 이후와 검증 테스트(validation testing) 사이에 수행된다. 유닛 테스트가 된 모듈들을 그룹지어 더 큰 단위로 합친 후, 통합 테스트 계획에 따라 테스트를 수행하여 시스템 테스트를 수행할 수 있는 정도로 개발이 완료되었는지 확인한다.
 
-Many of the same tools that can be used for unit testing can be used for integration testing as many
-of the same principles are used.
+유닛 테스트에 사용되는 도구들을 사용하여 통합 테스트를 수행할 수 있고, 대부분의 원칙들이 서로 동일하게 적용될 수 있습니다.
 
-### Functional Testing
+### 기능 테스트
 
-Sometimes also known as acceptance testing, functional testing consists of using tools to create automated
-tests that actually use your application instead of just verifying that individual units of code are behaving
-correctly and that individual units can speak to each other correctly. These tools typically work using real
-data and simulating actual users of the application.
+기능 테스트(functional testing)는 인수 테스트(acceptance testing)라고도 합니다. 각 코드 유닛들이 올바르게 동작하는 지 검증하거나, 코드 유닛간에 서로 올바르게 대화하고 있는지 확인하는 것이 앞선 단계의 테스트였다면, 기능 테스트는 실제로 어플리케이션을 동작시켜주는 도구를 사용하여 자동화된 테스트를 만들어서 수행하는 것입니다. 기능 테스트에 사용되는 도구들은 실제 사용자가 어플리케이션을 사용하는 것을 흉내내면서 실제 데이터를 사용하여 어플리케이션을 테스트해 줍니다.
 
 #### Functional Testing Tools
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
+* [Codeception](http://codeception.com)은 인수 테스트 도구를 포함하는 풀스택(full-stack) 테스트 프레임워크입니다.
