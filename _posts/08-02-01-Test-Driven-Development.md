@@ -37,7 +37,7 @@ From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 
 기능 테스트(functional testing)는 인수 테스트(acceptance testing)라고도 합니다. 각 코드 유닛들이 올바르게 동작하는 지 검증하거나, 코드 유닛간에 서로 올바르게 대화하고 있는지 확인하는 것이 앞선 단계의 테스트였다면, 기능 테스트는 실제로 어플리케이션을 동작시켜주는 도구를 사용하여 자동화된 테스트를 만들어서 수행하는 것입니다. 기능 테스트에 사용되는 도구들은 실제 사용자가 어플리케이션을 사용하는 것을 흉내내면서 실제 데이터를 사용하여 어플리케이션을 테스트해 줍니다.
 
-#### Functional Testing Tools
+#### 기능 테스트를 위한 도구
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
