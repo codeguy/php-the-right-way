@@ -30,7 +30,7 @@ PHP는 일급 함수(first-class function)을 지원합니다. 이는 함수가 
 PHP 5.4에서는 클로저를 특정 개체의 스코프에 바인딩하는 기능이 추가되었습니다. 또한 대부분의 경우 익명 함수와
 동일하게 사용할 수 있는 호출가능한 타입(callable) 지원이 강화되었습니다.
 
-* [PHP에서의 함수형 프로그래밍](/pages/Functional-Programming.html)에 대해 더읽기
+* [PHP에서의 함수형 프로그래밍](/php-the-right-way/pages/Functional-Programming.html)에 대해 PHP: The Right Way 에서 정리한 내용 더 읽기
 * [Read about Anonymous Functions][anonymous-functions]
 * [Read about the Closure class][closure-class]
 * [More details in the Closures RFC][closures-rfc]
