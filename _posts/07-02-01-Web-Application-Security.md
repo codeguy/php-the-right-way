@@ -2,10 +2,13 @@
 isChild: true
 ---
 
-## Web Application Security {#web_application_security_title}
+## 웹 어플리케이션 보안 {#web_application_security_title}
 
-There are bad people ready and willing to exploit your web application. It is important that you
- take necessary precautions to harden your web application's security. Luckily, the fine folks at [The Open Web Application Security Project][1] (OWASP) have compiled a comprehensive list of known security issues and methods to protect yourself against them. This is a must read for the security-conscious developer.
+여러분의 웹 어플리케이션을 뚫으려는 의지를 가지고 준비하고 있는 나쁜 사람들이 있습니다. 
+그러므로 웹 어플리케이션 보안을 견고하게 미리 준비하는 일이 중요합니다. 
+운이 좋게도 [The Open Web Application Security Project][1] (OWASP)에 있는 좋은 사람들이
+알려져있는 보안 이슈들과 그 대책을 상세하게 정리해 두었습니다. 보안 의식이 있는 개발자라면
+반드시 읽어보아야 할 자료입니다.
 
 * [Read the OWASP Security Guide][2]
 
