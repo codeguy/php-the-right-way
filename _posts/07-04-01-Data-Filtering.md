@@ -52,14 +52,14 @@ Sanitization 이라고 합니다.
 쉬운 일은 아닙니다. 그래서 많은 사람들은 Markdown 이나 BBCode 같은 제한된 마크업 문법을
 사용하여 위험을 회피하고 있습니다.
 
-[See Sanitization Filters][2]
+[PHP의 Sanitization 필터 문서 보기][2]
 
 ### 데이터 검증
 
 데이터 검증을 통해서 외부 입력 데이터가 여러분이 기대한 입력 형태가 맞는지 확인하도록 합니다.
 예를 들어 메일 주소, 전화 번호, 혹은 사용자의 나이 등의 입력을 검증하고 싶을 때가 있을 것입니다.
 
-[See Validation Filters][3]
+[PHP의 검증 필터 문서 보기][3]
 
 [1]: http://www.php.net/manual/en/book.filter.php
 [2]: http://www.php.net/manual/en/filter.filters.sanitize.php
