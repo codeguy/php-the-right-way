@@ -19,13 +19,14 @@ $start = \DateTime::createFromFormat('d. m. Y', $raw);
 echo 'Start date: ' . $start->format('m/d/Y') . "\n";
 {% endhighlight %}
 
-Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
-saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference use
-the `diff()` method. It will return new DateInterval, which is super easy to display.
+DateInterval 클래스를 이용해서 DateTime을 이용한 계산이 가능합니다. DateTime 클래스에는 DateInterval을 인자로 받는 
+`add()` 나 `sub()` 같은 메소드가 있습니다. 하루의 길이가 매일 동일할 것이라고 가정하고 코드를 작성하지 않아야 합니다.
+일광절약시간제(daylight saving time)나 시간대(timezon)의 변경에 따라서 하루의 길이는 달라질 수가 있기 때문입니다.
+그러므로, 날짜 계산을 할 때 초단위의 숫자를 사용하는 대신 DateInterval을 사용하세요. 날짜의 차이를 계산하려면 `diff()` 메소드를
+사용하면 됩니다. `diff()` 메소드는 DateInterval을 리턴하는데, 표시하기에도 아주 쉽습니다.
 {% highlight php %}
 <?php
-// create a copy of $start and add one month and 6 days
+// $start를 복제한 다음 한 달하고 6일을 더한다.
 $end = clone $start;
 $end->add(new \DateInterval('P1M6D'));
 
@@ -34,7 +35,7 @@ echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n"
 // Difference: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
-On DateTime objects you can use standard comparison:
+DateTime 개체를 일반적인 비교 연산자를 이용해서 비교하는 것이 가능합니다.
 {% highlight php %}
 <?php
 if ($start < $end) {
@@ -42,21 +43,22 @@ if ($start < $end) {
 }
 {% endhighlight %}
 
-One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
-DateTime objects, start and end, and the interval for which it will return all events in between.
+DateTime에 대한 마지막 예제는 DatePeriod 클래스에 대한 것입니다. 이 클래스는 반복적으로 발생하는 사건을 다루는데 사용됩니다.
+start와 end라는 두 개의 DateTime 개체와 시간 간격을 나타내는 DateInterval 개체 하나를 받아서, 
+지정된 기간에 발생하는 모든 사건을 리턴해줍니다.
 {% highlight php %}
 <?php
-// output all thursdays between $start and $end
+// $start 와 $end 사이의 모든 목요일을 얻는다.
 $periodInterval = \DateInterval::createFromDateString('first thursday');
 $periodIterator = new \DatePeriod($start, $periodInterval, $end, \DatePeriod::EXCLUDE_START_DATE);
 foreach ($periodIterator as $date) {
-    // output each date in the period
+    // 지정된 기간 안에 있는 모든 날짜를 출력한다.
     echo $date->format('m/d/Y') . ' ';
 }
 {% endhighlight %}
 
 * [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (accepted date format string options)
+* [Read about date formatting][dateformat] (날짜를 문자열로 변경할 때 사용할 수 있는 옵션 패턴들)
 
 [datetime]: http://www.php.net/manual/book.datetime.php
 [dateformat]: http://www.php.net/manual/function.date.php
