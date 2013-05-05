@@ -1,5 +1,5 @@
 ---
-title:   Standard PHP Library
+title:   표준 PHP 라이브러리
 isChild: true
 ---
 

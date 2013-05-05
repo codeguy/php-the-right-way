@@ -1,4 +1,5 @@
 ---
+title:   예외
 isChild: true
 ---
 
