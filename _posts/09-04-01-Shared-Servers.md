@@ -2,6 +2,6 @@
 isChild: true
 ---
 
-## Shared Servers {#shared_servers_title}
+## 공유 서버 {#shared_servers_title}
 
-PHP has shared servers to thank for its popularity. It is hard to find a host without PHP installed, but be sure it's the latest version. Shared servers allow you and other developers to deploy websites to a single machine. The upside to this is that it has become a cheap commodity. The downside is that you never know what kind of a ruckus your neighboring tenants are going to create; loading down the server or opening up security holes are the main concerns. If your project's budget can afford to avoid shared servers you should.
+PHP는 인기있는 언어라서 공유 서버에서 PHP를 사용할 수도 있습니다. PHP가 설치되지 않은 호스팅 서비스를 찾기는 쉽지 않겠지만 최신 버전 PHP가 설치되어 있는지는 확인을 해보아야 합니다. 여러분의 웹 어플리케이션과 다른 개발자들의 웹 어플리케이션을 같은 기기에 배포하여 동작시키는 것이 공유 서버 방식입니다. 비용이 싸다는 것이 이 방식의 장점입니다. 단점이라면 같이 입주한 이웃 개발자가 어떤 위험한 일을 할 지 알 수 없다는 것이죠. 서버를 다운시키거나 보안 허점을 노출시켜서 여러분도 같이 위험에 빠질 가능성이 있다는 것이 고려할만한 내용입니다. 공유 서버를 사용하지 않을 정도의 프로젝트 예산이 있다면 당연히 피하는 것이 좋겠습니다.
