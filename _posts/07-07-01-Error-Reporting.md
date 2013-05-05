@@ -1,4 +1,5 @@
 ---
+title:   Error Reporting
 isChild: true
 ---
 

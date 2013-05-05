@@ -1,4 +1,5 @@
 ---
+title:   가상 서버나 전용 서버
 isChild: true
 ---
 

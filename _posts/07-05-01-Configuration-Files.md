@@ -1,4 +1,5 @@
 ---
+title:   설정 파일
 isChild: true
 ---
 

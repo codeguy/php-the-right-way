@@ -1,4 +1,5 @@
 ---
+title:   개체 캐시 
 isChild: true
 ---
 

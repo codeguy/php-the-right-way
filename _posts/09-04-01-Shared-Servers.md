@@ -1,4 +1,5 @@
 ---
+title:   공유 서버 
 isChild: true
 ---
 

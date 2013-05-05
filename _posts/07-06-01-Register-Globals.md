@@ -1,4 +1,5 @@
 ---
+title:   Register Globals
 isChild: true
 ---
 
