@@ -2,22 +2,20 @@
 isChild: true
 ---
 
-## Frameworks {#frameworks_title}
+## 프레임워크들 {#frameworks_title}
 
-Rather than re-invent the wheel, many PHP developers use frameworks to build out web applications. Frameworks abstract away many of the low-level concerns and provide helpful, easy-to-use interfaces to complete common tasks.
+대부분의 PHP 개발자들이 "바퀴를 또 발명하지" 않고, 프레임워크를 사용하여 웹 어플리케이션을 개발합니다. 프레임워크들은 개발 시에 일반적으로 해야하는 작업들을 사용하기 쉬운 인터페이스로 추상화해서 제공하기 때문에 저수준의 고민거리를 날려줍니다.
 
-You do not need to use a framework for every project. Sometimes plain PHP is the right way to go, but if you do need a framework then there are three main types available:
+물론 모든 프로젝트에 프레임워크를 사용할 필요는 없습니다. 때로는 PHP를 그대로 사용하는 게 좋을 때도 있습니다. 존재하는 프레임워크들을 크게 세 가지 종류로 나눠볼 수 있습니다.
 
 * Micro Frameworks
 * Full-Stack Frameworks
 * Component Frameworks
 
-Micro-frameworks are essentially a  wrapper to route a HTTP request to a callback, controller, method, etc as quickly as possible, and sometimes come with a few extra libraries to assist development such as basic database wrappers and the like. They are prominently used 
-to build remote HTTP services.
+마이크로 프레임워크(Micro Framework)는 HTTP 요청을 콜백, 컨트롤러, 클래스의 메소드 등으로 최대한 빠르게 전달해주는 역할을 하는 정도입니다. 때로는 기본적인 데이터베이스 래퍼 등을 제공해서 개발을 도와주기도 합니다. 원격 HTTP 서비스를 개발할 때 주로 사용됩니다.
 
-Many frameworks add a considerable number of features on top of what is available in a micro-framework and these are known Full-Stack 
-Frameworks. These often come bundled with ORMs, Authentication packages, etc.
+다수의 프레임워크들은 마이크로 프레임워크 위에 상당한 수의 기능을 덧붙여서 제공합니다. 이런 것을 풀스택(full-stack) 프레임워크라고 합니다. ORM이라든지 사용자 인증 방법에 관한 패키지 등을 포함하는 경우도 종종 있습니다.
 
-Component-based frameworks are collections of specialized and single-purpose libraries. Disparate component-based frameworks can be used together to make a micro- or full-stack framework.
+컴포넌트 기반의 프레임워크는 한 가지 목적에 특화된 라이브러리들의 모음입니다. 마이크로 프레임워크나 풀스택 프레임워크를 만들어내기 위해서 서로 다른 컴포넌트 기반의 프레임워크를 사용할 수 있습니다.
 
-* [Popular PHP Frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
+* [인기있는 PHP 프레임워크들](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)
