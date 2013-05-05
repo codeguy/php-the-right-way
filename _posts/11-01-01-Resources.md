@@ -1,11 +1,11 @@
 # Resources {#resources_title}
 
-## From the Source
+## 공식 사이트
 
 * [PHP Website](http://php.net/)
 * [PHP Documentation](http://php.net/docs.php)
 
-## People to Follow
+## 참여한 사람들 트위터 주소
 
 * [Rasmus Lerdorf](http://twitter.com/rasmus)
 * [Fabien Potencier](http://twitter.com/fabpot)
@@ -17,16 +17,16 @@
 * [Anthony Ferrara](http://twitter.com/ircmaxell)
 * [Nikita Popov](http://twitter.com/nikita_ppv)
 
-## Mentoring
+## 멘토링
 
-* [phpmentoring.org](http://phpmentoring.org/) - Formal, peer to peer mentoring in the PHP community.
+* [phpmentoring.org](http://phpmentoring.org/) - 서로 멘토링해주는(Peer-to-peer 멘토링) PHP 커뮤니티
 
 ## PHP PaaS Providers
 
 * [PagodaBox](https://pagodabox.com/)
 * [AppFog](https://appfog.com/)
 * [Heroku](https://heroku.com)
-  (PHP support is undocumented but based on stable Facebook partnership [link](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
+  (PHP 지원이 문서화되어 있는 것은 아니지만 안정적인 Facebook과의 파트너쉽을 통해서 지원됨. [링크](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
 * [fortrabbit](http://fortrabbit.com/)
 * [Engine Yard Orchestra PHP Platform](http://www.engineyard.com/products/orchestra/)
 * [Red Hat OpenShift Platform](http://www.redhat.com/products/cloud-computing/openshift/)
