@@ -2,15 +2,13 @@
 isChild: true
 ---
 
-## Bytecode Cache {#bytecode_cache_title}
+## 바이트코드 캐시 {#bytecode_cache_title}
 
-When a PHP file is executed, under the hood it is first compiled to bytecode (also known as opcode) and, only then, the bytecode is executed.
-If a PHP file is not modified, the bytecode will always be the same. This means that the compilation step is a waste of CPU resources.
+PHP 파일을 실행했을 때 내부에서 처음으로 하는 일은 PHP 파일을 컴파일해서 바이트코드(bytecode, 또는 opcode라고도 합니다)로 만드는 일입니다. 그리고나서 바이트코드가 실행됩니다. 원본 PHP 파일이 수정되지 않으면 컴파일된 바이트코드는 항상 같습니다. 결국 컴파일 과정이 CPU 리소스를 낭비한다는 얘기가 됩니다.
 
-This is where Bytecode cache comes in. It prevents redundant compilation by storing bytecode in memory and reusing it on successive calls.
-Setting up bytecode cache is a matter of minutes, and your application will speed up significantly. There's really no reason not to use it.
+그래서 바이트코드 캐시가 필요합니다. 바이트코드를 메모리에 보관해서 불필요한 컴파일 과정이 일어나지 않게 합니다. 바이트코드 캐시를 설정하는 건 몇 분이면 할 수 있는 수준인데다가 어플리케이션의 성능이 즉시 향상되기 때문에 사용하지 않을 이유가 없습니다.
 
-Popular bytecodes caches are:
+인기있는 바이트코드 캐시들입니다.
 
 * [APC](http://php.net/manual/en/book.apc.php)
 * [XCache](http://xcache.lighttpd.net/)
