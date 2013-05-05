@@ -7,7 +7,7 @@
         <meta name="robots" content="index,follow,archive"/>
         <meta property="og:image" content="http://wafe.github.io/php-the-right-way/images/og-logo.png"/>
         <meta property="og:title" content="PHP: The Right Way"/>
-        <meta property="og:description" content="An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web"/>
+        <meta property="og:description" content="쉽게 읽을 수 있는 PHP의 베스트 프랙티스, 코딩 표준, 권위있는 튜토리얼로의 링크를 제공합니다."/>
         <meta property="og:url" content="http://wafe.github.io/php-the-right-way/"/>
         <meta property="og:site_name" content="PHP: The Right Way"/>
         <meta property="og:type" content="website"/>
@@ -33,15 +33,15 @@
         <nav class="site-navigation">
             <div class="build-date">Last Updated: {{ site.time }}</div>
             <ul>
-                <li><a href="/#site-header">Welcome</a></li>
+                <li><a href="#site-header">Welcome</a></li>
                 {% assign lastIsChild = false %}
                 {% for post in site.posts reversed %}
                     {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
                     {% if lastIsChild and post.isChild != true %}</ul>{% endif %}
-                    <li><a href="/#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
+                    <li><a href="#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
                     {% assign lastIsChild = post.isChild %}
                 {% endfor %}
-                <li><a href="/#site-footer">Credits</a></li>
+                <li><a href="#site-footer">Credits</a></li>
             </ul>
         </nav>
         <div class="site-content">
@@ -55,7 +55,7 @@
                     <h1 class="site-title"><a href="/php-the-right-way/">PHP</a></h1>
                     <h2 class="site-slogan">The Right Way.</h2>
                 </hgroup>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.phptherightway.com/" data-size="large" data-hashtags="php">Tweet</a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://wafe.github.io/php-the-right-way/" data-size="large" data-hashtags="php">Tweet</a>
             </header>
             {{ content }}
             <footer class="site-footer" id="site-footer">
@@ -76,6 +76,11 @@
                 <h2 class="epsilon">Project sponsors</h2>
                 <ul class="mbd">
                     <li><a href="http://www.newmediacampaigns.com">New Media Campaigns</a></li>
+                </ul>
+
+                <h2 class="epsilon">한국어판 번역</h2>
+                <ul>
+                    <li><a href="http://twitter.com/galadbran">Heejoon Lee</a></li>
                 </ul>
 
                 <p>
