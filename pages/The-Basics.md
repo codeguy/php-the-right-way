@@ -1,34 +1,33 @@
 ---
 layout: page
-title: The Basics
+title: PHP 기본
 ---
 
-# The Basics
+# PHP 기본
 
-## Comparison operators
+## 비교 연산자 
 
-Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
-problem stems from strict comparisons (the comparison of booleans as integers).
+비교 연산자는 PHP에서 간과하기 쉬운 측면 중에 하나입니다. 그럴 경우 예상치 못한 결과에 당황하는 일을 많이 겪게 될 것입니다. 그런 문제 중에서 하나는 strict한 비교(boolean 타입을 integer 타입과 비교하는 등 타입을 자동으로 맞춰서 비교하는 것)를 할 때 발생합니다.
 
 {% highlight php %}
 <?php
-$a = 5;   // 5 as an integer
+$a = 5;   // integer 타입의 숫자 5
 
-var_dump($a == 5);       // compare value; return true
-var_dump($a == '5');     // compare value (ignore type); return true
-var_dump($a === 5);      // compare type/value (integer vs. integer); return true
-var_dump($a === '5');    // compare type/value (integer vs. string); return false
+var_dump($a == 5);       // 값을 비교; true
+var_dump($a == '5');     // 타입을 무시하고 같을 비교; true
+var_dump($a === 5);      // 타입과 값을 모두 비교 (integer 와 integer); true
+var_dump($a === '5');    // 타입과 값을 (integer 와 string); false
 
 /**
- * Strict comparisons
+ * 타입을 무시한 비교
  */
-if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is interpreted as the boolean 'false'
+if (strpos('testing', 'test')) {    // 'test'가 인덱스 0에스 발견되어 strpos 는 0을 리턴. 0은 false로 취급된다.
     // code...
 }
 
 vs.
 
-if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
+if (strpos('testing', 'test') !== false) {    // (0 !== false)의 비교 결과는 true 이다.
     // code...
 }
 {% endhighlight %}
@@ -36,13 +35,11 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 * [Comparison operators](http://php.net/manual/en/language.operators.comparison.php)
 * [Comparison table](http://php.net/manual/en/types.comparisons.php)
 
-## Conditional statements
+## 조건 구문
 
-### If statements
+### If 구문
 
-While using 'if/else' statements within a function or class, there is a common misconception that 'else' must be used
-in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
-necessary as 'return' will end the function, causing 'else' to become moot.
+'if/else' 구문을 함수나 클래스 안에서 사용할 때 흔히 하는 오해는 혹시 발생할 수 있는 경우를 대비해 'else'를 꼭 써야 한다는 것입니다. 하지만 하지만 조건문의 결과가 return 값을 정의하는 것 뿐이라면 'else'가 필수적인 것은 아닙니다.
 
 {% highlight php %}
 <?php
@@ -66,32 +63,32 @@ function test($a)
 }
 {% endhighlight %}
 
-* [If statements](http://php.net/manual/en/control-structures.if.php)
+* [If 구문](http://php.net/manual/en/control-structures.if.php)
 
-### Switch statements
+### Switch 구문
 
-Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
+switch 구문은 끝없이 if else if 를 타이핑하지 않아도 되게 해주는 편리한 구문입니다. 하지만 몇 가지 주의해야 할 점들이 있습니다.
 
-- Switch statements only compare values, and not the type (equivalent to '==')
-- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
-- Without a 'break', they will continue to implement each case until reaching a break/return
-- Within a function, using 'return' alleviates the need for 'break' as it ends the function
+- switch 구문은 타입을 무시하고 값만 비교합니다. ('==' 비교 연산자와 같죠)
+- 위에서부터 순서대로 매칭되는 case 문이 나올 때까지 진행합니다. 만약 찾지 못한다면 default 구문의 내용을 실행해줍니다.
+- 'break'가 없으면 break나 return 문을 만날 때까지 다른 case 문을 넘어서까지 실행됩니다.
+- 함수 내에서 switch 문을 사용할 때에는 'return' 문을 사용하면 거기서 함수 실행이 종료되기 때문에 'break' 를 쓰지 않아도 됩니다.
 
 {% highlight php %}
 <?php
-$answer = test(2);    // the code from both 'case 2' and 'case 3' will be implemented
+$answer = test(2);
 
 function test($a)
 {
     switch ($a) {
         case 1:
             // code...
-            break;             // break is used to end the switch statement
+            break;             // switch 구문을 벗어나기 위해서 break 를 사용.
         case 2:
-            // code...         // with no break, comparison will continue to 'case 3'
+            // code...         // break 를 써주지 않았으므로 'case 3' 로 계속 진행됨.
         case 3:
             // code...
-            return $result;    // within a function, 'return' will end the function
+            return $result;    // 함수 내에서는 'return' 하면 함수 실행이 종료됨.
         default:
             // code...
             return $error;
@@ -99,13 +96,12 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch statements](http://php.net/manual/en/control-structures.switch.php)
+* [Switch 구문](http://php.net/manual/en/control-structures.switch.php)
 * [PHP switch](http://phpswitch.com/)
 
-## Global namespace
+## 전역 네임스페이스
 
-When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this,
-refer to the global function by using a backslash before the function name.
+네임스페이스를 사용할 때, 여러분이 작성한 함수 때문에 내장 함수를 사용할 수 없게되는 경우를 만날 수 있습니다. 그럴 때에는 역슬래시를 사용하여 전역 함수를 호출하는 방법이 있습니다.
 
 {% highlight php %}
 <?php
@@ -113,60 +109,58 @@ namespace phptherightway;
 
 function fopen()
 {
-    $file = \fopen();    // Our function name is the same as an internal function.
-                         // Execute the function from the global space by adding '\'.
+    $file = \fopen();    // 함수 이름이 내장 함수와 같다.
+                         // '\' 를 붙여서 전역 네임스페이스의 함수를 실행한다.
 }
 
 function array()
 {
-    $iterator = new \ArrayIterator();    // ArrayIterator is an internal class. Using its name without a backslash
-                                         // will attempt to resolve it within your namespace.
+    $iterator = new \ArrayIterator();    // ArrayIterator는 내장 클래스이다. 역슬래시 없이 사용하면 
+                                         // phptherightway 라는 네임스페이스에서 ArrayIterator 를 찾으려고 할 것이다.
 }
 {% endhighlight %}
 
 * [Global space](http://php.net/manual/en/language.namespaces.global.php)
 * [Global rules](http://php.net/manual/en/userlandnaming.rules.php)
 
-## Strings
+## 문자열
 
-### Concatenation
+### 연결
 
-- If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it's best to use concatenation operators over concatenating assignment operators
-- While within the original scope of the variable, indent when concatenation uses a new line
+- 코드 작성 시 한 줄이 적정 길이(120 글자)를 넘으면 줄을 나눠서 작성한 뒤 문자열을 연결시켜 줄 수 있습니다.
+- 가독성을 위해 연결 및 대입 연산자를 사용하는 것보다는 연결 연산자를 사용하는 것이 좋습니다.
+- 연결 연산자를 이용하는 여러 줄의 코드를 작성할 때에는 들여쓰기를 해주는 것이 좋습니다.
 
 
 {% highlight php %}
 <?php
-$a  = 'Multi-line example';    // concatenating assignment operator (.=)
+$a  = 'Multi-line example';    // 연결 및 대입 연산자 (.=)
 $a .= "\n";
 $a .= 'of what not to do';
 
 vs.
 
-$a = 'Multi-line example'      // concatenation operator (.)
-    . "\n"                     // indenting new lines
+$a = 'Multi-line example'      // 연결 연산자 (.)
+    . "\n"                     // 두 번째 라인부터는 들여써준다.
     . 'of what to do';
 {% endhighlight %}
 
-* [String Operators](http://php.net/manual/en/language.operators.string.php)
+* [문자열 연산자](http://php.net/manual/en/language.operators.string.php)
 
-### String types
+### 문자열의 유형
 
-String types are a constant feature within the PHP community, but hopefully this section will explain the
-differences between the string types and their benefits/uses.
+문자열은 PHP 커뮤니티에서 오랫동안 유지되어 온 기능입니다. 문자열 유형들 간의 차이와 장단점에 대해서 설명해 보겠습니다.
 
-#### Single quotes
+#### 작은따옴표
 
-Single quotes are the simplest way to define a string and are often the quickest. Their speed stems from PHP not
-parsing the string (doesn't parse for variables). They're best suited for:
+작은따옴표(single quotes)는 문자열을 정의하는 가장 쉬운 방법이면서 또 종종 가장 빠르게 수행되는 문자열 구문이기도 합니다. 작은따옴표 문자열은 PHP가 문자열의 내용을 분석하지 않아도 되기 때문에 실행 속도가 빨라질 수 있는 것입니다. 아래와 같은 문자열을 사용하려는 경우 작은따옴표 문자열을 사용하세요.
 
-- Strings that do not need to be parsed
-- Writing of a variable into plain text
+- PHP가 내용을 분석하지 않아도 되는 문자열 
+- 변수명을 일반 텍스트로 출력하려고 하는 경우
 
 {% highlight php %}
 <?php
-echo 'This is my string, look at how pretty it is.';    // no need to parse a simple string
+echo 'This is my string, look at how pretty it is.';    // 단순히 텍스트만 담고 있는 문자열을 PHP에게 분석시킬 필요가 없다.
 
 /**
  * Output:
@@ -175,66 +169,62 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
  */
 {% endhighlight %}
 
-* [Single quote](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.single)
+* [작은따옴표 문자열](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.single)
 
-#### Double quotes
+#### 큰따옴표
 
-Double quotes are the Swiss army knife of strings, but are slower due to the string being parsed. They're best
-suited for:
+큰따옴표(double quotes)는 문자열계의 스위스칼이라고 할 수 있습니다. 하지만 PHP가 내용을 분석하여 실행하기 때문에 상대적으로 느리기도 합니다. 아래와 같은 경우에 사용하세요.
 
-- Escaped strings
-- Strings with multiple variables and plain text
-- Condensing multi-line concatenation, and improving readability
+- 이스케이프된 문자가 포함되는 경우
+- 문자열에 변수의 값을 포함하려는 경우
+- 여러 줄에 걸쳐 연결 연산자로 잇는 문자열을 한 줄로 줄여서 가독성을 높이려는 경우
 
 {% highlight php %}
 <?php
-echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that uses multiple concatenating for
-    . "\n"                                       // variables and escaped string
+echo 'phptherightway is ' . $adjective . '.'     // 변수와 이스케이프 문자를 포함시키려고 작은따옴표 문자열을
+    . "\n"                                       // 여러 줄에 걸쳐서 연결 연산자로 연결시키는 예제 코드
     . 'I love learning' . $code . '!';
 
 vs.
 
-echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
-                                                               // enables us to use a parsable string
+echo "phptherightway is $adjective.\n I love learning $code!"  // 큰따옴표 문자열을 사용하면 연결 연산자를 여러번 
+                                                               // 쓰지 않고도 한 방에 해결할 수 있다.
 {% endhighlight %}
 
-While using double quotes that contain variables, it's often the case that the variable will be touching another
-character. This will result in PHP not parsing the variable due to the variable being camouflaged. To fix this problem,
-wrap the variable within a pair of curly brackets.
+큰따옴표 문자열 안에 포함된 변수 바로 뒤에 일반 텍스트를 붙여야 할 때, 뒤에 붙는 문자 때문에 PHP가 변수명을 제대로 읽지 못할 수가 있습니다. 이럴 때에는 중괄호로 변수를 감싸주면 됩니다.
 
 {% highlight php %}
 <?php
 $juice = 'plum';
-echo "I drank some juice made of $juices";    // $juice cannot be parsed
+echo "I drank some juice made of $juices";    // $juice 라는 변수를 읽을 수 없다.
 
 vs.
 
 $juice = 'plum';
-echo "I drank some juice made of {$juice}s";    // $juice will be parsed
+echo "I drank some juice made of {$juice}s";    // $juice 가 제대로 분석된다.
 
 /**
- * Complex variables will also be parsed within curly brackets
+ * 중괄호 안에 넣은 복잡한 형태의 변수 접근 방식도 잘 지원됩니다.
  */
 
 $juice = array('apple', 'orange', 'plum');
-echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
+echo "I drank some juice made of {$juice[1]}s";   // $juice[1] 이 잘 분석된다.
 {% endhighlight %}
 
-* [Double quotes](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.double)
+* [큰따옴표 문자열](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.double)
 
-#### Nowdoc syntax
+#### Nowdoc 문법
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it's suited toward the
-use of multi-line strings without the need for concatenating.
+nowdoc 문법은 5.3 에서 추가된 기능입니다. 작은따옴표와 동일한 특성을 가지고 있습니다.
 
 {% highlight php %}
 <?php
-$str = <<<'EOD'             // initialized by <<<
+$str = <<<'EOD'             // <<< 기호로 nowdoc 문법 구문을 시작한다.
 Example of string
 spanning multiple lines
 using nowdoc syntax.
 $a does not parse.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+EOD;                        // 끝을 나타내는 'EOD'는 반드시 줄의 가장 처음에 나와야 하고, 뒤에 다른 구문이 오면 안된다.
 
 /**
  * Output:
@@ -246,23 +236,22 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  */
 {% endhighlight %}
 
-* [Nowdoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc)
+* [Nowdoc 문법](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc)
 
-#### Heredoc syntax
+#### Heredoc 문법
 
-Heredoc syntax internally behaves the same way as double quotes except it's suited toward the use of multi-line
-strings without the need for concatenating.
+heredoc 문법은 큰따옴표와 동일하게 동작합니다.
 
 {% highlight php %}
 <?php
 $a = 'Variables';
 
-$str = <<<EOD               // initialized by <<<
+$str = <<<EOD               // <<< 기호로 heredoc 문법 구문을 시작한다.
 Example of string
 spanning multiple lines
 using heredoc syntax.
 $a are parsed.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+EOD;                        // 끝을 나타내는 'EOD'는 반드시 줄의 가장 처음에 나와야 하고, 뒤에 다른 구문이 오면 안된다.
 
 /**
  * Output:
@@ -274,12 +263,11 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  */
 {% endhighlight %}
 
-* [Heredoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc)
+* [Heredoc 문법](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc)
 
-## Ternary operators
+## 삼항 연산자
 
-Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
-stacked/nested, it is advised to use one per line for readability.
+삼항 연산자(ternary operator)는 코드를 간결하게 표현하는 좋은 방법이지만, 남용되는 경향이 있어 주의해야 합니다. 삼항 연산자를 중첩해서 사용할 수 있기는 하지만, 이해할 수 없는 코드가 되기 때문에 그렇게 사용하지 않는 것이 좋습니다.
 
 {% highlight php %}
 <?php
@@ -288,32 +276,29 @@ echo ($a == 5) ? 'yay' : 'nay';
 
 vs.
 
-// nested ternary
+// 중첩된 삼항 연산자
 $b = 10;
-echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
+echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // 코드를 알아볼 수 없다
 {% endhighlight %}
 
-To 'return' a value with ternary operators use the correct syntax.
+'return' 구문과 삼항 연산자를 같이 쓰는 올바른 방법을 봅시다.
 
 {% highlight php %}
 <?php
 $a = 5;
-echo ($a == 5) ? return true : return false;    // this example will output an error
+echo ($a == 5) ? return true : return false;    // 이렇게 하면 에러가 발생한다.
 
 vs.
 
 $a = 5;
-return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
+return ($a == 5) ? 'yay' : 'nope';    // 'yay'를 리턴한다.
 {% endhighlight %}
 
-* [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
+* [삼항 연산자](http://php.net/manual/en/language.operators.comparison.php)
 
-## Variable declarations
+## 변수 선언
 
-At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let's say
-an example string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to
-2MB.
+때때로 프로그래머들은 변수를 정의함으로써 코드를 좀 더 "깔끔하게" 유지하려고 합니다. 그런데 변수를 정의하는 경우, PHP 스크립트에서는 메모리를 두 배 사용하게 하는 결과를 불러오기도 합니다. 아래 예제에서 텍스트가 1MB 정도의 데이터를 포함하고 있다고 한다면 변수에 데이터를 복사함으로써 2MB의 메모리를 사용하게 됩니다.
 
 {% highlight php %}
 <?php
@@ -325,4 +310,4 @@ vs.
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
-* [Performance tips](https://developers.google.com/speed/articles/optimizing-php)
+* [성능 팁](https://developers.google.com/speed/articles/optimizing-php)
