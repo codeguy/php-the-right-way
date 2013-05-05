@@ -33,7 +33,7 @@
         <nav class="site-navigation">
             <div class="build-date">Last Updated: {{ site.time }}</div>
             <ul>
-                <li><a href="#site-header">Welcome</a></li>
+                <li><a href="#site-header">환영합니다</a></li>
                 {% assign lastIsChild = false %}
                 {% for post in site.posts reversed %}
                     {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
