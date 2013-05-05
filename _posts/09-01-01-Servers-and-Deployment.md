@@ -1,3 +1,3 @@
-# Servers and Deployment {#servers_and_deployment_title}
+# 서버와 배포 {#servers_and_deployment_title}
 
-PHP applications can be deployed and run on production web servers in a number of ways.
+PHP 어플리케이션을 운영을 위한 웹 서버에 배포하는 여러가지 방법이 있습니다.
