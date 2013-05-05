@@ -1,4 +1,4 @@
-# Code Style Guide  {#code_style_guide_title}
+# 코딩 스타일 가이드  {#code_style_guide_title}
 
 PHP 커뮤니티는 매우 거대하고, 수많은 라이브러리와 프레임워크, 컴포넌트들이 존재합니다. 
 이렇게 많은 선택지들 중에 몇 가지를 골라 프로젝트에 적용하는 일은 PHP 개발자에게 일상적인 일입니다.
