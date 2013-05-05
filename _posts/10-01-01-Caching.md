@@ -1,4 +1,3 @@
-# Caching {#caching_title}
+# 캐시 {#caching_title}
 
-PHP is pretty quick by itself, but bottlenecks can arise when you make remote connections, load files, etc. 
-Thankfully, there are various tools available to speed up certain parts of your application, or reduce the number of times these various time consuming tasks need to run.
+PHP는 별로 손을 대지 않아도 꽤 빠른 편이긴 하지만, 원격 시스템과 연결을 맺거나 파일을 불러들여야 할 때에는 병목지점이 발생할 수 있습니다. 고맙게도 이렇게 시간을 소요하는 작업을 줄여서 어플리케이션의 성능을 올리는 일을 도와주는 많은 도구들이 있습니다.
