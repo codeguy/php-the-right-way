@@ -12,8 +12,7 @@ title: 디자인 패턴
 
 ## 팩토리
 
-One of the most commonly used design patterns is the factory pattern. In this pattern, a class simply creates
-the object you want to use. Consider the following example of the factory pattern:
+팩토리 패턴(factory pattern)은 아마 디자인 패턴 중에서도 가장 널리 사용되고 있을 것 같습니다. 클래스 하나가 여러분이 원하는 클래스 개체를 생성해주는 패턴입니다. 아래에서 예제를 보시죠.
 
 {% highlight php %}
 <?php
@@ -42,21 +41,15 @@ class AutomobileFactory
     }
 }
 
-// have the factory create the Automobile object
+// Automobile 개체를 생성하는 팩토리 사용
 $veyron = AutomobileFactory::create('Bugatti', 'Veyron');
 
-print_r($veyron->get_make_and_model()); // outputs "Bugatti Veyron"
+print_r($veyron->get_make_and_model()); // "Bugatti Veyron"을 출력
 {% endhighlight %}
 
-This code uses a factory to create the Automobile object. There are two possible benefits to building your code this
-way, the first is that if you need to change, rename, or replace the Automobile class later on you can do so and you
-will only have to modify the code in the factory, instead of every place in your project that uses the Automobile
-class. The second possible benefit is that if creating the object is a complicated job you can do all of the work in
-the factory, instead of repeating it every time you want to create a new instance.
+이 코드에서 Automobile 개체를 생성할 때 팩토리를 사용하고 있습니다. 이런 식으로 코드를 작성하면 두 가지 정도 이점이 있습니다. 하나는 Automobile 클래스 이름을 바꾸거나, 변경이 생기거나, 다른 클래스로 대체해도 Automobile 클래스를 사용하는 모든 곳의 코드를 고치지 않고 팩토리 클래스에 있는 코드만 수정하면 된다는 것입니다. 두번째 이점은 생성하는 과정이 복잡한 클래스 개체라고 해도 그런 코드가 팩토리에만 있고 그 클래스를 생성하는 모든 곳에 반복적으로 복잡한 코드를 넣지 않아도 된다는 것입니다.
 
-Using the factory pattern isn't always necessary (or wise). The example code used here is so simple that a factory
-would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
-yourself a lot of trouble down the road by using factories.
+항상 팩토리 패턴을 사용해야 하는 것은 아닙니다. 바로 위 예제 코드 정도라면 팩토리 패턴을 사용했기 때문에 오히려 불필요하게 더 복잡해졌다고 할 수 있습니다. 하지만 실제 프로젝트를 수행할 때에는 팩토리를 사용해서 도움을 얻을 수 있는 경우가 많을 것입니다.
 
 * [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
