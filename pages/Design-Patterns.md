@@ -1,18 +1,16 @@
 ---
 layout: page
-title: Design Patterns
+title: 디자인 패턴 
 ---
 
-# Design Patterns
+# 디자인 패턴
 
-There are numerous ways to structure the code and project for you web application, and you can put as much or as little
-thought as you like into architecting. But it is usually a good idea to follow to common patterns because it will make
-your code easier to manage and easier for others to understand.
+여러분의 웹 어플리케이션 코드와 프로젝트를 구조화하는 데에는 여러가지 방법이 많습니다. 여러분은 어플리케이션의 아키텍처에 최대한으로 신경을 쓸지, 혹은 최소한으로 신경을 쓸 것인지 결정할 수도 있습니다. 보통은 잘 알려진 일반적인 패턴을 따르는 것이 좋습니다. 프로젝트를 관리하기에도 좋고, 다른 개발자들이 이해하기도 좋으니까요.
 
 * [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
 
-## Factory
+## 팩토리
 
 One of the most commonly used design patterns is the factory pattern. In this pattern, a class simply creates
 the object you want to use. Consider the following example of the factory pattern:
