@@ -53,21 +53,20 @@ print_r($veyron->get_make_and_model()); // "Bugatti Veyron"을 출력
 
 * [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
-## Singleton
+## 싱글턴
 
-When designing web applications, it often makes sense conceptually and architecturally to allow access to one and
-only one instance of a particular class. The singleton pattern enables us to do this.
+웹 어플리케이션을 설계할 때 특정 클래스의 경우에는 오직 하나의 인스턴스만이 존재하여 모든 곳에서 그 인스턴스만을 사용해야 한다는 결정이 의미있는 경우가 있습니다. 싱글턴 패턴(singleton pattern)을 사용하여 그런 클래스를 만들어 냅니다.
 
 {% highlight php %}
 <?php
 class Singleton
 {
     /**
-     * Returns the *Singleton* instance of this class.
+     * 이 클래스의 *싱글턴* 인스턴스를 리턴한다.
      *
-     * @staticvar Singleton $instance The *Singleton* instances of this class.
+     * @staticvar Singleton $instance 이 클래스의 *싱글턴* 인스턴스
      *
-     * @return Singleton The *Singleton* instance.
+     * @return Singleton *싱글턴* 인스턴스.
      */
     public static function getInstance()
     {
@@ -80,16 +79,16 @@ class Singleton
     }
 
     /**
-     * Protected constructor to prevent creating a new instance of the
-     * *Singleton* via the `new` operator from outside of this class.
+     * 이 클래스는 *싱글턴*으로 사용할 것이므로 이 클래스 외부에서
+     * 생성하는 것을 금지하기 위해 생성자를 protected 로 제한한다.
      */
     protected function __construct()
     {
     }
 
     /**
-     * Private clone method to prevent cloning of the instance of the
-     * *Singleton* instance.
+     * *싱글턴* 인스턴스를 복제할 수 없도록 복제 메소드를 private
+     * 으로 제한한다.
      *
      * @return void
      */
@@ -98,8 +97,7 @@ class Singleton
     }
 
     /**
-     * Private unserialize method to prevent unserializing of the *Singleton*
-     * instance.
+     * *싱글턴* 인스턴스를 unserialize 하지 못하게 private 으로 제한한다.
      *
      * @return void
      */
