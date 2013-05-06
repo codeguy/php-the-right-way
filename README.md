@@ -1,4 +1,13 @@
-# PHP: The Right Way
+# PHP: The Right Way 한국어판
+
+## 개요
+
+이 페이지는 _PHP: The Right Way 한국어판_ 프로젝트의 GitHub 저장소 페이지입니다.
+
+## 내용 보기
+
+* [영어판](http://www.phptherightway.com)
+* [한국어판](http://wafe.github.io/php-the-right-way/)
 
 ## Overview
 
