@@ -21,7 +21,7 @@ CLI PHP 스크립트를 웹어플리케이션 경로에 두지 않도록 조심�
 
 `-a` 옵션은 Ruby의 IRB나 Python의 대화형 쉘 같은 대화형 쉘을 제공해줍니다. 이것 말고도 유용한 [커맨드라인 옵션들][cli-options]이 많이 있습니다.
 
-간단한 "Hello, $name" CLI 프로그램을 만들어봅시다. 아래외 같이 `hello.php` 파일을 만들면 됩니다.
+간단한 "Hello, $name" CLI 프로그램을 만들어봅시다. 아래와 같이 `hello.php` 파일을 만들면 됩니다.
 
 {% highlight php %}
 <?php
