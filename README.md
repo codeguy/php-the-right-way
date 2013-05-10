@@ -38,6 +38,7 @@ developers know where to find good information!
 * [Ukrainian](http://iflista.github.com/php-the-right-way)
 * [Portuguese](http://br.phptherightway.com/)
 * [Bulgarian](http://bg.phptherightway.com/)
+* [Polish](http://pl.phptherightway.com/)
 
 ### Translations
 
