@@ -35,4 +35,4 @@
 * [cloudControl](https://www.cloudcontrol.com/)
 * [Windows Azure](http://www.windowsazure.com/)
 * [Zend Developer Cloud](http://www.phpcloud.com/develop)
-* [Google Compute Engine](https://developers.google.com/appengine/docs/php/gettingstarted/)
+* [Google AppEngine](https://developers.google.com/appengine/docs/php/gettingstarted/)
