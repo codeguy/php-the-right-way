@@ -54,4 +54,5 @@ PHP 프로젝트에서 지속적인 통합 기법을 사용하는 방법에는 �
 더 읽어볼 만한 것들:
 
 * [Continuous Integration with Jenkins](http://jenkins-ci.org/)
+* [Continuous Integration with PHPCI](http://www.phptesting.org/)
 * [Continuous Integration with Teamcity](http://www.jetbrains.com/teamcity/)
