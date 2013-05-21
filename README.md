@@ -55,6 +55,7 @@ developers know where to find good information!
 * [Ukrainian](http://iflista.github.com/php-the-right-way)
 * [Bulgarian](http://bg.phptherightway.com)
 * [German] (http://rwetzlmayr.github.io/php-the-right-way)
+* [Turkish](http://hkulekci.github.io/php-the-right-way/)
 
 ### Translations
 

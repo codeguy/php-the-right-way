@@ -21,6 +21,7 @@ _PHP: The Right Way_는 다양한 언어로 변역되어 있습니다.
 * [우크라이나어판](http://iflista.github.com/php-the-right-way/)
 * [불가리아어판](http://bg.phptherightway.com/)
 * [독일어판](http://rwetzlmayr.github.io/php-the-right-way/)
+* [터키어판](http://hkulekci.github.io/php-the-right-way/)
 
 ## Disclaimer
 
