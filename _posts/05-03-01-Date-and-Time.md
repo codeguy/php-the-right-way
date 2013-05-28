@@ -2,15 +2,11 @@
 isChild: true
 ---
 
-## Date and Time {#date_and_time_title}
+## Datum i vreme {#date_and_time_title}
 
-PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There are
-many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to most
-common uses. It can handle time zones, but that is outside this short introduction.
+PHP ima klasu sa nazivom DateTime da bi vam pomogla kada čitate, pišete, poredite ili računate datume ili vreme. Postoji mnogo funkcija koje se odnose na datum i vreme u PHP pored DateTime, ali ona pruža dobar objektno-orijentisani interfejs za najčešće upotrebe. Može da rukuje vremenskim zonama, ali to je van opsega ovog kratkog uvoda.
 
-To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
-or do `new \DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
-output.
+Da biste započeli sa radom sa DateTime, konvertujte raw date and time string u objekat pomoću `createFromFormat()` factory metode ili stavite `new \DateTime` da dobijete trenutni datum i vreme. Koristite `format()` metodu da konvertujete DateTime nazad u string for output.
 {% highlight php %}
 <?php
 $raw = '22. 11. 1968';
@@ -19,10 +15,7 @@ $start = \DateTime::createFromFormat('d. m. Y', $raw);
 echo 'Start date: ' . $start->format('m/d/Y') . "\n";
 {% endhighlight %}
 
-Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
-saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference use
-the `diff()` method. It will return new DateInterval, which is super easy to display.
+Računanje sa DateTime je moguće korišćenjem klase DateInterval. DateTime ima metode kao `add()` and `sub()` koje primaju DateInterval kao argument. Nemojte pisati kod koji pretpostavlja isti broj sekundi svakog dana, i daylight saving i promene vremenske zone će oboriti tu pretpostavku. Umesto toga koristite date intervals. Za računanje razlike u datumima koristite metodu `diff()`. Ona vraća new DateInterval, što je vrlo lako prikazati.
 {% highlight php %}
 <?php
 // create a copy of $start and add one month and 6 days
@@ -34,7 +27,7 @@ echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n"
 // Difference: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
-On DateTime objects you can use standard comparison:
+Za DateTime objekte možete koristiti uobičajeno poređenje:
 {% highlight php %}
 <?php
 if ($start < $end) {
@@ -42,8 +35,7 @@ if ($start < $end) {
 }
 {% endhighlight %}
 
-One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
-DateTime objects, start and end, and the interval for which it will return all events in between.
+Poslednji primer će demonstrirati DatePeriod klasu. Koristi se za iteraciju nad rekurzivnim događajima (recurring). Može da primi dva DateTime objekta, početak i kraj, i interval za koji vraća sve događaje između.
 {% highlight php %}
 <?php
 // output all thursdays between $start and $end
@@ -55,8 +47,8 @@ foreach ($periodIterator as $date) {
 }
 {% endhighlight %}
 
-* [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (accepted date format string options)
+* [Pročitajte o DateTime][datetime]
+* [Pročitajte o formatiranju datuma][dateformat] (accepted date format string options)
 
 [datetime]: http://www.php.net/manual/book.datetime.php
 [dateformat]: http://www.php.net/manual/function.date.php

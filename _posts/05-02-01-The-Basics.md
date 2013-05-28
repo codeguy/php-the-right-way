@@ -2,11 +2,9 @@
 isChild: true
 ---
 
-## The Basics {#the_basics_title}
+## Osnove {#the_basics_title}
 
-PHP is a vast language that allows coders of all levels the ability to produce code not only quickly, but efficiently. 
-However while advancing through the language, we often forget the basics that we first learnt (or overlooked) in favor 
-of short cuts and/or bad habits. To help combat this common issue, this section is aimed at reminding coders of the 
-basic coding practices within PHP.
+PHP je obiman jezik koji omogućava programerima svih nivoa znanja da pišu kod ne samo brzo, već i efikasno.
+Međutim kako napredujemo u jeziku, zaboravljamo osnove koje smo prvo naučili (ili prevideli) u korist prečica i/ili loše prakse. Da bi pomogla u borbi protiv ove česte pojave, ovaj odeljak je namenjen podsećanju programera na osnovnu praksu programiranja u PHP.
 
-* Continue reading on [The Basics](/pages/The-Basics.html)
+* Nastavite da čitate o [Osnovama](/pages/The-Basics.html)

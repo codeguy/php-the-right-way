@@ -1,1 +1,1 @@
-# Coding Practices {#coding_practices_title}
+# Programerske prakse {#coding_practices_title}

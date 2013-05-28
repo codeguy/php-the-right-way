@@ -6,11 +6,11 @@ isChild: true
 
 Composer je **sjajan** dependency manager za PHP. Izlistajte dependencies vašeg projekta u `composer.json` fajlu i sa par jednostavnih komandi, Composer će automatski download dependencies vašeg projekta i podesiti autoučitavanje umesto vas.
 
-Već postoji dosta PHP biblioteka koje su kompatibilne sa Composer, spremne da se koriste u vašem projektu. Ovi "paketi" su nabrojani u [Packagist][1], zvaničnom repozitorijumu za PHP biblioteke kompatibilne sa Composer-om.
+Već postoji dosta PHP biblioteka koje su kompatibilne sa Composer-om, spremne da se koriste u vašem projektu. Ovi "paketi" su nabrojani u [Packagist][1], zvaničnom repozitorijumu za PHP biblioteke kompatibilne sa Composer-om.
 
 ### Kako instalirati Composer
 
-Možete da instalirate Composer u lokalu (u vašem trenutnom radnom direktorijumu; ali se to više ne preporučuje) ili globalno (npr /usr/local/bin). hajde da pretpostavimo da želite da instalirate Composer u lokalu. Iz vašeg korenog direktorijuma projekta:
+Možete da instalirate Composer u lokalu (u vašem trenutnom radnom direktorijumu; ali se to više ne preporučuje) ili globalno (npr /usr/local/bin). Hajde da pretpostavimo da želite da instalirate Composer u lokalu. Iz vašeg korenog direktorijuma projekta:
 
     curl -s https://getcomposer.org/installer | php
 
@@ -26,7 +26,7 @@ Ručna instalacija composera je napredna tehnika; međutim, postoje razni razloz
 - određene problematične ekstenzije nisu učitane
 - određena `php.ini` podešavanja su podešena (? settings are set)
 
-Pošto ručna instalacija ne vrši nijednu od ovih provera, morate doneti odluku da li vam se ovaj kompromis isplati. imajući to u vidu, evo uputstva kako nabaviti Composer ručno:
+Pošto ručna instalacija ne vrši nijednu od ovih provera, morate doneti odluku da li vam se ovaj kompromis isplati. Imajući to u vidu, evo uputstva kako nabaviti Composer ručno:
 
     curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
     chmod +x $HOME/local/bin/composer
@@ -39,34 +39,34 @@ Kada se sretnete sa dokumentacijom koja pokreće Composer kao `php composer.phar
 
 ### Kako definisati i instalirati Dependencies
 
-Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it by hand if you like, or use Composer itself. The `php composer.phar require` command adds a project dependency and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig][2] as a dependency of your project. Run it in your project's root directory where you've downloaded `composer.phar`:
+Composer čuva keeps track of your project's dependencies in a file called `composer.json`. Možete ga održavati ručno ako želite, ili možete koristiti sam Composer. Komanda `php composer.phar require` dodaje project dependency i ako nemate `composer.json` fajl, on će biti napravljen. Sledeći primer dodaje [Twig][2] kao dependency vašeg projekta. Pokrenite ga u korenom direktorijumu vašeg projekta gde ste downloadovali `composer.phar`:
 
 	php composer.phar require twig/twig:~1.8
 
-Alternatively the `php composer.phar init` command will guide you through creating a full `composer.json` file for your project. Either way, once you've created your `composer.json` file you can tell Composer to download and install your dependencies into the `vendors/` directory. This also applies to projects you've downloaded that already provide a `composer.json` file:
+Opciono, komanda `php composer.phar init` će vas voditi kroz pravljenje kompletnog `composer.json` fajla za vaš projekat. Svejedno na koji način, jednom kada napravite fajl `composer.json` možete dati instrukciju Composer-u da download i instalira vaše dependencies u direktorijum `vendors/`. Ovo važi i za projekte koje ste downloadovali koji već sadrže `composer.json` fajl:
 
     php composer.phar install
 
-Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
+Zatim, dodajte ovu liniju u primarni PHP fajl vaše aplikacije; ovo će reći PHP-u da koristi Composer-ov autoloader za dependencies vašeg projekta.
 
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 {% endhighlight %}
 
-Now you can use your project dependencies, and they'll be autoloaded on demand.
+Sada možete koristiti vaše project dependencies, i one će se po zahtevu automatski učitati.
 
-### Updating your dependencies
+### Ažuriranje vaših dependencies
 
-Composer creates a file called `composer.lock` which stores the exact version of each package it downloaded when you first ran `php composer.phar install`. If you share your project with other coders and the `composer.lock` file is part of your distribution, when they run `php composer.phar install` they'll get the same versions as you. To update your dependencies, run `php composer.phar update`.
+Composer kreira fajl `composer.lock` koji čuva exact verziju svakog paketa koji je downloadovao kada prvi put pokrenete `php composer.phar install`. AKo šerujete vaš projekat sa drugim programerima a fajl `composer.lock` je deo vaše distribucije, kada oni pokrenu `php composer.phar install` dobiće iste verzije kao i vi. Da biste ažurirali vaše dependencies, pokrenite `php composer.phar update`.
 
-This is most useful when you define your version requirements flexibly. For instance a version requirement of ~1.8  means "anything newer than 1.8.0, but less than 2.0.x-dev". You can also use the `*` wildcard as in `1.8.*`. Now Composer's `php composer.phar update` command will upgrade all your dependencies to the newest version that fits the restrictions you define.
+Ovo je najkorisnije kada fleksibilno definišete version requirements. Na primer, a version requirement of ~1.8  znači "sve što je novije od verzije 1.8.0, ali  manje od 2.0.x-dev". Možete takođe koristiti i `*` wildcard kao u `1.8.*`. Sada će Composer-ova `php composer.phar update` komanda ažurirati sve vaše dependencies na najnoviju verziju koja odgovara ograničenjima koja ste definisali.
 
-### Checking your dependencies for security issues
+### Proveravanje vaših dependencies sa aspekta sigurnosti
 
-The [Security Advisories Checker][3] is a web service and a command-line tool, both will examine your `composer.lock` file and tell you if you need to update any of your dependencies.
+[Security Advisories Checker][3] je web servis i alat koji se izvršava sa komandne linije, oba će pregledati vaš `composer.lock` fajl i obavestiti vas ako je potrebno da ažurirate bilo koju od vaših dependencies.
 
-* [Learn about Composer][4]
+* [Naučite više o Composer-u][4]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org

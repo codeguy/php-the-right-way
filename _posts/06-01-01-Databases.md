@@ -2,21 +2,15 @@
 title: Databases
 ---
 
-# Databases {#databases_title}
+# Baze podataka {#databases_title}
 
-Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option _until PHP 5.1.0_ was to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
+Često će vaš PHP kod koristiti bazu podataka za čuvanje informacija. Na raspolaganju vam je nekoliko opcija za povezivanje i interakciju sa bazom. Preporučena opcija _do verzije PHP 5.1.0_ je bila korišćenje native drivers kao što su [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], itd.
 
-Native drivers are great if you are only using ONE database in your application, but if, for example, you are using MySQL and a little bit of MSSQL,
-or you need to connect to an Oracle database, then you will not be able to use the same drivers. You'll need to learn a brand new API for each
-database &mdash; and that can get silly.
+Native drivers su sjajni ako koristite samo JEDNU bazu u aplikaciji, ali ako, na primer, koristite MySQL i malo MSSQL, ili vam je potrebno da se povežete sa Oracle bazom, onda nećete moći da koristite iste drajvere. Moraćete da naučite potpuno nov API za svaku bazu podataka &mdash; a to je prilično apsurdno.
 
-As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and the official status since PHP 5.4.0 is
-"Long term deprecation". This means it will be removed within the next few releases, so by PHP 5.6 (or whatever comes after 5.5) it may well be gone. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
-line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development schedules so you won't
-be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
+Kao dodatna napomena u vezi native drivers, mysql ekstenzija za PHP više nije u aktivnom razvoju, a zvanični status od verzije PHP 5.4.0 je "Dugoročna zastarelost". To znači da će biti uklonjena u narednih nekoliko verzija, tako da će do verzije PHP 5.6 (ili šta god bude usledilo posle 5.5) verovatno biti uklonjena. AKo koristite `mysql_connect()` i `mysql_query()` u aplikacijama onda ćete u nekom momentu biti prinuđeni da prepravite kod, tako da je najbolja opcija da zamenite korišćenje mysql sa mysqli ili PDO u vašim aplikacijama u skladu sa sopstvenim tempom razvoja da ne biste morali posle da žurite. _Ako počinjete od početka onda apsolutno nemojte koristiti mysql ekstenziju: koristite [MySQLi ekstenziju][mysqli], ili PDO._
 
-* [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
+* [PHP: Biranje API-ja za MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
 ## PDO
 
