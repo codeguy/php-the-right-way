@@ -49,9 +49,9 @@ koje imaju belu listu kao što su [HTML Purifier][html-purifier] postoje baš iz
 
 [Pogledati filtere za prečišćavanje][2]
 
-### Validacija
+### Validacija (ili proveravanje)
 
-Validacija obezbeđuje da strani input bude ono što se očekuje. Na primer, može da vam bude potrebno da validirate email
+Proveravanje obezbeđuje da strani input bude ono što se očekuje. Na primer, može da vam bude potrebno da proverite email
 adresu, telefonski broj, ili godište prilikom obrade slanja registracije.
 
 [Vidi filtere za validaciju][3]

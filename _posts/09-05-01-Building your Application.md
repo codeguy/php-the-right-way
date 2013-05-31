@@ -2,28 +2,32 @@
 isChild: true
 ---
 
-## Izgradnja i Razvoj Vaše aplikacije {#build_title}
+## Izgradnja i isporučivanje vaše aplikacije {#build_title}
 
-Ako nađete sebe da ručno radite promene šeme baze podataka ili ručno pokrećete testove, pre nego što ažurirate svoje fajlove (ručno), dva puta razmislite! Uz svaki dodatni zadatak potreban da razvijete novu verziju vaše aplikacije, šanse za potencijalno fatalne greške će se povećati. Bez obzira da li se bavite jednostavnim ažuriraǌem, sveobuhvatnom izgradnjom procesa ili čak strategijom kontinuirane integracije, [build automation](http://en.wikipedia.org/wiki/Build_automation) je Vaš prijateǉ.
+Ako zateknete sebe da ručno radite promene šeme baze podataka ili ručno pokrećete testove pre nego što ažurirate svoje 
+fajlove (ručno), razmislite još jednom! Uz svaki dodatni zadatak koji se izvodi ručno potreban da razvijete novu verziju
+aplikacije, šanse za potencijalno fatalne greške se povećavaju. Bez obzira da li se bavite jednostavnim ažuriranjem, 
+sveobuhvatnom izgradnjom procesa ili čak strategijom kontinuirane integracije, [build automation](http://en.wikipedia.org/wiki/Build_automation) je Vaš prijatelj.
 
-Među zadacima koje bi ste možda želeli da automatizujete su:
+Među zadacima koje biste možda želeli da automatizujete su:
 
 * Upravljanje zavisnostima
 * Kompilacija, minifikacija Vaše aktive
 * Pokretanje testova
 * Pravljenje dokumentacije
 * Pakovanje
-* Angažovanje(Deployment)
+* Isporučivanje koda (Deployment)
 
 
-### Build Automation Alati
+### Alati za automatizaciju izgradnje
 
-Alati za izgradnju mogu biti opisani kao skup skripti koje rukuju zajedničkim zadacima razvoja softvera. Alat za izgradnju nije deo Vašeg softvera, on deluje na Vaš softver 'izvana'.
+Alati za izgradnju mogu biti opisani kao skup skripti koje rukuju zajedničkim zadacima razvoja softvera. Alat za 
+zgradnju nije deo vašeg softvera, on deluje na vaš softver 'izvana'.
 
 Postoji mnogo dostupnih alata otvorenog koda da vam pomogne sa automatizacijom, neki su napisani u PHP-u, drugi nisu.
-To ne treba da Vas sputava da ih koristite, ako više odgovaraju za određeni posao. Evo nekoliko primera:
+To ne treba da vas sputava da ih koristite, ako više odgovaraju za određeni posao. Evo nekoliko primera:
 
-[Phing](http://www.phing.info/) je najlakši način da počnete sa primenom automatizacije u svetu PHP-a. Pomoću Phing-a 
+[Phing](http://www.phing.info/) je najlakši način da počnete sa primenom automatizacije isporuivanja koda u svetu PHP-a. Pomoću Phing-a 
 možete da kontrolišete pakovanje, angažovanje(deployment) ili testiranje procesa unutar jednostavne XML build datoteke. Phing (koji se zasniva na [Apache Ant](http://ant.apache.org/)) obezbeđuje bogat set zadataka, obično potrebnih za instalaciju ili ažuriranje web aplikacija i može se proširiti dodatnim prilagođenim zadacima, pisanim u PHP-u.
 
 [Capistrano](https://github.com/capistrano/capistrano/wiki) je sistem namenjen *srednjim-do-naprednim programerima* za 

@@ -11,7 +11,7 @@ projekti kao što su Drupal, Zend, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, it
 koristiti za vaše lične projekte, ili nastaviti u vašem ličnom stilu.
 
 Idealno bi bilo da pišete PHP kod koji je u skladu sa poznatim standardom. Ovo može biti bilo koaj kombinacija PSR-ova, 
-ili jedan od standarda kodiranja koji je propisao PEAR ili Zend. To podrazumeva da drugi programeri mogu lako da čitaju 
+ili jedan od standarda kodiranja koji je propisao PEAR ili Zend. To podrazumeva da drugi developeri mogu lako da čitaju 
 i rade sa vašim kodom, a da su aplikacije koje implementiraju komponente konzistentne čak i pri radu sa dosta koda koji 
 je kreirala treća strana.
 

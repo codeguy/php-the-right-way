@@ -6,7 +6,7 @@ isChild: true
 
 Jedan od najkorisnijih alata u razvoju softvera je odgovarajući debugger. On vam omogućava da pratite izvršenje vašeg 
 koda i posmatrate sadržaj stack-a. XDebug, PHP-ov debugger, može se koristiti sa raznim IDE-ovima da obezbedi 
-?Breakpoints i ?stack inspekcija. On takođe omogućava alatima kao što su PHPUnit i KCacheGrind da izvrše analizu 
+?Breakpoints i ?stack inspection. On takođe omogućava alatima kao što su PHPUnit i KCacheGrind da izvrše analizu 
 pokrivenosti koda i code profiling.
 
 Ako se nađete u škripcu, spremni da pribegnete var_dump/print_r, a i dalje ne nalazite rešenje - možda bi trebalo da 

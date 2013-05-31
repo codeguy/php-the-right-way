@@ -9,7 +9,7 @@ iskaču kada radite uživo. Takođe je nezgodno održavati ažurnim različita r
 korišćene biblioteke kada radite sa timom programera. 
 
 Ako razvijate na Windowsu a objavljujete na Linux (ili bilo čemu što nije Windows) ili razvijate u timu, trebalo bi da 
-razmotrite korišćenje virtuelne mašine. Ovo zvuči komplikovano, ali korišćenjem [Vagrant-a][vagrant] možete podesiti 
+razmotrite korišćenje virtuelne mašine. Ovo zvuči kompikovano, ali korišćenjem [Vagrant-a][vagrant] možete podesiti 
 jednostavnu virtuelnu mašinu u samo par koraka. Ovi osnovni boksevi onda mogu da se podese ručno, ili pomoću 
 "provisioning" softvera kao što je [Puppet][puppet] ili [Chef][chef] koji će ovo uraditi umesto vas. Provisioning 
 osnovnog boksa je sjajan način da obezbedite da će višestruki boksevi biti podešeni na identičan način i eliminiše 

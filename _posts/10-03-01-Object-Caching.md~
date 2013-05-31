@@ -11,7 +11,7 @@ softver za keširanje objekata za držanje ovih delova podataka u memoriji da bi
 naredne zahteve, možete ostvariti značajno poboljšanje u performansama i smanjiti opterećenje na vašim serverima sa 
 bazama podataka.
 
-Mnoga od popularnih rešenja za bytecode keširanje vam takođe dopuštaju i keširanje prilagođenih (custom) podataka, 
+Mnoga od popularnih rešenja za bytecode keširanje  Vam takođe dopuštaju i keširanje prilagođenih (custom) podataka, 
 tako da ima još više razloga da iskoristite njihove prednosti. APC, XCache, i WinCache, svi obezbeđuju API-je da 
 sačuvate podatke iz Vašeg PHP koda u njihov memorijski keš.
 
@@ -21,7 +21,7 @@ korišćenje. Jedino pravo ograničenje je da je APC povezan sa serverom na koji
 se instalira kao zaseban servis i može mu se pristupiti preko mreže, što znači da možete da sačuvate objekte u 
 super-brzo skladište podataka na centralnoj lokaciji iz kojeg mnogo različitih sistema može da povlači podatke.
 
-Imajte na umu da kada se radi o PHP-u kao (Fast-)CGI aplikaciji unutar Vašeg webservera, svaki PHP proces će imati svoj 
+Imajte na umu da kada se radi o PHP-u kao(Fast-)CGI aplikaciji unutar Vašeg webservera, svaki PHP proces će imati svoj 
 keš, tj APC podaci se ne dele između Vaših radnih procesa. U ovim slučajevima, možda ćete želeti da razmotrite da umesto
 toga koristite memcached, jer nije vezan za PHP procese.
 
@@ -45,8 +45,8 @@ print_r($data);
 
 Saznajte više o popularnim sistemima za keširanje objekata:
 
-* [APC funkcije](http://php.net/manual/en/ref.apc.php)
+* [APC Functions](http://php.net/manual/en/ref.apc.php)
 * [Memcached](http://memcached.org/)
 * [Redis](http://redis.io/)
 * [XCache APIs](http://xcache.lighttpd.net/wiki/XcacheApi)
-* [WinCache funkcije](http://www.php.net/manual/en/ref.wincache.php)
+* [WinCache Functions](http://www.php.net/manual/en/ref.wincache.php)

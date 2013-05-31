@@ -10,7 +10,7 @@ prostora imena u verziji PHP 5.3 (2009), kao i tipova u PHP 5.4 (2012).
 
 ### Objektno-orijentisano programiranje
 
-PHP ima vrlo upotpunjen set mogućnosti za objektno-orijentisano programiranje, uključujući podršku za klase, apstraktne 
+PHP ima vrlo upotpunjen set osobina za objektno-orijentisano programiranje, uključujući podršku za klase, apstraktne 
 klase, interfejse, nasleđivanje, konstruktore, kloniranje, izuzetke i drugo.
 
 * [Pročitajte o Objektno-orijentisanom PHP][oop]
@@ -20,12 +20,12 @@ klase, interfejse, nasleđivanje, konstruktore, kloniranje, izuzetke i drugo.
 
 PHP podržava funkcije prve klase, što znači da funkcija može biti dodeljena promenljivoj. I korisnički definisane i 
 ugrađene funkcije mogu biti referencirane promenljivom i pozvane dinamički. Funkcije se mogu prosleđivati kao argumenti 
-drugim funkcijama (karakteristika koja se naziva Funkcije višeg reda) i funkcija može vratiti druge funkcije.
+drugim funkcijama (osobina koja se naziva Funkcije višeg reda) i funkcija može vratiti druge funkcije.
 
-Rekurzija, karakteristika koja omogućava funkciji da poziva samu sebe, se podržava u jeziku, ali se većina PHP koda 
-fokusira na iteracije.
+Rekurzija, osobina koja omogućava fukciji da poziva samu sebe, se podržava u jeziku, ali se većina PHP koda fokusira na 
+iteracije.
 
-Nove anonimne funkcije (sa podrškom za closures) su prisutne od verzije PHP 5.3 (2009).
+Nove anonimne funkcije (sa podrškom za ?closures) su prisutne od verzije PHP 5.3 (2009).
 
 PHP 5.4 je dodao mogućnost da se closures povežu sa domenom objekta i takođe poboljšao podršku za callables tako da se 
 one mogu koristiti naizmenično sa anonimnim funkcijama u skoro svim slučajevima.
@@ -41,7 +41,7 @@ one mogu koristiti naizmenično sa anonimnim funkcijama u skoro svim slučajevim
 
 PHP podržava razne varijante meta programiranja preko mehanizama kao što su Reflection API i magičnih metoda (Magic 
 Methods). Postoji puno magičnih metoda, kao što su `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, itd.
-koje omogućavaju programerima da se uključe u ponašanje klase. Ruby programeri često izjavljuju da PHP-u nedostaje 
+koje omogućavaju developerima da se uključe u ponašanje klase. Ruby developeri često izjavljuju da PHP-u nedostaje 
 `method_missing`, ali on postoji kao `__call()` i `__callStatic()`.
 
 * [Pročitajte o magičnim metodama (Magic Methods)][magic-methods]
