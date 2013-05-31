@@ -82,7 +82,7 @@ class Singleton
     {
         static $instance = null;
         if (null === $instance) {
-            $instance = new static;
+            $instance = new static();
         }
 
         return $instance;
