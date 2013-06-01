@@ -4,20 +4,10 @@ isChild: true
 
 ## Vagrant {#vagrant_title}
 
-Running your application on different environments in development and production can lead to strange bugs 
-popping up when you go live. It's also tricky to keep different development environments up to date with the same 
-version for all libraries used when working with a team of developers. 
+如果你在开发应用和发布应用的时候采用了不同的环境，那么在正式使用时，应用可能出现许多奇怪的BUG。如果你是在开发团队里工作，那么保证各位的开发环境和所有的库文件都是最新的并且处在同一版本，会是件更麻烦的事。
+如果你在Windows平台开发并准备部署到Linux（或其他非Windows的平台）上，或者你是在开发团队里工作，那你应该考虑用个虚拟机。这虽然听起来挺麻烦，但是 [Vagrant][vagrant]这个程序可以辅助你用几步就创建一个简单的虚拟机。 接下来，你可以手动配置这些基础的环境，或者你可以找个部署软件来替你完成这些事情，比如说[Puppet][puppet]或[Chef][chef]。部署个基础环境，能很好地保证大家的开发环境建立的方式都大致相似，而且还能省去你维护那些复杂的“安装命令”列表的麻烦。 你也可以轻易地毁掉现有的基础环境后再做一个新的出来，这样你就能有一个全新的换精灵。
 
-If you are developing on Windows and deploying to Linux (or anything non-Windows) or are developing in a team, you 
-should consider using a virtual machine. This sounds tricky, but using [Vagrant][vagrant] you can set up a simple 
-virtual machine with only a few steps. These base boxes can then be set up manually, or you can use "provisioning" 
-software such as [Puppet][puppet] or [Chef][chef] to do this for you. Provisioning the base box is a great way to 
-ensure that multiple boxes are set up in an identical fashion and removes the need for you to maintain complicated 
-"set up" command lists. You can also "destroy" your base box and recreate it without many manual steps, making it
-easy to create a "fresh" installation.
-
-Vagrant creates shared folders used to share your code between your host and your virtual machine, meaning you can 
-create and edit your files on your host machine and then run the code inside your virtual machine.
+[Vagrant][vagrant]会创建一些共享文件夹，用来给你在主机和虚拟机之间共享代码用。也就是说，你可以在主机上写好程序，然后在虚拟机中运行。
 
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/
