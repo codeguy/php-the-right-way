@@ -94,5 +94,6 @@ ograničenjima koja ste definisali.
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org
-[3]: http://getcomposer.org/doc/00-intro.md
-[4]: https://security.sensiolabs.org/
+[3]: https://security.sensiolabs.org/
+[4]: http://getcomposer.org/doc/00-intro.md
+

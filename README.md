@@ -117,10 +117,19 @@ _PHP: The Right Way_ is hosted on GitHub Pages. It is a Jekyll project available
 
 <<<<<<< HEAD
 * [English](http://www.phptherightway.com)
+* [Catalan] (http://ca.phptherightway.com)
 * [Chinese](http://wulijun.github.com/php-the-right-way)
+* [Japanese] (http://ja.phptherightway.com)
+* [Korean] (http://wafe.github.io/php-the-right-way)
+* [Italian] (http://it.phptherightway.com)
+* [Polish](http://pl.phptherightway.com)
+* [Portuguese](http://br.phptherightway.com)
+* [Russian] (http://getjump.github.io/ru-php-the-right-way)
+* [Spanish] (http://es.phptherightway.com)
 * [Ukrainian](http://iflista.github.com/php-the-right-way)
-* [Portuguese](http://br.phptherightway.com/)
-* [Bulgarian](http://bg.phptherightway.com/)
+* [Bulgarian](http://bg.phptherightway.com)
+* [German] (http://rwetzlmayr.github.io/php-the-right-way)
+* [Turkish](http://hkulekci.github.io/php-the-right-way/)
 
 ### Translations
 
