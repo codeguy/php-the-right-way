@@ -26,7 +26,7 @@ PHP支持函数递归调用，即函数自己调用自己，不过在实际的PH
 
 PHP 5.4支持把闭包绑定到对象作用域，并改善其可调用性，从而可以在大部分场景中使用匿名函数替代普通函数。
 
-* [学习更多PHP函数式编程](/php-the-right-way/pages/Functional-Programming.html)
+* [学习更多PHP函数式编程](http://wulijun.github.io/php-the-right-way/pages/Functional-Programming.html)
 * [学习匿名函数][anonymous-functions]
 * [Read about the Closure class][closure-class]
 * [More details in the Closures RFC][closures-rfc]
