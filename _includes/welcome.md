@@ -9,15 +9,15 @@ standards, and links to authoritative tutorials around the Web.
 _PHP: The Right Way_ is (or soon will be) translated into many different languages:
 
 * [English](http://www.phptherightway.com)
-* Catalan (Needs translation)
+* Catalan (Link broken... we're looking into it)
 * [Chinese](http://wulijun.github.com/php-the-right-way)
 * [Japanese](http://ja.phptherightway.com)
 * [Korean](http://wafe.github.io/php-the-right-way/)
-* Italian (Needs translation)
+* Italian (Link broken... we're looking into it)
 * [Polish](http://pl.phptherightway.com/)
 * [Portuguese](http://br.phptherightway.com/)
 * [Russian](http://getjump.github.io/ru-php-the-right-way)
-* Spanish (Needs translation)
+* Spanish (Link broken... we're looking into it)
 * [Ukrainian](http://iflista.github.com/php-the-right-way/)
 * [Bulgarian](http://bg.phptherightway.com/)
 * [German](http://rwetzlmayr.github.io/php-the-right-way/)
