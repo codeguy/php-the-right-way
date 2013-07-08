@@ -21,18 +21,18 @@ the object you want to use. Consider the following example of the factory patter
 <?php
 class Automobile
 {
-    private $vehicle_make;
-    private $vehicle_model;
+    private $_vehicle_make;
+    private $_vehicle_model;
 
     public function __construct($make, $model)
     {
-        $this->vehicle_make = $make;
-        $this->vehicle_model = $model;
+        $this->_vehicle_make = $make;
+        $this->_vehicle_model = $model;
     }
 
     public function get_make_and_model()
     {
-        return $this->vehicle_make . ' ' . $this->vehicle_model;
+        return $this->_vehicle_make . ' ' . $this->_vehicle_model;
     }
 }
 
