@@ -17,7 +17,7 @@ obvious.
 
 Another problem is when classes automatically throw an error to the screen and exit the process. When you do this you 
 stop another developer from being able to dynamically handle that error. Exceptions should be thrown to make a developer aware 
-of an error, then they can choose how to handle this. E.g:
+of an error; they then can choose how to handle this. E.g.:
 
 {% highlight php %}
 <?php
