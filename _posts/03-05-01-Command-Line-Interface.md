@@ -32,7 +32,7 @@ echo "Hello, $name\n";
 
 PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer variable containing the argument *count* and [`$argv`][argv] is an array variable containing each argument's *value*. The first argument is always the name of your PHP script file, in this case `hello.php`.
 
-The `exit()` expression is used with a non zero number to let the shell know that the command failed. Commonly used exit codes can be found [here][exit-codes]
+The `exit()` expression is used with a non-zero number to let the shell know that the command failed. Commonly used exit codes can be found [here][exit-codes]
 
 To run our script, above, from the command line:
 
