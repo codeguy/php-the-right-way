@@ -57,7 +57,7 @@ database preventing potential SQL injection attacks.
 You should also be aware that database connections use up resources and it was not unheard-of to have resources
 exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you
 can implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted,
-ie. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends
+i.e. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends -
 unless of course you are using persistent connections.
 
 * [Learn about PDO connections][5]

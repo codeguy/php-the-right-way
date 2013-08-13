@@ -24,7 +24,7 @@ You can use [PHP_CodeSniffer][phpcs] to check code against any one of these reco
 like [Sublime Text 2][st-cs] to be given real time feedback. 
 
 Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
-conforms with these standards, saving you from fixing each problem by hand.
+conforms to these standards, saving you from fixing each problem by hand.
 
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily readable 
 by all current and future parties who may be working on the codebase.
