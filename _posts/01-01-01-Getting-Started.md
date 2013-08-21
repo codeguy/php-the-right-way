@@ -1,6 +1,2 @@
----
-title: Primeros Pasos
----
-
-# Primeros Pasos
+# Primeros pasos {#getting_started_title}
 
