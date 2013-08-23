@@ -11,23 +11,23 @@ them, then pull them directly from the cache for following requests, you can gai
 performance as well as reduce the load on your database servers.
 
 Many of the popular bytecode caching solutions let you cache custom data as well, so there's even more reason to take
-advantage of them. APC, XCache, and WinCache all provide APIs to save data from your PHP code to their memory cache.
+advantage of them. APCu, XCache, and WinCache all provide APIs to save data from your PHP code to their memory cache.
 
-The most commonly used memory object caching systems are APC and memcached. APC is an excellent choice for object
+The most commonly used memory object caching systems are APCu and memcached. APCu is an excellent choice for object
 caching, it includes a simple API for adding your own data to its memory cache and is very easy to setup and use. The
-one real limitation of APC is that it is tied to the server it's installed on. Memcached on the other hand is installed
+one real limitation of APCu is that it is tied to the server it's installed on. Memcached on the other hand is installed
 as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
 store in a central location and many different systems can pull from it.
 
 Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own
-cache, i.e. APC data is not shared between your worker processes. In these cases, you might want to consider using
+cache, i.e. APCu data is not shared between your worker processes. In these cases, you might want to consider using
 memcached instead, as it's not tied to the PHP processes.
 
-In a networked configuration APC will usually outperform memcached in terms of access speed, but memcached will be able
+In a networked configuration APCu will usually outperform memcached in terms of access speed, but memcached will be able
 to scale up faster and further. If you do not expect to have multiple servers running your application, or do not need
-the extra features that memcached offers then APC is probably your best choice for object caching.
+the extra features that memcached offers then APCu is probably your best choice for object caching.
 
-Example logic using APC:
+Example logic using APCu:
 
 {% highlight php %}
 <?php
@@ -41,8 +41,12 @@ if ($data === false) {
 print_r($data);
 {% endhighlight %}
 
+Note that prior to PHP 5.5, APC provides both an object cache and a bytecode cache. APCu is a project to bring APC's
+object cache to PHP 5.5+, since PHP now has a built-in bytecode cache (OPcache).
+
 Learn more about popular object caching systems:
 
+* [APCu](https://github.com/krakjoe/apcu)
 * [APC Functions](http://php.net/manual/en/ref.apc.php)
 * [Memcached](http://memcached.org/)
 * [Redis](http://redis.io/)
