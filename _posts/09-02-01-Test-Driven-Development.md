@@ -56,3 +56,4 @@ data and simulating actual users of the application.
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
 * [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
+* [Storyplayer](http://datasift.github.io/storyplayer) is a full-stack testing framework that includes support for creating and destroying test environments on demand
