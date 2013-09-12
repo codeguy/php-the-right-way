@@ -33,7 +33,6 @@ by all current and future parties who may be working on the codebase.
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
-[psr3]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [zend-cs]: http://framework.zend.com/wiki/display/ZFDEV2/Coding+Standards
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
