@@ -10,7 +10,7 @@ La comunidad de PHP es una comunidad grande  y con mucha diversidad. Sus miembro
 
 ## Grupos de Usuarios de PHP
 
-Si usted vive en una ciudad grande, lo más probable es que exista un grupo de usuarios de PHP cerca de usted. Aunque no existe todavía una lista oficial de estos grupos, si puede encontrar fácilmente un grupo local usando [Google][google] o [Meetup.com][meetup]. Si usted vive en una ciudad más pequeña, quizás no haya grupos de usuarios locales. Si esa es su situación, ¡lo invitamos a que inicie su propio grupo!
+Si usted vive en una ciudad grande, es muy probable que exista un grupo de usuarios de PHP cerca. Aunque no existe todavía una lista oficial de estos grupos, si puede encontrar fácilmente un grupo local usando [Google][google] o [Meetup.com][meetup]. Si usted vive en una ciudad más pequeña, quizás no haya grupos de usuarios locales. Si esa es su situación, ¡lo invitamos a que inicie su propio grupo!
 
 [Lea más acerca de los grupos de usuarios en el wiki de PHP][php-wiki]
 
