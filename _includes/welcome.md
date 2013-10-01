@@ -8,7 +8,18 @@ _PHP: La Manera Correcta_ ha sido (o muy pronto será) traducido a diferentes le
 
 * [Inglés](http://www.phptherightway.com)
 * [Chino](http://wulijun.github.com)
-* [Español](http://es.phptherightway.com)
+* [Japonés](http://ja.phptherightway.com)
+* [Coreano](http://ja.phptherightway.com)
+* [Italiano](http://ja.phptherightway.com)
+* [Polaco](http://pl.phptherightway.com/)
+* [Portugués](http://br.phptherightway.com/)
+* [Ruso](http://getjump.github.io/ru-php-the-right-way)
+* [Español](http://lamaneracorrecta.php.org.ve/)
+* [Ucraniano](http://iflista.github.com/php-the-right-way/)
+* [Búlgaro](http://bg.phptherightway.com/)
+* [Alemán](http://rwetzlmayr.github.io/php-the-right-way/)
+* [Turco](http://hkulekci.github.io/php-the-right-way/)
+
 
 ## Advertencia
 
