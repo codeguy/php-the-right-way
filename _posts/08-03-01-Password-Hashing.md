@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: password_hashing
 ---
 
 ## Password Hashing {#password_hashing_title}

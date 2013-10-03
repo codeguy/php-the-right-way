@@ -4,7 +4,9 @@ description: "An easy-to-read, quick reference for PHP best practices, accepted 
 ---
 
 {% capture welcome_content %}{% include welcome.md %}{% endcapture %}
+<div id="site-header">
 {{ welcome_content|markdownify }}
+</div>
 
 {% capture backtotop %}[Back to Top](#top){.top}{% endcapture %}
 {% for post in site.posts reversed %}

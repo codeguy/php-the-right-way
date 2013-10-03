@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: error_reporting
 ---
 
 ## Error Reporting {#error_reporting_title}
