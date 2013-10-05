@@ -59,7 +59,7 @@ the creation of a <em>lot</em> of custom Exceptions, some of which could have be
 provided in the [SPL extension][splext]. 
 
 If for example you use the `__call()` Magic Method and an invalid method is requested then instead of throwing a standard 
-Exception which is vague, or creating a custom Exception just for that, you could just `throw new BadFunctionCallException;`.
+Exception which is vague, or creating a custom Exception just for that, you could just `throw new BadMethodCallException;`.
 
 * [Read about Exceptions][exceptions]
 * [Read about SPL Exceptions][splexe]
