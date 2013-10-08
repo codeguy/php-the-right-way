@@ -19,6 +19,7 @@ and applications that implement the components can have consistency even when wo
 * [Read about PSR-2][psr2]
 * [Read about PEAR Coding Standards][pear-cs]
 * [Read about Zend Coding Standards][zend-cs]
+* [Read about Symfony Coding Standards][symfony-cs]
 
 You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text editors 
 like [Sublime Text 2][st-cs] to be given real time feedback. 
@@ -35,6 +36,7 @@ by all current and future parties who may be working on the codebase.
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [zend-cs]: http://framework.zend.com/wiki/display/ZFDEV2/Coding+Standards
+[symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
