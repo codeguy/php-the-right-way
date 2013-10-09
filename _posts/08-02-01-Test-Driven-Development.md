@@ -31,7 +31,7 @@ you run a project which accepts pull requests then you should suggest this as a 
 applications, but there are several alternatives
 
 * [SimpleTest](http://simpletest.org)
-* [Enhance PHP](http://www.enhance-php.com/)
+* [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
 * [PUnit](http://punit.smf.me.uk/)
 * [atoum](https://github.com/atoum/atoum)
 
