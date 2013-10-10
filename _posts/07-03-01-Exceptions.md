@@ -40,7 +40,7 @@ catch(Fuel\Email\SendingFailedException $e)
 }
 finally
 {
-    // Use this to let user know email was sent
+    // PHP >= 5.5. Code in this block is always executed.
 }
 {% endhighlight %}
 
