@@ -36,7 +36,7 @@ can be used interchangeably with anonymous functions in almost all cases.
 * [More details in the Closures RFC][closures-rfc]
 * [Read about Callables][callables]
 * [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
-* [Read about higher-order functions][higer-order-functions]
+* [Read about higher-order functions][higher-order-functions]
 
 ### Meta Programming
 
