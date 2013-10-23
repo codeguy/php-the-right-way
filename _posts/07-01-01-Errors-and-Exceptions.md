@@ -1,6 +1,6 @@
 ---
-title: Errors and Exceptions
+title: 에러와 예외
 ---
 
-# Errors and Exceptions {#errors_and_exceptions_title}
+# 에러와 예외 {#errors_and_exceptions_title}
 
