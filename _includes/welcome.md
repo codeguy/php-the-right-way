@@ -9,15 +9,15 @@
 _PHP: The Right Way_는 다양한 언어로 변역되어 있습니다.
 
 * [영어판](http://www.phptherightway.com)
-* [카탈로니아어판](번역 필요)
+* [카탈로니아어판](링크 깨짐. 찾는 중입니다.)
 * [중국어판](http://wulijun.github.com/php-the-right-way)
 * [일본어판](http://ja.phptherightway.com)
 * [한국어판](http://wafe.github.io/php-the-right-way/)
-* [이탈리아어판](번역 필요)
+* [이탈리아어판](링크 깨짐. 찾는 중입니다.)
 * [폴란드어판](http://pl.phptherightway.com/)
 * [포르투갈어판](http://br.phptherightway.com/)
 * [러시아어판](http://getjump.github.io/ru-php-the-right-way)
-* [스페인어판](번역 필요)
+* [스페인어판](링크 깨짐. 찾는 중입니다.)
 * [우크라이나어판](http://iflista.github.com/php-the-right-way/)
 * [불가리아어판](http://bg.phptherightway.com/)
 * [독일어판](http://rwetzlmayr.github.io/php-the-right-way/)
