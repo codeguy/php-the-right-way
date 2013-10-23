@@ -111,12 +111,12 @@ class SingletonChild extends Singleton
 }
 
 $obj = Singleton::getInstance();
-\var_dump($obj === Singleton::getInstance());             // bool(true)
+var_dump($obj === Singleton::getInstance());             // bool(true)
 
 $anotherObj = SingletonChild::getInstance();
-\var_dump($anotherObj === Singleton::getInstance());      // bool(false)
+var_dump($anotherObj === Singleton::getInstance());      // bool(false)
 
-\var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
+var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
 {% endhighlight %}
 
 이 코드에서는 [*정적(static)* 변수](http://php.net/language.variables.scope#language.variables.scope.static)와 정적 생성 메소드(`getInstance()`)를 사용한 싱글턴 구현을 보여주고 있습니다. 아래 내용을 유념하세요.
@@ -124,7 +124,7 @@ Note the following:
 
 * 생성자 [`__construct`](http://php.net/language.oop5.decon#object.construct)는 `new` 연산자를 사용해서 다른 곳에서 함부로 생성할 수 없도록 protected 로 제한되어 있습니다.
 * Magic Method [`__clone`](http://php.net/language.oop5.cloning#object.clone)은 [`clone`](http://php.net/language.oop5.cloning) 연산자를 사용해서 복제할 수 없도록 private 으로 제한되어 있습니다.
-* Magic Method [`__wakeup`](http://php.net/language.oop5.magic#object.wakeup)은 전역 함수 [`\unserialize()`](http://php.net/function.unserialize)를 이용해서 unserialize 할 수 없도록 private 으로 제한되어 있습니다.
+* Magic Method [`__wakeup`](http://php.net/language.oop5.magic#object.wakeup)은 전역 함수 [`unserialize()`](http://php.net/function.unserialize)를 이용해서 unserialize 할 수 없도록 private 으로 제한되어 있습니다.
 * 새 인스턴스 생성 시에는 정적 메소드인 `getInstance()` 내에서 [지연된 정적 바인딩](http://php.net/language.oop5.late-static-bindings)을 통해서 생성됩니다. `static` 키워드가 사용되고 있는데요, 지연된 정적 바인딩을 사용함으로써 `Singleton` 클래스를 상속해서 싱글턴 패턴을 사용하는 자식 클래스들을 만들 수 있게 됩니다.
 
 웹 어플리케이션의 HTTP 요청 처리 사이클에서 특정 클래스의 인스턴스가 단 하나만 존재해야 한다는 것을 명확히 하고 싶을 때 싱글턴 패턴을 사용하면 됩니다. Configuration 클래스 같은 전역 개체나 이벤트 큐 같은 공유 리소스의 경우 통상적으로 그러한 성격을 띄는 경우가 많습니다.
