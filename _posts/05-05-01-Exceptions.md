@@ -40,6 +40,10 @@ catch(Fuel\Email\SendingFailedException $e)
 {
     // 메일 전송을 시도했는데 성공하지 못한 경우
 }
+finally
+{
+    // 메일이 전송되었다는 것을 사용자에게 알리는 것은 여기서
+}
 {% endhighlight %}
 
 ### SPL 예외
