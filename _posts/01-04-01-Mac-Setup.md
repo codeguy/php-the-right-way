@@ -4,8 +4,8 @@ isChild: true
 
 ## Mac Setup  {#mac_setup_title}
 
-OSX comes prepackaged with PHP but it is normally a little behind the latest stable. Lion comes with PHP 5.3.6 and
-Mountain Lion has 5.3.10.
+OSX comes prepackaged with PHP but it is normally a little behind the latest stable. Lion comes with PHP 5.3.6,
+Mountain Lion has 5.3.10, and Mavericks has 5.4.17.
 
 To update PHP on OSX you can get it installed through a number of Mac [package managers][mac-package-managers], with
 [php-osx by Liip][php-osx-downloads] being recommended.
