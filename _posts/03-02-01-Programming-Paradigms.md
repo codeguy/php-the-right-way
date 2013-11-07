@@ -5,8 +5,8 @@ isChild: true
 ## Programming Paradigms {#programming_paradigms_title}
 
 PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over
-the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 
-(2009), and traits in PHP 5.4 (2012). 
+the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 
+5.3 (2009), and traits in PHP 5.4 (2012).
 
 ### Object-oriented Programming
 
@@ -18,12 +18,12 @@ interfaces, inheritance, constructors, cloning, exceptions, and more.
 
 ### Functional Programming
 
-PHP supports first-class function, meaning that a function can be assigned to a variable. Both user-defined and built-in
-functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to other
-functions (feature called Higher-order functions) and function can return other functions.
+PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and 
+built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to 
+other functions (a feature called higher-order functions) and functions can return other functions.
 
-Recursion, a feature that allows a function to call itself is supported by the language, but most of the PHP code focus
-on iteration.
+Recursion, a feature that allows a function to call itself, is natively supported by PHP. In practice, most PHP code 
+uses iteration to solve the same types of problems.
 
 New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
 
@@ -36,6 +36,7 @@ can be used interchangeably with anonymous functions in almost all cases.
 * [More details in the Closures RFC][closures-rfc]
 * [Read about Callables][callables]
 * [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
+* [Read about higher-order functions][higher-order-functions]
 
 ### Meta Programming
 
@@ -58,3 +59,4 @@ available as `__call()` and `__callStatic()`.
 [traits]: http://www.php.net/traits
 [call-user-func-array]: http://php.net/manual/en/function.call-user-func-array.php
 [closures-rfc]: https://wiki.php.net/rfc/closures
+[higher-order-functions]: https://en.wikipedia.org/wiki/Higher-order_function
