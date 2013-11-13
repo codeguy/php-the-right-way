@@ -146,27 +146,27 @@ interface OutputInterface
     public function load();
 }
 
-class OutputSerializedArray implements OutputInterface
+class SerializedArrayOutput implements OutputInterface
 {
     public function load()
     {
-        return serialize($array_of_data);
+        return serialize($arrayOfData);
     }
 }
 
-class OutputJsonString implements OutputInterface
+class JsonStringOutput implements OutputInterface
 {
     public function load()
     {
-        return json_encode($array_of_data);
+        return json_encode($arrayOfData);
     }
 }
 
-class OutputArray implements OutputInterface
+class ArrayOutput implements OutputInterface
 {
     public function load()
     {
-        return $array_of_data;
+        return $arrayOfData;
     }
 }
 {% endhighlight %}
@@ -179,15 +179,13 @@ class OutputArray implements OutputInterface
 {% highlight php %}
 <?php
 
-class SomeClientClass
+class SomeClient
 {
     private $output;
 
-    public function __construct(){}
-
-    public function setOutput(OutputInterface $output_type)
+    public function setOutput(OutputInterface $outputType)
     {
-        $this->output = $output_type;
+        $this->output = $outputType;
     }
 
     public function loadOutput()
@@ -202,14 +200,14 @@ that has been set.
 {% highlight php %}
 <?php
 
-$client = new SomeClientClass();
+$client = new SomeClient();
 
 // 배열 형태의 출력을 원한다면?
-$client->setOutput(new OutputArray());
+$client->setOutput(new ArrayOutput());
 $data = $client->loadOutput();
 
 // JSON 형태를 원한다면?
-$client->setOutput(new OutputJsonString());
+$client->setOutput(new JsonStringOutput());
 $data = $client->loadOutput();
 
 {% endhighlight %}
