@@ -133,6 +133,98 @@ Note the following:
 
 * [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
 
+## Strategy
+
+With the strategy pattern you encapsulate specific families of algorithms allowing the client class responsible for 
+instantiating a particular algorithm to have no knowledge of the actual implementation.
+There are several variations on the strategy pattern, the simplest of which is outlined below:
+
+This first code snippet outlines a family of algorithms; you may want a serialized array, some JSON or maybe 
+just an array of data:
+{% highlight php %}
+<?php
+
+interface OutputInterface
+{
+    public function load();
+}
+
+class OutputSerializedArray implements OutputInterface
+{
+    public function load()
+    {
+        return serialize($array_of_data);
+    }
+}
+
+class OutputJsonString implements OutputInterface
+{
+    public function load()
+    {
+        return json_encode($array_of_data);
+    }
+}
+
+class OutputArray implements OutputInterface
+{
+    public function load()
+    {
+        return $array_of_data;
+    }
+}
+{% endhighlight %}
+
+By encapsulating the above algorithms you are making it nice and clear in your code that other developers can easily 
+add new output types without affecting the client code.
+
+You will see how each concrete 'output' class implements an OutputInterface - this serves two purposes, primarily it
+provides a simple contract which must be obeyed by any new concrete implementations. Secondly by implementing a common
+interface you will see in the next section that you can now utilise [Type Hinting](http://php.net/manual/en/language.oop5.typehinting.php) to ensure that the client which is utilising these behaviours is of the correct type in
+this case 'OutputInterface'.
+
+The next snippet of code outlines how a calling client class might use one of these algorithms and even better set the
+behaviour required at runtime:
+{% highlight php %}
+<?php
+
+class SomeClientClass
+{
+    private $output;
+
+    public function __construct(){}
+
+    public function setOutput(OutputInterface $output_type)
+    {
+        $this->output = $output_type;
+    }
+
+    public function loadOutput()
+    {
+        return $this->output->load();
+    }
+}
+{% endhighlight %}
+
+The calling client class above has a private property which must be set at runtime and be of type 'OutputInterface'
+once this property is set a call to loadOutput() will call the load() method in the concrete class of the output type
+that has been set.
+{% highlight php %}
+<?php
+
+$client = new SomeClientClass();
+
+// Want an array?
+$client->setOutput(new OutputArray());
+$data = $client->loadOutput();
+
+// Want some JSON?
+$client->setOutput(new OutputJsonString());
+$data = $client->loadOutput();
+
+{% endhighlight %}
+
+* [Strategy pattern on Wikipedia](http://en.wikipedia.org/wiki/Strategy_pattern)
+
 ## Front Controller
 
 프론트 컨트롤러(front controller) 패턴은 웹 어플리케이션으로 오는 모든 리소스를 처리해주는 하나의 진입점(예를들면 index.php)을 두는 패턴입니다. 컨트롤러에서는 모든 의존 관계를 로딩하고, HTTP 요청을 처리한 후 응답을 보내주는 것 까지의 과정을 책임집니다. 프론트 컨트롤러 패턴을 사용하면 코드가 잘 모듈화되는 경향이 있고, 모든 요청에 대해서 항상 수행되어야 하는 작업(입력 값에서 위험한 데이터를 걸러내는 등의 작업)을 수행시킬 수 있는 중심점으로서 컨트롤러를 생각할 수 다는 이점이 있습니다.
