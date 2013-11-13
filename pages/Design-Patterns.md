@@ -135,12 +135,9 @@ Note the following:
 
 ## Strategy
 
-With the strategy pattern you encapsulate specific families of algorithms allowing the client class responsible for 
-instantiating a particular algorithm to have no knowledge of the actual implementation.
-There are several variations on the strategy pattern, the simplest of which is outlined below:
+스트래티지(젼략) 패턴으로 특정할 알고리즘을 캡슐화할 수 있습니다. 그 결과 사용하는 쪽에서는 알고리즘의 실제 구현에 대해 전혀 모르는 채로도 특정 알고리즘을 실체화하여 사용할 수 있습니다. 스트래티지 패턴에는 몆몆 변형이 존재하는데, 가장 간단한 것을 아래에서 보여드리겠습니다.
 
-This first code snippet outlines a family of algorithms; you may want a serialized array, some JSON or maybe 
-just an array of data:
+첫번째 코드는 알고리즘 집합 하나를 보여줍니다. 여러분이 배열이나 JSON을 직렬화하거나, 혹은 그냥 배열을 내보내고 싶을 때가 있을 것입니다.
 {% highlight php %}
 <?php
 
@@ -174,16 +171,11 @@ class OutputArray implements OutputInterface
 }
 {% endhighlight %}
 
-By encapsulating the above algorithms you are making it nice and clear in your code that other developers can easily 
-add new output types without affecting the client code.
+위에서처럼 알고리즘을 캡슐화 함으로써, 다른 개발자들은 알고리즘을 사용하고 있는 코드에 영향을 주지 않고도 새로운 출력 형식을 추가할 수 있게 됩니다.
 
-You will see how each concrete 'output' class implements an OutputInterface - this serves two purposes, primarily it
-provides a simple contract which must be obeyed by any new concrete implementations. Secondly by implementing a common
-interface you will see in the next section that you can now utilise [Type Hinting](http://php.net/manual/en/language.oop5.typehinting.php) to ensure that the client which is utilising these behaviours is of the correct type in
-this case 'OutputInterface'.
+각각의 '출력' 클래스들이 어떻게 OutputInterface를 구현하고 있는지 보이실 겁니다. 이러한 방식에는 두 가지 목적이 있는데, 첫 번째는 각각의 출력 클래스 구현체들이 준수해야하는 구현 규칙을 제공하는 것이고, 두 번째는 공통적으로 'OutputInterface' 인터페이스를 구현함으로써 [타입 힌팅](http://php.net/manual/en/language.oop5.typehinting.php)을 통해 알고리즘을 사용하는 코드 쪽도 정확한 타입을 사용하도록 보장하는 것입니다.
 
-The next snippet of code outlines how a calling client class might use one of these algorithms and even better set the
-behaviour required at runtime:
+아래 코드는 알고리즘을 사용하는 코드 쪽에서는 어떻게 구현해야 런타임에 동적으로 적당한 알고리즘을 설정하여 사용하게 할 수 있는지 예시를 보여줍니다.
 {% highlight php %}
 <?php
 
@@ -205,19 +197,18 @@ class SomeClientClass
 }
 {% endhighlight %}
 
-The calling client class above has a private property which must be set at runtime and be of type 'OutputInterface'
-once this property is set a call to loadOutput() will call the load() method in the concrete class of the output type
+알고리즘을 사용하는 클래스는 'OutputInterface' 타입의 프로퍼티를 가지고 있는데 이것은 런타임에 반드시 설정되어야 합니다. loadOutput() 메소드가 호출되면 프로퍼티의 load() 메소드를 호출함으로써 출력을 하게 됩니다.
 that has been set.
 {% highlight php %}
 <?php
 
 $client = new SomeClientClass();
 
-// Want an array?
+// 배열 형태의 출력을 원한다면?
 $client->setOutput(new OutputArray());
 $data = $client->loadOutput();
 
-// Want some JSON?
+// JSON 형태를 원한다면?
 $client->setOutput(new OutputJsonString());
 $data = $client->loadOutput();
 
