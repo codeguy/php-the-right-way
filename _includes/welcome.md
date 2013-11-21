@@ -21,19 +21,20 @@ and examples as they become available.
 _PHP: The Right Way_ is (or soon will be) translated into many different languages:
 
 * [English](http://www.phptherightway.com)
+* [Bulgarian](http://bg.phptherightway.com/)
 * Catalan (Link broken... we're looking into it)
 * [Chinese](http://wulijun.github.com/php-the-right-way)
+* [German](http://rwetzlmayr.github.io/php-the-right-way/)
+* Italian (Link broken... we're looking into it)
 * [Japanese](http://ja.phptherightway.com)
 * [Korean](http://wafe.github.io/php-the-right-way/)
-* Italian (Link broken... we're looking into it)
 * [Polish](http://pl.phptherightway.com/)
 * [Portuguese](http://br.phptherightway.com/)
 * [Russian](http://getjump.github.io/ru-php-the-right-way)
+* [Slovenian](http://sl.phptherightway.com)
 * Spanish (Link broken... we're looking into it)
-* [Ukrainian](http://iflista.github.com/php-the-right-way/)
-* [Bulgarian](http://bg.phptherightway.com/)
-* [German](http://rwetzlmayr.github.io/php-the-right-way/)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [Ukrainian](http://iflista.github.com/php-the-right-way/)
 
 ## How to Contribute
 
