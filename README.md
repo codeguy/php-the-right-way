@@ -31,7 +31,7 @@ developers know where to find good information!
 ## How to Contribute
 
 * Fork and edit
-* Preview your updates
+* Preview your updates (with vagrant execute `vagrant ssh -c 'cd /vagrant && jekyll build'`)
 * Submit pull request for consideration
 
 ### Contributor Style Guide
