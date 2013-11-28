@@ -4,15 +4,11 @@ isChild: true
 
 ## Basic Concept {#basic_concept_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
+We can demonstrate the concept with a simple, yet naive.
 
-> Dependency injection is a software design pattern that allows the removal of hard-coded dependencies and makes it 
-> possible to change them, whether at run-time or compile-time.
-
-This quote makes the concept sound much more complicated than it actually is. Dependency Injection is providing a component 
-with it's dependencies either through constructor injection, method calls or the setting of properties. It is that simple.
-
-We can demonstrate the concept with a simple, yet naive, example.
+Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the 
+adapter in the constructor and create a hard dependency. This makes testing difficult and means the `Database` class is 
+very tightly coupled to the adapter.
 
 {% highlight php %}
 <?php
@@ -31,9 +27,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the 
-adapter in the constructor and create a hard dependency. This code can be refactored to use Dependency Injection 
-and therefore loosen the dependency.
+This code can be refactored to use Dependency Injection and therefore loosen the dependency.
 
 {% highlight php %}
 <?php
