@@ -46,6 +46,6 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class it's dependency rather than it creating it itself. We could even create a method
+Now we are giving the `Database` class its dependency rather than it creating it itself. We could even create a method
 that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we could
 set it directly.
