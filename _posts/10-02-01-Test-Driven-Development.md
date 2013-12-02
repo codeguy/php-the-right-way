@@ -30,8 +30,9 @@ you run a project which accepts pull requests then you should suggest this as a 
 [PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
 applications, but there are several alternatives
 
+* [CFTestSuite](https://github.com/w00/Chinook-TestSuite)
 * [SimpleTest](http://simpletest.org)
-* [Enhance PHP](http://www.enhance-php.com/)
+* [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
 * [PUnit](http://punit.smf.me.uk/)
 * [atoum](https://github.com/atoum/atoum)
 
