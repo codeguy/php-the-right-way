@@ -2,10 +2,10 @@
 
 ## Pregled
 
-Ovo je GitHub repozitorijum za projekat _PHP: The Right Way_ .
+Ovo je GitHub Pages repozitorijum projekta _PHP: The Right Way_ .
 
 * Ovaj sajt je Jekyll projekat.
-* Svaka sekcija i podsekcija su Markdown fajl in `_posts/`.
+* Svaka sekcija i podsekcija su Markdown fajlovi u `_posts/`.
 * Podsekcije u zaglavlju imaju `isChild: true`.
 * Navigacija i struktura stranica se generišu automatski.
 
@@ -25,36 +25,36 @@ _PHP: The Right Way_ sadrži slike za web banere koje možete da koristite na va
 
 1. Koristite američki engleski pravopis (*primarno samo za engleski repozitorijum*)
 2. Koristite četiri (4) razmaka za uvlačenje teksta; nemojte da koristite tabove.
-3. Dužina teksta do 120 karaktera.
-4. Primeri kôda se moraju pridržavati PSR-1 standarda ili višeg.
+3. Uokvirite tekst do 120 karaktera.
+4. Primeri kôda bi trebalo da se pridržavaju PSR-1 standarda ili višeg.
 
 ## Gde
 
 <http://www.phptherightway.com>
 
-* [English](http://www.phptherightway.com)
-* [Catalan] (http://ca.phptherightway.com)
-* [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Japanese] (http://ja.phptherightway.com)
-* [Korean] (http://wafe.github.io/php-the-right-way)
-* [Italian] (http://it.phptherightway.com)
-* [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
-* [Russian] (http://getjump.github.io/ru-php-the-right-way)
-* [Spanish] (http://es.phptherightway.com)
-* [Ukrainian](http://iflista.github.com/php-the-right-way)
-* [Bulgarian](http://bg.phptherightway.com)
-* [German] (http://rwetzlmayr.github.io/php-the-right-way)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [Engleski](http://www.phptherightway.com)
+* [Katalonski](http://ca.phptherightway.com)
+* [Kineski](http://wulijun.github.com/php-the-right-way)
+* [Japanski](http://ja.phptherightway.com)
+* [Korejski](http://wafe.github.io/php-the-right-way)
+* [Italijanski](http://it.phptherightway.com)
+* [Poljski](http://pl.phptherightway.com)
+* [Portugalski](http://br.phptherightway.com)
+* [Ruski](http://getjump.github.io/ru-php-the-right-way)
+* [Španski](http://es.phptherightway.com)
+* [Ukrajinski](http://iflista.github.com/php-the-right-way)
+* [Bugarski](http://bg.phptherightway.com)
+* [Nemački](http://rwetzlmayr.github.io/php-the-right-way)
+* [Turski](http://hkulekci.github.io/php-the-right-way/)
 
 ### Prevodi
 
-Ako ste zainteresovani da prevedete _PHP: The Right Way_, forkujte ovaj repozitorijum na GitHub-u i objavite svoj lokalizovan fork na svom GitHub nalogu. Postavićemo link ka vašem prevodu sa osnovnog dokumenta.
+Ako ste zainteresovani da prevedete _PHP: The Right Way_, forkujte ovaj repozitorijum na GitHub-u i objavite svoj lokalizovan fork na svom GitHub Pages nalogu. Mi ćemo postaviti link ka vašem prevodu sa osnovnog dokumenta.
 
-Da biste izbegli fragmentaciju i zabunu kod čitalaca, molimo vas izaberite jednu od ovih opcija:
+Da bi se izbegla fragmentacija i zabuna kod čitalaca, molimo vas izaberite jednu od ovih opcija:
 
-1. Da stavimo link ka vašim GitHub stranicama pomoću  `[username].github.com/php-the-right-way`
-2. Da postavimo link ka vašim GitHub stranicama preko poddomena (npr "ru.phptherightway.com")
+1. Da postavimo link ka vašem GitHub Pages fork-u sa `[username].github.com/php-the-right-way`
+2. Da postavimo link ka vašem GitHub Pages fork-u sa poddomenom (npr "ru.phptherightway.com")
 
 Ako koristite poddomen, unesite njegov naziv u `CNAME` dokument, i tražite od nas da podesimo DNS za vas. Ako ne koristite poddomen, izbrišite `CNAME` dokument kompletno, inače se vaš fork neće build-ovati kada push-ujete.
 
