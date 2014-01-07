@@ -61,8 +61,5 @@ Postoje različiti načini za implementaciju kontinuirane integracije za PHP. Ne
 Dalje čitanje:
 
 * [Continuous Integration with Jenkins](http://jenkins-ci.org/)
-<<<<<<< HEAD
-=======
 * [Continuous Integration with PHPCI](http://www.phptesting.org/)
->>>>>>> 17c761d3fdbe4557d23787af6d62a58e8c44aa56
 * [Continuous Integration with Teamcity](http://www.jetbrains.com/teamcity/)

@@ -26,12 +26,8 @@
 * [PagodaBox](https://pagodabox.com/)
 * [AppFog](https://appfog.com/)
 * [Heroku](https://heroku.com)
-<<<<<<< HEAD
   (PHP podrška nije zabelezena ali je bazirana na stabilnom Facebook partnerstvu 
 [[link]](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
-=======
-  (PHP support is undocumented but based on stable Facebook partnership [link](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
->>>>>>> 17c761d3fdbe4557d23787af6d62a58e8c44aa56
 * [fortrabbit](http://fortrabbit.com/)
 * [Engine Yard Orchestra PHP Platform](http://www.engineyard.com/products/orchestra/)
 * [Red Hat OpenShift Platform](http://www.redhat.com/products/cloud-computing/openshift/)
