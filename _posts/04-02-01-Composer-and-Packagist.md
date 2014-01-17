@@ -64,7 +64,7 @@ Composer creates a file called `composer.lock` which stores the exact version of
 
 This is most useful when you define your version requirements flexibly. For instance a version requirement of ~1.8  means "anything newer than 1.8.0, but less than 2.0.x-dev". You can also use the `*` wildcard as in `1.8.*`. Now Composer's `php composer.phar update` command will upgrade all your dependencies to the newest version that fits the restrictions you define.
 
-### Update Notifcations
+### Update Notifications
 
 To receive notifications about new version releases you can sign up for [VersionEye][3], a web service that can monitor 
 your GitHub and BitBucket accounts for `composer.json` files and send emails with new package releases.
