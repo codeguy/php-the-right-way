@@ -1,2 +1,5 @@
-﻿# Početak {#getting_started_title}
+﻿---
+title: Početak
+---
 
+# Početak {#getting_started_title}
