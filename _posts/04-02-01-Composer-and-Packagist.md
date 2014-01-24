@@ -42,19 +42,15 @@ Composer可以安装在本地(在当前工作目录，不推荐这种方式)，�
 
 ### 如何定义和安装依赖
 
-首先，在`composer.phar`所在目录创建文件`composer.json`，下面是一个依赖[Twig][2]例子：
+Composer通过文件`composer.json`跟踪项目的依赖。这个文件可以手工维护，也可以通过Composer管理，命令`php composer.phar require`用于添加项目的依赖，如果项目下还没有`composer.json`文件，则会自动创建一个。下面是一个依赖[Twig][2]例子，在项目的根目录执行：
 
-	{
-	    "require": {
-	        "twig/twig": "1.8.*"
-	    }
-	}
+	php composer.phar require twig/twig:~1.8
 
-第二步：在项目根目录运行：
+或者通过`composer init`命令也可以一步步地引导你创建项目所需的`composer.json`文件。无论使用哪种方式创建了`composer.json`文件后，就可以通过Composer下载和安装项目依赖到目录`vendors/`:
 
     php composer.phar install
 
-这会在`vendors/`下载和安装项目依赖。最后在应用的PHP入口文件添加下面代码，告诉PHP使用Composer自动加载器加载项目的依赖库：
+最后在应用的PHP入口文件添加下面代码，告诉PHP使用Composer自动加载器加载项目的依赖库：
 
 {% highlight php %}
 <?php
@@ -63,8 +59,26 @@ require 'vendor/autoload.php';
 
 现在你就可以使用项目依赖的库了，它们会在需要的时候自动加载。
 
-* [学习Composer][3]
+### Updating your dependencies
+
+Composer creates a file called `composer.lock` which stores the exact version of each package it downloaded when you first ran `php composer.phar install`. If you share your project with other coders and the `composer.lock` file is part of your distribution, when they run `php composer.phar install` they'll get the same versions as you. To update your dependencies, run `php composer.phar update`.
+
+This is most useful when you define your version requirements flexibly. For instance a version requirement of ~1.8  means "anything newer than 1.8.0, but less than 2.0.x-dev". You can also use the `*` wildcard as in `1.8.*`. Now Composer's `php composer.phar update` command will upgrade all your dependencies to the newest version that fits the restrictions you define.
+
+### Update Notifications
+
+To receive notifications about new version releases you can sign up for [VersionEye][3], a web service that can monitor 
+your GitHub and BitBucket accounts for `composer.json` files and send emails with new package releases.
+
+### Checking your dependencies for security issues
+
+The [Security Advisories Checker][4] is a web service and a command-line tool, both will examine your `composer.lock` file and tell you if you need to update any of your dependencies.
+
+
+* [学习Composer][5]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org
-[3]: http://getcomposer.org/doc/00-intro.md
+[3]: https://www.versioneye.com/
+[4]: https://security.sensiolabs.org/
+[5]: http://getcomposer.org/doc/00-intro.md
