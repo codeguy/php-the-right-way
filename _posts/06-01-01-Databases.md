@@ -5,8 +5,8 @@ anchorid: databases
 
 <h1 id="databases">数据库</h1>
 
-通常PHP代码使用数据库来持久化存储数据，并有多种方式去连接和操作数据库。在_PHP 5.1.0_之前，推荐的方式有[mysql][mysql]、
-[mysqli][mysqli]和[pgsql][pgsql]等。
+通常PHP代码使用数据库来持久化存储数据，并有多种方式去连接和操作数据库。在_PHP 5.1.0_之前，推荐的方式有[mysql][7]、
+[mysqli][8]和[pgsql][9]等。
 
 如果应用只是使用一个数据库的话，原生驱动就工作的非常好，否则使用MySQL的同时，还需要使用MSSQL或Oracle数据库的话，那么
 就没有办法只使用一个原生驱动了，只能分别学习各个数据库驱动的API，这非常令人生厌。
@@ -24,7 +24,6 @@ anchorid: databases
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [5]: http://php.net/manual/en/pdo.connections.php
 [6]: https://github.com/auraphp/Aura.Sql
-
-[mysql]: http://php.net/mysql
-[mysqli]: http://php.net/mysqli
-[pgsql]: http://php.net/pgsql
+[7]: http://php.net/mysql
+[8]: http://php.net/mysqli
+[9]: http://php.net/pgsql
