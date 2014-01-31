@@ -20,7 +20,7 @@ One recommended way to use namespaces is outlined in [PSR-0][psr0], which aims t
 class and namespace convention to allow plug-and-play code.
 
 In December 2013 the PHP-FIG created a new autoloading standard: [PSR-4][psr4], which one day will 
-probably replace PSR-0. Currently both are still usable, as PSR-4 required PHP 5.3 and many PHP 5.2-only 
+probably replace PSR-0. Currently both are still usable, as PSR-4 requires PHP 5.3 and many PHP 5.2-only 
 projects currently implement PSR-0. If you're going to use an autoloader standard for a new application or 
 package then you almost certainly want to look into PSR-4.
 
