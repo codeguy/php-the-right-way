@@ -69,7 +69,7 @@ one database system that another is missing from another by wrapping your querie
 This will of course add a little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and
 SQLite then a little overhead will be worth it the sake of code cleanliness.
 
-Some abstraction layers have been built using the PSR-0 namespace standard so can be installed in any application you like:
+Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4] namespace standards so can be installed in any application you like:
 
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
@@ -88,3 +88,5 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [mysql]: http://php.net/mysql
 [mysqli]: http://php.net/mysqli
 [pgsql]: http://php.net/pgsql
+[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
