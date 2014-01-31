@@ -73,6 +73,7 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
+* [Propel][7]
 * [ZF2 Db][4]
 * [ZF1 Db][3]
 
@@ -82,6 +83,7 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [5]: http://php.net/manual/en/pdo.connections.php
 [6]: https://github.com/auraphp/Aura.Sql
+[7]: http://propelorm.org/Propel/
 
 [mysql]: http://php.net/mysql
 [mysqli]: http://php.net/mysqli
