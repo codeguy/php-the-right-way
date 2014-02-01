@@ -27,11 +27,27 @@
 
 (function ($) {
     //Add current view's highlighting to the navigation
-    
+
     /** helper for highlighting */
     function highlightNav(navLinks,id)
     {
         navLinks.filter('[href="/#'+id+'"]').addClass("active");
+        var anchor = $('.active:first');
+        if(anchor.length == 0){
+            return;
+        }
+        var nav = $('.site-navigation');
+        var view = 150;
+        var offset = 20;
+        var eTop = anchor[0].offsetTop;
+
+        if(eTop >= view){
+            nav.stop().animate({scrollTop: eTop - offset});
+        } else if ((eTop - offset) < view) {
+            nav.stop().animate({scrollTop: 0});
+        } else {
+            nav.stop().animate({scrollTop: view - eTop - offset});
+        }
     }
 
     $(window).scroll(function() {
@@ -77,4 +93,3 @@
         }
     });
 })(jQuery);
-
