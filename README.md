@@ -16,11 +16,23 @@ developers know where to find good information!
 
 [See Banner Images](http://www.phptherightway.com/banners.html)
 
+## Install Instructions
+
+### Locally
+
+* Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview
+
+### Vagrant
+
+* Install [Vagrant](http://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/)
+* Execute `vagrant up` on project's directory
+* When provision finish, [preview locally](http://localhost:4000)
+
 ## How to Contribute
 
-1. Fork and edit
-2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
-3. Submit pull request for consideration
+* Fork and edit
+* Preview your updates (with vagrant execute `vagrant ssh -c 'cd /vagrant && jekyll build'`)
+* Submit pull request for consideration
 
 ### Contributor Style Guide
 
