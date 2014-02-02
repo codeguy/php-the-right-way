@@ -5,24 +5,24 @@ isChild: true
 ## Programske paradigme {#programming_paradigms_title}
 
 PHP je fleksibilan, dinamičan jezik koji podržava razne tehnike programiranja. Poslednjih godina se značajno razvio, 
-naročito dodatkom solidnog objektno-orijentisanog modela u verziji PHP 5.0 (2004), i anonimnih (anonimus) funkcija i 
-prostora imena u verziji PHP 5.3 (2009), kao i tipova u PHP 5.4 (2012).
+naročito dodatkom solidnog objektno-orijentisanog modela u verziji PHP 5.0 (2004), anonimnih funkcija i 
+namespace-ova u verziji PHP 5.3 (2009), kao i trait-ova u PHP 5.4 (2012).
 
 ### Objektno-orijentisano programiranje
 
-PHP ima vrlo upotpunjen set mogućnosti za objektno-orijentisano programiranje, uključujući podršku za klase, apstraktne 
+PHP ima vrlo upotpunjen set osobina za objektno-orijentisano programiranje, uključujući podršku za klase, apstraktne 
 klase, interfejse, nasleđivanje, konstruktore, kloniranje, izuzetke i drugo.
 
-* [Pročitajte o Objektno-orijentisanom PHP][oop]
-* [Pročitajte o Tipovima][traits]
+* [Pročitajte o Objektno-orijentisanom PHP-u][oop]
+* [Pročitajte o Trait-ovima][traits]
 
 ### Funkcionalno programiranje
 
 PHP podržava funkcije prve klase, što znači da funkcija može biti dodeljena promenljivoj. I korisnički definisane i 
 ugrađene funkcije mogu biti referencirane promenljivom i pozvane dinamički. Funkcije se mogu prosleđivati kao argumenti 
-drugim funkcijama (karakteristika koja se naziva Funkcije višeg reda) i funkcija može vratiti druge funkcije.
+drugim funkcijama (osobina koja se naziva Funkcije višeg reda) i funkcija može vratiti druge funkcije.
 
-Rekurzija, karakteristika koja omogućava funkciji da poziva samu sebe, se podržava u jeziku, ali se većina PHP koda 
+Rekurzija, osobina koja omogućava funkciji da poziva samu sebe, se podržava u jeziku, ali se većina PHP koda 
 fokusira na iteracije.
 
 Nove anonimne funkcije (sa podrškom za closures) su prisutne od verzije PHP 5.3 (2009).
