@@ -10,5 +10,5 @@ Trenutno postoje dva glavna sistema upravljanja paketima za PHP - Composer i PEA
  * Koristite **PEAR** kada upravljate zavisnostima za PHP u celini na vašem sistemu.
 
 U principu, Composer paketi će biti na raspolaganju samo u onim projektima za koje ste posebno naglasili, dok je PEAR 
-paket uvek na raspolaganju, za sve vaše PHP projekte. Iako se PEAR može učiniti kao lakši pristup na prvi pogled, i 
-korišćenje pristupa "od projekta do projekta" za upravljanje zavisnostima ima svojih prednosti.
+paket uvek na raspolaganju, za sve vaše PHP projekte. Iako se PEAR može učiniti kao lakši pristup na prvi pogled, pristup 
+"od projekta do projekta" za upravljanje zavisnostima ima svojih prednosti.
