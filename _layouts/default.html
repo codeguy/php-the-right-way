@@ -32,7 +32,13 @@
         <nav class="site-navigation">
             <div class="build-date">Last Updated: {{ site.time }}</div>
             <ul>
-                <li><a href="/#site-header">Welcome</a></li>
+                <li><a href="/#site-header">Welcome</a>
+                    <ul>
+                        <li><a href="/#translations">Translations</a></li>
+                        <li><a href="/#how_to_contribute">How to Contribute</a></li>
+                        <li><a href="/#spread_the_word">Spread the Word!</a></li>
+                    </ul>
+                </li>
                 {% assign lastIsChild = false %}
                 {% for post in site.posts reversed %}
                     {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
@@ -57,30 +63,29 @@
                 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.phptherightway.com/" data-size="large" data-hashtags="php">Tweet</a>
             </header>
             {{ content }}
-            <footer class="site-footer" id="site-footer">
-                <h2 class="epsilon">Created and maintained by</h2>
-                <ul>
-                    <li><a href="http://twitter.com/codeguy">Josh Lockhart</a></li>
-                </ul>
-
-                <h2 class="epsilon">Project collaborators</h2>
-                <ul>
-                    <li><a href="http://krisjordan.com/">Kris Jordan</a></li>
-                    <li><a href="http://philsturgeon.co.uk/">Phil Sturgeon</a></li>
-                </ul>
-
-                <h2 class="epsilon">Project contributors</h2>
-                <div id="contributors">Loading&hellip;</div>
-
-                <h2 class="epsilon">Project sponsors</h2>
-                <ul class="mbd">
-                    <li><a href="http://www.newmediacampaigns.com">New Media Campaigns</a></li>
-                </ul>
-
-                <p>
-                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">PHP: The Right Way</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.twitter.com/codeguy" property="cc:attributionName" rel="cc:attributionURL">Josh Lockhart</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://www.phptherightway.com" rel="dct:source">www.phptherightway.com</a>.
-                </p>
-            </footer>
+            <div id="site-footer">
+                <h1 id="site-footer_title">Credits</h1>
+                <footer class="site-footer" id="site-footer">
+                    <h2 class="epsilon">Created and maintained by</h2>
+                    <ul>
+                        <li><a href="http://twitter.com/codeguy">Josh Lockhart</a></li>
+                    </ul>
+                    <h2 class="epsilon">Project collaborators</h2>
+                    <ul>
+                        <li><a href="http://krisjordan.com/">Kris Jordan</a></li>
+                        <li><a href="http://philsturgeon.co.uk/">Phil Sturgeon</a></li>
+                    </ul>
+                    <h2 class="epsilon">Project contributors</h2>
+                    <div id="contributors">Loading&hellip;</div>
+                    <h2 class="epsilon">Project sponsors</h2>
+                    <ul class="mbd">
+                        <li><a href="http://www.newmediacampaigns.com">New Media Campaigns</a></li>
+                    </ul>
+                    <p>
+                        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">PHP: The Right Way</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.twitter.com/codeguy" property="cc:attributionName" rel="cc:attributionURL">Josh Lockhart</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://www.phptherightway.com" rel="dct:source">www.phptherightway.com</a>.
+                    </p>
+                </footer>
+            </div>
         </div>
 
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
