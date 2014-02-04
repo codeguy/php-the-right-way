@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: configuration_files
 ---
 
 ## Configuration Files {#configuration_files_title}

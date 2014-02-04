@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: windows_setup
 ---
 
 ## Windows Setup {#windows_setup_title}

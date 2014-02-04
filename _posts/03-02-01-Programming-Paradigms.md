@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: programming_paradigms
 ---
 
 ## Programming Paradigms {#programming_paradigms_title}

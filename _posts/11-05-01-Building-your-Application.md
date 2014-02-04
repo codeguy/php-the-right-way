@@ -1,8 +1,9 @@
 ---
 isChild: true
+anchor: building_and_deploying_your_application
 ---
 
-## Building and Deploying your Application {#build_title}
+## Building and Deploying your Application {#building_and_deploying_your_application_title}
 
 If you find yourself doing manual database schema changes or running your tests manually before updating your files 
 (manually), think twice! With every additional manual task needed to deploy a new version of your app, the chances for 

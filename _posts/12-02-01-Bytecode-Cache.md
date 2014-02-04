@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: bytecode_cache
 ---
 
 ## Bytecode Cache {#bytecode_cache_title}
