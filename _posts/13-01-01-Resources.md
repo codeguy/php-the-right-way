@@ -1,3 +1,7 @@
+---
+anchor: resources
+---
+
 # Resources {#resources_title}
 
 ## From the Source

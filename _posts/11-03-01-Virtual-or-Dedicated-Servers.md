@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: virtual_or_dedicated_servers
 ---
 
 ## Virtual or Dedicated Servers {#virtual_or_dedicated_servers_title}
