@@ -34,6 +34,7 @@ _PHP: The Right Way_ is (or soon will be) translated into many different languag
 * [Bulgarian](http://bg.phptherightway.com/)
 * [German](http://rwetzlmayr.github.io/php-the-right-way/)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [Slovenian](http://sl.phptherightway.com)
 
 ## How to Contribute
 
