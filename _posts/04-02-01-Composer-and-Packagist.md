@@ -9,36 +9,12 @@ Composer is a **brilliant** dependency manager for PHP. List your project's depe
 
 There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These "packages" are listed on [Packagist][1], the official repository for Composer-compatible PHP libraries.
 
-### How to Install Composer
-
-You can install Composer locally (in your current working directory; though this is no longer recommended) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
-
-    curl -s https://getcomposer.org/installer | php
-
-This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
-
-### How to Install Composer (manually)
-
-Manually installing Composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
-
-- a sufficient version of PHP is being used
-- `.phar` files can be executed correctly
-- certain directory permissions are sufficient
-- certain problematic extensions are not loaded
-- certain `php.ini` settings are set
-
-Since a manual installation performs none of these checks, you have to decide whether the trade-off is worth it for you. As such, below is how to obtain Composer manually:
-
-    curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
-    chmod +x $HOME/local/bin/composer
-
-The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment variable. This will result in a `composer` command being available.
-
-When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
+### Installing Composer
+Composer is a single file called `composer.phar`, which is a PHP binary archive. It can either be installed locally in each of your project directories or in a single global location that is in your `$PATH` environment variable. The global method is recommended because it enables you to run it from your current working directory with the command `composer`. So when you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
 
     composer install
-    
-This section will assume you have installed composer globally.
+
+Detailed [installation instructions][5] can be found in the Composer documentation. For Windows users the easiest way to get up and running is to use the [ComposerSetup][6] installer. This section will assume you have installed Composer globally.
 
 ### How to Define and Install Dependencies
 
@@ -81,4 +57,5 @@ The [Security Advisories Checker][4] is a web service and a command-line tool, b
 [3]: https://www.versioneye.com/
 [4]: https://security.sensiolabs.org/
 [5]: http://getcomposer.org/doc/00-intro.md
+[6]: https://getcomposer.org/Composer-Setup.exe
 
