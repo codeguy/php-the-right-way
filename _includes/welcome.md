@@ -21,7 +21,6 @@ and examples as they become available.
 _PHP: The Right Way_ is (or soon will be) translated into many different languages:
 
 * [English](http://www.phptherightway.com)
-* Catalan (Link broken... we're looking into it)
 * [Chinese (Simplified)](http://wulijun.github.com/php-the-right-way)
 * [Japanese](http://ja.phptherightway.com)
 * [Korean](http://wafe.github.io/php-the-right-way/)
