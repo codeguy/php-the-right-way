@@ -1,5 +1,5 @@
 ---
-title: Use the Current Stable Version (5.5)
+title: Utiliser la dernière version stable (5.5)
 isChild: true
 ---
 
