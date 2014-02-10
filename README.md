@@ -1,20 +1,20 @@
-# PHP: The Right Way
+# PHP: La bonne manière
 
-## Overview
+## Vue d'ensemble
 
-This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+Vous êtes sur la page github du projet _PHP: La bonne manière (en: The right way)_.
 
-* This website is a Jekyll project.
-* Each section and sub-section are a Markdown file in `_posts/`.
-* Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+* Ce site web est un projet Jekyll.
+* Chaque section et sous-section correspondent à un fichier Markdown se trouvant dans `_posts/`.
+* Les sous-sections possèdent `isChild: true` en début de fichier.
+* La navigation et la structure de la page sont automatiquement générés.
 
-## Spread the Word!
+## Faites passer le mot !
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
-developers know where to find good information!
+_PHP: La bonne manière_ contient des bannières que vous pouvez utiliser sur votre site web. Montrez votre soutien et
+faites découvrir aux nouveaux développeurs PHP où trouver les infos pour bien débuter!
 
-[See Banner Images](http://www.phptherightway.com/banners.html)
+[Voir les images](http://www.phptherightway.com/banners.html)
 
 ## How to Contribute
 

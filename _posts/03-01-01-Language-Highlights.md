@@ -1,1 +1,1 @@
-# Language Highlights {#language_highlights_title}
+# Les points importants du langage {#language_highlights_title}
