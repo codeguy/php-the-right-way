@@ -30,7 +30,7 @@ Finally, many PHP functions that operate on strings have an optional parameter l
 
 If your PHP script accesses MySQL, there's a chance your strings could be stored as non-UTF-8 strings in the database even if you follow all of the precautions above.
 
-To make sure your strings go from PHP to MySQL as UTF-8, make sure your database and tables are all set to the utf8mb4 character set, and issue the MySQL query `set names utf8mb4` before issuing any other queries in your database. For an example, see the section on [connecting to and querying a MySQL database](https://phpbestpractices.org/#mysql). This is critically important.
+To make sure your strings go from PHP to MySQL as UTF-8, make sure your database and tables are all set to the utf8mb4 character set and collation, and that you use the utf8mb4 character set in the PDO connection string. For an example, see the section on [connecting to and querying a MySQL database](https://phpbestpractices.org/#mysql). This is _critically important_.
 
 Note that you must use the `utf8mb4` character set for complete UTF-8 support, not the `utf8` character set! See Further Reading for why.
 
@@ -47,33 +47,33 @@ mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
  
 // Our UTF-8 test string
-$string = 'Aš galiu valgyti stiklą ir jis manęs nežeidžia';
+$string = 'Êl síla erin lû e-govaned vîn.';
  
 // Transform the string in some way with a multibyte function
-$string = mb_substr($string, 0, 10);
+// Note how we cut the string at a non-Ascii character for demonstration purposes
+$string = mb_substr($string, 0, 15);
  
 // Connect to a database to store the transformed string
 // See the PDO example in this document for more information
 // Note the `set names utf8mb4` commmand!
-$link = new \PDO(   'mysql:host=your-hostname;dbname=your-db',
+$link = new \PDO(   'mysql:host=your-hostname;dbname=your-db;charset=utf8mb4',
                     'your-username',
                     'your-password',
                     array(
                         \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
-                        \PDO::ATTR_PERSISTENT => false,
-                        \PDO::MYSQL_ATTR_INIT_COMMAND => 'set names utf8mb4'
+                        \PDO::ATTR_PERSISTENT => false
                     )
                 );
  
 // Store our transformed string as UTF-8 in our database
-// Assume our DB and tables are in the utf8mb4 character set and collation
-$handle = $link->prepare('insert into Sentences (Id, Body) values (?, ?)');
+// Your DB and tables are in the utf8mb4 character set and collation, right?
+$handle = $link->prepare('insert into ElvishSentences (Id, Body) values (?, ?)');
 $handle->bindValue(1, 1, PDO::PARAM_INT);
 $handle->bindValue(2, $string);
 $handle->execute();
  
 // Retrieve the string we just stored to prove it was stored correctly
-$handle = $link->prepare('select * from Sentences where Id = ?');
+$handle = $link->prepare('select * from ElvishSentences where Id = ?');
 $handle->bindValue(1, 1, PDO::PARAM_INT);
 $handle->execute();
  
@@ -82,7 +82,7 @@ $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 ?><!doctype html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
         <title>UTF-8 test page</title>
     </head>
     <body>
