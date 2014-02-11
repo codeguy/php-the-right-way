@@ -21,6 +21,5 @@ just another repository for reusable components:
   [fuelval]: https://github.com/fuelphp/validation
 
 * [Aura](http://auraphp.github.com/)
-* [FuelPHP (2.0 only)](https://github.com/fuelphp)
-* [Laravel's "Illuminate Components"](https://github.com/illuminate)
+* [FuelPHP](https://github.com/fuelphp)
 * [Symfony Components](http://symfony.com/doc/current/components/index.html)
