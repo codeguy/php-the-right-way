@@ -1,0 +1,70 @@
+---
+isChild: true
+---
+
+## Izuzeci {#exceptions_title}
+
+Izuzeci su standardni deo najpoznatijih programskih jezika, ali ih PHP programeri obično previđaju. Jezici kao Ruby su 
+striktni po pitanju izuzetaka, tako da kada god se desi nešto pogrešno kao što je neizvršavanje HTTP zahteva, ili greška
+u upitu baze, ili čak i kad slika ne može da se pronađe, Ruby (ili gems koji se koriste) će izbaciti grešku na ekran što
+će značiti da ćete u istom momentu saznati da postoji greška. 
+
+PHP je prilično opušten po ovom pitanju, tako da će poziv `file_get_contents()` obično vratiti samo `FALSE` i 
+upozorenje. Mnogi stariji PHP frejvorkovi kao što je CodeIgniter će samo vratiti false, ubaciti poruku u odgovarajući 
+log i možda vam dopustiti da upotrebite metodu kao što je `$this->upload->get_error()` da biste videli gde je greška. 
+Problem je u tome što morate da krenete u potragu za greškom i proverite dokumentaciju da biste videli koja se metoda 
+greške koristi za datu klasu, umesto da je napravljeno da vam to bude očigledno.
+
+Drugi problem je kada klase automatski izbace poruku greške na ekran i prekinu proces. Kada ovo uradite, onemogućavate 
+drugom programeru da dinamički reši tu grešku. Izuzeci bi trebalo da budu izbačeni da obaveste programera o grešci, pa 
+da bude u mogućnosti da reši problem. Npr:
+
+{% highlight php %}
+<?php
+$email = new Fuel\Email;
+$email->subject('My Subject');
+$email->body('How the heck are you?');
+$email->to('guy@example.com', 'Some Guy');
+
+try
+{
+    $email->send();
+}
+catch(Fuel\Email\ValidationFailedException $e)
+{
+    // The validation failed
+}
+catch(Fuel\Email\SendingFailedException $e)
+{
+    // The driver could not send the email
+}
+{% endhighlight %}
+
+### SPL izuzeci
+
+Generička `Exception` klasa pruža minimalno debug okruženje programeru; ipak, da bi se ovo ublažilo, moguće je napraviti
+specijalizovani `Exception` tip kao podklasu generičke `Exception` klase:
+
+{% highlight php %}
+<?php
+class ValidationException extends Exception {}
+{% endhighlight %}
+
+To znači da možete dodati više catch blokova i rešavati različite izuzetke pojedinačno. Ovo može dovesti do stvaranja 
+<em>mnogo</em> pojedinačnih izuzetaka, od kojih su neki mogli da se izbegnu korišćenjem SPL izuzetaka predviđenih u 
+[SPL ekstenziji][splext].
+
+Ako na primer koristite `__call()` Magic metodu i poslat je zahtev za pogrešnu metodu onda umesto da bude izbačen 
+standardni izuzetak koji je neodređen, ili pravljenja specijalnog izuzetka samo iz tog razloga, možete izbaciti 
+`throw new BadFunctionCallException;`.
+
+* [Pročitajte o izuzecima][exceptions]
+* [Pročitajte o SPL izuzecima][splexe]
+* [Ugneždavanje izuzetaka u PHP][nesting-exceptions-in-php]
+* [Najbolja praksa sa izuzecima u PHP 5.3][exception-best-practices53]
+
+[exceptions]: http://php.net/manual/en/language.exceptions.php
+[splexe]: http://php.net/manual/en/spl.exceptions.php
+[splext]: /#standard_php_library
+[exception-best-practices53]: http://ralphschindler.com/2010/09/15/exception-best-practices-in-php-5-3
+[nesting-exceptions-in-php]: http://www.brandonsavage.net/exceptional-php-nesting-exceptions-in-php/
