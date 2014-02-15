@@ -24,7 +24,9 @@ just another repository for reusable components:
 * [FuelPHP](https://github.com/fuelphp)
 * [Symfony Components](http://symfony.com/doc/current/components/index.html)
 * [The League of Extraordinary Packages](http://thephpleague.com/)
-* [Laravel's Eloquent ORM](https://github.com/illuminate/database)
+* Laravel's Illuminate Components
+    * [Eloquent ORM](https://github.com/illuminate/database)
+    * [Queue](https://github.com/illuminate/queue)
 
-_Laravel's [Illuminate components](https://github.com/illuminate) will eventually become better decoupled from the Laravel framework.
-For now, only the Laravel Eloquent ORM component is listed._
+_Laravel's [Illuminate components](https://github.com/illuminate) will become better decoupled from the Laravel framework.
+For now, only the components best decoupled from the Laravel framework are listed above._
