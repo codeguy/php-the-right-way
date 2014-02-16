@@ -13,7 +13,7 @@ anchorid: databases
 
 另外需要注意，mysql这个原生驱动已经不在活跃开发状态了，从PHP 5.4.0开始被标记为不推荐使用，意味着将来版本如PHP 5.6可能会
 移除这个扩展。如果你正在使用`mysql_connect()`和`mysql_query()`，那么将来可能要重写部分代码，所以最好用mysqli或PDO来
-代替。如果你正在开发新项目，请不要用mysql扩展，尝试用[MySQLi扩展][8]或PDO来替代
+代替。<b>如果你正在开发新项目，请不要用mysql扩展，尝试用[MySQLi扩展][8]或PDO来替代</b>
 
 * [PHP: 选择MySQL API](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
