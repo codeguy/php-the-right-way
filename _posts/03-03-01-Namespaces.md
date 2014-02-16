@@ -13,8 +13,15 @@ _命名空间_解决了这个问题。如PHP手册里描述的那样，命名空
 
 [PSR-0][psr0] 里提供了命名空间的推荐使用方式, 它试图提供一个标准的文件、类和命名空间的使用惯例，从而让代码做到即插即用。
 
+In December 2013 the PHP-FIG created a new autoloading standard: [PSR-4][psr4], which one day will 
+probably replace PSR-0. Currently both are still usable, as PSR-4 requires PHP 5.3 and many PHP 5.2-only 
+projects currently implement PSR-0. If you're going to use an autoloader standard for a new application or 
+package then you almost certainly want to look into PSR-4.
+
 * [了解更多命名空间][namespaces]
 * [了解更多PSR-0][psr0]
+* [Read about PSR-4][psr4]
 
 [namespaces]: http://php.net/manual/en/language.namespaces.php
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md

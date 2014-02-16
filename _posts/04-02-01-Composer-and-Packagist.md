@@ -39,16 +39,18 @@ Composer可以安装在本地(在当前工作目录，不推荐这种方式)，�
 这样文档中描述的运行Composer的命令`php composer.phar install`，就可以用如下命令替代：
 
     composer install
+    
+下面默认你已经在PATH路径下安装Composer。
 
 ### 如何定义和安装依赖
 
-Composer通过文件`composer.json`跟踪项目的依赖。这个文件可以手工维护，也可以通过Composer管理，命令`php composer.phar require`用于添加项目的依赖，如果项目下还没有`composer.json`文件，则会自动创建一个。下面是一个依赖[Twig][2]例子，在项目的根目录执行：
+Composer通过文件`composer.json`跟踪项目的依赖。这个文件可以手工维护，也可以通过Composer管理，命令`php composer require`用于添加项目的依赖，如果项目下还没有`composer.json`文件，则会自动创建一个。下面是一个依赖[Twig][2]例子，在项目的根目录执行：
 
-	php composer.phar require twig/twig:~1.8
+	composer require twig/twig:~1.8
 
 或者通过`composer init`命令也可以一步步地引导你创建项目所需的`composer.json`文件。无论使用哪种方式创建了`composer.json`文件后，就可以通过Composer下载和安装项目依赖到目录`vendors/`:
 
-    php composer.phar install
+    composer install
 
 最后在应用的PHP入口文件添加下面代码，告诉PHP使用Composer自动加载器加载项目的依赖库：
 
@@ -73,7 +75,6 @@ your GitHub and BitBucket accounts for `composer.json` files and send emails wit
 ### Checking your dependencies for security issues
 
 The [Security Advisories Checker][4] is a web service and a command-line tool, both will examine your `composer.lock` file and tell you if you need to update any of your dependencies.
-
 
 * [学习Composer][5]
 

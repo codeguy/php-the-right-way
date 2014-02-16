@@ -36,7 +36,7 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 * [Comparison operators](http://php.net/manual/en/language.operators.comparison.php)
 * [Comparison table](http://php.net/manual/en/types.comparisons.php)
 
-## Conditional arguments
+## Conditional statements
 
 ### If statements
 

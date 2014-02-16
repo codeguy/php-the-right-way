@@ -20,6 +20,12 @@ isChild: true
   [fuelval]: https://github.com/fuelphp/validation
 
 * [Aura](http://auraphp.github.com/)
-* [FuelPHP (2.0 only)](https://github.com/fuelphp)
-* [Laravel's "Illuminate Components"](https://github.com/illuminate)
+* [FuelPHP](https://github.com/fuelphp)
 * [Symfony Components](http://symfony.com/doc/current/components/index.html)
+* [The League of Extraordinary Packages](http://thephpleague.com/)
+* Laravel's Illuminate Components
+    * [Eloquent ORM](https://github.com/illuminate/database)
+    * [Queue](https://github.com/illuminate/queue)
+
+<b>Laravel's [Illuminate components](https://github.com/illuminate) will become better decoupled from the Laravel framework.
+For now, only the components best decoupled from the Laravel framework are listed above.</b>

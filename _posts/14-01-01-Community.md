@@ -6,7 +6,7 @@ The PHP community is as diverse as it is large, and its members are ready and wi
 
 ## PHP User Groups
 
-If you live in a larger city, odds are there's a PHP user group nearby. Although there's not yet an official list of PUGs, you can easily find your local PUG by searching on [Google][google] or [Meetup.com][meetup]. If you live in a smaller town, there may not be a local PUG; if that's the case, start one!
+If you live in a larger city, odds are there's a PHP user group nearby. Although there's not yet an official list of PUGs, you can easily find your local PUG by searching on [Google][google], [Meetup.com][meetup] or [PHP.ug][php-ug]. If you live in a smaller town, there may not be a local PUG; if that's the case, start one!
 
 [Read about User Groups on the PHP Wiki][php-wiki]
 
@@ -19,9 +19,11 @@ The PHP community also hosts larger regional and national conferences in many co
 [php-calendar]: http://www.php.net/cal.php
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: http://www.meetup.com/find/
+[php-ug]: http://php.ug
 [php-wiki]: https://wiki.php.net/usergroups
 [php-conf]: http://php.net/conferences/index.php
 [phpc-twitter]: https://twitter.com/phpc
 [php-programmers-gplus]: https://plus.google.com/u/0/communities/104245651975268426012
-[php-irc]: http://webchat.freenode.net/
+[php-irc]: http://webchat.freenode.net/?channels=phpc
 [php-so]: http://stackoverflow.com/questions/tagged/php
+

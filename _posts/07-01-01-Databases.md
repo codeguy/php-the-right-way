@@ -5,15 +5,15 @@ anchorid: databases
 
 <h1 id="databases">数据库</h1>
 
-通常PHP代码使用数据库来持久化存储数据，并有多种方式去连接和操作数据库。在_PHP 5.1.0_之前，推荐的方式有[mysql][7]、
-[mysqli][8]和[pgsql][9]等。
+通常PHP代码使用数据库来持久化存储数据，并有多种方式去连接和操作数据库。在_PHP 5.1.0_之前，推荐的方式有[mysql][mysql]、
+[mysqli][mysqli]和[pgsql][pgsql]等。
 
 如果应用只是使用一个数据库的话，原生驱动就工作的非常好，否则使用MySQL的同时，还需要使用MSSQL或Oracle数据库的话，那么
 就没有办法只使用一个原生驱动了，只能分别学习各个数据库驱动的API，这非常令人生厌。
 
 另外需要注意，mysql这个原生驱动已经不在活跃开发状态了，从PHP 5.4.0开始被标记为不推荐使用，意味着将来版本如PHP 5.6可能会
 移除这个扩展。如果你正在使用`mysql_connect()`和`mysql_query()`，那么将来可能要重写部分代码，所以最好用mysqli或PDO来
-代替。<b>如果你正在开发新项目，请不要用mysql扩展，尝试用[MySQLi扩展][8]或PDO来替代</b>
+代替。<b>如果你正在开发新项目，请不要用mysql扩展，尝试用[MySQLi扩展][mysqli]或PDO来替代</b>
 
 * [PHP: 选择MySQL API](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
@@ -40,7 +40,7 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 <?php
 $pdo = new PDO('sqlite:users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$stmt->bindParam(':id', filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT), PDO::PARAM_INT);
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); // <-- Automatically sanitized by PDO
 $stmt->execute();
 {% endhighlight %}
 
@@ -60,10 +60,11 @@ $stmt->execute();
 某些数据库系统的特性，给你一个真正的数据库抽象层。这么做会带来一些性能的损失，但是在一个需要支持MySQL、PostgreSQL
 和SQLite的应用中，这个损失相对于由此带来的代码一致性而言是可以接受的。
 
-有些抽象层遵循PSR-0命名空间标准，可以集成在任意的应用中：
+有些抽象层遵循[PSR-0][psr0]或[PSR-4][psr4]命名空间标准，可以集成在任意的应用中：
 
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
+* [Propel][7]
 * [ZF2 Db][4]
 * [ZF1 Db][3]
 
@@ -73,6 +74,10 @@ $stmt->execute();
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [5]: http://php.net/manual/en/pdo.connections.php
 [6]: https://github.com/auraphp/Aura.Sql
-[7]: http://php.net/mysql
-[8]: http://php.net/mysqli
-[9]: http://php.net/pgsql
+[7]: http://propelorm.org/Propel/
+
+[mysql]: http://php.net/mysql
+[mysqli]: http://php.net/mysqli
+[pgsql]: http://php.net/pgsql
+[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md

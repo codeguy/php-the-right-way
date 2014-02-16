@@ -8,7 +8,7 @@ isChild: true
 
 Windows下有多种方式来安装PHP，你可以[下载二进制安装包][php-downloads]。
 
-若只是本地开发和学习，可以直接使用PHP 5.4内置的Web服务器，还能省去配置服务器的麻烦。如果你喜欢包含PHP、Apache和MySQL的
+若只是本地开发和学习，可以直接使用PHP 5.4+内置的Web服务器，还能省去配置服务器的麻烦。如果你喜欢包含PHP、Apache和MySQL的
 一键安装包，可以下载[Web Platform Installer][wpi]、[Zend Server CE][zsce]、[XAMPP][xampp]或[WAMP][wamp]，它们可以帮你快速搭建出PHP运行环境。
 不过这些工具和你产品的正式运行环境会有一些差别，特别是你在Windows下开发，而代码最终部署在Linux服务器上的时候。
 

@@ -33,6 +33,10 @@ catch(Fuel\Email\SendingFailedException $e)
 {
     // The driver could not send the email
 }
+finally
+{
+    // Executed regardless of whether an exception has been thrown, and before normal execution resumes
+}
 {% endhighlight %}
 
 ### SPL异常

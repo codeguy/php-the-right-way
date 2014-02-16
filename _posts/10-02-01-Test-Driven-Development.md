@@ -26,10 +26,10 @@ isChild: true
 
 [PHPUnit](http://phpunit.de)是PHP应用的单元测试框架的业界标准，其他几个可选框架是：
 
-* [SimpleTest](http://simpletest.org)
-* [Enhance PHP](http://www.enhance-php.com/)
-* [PUnit](http://punit.smf.me.uk/)
 * [atoum](https://github.com/atoum/atoum)
+* [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
+* [PUnit](http://punit.smf.me.uk/)
+* [SimpleTest](http://simpletest.org)
 
 ### 集成测试
 
@@ -50,3 +50,4 @@ isChild: true
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
 * [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
+* [Storyplayer](http://datasift.github.io/storyplayer) is a full-stack testing framework that includes support for creating and destroying test environments on demand
