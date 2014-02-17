@@ -6,7 +6,7 @@ title: Design Patterns
 # Design Patterns
 
 There are numerous ways to structure the code and project for you web application, and you can put as much or as little
-thought as you like into architecting. But it is usually a good idea to follow to common patterns because it will make
+thought as you like into architecting. But it is usually a good idea to follow common patterns because it will make
 your code easier to manage and easier for others to understand.
 
 * [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
@@ -51,7 +51,7 @@ print_r($veyron->get_make_and_model()); // outputs "Bugatti Veyron"
 {% endhighlight %}
 
 This code uses a factory to create the Automobile object. There are two possible benefits to building your code this
-way, the first is that if you need to change, rename, or replace the Automobile class later on you can do so and you
+way; the first is that if you need to change, rename, or replace the Automobile class later on you can do so and you
 will only have to modify the code in the factory, instead of every place in your project that uses the Automobile
 class. The second possible benefit is that if creating the object is a complicated job you can do all of the work in
 the factory, instead of repeating it every time you want to create a new instance.
@@ -250,11 +250,7 @@ and gives you a central place to hook in code that should be run for every reque
 
 ## Model-View-Controller
 
-The model-view-controller (MVC) pattern and its relatives HMVC and MVVM let you break up code into logical objects that
-serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats usable
-throughout your application. Controllers handle the request, process the data returned from models and load views to
-send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the web
-browser.
+The model-view-controller (MVC) pattern and its relatives HMVC and MVVM lets you break up code into logical objects that serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats usable throughout your application. Controllers handle the request, process the data returned from models and load views to send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the web browser.
 
 MVC is the most common architectural pattern used in the popular [PHP frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
 

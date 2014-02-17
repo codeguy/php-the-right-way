@@ -14,16 +14,17 @@ In PHP 5.5 `password_hash` was introduced. At this time it is using BCrypt, the 
 
 Below we hash a string, and then check the hash against a new string. Because our two source strings are different ('secret-password' vs. 'bad-password') this login will fail.
 
-{% highlight php %}                                                                                                                                                                                              
-<?php                                                                                                                                                                                                            
+{% highlight php %}
+<?php
+                      
 require 'password.php';
 
 $passwordHash = password_hash('secret-password', PASSWORD_DEFAULT);
 
 if (password_verify('bad-password', $passwordHash)) {
-    //Correct Password
+    // Correct Password
 } else {
-    //Wrong password
+    // Wrong password
 }
 {% endhighlight %}  
 

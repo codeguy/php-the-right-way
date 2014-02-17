@@ -30,10 +30,11 @@ you run a project which accepts pull requests then you should suggest this as a 
 [PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
 applications, but there are several alternatives
 
-* [SimpleTest](http://simpletest.org)
-* [Enhance PHP](http://www.enhance-php.com/)
-* [PUnit](http://punit.smf.me.uk/)
 * [atoum](https://github.com/atoum/atoum)
+* [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
+* [PUnit](http://punit.smf.me.uk/)
+* [SimpleTest](http://simpletest.org)
+
 
 ### Integration Testing
 
@@ -56,3 +57,4 @@ data and simulating actual users of the application.
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
 * [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
+* [Storyplayer](http://datasift.github.io/storyplayer) is a full-stack testing framework that includes support for creating and destroying test environments on demand
