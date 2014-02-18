@@ -28,7 +28,7 @@ _PHP: The Right Way_ is (or soon will be) translated into many different languag
 * [Polish](http://pl.phptherightway.com/)
 * [Portuguese](http://br.phptherightway.com/)
 * [Russian](http://getjump.github.io/ru-php-the-right-way)
-* [Spanish](http://lamaneracorrecta.php.org.ve)
+* [Spanish](http://phpdevenezuela.github.io/php-the-right-way/)
 * [Ukrainian](http://iflista.github.com/php-the-right-way/)
 * [Bulgarian](http://bg.phptherightway.com/)
 * [German](http://rwetzlmayr.github.io/php-the-right-way/)
