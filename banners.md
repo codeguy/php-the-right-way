@@ -10,7 +10,7 @@ Faites passer le mot avec les images _PHP: La bonne manière_ ! Montrez aux dév
 
 ## Bouton 1 (120x90)
 
-<p><img src="/images/banners/btn1-120x90.png" alt="PHP: La bonne manière"/></p>
+<p><img src="/php-the-right-way/images/banners/btn1-120x90.png" alt="PHP: La bonne manière"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -20,7 +20,7 @@ Faites passer le mot avec les images _PHP: La bonne manière_ ! Montrez aux dév
 
 ## Bouton 2 (120x60)
 
-<p><img src="/images/banners/btn2-120x60.png" alt="PHP: La bonne manière"/></p>
+<p><img src="/php-the-right-way/images/banners/btn2-120x60.png" alt="PHP: La bonne manière"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -30,7 +30,7 @@ Faites passer le mot avec les images _PHP: La bonne manière_ ! Montrez aux dév
 
 ## Bandeau (728x90)
 
-<p><img src="/images/banners/leaderboard-728x90.png" alt="PHP: La bonne manière"/></p>
+<p><img src="/php-the-right-way/images/banners/leaderboard-728x90.png" alt="PHP: La bonne manière"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -40,7 +40,7 @@ Faites passer le mot avec les images _PHP: La bonne manière_ ! Montrez aux dév
 
 ## Rectangle large (386x280)
 
-<p><img src="/images/banners/lg-rect-386x280.png" alt="PHP: La bonne manière"/></p>
+<p><img src="/php-the-right-way/images/banners/lg-rect-386x280.png" alt="PHP: La bonne manière"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -50,7 +50,7 @@ Faites passer le mot avec les images _PHP: La bonne manière_ ! Montrez aux dév
 
 ## Rectangle moyen (300x250)
 
-<p><img src="/images/banners/med-rect-300x250.png" alt="PHP: La bonne manière"/></p>
+<p><img src="/php-the-right-way/images/banners/med-rect-300x250.png" alt="PHP: La bonne manière"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -60,7 +60,7 @@ Faites passer le mot avec les images _PHP: La bonne manière_ ! Montrez aux dév
 
 ## Rectangle (180x150)
 
-<p><img src="/images/banners/rect-180x150.png" alt="PHP: La bonne manière"/></p>
+<p><img src="/php-the-right-way/images/banners/rect-180x150.png" alt="PHP: La bonne manière"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -70,7 +70,7 @@ Faites passer le mot avec les images _PHP: La bonne manière_ ! Montrez aux dév
 
 ## Bouton carré (125x125)
 
-<p><img src="/images/banners/sq-btn-125x125.png" alt="PHP: La bonne manière"/></p>
+<p><img src="/php-the-right-way/images/banners/sq-btn-125x125.png" alt="PHP: La bonne manière"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -80,7 +80,7 @@ Faites passer le mot avec les images _PHP: La bonne manière_ ! Montrez aux dév
 
 ## Rectangle vertical (240x400)
 
-<p><img src="/images/banners/vert-rect-240x400.png" alt="PHP: La bonne manière"/></p>
+<p><img src="/php-the-right-way/images/banners/vert-rect-240x400.png" alt="PHP: La bonne manière"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
