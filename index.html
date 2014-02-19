@@ -6,7 +6,7 @@ description: "Une référence rapide à lire pour apprendre les meilleurs pratiq
 {% capture welcome_content %}{% include welcome.md %}{% endcapture %}
 {{ welcome_content|markdownify }}
 
-{% capture backtotop %}[Back to Top](#top){.top}{% endcapture %}
+{% capture backtotop %}[Retour en haut](#top){.top}{% endcapture %}
 {% for post in site.posts reversed %}
     {% if post.isChild != true and loop.first != true %}
     {{ backtotop|markdownify }}
