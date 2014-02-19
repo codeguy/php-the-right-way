@@ -240,10 +240,10 @@ excepté le fait que qu'elle est plus pratique pour écrire plusieurs lignes san
 {% highlight php %}
 <?php
 $str = <<<'EOD'             // débute par <<<
-Exemple de chaîne
-s'étendant sur plusieurs lignes
+Exemple de chaine
+s'etendant sur plusieurs lignes
 et utilisant la syntaxe Nowdoc
-$a n'est pas évalué.
+$a n'est pas évalue.
 EOD;                        // le mot 'EOD' termine la chaîne. Il doit se trouver au début d'une nouvelle ligne
 
 /**
@@ -268,10 +268,10 @@ excepté le fait que qu'elle est plus pratique pour écrire plusieurs lignes san
 $a = 'Variables';
 
 $str = <<<EOD               // débute par <<<
-Exemple de chaîne
-s'étendant sur plusieurs lignes
+Exemple de chaine
+s'etendant sur plusieurs lignes
 et utilisant la syntaxe Heredoc
-$a est analysé.
+$a est analyse.
 EOD;                        // le mot 'EOD' termine la chaîne. Il doit se trouver au début d'une nouvelle ligne
 
 /**
