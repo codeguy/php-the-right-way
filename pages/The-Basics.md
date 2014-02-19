@@ -105,7 +105,7 @@ function test($a)
 {% endhighlight %}
 
 * [Instruction switch](http://php.net/manual/fr/control-structures.switch.php)
-* [PHP switch](http://phpswitch.com/)(en)
+* [PHP switch](http://phpswitch.com/) (en)
 
 ## Espace de noms global
 
@@ -136,157 +136,161 @@ function array()
 
 ## Strings
 
-### Concatenation
+### Concaténation
 
-- If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it's best to use concatenation operators over concatenating assignment operators
-- While within the original scope of the variable, indent when concatenation uses a new line
+- Si la ligne que vous écrivez est plus grande que 120 caractères, songez à utiliser la concaténation
+- Pour des questions de lisibilité, il est préférable d'utiliser l'opérateur de concaténation plutôt que l'opérateur 
+d'affectation composé (.=)
+- Indentez votre code lorsque vous retournez à la ligne
 
 
 {% highlight php %}
 <?php
-$a  = 'Multi-line example';    // concatenating assignment operator (.=)
+$a  = 'Exemple multi-lignes';    // concaténer à l'aide de l'opérateur d'affectation composé (.=)
 $a .= "\n";
-$a .= 'of what not to do';
+$a .= 'de ce qu\'il ne faut pas faire';
 
 vs.
 
-$a = 'Multi-line example'      // concatenation operator (.)
-    . "\n"                     // indenting new lines
-    . 'of what to do';
+$a = 'Exemple multi-lignes'      // opérateur de concaténation (.)
+    . "\n"                     // en indentant les nouvelles lignes
+    . 'de ce qu\'il faut faire';
 {% endhighlight %}
 
-* [String Operators](http://php.net/manual/en/language.operators.string.php)
+* [Opérateurs de concaténation](http://php.net/manual/fr/language.operators.string.php)
 
 ### Type String
 
-String types are a constant feature within the PHP community, but hopefully this section will explain the
-differences between the string types and their benefits/uses.
+La chaîne de caractères (String) est une fonctionnalité qui revient souvent dans les conversations 
+au sein de la communauté PHP mais heureusement cette section va vous expliquer les différences 
+entre les différentes string possibles et leurs intérêts/cas d'utilisations.
 
-#### Guillement simple
+#### Guillemet simple
 
-Single quotes are the simplest way to define a string and are often the quickest. Their speed stems from PHP not
-parsing the string (doesn't parse for variables). They're best suited for:
+Les guillemets simples sont le moyen le plus simple de définir une chaîne de caractères et sont souvent la plus rapide. 
+Leur vitesse provient du fait que PHP n'analyse pas ces chaînes (par ex., pour y évaluer des variables à l'intérieur). 
+Ils sont utiles pour :
 
-- Strings that do not need to be parsed
-- Writing of a variable into plain text
+- Les chaînes de caractères qui n'ont pas besoin d'être analysées
+- L'écriture d'une variable en texte brut
 
 {% highlight php %}
 <?php
-echo 'This is my string, look at how pretty it is.';    // no need to parse a simple string
+echo 'Voici ma chaîne de caractères, regardez comme elle est jolie.';    // pas besoin d'analyser une simple chaîne
 
 /**
- * Output:
+ * Sortie:
  *
- * This is my string, look at how pretty it is.
+ * Voici ma chaîne de caractères, regardez comme elle est jolie.
  */
 {% endhighlight %}
 
-* [Single quote](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.single)
+* [Guillemet simple](http://www.php.net/manual/fr/language.types.string.php#language.types.string.syntax.single)
 
-#### Guillement double
+#### Guillemet double
 
-Double quotes are the Swiss army knife of strings, but are slower due to the string being parsed. They're best
-suited for:
+Les guillemets doubles sont le couteau suisse des chaînes de caractères mais sont cependant plus lentes étant donné
+qu'elles doivent être analysés. Ils sont utiles pour :
 
-- Escaped strings
-- Strings with multiple variables and plain text
-- Condensing multi-line concatenation, and improving readability
+- Les chaînes contenant des caractères échappées (par ex., \n, \", etc)
+- Les chaînes contenant à la fois du texte brut et des variables à l'intérieur
+- une meilleur lisibilité
 
 {% highlight php %}
 <?php
-echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that uses multiple concatenating for
-    . "\n"                                       // variables and escaped string
-    . 'I love learning' . $code . '!';
+echo 'phptherightway est ' . $adjectif . '.'     // Un exemple de guillement simple utilisé avec des variables
+    . "\n"                                       // et des caractères échappés
+    . 'J\'adore le ' . $code . '!';
 
 vs.
 
-echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
-                                                               // enables us to use a parsable string
+echo "phptherightway est $adjectif.\n J'adore le $code!"  // Au lieu d'utiliser de multiples concaténations,
+                                                               // les guillemets doubles améliore la lisibilité
 {% endhighlight %}
 
-While using double quotes that contain variables, it's often the case that the variable will be touching another
-character. This will result in PHP not parsing the variable due to the variable being camouflaged. To fix this problem,
-wrap the variable within a pair of curly brackets.
+En utilisant des guillemets doubles contenant des variables, il arrive souvent que cette variable soit collé à un 
+autre caractère. Le résultat étant que PHP ne la verra plus. Pour régler ce problème, entourez la variable à l'aide 
+d'une paire d'accolades.
 
 {% highlight php %}
 <?php
-$juice = 'plum';
-echo "I drank some juice made of $juices";    // $juice cannot be parsed
+$abricot = 'abricot';
+echo "J'ai bu du jus à base de $abricots";    // $abricot ne peut être analysé
 
 vs.
 
-$juice = 'plum';
-echo "I drank some juice made of {$juice}s";    // $juice will be parsed
+$abricot = 'abricot';
+echo "J'ai bu du jus à base de {$abricot}s";    // $abricot est correctement traité
 
 /**
- * Complex variables will also be parsed within curly brackets
+ * Les variables complexes seront aussi analysés à l'intérieur des accolades
  */
 
-$juice = array('apple', 'orange', 'plum');
-echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
+$jus = array('pomme', 'orange', 'abricot');
+echo "J'ai bu du jus à base de {$jus[1]}s";   // $jus[1] est aussi correctement traité
 {% endhighlight %}
 
-* [Double quotes](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.double)
+* [Guillemet double](http://www.php.net/manual/fr/language.types.string.php#language.types.string.syntax.double)
 
-#### Nowdoc syntax
+#### Syntaxe Nowdoc
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it's suited toward the
-use of multi-line strings without the need for concatenating.
+La syntaxe Nowdoc a été introduit dans la version 5.3 et se comporte de la même façon que les guillemets simples 
+excepté le fait que qu'elle est plus pratique pour écrire plusieurs lignes sans concaténation.
 
 {% highlight php %}
 <?php
-$str = <<<'EOD'             // initialized by <<<
-Example of string
-spanning multiple lines
-using nowdoc syntax.
-$a does not parse.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+$str = <<<'EOD'             // débute par <<<
+Exemple de chaîne
+s'étendant sur plusieurs lignes
+et utilisant la syntaxe Nowdoc
+$a n'est pas évalué.
+EOD;                        // le mot 'EOD' termine la chaîne. Il doit se trouver au début d'une nouvelle ligne
 
 /**
- * Output:
+ * Sortie:
  *
- * Example of string
- * spanning multiple lines
- * using nowdoc syntax.
- * $a does not parse.
+ * Exemple de chaîne
+ * s'étendant sur plusieurs lignes
+ * et utilisant la syntaxe Nowdoc
+ * $a n'est pas évalué.
  */
 {% endhighlight %}
 
-* [Nowdoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc)
+* [Syntaxe Nowdoc](http://www.php.net/manual/fr/language.types.string.php#language.types.string.syntax.nowdoc)
 
 #### Syntaxe Heredoc
 
-Heredoc syntax internally behaves the same way as double quotes except it's suited toward the use of multi-line
-strings without the need for concatenating.
+La syntaxe Heredoc se comporte de la même façon que les guillemets doubles 
+excepté le fait que qu'elle est plus pratique pour écrire plusieurs lignes sans concaténation.
 
 {% highlight php %}
 <?php
 $a = 'Variables';
 
-$str = <<<EOD               // initialized by <<<
-Example of string
-spanning multiple lines
-using heredoc syntax.
-$a are parsed.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+$str = <<<EOD               // débute par <<<
+Exemple de chaîne
+s'étendant sur plusieurs lignes
+et utilisant la syntaxe Heredoc
+$a est analysé.
+EOD;                        // le mot 'EOD' termine la chaîne. Il doit se trouver au début d'une nouvelle ligne
 
 /**
- * Output:
+ * Sortie:
  *
- * Example of string
- * spanning multiple lines
- * using heredoc syntax.
- * Variables are parsed.
+ * Exemple de chaîne
+ * s'étendant sur plusieurs lignes
+ * et utilisant la syntaxe Heredoc
+ * Variables est analysé.
  */
 {% endhighlight %}
 
-* [Heredoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc)
+* [Syntaxe Heredoc](http://www.php.net/manual/fr/language.types.string.php#language.types.string.syntax.heredoc)
 
 ## Opérateur ternaire
 
-Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
-stacked/nested, it is advised to use one per line for readability.
+L'opérateur ternaire est un bon moyen de condenser la paire d'instruction 'if/else' mais est trop souvent utilisé. 
+Bien que les opérateurs ternaires puissent se trouver à l'intérieur d'autres opérateurs ternaires, il est souvent 
+conseillé de n'en utiliser qu'une seule par ligne par souci de lisibilité.
 
 {% highlight php %}
 <?php
@@ -295,41 +299,54 @@ echo ($a == 5) ? 'yay' : 'nay';
 
 vs.
 
-// nested ternary
+// Opérateur ternaire imbriqué
 $b = 10;
-echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
+echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessif' : ':(';    // imbrication excessive, lisibilité réduite
 {% endhighlight %}
 
-To 'return' a value with ternary operators use the correct syntax.
+_N.d.T._: PHP évalue l'opérateur de gauche à droite (associativité à gauche) contrairement au C ce qui peut provoquer 
+des erreurs :
+{% highlight php %}
+<?php
+echo (true ? 'true' : false ? 't' : 'f'); // affiche 't' alors qu'on s'attendrait à 'true'
+
+// voici comment PHP interprète l'expression ci-dessus
+echo ((true ? 'true' : false) ? 't' : 'f');
+
+// pour corriger cela, il faut donc explicitement mettre les parenthèses
+echo (true ? 'true' : (false ? 't' : 'f'));
+{% endhighlight %}
+
+Pour 'retourner' une valeur avec l'opérateur ternaire, utilisez la syntaxe correcte.
 
 {% highlight php %}
 <?php
 $a = 5;
-echo ($a == 5) ? return true : return false;    // this example will output an error
+echo ($a == 5) ? return true : return false;    // Cet exemple renvoie une erreur
 
 vs.
 
 $a = 5;
-return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
+return ($a == 5) ? 'yay' : 'nope';    // cet exemple renvoie 'yay'
 {% endhighlight %}
 
-* [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
+* [Opérateur ternaire](http://php.net/manual/fr/language.operators.comparison.php)
 
 ## Déclaration de variables
 
-At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let's say
-an example string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to
-2MB.
+Parfois, les programmeurs essaient de rendre leur code plus "propre" en déclarant des variables prédéfinies avec un 
+autre nom. Ce qu'il se passe en réalité, c'est que la consommation mémoire va doubler. Avec l'exemple ci-dessous, 
+disons que la chaîne de caractères contient 1Mio de données. En copiant cette variable, le poids de l'exécution de ce 
+script passera alors à 2Mio.
 
 {% highlight php %}
 <?php
-$about = 'A very long string of text';    // uses 2MB memory
+$about = 'Une très longue chaîne';    // utilise 2Mio de mémoire
 echo $about;
 
 vs.
 
-echo 'A very long string of text';        // uses 1MB memory
+echo 'Une très longue chaîne';        // utilise 1Mio de mémoire
 {% endhighlight %}
 
-* [Astuce pour la performance](https://developers.google.com/speed/articles/optimizing-php)(en)
+* [Astuce pour améliorer la performance](https://developers.google.com/speed/articles/optimizing-php) (en)
