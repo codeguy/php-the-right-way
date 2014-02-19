@@ -48,4 +48,4 @@ faites connaître aux nouveaux développeurs PHP où trouver la bonne informatio
 [Voir les bannières][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: /banners.html
+[2]: /php-the-right-way/banners.html
