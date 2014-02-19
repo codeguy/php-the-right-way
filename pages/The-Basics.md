@@ -243,7 +243,7 @@ $str = <<<'EOD'             // débute par <<<
 Exemple de chaine
 s'etendant sur plusieurs lignes
 et utilisant la syntaxe Nowdoc
-$a n'est pas évalue.
+$a n'est pas evalue.
 EOD;                        // le mot 'EOD' termine la chaîne. Il doit se trouver au début d'une nouvelle ligne
 
 /**
