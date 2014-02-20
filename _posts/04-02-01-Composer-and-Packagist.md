@@ -18,7 +18,7 @@ This will download `composer.phar` (a PHP binary archive). You can run this with
 
 ### How to Install Composer (manually)
 
-Manually installing composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
+Manually installing Composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
 
 - a sufficient version of PHP is being used
 - `.phar` files can be executed correctly
@@ -36,22 +36,20 @@ The path `$HOME/local/bin` (or a directory of your choice) should be in your `$P
 When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
 
     composer install
+    
+This section will assume you have installed composer globally.
 
 ### How to Define and Install Dependencies
 
-First, create a `composer.json` file in the same directory as `composer.phar`. Here's an example that lists [Twig][2] as a project dependency.
+Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it by hand if you like, or use Composer itself. The `composer require` command adds a project dependency and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig][2] as a dependency of your project.
 
-	{
-	    "require": {
-	        "twig/twig": "1.8.*"
-	    }
-	}
+	composer require twig/twig:~1.8
 
-Next, run this command from your project root directory.
+Alternatively the `composer init` command will guide you through creating a full `composer.json` file for your project. Either way, once you've created your `composer.json` file you can tell Composer to download and install your dependencies into the `vendors/` directory. This also applies to projects you've downloaded that already provide a `composer.json` file:
 
-    php composer.phar install
+    composer install
 
-This will download and install the project dependencies into a `vendors/` directory. Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
+Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
 
 {% highlight php %}
 <?php
@@ -60,8 +58,26 @@ require 'vendor/autoload.php';
 
 Now you can use your project dependencies, and they'll be autoloaded on demand.
 
-* [Learn about Composer][3]
+### Updating your dependencies
+
+Composer creates a file called `composer.lock` which stores the exact version of each package it downloaded when you first ran `php composer.phar install`. If you share your project with other coders and the `composer.lock` file is part of your distribution, when they run `php composer.phar install` they'll get the same versions as you. To update your dependencies, run `php composer.phar update`.
+
+This is most useful when you define your version requirements flexibly. For instance a version requirement of ~1.8  means "anything newer than 1.8.0, but less than 2.0.x-dev". You can also use the `*` wildcard as in `1.8.*`. Now Composer's `php composer.phar update` command will upgrade all your dependencies to the newest version that fits the restrictions you define.
+
+### Update Notifications
+
+To receive notifications about new version releases you can sign up for [VersionEye][3], a web service that can monitor 
+your GitHub and BitBucket accounts for `composer.json` files and send emails with new package releases.
+
+### Checking your dependencies for security issues
+
+The [Security Advisories Checker][4] is a web service and a command-line tool, both will examine your `composer.lock` file and tell you if you need to update any of your dependencies.
+
+* [Learn about Composer][5]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org
-[3]: http://getcomposer.org/doc/00-intro.md
+[3]: https://www.versioneye.com/
+[4]: https://security.sensiolabs.org/
+[5]: http://getcomposer.org/doc/00-intro.md
+

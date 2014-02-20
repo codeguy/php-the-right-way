@@ -19,6 +19,19 @@ easy to create a "fresh" installation.
 Vagrant creates shared folders used to share your code between your host and your virtual machine, meaning you can 
 create and edit your files on your host machine and then run the code inside your virtual machine.
 
+### A little help
+
+If you need a little help to start using Vagrant there are three services that might be useful:
+
+- [Rove][rove]: service that allows you to pregenerate typical Vagrant builds, PHP among the options. The
+  provisioning is made with Chef.
+- [Puphpet][puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides
+  local VMs, can be used to deploy to cloud services as well. The provisioning is made with Puppet.
+- [Protobox][protobox]: is a layer on top of vagrant and a web GUI to setup virtual machines for web development. A single YAML document controls everything that is installed on the virtual machine.
+
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/
 [chef]: http://www.opscode.com/
+[rove]: http://rove.io/
+[puphpet]: https://puphpet.com/
+[protobox]: http://getprotobox.com/

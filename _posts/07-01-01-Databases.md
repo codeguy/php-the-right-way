@@ -45,7 +45,7 @@ which will delete all of your users! Instead, you should sanitize the ID input u
 <?php
 $pdo = new PDO('sqlite:users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); //<-- Automatically sanitized by PDO
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); // <-- Automatically sanitized by PDO
 $stmt->execute();
 {% endhighlight %}
 
@@ -57,7 +57,7 @@ database preventing potential SQL injection attacks.
 You should also be aware that database connections use up resources and it was not unheard-of to have resources
 exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you
 can implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted,
-ie. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends
+i.e. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends -
 unless of course you are using persistent connections.
 
 * [Learn about PDO connections][5]
@@ -69,10 +69,11 @@ one database system that another is missing from another by wrapping your querie
 This will of course add a little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and
 SQLite then a little overhead will be worth it the sake of code cleanliness.
 
-Some abstraction layers have been built using the PSR-0 namespace standard so can be installed in any application you like:
+Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4] namespace standards so can be installed in any application you like:
 
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
+* [Propel][7]
 * [ZF2 Db][4]
 * [ZF1 Db][3]
 
@@ -82,7 +83,10 @@ Some abstraction layers have been built using the PSR-0 namespace standard so ca
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [5]: http://php.net/manual/en/pdo.connections.php
 [6]: https://github.com/auraphp/Aura.Sql
+[7]: http://propelorm.org/Propel/
 
 [mysql]: http://php.net/mysql
 [mysqli]: http://php.net/mysqli
 [pgsql]: http://php.net/pgsql
+[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md

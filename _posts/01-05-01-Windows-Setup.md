@@ -7,7 +7,7 @@ isChild: true
 PHP is available in several ways for Windows. You can [download the binaries][php-downloads] and until recently you could use a '.msi' 
 installer. The installer is no longer supported and stops at PHP 5.3.0.
 
-For learning and local development you can use the built in webserver with PHP 5.4 so you don't need to worry about configuring it. If you 
+For learning and local development you can use the built in webserver with PHP 5.4+ so you don't need to worry about configuring it. If you 
 would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such as the [Web Platform Installer][wpi], 
 [Zend Server CE][zsce], [XAMPP][xampp] and [WAMP][wamp] will help get a Windows development environment up and running fast. That said, these tools will be 
 a little different from production so be careful of environment differences if you are working on Windows and deploying to Linux.

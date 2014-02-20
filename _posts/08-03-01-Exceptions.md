@@ -17,7 +17,7 @@ obvious.
 
 Another problem is when classes automatically throw an error to the screen and exit the process. When you do this you 
 stop another developer from being able to dynamically handle that error. Exceptions should be thrown to make a developer aware 
-of an error, then they can choose how to handle this. E.g:
+of an error; they then can choose how to handle this. E.g.:
 
 {% highlight php %}
 <?php
@@ -38,11 +38,16 @@ catch(Fuel\Email\SendingFailedException $e)
 {
     // The driver could not send the email
 }
+finally
+{
+    // Executed regardless of whether an exception has been thrown, and before normal execution resumes
+}
 {% endhighlight %}
 
 ### SPL Exceptions
 
-An Exception by default has no meaning and the most common to give it meaning is by setting its name:
+The generic `Exception` class provides very little debugging context for the developer; however, to remedy this,
+it is possible to create a specialized `Exception` type by sub-classing the generic `Exception` class:
 
 {% highlight php %}
 <?php
