@@ -62,7 +62,7 @@ L'utilisation d'une "fabrique" n'est pas toujours nécéssaire (ou utile). Le co
 simple qu'une fabrique ne rajoute que plus de complexité inutilement. Cependant si vous réalisez un gros projet alors 
 l'utilisation d'une fabrique peut vous sauver de beaucoup d'ennuis.
 
-* [Le pattern fabrique sur Wikipédia](https://fr.wikipedia.org/wiki/Fabrique_(patron_de_conception) "Fabrique")
+* [Le pattern fabrique sur Wikipédia][1]
 
 ## Singleton
 
@@ -155,7 +155,7 @@ utilisé à la place d'un singleton. Utiliser l'injection de dépendance signifi
 inutile dans la conception de notre application car l'objet utilisant une ressource partagée ou globale ne nécéssite 
 aucune connaissance de la classe concrète.
 
-* [Le pattern singleton sur Wikipédia](https://fr.wikipedia.org/wiki/Singleton_(patron_de_conception) "Singleton")
+* [Le pattern singleton sur Wikipédia][2]
 
 ## Stratégie
 
@@ -246,7 +246,7 @@ $data = $client->loadOutput();
 
 {% endhighlight %}
 
-* [Le pattern stratégie sur Wikipédia](http://fr.wikipedia.org/wiki/Strat%C3%A9gie_(patron_de_conception) "Stratégie")
+* [Le pattern stratégie sur Wikipédia][3]
 
 ## Contrôleur frontal
 
@@ -273,3 +273,7 @@ En apprendre plus à propos de MVC et de ses variantes:
 * [MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)
 * [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller) (en)
 * [MVVM](https://fr.wikipedia.org/wiki/Mod%C3%A8le-Vue-VueMod%C3%A8le)
+
+[1]: https://fr.wikipedia.org/wiki/Fabrique_(patron_de_conception)
+[2]: https://fr.wikipedia.org/wiki/Singleton_(patron_de_conception)
+[3]: http://fr.wikipedia.org/wiki/Strat%C3%A9gie_(patron_de_conception)
