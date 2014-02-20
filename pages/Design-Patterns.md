@@ -62,7 +62,7 @@ L'utilisation d'une "fabrique" n'est pas toujours nécéssaire (ou utile). Le co
 simple qu'une fabrique ne rajoute que plus de complexité inutilement. Cependant si vous réalisez un gros projet alors 
 l'utilisation d'une fabrique peut vous sauver de beaucoup d'ennuis.
 
-* [Le pattern fabrique sur Wikipédia]( https://fr.wikipedia.org/wiki/Fabrique_(patron_de_conception) )
+* [Le pattern fabrique sur Wikipédia](https://fr.wikipedia.org/wiki/Fabrique_(patron_de_conception))
 
 ## Singleton
 
@@ -155,7 +155,7 @@ utilisé à la place d'un singleton. Utiliser l'injection de dépendance signifi
 inutile dans la conception de notre application car l'objet utilisant une ressource partagée ou globale ne nécéssite 
 aucune connaissance de la classe concrète.
 
-* [Le pattern singleton sur Wikipédia]( https://fr.wikipedia.org/wiki/Singleton_(patron_de_conception) )
+* [Le pattern singleton sur Wikipédia](https://fr.wikipedia.org/wiki/Singleton_(patron_de_conception))
 
 ## Stratégie
 
@@ -246,7 +246,7 @@ $data = $client->loadOutput();
 
 {% endhighlight %}
 
-* [Le pattern stratégie sur Wikipédia]( http://fr.wikipedia.org/wiki/Strat%C3%A9gie_(patron_de_conception) )
+* [Le pattern stratégie sur Wikipédia](http://fr.wikipedia.org/wiki/Strat%C3%A9gie_(patron_de_conception))
 
 ## Contrôleur frontal
 
