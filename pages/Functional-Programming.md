@@ -79,7 +79,7 @@ Chaque fonction de filtrage dans cet ensemble n'accepte que les éléments plus 
 retourné par `criteria_greater_than` est une closure avec l'argument `$min` "capturé" dans sa portée (passé en argument 
 lors de l'appel de `criteria_greater_than`).
 
-La liaison statique (_early binding_ en anglais) est utilisée par défaut lors de l'import de `$min` dans la fonction 
+La liaison statique (`early binding` en anglais) est utilisée par défaut lors de l'import de `$min` dans la fonction 
 créée. Les véritables closures avec la liaison dynamique (`late binding` en angais) doivent utiliser une référence 
 lors de l'import. Imaginer une bibliothèque de validation d'entrée ou de templating, où la fermeture est définie pour 
 capturer les variables dans sa portée afin de pouvoir y accéder plus tard quand la fonction anonyme sera évaluée.
