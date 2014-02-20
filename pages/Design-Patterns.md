@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Design Patterns
+title: Motif de conception
 ---
 
-# Design Patterns
+# Motif de conception
 
 There are numerous ways to structure the code and project for you web application, and you can put as much or as little
 thought as you like into architecting. But it is usually a good idea to follow common patterns because it will make
 your code easier to manage and easier for others to understand.
 
-* [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
-* [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
+* [Les patterns architecturaux sur Wikipédia](https://fr.wikipedia.org/wiki/Patron_d%27architecture)
+* [Les patrons de conceptions sur Wikipédia](https://fr.wikipedia.org/wiki/Patron_de_conception)
 
-## Factory
+## Fabrique
 
 One of the most commonly used design patterns is the factory pattern. In this pattern, a class simply creates
 the object you want to use. Consider the following example of the factory pattern:
@@ -60,7 +60,7 @@ Using the factory pattern isn't always necessary (or wise). The example code use
 would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
 yourself a lot of trouble down the road by using factories.
 
-* [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
+* [Le pattern fabrique sur Wikipédia](https://fr.wikipedia.org/wiki/Fabrique_(patron_de_conception))
 
 ## Singleton
 
@@ -147,9 +147,9 @@ application, reducing testability. In most cases, dependency injection can (and 
 singleton class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
 application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
 
-* [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+* [Le pattern singleton sur Wikipédia](https://fr.wikipedia.org/wiki/Singleton_(patron_de_conception))
 
-## Strategy
+## Stratégie
 
 With the strategy pattern you encapsulate specific families of algorithms allowing the client class responsible for 
 instantiating a particular algorithm to have no knowledge of the actual implementation.
@@ -237,25 +237,24 @@ $data = $client->loadOutput();
 
 {% endhighlight %}
 
-* [Strategy pattern on Wikipedia](http://en.wikipedia.org/wiki/Strategy_pattern)
+* [Le pattern stratégie sur Wikipédia](http://fr.wikipedia.org/wiki/Strat%C3%A9gie_(patron_de_conception))
 
-## Front Controller
+## Contrôleur frontal
 
 The front controller pattern is where you have a single entrance point for you web application (e.g. index.php) that
 handles all of the requests. This code is responsible for loading all of the dependencies, processing the request and
 sending the response to the browser. The front controller pattern can be beneficial because it encourages modular code
 and gives you a central place to hook in code that should be run for every request (such as input sanitization).
 
-* [Front Controller pattern on Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
+* [Le contrôleur frontal sur Wikipédia](https://en.wikipedia.org/wiki/Front_Controller_pattern) (en)
 
-## Model-View-Controller
+## Modèle-Vue-Contrôleur
 
 The model-view-controller (MVC) pattern and its relatives HMVC and MVVM lets you break up code into logical objects that serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats usable throughout your application. Controllers handle the request, process the data returned from models and load views to send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the web browser.
 
-MVC is the most common architectural pattern used in the popular [PHP frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
+MVC is the most common architectural pattern used in the popular [frameworks PHP](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
 
-Learn more about MVC and its relatives:
-
-* [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)
-* [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller)
-* [MVVM](https://en.wikipedia.org/wiki/Model_View_ViewModel)
+En apprendre plus à propos de MVC et de ses variantes:
+* [MVC](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur)
+* [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller) (en)
+* [MVVM](https://fr.wikipedia.org/wiki/Mod%C3%A8le-Vue-VueMod%C3%A8le)
