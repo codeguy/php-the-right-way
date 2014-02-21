@@ -11,8 +11,7 @@ Native drivers are great if you are only using ONE database in your application,
 or you need to connect to an Oracle database, then you will not be able to use the same drivers. You'll need to learn a brand new API for each
 database &mdash; and that can get silly.
 
-As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and the official status since PHP 5.4.0 is
-"Long term deprecation". This means it will be removed within the next few releases, so by PHP 5.6 (or whatever comes after 5.5) it may well be gone. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
+As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and is officially deprecated as of PHP 5.5, meaning that it will be removed within the next few releases. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
 line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development schedules so you won't
 be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
 
