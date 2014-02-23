@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Mac Setup  {#mac_setup_title}
+## Installation sous Mac  {#mac_setup_title}
 
 OSX comes prepackaged with PHP but it is normally a little behind the latest stable. Lion comes with PHP 5.3.6,
 Mountain Lion has 5.3.10, and Mavericks has 5.4.17.

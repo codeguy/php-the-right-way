@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Password Hashing {#password_hashing_title}
+## Hachage de mots de passe {#password_hashing_title}
 
 Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a database and later used to authenticate users upon login.
 

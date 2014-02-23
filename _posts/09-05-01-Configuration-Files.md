@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Configuration Files {#configuration_files_title}
+## Fichiers de configurations {#configuration_files_title}
 
 When creating configuration files for your applications, best practices recommend that one of the following methods 
 be followed:

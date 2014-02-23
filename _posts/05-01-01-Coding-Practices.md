@@ -1,1 +1,1 @@
-# Coding Practices {#coding_practices_title}
+# Pratiques de programmation {#coding_practices_title}

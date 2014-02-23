@@ -3,9 +3,13 @@ title: Utiliser la dernière version stable (5.5)
 isChild: true
 ---
 
-## Use the Current Stable Version (5.5) {#use_the_current_stable_version_55_title}
+## Utiliser la dernière version stable (5.5) {#use_the_current_stable_version_55_title}
 
-If you are just getting started with PHP make sure to start with the current stable release of [PHP 5.5][php-release]. PHP has made great strides adding powerful [new features](#language_highlights) over the last few years. Don't let the minor version number difference between 5.2 and 5.5 fool you, it represents _major_ improvements. If you are looking for a function or its usage, the documentation on the [php.net][php-docs] website will have the answer.
+Si vous venez juste de commencer à utiliser PHP, prenez soin de commencer avec la dernière version stable 
+de [PHP 5.5][php-release]. PHP a fait de grands progrès en ajout de [puissantes fonctionnalités](#language_highlights) 
+au cours des dernières années. Ne vous laissez pas avoir par le numéro de version mineur entre PHP 5.2 et 5.5, cela 
+représente d'_importantes_ améliorations. Si vous cherchez des informations sur l'utilisation d'une fonction particulière,
+ n'hésitez pas à consulter la documentation sur le site [php.net][php-docs].
 
 [php-release]: http://www.php.net/downloads.php
-[php-docs]: http://www.php.net/manual/en/
+[php-docs]: http://www.php.net/manual/fr/

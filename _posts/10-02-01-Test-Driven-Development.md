@@ -2,7 +2,7 @@
 isChild: true
 ---
 
-## Test Driven Development {#test_driven_development_title}
+## Développement dirigé par les tests {#test_driven_development_title}
 
 From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
 
@@ -10,7 +10,7 @@ From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
 
 There are several different types of testing that you can do for your application
 
-### Unit Testing
+### Test unitaire
 
 Unit Testing is a programming approach to ensure functions, classes and methods are working as
 expected, from the point you build them all the way through the development cycle. By checking

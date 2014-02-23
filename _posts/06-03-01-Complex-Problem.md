@@ -2,12 +2,12 @@
 isChild: true
 ---
 
-## Complex Problem {#complex_problem_title}
+## Problème complexe {#complex_problem_title}
 
 If you have ever read about Dependency Injection then you have probably seen the terms *"Inversion of Control"* or *"Dependency Inversion Principle"*.
 These are the complex problems that Dependency Injection solves.
 
-### Inversion of Control
+### Inversion de contrôle
 
 Inversion of Control is as it says, "inverting the control" of a system by keeping organisational control entirely separate from our objects.
 In terms of Dependency Injection, this means loosening our dependencies by controlling and instantiating them elsewhere in the system.

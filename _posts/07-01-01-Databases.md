@@ -1,8 +1,8 @@
 ---
-title: Databases
+title: Bases de données
 ---
 
-# Databases {#databases_title}
+# Bases de données {#databases_title}
 
 Many times your PHP code will use a database to persist information. You have a few options to connect and interact
 with your database. The recommended option _until PHP 5.1.0_ was to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.

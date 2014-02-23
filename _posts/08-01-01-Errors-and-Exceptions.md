@@ -1,6 +1,6 @@
 ---
-title: Errors and Exceptions
+title: Les erreurs et exceptions
 ---
 
-# Errors and Exceptions {#errors_and_exceptions_title}
+# Les erreurs et exceptions {#errors_and_exceptions_title}
 

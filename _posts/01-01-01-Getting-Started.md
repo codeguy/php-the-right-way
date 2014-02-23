@@ -1,2 +1,2 @@
-# Pour commencer {#getting_started_title}
+# Pour démarrer {#getting_started_title}
 

@@ -2,11 +2,11 @@
 isChild: true
 ---
 
-## Complementary Testing Tools {#complementary_testing_tools_title}
+## Outils de test complémentaire {#complementary_testing_tools_title}
 
 Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper libraries useful for any preferred approach taken.
 
-### Tool Links
+### Liens vers les outils
 
 * [Selenium](http://seleniumhq.org/) is a browser automation tool which can be [integrated with PHPUnit](http://phpunit.de/manual/current/en/selenium.html)
 * [Mockery](https://github.com/padraic/mockery) is a Mock Object Framework which can be integrated with [PHPUnit](http://phpunit.de/) or [PHPSpec](http://www.phpspec.net/)

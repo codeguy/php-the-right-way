@@ -19,7 +19,7 @@ easy to create a "fresh" installation.
 Vagrant creates shared folders used to share your code between your host and your virtual machine, meaning you can 
 create and edit your files on your host machine and then run the code inside your virtual machine.
 
-### A little help
+### Un coup de pouce
 
 If you need a little help to start using Vagrant there are three services that might be useful:
 

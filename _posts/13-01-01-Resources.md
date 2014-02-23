@@ -1,4 +1,4 @@
-# Resources {#resources_title}
+# Ressources {#resources_title}
 
 ## From the Source
 
