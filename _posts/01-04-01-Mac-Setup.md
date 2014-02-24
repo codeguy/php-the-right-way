@@ -3,7 +3,7 @@ title: Installation sous Mac
 isChild: true
 ---
 
-## Installation sous Mac  {#mac_setup_title}
+## Installation sous Mac  {#installation_sous_mac_title}
 
 OSX comes prepackaged with PHP but it is normally a little behind the latest stable. Lion comes with PHP 5.3.6,
 Mountain Lion has 5.3.10, and Mavericks has 5.4.17.

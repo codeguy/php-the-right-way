@@ -1,5 +1,5 @@
 ---
-title: Les points importants du langage
+title: Les points importants du language
 ---
 
-# Les points importants du langage {#language_highlights_title}
+# Les points importants du language {#les_points_importants_du_language_title}

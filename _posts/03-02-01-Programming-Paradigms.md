@@ -3,7 +3,7 @@ title: Les paradigmes de programmation
 isChild: true
 ---
 
-## Les paradigmes de programmation {#programming_paradigms_title}
+## Les paradigmes de programmation {#les_paradigmes_de_programmation_title}
 
 PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over
 the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 

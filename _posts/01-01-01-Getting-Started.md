@@ -2,5 +2,5 @@
 title: Pour démarrer
 ---
 
-# Pour démarrer {#getting_started_title}
+# Pour démarrer {#pour_démarrer_title}
 

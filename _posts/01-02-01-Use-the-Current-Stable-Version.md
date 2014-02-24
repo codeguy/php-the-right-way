@@ -3,7 +3,7 @@ title: Utiliser la dernière version stable (5.5)
 isChild: true
 ---
 
-## Utiliser la dernière version stable (5.5) {#use_the_current_stable_version_55_title}
+## Utiliser la dernière version stable (5.5) {#utiliser_la_dernière_version_stable_55_title}
 
 Si vous venez juste de commencer à utiliser PHP, prenez soin de commencer avec la dernière version stable 
 de [PHP 5.5][php-release]. PHP a fait de grands progrès en ajout de [puissantes fonctionnalités](#language_highlights) 
