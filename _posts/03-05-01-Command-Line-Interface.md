@@ -1,9 +1,9 @@
 ---
-title: L'interface en ligne de commande
+title: Interface en ligne de commande
 isChild: true
 ---
 
-## L'interface en ligne de commande {#l__interface_en_ligne_de_commande_title}
+## L'interface en ligne de commande {#Interface_en_ligne_de_commande_title}
 
 PHP was created primarily to write web applications, but it's also useful for scripting command line interface (CLI) programs. Command line PHP programs can help you automate common tasks like testing, deployment, and application administrivia.
 
