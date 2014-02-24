@@ -11,15 +11,13 @@ isChild: true
 
 [Vagrant][vagrant]会创建一些共享文件夹，用来给你在主机和虚拟机之间共享代码用。也就是说，你可以在主机上写好程序，然后在虚拟机中运行。
 
-### A little help
+### 小助手
 
-If you need a little help to start using Vagrant there are three services that might be useful:
+如果你想获取一些Vagrant的使用帮助的话，可以参考下面的三个服务：
 
-- [Rove][rove]: service that allows you to pregenerate typical Vagrant builds, PHP among the options. The
-  provisioning is made with Chef.
-- [Puphpet][puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides
-  local VMs, can be used to deploy to cloud services as well. The provisioning is made with Puppet.
-- [Protobox][protobox]: is a layer on top of vagrant and a web GUI to setup virtual machines for web development. A single YAML document controls everything that is installed on the virtual machine.
+- [Rove][rove]: 通过Chef来提供常用的Vagrant构建，其中包含了PHP选项。
+- [Puphpet][puphpet]: 简单的图形界面来设置虚拟机的PHP开发环境，**专注于PHP开发**，不仅可以配置本地的虚拟机，还可以部署到云服务上，它的底层是通过Puppet实现。
+- [Protobox][protobox]: 构建在Vagrant上的服务层，提供Web界面设置虚拟机的Web开发环境，通过单个YAML文档控制虚拟机的所有配置。
 
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/
