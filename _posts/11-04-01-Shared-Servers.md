@@ -1,4 +1,5 @@
 ---
+title: Hébergement mutualisé
 isChild: true
 ---
 

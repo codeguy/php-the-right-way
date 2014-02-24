@@ -1,3 +1,7 @@
+---
+title: Cache
+---
+
 # Cache {#caching_title}
 
 PHP is pretty quick by itself, but bottlenecks can arise when you make remote connections, load files, etc. 

@@ -1,6 +1,8 @@
 ---
+title: Les motifs de conception
 isChild: true
 ---
+
 
 ## Les motifs de conception {#design_patterns_title}
 

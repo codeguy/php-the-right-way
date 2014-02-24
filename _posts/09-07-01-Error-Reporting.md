@@ -1,4 +1,5 @@
 ---
+title: Rapport d'erreurs
 isChild: true
 ---
 

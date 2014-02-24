@@ -1,4 +1,5 @@
 ---
+title: Installation sous Mac
 isChild: true
 ---
 

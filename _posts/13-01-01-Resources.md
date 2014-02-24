@@ -1,3 +1,7 @@
+---
+title: Ressources
+---
+
 # Ressources {#resources_title}
 
 ## From the Source

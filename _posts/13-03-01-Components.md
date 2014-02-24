@@ -1,4 +1,5 @@
 ---
+title: Composants
 isChild: true
 ---
 

@@ -1,4 +1,5 @@
 ---
+title: Les bases
 isChild: true
 ---
 

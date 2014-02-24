@@ -1,4 +1,5 @@
 ---
+title: Lecture approfondie
 isChild: true
 ---
 

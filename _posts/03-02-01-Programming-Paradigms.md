@@ -1,4 +1,5 @@
 ---
+title: Les paradigmes de programmation
 isChild: true
 ---
 

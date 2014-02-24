@@ -1,8 +1,9 @@
 ---
+title: Concepts de base
 isChild: true
 ---
 
-## Concept de base {#basic_concept_title}
+## Concepts de base {#basic_concept_title}
 
 We can demonstrate the concept with a simple, yet naive example.
 

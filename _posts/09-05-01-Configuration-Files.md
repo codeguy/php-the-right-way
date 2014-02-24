@@ -1,4 +1,5 @@
 ---
+title: Fichiers de configurations
 isChild: true
 ---
 

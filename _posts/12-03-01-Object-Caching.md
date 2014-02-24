@@ -1,4 +1,5 @@
 ---
+title: Cache des objets
 isChild: true
 ---
 

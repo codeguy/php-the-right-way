@@ -1,4 +1,5 @@
 ---
+title: Serveurs virtuels et dédiés
 isChild: true
 ---
 
