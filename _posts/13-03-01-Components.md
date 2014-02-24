@@ -10,15 +10,17 @@ component repositories exist, the main two of which are:
 * [Packagist](/#composer_and_packagist)
 * [PEAR](/#pear)
 
-Both of these repositories have command line tools associated with them to help the installation and upgrade processes, and have been
-explained in more detail in the [Dependency Management][dm] section.
+Both of these repositories have command line tools associated with them to help the installation and upgrade 
+processes, and have been explained in more detail in the [Dependency Management] section.
 
-There are also component-based frameworks, which allow you to use their components with minimal (or no) requirements. For example, you
-can use the [FuelPHP Validation package][fuelval], without needing to use the FuelPHP framework itself. These projects are essentially
-just another repository for reusable components:
+There are also component-based frameworks and component-vendors that offer no framework at all. These projects provide 
+another source of packages which ideally have little to no dependencies on other packages, or specific frameworks.
 
-  [dm]: /#dependency_management
-  [fuelval]: https://github.com/fuelphp/validation
+For example, you can use the [FuelPHP Validation package], without needing to use the FuelPHP framework 
+itself.
+
+  [Dependency Management]: /#dependency_management
+  [FuelPHP Validation package]: https://github.com/fuelphp/validation
 
 * [Aura](http://auraphp.github.com/)
 * [FuelPHP](https://github.com/fuelphp)
