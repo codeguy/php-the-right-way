@@ -11,7 +11,7 @@ description: "Une référence rapide à lire pour apprendre les meilleurs pratiq
     {% if post.isChild != true and loop.first != true %}
     {{ backtotop|markdownify }}
     {% endif %}
-    <div id="{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">
+    <div id="{{ post.title | downcase | replace:'\'','_' | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">
     {{ post.content }}
     </div>
 {% endfor %}

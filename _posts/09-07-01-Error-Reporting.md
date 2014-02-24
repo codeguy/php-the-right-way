@@ -3,7 +3,7 @@ title: Rapport d'erreurs
 isChild: true
 ---
 
-## Rapport d'erreurs {#rapport_d'erreurs_title}
+## Rapport d'erreurs {#rapport_d_erreurs_title}
 
 Error logging can be useful in finding the problem spots in your application, but it can also expose information about 
 the structure of your application to the outside world. To effectively protect your application from issues that could 
