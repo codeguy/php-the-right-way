@@ -3,7 +3,7 @@ title: Serveurs virtuels et dédiés
 isChild: true
 ---
 
-## Serveurs virtuels et dédiés {#virtual_or_dedicated_servers_title}
+## Serveurs virtuels et dédiés {#serveurs_virtuels_et_dédiés_title}
 
 If you are comfortable with systems administration, or are interested in learning it, virtual or dedicated servers give you complete control of your application's production environment.
 

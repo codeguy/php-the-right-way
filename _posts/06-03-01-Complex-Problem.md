@@ -3,7 +3,7 @@ title: Problèmes complexe
 isChild: true
 ---
 
-## Problèmes complexe {#complex_problem_title}
+## Problèmes complexe {#problèmes_complexe_title}
 
 If you have ever read about Dependency Injection then you have probably seen the terms *"Inversion of Control"* or *"Dependency Inversion Principle"*.
 These are the complex problems that Dependency Injection solves.

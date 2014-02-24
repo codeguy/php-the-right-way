@@ -3,7 +3,7 @@ title: Lecture approfondie
 isChild: true
 ---
 
-## Lecture approfondie {#further_reading_title}
+## Lecture approfondie {#lecture_approfondie_title}
 
 - [Learning about Dependency Injection and PHP](http://ralphschindler.com/2011/05/18/learning-about-dependency-injection-and-php)
 - [What is Dependency Injection?](http://fabien.potencier.org/article/11/what-is-dependency-injection)

@@ -3,7 +3,7 @@ title: Composants
 isChild: true
 ---
 
-## Composants {#components_title}
+## Composants {#composants_title}
 
 As mentioned above "Components" are another approach to the common goal of creating, distributing and implementing shared code. Various 
 component repositories exist, the main two of which are:

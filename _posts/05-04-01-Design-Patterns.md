@@ -4,7 +4,7 @@ isChild: true
 ---
 
 
-## Les motifs de conception {#design_patterns_title}
+## Les motifs de conception {#les_motifs_de_conception_title}
 
 When you are building your application it is helpful to use common patterns in your code and common patterns for the
 overall structure of your project. Using common patterns is helpful because it makes it much easier to manage your code

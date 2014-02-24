@@ -3,7 +3,7 @@ title: Filtrage des données
 isChild: true
 ---
 
-## Filtrage des données {#data_filtering_title}
+## Filtrage des données {#filtrage_des_données_title}
 
 Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate
 foreign input before using it in code. The `filter_var` and `filter_input` functions can sanitize text and validate text formats (e.g.

@@ -3,7 +3,7 @@ title: Cache du bytecode
 isChild: true
 ---
 
-## Cache du bytecode {#bytecode_cache_title}
+## Cache du bytecode {#cache_du_bytecode_title}
 
 When a PHP file is executed, under the hood it is first compiled to bytecode (also known as opcode) and, only then, the bytecode is executed.
 If a PHP file is not modified, the bytecode will always be the same. This means that the compilation step is a waste of CPU resources.

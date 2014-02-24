@@ -1,9 +1,9 @@
 ---
-title: Fichiers de configurations
+title: Fichiers de configuration
 isChild: true
 ---
 
-## Fichiers de configurations {#configuration_files_title}
+## Fichiers de configuration {#fichiers_de_configuration_title}
 
 When creating configuration files for your applications, best practices recommend that one of the following methods 
 be followed:

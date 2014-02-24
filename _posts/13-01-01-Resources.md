@@ -2,7 +2,7 @@
 title: Ressources
 ---
 
-# Ressources {#resources_title}
+# Ressources {#ressources_title}
 
 ## From the Source
 

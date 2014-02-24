@@ -3,7 +3,7 @@ title: Développement dirigé par les tests
 isChild: true
 ---
 
-## Développement dirigé par les tests {#test_driven_development_title}
+## Développement dirigé par les tests {#développement_dirigé_par_les_tests_title}
 
 From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
 

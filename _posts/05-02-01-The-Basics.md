@@ -3,7 +3,7 @@ title: Les bases
 isChild: true
 ---
 
-## Les bases {#the_basics_title}
+## Les bases {#les_bases_title}
 
 PHP is a vast language that allows coders of all levels the ability to produce code not only quickly, but efficiently. 
 However while advancing through the language, we often forget the basics that we first learnt (or overlooked) in favor 

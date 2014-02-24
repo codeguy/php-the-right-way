@@ -2,4 +2,4 @@
 title: Sécurité
 ---
 
-# Sécurité {#security_title}
+# Sécurité {#sécurité_title}

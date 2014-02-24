@@ -3,7 +3,7 @@ title: Outils de test complémentaire
 isChild: true
 ---
 
-## Outils de test complémentaire {#complementary_testing_tools_title}
+## Outils de test complémentaire {#outils_de_test_complémentaire_title}
 
 Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper libraries useful for any preferred approach taken.
 
