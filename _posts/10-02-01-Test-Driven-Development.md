@@ -37,7 +37,7 @@ applications, but there are several alternatives
 * [SimpleTest](http://simpletest.org)
 
 
-### Integration Testing
+### Test d'intégration
 
 From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 
@@ -46,14 +46,14 @@ From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 Many of the same tools that can be used for unit testing can be used for integration testing as many
 of the same principles are used.
 
-### Functional Testing
+### Test fonctionnelle
 
 Sometimes also known as acceptance testing, functional testing consists of using tools to create automated
 tests that actually use your application instead of just verifying that individual units of code are behaving
 correctly and that individual units can speak to each other correctly. These tools typically work using real
 data and simulating actual users of the application.
 
-#### Functional Testing Tools
+#### Outils pour les tests fonctionnels
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)

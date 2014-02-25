@@ -62,7 +62,7 @@ unless of course you are using persistent connections.
 
 * [Learn about PDO connections][5]
 
-## Abstraction Layers
+## Couches d'abstractions
 
 Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
 one database system that another is missing from another by wrapping your queries in PHP methods, giving you actual database abstraction.

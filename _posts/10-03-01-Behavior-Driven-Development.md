@@ -16,7 +16,7 @@ With SpecBDD, you write specifications that describe how your actual code should
 a function or method, you are describing how that function or method should behave. PHP offers the PHPSpec framework for this purpose. This framework is inspired
 by the [RSpec project](http://rspec.info/) for Ruby.
 
-### BDD Links
+### Liens sur le BDD
 
 * [Behat](http://behat.org/), the StoryBDD framework for PHP, inspired by Ruby's [Cucumber](http://cukes.info/) project;
 * [PHPSpec](http://www.phpspec.net/), the SpecBDD framework for PHP, inspired by Ruby's [RSpec](http://rspec.info/) project;

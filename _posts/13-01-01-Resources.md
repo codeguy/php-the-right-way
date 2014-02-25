@@ -4,12 +4,12 @@ title: Ressources
 
 # Ressources {#ressources_title}
 
-## From the Source
+## Officielles
 
 * [PHP Website](http://php.net/)
 * [PHP Documentation](http://php.net/docs.php)
 
-## People to Follow
+## Personnes à suivre
 
 * [Rasmus Lerdorf](http://twitter.com/rasmus)
 * [Fabien Potencier](http://twitter.com/fabpot)
@@ -21,16 +21,17 @@ title: Ressources
 * [Anthony Ferrara](http://twitter.com/ircmaxell)
 * [Nikita Popov](http://twitter.com/nikita_ppv)
 
-## Mentoring
+## Mentors
 
-* [phpmentoring.org](http://phpmentoring.org/) - Formal, peer to peer mentoring in the PHP community.
+* [phpmentoring.org](http://phpmentoring.org/) - Encadrement et montée en compétences par des membres de la communauté
 
-## PHP PaaS Providers
+## Fournisseurs PaaS pour PHP
 
 * [PagodaBox](https://pagodabox.com/)
 * [AppFog](https://appfog.com/)
 * [Heroku](https://heroku.com)
-  (PHP support is undocumented but based on stable Facebook partnership [link](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
+  (Le support pourPHP n'est pas documenté mais est basé sur le partenariat solide 
+  avec Facebook : [lien](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
 * [fortrabbit](http://fortrabbit.com/)
 * [Engine Yard Cloud](https://www.engineyard.com/products/cloud)
 * [Red Hat OpenShift Platform](http://openshift.com)

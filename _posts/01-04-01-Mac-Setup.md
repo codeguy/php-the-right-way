@@ -5,22 +5,23 @@ isChild: true
 
 ## Installation sous Mac  {#installation_sous_mac_title}
 
-OSX comes prepackaged with PHP but it is normally a little behind the latest stable. Lion comes with PHP 5.3.6,
-Mountain Lion has 5.3.10, and Mavericks has 5.4.17.
+Le système d'exploitation OSX contient une version précompilée de PHP mais est généralement en retard sur la dernière 
+version stable. Lion contient la version 5.3.6, Moutain la 5.3.10 et Mavericks la 5.4.17.
 
-To update PHP on OSX you can get it installed through a number of Mac [package managers][mac-package-managers], with
-[php-osx by Liip][php-osx-downloads] being recommended.
+Pour mettre à jour la version de PHP sur OSX vous pouvez passer via 
+de nombreux [gestionnaire de paquets][mac-package-managers], [php-osx de Liip][php-osx-downloads] étant recommandé.
 
-The other option is to [compile it yourself][mac-compile], in that case be sure to have installed either Xcode or
-Apple's substitute ["Command Line Tools for Xcode"][apple-developer] downloadable from Apple's Mac Developer Center.
+L'autre option est de le [compiler soi-même][mac-compile]. Dans ce cas, faites attention à ce que l'IDE Xcode soit 
+ installé ou bien son [substitut en ligne de commande][apple-developer] téléchargeable 
+sur le Mac Developer Center d'Apple.
 
-For a complete "all-in-one" package including PHP, Apache web server and MySQL database, all this with a nice control
-GUI, try [MAMP][mamp-downloads] or [XAMPP][xampp].
+Pour une installation "tout-en-un" incluant PHP, le serveur web Apache et la base de données MySQL, le tout contrôlé 
+par une jolie interface graphique, essayez [MAMP][mamp-downloads] ou [XAMPP][xampp].
 
-[mac-package-managers]: http://www.php.net/manual/en/install.macosx.packages.php
-[mac-compile]: http://www.php.net/manual/en/install.macosx.compile.php
+[mac-package-managers]: http://www.php.net/manual/fr/install.macosx.packages.php
+[mac-compile]: http://www.php.net/manual/fr/install.macosx.compile.php
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
 [apple-developer]: https://developer.apple.com/downloads
 [mamp-downloads]: http://www.mamp.info/en/downloads/index.html
 [php-osx-downloads]: http://php-osx.liip.ch/
-[xampp]: http://www.apachefriends.org/en/xampp.html
+[xampp]: http://www.apachefriends.org/fr/index.html

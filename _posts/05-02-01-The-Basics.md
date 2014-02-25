@@ -5,9 +5,9 @@ isChild: true
 
 ## Les bases {#les_bases_title}
 
-PHP is a vast language that allows coders of all levels the ability to produce code not only quickly, but efficiently. 
-However while advancing through the language, we often forget the basics that we first learnt (or overlooked) in favor 
-of short cuts and/or bad habits. To help combat this common issue, this section is aimed at reminding coders of the 
-basic coding practices within PHP.
+PHP est un language vaste permettant aux programmeurs de tout niveau de produire du code non seulement rapidement mais 
+aussi efficacement. Cependant, en avançant dans le language, nous oublions parfois les bases que nous n'avions apprises 
+(ou survolées) de façon un peu légère en faveur de raccourcis et autres mauvaises habitudes. Pour combattre ce problème 
+récurrent, cette section tient à rappeler aux programmeurs les pratiques de programmations de bases de PHP.
 
-* Continue reading on [The Basics](/pages/The-Basics.html)
+* Continuer en lisant [les bases](/php-the-right-way/pages/The-Basics.html).

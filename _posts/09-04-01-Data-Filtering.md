@@ -38,7 +38,7 @@ load hidden, non-public, or sensitive files.
 * [Learn about `filter_input`][5]
 * [Learn about handling null bytes][6]
 
-### Sanitization
+### Nettoyage
 
 Sanitization removes (or escapes) illegal or unsafe characters from foreign input.
 

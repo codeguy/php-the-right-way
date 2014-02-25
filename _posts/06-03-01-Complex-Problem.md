@@ -21,7 +21,7 @@ dependencies, this method simply moved them.
 Dependency Injection allows us to more elegantly solve this problem by only injecting the dependencies we need, when we need them,
 without the need for any hard coded dependencies at all.
 
-### Dependency Inversion Principle
+### Principe d'inversion des dépendances
 
 Dependency Inversion Principle is the "D" in the S.O.L.I.D set of object oriented design principles that states one should
 *"Depend on Abstractions. Do not depend on concretions."*. Put simply, this means our dependencies should be interfaces/contracts or abstract

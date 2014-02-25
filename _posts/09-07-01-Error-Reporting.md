@@ -10,7 +10,7 @@ the structure of your application to the outside world. To effectively protect y
 be caused by the output of these messages, you need to configure your server differently in development versus 
 production (live).
 
-### Development
+### Développement
 
 To show every possible error during <strong>development</strong>, configure the following settings in your `php.ini`:
 

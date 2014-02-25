@@ -5,12 +5,12 @@ isChild: true
 
 ## Fichiers de configuration {#fichiers_de_configuration_title}
 
-When creating configuration files for your applications, best practices recommend that one of the following methods 
-be followed:
+Lorsque vous créez des fichiers de configuration pour vos applications, les meilleurs pratiques recommandent que 
+les méthodes ci-dessous soient suivies :
 
-- It is recommended that you store your configuration information where it cannot be accessed directly and pulled in 
-via the file system.
-- If you must store your configuration files in the document root, name the files with a `.php` extension. This 
-ensures that, even if the script is accessed directly, it will not be output as plain text.
-- Information in configuration files should be protected accordingly, either through encryption or group/user file 
-system permissions
+- Il est recommandé que vous stockiez vos informations de configuration là où aucun utilisateur non autorisé ne peut y 
+accéder (via le système de fichier).
+- Si vous devez stocker vos fichiers de configuration à la racine du projet, nommer les fichiers avec l'extension `.php`. 
+Cela permet de s'assurer que même si le fichier est accédé directement il ne s'affichera pas en texte brut.
+- Les informations contenues dans les fichiers de configuration doivent être protégées correctement, que ce soit via le 
+chiffrage et/ou via le système de permissions des utilisateurs/groupes du système de fichiers.

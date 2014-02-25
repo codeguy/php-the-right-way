@@ -6,13 +6,14 @@ isChild: true
 
 ## Les motifs de conception {#les_motifs_de_conception_title}
 
-When you are building your application it is helpful to use common patterns in your code and common patterns for the
-overall structure of your project. Using common patterns is helpful because it makes it much easier to manage your code
-and lets other developers quickly understand how everything fits together.
+Lorsque vous construisez votre application, il est souvent utile d'utiliser des motifs courants dans votre code et dans 
+la structure générale de votre projet. Utiliser ces motifs est utile car il devient alors plus facile de gérer le code 
+et de permettre aux autres développeurs de comprendre plus rapidement comment tout cela tient.
 
-If you use a framework then most of the higher level code and project structure will be based on that framework, so a
-lot of the pattern decisions are made for you. But it is still up to you to pick out the best patterns to follow in the
-code you build on top of the framework. If, on the other hand, you are not using a framework to build your application
-then you have to find the patterns that best suit the type and size of application that you're building.
+Si vous utilisez un framework alors la plupart du code métier et la structure du projet se baseront sur ce framework, 
+donc de nombreuses décisions sur les motifs à utiliser seront prises à votre place. Mais il vous revient toujours le 
+choix de prendre les motifs les plus utiles à utiliser au sein de votre code. Si, d'un autre côté, vous n'utilisez pas 
+de framework pour construire votre application, cela ne vous empêchera pas de choisir un certain nombre de motifs que 
+vous jugerez nécessaire.
 
-* Continue reading on [Design Patterns](/pages/Design-Patterns.html)
+* Continuer la lecture sur les [motifs de conceptions](/php-the-right-way/pages/Design-Patterns.html).

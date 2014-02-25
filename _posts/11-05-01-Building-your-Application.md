@@ -21,7 +21,7 @@ Among the tasks you might want to automate are:
 * Deployment
 
 
-### Build Automation Tools
+### Outil de génération automatique
 
 Build tools can be described as a collection of scripts that handle common tasks of software deployment. The build 
 tool is not a part of your software, it acts on your software from 'outside'.
@@ -50,12 +50,12 @@ Chef resources for PHP developers:
 * [Three part blog series about deploying a LAMP application with Chef, Vagrant, and EC2](http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/)
 * [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system](https://github.com/opscode-cookbooks/php)
 
-Further reading:
+Allez plus loin:
 
 * [Automate your project with Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/)
 * [Maven](http://maven.apache.org/), a build framework based on Ant and [how to use it with PHP](http://www.php-maven.org/)
 
-### Continuous Integration
+### Intégration continue
 
 > Continuous Integration is a software development practice where members of a team integrate their work frequently, 
 > usually each person integrates at least daily — leading to multiple integrations per day. Many teams find that this 
@@ -69,7 +69,7 @@ done a great job of making continuous integration a reality even for small proje
 integration service for the open source community. It is integrated with GitHub and offers first class support for many 
 languages including PHP.
 
-Further reading:
+Allez plus loin:
 
 * [Continuous Integration with Jenkins](http://jenkins-ci.org/)
 * [Continuous Integration with PHPCI](http://www.phptesting.org/)
