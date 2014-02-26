@@ -30,7 +30,7 @@ title: Ressources
 * [PagodaBox](https://pagodabox.com/)
 * [AppFog](https://appfog.com/)
 * [Heroku](https://heroku.com)
-  (Le support pourPHP n'est pas documenté mais est basé sur le partenariat solide 
+  (Le support pour PHP n'est pas documenté mais est basé sur le partenariat solide 
   avec Facebook : [lien](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
 * [fortrabbit](http://fortrabbit.com/)
 * [Engine Yard Cloud](https://www.engineyard.com/products/cloud)
