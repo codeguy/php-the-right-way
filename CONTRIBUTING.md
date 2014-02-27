@@ -88,7 +88,7 @@ included in the project:
 
 ## Contribution Agreement and Usage
 
-By subitting a pull request to this repository, you agree to allow the project 
+By submitting a pull request to this repository, you agree to allow the project 
 owners to license your work under the the terms of the [Creative Commons Attribution-NonCommercial-ShareAlike
 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
