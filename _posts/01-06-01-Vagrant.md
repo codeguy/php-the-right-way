@@ -29,7 +29,7 @@ Si vous avez besoin d'aide pour commencer à utiliser Vagrant, il existe 3 servi
 - [Rove][rove]: Un service qui vous autorise à pré-générer des builds Vagrant typiques avec PHP. L'installation se fait 
 avec Chef.
 - [Puphpet][puphpet]: une interface graphique simple pour mettre en place des machines virtuelles pour développer en PHP.
- **Se concentre énormement sur PHP**. Par ailleurs, des VMs locales peuvent être utilisées pour déployer des services 
+ **Il se concentre énormement sur PHP**. Par ailleurs, des VMs locales peuvent être utilisées pour déployer des services 
 clouds. L'installation se fait avec Puppet.
 - [Protobox][protobox]: est composé d'une couche au-dessus de Vagrant et d'une interface web pour installer des machines 
 virtuelles pour le développement web. Un seul document YAML contrôle tout ce qui peut être installé sur la machine 
