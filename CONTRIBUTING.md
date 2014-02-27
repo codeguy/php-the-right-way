@@ -85,15 +85,29 @@ included in the project:
 8. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
     with a clear title and description.
 
-**IMPORTANT**: By submitting a patch, you agree to allow the project owners to
-license your work under the the terms of the 
-[Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
+## Contribution Agreement and Usage
+
+By submitting a patch, 
+
+By subitting a pull request to this repository, you agree to allow the project 
+owners to license your work under the the terms of the [Creative Commons Attribution-NonCommercial-ShareAlike
+3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+
+The same content and license will be used for all PHP The Right Way publications,
+including - but not limited to:
+
+	* [phptherightway.com](http://phptherightway.com)
+	* Translations of phptherightway.com
+	* [LeanPub: PHP The Right Way](https://leanpub.com/phptherightway/)
+	* Translations of "LeanPub: PHP The Right Way"
+
+All content is completely free now, and always will be.
 
 ## Contributor Style Guide
 
 1. Use American English spelling (*primary English repo only*)
-2. Use four (4) spaces to indent text; do not use tabs.
-3. Wrap all text to 120 characters.
-4. Code samples should adhere to PSR-1 or higher.
+2. Use four (4) spaces to indent text; do not use tabs
+3. Wrap all text to 120 characters
+4. Code samples should adhere to PSR-1 or higher
 5. Use [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) for all content
