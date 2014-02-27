@@ -88,8 +88,6 @@ included in the project:
 
 ## Contribution Agreement and Usage
 
-By submitting a patch, 
-
 By subitting a pull request to this repository, you agree to allow the project 
 owners to license your work under the the terms of the [Creative Commons Attribution-NonCommercial-ShareAlike
 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
@@ -97,10 +95,10 @@ owners to license your work under the the terms of the [Creative Commons Attribu
 The same content and license will be used for all PHP The Right Way publications,
 including - but not limited to:
 
-	* [phptherightway.com](http://phptherightway.com)
-	* Translations of phptherightway.com
-	* [LeanPub: PHP The Right Way](https://leanpub.com/phptherightway/)
-	* Translations of "LeanPub: PHP The Right Way"
+* [phptherightway.com](http://phptherightway.com)
+* Translations of phptherightway.com
+* [LeanPub: PHP The Right Way](https://leanpub.com/phptherightway/)
+* Translations of "LeanPub: PHP The Right Way"
 
 All content is completely free now, and always will be.
 
