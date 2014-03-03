@@ -4,36 +4,36 @@ title: Normes
 
 # Normes  {#normes_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+La communauté PHP est large et diverse, composé d'innombrables bibliothèques, de frameworks et de composants. Il est 
+courant pour les développeurs PHP de choisir plusieurs d'entre-eux et de les combiner en un seul projet. Il est important 
+que le code PHP adhère (de façon aussi proche que possible) à un style de code commun pour rendre le partage plus facile 
+entre développeurs et de garder une certaine cohérence avec l'utilisation de code tiers.
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related 
-to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These recommendations 
-are merely a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, 
-etc are starting to adopt. You can use them for your own projects, or continue to use your own personal style.
+Le [Framework Interop Group][fig] a proposé et approuvé une série de convention de codage. Celles qui sont liées au 
+convention d'écriture sont le [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] et [PSR-4][psr4]. Ces recommandations sont 
+un ensemble de règles que certains projets ont adopté comme Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, 
+FuelPHP, Lithium, etc. Vous pouvez les utiliser dans vos projets ou bien la votre si vous en avez une.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSR's, or one 
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, 
-and applications that implement the components can have consistency even when working with lots of third-party code. 
+Idéalement, vous devriez écrire du code PHP qui adhère à des standards connus. Cela peut être une combinaison des PSR ou 
+un des standards créé par PEAR ou Zend.
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Zend Coding Standards][zend-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [En savoir plus sur PSR-0][psr0]
+* [En savoir plus sur PSR-1][psr1]
+* [En savoir plus sur PSR-2][psr2]
+* [En savoir plus sur PSR-4][psr4]
+* [Lire les conventions de codage de PEAR][pear-cs]
+* [Lire les conventions de codage de Zend][zend-cs]
+* [Lire les conventions de codage de Symfony][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text editors 
-like [Sublime Text 2][st-cs] to be given real time feedback. 
+Vous pouvez utiliser [PHP_CodeSniffer][phpcs] pour contrôler que votre code respecte une de ces recommandations. Des 
+plugins pour des éditeurs de texte comme [Sublime Text 2][st-cs] vous permette d'avoir un aperçu des écarts en temps réel.
 
-Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
-conforms to these standards, saving you from fixing each problem by hand.
+Utiliser le [PHP Coding Standards Fixer][phpcsfixer] de Fabien Potencier afin de formatter automatiquement la syntaxe de 
+votre code selon les standards définis, ce qui vous évite de le faire vous-même à la main. 
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily readable 
-by all current and future parties who may be working on the codebase.
+Faites en sorte que l'infrastructure de votre code et que les noms des variables choisies soient en anglais. Les 
+commentaires peuvent être écrits dans n'importe quel langue du moment que l'ensemble des personnes ayant à travailler 
+dessus puissent le comprendre.
 
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md

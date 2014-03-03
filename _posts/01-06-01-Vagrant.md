@@ -10,8 +10,8 @@ différents environnements à jour avec les mêmes versions pour l'ensemble des 
 travailler en équipe.
 
 Si vous développez sur Windows et que vous déployez votre code sur Linux (ou n'importe quoi qui ne soit pas Windows) 
-ou que vous travaillez en équipe, vous devriez penser à utiliser une machine virtuelle. Ça à l'air compliqué mais 
-utiliser [Vagrant][vagrant] vous permet de mettre en place une machine virtuelle avec seulement quelques étapes. 
+ou que vous travaillez en équipe, vous devriez penser à utiliser une machine virtuelle. Cela peut paraître compliqué mais 
+utiliser [Vagrant][vagrant] vous permet de mettre en place une machine virtuelle en seulement quelques étapes. 
 Ces systèmes de base peuvent ensuite être configuré manuellement ou par des outils comme [Puppet][puppet] ou 
 [Chef][chef]. Configurer ces systèmes de façon automatisé est un bon moyen de s'assurer que les différents systèmes 
 mis en place seront configurer de la même manière sans avoir à maintenir une liste de commandes pour l'installation. 
