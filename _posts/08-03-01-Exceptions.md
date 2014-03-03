@@ -61,13 +61,13 @@ provided in the [SPL extension][splext].
 If for example you use the `__call()` Magic Method and an invalid method is requested then instead of throwing a standard 
 Exception which is vague, or creating a custom Exception just for that, you could just `throw new BadFunctionCallException;`.
 
-* [Read about Exceptions][exceptions]
-* [Read about SPL Exceptions][splexe]
-* [Nesting Exceptions In PHP][nesting-exceptions-in-php]
-* [Exception Best Practices in PHP 5.3][exception-best-practices53]
+* [En savoir plus sur les exceptions][exceptions]
+* [En savoir plus sur les exceptions de la SPL][splexe]
+* [Les exceptions imbriquées en PHP][nesting-exceptions-in-php]
+* [Les meilleurs pratiques de gestion d'exception en PHP 5.3][exception-best-practices53]
 
-[exceptions]: http://php.net/manual/en/language.exceptions.php
-[splexe]: http://php.net/manual/en/spl.exceptions.php
-[splext]: /#standard_php_library
+[exceptions]: http://php.net/manual/fr/language.exceptions.php
+[splexe]: http://php.net/manual/fr/spl.exceptions.php
+[splext]: #la_bibliothèque_PHP_standard
 [exception-best-practices53]: http://ralphschindler.com/2010/09/15/exception-best-practices-in-php-5-3
 [nesting-exceptions-in-php]: http://www.brandonsavage.net/exceptional-php-nesting-exceptions-in-php/

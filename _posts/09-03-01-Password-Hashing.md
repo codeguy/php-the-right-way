@@ -31,7 +31,7 @@ if (password_verify('bad-password', $passwordHash)) {
 
 
 
-* [Learn about `password_hash`] [1]
+* [En savoir plus sur `password_hash`] [1]
 * [`password_compat` for PHP  >= 5.3.7 && < 5.5] [2]
 * [Learn about hashing in regards to cryptography] [3]
 * [PHP `password_hash` RFC] [4]

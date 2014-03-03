@@ -25,10 +25,10 @@ probably replace PSR-0. Currently both are still usable, as PSR-4 requires PHP 5
 projects currently implement PSR-0. If you're going to use an autoloader standard for a new application or 
 package then you almost certainly want to look into PSR-4.
 
-* [Read about Namespaces][namespaces]
-* [Read about PSR-0][psr0]
-* [Read about PSR-4][psr4]
+* [En savoir plus sur les espaces de noms][namespaces]
+* [En savoir plus sur PSR-0][psr0]
+* [En savoir plus sur PSR-4][psr4]
 
-[namespaces]: http://php.net/manual/en/language.namespaces.php
+[namespaces]: http://php.net/manual/fr/language.namespaces.php
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md

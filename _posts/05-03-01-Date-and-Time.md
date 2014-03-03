@@ -56,8 +56,8 @@ foreach ($periodIterator as $date) {
 }
 {% endhighlight %}
 
-* [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (accepted date format string options)
+* [En savoir plus sur DateTime][datetime]
+* [En savoir plus sur le formattage des dates][dateformat] (les formats et options acceptées)
 
 [datetime]: http://www.php.net/manual/book.datetime.php
 [dateformat]: http://www.php.net/manual/function.date.php

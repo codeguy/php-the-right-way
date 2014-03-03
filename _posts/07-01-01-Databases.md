@@ -16,7 +16,7 @@ As an extra note on native drivers, the mysql extension for PHP is no longer in 
 line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development schedules so you won't
 be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
 
-* [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
+* [PHP: Choisir une API pour MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 
 ## PDO
 
@@ -52,7 +52,7 @@ $stmt->execute();
 This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the
 database preventing potential SQL injection attacks.
 
-* [Learn about PDO][1]
+* [En savoir plus sur PDO][1]
 
 You should also be aware that database connections use up resources and it was not unheard-of to have resources
 exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you
@@ -60,7 +60,7 @@ can implicitly close the connection by destroying the object by ensuring all rem
 i.e. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends -
 unless of course you are using persistent connections.
 
-* [Learn about PDO connections][5]
+* [En savoir plus sur les connexions avec PDO][5]
 
 ## Couches d'abstractions
 
@@ -77,11 +77,11 @@ Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4]
 * [ZF2 Db][4]
 * [ZF1 Db][3]
 
-[1]: http://www.php.net/manual/en/book.pdo.php
+[1]: http://www.php.net/manual/fr/book.pdo.php
 [2]: http://www.doctrine-project.org/projects/dbal.html
-[3]: http://framework.zend.com/manual/en/zend.db.html
-[4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
-[5]: http://php.net/manual/en/pdo.connections.php
+[3]: http://framework.zend.com/manual/fr/zend.db.html
+[4]: http://packages.zendframework.com/docs/latest/manual/fr/index.html#zend-db
+[5]: http://php.net/manual/fr/pdo.connections.php
 [6]: https://github.com/auraphp/Aura.Sql
 [7]: http://propelorm.org/Propel/
 

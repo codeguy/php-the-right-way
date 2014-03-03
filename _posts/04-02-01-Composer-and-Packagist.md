@@ -74,7 +74,7 @@ your GitHub and BitBucket accounts for `composer.json` files and send emails wit
 
 The [Security Advisories Checker][4] is a web service and a command-line tool, both will examine your `composer.lock` file and tell you if you need to update any of your dependencies.
 
-* [Learn about Composer][5]
+* [En savoir plus sur Composer][5]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org
