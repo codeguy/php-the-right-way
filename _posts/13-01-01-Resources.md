@@ -21,7 +21,7 @@ title: Ressources
 * [Anthony Ferrara](http://twitter.com/ircmaxell)
 * [Nikita Popov](http://twitter.com/nikita_ppv)
 
-## Mentors
+## Mentorat
 
 * [phpmentoring.org](http://phpmentoring.org/) - Encadrement et montée en compétences par des membres de la communauté
 

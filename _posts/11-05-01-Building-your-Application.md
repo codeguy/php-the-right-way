@@ -71,6 +71,6 @@ languages including PHP.
 
 Allez plus loin:
 
-* [Continuous Integration with Jenkins](http://jenkins-ci.org/)
-* [Continuous Integration with PHPCI](http://www.phptesting.org/)
-* [Continuous Integration with Teamcity](http://www.jetbrains.com/teamcity/)
+* [Intégration continue avec Jenkins](http://jenkins-ci.org/)
+* [Intégration continue avec PHPCI](http://www.phptesting.org/)
+* [Intégration continue avec Teamcity](http://www.jetbrains.com/teamcity/)

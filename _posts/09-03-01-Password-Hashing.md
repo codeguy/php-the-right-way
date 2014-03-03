@@ -32,11 +32,11 @@ if (password_verify('bad-password', $passwordHash)) {
 
 
 * [En savoir plus sur `password_hash`] [1]
-* [`password_compat` for PHP  >= 5.3.7 && < 5.5] [2]
-* [Learn about hashing in regards to cryptography] [3]
+* [`password_compat` pour PHP  >= 5.3.7 && < 5.5] [2]
+* [En savoir plus sur les fonctions de hachage (cryptographie)] [3]
 * [PHP `password_hash` RFC] [4]
 
-[1]: http://us2.php.net/manual/en/function.password-hash.php
+[1]: http://us2.php.net/manual/fr/function.password-hash.php
 [2]: https://github.com/ircmaxell/password_compat
-[3]: http://en.wikipedia.org/wiki/Cryptographic_hash_function
+[3]: http://fr.wikipedia.org/wiki/Fonction_de_hachage_cryptographique
 [4]: https://wiki.php.net/rfc/password_hash

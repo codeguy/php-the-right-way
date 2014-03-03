@@ -33,10 +33,10 @@ One last example is accepting foreign input to determine a file to load from the
 changing the filename to a file path. You need to remove "/", "../", [null bytes][6], or other characters from the file path so it can't
 load hidden, non-public, or sensitive files.
 
-* [Learn about data filtering][1]
-* [Learn about `filter_var`][4]
-* [Learn about `filter_input`][5]
-* [Learn about handling null bytes][6]
+* [En savoir plus sur le filtrage des données][1]
+* [En savoir plus sur `filter_var`][4]
+* [En savoir plus sur `filter_input`][5]
+* [En savoir plus sur la gestion des octets null][6]
 
 ### Nettoyage
 
@@ -51,19 +51,19 @@ page. This is very hard to do and many avoid it by using other more restricted f
 Markdown or BBCode, although whitelisting libraries like [HTML Purifier][html-purifier] exists for
 this reason.
 
-[See Sanitization Filters][2]
+[Voir les filtres de nettoyage][2]
 
 ### Validation
 
 Validation ensures that foreign input is what you expect. For example, you may want to validate an
 email address, a phone number, or age when processing a registration submission.
 
-[See Validation Filters][3]
+[Voir les filtres de validation][3]
 
-[1]: http://www.php.net/manual/en/book.filter.php
-[2]: http://www.php.net/manual/en/filter.filters.sanitize.php
-[3]: http://www.php.net/manual/en/filter.filters.validate.php
-[4]: http://php.net/manual/en/function.filter-var.php
-[5]: http://www.php.net/manual/en/function.filter-input.php
-[6]: http://php.net/manual/en/security.filesystem.nullbytes.php
+[1]: http://www.php.net/manual/fr/book.filter.php
+[2]: http://www.php.net/manual/fr/filter.filters.sanitize.php
+[3]: http://www.php.net/manual/fr/filter.filters.validate.php
+[4]: http://php.net/manual/fr/function.filter-var.php
+[5]: http://www.php.net/manual/fr/function.filter-input.php
+[6]: http://php.net/manual/fr/security.filesystem.nullbytes.php
 [html-purifier]: http://htmlpurifier.org/
