@@ -68,6 +68,6 @@ Exception which is vague, or creating a custom Exception just for that, you coul
 
 [exceptions]: http://php.net/manual/fr/language.exceptions.php
 [splexe]: http://php.net/manual/fr/spl.exceptions.php
-[splext]: #bibliothèque_PHP_standard
+[splext]: #bibliothèque_php_standard
 [exception-best-practices53]: http://ralphschindler.com/2010/09/15/exception-best-practices-in-php-5-3
 [nesting-exceptions-in-php]: http://www.brandonsavage.net/exceptional-php-nesting-exceptions-in-php/

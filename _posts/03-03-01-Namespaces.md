@@ -5,25 +5,24 @@ isChild: true
 
 ## Les espaces de noms {#les_espaces_de_noms_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that 
-one library's PHP code may use the same class name as another library. When both libraries are used 
-in the same namespace, they collide and cause trouble.
+Comme mentionné plus haut, la communauté PHP a beaucoup de développeurs créant beaucoup de code. Cela signifie que le 
+code d'une bibliothèque PHP peut utiliser le même nom de classe qu'une autre bibliothèque. Quand plusieurs bibliothèques 
+sont utilisés dans le même espace de noms, il peut y avoir des collisions de noms ce qui pose problème.
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared 
-to operating system directories that _namespace_ files; two files with the same name may co-exist in 
-separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP 
-namespaces. It's as simple as that.
+_Les espaces de noms_ résolvent ce problème. Comme décrit dans le manuel de référence PHP, les espaces de noms peuvent 
+être comparés aux répertoires d'un système de fichiers. De même, 2 classes PHP peuvent avoir le même nom si elles sont 
+créées dans des espaces de noms distincts.
 
-It is important for you to namespace your code so that it may be used by other developers without fear 
-of colliding with other libraries.
+Il est important pour vous que vous utilisiez les espaces de noms dans votre code. Ainsi vous et d'autres développeurs 
+pourrez utiliser ce code sans crainte d'entrer en collision avec d'autres bibliothèques.
 
-One recommended way to use namespaces is outlined in [PSR-0][psr0], which aims to provide a standard file, 
-class and namespace convention to allow plug-and-play code.
+Une bonne manière d'utiliser les espaces de noms se trouve dans [PSR-0][psr0] qui vise à fournir une fichier standard, 
+une convention pour les classes et les espaces de noms pour permettre d'avoir du code "plug-and-play".
 
-In December 2013 the PHP-FIG created a new autoloading standard: [PSR-4][psr4], which one day will 
-probably replace PSR-0. Currently both are still usable, as PSR-4 requires PHP 5.3 and many PHP 5.2-only 
-projects currently implement PSR-0. If you're going to use an autoloader standard for a new application or 
-package then you almost certainly want to look into PSR-4.
+En décembre 2013, le PHP-FIG a crée un nouveau standard d'autochargement: [PSR-4][psr4], qui un jour va probablement 
+remplacer PSR-0. Pour le moment, les 2 sont utilisables étant donné que PSR-4 ne tourne que sur PHP 5.3+ et que 
+beaucoup de projets implémente PSR-0. Si vous allez utiliser un standard d'autochargement pour une nouvelle 
+application ou un paquetage alors vous devriez certainement voir du côté de PSR-4.
 
 * [En savoir plus sur les espaces de noms][namespaces]
 * [En savoir plus sur PSR-0][psr0]
