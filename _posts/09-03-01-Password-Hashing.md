@@ -5,15 +5,25 @@ isChild: true
 
 ## Hachage de mots de passe {#hachage_de_mots_de_passe_title}
 
-Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a database and later used to authenticate users upon login.
+Pratiquement tout le monde construit une application PHP qui se base sur une authentification de l'utilisateur. Les 
+identifiants et les mots de passe sont stockés dans une base de données et utiliser plus tard pour authentifier les 
+utilisateurs.
 
-It is important that you properly [_hash_][3] passwords before storing them. Password hashing is an irreversible, one way function performed against the user's password. This produces a fixed-length string that cannot be feasibly reversed. This means you can compare a hash against another to determine if they both came from the same source string, but you cannot determine the original string. If passwords are not hashed and your database is accessed by an unauthorized third-party, all user accounts are now compromised. Some users may (unfortunately) use the same password for other services. Therefore, it is important to take security seriously.
+Il est important que vous utilisiez correctement les fonctions de [hachage][3] avant de les stocker. Le hachage de 
+mot de passe est une opération irréversible produisant une chaîne de caractères de longueur fixe. Cela signifie que 
+vous pouvez comparer le produit d'une fonction de hachage avec le hash stocké en base de données pour déterminer s'il 
+s'agit du même texte. Si les mots de passe stockés en base de données ne sont pas "hachés" alors n'importe qui ayant 
+accès à cette base peut compromettre les comptes utilisateurs. Il arrive souvent que les utilisateurs utilisent le 
+même mot de passe pour d'autres services, c'est pourquoi il faut prendre la sécurité des informations avec sérieux.
 
-**Hashing passwords with `password_hash`**
+**Hachage de mot de passe avec `password_hash`**
 
-In PHP 5.5 `password_hash` was introduced. At this time it is using BCrypt, the strongest algorithm currently supported by PHP. It will be updated in the future to support more algorithms as needed though. The `password_compat` library was created to provide forward compatibility for PHP >= 5.3.7.
+La fonction `password_hash` a été introduise avec la version 5.5 de PHP. À l'heure actuelle, elle utilise BCrypt qui est 
+l'algorithme le plus robuste. Cela va être mise à jour dans le futur afin de supporter plus d'algorithmes. La 
+bibliothèque `password_compat` a été crée afin de fournir une compatibilité ascendante avec PHP >= 5.3.7.
 
-Below we hash a string, and then check the hash against a new string. Because our two source strings are different ('secret-password' vs. 'bad-password') this login will fail.
+Dans l'exemple ci-dessous, nous hachons une chaîne de caractères et faisons une vérification sur une chaîne différente. 
+Étant donné que les 2 chaînes sont différentes ('secret-password' vs. 'bad-password'), l'authentification va échoué.
 
 {% highlight php %}
 <?php
@@ -23,9 +33,9 @@ require 'password.php';
 $passwordHash = password_hash('secret-password', PASSWORD_DEFAULT);
 
 if (password_verify('bad-password', $passwordHash)) {
-    // Correct Password
+    // Mot de passe correct
 } else {
-    // Wrong password
+    // Mauvais mot de passe
 }
 {% endhighlight %}  
 

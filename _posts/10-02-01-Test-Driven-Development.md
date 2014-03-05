@@ -39,14 +39,14 @@ applications, but there are several alternatives
 
 ### Test d'intégration
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
+Citation tirée de [Wikipedia](http://fr.wikipedia.org/wiki/Test_d%27int%C3%A9gration):
 
 > Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
 
 Many of the same tools that can be used for unit testing can be used for integration testing as many
 of the same principles are used.
 
-### Test fonctionnelle
+### Test fonctionnel
 
 Sometimes also known as acceptance testing, functional testing consists of using tools to create automated
 tests that actually use your application instead of just verifying that individual units of code are behaving
