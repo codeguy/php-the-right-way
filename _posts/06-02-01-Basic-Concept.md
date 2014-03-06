@@ -5,11 +5,11 @@ isChild: true
 
 ## Concepts de base {#concepts_de_base_title}
 
-We can demonstrate the concept with a simple, yet naive example.
+Nous pouvons démontrer le concept avec un exemple tout bête.
 
-Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the
-adapter in the constructor and create a hard dependency. This makes testing difficult and means the `Database` class is
-very tightly coupled to the adapter.
+Imaginons que nous ayons une classe `Database` qui exige un adaptateur (adapter en anglais) pour communiquer avec la 
+base de données. Nous instantions l'adaptateur à l'intérieur du constructeur et créeons une dépendance forte. Cela 
+rend les tests compliqués étant donné que la classe `Database` est fortement couplée à l'adaptateur.
 
 {% highlight php %}
 <?php
@@ -28,7 +28,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-This code can be refactored to use Dependency Injection and therefore loosen the dependency.
+Ce code peut être refactorisé pour utiliser l'injection de dépendance et ainsi délier l'adaptateur de la classe.
 
 {% highlight php %}
 <?php
@@ -47,6 +47,6 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class its dependency rather than it creating it itself. We could even create a method
-that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we could
-set it directly.
+Maintenant nous fournissons à la classe `Database` les dépendances nécessaires en argument au lieu de les créer nous 
+même. Nous pouvons même créer une méthode qui accepterait les paramètres des dépendances afin de les fixer nous même, 
+ou si la propriété `$adapter` était `public`, nous pourrions la définir directement.
