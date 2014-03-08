@@ -55,8 +55,9 @@ this reason.
 
 ### Validation
 
-Validation ensures that foreign input is what you expect. For example, you may want to validate an
-email address, a phone number, or age when processing a registration submission.
+La validation s'assure que les entrées extérieures correspondent à ce que vous vous attendiez. Par exemple, vous 
+pourriez vouloir valider une adresse email, un numéro de téléphone ou un âge lors du traitement de l'enregistrement 
+d'un compte.
 
 [Voir les filtres de validation][3]
 
