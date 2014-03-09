@@ -23,29 +23,32 @@ Parmi les tâches que vous pourriez vouloir automatiser, vous trouverez:
 * le déploiement
 
 
-### Outil de génération automatique
+### Outil de construction automatique
 
-Build tools can be described as a collection of scripts that handle common tasks of software deployment. The build 
-tool is not a part of your software, it acts on your software from 'outside'.
+Les outils de contruction automatique ("build tools" en anglais) peuvent être souvent vus comme un ensemble de scripts 
+gérant les tâches les plus répétitives pour le déploiement d'un logiciel. Il ne fait généralement pas parti du logiciel 
+en lui-même, agissant ainsi depuis l'extérieur.
 
-There are many open source tools available to help you with build automation, some are written in PHP others aren't. 
-This shouldn't hold you back from using them, if they're better suited for the specific job. Here are a few examples:
+Il existe beaucoup d'outils open-source disponible pour vous aider à automatiser la construction de votre application, 
+certains étant même écrit en PHP. Cela ne devrait pas vous empêcher de les utiliser, si jamais ils correspondent mieux 
+au travail demandé. Voici quelques exemples:
 
-[Phing](http://www.phing.info/) is the easiest way to get started with automated deployment in the PHP world. With 
-Phing you can control your packaging, deployment or testing process from within a simple XML build file. Phing (which 
-is based on [Apache Ant](http://ant.apache.org/)) provides a rich set of tasks usually needed to install or update a 
-web app and can be extended with additional custom tasks, written in PHP.
+[Phing](http://www.phing.info/) est le moyen le plus facile pour commencer à utiliser le déploiement automatisé avec PHP. 
+Avec Phing, vous pouvez contrôler les processus de "packaging", de déploiement et d'exécution de tests à l'aide d'un 
+simple fichier XML. Phing (qui est basé sur [Apache Ant](http://ant.apache.org/)) fournit un riche ensemble de tâches 
+généralement nécessaire pour installer ou mettre à jour une application web et peut être amélioré avec l'ajout de 
+tâches personnalisées, écrit en PHP.
 
-[Capistrano](https://github.com/capistrano/capistrano/wiki) is a system for *intermediate-to-advanced programmers* to 
-execute commands in a structured, repeatable way on one or more remote machines. It is pre-configured for deploying 
-Ruby on Rails applications, however people are **successfully deploying PHP systems** with it. Successful use of 
-Capistrano depends on a working knowledge of Ruby and Rake.
+[Capistrano](https://github.com/capistrano/capistrano/wiki) est un système pour les *programmeurs de niveau intermédiaire 
+à avancé* pour exécuter des commandes de façon structuré et répétable sur une ou plusieurs machines distantes. Il est 
+pré-configuré pour déployer des applications Ruby On Rails, cependant nombreux sont ceux à l'utiliser pour *déployer 
+avec succès des applications PHP*. La bonne utilisation de Capistrano dépend de vos connaissances en Ruby et Rake.
 
-Dave Gardner's blog post [PHP Deployment with Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/) 
-is a good starting point for PHP developers interested in Capistrano.
+Le post du blog de Dave Gardner sur le [déploiement PHP avec Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/) 
+est un bon point de départ pour les développeurs qui seraient intéressés.
 
-[Chef](http://www.opscode.com/chef/) is more than a deployment framework, it is a very powerful Ruby based system 
-integration framework that doesn't just deploy your app but can build your whole server environment or virtual boxes.
+[Chef](http://www.opscode.com/chef/) est plus qu'un framework de déploiement basé sur Ruby car il peut aussi générer 
+l'ensemble de l'environnement de votre serveur ou de votre machine virtuelle.
 
 Les ressources sur Chef pour les développeurs PHP:
 
@@ -59,17 +62,16 @@ Allez plus loin:
 
 ### Intégration continue
 
-> Continuous Integration is a software development practice where members of a team integrate their work frequently, 
-> usually each person integrates at least daily — leading to multiple integrations per day. Many teams find that this 
-> approach leads to significantly reduced integration problems and allows a team to develop cohesive software more 
-> rapidly.
+> L'intégration continue est une pratique en génie logiciel où les membres d'une équipe intègrent leurs travaux 
+> fréquemment, souvent plusieurs fois par jour. Beaucoup d'équipes trouvent que cette approche permet de réduire de 
+> façon significative les problèmes d'intégrations et ainsi permet un développement plus cohérent et rapide.
 
 *-- Martin Fowler*
 
-There are different ways to implement continuous integration for PHP. Recently [Travis CI](https://travis-ci.org/) has 
-done a great job of making continuous integration a reality even for small projects. Travis CI is a hosted continuous 
-integration service for the open source community. It is integrated with GitHub and offers first class support for many 
-languages including PHP.
+Il existe différents moyens pour faire de l'intégration continue en PHP. [Travis CI](https://travis-ci.org/) a récemment 
+fait un excellent travail pour faire de l'intégration continue une réalité et ceux même pour de petits projets. Travis 
+CI est un service hébergé d'intégration continue pour la communauté open-source. IL est intégré à Github et offre un 
+support de haut niveau pour de nombreux langages (incluant PHP).
 
 Allez plus loin:
 

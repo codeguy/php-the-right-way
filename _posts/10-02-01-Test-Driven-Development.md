@@ -5,11 +5,12 @@ isChild: true
 
 ## Développement dirigé par les tests {#développement_dirigé_par_les_tests_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
+Tiré de [Wikipedia](http://fr.wikipedia.org/wiki/Test_Driven_Development):
 
-> Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes a failing automated test case that defines a desired improvement or new function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck, who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple designs and inspires confidence
+> Le Test Driven Development (TDD) ou en français développement piloté par les tests est une technique de développement 
+> de logiciel qui préconise d'écrire les tests unitaires avant d'écrire le code source d'un logiciel.
 
-There are several different types of testing that you can do for your application
+Il existe différents types de test que vous pouvez faire sur votre application.
 
 ### Test unitaire
 

@@ -40,16 +40,16 @@ load hidden, non-public, or sensitive files.
 
 ### Nettoyage
 
-Sanitization removes (or escapes) illegal or unsafe characters from foreign input.
+Le "nettoyage" supprime (ou échappe) les caractères illégaux ou considérés comme dangereux.
 
-For example, you should sanitize foreign input before including the input in HTML or inserting it
-into a raw SQL query. When you use bound parameters with [PDO](#databases), it will
-sanitize the input for you.
+Par exemple, vous devriez nettoyer les entrées étrangères avant d'inclure les entrées en HTML ou de les insérer 
+dans une requête SQL. Si vous utilisez les paramètres liés avec [PDO](#bases_de_données), il nettoyera les entrées pour 
+vous.
 
-Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML
-page. This is very hard to do and many avoid it by using other more restricted formatting like
-Markdown or BBCode, although whitelisting libraries like [HTML Purifier][html-purifier] exists for
-this reason.
+Parfois il est nécessaire d'autoriser certains tags HTML dans les entrées quand on les incluent dans la page HTML. Cela 
+se révèle souvent très compliqué à mettre en oeuvre et beaucoup l'évite, c'est pourquoi il existe des syntaxes de 
+formattage telles que Markdown or BBCode bien que des bibliothèques comme [HTML Purifier][html-purifier] vous permettent 
+d'intégrer directement de l'HTML.
 
 [Voir les filtres de nettoyage][2]
 
