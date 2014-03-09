@@ -5,20 +5,22 @@ isChild: true
 
 ## Constuire et déployer votre application {#construire_et_déployer_votre_application_title}
 
-If you find yourself doing manual database schema changes or running your tests manually before updating your files 
-(manually), think twice! With every additional manual task needed to deploy a new version of your app, the chances for 
-potentially fatal mistakes increase. Whether you're dealing with a simple update, a comprehensive build process or 
-even a continuous integration strategy, [build automation](http://en.wikipedia.org/wiki/Build_automation) is your 
-friend.
+Si vous vous retrouvez à faire des changements sur le schéma de la base de données vous-même ou que vous exécutez vos 
+tests manuellement avant de mettre à jour vos fichiers (là aussi manuellment), vous devriez sans doute repenser votre 
+méthodologie de développement! Avec l'ensemble des étapes manuelles que vous devez réaliser pour déployer une 
+nouvelle version de votre application, il y a de fortes chances pour que des erreurs potentiellement fatales viennent 
+se glisser durant l'une des étapes. Que ce soit une simple mise à jour, un processus de construction et de déploiement 
+voir même une stratégie d'intégration continue, le [moteur de production](http://fr.wikipedia.org/wiki/Moteur_de_production) 
+ est votre ami.
 
-Among the tasks you might want to automate are:
+Parmi les tâches que vous pourriez vouloir automatiser, vous trouverez:
 
-* Dependency management
-* Compilation, minification of your assets
-* Running tests
-* Creation of documentation
-* Packaging
-* Deployment
+* le gestionnaire de dépendances
+* la compilation, la minification de vos ressources
+* l'exécution des tests
+* la création de la documentation
+* le "packaging"
+* le déploiement
 
 
 ### Outil de génération automatique
@@ -45,15 +47,15 @@ is a good starting point for PHP developers interested in Capistrano.
 [Chef](http://www.opscode.com/chef/) is more than a deployment framework, it is a very powerful Ruby based system 
 integration framework that doesn't just deploy your app but can build your whole server environment or virtual boxes.
 
-Chef resources for PHP developers:
+Les ressources sur Chef pour les développeurs PHP:
 
-* [Three part blog series about deploying a LAMP application with Chef, Vagrant, and EC2](http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/)
-* [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system](https://github.com/opscode-cookbooks/php)
+* [Une série en trois parties sur la façon de déployer une application LAMP avec Chef, Vagrant, et EC2](http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/) (en)
+* [Un aide-mémoire pour "Chef" sur la façon d'installer et de configurer PHP 5.3 et le gestionnaire de paquet PEAR](https://github.com/opscode-cookbooks/php) (en)
 
 Allez plus loin:
 
-* [Automate your project with Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/)
-* [Maven](http://maven.apache.org/), a build framework based on Ant and [how to use it with PHP](http://www.php-maven.org/)
+* [Automatiser votre projet avec Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/) (en)
+* [Maven](http://maven.apache.org/), un framework de construction automatisée basé sur Ant et [comment l'utiliser avec PHP](http://www.php-maven.org/)
 
 ### Intégration continue
 
