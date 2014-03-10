@@ -2,7 +2,7 @@
 
 Il existe énormément d'information obsolète sur la toile à propos de PHP ce qui conduit les nouveaux utilisateurs de PHP à prendre de mauvaises habitudes, propageant de mauvaises pratiques et du code peu sûr.
 _PHP: La bonne manière_ est une référence concise et facile à lire à propos des conventions d'écriture
-les plus connues du PHP, des liens sur les tutoriaux faisant autorité sur le web et des pratiques que les contributeurs
+les plus connues sur le PHP, des liens sur les tutoriaux faisant autorité sur le web et des pratiques que les contributeurs
 de ce document considèrent comme meilleures à l'heure actuelle.
 
 _Il n'existe pas une seule et unique façon d'utiliser PHP_. Ce site web a pour but d'amener 
@@ -12,12 +12,12 @@ s'être penchés dessus. Ce site web ne vous dira pas quels outils utiliser, mai
 des suggestions sur plusieurs options, et quand c'est possible en vous expliquant les différences dans l'approche et
 les cas d'utilisations.
 
-Ce document n'est pas figé et sera amener à être mis à jour avec des informations utiles et des exemples au fur et à
+Ce document n'est pas figé et sera amené à être mis à jour avec des informations utiles et des exemples au fur et à
 mesure qu'ils seront disponibles.
 
 ## Traductions
 
-_PHP: La bonne manière_ est (ou sera bientôt) traduit en plusieurs langues :
+_PHP: La bonne manière_ est (déjà) traduit en plusieurs langues :
 
 * [Anglais](http://www.phptherightway.com)
 * [Chinois (simplifié)](http://wulijun.github.com/php-the-right-way)
