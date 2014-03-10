@@ -5,33 +5,34 @@ isChild: true
 
 ## Filtrage des données {#filtrage_des_données_title}
 
-Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate
-foreign input before using it in code. The `filter_var` and `filter_input` functions can sanitize text and validate text formats (e.g.
-email addresses).
+Une règle d'or: ne jamais faire confiance aux entrées extérieures dans votre code PHP. Prenez toujours soin à 
+"nettoyer" et valider ces entrées avant de les utiliser dans le code. Les fonctions `filter_var` et `filter_input` 
+peuvent nettoyer les entrées textuelles et valider les données comme les emails.
 
-Foreign input can be anything: `$_GET` and `$_POST` form input data, some values in the `$_SERVER`
-superglobal, and the HTTP request body via `fopen('php://input', 'r')`. Remember, foreign input is not
-limited to form data submitted by the user. Uploaded and downloaded files, session values, cookie data,
-and data from third-party web services are foreign input, too.
+Les entrées étrangères viennent de n'importe où : les données de formulaire envoyés via `$_GET` ou `$_POST`, des valeurs 
+dans la variable superglobales `$_SERVER` et le corps des requêtes HTTP via `fopen('php://input', 'r')`. N'oubliez pas, 
+les entrées étrangères ne se limitent pas aux données envoyées par l'utilisateur. Les fichiers uploadés et téléchargés, 
+les valeurs de session, les données des cookies et les données provenant de services tiers sont aussi des entrées 
+étrangères.
 
-While foreign data can be stored, combined, and accessed later, it is still foreign input. Every
-time you process, output, concatenate, or include data in your code, ask yourself if
-the data is filtered properly and can it be trusted.
+Demandez-vous à chaque fois que vous traitez, affichez, concaténez ou incluez des données dans votre code si ces données 
+ont été correctement filtrés et qu'elles peuvent être considérées comme sûr.
 
-Data may be _filtered_ differently based on its purpose. For example, when unfiltered foreign input is passed
-into HTML page output, it can execute HTML and JavaScript on your site! This is known as Cross-Site
-Scripting (XSS) and can be a very dangerous attack. One way to avoid XSS is to sanitize all user-generated
-data before outputting it to your page by removing HTML tags with the `strip_tags` function or escaping
-characters with special meaning into their respective HTML entities with the `htmlentities`
-or `htmlspecialchars` functions.
+Les données peuvent être _filtrées_ différemment selon le contexte. Par exemple, quand des données brutes sont envoyées 
+en sortie vers la page HTML, elles peuvent exécuter du Javascript et de l'HTML. Cette technique est connue sous le nom de 
+"Cross-Site Scripting" (XSS) et peut se révéler très dangereux. Une façon d'éviter les attaques XSS est de nettoyer 
+toutes les données générées par l'utilisateur avant de les afficher sur votre page en retirant toutes balises HTML avec 
+la fonction `strip_tags` ou en échappant les caractères spéciaux tels que '<' ou '>' avec les fonctions `htmlentities` ou 
+`htmlspecialchars`.
 
-Another example is passing options to be executed on the command line. This can be extremely dangerous
-(and is usually a bad idea), but you can use the built-in `escapeshellarg` function to sanitize the executed
-command's arguments.
+Un autre exemple est lorsque l'on passe des options à exécuter en ligne de commandes. Cela peut être très dangereux 
+(et est souvent une mauvaise idée) mais vous pouvez utiliser la fonction `escapeshellarg` pour nettoyer les arguments 
+d'une commande.
 
-One last example is accepting foreign input to determine a file to load from the filesystem. This can be exploited by
-changing the filename to a file path. You need to remove "/", "../", [null bytes][6], or other characters from the file path so it can't
-load hidden, non-public, or sensitive files.
+Un dernier exemple concerne le fait d'autoriser les entrées étrangères pour déterminer le fichier à télécharger depuis 
+le système de fichiers. Cela peut être exploiter en changeant le chemin vers le fichier. Vous devez supprimez 
+"/", "../", [les octets null][6] ou d'autres caractères du chemin de façon à empêcher le chargement de fichiers 
+cachés, privés ou contenant des données sensibles.
 
 * [En savoir plus sur le filtrage des données][1]
 * [En savoir plus sur `filter_var`][4]

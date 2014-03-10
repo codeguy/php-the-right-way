@@ -3,7 +3,7 @@ title: Développement dirigé par les tests
 isChild: true
 ---
 
-## Développement dirigé par les tests {#développement_dirigé_par_les_tests_title}
+## Développement dirigé par les tests (TDD) {#développement_dirigé_par_les_tests_title}
 
 Tiré de [Wikipedia](http://fr.wikipedia.org/wiki/Test_Driven_Development):
 
@@ -14,23 +14,25 @@ Il existe différents types de test que vous pouvez faire sur votre application.
 
 ### Test unitaire
 
-Unit Testing is a programming approach to ensure functions, classes and methods are working as
-expected, from the point you build them all the way through the development cycle. By checking
-values going in and out of various functions and methods, you can make sure the internal logic is
-working correctly. By using Dependency Injection and building "mock" classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+Le test unitaire est une approche dans la programmation qui s'assure que les fonctions, les classes et les méthodes 
+écrites fonctionnent comme prévues tout le long du cycle de développement. En vérifiant les valeurs en entrée et en sortie 
+des différentes fonctions, vous vous assurez du bon fonctionnement de la logique interne. En utilisant l'injection de 
+dépendances et en construisant des classes [mocks](http://fr.wikipedia.org/wiki/Mock_%28programmation_orient%C3%A9e_objet%29) 
+et des classes [stubs](http://fr.wikipedia.org/wiki/Stub), vous pouvez vérifier que les dépendances sont correctement 
+utilisées pour une meilleur couverture du code.
 
-When you create a class or function you should create a unit test for each behavior it must have. At a very basic level you should
-make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments.
-This will help ensure that when you make changes to this class or function later on in the development
-cycle that the old functionality continues to work as expected. The only alternative to this would be
-var_dump() in a test.php, which is no way to build an application - large or small.
+Quand vous créez une classe ou une fonction, vous devriez aussi créer un test unitaire couvrant l'ensemble des états 
+possibles. À un niveau très basique, vous devriez vous assurer que les changements effectués sur une fonction ou une 
+classe ne modifieront pas le comportement attendu de l'application. La seule alternative pour les tests unitaires serait 
+l'utilisation de la fonction `var_dump()` ce qui n'est pas viable que ce soit pour une petite ou une grande application.
 
-The other use for unit tests is contributing to open source. If you can write a test that shows broken
-functionality (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If
-you run a project which accepts pull requests then you should suggest this as a requirement.
+L'autre cas d'utilisation des tests unitaires est la contribution à la communauté open-source. Vous pouvez ainsi 
+écrire un test montrant une fonctionnalité boguée puis la réparer en montrant cette fois qu'elle passe le test. Les 
+patches auront plus de chances d'être acceptés de cette manière. Si vous travaillez sur un projet acceptant les 
+"pull requests" alors vous devriez exiger un (ou plusieurs) test avant chaque patch.
 
-[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP
-applications, but there are several alternatives
+[PHPUnit](http://phpunit.de) est le framework de test standard (de facto) pour écrire des tests unitaires pour des 
+applications PHP mais il existe d'autres alternatives :
 
 * [atoum](https://github.com/atoum/atoum)
 * [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
@@ -42,21 +44,28 @@ applications, but there are several alternatives
 
 Citation tirée de [Wikipedia](http://fr.wikipedia.org/wiki/Test_d%27int%C3%A9gration):
 
-> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in which individual software modules are combined and tested as a group. It occurs after unit testing and before validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
+> Un test d'intégration est un test qui se déroule dans une phase d'un projet informatique suivant les tests unitaires. 
+> Il consiste, une fois que les développeurs ont chacun validé leurs développements ou leurs correctifs, 
+> à regrouper leurs modifications ensemble dans le cadre d'une livraison.
 
-Many of the same tools that can be used for unit testing can be used for integration testing as many
-of the same principles are used.
+Beaucoup des outils utilisés pour les tests unitaires peuvent aussi l'être pour les tests d'intégration étant donné 
+qu'ils partagent les mêmes principes.
+
 
 ### Test fonctionnel
 
-Sometimes also known as acceptance testing, functional testing consists of using tools to create automated
-tests that actually use your application instead of just verifying that individual units of code are behaving
-correctly and that individual units can speak to each other correctly. These tools typically work using real
-data and simulating actual users of the application.
+Les tests fonctionnels servent à vérifier que chaque fonction est correctement implémentée, c'est-à-dire conforme aux 
+exigences et aux spécifications. On vérifie chaque fonction indépendamment les unes des autres, 
+généralement en terme d'entrées/sorties.
+
+Une autre variante connue est le test d'acceptation qui lui vérifie que le produit répond aux attentes de l'utilisateur, 
+c'est-à-dire qu'il est conforme aux besoins et au cahier des charges. On vérifie le produit dans son ensemble, 
+généralement avec des scénarios réalistes d'utilisation.
 
 #### Outils pour les tests fonctionnels
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
-* [Storyplayer](http://datasift.github.io/storyplayer) is a full-stack testing framework that includes support for creating and destroying test environments on demand
+* [Codeception](http://codeception.com) est un framework de test complet incluant aussi des outils pour les tests d'acceptance
+* [Storyplayer](http://datasift.github.io/storyplayer) est un framework de test complet qui inclue un support pour 
+créer et détruire des environnements de test à la demande
