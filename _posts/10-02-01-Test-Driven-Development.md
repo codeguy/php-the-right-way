@@ -5,7 +5,7 @@ isChild: true
 
 ## Développement dirigé par les tests (TDD) {#développement_dirigé_par_les_tests_title}
 
-Tiré de [Wikipedia](http://fr.wikipedia.org/wiki/Test_Driven_Development):
+Citation tirée de [Wikipedia](http://fr.wikipedia.org/wiki/Test_Driven_Development):
 
 > Le Test Driven Development (TDD) ou en français développement piloté par les tests est une technique de développement 
 > de logiciel qui préconise d'écrire les tests unitaires avant d'écrire le code source d'un logiciel.

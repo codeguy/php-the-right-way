@@ -38,10 +38,10 @@ echo "Hello, $nom\n";
 {% endhighlight %}
 
 Le PHP crée 2 variables spéciales basés sur les paramètres passés au script. La variable [`$argc`][argc] est un entier 
-contenant le *nombre* et [`$argv`][argv] est un tableau contenant chacune des valeurs des paramètres. Le premier 
+contenant le *nombre de paramètres* et [`$argv`][argv] est un tableau contenant chacune des valeurs des paramètres. Le premier 
 paramètre est toujours le nom du script PHP, dans notre cas `hello.php`.
 
-L'expression `exit()` est utilisé avec un nombre différent de zéro pour dire au terminal que la commande a échoué. Les 
+L'expression `exit()` est utilisé avec un nombre différent de zéro pour indiquer au terminal que la commande a échoué. Les 
 codes de sortie les plus communs se trouve [ici][exit-codes].
 
 Pour exécuter le script ci-dessus depuis le terminal:

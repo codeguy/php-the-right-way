@@ -3,7 +3,7 @@ layout: page
 title: Programmation fonctionnelle en PHP
 ---
 
-# Programmation fonctionnelle en PHP
+# La programmation fonctionnelle en PHP
 
 PHP supporte les fonctions d'ordre supérieur, c'est-à-dire les fonctions qui peuvent être définies en tant que variable.
  Les fonctions internes et définies par l'utilisateur peuvent être référencées par une variable et être ainsi 

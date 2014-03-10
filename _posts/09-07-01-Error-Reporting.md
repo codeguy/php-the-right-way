@@ -20,8 +20,8 @@ dans votre fichier `php.ini`:
     error_reporting = -1
     log_errors = On
 
-> Définir la valeur `-1` à `error_reporting` va permettre d'afficher toutes les erreurs même si d'autres niveaux et 
-> constantes sont ajoutés dans les futures versions de PHP. La constante `E_ALL` produit le même effet pour PHP 5.4 - 
+> En passant la valeur `-1`, toutes les erreurs possibles seront affichées, même lors de l'ajout d'autres niveaux et 
+> constantes dans les futures versions de PHP. La constante E_ALL fonctionne de la même façon depuis PHP 5.4. - 
 > [php.net](http://php.net/manual/function.error-reporting.php)
 
 Le niveau d'erreur `E_STRICT` a été introduit avec PHP 5.3.0 et ne fait pas parti de `E_ALL`, cependant il est 

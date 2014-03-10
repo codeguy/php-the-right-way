@@ -3,7 +3,7 @@ layout: page
 title: Motif de conception
 ---
 
-# Motif de conception
+# Les motifs de conception
 
 Il existe de nombreuses façons de structurer votre code pour votre application web et vous pouvez passer plus ou moins 
 de temps à concevoir son architecture. Mais il est de bonne augure de suivre les motifs de conception (pattern en 

@@ -6,8 +6,8 @@ title: Ressources
 
 ## Officielles
 
-* [PHP Website](http://php.net/)
-* [PHP Documentation](http://php.net/docs.php)
+* [Site web PHP](http://php.net/)
+* [Documentation PHP](http://php.net/docs.php)
 
 ## Personnes à suivre
 
@@ -30,7 +30,7 @@ title: Ressources
 * [PagodaBox](https://pagodabox.com/)
 * [AppFog](https://appfog.com/)
 * [Heroku](https://heroku.com)
-  (Le support pour PHP n'est pas documenté mais est basé sur le partenariat solide 
+  (Le support pour PHP n'est pas documenté mais est basé sur le partenariat  
   avec Facebook : [lien](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
 * [fortrabbit](http://fortrabbit.com/)
 * [Engine Yard Cloud](https://www.engineyard.com/products/cloud)

@@ -6,7 +6,7 @@ title: Normes
 
 La communauté PHP est large et diverse, composé d'innombrables bibliothèques, de frameworks et de composants. Il est 
 courant pour les développeurs PHP de choisir plusieurs d'entre-eux et de les combiner en un seul projet. Il est important 
-que le code PHP adhère (de façon aussi proche que possible) à un style de code commun pour rendre le partage plus facile 
+que le code PHP adhère (de façon aussi proche que possible) à un style commun pour rendre le partage plus facile 
 entre développeurs et de garder une certaine cohérence avec l'utilisation de code tiers.
 
 Le [Framework Interop Group][fig] a proposé et approuvé une série de convention de codage. Celles qui sont liées au 
@@ -25,13 +25,13 @@ un des standards créé par PEAR ou Zend.
 * [Lire les conventions de codage de Zend][zend-cs]
 * [Lire les conventions de codage de Symfony][symfony-cs]
 
-Vous pouvez utiliser [PHP_CodeSniffer][phpcs] pour contrôler que votre code respecte une de ces recommandations. Des 
-plugins pour des éditeurs de texte comme [Sublime Text 2][st-cs] vous permette d'avoir un aperçu des écarts en temps réel.
+Vous pouvez utiliser [PHP_CodeSniffer][phpcs] pour vérifier que votre code respecte une de ces recommandations. Des 
+plugins pour des éditeurs de texte comme [Sublime Text 2][st-cs] vous permettent d'avoir un aperçu des écarts en temps réel.
 
 Utiliser le [PHP Coding Standards Fixer][phpcsfixer] de Fabien Potencier afin de formatter automatiquement la syntaxe de 
 votre code selon les standards définis, ce qui vous évite de le faire vous-même à la main. 
 
-Faites en sorte que l'infrastructure de votre code et que les noms des variables choisies soient en anglais. Les 
+Faites en sorte que l'infrastructure de votre code et que les noms des variables choisis soient en anglais. Les 
 commentaires peuvent être écrits dans n'importe quel langue du moment que l'ensemble des personnes ayant à travailler 
 dessus puissent le comprendre.
 

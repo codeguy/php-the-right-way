@@ -85,14 +85,14 @@ d'autres développeurs et que le fichier `composer.lock` y est inclu alors ils a
 mettre à jour ces dépendances, exécuter `php composer.phar update`.
 
 Cela est très pratique quand vous définissez les versions requises de façon flexible. Par exemple, une version exigée de 
-~1.8 signifie "tout ce qui est plus récent que 1.8.0 mais inférieur à 2.0.x-dev". Vous pouvez aussi utiliser le jeton `*` 
+~1.8 signifie "tout ce qui est plus récent que 1.8.0 mais inférieur à 2.0.x-dev". Vous pouvez aussi utiliser le joker `*` 
 comme par exemple `1.8.*`. À partir de là, la commande `php composer.phar update` va mettre à jour vos dépendances à 
 la dernière version en suivant les restrictions demandées.
 
 ### Notifications de mise à jour
 
 Pour recevoir les notifications de nouvelles versions vous pouvez vous enregistrer sur [VersionEye][3] qui est un 
-service web qui surveille vos fichiers `composer.json` sur vos comptes Github et BitBucket  et vous envoit des emails 
+service web qui surveille vos fichiers `composer.json` sur vos comptes Github et BitBucket  et vous envoie des emails 
 avec les nouvelles versions.
 
 ### Vérifier vos dépendances pour des raisons de sécurité

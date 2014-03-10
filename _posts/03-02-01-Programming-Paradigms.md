@@ -24,13 +24,13 @@ Les fonctions définies par l'utilisateur ainsi que les fonctions intégrées au
 variable et invoquées dynamiquement. Les fonctions peuvent être passés en tant qu'argument à d'autres fonctions (on 
 parle alors de fonctions d'ordre supérieure) et elles peuvent retourner d'autres fonctions.
 
-La récursion est une fonctionnalité permettant à une fonction de s'appeler elle-même, cependant la plupart du code 
-PHP se concentre sur l'itération.
+La récursion est une fonctionnalité permettant à une fonction de s'appeler elle-même, cependant la plupart des fonctions 
+PHP se concentre sur la partie "itération".
 
 Les nouvelles fonctions anonymes avec le support pour les fermetures (closures en anglais) sont présentes depuis 
 PHP 5.3 (2009).
 
-Le PHP 5.4 a rajouté la possibilité de lier les fermetures à la portée d'un objet et a aussi amélioré le support pour 
+Le PHP 5.4 a rajouté la possibilité de lier ("bind") les fermetures à la portée d'un objet et a aussi amélioré le support pour 
 les "callables" de façon à ce qu'elles puissent être utilisés aussi bien avec les fonctions anonymes (dans la plupart des 
 cas).
 
