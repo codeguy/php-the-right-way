@@ -17,7 +17,7 @@ vous travaillez sur Windows et déployez sur Linux.
 
 Si vous désirez utiliser Windows comme plateforme de production alors le serveur IIS7 vous donnera le meilleur compromis 
 entre stabilité et performance. Vous pouvez utiliser [phpmanager][phpmanager] qui est un plugin graphique pour IIS7 
-afin d'effectuer les configurations nécessaires pour faire tourner PHP. IIS7 intègre FastCGI prêt à l'emmploi, vous 
+afin d'effectuer les configurations nécessaires pour faire tourner PHP. IIS7 intègre FastCGI prêt à l'emploi, vous 
 n'avez qu'à configurer PHP en tant qu'extension. Pour plus d'informations, visiter le site dédié sur [iis.net][php-iis].
 
 [php-downloads]: http://windows.php.net
