@@ -47,6 +47,7 @@ developers know where to find good information!
 * [Bulgarian](http://bg.phptherightway.com)
 * [German] (http://rwetzlmayr.github.io/php-the-right-way)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [Slovenian](http://sl.phptherightway.com)
 
 ### Translations
 
