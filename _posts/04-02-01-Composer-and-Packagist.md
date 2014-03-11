@@ -15,7 +15,7 @@ Ces "paquets" sont listés sur [Packagist][1], le répertoire officiel pour les 
 ### Comment installer Composer
 
 Vous pouvez installer Composer localement (dans votre répertoire de travail courant; bien que cela ne soit plus 
-recommandé) ou globalement (par ex., /usr/local/bin). Assumons le fait que vous vouliez installer Composer localement. 
+recommandé) ou globalement (par ex., /usr/local/bin). Supposons que vous vouliez installer Composer localement. 
 Depuis la racine de votre projet, tapez :
 
     curl -s https://getcomposer.org/installer | php
@@ -49,7 +49,7 @@ substituer cette commande avec:
 
     composer install
   
-La section suivante assume que vous avez installé composer "globlalement".  
+La section suivante assume le fait que vous avez installé composer "globlalement".  
 
 ### Comment définir et installer les dépendances
 
@@ -61,8 +61,8 @@ pour votre projet:
 	composer require twig/twig:~1.8
 
 Alternativement, la commande `composer init` va vous guider à travers la création du fichier `composer.json`. De toute 
-manière, une fois que ce fichier est crée, vous pouvez indiquer à Composer de télécharger et d'installer vos dépendances 
-dans le répertoire `vendors/`. Cela s'applique aussi aux projets que vous avez télécharger et qui possèdent déjà un 
+manière, une fois que ce fichier est créé, vous pouvez indiquer à Composer de télécharger et d'installer vos dépendances 
+dans le répertoire `vendors/`. Cela s'applique aussi aux projets que vous avez téléchargé et qui possèdent déjà un 
 fichier `composer.json`:
 
     composer install
@@ -80,7 +80,7 @@ Maintenant si vous utiliser les bibliothèques dont votre projet est dépendant,
 ### Mettre à jour vos dépendances
 
 Composer crée un fichier appelé `composer.lock` qui stocke la version exacte de chaque paquets qui a été téléchargé 
-quand vous avez exécuteé pour la première fois `php composer.phar install`. Si vous partager votre projet avec 
+quand vous avez exécuté pour la première fois `php composer.phar install`. Si vous partagez votre projet avec 
 d'autres développeurs et que le fichier `composer.lock` y est inclu alors ils auront les mêmes versions que vous. Pour 
 mettre à jour ces dépendances, exécuter `php composer.phar update`.
 

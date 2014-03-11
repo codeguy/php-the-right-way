@@ -21,7 +21,7 @@ de faire de la refactorisation. La meilleure option est de prévoir sur votre pl
 de mysql par mysqli ou PDO afin d'anticiper ce problème. _Si vous venez de démarrer le développement d'une nouvelle 
 application alors n'utilisez absolument pas l'extension mysql: utilisez plutôt l'[extension MySQLi][mysqli] ou PDO._
 
-* [PHP: Choisir une API pour MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
+* [PHP: Choisir une API pour MySQL](http://php.net/manual/fr/mysqlinfo.api.choosing.php)
 
 ## PDO
 

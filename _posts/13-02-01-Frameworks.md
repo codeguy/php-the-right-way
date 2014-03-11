@@ -13,7 +13,7 @@ Vous n'avez pas besoin d'utiliser un framework pour chacun de vos projets. Parfo
 mais si vous avez besoin d'un framework alors il en existe de 3 sortes :
 
 * Les micro-frameworks
-* Les frameworks complet ("full-stack" en anglais)
+* Les frameworks complets ("full-stack" en anglais)
 * Les frameworks orienté composant
 
 Les micro-frameworks sont essentiellement des surcouches pour router une requête HTTP vers une fonction de rappel 

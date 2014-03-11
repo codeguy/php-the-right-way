@@ -6,7 +6,7 @@ title: La gestion des dépendances
 
 Il existe une tonne de bibliothèques PHP, de frameworks et de composants pour gérer les dépendances. Votre projet va 
 surement utiliser plusieurs d'entre-eux — ce sont les dépendances d'un projet. Jusqu'à récemment, le PHP n'avait pas de 
-moyen fiable pour gérer ces dépendances. Même si vous les gériez de façon manuelle, vous devriez toujours vous 
+moyen fiable pour gérer ces dépendances. Même si vous les gériez de façon manuelle, vous deviez toujours vous 
 inquiétez des autoloaders. Mais plus maintenant.
 
 À l'heure actuelle, ils existent 2 gestionnaire de packaging pour PHP - Composer et PEAR. Lequel correspond le mieux à 

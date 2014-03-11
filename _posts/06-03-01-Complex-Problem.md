@@ -12,7 +12,7 @@ l'injection de dépendances cherche à résoudre.
 ### Inversion de contrôle
 
 L'inversion de contrôle est, comme il le sous-entend, un système cherchant à "inverser le contrôle" en gardant le contrôle 
-organisationnelle entièrement séparé des objets. En terme d'injection de dépendance, cela signifie que l'on sépare les 
+organisationnel entièrement séparé des objets. En terme d'injection de dépendance, cela signifie que l'on sépare les 
 dépendances en les contrôlant et en les instanciant ailleurs dans le système.
 
 Pendant des années, les frameworks PHP ont fait de l'inversion de contrôle, cependant la question est devenue : quelle 
