@@ -305,15 +305,21 @@ vs.
 $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 
-It should be noted to save confusion that you do not need to use a ternary operator for returning a boolean value. An example of this would be.
+{% endhighlight %}
 
+It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this would be.
+
+{% highlight php %}
+<?php
 $a = 3;
 return ($a == 3) ? true : false; // Will return true or false if $a == 3
 
 vs
 
 $a = 3;
-return ($a == 3); // Will return true or false if $a == 3
+return $a == 3; // Will return true or false if $a == 3
+
+{% endhighlight php %}
 
 This can also be said for all operations(===, !==, !=, == etc).
 
