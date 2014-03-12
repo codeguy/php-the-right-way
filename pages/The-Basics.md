@@ -304,6 +304,19 @@ vs.
 
 $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
+
+It should be noted to save confusion that you do not need to use a ternary operator for returning a boolean value. An example of this would be.
+
+$a = 3;
+return ($a == 3) ? true : false; // Will return true or false if $a == 3
+
+vs
+
+$a = 3;
+return ($a == 3); // Will return true or false if $a == 3
+
+This can also be said for all operations(===, !==, !=, == etc).
+
 {% endhighlight %}
 
 * [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
