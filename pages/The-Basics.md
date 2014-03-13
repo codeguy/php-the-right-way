@@ -325,6 +325,58 @@ This can also be said for all operations(===, !==, !=, == etc).
 
 {% endhighlight %}
 
+#### Utilising brackets with ternary operators for form and function
+
+When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions within blocks of statements. An example of when there is no requirement to use bracketing is:
+
+{% highlight php %}
+<?php
+$a = 3;
+return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
+
+vs
+
+<?php
+$a = 3;
+return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
+
+{% endhighlight %}
+
+It is down to the judgement of the developer where and when to use this method to improve code readability as it is debatable what is an improvement and what is a hinderance. Here is an example where it might be wise to use bracketing.
+
+{% highlight php %}
+<?php
+$a = 3;
+$b = 4;
+$c = 5;
+
+return $a == 3 || $b === 4 || $c !== 5; // return true if $a == 3 or $b === 4(value and type) or $c !== 5(value and type)
+
+vs
+
+<?php
+$a = 3;
+$b = 4;
+$c = 5;
+
+return ($a == 3) && ($b === 4) && ($c !== 5); // return true if $a == 3 or $b === 4(value and type) or $c !== 5(value and type)
+
+{% endhighlight %}
+
+Another reason to utilise bracketing is the ability to create unions within a statement block where the block will be checked as a whole. Such as:
+
+{% highlight php %}
+<?php
+$a = 3;
+$b = 4;
+$c = 5;
+
+return ($a == 3 && $b == 4) && $c == 5; // return true if both ($a == 3 and $b == 4) are true and $c == 5 is true.
+return ($a != 3 && $b != 4) || $c == 5; // return true if ($a != 3 AND $b != 4) OR $c == 5
+return (($a == $b || $a == $c) && $b != 4) || $c == 5; // return true if (($a == $b or $a == $c) and $b != 4) OR $c == 5
+
+{% endhighlight %}
+
 * [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
 
 ## Variable declarations
