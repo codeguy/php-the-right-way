@@ -12,17 +12,17 @@ Right now PHP does not support Unicode at a low level. There are ways to ensure 
 
 ### UTF-8 at the PHP level
 
-The basic [string operations](http://php.net/manual/en/language.operators.string.php), like concatenating two strings and assigning strings to variables, don't need anything special for UTF-8. However most [string functions](http://php.net/manual/en/ref.strings.php), like [`strpos()`](http://php.net/manual/en/function.strpos.php) and [`strlen()`](http://php.net/manual/en/function.strlen.php), do need special consideration. These functions often have an `mb_*` counterpart: for example, [`mb_strpos()`](http://php.net/manual/en/function.mb-strpos.php) and [`mb_strlen()`](http://php.net/manual/en/function.mb-strlen.php). Together, these counterpart functions are called the [Multibyte String Functions](http://php.net/manual/en/ref.mbstring.php). The multibyte string functions are specifically designed to operate on Unicode strings.
+The basic string operations, like concatenating two strings and assigning strings to variables, don't need anything special for UTF-8. However most string functions, like `strpos()` and `strlen()`, do need special consideration. These functions often have an `mb_*` counterpart: for example, `mb_strpos()` and `mb_strlen()`. Together, these counterpart functions are called the Multibyte String Functions. The multibyte string functions are specifically designed to operate on Unicode strings.
 
-You must use the `mb_*` functions whenever you operate on a Unicode string. For example, if you use [`substr()`](http://php.net/manual/en/function.substr.php) on a UTF-8 string, there's a good chance the result will include some garbled half-characters. The correct function to use would be the multibyte counterpart, [`mb_substr()`](http://php.net/manual/en/function.mb-substr.php).
+You must use the `mb_*` functions whenever you operate on a Unicode string. For example, if you use `substr()` on a UTF-8 string, there's a good chance the result will include some garbled half-characters. The correct function to use would be the multibyte counterpart, `mb_substr()`.
 
 The hard part is remembering to use the `mb_*` functions at all times. If you forget even just once, your Unicode string has a chance of being garbled during further processing.
 
 Not all string functions have an `mb_*` counterpart. If there isn't one for what you want to do, then you might be out of luck.
 
-Additionally, you should use the [`mb_internal_encoding()`](http://php.net/manual/en/function.mb-internal-encoding.php) function at the top of every PHP script you write (or at the top of your global include script), and the [`mb_http_output()`](http://php.net/manual/en/function.mb-http-output.php) function right after it if your script is outputting to a browser. Explicitly defining the encoding of your strings in every script will save you a lot of headaches down the road.
+Additionally, you should use the `mb_internal_encoding()` function at the top of every PHP script you write (or at the top of your global include script), and the `mb_http_output()` function right after it if your script is outputting to a browser. Explicitly defining the encoding of your strings in every script will save you a lot of headaches down the road.
 
-Finally, many PHP functions that operate on strings have an optional parameter letting you specify the character encoding. You should always explicitly indicate UTF-8 when given the option. For example, [`htmlentities()`](http://php.net/manual/en/function.htmlentities.php) has an option for character encoding, and you should always specify UTF-8 if dealing with such strings.
+Finally, many PHP functions that operate on strings have an optional parameter letting you specify the character encoding. You should always explicitly indicate UTF-8 when given the option. For example, `htmlentities()` has an option for character encoding, and you should always specify UTF-8 if dealing with such strings.
 
 ### UTF-8 at the Database level
 
@@ -34,7 +34,7 @@ Note that you must use the `utf8mb4` character set for complete UTF-8 support, n
 
 ### UTF-8 at the browser level
 
-Use the [`mb_http_output()`](http://php.net/manual/en/function.mb-http-output.php) function to ensure that your PHP script outputs UTF-8 strings to your browser. In your HTML, include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in your page's `<head>` tag. 
+Use the `mb_http_output()` function to ensure that your PHP script outputs UTF-8 strings to your browser. In your HTML, include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in your page's `<head>` tag. 
 
 {% highlight php %}
 <?php
@@ -96,7 +96,18 @@ $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 
 ### Further reading
 
+* [PHP Manual: String Operations](http://php.net/manual/en/language.operators.string.php)
+* [PHP Manual: String Functions](http://php.net/manual/en/ref.strings.php)
+    * [`strpos()`](http://php.net/manual/en/function.strpos.php)
+    * [`strlen()`](http://php.net/manual/en/function.strlen.php)
+    * [`substr()`](http://php.net/manual/en/function.substr.php)
 * [PHP Manual: Multibyte String Functions](http://php.net/manual/en/ref.mbstring.php)
+    * [`mb_strpos()`](http://php.net/manual/en/function.mb-strpos.php)
+    * [`mb_strlen()`](http://php.net/manual/en/function.mb-strlen.php)
+    * [`mb_substr()`](http://php.net/manual/en/function.mb-substr.php)
+    * [`mb_internal_encoding()`](http://php.net/manual/en/function.mb-internal-encoding.php)
+    * [`mb_http_output()`](http://php.net/manual/en/function.mb-http-output.php)
+    * [`htmlentities()`](http://php.net/manual/en/function.htmlentities.php)
 * [PHP UTF-8 Cheatsheet](http://blog.loftdigital.com/blog/php-utf-8-cheatsheet)
 * [Stack Overflow: What factors make PHP Unicode-incompatible?](http://stackoverflow.com/questions/571694/what-factors-make-php-unicode-incompatible)
 * [Stack Overflow: Best practices in PHP and MySQL with international strings](http://stackoverflow.com/questions/140728/best-practices-in-php-and-mysql-with-international-strings)
