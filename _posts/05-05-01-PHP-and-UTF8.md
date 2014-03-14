@@ -8,8 +8,6 @@ _This section was originally written by [Alex Cabal](https://alexcabal.com/) ove
 
 ### There's no one-liner. Be careful, detailed, and consistent.
 
-UTF-8 in PHP sucks. Sorry.
-
 Right now PHP does not support Unicode at a low level. There are ways to ensure that UTF-8 strings are processed OK, but it's not easy, and it requires digging in to almost all levels of the web app, from HTML to SQL to PHP. We'll aim for a brief, practical summary.
 
 ### UTF-8 at the PHP level
@@ -26,7 +24,7 @@ Additionally, you should use the [`mb_internal_encoding()`](http://php.net/manua
 
 Finally, many PHP functions that operate on strings have an optional parameter letting you specify the character encoding. You should always explicitly indicate UTF-8 when given the option. For example, [`htmlentities()`](http://php.net/manual/en/function.htmlentities.php) has an option for character encoding, and you should always specify UTF-8 if dealing with such strings.
 
-### UTF-8 at the MySQL level
+### UTF-8 at the Database level
 
 If your PHP script accesses MySQL, there's a chance your strings could be stored as non-UTF-8 strings in the database even if you follow all of the precautions above.
 
