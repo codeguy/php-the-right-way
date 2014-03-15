@@ -35,11 +35,24 @@
                 <li><a href="/#site-header">Welcome</a></li>
                 {% assign lastIsChild = false %}
                 {% for post in site.posts reversed %}
-                    {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
-                    {% if lastIsChild and post.isChild != true %}</ul>{% endif %}
-                    <li><a href="/#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
+                    {% if post.isChild != true %}
+                        {% if insideSection %}
+                            </ul>
+                            </li>
+                            {% assign insideSection = false %}
+                        {% endif %}
+                    {% endif %}
+                    <li><a href="/#{{ post.anchor }}">{{ post.title }}</a>
+                    {% if post.isChild %}
+                        </li>
+                    {% else %}
+                        <ul>
+                        {% assign insideSection = true %}
+                    {% endif %}
                     {% assign lastIsChild = post.isChild %}
                 {% endfor %}
+                    </ul>
+                </li>
                 <li><a href="/#site-footer">Credits</a></li>
             </ul>
         </nav>
