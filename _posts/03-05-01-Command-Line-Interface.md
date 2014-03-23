@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: command_line_interface
 ---
 
 ## Command Line Interface {#command_line_interface_title}

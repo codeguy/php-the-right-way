@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: object_caching
 ---
 
 ## Object Caching {#object_caching_title}
