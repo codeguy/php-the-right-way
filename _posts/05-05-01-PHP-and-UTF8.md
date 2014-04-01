@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: php_and_utf8
 ---
 
 ## PHP and UTF-8 {#php_and_utf8_title}
