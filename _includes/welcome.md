@@ -22,6 +22,7 @@ _PHP: The Right Way_ is (or soon will be) translated into many different languag
 
 * [English](http://www.phptherightway.com)
 * [Chinese (Simplified)](http://wulijun.github.com/php-the-right-way)
+* [French](http://eilgin.github.io/php-the-right-way/)
 * [Japanese](http://ja.phptherightway.com)
 * [Korean](http://wafe.github.io/php-the-right-way/)
 * [Italian](http://it.phptherightway.com/)
