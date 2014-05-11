@@ -3,7 +3,7 @@ baseurl: /
 url: http://localhost:4000
 
 pygments: true
-markdown: maruku
+markdown: kramdown
 permalink: date
 maruku:
     use_tex:    false
