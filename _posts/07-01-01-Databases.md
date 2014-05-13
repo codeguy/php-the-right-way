@@ -6,22 +6,46 @@ anchor: databases
 # Databases {#databases_title}
 
 Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option _until PHP 5.1.0_ was to use native drivers such as [mysql][mysql], [mysqli][mysqli], [pgsql][pgsql], etc.
+with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysqli], [pgsql], [mssql], etc. 
 
-Native drivers are great if you are only using ONE database in your application, but if, for example, you are using MySQL and a little bit of MSSQL,
-or you need to connect to an Oracle database, then you will not be able to use the same drivers. You'll need to learn a brand new API for each
-database &mdash; and that can get silly.
+Native drivers are great if you are only using _one_ database in your application, but if, for example, you are using 
+MySQL and a little bit of MSSQL, or you need to connect to an Oracle database, then you will not be able to use the same
+drivers. You'll need to learn a brand new API for each database &mdash; and that can get silly.
 
-As an extra note on native drivers, the mysql extension for PHP is no longer in active development, and is officially deprecated as of PHP 5.5, meaning that it will be removed within the next few releases. If you are using `mysql_connect()` and `mysql_query()` in your applications then you will be faced with a rewrite at some point down the
-line, so the best option is to replace mysql usage with mysqli or PDO in your applications within your own development schedules so you won't
-be rushed later on. _If you are starting from scratch then absolutely do not use the mysql extension: use the [MySQLi extension][mysqli], or use PDO._
+## MySQL Extension 
+
+The [mysql] extension for PHP is no longer in active development, and is [officially deprecated as of PHP 5.5.0], 
+meaning that it will be removed within the next few releases. If you are using any functions that start with `mysql_*`
+such as `mysql_connect()` and `mysql_query()` in your applications then these will simply not be available in later
+versions of PHP. This means you will be faced with a rewrite at some point down the line, so the best option is to 
+replace mysql usage with [mysqli] or [PDO] in your applications within your own development schedules so you won't be
+rushed later on. 
+
+**If you are starting from scratch then absolutely do not use the [mysql] extension: use the [MySQLi extension][mysqli], or use PDO.**
 
 * [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
+* [PDO Tutorial for MySQL Developers](http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers)
 
-## PDO
+## PDO Extension
 
-PDO is a database connection abstraction library &mdash;  built into PHP since 5.1.0 &mdash; that provides a common interface to talk with
-many different databases. PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types
+PDO is a database connection abstraction library &mdash; built into PHP since 5.1.0 &mdash; that provides a common interface to talk with
+many different databases. For example, you can use basically identical code to interface with MySQL or SQLite:
+
+{% highlight php %}
+// PDO + MySQL
+$pdo = new PDO('mysql:host=example.com;dbname=database', 'user', 'password');
+$statement = $pdo->query("SELECT some\_field FROM some\_table");
+$row = $statement->fetch(PDO::FETCH_ASSOC);
+echo htmlentities($row['some_field']);
+
+// PDO + MySQL
+$pdo = new PDO('sqlite:/path/db/foo.sqlite');
+$statement = $pdo->query("SELECT some\_field FROM some\_table");
+$row = $statement->fetch(PDO::FETCH_ASSOC);
+echo htmlentities($row['some_field']);
+{% endhighlight %}
+
+PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types
 of database with the same API.
 
 More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying about database SQL injection attacks.
@@ -32,18 +56,18 @@ way to do this:
 
 {% highlight php %}
 <?php
-$pdo = new PDO('sqlite:users.db');
+$pdo = new PDO('sqlite:/path/db/users.db');
 $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
 This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
-heartbeat. Just imagine if a hacker passes in an inventive `id` parameter by calling a URL like
+heartbeat, using a practice called [SQL Injecton]. Just imagine if a hacker passes in an inventive `id` parameter by calling a URL like
 `http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `1;DELETE FROM users`
 which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
 
 {% highlight php %}
 <?php
-$pdo = new PDO('sqlite:users.db');
+$pdo = new PDO('sqlite:/path/db/users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
 $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); // <-- Automatically sanitized by PDO
 $stmt->execute();
@@ -52,7 +76,7 @@ $stmt->execute();
 This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the
 database preventing potential SQL injection attacks.
 
-* [Learn about PDO][1]
+* [Learn about PDO]
 
 You should also be aware that database connections use up resources and it was not unheard-of to have resources
 exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you
@@ -60,33 +84,15 @@ can implicitly close the connection by destroying the object by ensuring all rem
 i.e. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends -
 unless of course you are using persistent connections.
 
-* [Learn about PDO connections][5]
+* [Learn about PDO connections]
 
-## Abstraction Layers
+[Learn about PDO]: http://www.php.net/manual/en/book.pdo.php
+[Learn about PDO connections]: http://php.net/manual/en/pdo.connections.php
+[officially deprecated as of PHP 5.5.0]: http://php.net/manual/en/migration55.deprecated.php
+[SQL Injection]: http://wiki.hashphp.org/Validation
 
-Many frameworks provide their own abstraction layer which may or may not sit on top of PDO.  These will often emulate features for
-one database system that another is missing from another by wrapping your queries in PHP methods, giving you actual database abstraction.
-This will of course add a little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and
-SQLite then a little overhead will be worth it the sake of code cleanliness.
-
-Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4] namespace standards so can be installed in any application you like:
-
-* [Aura SQL][6]
-* [Doctrine2 DBAL][2]
-* [Propel][7]
-* [ZF2 Db][4]
-* [ZF1 Db][3]
-
-[1]: http://www.php.net/manual/en/book.pdo.php
-[2]: http://www.doctrine-project.org/projects/dbal.html
-[3]: http://framework.zend.com/manual/en/zend.db.html
-[4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
-[5]: http://php.net/manual/en/pdo.connections.php
-[6]: https://github.com/auraphp/Aura.Sql
-[7]: http://propelorm.org/Propel/
-
+[pdo]: http://php.net/pdo
 [mysql]: http://php.net/mysql
 [mysqli]: http://php.net/mysqli
 [pgsql]: http://php.net/pgsql
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[mssql]: http://php.net/mssql
