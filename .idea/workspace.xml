@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="942680eb-cbf6-4945-b694-36d7050f9861" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/06-01-01-Databases.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/07-01-01-Errors-and-Exceptions.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/07-02-01-Errors.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/07-03-01-Exceptions.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/08-01-01-Security.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/08-02-01-Web-Application-Security.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/08-03-01-Password-Hashing.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/08-04-01-Data-Filtering.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/08-05-01-Configuration-Files.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/08-06-01-Register-Globals.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/08-07-01-Error-Reporting.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/09-01-01-Testing.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/09-02-01-Test-Driven-Development.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/09-03-01-Behavior-Driven-Development.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/09-04-01-Complementary-Testing-Tools.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/10-01-01-Servers-and-Deployment.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/10-02-01-Platform-as-a-Service.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/10-03-01-Virtual-or-Dedicated-Servers.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/10-04-01-Shared-Servers.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/10-05-01-Building-your-Application.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/11-01-01-Caching.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/11-02-01-Bytecode-Cache.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/11-03-01-Object-Caching.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/12-01-01-Resources.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/12-02-01-Frameworks.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/12-03-01-Components.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/13-01-01-Community.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php-the-right-way.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="$PROJECT_DIR$/_layouts/page.html" />
     </list>
     <ignored path="php-the-right-way.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,19 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="72" selection-start="2221" selection-end="2221" vertical-scroll-proportion="2.5333333" vertical-offset="790" max-vertical-offset="2394">
-              <folding />
+            <state line="13" column="45" selection-start="888" selection-end="888" vertical-scroll-proportion="-2.916854" vertical-offset="1571" max-vertical-offset="2016">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="07-01-01-Errors-and-Exceptions.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="07-01-01-Errors-and-Exceptions.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/07-01-01-Errors-and-Exceptions.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="463">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="252">
               <folding />
             </state>
           </provider>
@@ -128,8 +97,10 @@
       <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="40" selection-start="1126" selection-end="1170" vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="1176">
-              <folding />
+            <state line="35" column="28" selection-start="2212" selection-end="2212" vertical-scroll-proportion="-24.5" vertical-offset="0" max-vertical-offset="1155">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#a#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,15 +128,15 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/_layouts/page.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_includes/welcome.md" />
         <option value="$PROJECT_DIR$/_posts/01-01-01-Getting-Started.md" />
         <option value="$PROJECT_DIR$/_posts/01-03-01-Built-in-Web-Server.md" />
-        <option value="$PROJECT_DIR$/_layouts/default.html" />
         <option value="$PROJECT_DIR$/_posts/01-02-01-Use-the-Current-Stable-Version.md" />
         <option value="$PROJECT_DIR$/_posts/01-04-01-Mac-Setup.md" />
         <option value="$PROJECT_DIR$/_posts/01-05-01-Windows-Setup.md" />
+        <option value="$PROJECT_DIR$/_layouts/page.html" />
+        <option value="$PROJECT_DIR$/_layouts/default.html" />
       </list>
     </option>
   </component>
@@ -217,20 +188,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="php-the-right-way" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-the-right-way" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-the-right-way" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_posts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -309,14 +266,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1368" height="720" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14964789" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22007042" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27424243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27424243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -358,7 +315,9 @@
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="72" selection-start="2221" selection-end="2221" vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="2394">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -548,24 +507,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/07-01-01-Errors-and-Exceptions.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="40" selection-start="1126" selection-end="1170" vertical-scroll-proportion="-10.5" vertical-offset="0" max-vertical-offset="1176">
-          <folding />
+        <state line="35" column="28" selection-start="2212" selection-end="2212" vertical-scroll-proportion="-24.5" vertical-offset="0" max-vertical-offset="1155">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="72" selection-start="2221" selection-end="2221" vertical-scroll-proportion="2.5333333" vertical-offset="790" max-vertical-offset="2394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/07-01-01-Errors-and-Exceptions.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="488">
-          <folding />
+        <state line="13" column="45" selection-start="888" selection-end="888" vertical-scroll-proportion="-2.916854" vertical-offset="1571" max-vertical-offset="2016">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
