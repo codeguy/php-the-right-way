@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="942680eb-cbf6-4945-b694-36d7050f9861" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="$PROJECT_DIR$/_layouts/page.html" />
     </list>
     <ignored path="php-the-right-way.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,19 +29,17 @@
       <file leaf-file-name="07-01-01-Errors-and-Exceptions.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/07-01-01-Errors-and-Exceptions.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="252">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="37" selection-start="2906" selection-end="2906" vertical-scroll-proportion="-11.9" vertical-offset="630" max-vertical-offset="2016">
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="82" column="21" selection-start="5400" selection-end="5400" vertical-scroll-proportion="0.33932585" vertical-offset="1571" max-vertical-offset="2016">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,19 +68,20 @@
       <file leaf-file-name="01-05-01-Windows-Setup.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/01-05-01-Windows-Setup.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="76" selection-start="509" selection-end="509" vertical-scroll-proportion="-0.0" vertical-offset="231" max-vertical-offset="756">
+            <state line="11" column="76" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="756">
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="page.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="80" selection-start="2180" selection-end="2180" vertical-scroll-proportion="-7.0" vertical-offset="504" max-vertical-offset="1155">
-              <folding>
-                <element signature="n#style#0;n#img#0;n#a#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="14" column="65" selection-start="1024" selection-end="1024" vertical-scroll-proportion="13.3" vertical-offset="693" max-vertical-offset="1155">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,16 +98,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="309" selection-end="309" vertical-scroll-proportion="-5.6" vertical-offset="0" max-vertical-offset="504">
+            <state line="8" column="24" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="504">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_config.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_config.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="53" selection-start="64" selection-end="64" vertical-scroll-proportion="0.043032788" vertical-offset="0" max-vertical-offset="488">
+            <state line="1" column="53" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
               <folding />
             </state>
           </provider>
@@ -143,9 +143,9 @@
         <option value="$PROJECT_DIR$/_posts/01-02-01-Use-the-Current-Stable-Version.md" />
         <option value="$PROJECT_DIR$/_posts/01-04-01-Mac-Setup.md" />
         <option value="$PROJECT_DIR$/_posts/01-05-01-Windows-Setup.md" />
+        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_layouts/page.html" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
-        <option value="$PROJECT_DIR$/_config.yml" />
       </list>
     </option>
   </component>
@@ -282,7 +282,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22007042" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27424243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27878788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -314,6 +314,82 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/_posts/07-01-01-Errors-and-Exceptions.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="37" selection-start="2906" selection-end="2906" vertical-scroll-proportion="0.0" vertical-offset="987" max-vertical-offset="2016">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/01-03-01-Built-in-Web-Server.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="441">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/01-04-01-Mac-Setup.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="52" selection-start="1042" selection-end="1043" vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="714">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/01-05-01-Windows-Setup.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="76" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="756">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="80" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sitemap.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="441">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="24" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="53" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="378">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/01-01-01-Getting-Started.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="252">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/The-Basics.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7014">
@@ -324,9 +400,7 @@
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="72" selection-start="2221" selection-end="2221" vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="2394">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -368,14 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2457" />
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/example.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="693" />
@@ -392,11 +458,6 @@
     <entry file="file://$PROJECT_DIR$/scripts/setup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1806" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/06-01-01-Dependency-Injection.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="475" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/05-04-01-Design-Patterns.md">
@@ -503,6 +564,9 @@
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/07-01-01-Errors-and-Exceptions.md">
       <provider selected="true" editor-type-id="text-editor">
@@ -520,32 +584,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="309" selection-end="309" vertical-scroll-proportion="-5.6" vertical-offset="0" max-vertical-offset="504">
+        <state line="8" column="24" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="53" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="80" selection-start="2180" selection-end="2180" vertical-scroll-proportion="-7.0" vertical-offset="504" max-vertical-offset="1155">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="14" column="65" selection-start="1024" selection-end="1024" vertical-scroll-proportion="13.3" vertical-offset="693" max-vertical-offset="1155">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="37" selection-start="2906" selection-end="2906" vertical-scroll-proportion="-11.9" vertical-offset="630" max-vertical-offset="2016">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="53" selection-start="64" selection-end="64" vertical-scroll-proportion="0.043032788" vertical-offset="0" max-vertical-offset="488">
+        <state line="82" column="21" selection-start="5400" selection-end="5400" vertical-scroll-proportion="0.33932585" vertical-offset="1571" max-vertical-offset="2016">
           <folding />
         </state>
       </provider>
