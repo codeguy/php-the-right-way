@@ -19,7 +19,7 @@ i primerima kako oni budu bili dostupni.
 
 ## Prevodi
 
-_PHP: The Right Way_ je (ili ce uskoro biti) preved na mnogo razlicitih jezika:
+_PHP: The Right Way_ je (ili ce uskoro biti) preveden na mnogo razlicitih jezika:
 
 * [English](http://www.phptherightway.com)
 * [Chinese (Simplified)](http://wulijun.github.com/php-the-right-way)
@@ -45,10 +45,10 @@ _PHP: The Right Way_ je (ili ce uskoro biti) preved na mnogo razlicitih jezika:
 
 Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
 
-## Spread the Word!
+## Obavesti Ostale!
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP developers
-know where to find good information!
+_PHP: The Right Way_ ima web banner slike koje mozete koristiti na svom sajtu. Iskazite podrsku,
+i obavestite ostale PHP programere gde mogu naci pouzdane i kvalitetne informacije!
 
 [See Banner Images][2]
 
