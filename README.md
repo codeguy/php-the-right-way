@@ -1,26 +1,27 @@
 # PHP: The Right Way
 
-## Overview
+## Kratak Pregled
 
-This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+Ovo je GitHub Pages repositori za  _PHP: The Right Way_ projekat.
 
-* This website is a Jekyll project.
-* Each section and sub-section are a Markdown file in `_posts/`.
-* Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+* Ovaj website je Jekyll projekat.
+* Svaka sekcija i pod-sekcija su Markdown fajla koji se nalazi u `_posts/`.
+* Pod-sekcije imaju `isChild: true` u svojem prednjem.
+* Navigacija kao i struktura stranica su automatski generisane.
 
 ## Spread the Word!
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
-developers know where to find good information!
+_PHP: The Right Way_ ima web banere i slike koje mozete koristiti na svojim web sajtovima.
+Izrazite podrsku, kako bi drugi PHP programeri znali gde da nadju dobre informacije!
 
 [See Banner Images](http://www.phptherightway.com/banners.html)
 
-## How to Contribute
+## Kako nam Pomoci
 
 1. Fork and edit
-2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
-3. Submit pull request for consideration
+2. Opciono instaliraj [Ruby](https://rvm.io/rvm/install/) sa [Jekyll](https://github.com/mojombo/jekyll/) gem za
+lokalni pregled
+3. Posalji pull request za razmatranje
 
 ### Contributor Style Guide
 
