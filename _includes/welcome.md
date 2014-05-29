@@ -1,24 +1,25 @@
-# Welcome
+# Dobrodosli
 
-There's a lot of outdated information on the Web that leads new PHP users astray,
-propagating bad practices and insecure code. _PHP: The Right Way_ is an easy-to-read,
-quick reference for PHP popular coding standards, links to authoritative tutorials
-around the Web and what the contributors consider to be best practices at the present
-time.
+Postoji mnogo zastarelih informacija na Web-u koje vode nove PHP korisnike na stranputicu,
+propagiraju lose iskustvo i nesiguran i nebezbedan kod. _PHP: The Right Way_ je lak za
+citanje, daje brze informacije i reference za popularne PHP razvojne standarde, linkove
+ka autoritativnim tutorilima na Web-u i ono sto danasnji programeri smatraju najboljom praksom
+u ovom trnutku.
 
-_There is no canonical way to use PHP_. This website aims to introduce new PHP
-developers to some topics which they may not discover until it is too late, and aims
-to give seasoned pros some fresh ideas on those topics they've been doing for years
-without ever reconsidering. This website will also not tell you which tools to use, but
-instead offer suggestions for multiple options, when possible explaining the differences
-in approach and use-case.
+_Ne postoji neki striktan nacin da se koristi PHP_. Ipak Ovaj web sajt ima za cilj da
+da predstavi novim PHP programerima neke od tema koje mogu otkriti prekasno, i ima za cilj
+da starim profesionalcima da neke sveze ideje na teme koje so oni radili godinama bez ikakvog
+preispitivanja ili razmisljana odredjene stvari.Ovaj web sajt vam nece reci koje alate da
+koristite, vec ustvari da vam ponudi i predlozi vise opcija, kada je moguce caj i objasniti
+razlike u njihovom pristupu i koriscenju.
 
-This is a living document and will continue to be updated with more helpful information
-and examples as they become available.
 
-## Translations
+Ovaj dokument je josh uvek u razvoju tako da ce nastaviti da raste sa mnogo vise pomocnih informacija
+i primerima kako oni budu bili dostupni.
 
-_PHP: The Right Way_ is (or soon will be) translated into many different languages:
+## Prevodi
+
+_PHP: The Right Way_ je (ili ce uskoro biti) preved na mnogo razlicitih jezika:
 
 * [English](http://www.phptherightway.com)
 * [Chinese (Simplified)](http://wulijun.github.com/php-the-right-way)
@@ -38,8 +39,9 @@ _PHP: The Right Way_ is (or soon will be) translated into many different languag
 * [Thai](https://apzentral.github.io/php-the-right-way/)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Slovenian](http://sl.phptherightway.com)
+* [Serbian](http://smatejic.github.io/php-the-right-way/)
 
-## How to Contribute
+## Kako doprineti
 
 Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
 

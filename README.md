@@ -38,7 +38,6 @@ Nikako ne koristiti tabove (tabs).
 * [English](http://www.phptherightway.com)
 * [Catalan] (http://ca.phptherightway.com)
 * [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Croatian](http://hr.phptherightway.com)
 * [Japanese] (http://ja.phptherightway.com)
 * [Korean] (http://wafe.github.io/php-the-right-way)
 * [Italian] (http://it.phptherightway.com)
@@ -51,7 +50,7 @@ Nikako ne koristiti tabove (tabs).
 * [German] (http://rwetzlmayr.github.io/php-the-right-way)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Slovenian](http://sl.phptherightway.com)
-* [Serbian](http://rs.phptherightway.com)
+* [Serbian](http://smatejic.github.io/php-the-right-way/)
 
 ### Prevodi
 
