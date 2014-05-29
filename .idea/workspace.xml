@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="942680eb-cbf6-4945-b694-36d7050f9861" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="$PROJECT_DIR$/_layouts/page.html" />
     </list>
     <ignored path="php-the-right-way.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="37" selection-start="2906" selection-end="2906" vertical-scroll-proportion="0.80224717" vertical-offset="630" max-vertical-offset="2016">
+            <state line="47" column="37" selection-start="2906" selection-end="2906" vertical-scroll-proportion="-11.9" vertical-offset="630" max-vertical-offset="2016">
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -106,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_config.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_config.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
+            <state line="1" column="53" selection-start="64" selection-end="64" vertical-scroll-proportion="0.043032788" vertical-offset="0" max-vertical-offset="488">
               <folding />
             </state>
           </provider>
@@ -145,9 +143,9 @@
         <option value="$PROJECT_DIR$/_posts/01-02-01-Use-the-Current-Stable-Version.md" />
         <option value="$PROJECT_DIR$/_posts/01-04-01-Mac-Setup.md" />
         <option value="$PROJECT_DIR$/_posts/01-05-01-Windows-Setup.md" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_layouts/page.html" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
+        <option value="$PROJECT_DIR$/_config.yml" />
       </list>
     </option>
   </component>
@@ -527,13 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="80" selection-start="2180" selection-end="2180" vertical-scroll-proportion="-7.0" vertical-offset="504" max-vertical-offset="1155">
@@ -545,10 +536,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="37" selection-start="2906" selection-end="2906" vertical-scroll-proportion="0.80224717" vertical-offset="630" max-vertical-offset="2016">
+        <state line="47" column="37" selection-start="2906" selection-end="2906" vertical-scroll-proportion="-11.9" vertical-offset="630" max-vertical-offset="2016">
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="53" selection-start="64" selection-end="64" vertical-scroll-proportion="0.043032788" vertical-offset="0" max-vertical-offset="488">
+          <folding />
         </state>
       </provider>
     </entry>
