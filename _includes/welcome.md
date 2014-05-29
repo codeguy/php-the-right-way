@@ -45,7 +45,7 @@ _PHP: The Right Way_ je (ili ce uskoro biti) preveden na mnogo razlicitih jezika
 
 Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
 
-## Obavesti Ostale!
+## Obavesti Druge!
 
 _PHP: The Right Way_ ima web banner slike koje mozete koristiti na svom sajtu. Iskazite podrsku,
 i obavestite ostale PHP programere gde mogu naci pouzdane i kvalitetne informacije!
