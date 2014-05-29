@@ -1,12 +1,14 @@
 ---
-title: Use the Current Stable Version (5.5)
+title: Koristite trenutno stabilnu verziju (5.5)
 isChild: true
-anchor: use_the_current_stable_version
 ---
 
-## Use the Current Stable Version (5.5) {#use_the_current_stable_version_title}
+## Koristite trenutno stabilnu verziju (5.5) {#use_the_current_stable_version_55_title}
 
-If you are just getting started with PHP make sure to start with the current stable release of [PHP 5.5][php-release]. PHP has made great strides adding powerful [new features](#language_highlights) over the last few years. Don't let the minor version number difference between 5.2 and 5.5 fool you, it represents _major_ improvements. If you are looking for a function or its usage, the documentation on the [php.net][php-docs] website will have the answer.
+Ako tek počinjete sa PHP-om, pobrinite se da koristite trenutno stabilnu verziju [PHP 5.5][php-release]. U poslednjih 
+nekoliko godina PHP je napravio značajan pomak dodajući [nove mogućnosti](#language_highlights). Nemojte dozvoliti da 
+vas male razlike u brojevima između verzija prevare. Velika su poboljšanja između verzije 5.2 i 5.5. Ako tražite neku 
+funkciju ili kako da je upotrebite, PHP dokumentacija na adresi [php.net][php-docs] će vam sigurno pomoći.
 
 [php-release]: http://www.php.net/downloads.php
 [php-docs]: http://www.php.net/manual/en/

@@ -1,5 +1,5 @@
 ---
-anchor: coding_practices
+title: Praksa kodiranja
 ---
 
-# Coding Practices {#coding_practices_title}
+# Praksa kodiranja {#coding_practices_title}

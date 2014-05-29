@@ -7,14 +7,14 @@ title: Functional Programming in PHP
 
 PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and built-in 
 functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to other
-functions and a function can return other functions (a feature called higher-order functions).
+functions (a feature called higher-order functions) and a function can return other functions.
 
 Recursion, a feature that allows a function to call itself, is supported by the language, but most of the PHP code focus
 is on iteration.
 
 Anonymous functions (with support for closures) have been present since PHP 5.3 (2009).
 
-PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
+PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
 can be used interchangeably with anonymous functions in almost all cases.
 
 The most common usage of higher-order functions is when implementing a strategy pattern. The built-in `array_filter`

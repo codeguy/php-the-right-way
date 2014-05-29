@@ -1,34 +1,28 @@
 ---
+title: Namespaces - imenski prostori
 isChild: true
-anchor: namespaces
 ---
 
-## Namespaces {#namespaces_title}
+## Namespaces - imenski prostori {#namespaces_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that 
-one library's PHP code may use the same class name as another library. When both libraries are used 
-in the same namespace, they collide and cause trouble.
+Kao što smo spomenuli iznad, PHP zajednica ima mnogo developera koji stvaraji dosta koda. To znači da jedna biblioteka 
+PHP koda može da koristi isto ime za klasu kao neka druga biblioteka. Kada se obe biblioteke koriste u istom imenskom 
+prostoru, oni se "sudare" i prouzrokuju probleme.
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared 
-to operating system directories that _namespace_ files; two files with the same name may co-exist in 
-separate directories. Likewise, two PHP classes with the same name may co-exist in separate PHP 
-namespaces. It's as simple as that.
 
-It is important for you to namespace your code so that it may be used by other developers without fear 
-of colliding with other libraries.
 
-One recommended way to use namespaces is outlined in [PSR-0][psr0], which aims to provide a standard file, 
-class and namespace convention to allow plug-and-play code.
+_Namespaces_ rešavaju taj problem. Kao što je opisano i PHP uputstvu, imenski prostori se mogu uporediti sa 
+direktorijumima u operativnom sistemu. Dva fajla sa istim imenima mogu da postoje u različitim direktorijumima. Isto 
+tako, dve PHP klase sa istim imenom mogu da postoje u različitim imenskim prostorima. Tako je prosto.
 
-In December 2013 the PHP-FIG created a new autoloading standard: [PSR-4][psr4], which one day will 
-probably replace PSR-0. Currently both are still usable, as PSR-4 requires PHP 5.3 and many PHP 5.2-only 
-projects currently implement PSR-0. If you're going to use an autoloader standard for a new application or 
-package then you almost certainly want to look into PSR-4.
+Važno je za tebe da koristiš imenske prostore u tvom kodu, da bi drugi programeri mogli da ga koriste bez bojazni da će 
+se sudarati sa ostalim bibliotekama.
 
-* [Read about Namespaces][namespaces]
-* [Read about PSR-0][psr0]
-* [Read about PSR-4][psr4]
+Jedan preporučen način za korišćenje _namespace_-ova je opisan u [PSR-0][psr0], koji cija da pruži standard za 
+fajlove, klase i _namespace_-ove da bi omogućio _plug-and-play_ kod.
+
+* [Pročitajte o imenskim prostorima][namespaces]
+* [Pročitajte o PSR-0][psr0]
 
 [namespaces]: http://php.net/manual/en/language.namespaces.php
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md

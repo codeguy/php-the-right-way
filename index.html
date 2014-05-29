@@ -1,6 +1,6 @@
 ---
 layout: default
-description: "An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web"
+description: "Brz i lak za čitanje podsetnik najboljih praksi u PHP ekosistemu, prihvaćeni standardi kodiranja i linkovi ka vodećim PHP tutorijalima"
 ---
 
 {% capture welcome_content %}{% include welcome.md %}{% endcapture %}
@@ -11,7 +11,7 @@ description: "An easy-to-read, quick reference for PHP best practices, accepted 
     {% if post.isChild != true and loop.first != true %}
     {{ backtotop|markdownify }}
     {% endif %}
-    <div id="{{ post.anchor }}">
+    <div id="{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">
     {{ post.content }}
     </div>
 {% endfor %}
