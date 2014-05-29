@@ -1,5 +1,5 @@
 safe: true
-baseurl: /
+baseurl: "http://smatejic.github.io/php-the-right-way/"
 url: http://localhost:4000
 
 pygments: true
