@@ -2,7 +2,7 @@ safe: true
 baseurl: "http://smatejic.github.io/php-the-right-way/"
 
 pygments: true
-markdown: maruku
+markdown: kramdown
 permalink: date
 maruku:
     use_tex:    false
