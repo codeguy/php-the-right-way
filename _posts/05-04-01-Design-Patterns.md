@@ -1,17 +1,12 @@
 ---
+title: Dizaj šeme (Design Patterns)
 isChild: true
-anchor: design_patterns
 ---
 
-## Design Patterns {#design_patterns_title}
+## Dizaj šeme (Design Patterns) {#design_patterns_title}
 
-When you are building your application it is helpful to use common patterns in your code and common patterns for the
-overall structure of your project. Using common patterns is helpful because it makes it much easier to manage your code
-and lets other developers quickly understand how everything fits together.
+Kada gradite vašu aplikaciju, poželjno je koristiti česte šeme u vašem kodu, kao i leste šeme za strukturu samog projekta. Korišćenje čestih šema je korisno zato što vam olakšava održavanje koda, ali pomaže i drugim programerima da se brzo razumeju kako sve funkcioniše.
 
-If you use a framework then most of the higher level code and project structure will be based on that framework, so a
-lot of the pattern decisions are made for you. But it is still up to you to pick out the best patterns to follow in the
-code you build on top of the framework. If, on the other hand, you are not using a framework to build your application
-then you have to find the patterns that best suit the type and size of application that you're building.
+Ako koristite _framework_ onda će većina koda višeg nivoa i struktura projekta biti zasnovana na tom _framework_-u, tako da je dosta odluka već napravljeno za vas. Ali i dalje je na vama da izaberete najbolju šemu koju ćete koristiti u kodu koji budete vi pisali. Ako, sa druge strane, ne koristite _framework_ da pišete aplikacijuo onda ćete morati da nađete šeme koje najbolje odgovaraju tipu i veličini aplikacije koju gradite.
 
-* Continue reading on [Design Patterns](/pages/Design-Patterns.html)
+* Nastavite čitanje o [dizajn šemama]({{ site.baseurl }}/pages/Design-Patterns.html)

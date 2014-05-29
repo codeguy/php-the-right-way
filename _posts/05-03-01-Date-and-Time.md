@@ -1,17 +1,14 @@
 ---
+title: Datum i vreme
 isChild: true
-anchor: date_and_time
 ---
 
-## Date and Time {#date_and_time_title}
+## Datum i vreme {#date_and_time_title}
 
-PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There are
-many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to most
-common uses. It can handle time zones, but that is outside this short introduction.
+PHP ima klasu nazvanu DateTime da vam pomogne kada čitate, pišete, upoređujete ili računate datum i vreme. Postoje mnoge funkcije u PHP-u, koje su vezane za datum i vreme osim _DateTime_ klase, ali _DateTime_ pruža lep objekto-orijentisani interfejs za najčešće upotrebe. Može da rukuje sa vremenskim zonama, ali to je van ovog kratkog uvoda. 
 
-To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
-or do `new \DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
-output.
+Da biste koristili DateTime, konvertujte sirov string datuma i vremena u objekat sa `createFromFormat()` motodom, ili napravite novu instancu `new \DateTime` DateTime klase da biste dobili trenutno vreme i datum. Koristite `format()` metodu da konvertujete DateTime nazad u string za prikaz.
+
 {% highlight php %}
 <?php
 $raw = '22. 11. 1968';
@@ -20,22 +17,20 @@ $start = \DateTime::createFromFormat('d. m. Y', $raw);
 echo 'Start date: ' . $start->format('m/d/Y') . "\n";
 {% endhighlight %}
 
-Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
-saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference use
-the `diff()` method. It will return new DateInterval, which is super easy to display.
+Računanje sa DateTime-mom je moguće sa DateInterval klasom. DateTime ima metode kao što su  `add()` i `sub()` koje primaju DateInterval kao argument. Ne pišite kod koji očekuje isti broj sekundi svakog dana, razlike zbog vremenskih zona i pomeranja vremena će vam pokvariti očekivan način rada programa. Umesto koristite datum intervale. Da izračunate razlike između datuma koristite `diff()` metodu. Ona će vratiti nov DateInterval objekat, koji je veoma lako prikazati.
+
 {% highlight php %}
 <?php
-// create a copy of $start and add one month and 6 days
+// kreira kopiju $start i doda jedan mesec i 6 dana
 $end = clone $start;
 $end->add(new \DateInterval('P1M6D'));
 
 $diff = $end->diff($start);
 echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
-// Difference: 1 month, 6 days (total: 37 days)
+// RAzlika: 1 mesec, 6 dana (totalo: 37 dana)
 {% endhighlight %}
 
-On DateTime objects you can use standard comparison:
+Na DateTime objektima možete koristiti standardno upoređivanje:
 {% highlight php %}
 <?php
 if ($start < $end) {
@@ -43,21 +38,20 @@ if ($start < $end) {
 }
 {% endhighlight %}
 
-One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
-DateTime objects, start and end, and the interval for which it will return all events in between.
+Poslednji primer da demonstriramo DatePeriod klasu. Koristi se za iteraciju preko događaja koji se ponavljaju. Može da primi dva DateTime objekta, početak i kraj, i interval za koji će vratiti sve događaje između njih.
 {% highlight php %}
 <?php
-// output all thursdays between $start and $end
+// prikaži svaki četvrtak između $start i $end
 $periodInterval = \DateInterval::createFromDateString('first thursday');
 $periodIterator = new \DatePeriod($start, $periodInterval, $end, \DatePeriod::EXCLUDE_START_DATE);
 foreach ($periodIterator as $date) {
-    // output each date in the period
+    // prikaži svaki datum
     echo $date->format('m/d/Y') . ' ';
 }
 {% endhighlight %}
 
-* [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (accepted date format string options)
+* [Pročitajte o DateTime][datetime]
+* [Pročitajte o formatiranju datuma][dateformat]
 
 [datetime]: http://www.php.net/manual/book.datetime.php
 [dateformat]: http://www.php.net/manual/function.date.php

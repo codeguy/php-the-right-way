@@ -1,5 +1,5 @@
 ---
-anchor: language_highlights
+title: Istaknuti delovi jezika
 ---
 
-# Language Highlights {#language_highlights_title}
+# Istaknuti delovi jezika {#language_highlights_title}

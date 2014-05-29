@@ -1,52 +1,53 @@
 ---
+title: Programske paradigme
 isChild: true
-anchor: programming_paradigms
 ---
 
-## Programming Paradigms {#programming_paradigms_title}
+## Programske paradigme {#programming_paradigms_title}
 
-PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over
-the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in PHP 5.3 
-(2009), and traits in PHP 5.4 (2012). 
+PHP je fleksibilan, dinamičan jezik koji prodržava različite programske tehnike. Dramatično je evoluirao tokom proteklih
+godina, neke od značajnih izmena su dodavanje solidnog objektno-orijentisanog modela u PHP 5.0 (2004), anonimnih funkcija i 
+imenskih prostora u PHP 5.3 (2009), i trait-ova (osobina) u PHP 5.4 (2012).
 
-### Object-oriented Programming
 
-PHP has a very complete set of object-oriented programming features including support for classes, abstract classes,
-interfaces, inheritance, constructors, cloning, exceptions, and more.
+### Objektno-orijentisano programiranje
 
-* [Read about Object-oriented PHP][oop]
-* [Read about Traits][traits]
+PHP ima kompletan set objektno-orijentisanih osobina uključujući podršku za klase, abstraktne klase, interfejse, 
+nasleđivanje, konstuktore, kloniranje, izuzetke, i još. 
 
-### Functional Programming
+* [Pročitajte o objektno-orijentisanom PHP-u][oop]
+* [Pročitajte o Traits][traits]
 
-PHP supports first-class function, meaning that a function can be assigned to a variable. Both user-defined and built-in
-functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to other
-functions (feature called Higher-order functions) and function can return other functions.
+### Funckionalno programiranje
 
-Recursion, a feature that allows a function to call itself is supported by the language, but most of the PHP code focus
-on iteration.
+PHP podržava funkcije prve klase, što znači da funkcije mogu da se dodele promenljivim. I korisničke i ugrađene funkcije 
+mogu da se referenciraju kroz promenljive i pozivaju dinamički. Funkcije mogu da se prosleđuju kao argumenti drugih 
+funkcija (osobina zvana funkcije višeg reda) i isto tako mogu da se vraćaju kao povratni tip drugih funkcija.
 
-New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
+Rekurzija, odlika koja dozvoljava funkciji da poziva samu sebe je podržana, ali većina PHP koda se fokusira na 
+iteracije.
 
-PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
-can be used interchangeably with anonymous functions in almost all cases.
+Nove anonimne funkcije (sa podrškom za _closures_) su deo jezika od PHP verzije 5.3 (2009).
 
-* Continue reading on [Functional Programming in PHP](/pages/Functional-Programming.html)
-* [Read about Anonymous Functions][anonymous-functions]
-* [Read about the Closure class][closure-class]
-* [More details in the Closures RFC][closures-rfc]
-* [Read about Callables][callables]
-* [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
+U PHP 5.4 je dodata mogućnost da se _closures_ vezuju za obim objekta, kao i poboljšana podrška za _callables_ tako da 
+se mogu koristiti zamenljivo sa anonimnim funkcijama u skoro svim slučajevima.
 
-### Meta Programming
+* Nastavite čitanje o [funkcionalnom programiranju u PHP-u](/pages/Functional-Programming.html)
+* [Pročitajte o anonimnim funkcijama][anonymous-functions]
+* [Pročitajte o _Closure_ klasi][closure-class]
+* [Više detalja u _Closures RFC_][closures-rfc]
+* [Pročitajte o _Callables_][callables]
+* [Pročitajte o dinamički pozivanje funkcija sa `call_user_func_array`][call-user-func-array]
 
-PHP supports various forms of meta-programming through mechanisms like the Reflection API and Magic Methods. There are
-many Magic Methods available like `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. that allow
-developers to hook into class behavior. Ruby developers often say that PHP is lacking `method_missing`, but it is
-available as `__call()` and `__callStatic()`.
+### Meta programiranje
 
-* [Read about Magic Methods][magic-methods]
-* [Read about Reflection][reflection]
+PHP podržava različite vrste meta programiranja uz pomoć mehanizama kao što su _Reflection API_ i magične metode. 
+Postoje mnoge magične metode kao npr. `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, itd. koje 
+dozvoljavaju programerima da se nakače na ponašanje klase. _Ruby_ programeri često kažu kako PHP-u nedostaje 
+`method_missing`, ali postoji kao metode `__call()` and `__callStatic()`.
+
+* [Pročitajte o magičnim metodama][magic-methods]
+* [Pročitajte o  _Reflection_][reflection]
 
 [namespaces]: http://php.net/manual/en/language.namespaces.php
 [overloading]: http://php.net/manual/en/language.oop5.overloading.php

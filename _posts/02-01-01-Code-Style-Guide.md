@@ -1,48 +1,44 @@
 ---
-anchor: code_style_guide
+title: Uputstvo za pisanje koda
 ---
 
-# Code Style Guide  {#code_style_guide_title}
+# Uputstvo za pisanje koda {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+PHP zajednica je velika i raznovrsna, sastoji se od bezbroj biblioteka, _framework_-a i komponenti. Uobičajeno je za PHP
+programere da izaberu nekoliko od tih komponenti i iskoriste ih u jednom projektu. Važno je da se PHP kod pridržava 
+(što je bliže moguće) zajedničkom načinu izgleda koda, da bi olakšali programerima deljenje različitih biblioteke
+u među projektima. 
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related 
-to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These recommendations 
-are merely a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, 
-etc are starting to adopt. You can use them for your own projects, or continue to use your own personal style.
+The [_Framework Interop Group_][fig] je predložila i odobrila seriju predloga o izgledu koda, poznatu kao [PSR-0][psr0], 
+[PSR-1][psr1] and [PSR-2][psr2]. Nemojte dozvoliti da vas imena zbunjuju, ove preporuke su samo skup pravila koje neki
+projekti kao što su _Drupal_, _Zend_, _Symfony_, _CakePHP_, _phpBB_, _AWS SDK_, _FuelPHP_, _Lithium_ itd. počinju da 
+poštuju. Možete ih poštovati u svojim projektima, ili možete da nastavite da koristite vaš stil.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSR's, or one 
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, 
-and applications that implement the components can have consistency even when working with lots of third-party code. 
+Idealno trebalo bi da pišete PHP kod koji prati poznat standard. To bi mogla biti kombinacija PSR standarda, ili neki od
+standarda koje su _PEAR_ ili _Zend_ objavili. To znači da će drugi programeri moći lako da čitaju i rade sa vašim kodom,
+ isto tako će aplikacije koje implementiraju komponente drugih programera biti dosledne.
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Zend Coding Standards][zend-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [Pročitajte o PSR-0][psr0]
+* [Pročitajte o PSR-1][psr1]
+* [Pročitajte o PSR-2][psr2]
+* [Pročitajte o _PEAR_ standardima][pear-cs]
+* [Pročitajte o _Zend_ standardima][zend-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text editors 
-like [Sublime Text 2][st-cs] to be given real time feedback. 
+Možete koristiti [PHP_CodeSniffer][phpcs] da proverite da li kod prati neke od ovih standarda, i/ili pluginove za tekst
+editore, kao npr. [Sublime Text 2][st-cs] da bi ste dobili informacije o stilu koda u realnom vremenu.
 
-Use Fabien Potencier's [PHP Coding Standards Fixer][phpcsfixer] to automatically modify your code syntax so that it
-conforms to these standards, saving you from fixing each problem by hand.
+Koristite [PHP Coding Standards Fixer][phpcsfixer] _Fabien Potencier_-a da automatski izmenite sintaksu koda tako da se 
+povinuje datim standardima, i tako uštedite vreme koje bi ste potrošili kada biste ručno vršili izmene. 
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily readable 
-by all current and future parties who may be working on the codebase.
+Engleski ima prioritet za sva imena simbola i infrastrukture koda. Komentari mogu biti pisani u jeziku koji svi članovi
+sadašnjeg tima mogu da razumeju, ali imajte na umu i buduće naslednike koda. 
 
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [zend-cs]: http://framework.zend.com/wiki/display/ZFDEV2/Coding+Standards
-[symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/

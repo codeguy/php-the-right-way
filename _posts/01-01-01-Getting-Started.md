@@ -1,6 +1,6 @@
 ---
-anchor: getting_started
+title: Započnimo
 ---
 
-# Pocetak {#getting_started_title}
+# Započnimo {#getting_started_title}
 

@@ -1,88 +1,87 @@
 ---
+title: Composer i Packagist
 isChild: true
-anchor: composer_and_packagist
 ---
 
-## Composer and Packagist {#composer_and_packagist_title}
+## Composer i Packagist {#composer_and_packagist_title}
 
-Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and, with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for you.
+_Composer_ je **genijalan** menadžer zavisnosti za PHP. Navedite zavisnosti vašeg projekta u `composer.json` fajlu, i uz 
+pomoć nekoliko jednostavnih komandi, _Composer_ će sam automatski da poskida zavisnosti sa interneta i podesi 
+_autoloading_ za vas.
 
-There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These "packages" are listed on [Packagist][1], the official repository for Composer-compatible PHP libraries.
+Već postoji veliki broj PHP biblioteka koje su kompatibilne sa _Composer_-om, spremne za korišćenje u vašem projektu. Ti 
+paketi su izlistani na [Packagist-u][1], oficijalnom repozitorijumu za biblioteke koje su kompatibilne sa _Composer_-om.
 
-### How to Install Composer
+### Kako instalirati Composer
 
-You can install Composer locally (in your current working directory; though this is no longer recommended) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
+_Composer_ možete instalirati lokalno (u direktorijum u kome trenutno radite; mada se ovaj pristup više ne preporučuje) 
+, ili globalno (npr. /usr/local/bin). Pretpostavimo da želite da instalirate _Composer_ lokalno. Iz _root_ direktorijuma
+vašeg projekta:
 
     curl -s https://getcomposer.org/installer | php
 
-This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
+Ta komanda će skinuti `composer.phar` (PHP binarnu arhivu). Možete pokrenuti to sa `php` da biste upravljali 
+zavisnostima. <strong>Pažnja:</strong> Ako pokrećete skinuti kod direktno u interpreteru, molimo vas da se prvo uverite 
+da je kod bezbedan.
 
-#### Installing on Windows
-For Windows users the easiest way to get up and running is to use the [ComposerSetup][6] installer, which performs a global install and sets up your `$PATH` so that you can just call `composer` from any directory in your command line.
+### Kako instalirati Composer (ručno)
 
-### How to Install Composer (manually)
+Ručno instaliranje _Composer_-a je napredna tehnika; uprkos tome, postoje različiti razlozi zašto developer može da 
+preferira ovaj metod, a ne korišćenje metode koje smo iznad objasnili. Interaktivna instalacija proverava vašu PHP 
+instalaciju da se uveri da:
 
-Manually installing Composer is an advanced technique; however, there are various reasons why a developer might prefer this method vs. using the interactive installation routine. The interactive installation checks your PHP installation to ensure that:
+- je verzija PHP-a zadovoljavajuća
+- se `.phar` fajlovi mogu izvršiti ispravno
+- su dozvole određenih drektorijuma dovoljne
+- neke problematične ekstenzije nisu uključene
+- su neka podešavanja u `php.ini` fajlu ispravna
 
-- a sufficient version of PHP is being used
-- `.phar` files can be executed correctly
-- certain directory permissions are sufficient
-- certain problematic extensions are not loaded
-- certain `php.ini` settings are set
-
-Since a manual installation performs none of these checks, you have to decide whether the trade-off is worth it for you. As such, below is how to obtain Composer manually:
+Pošto ručna instalacija ne izvodi nijednu od tih provera, vi morate da odlučite da li vam taj kompromis odgovara. Sada 
+kada smo to razjasnili, ispod možete naći uputstvo za ručnu instalaciju _Composer_-a:
 
     curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
     chmod +x $HOME/local/bin/composer
 
-The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment variable. This will result in a `composer` command being available.
+Putanja `$HOME/local/bin` (ili direktorijum po vašem izboru) treba da se nalazi u `$PATH` sistemskoj promenljivoj. Time
+ćete `composer` komandu učiniti dostupnom.
 
-When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
+Kada naiđete na dokumentaciju koja objašnjava da _Composer_ pokrenete sa `php composer.phar install` komandom, tu  komandu možete zameniti sa:
 
     composer install
+
+### Kako definisati i instalirati zavisnosti
+
+_Composer_ prati zavisnosti vašeg projekta u fajlu koji se zove `composer.json`. Možete da upravljate njime ručno, ako želite, ili možete da koristite sam _Composer_. Komanda `php composer.phar require` dodaje zavisnost projektu i ako nemate `composer.json` fajl, on će biti kreiran. Sledi primer koji objašnjava kako dodati [_Twig_][2] kao zavisnost vašeg projekta. Pokrenite sledeću komandu u _root_ direktorijumu vašeg projekta, pošto ste skunuli `composer.phar`:
+
+	php composer.phar require twig/twig:~1.8
+
+Alternativno komanda `php composer.phar init` će vam pomoći da kreirate pun `composer.json` fajl za vaš projekat. U savkom slučaju, kada napravite vaš `composer.json` fajl, tada možete reći _Composer_-u da skine i instalira vaše zavisnosti u  `vendors/` direktorijum. Ovo se takođe odnosi na projekte koje ste vi skinuli, a koji već imaju svoj `composer.json` fajl.
     
-This section will assume you have installed composer globally.
-
-### How to Define and Install Dependencies
-
-Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it by hand if you like, or use Composer itself. The `composer require` command adds a project dependency and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig][2] as a dependency of your project.
-
-	composer require twig/twig:~1.8
-
-Alternatively the `composer init` command will guide you through creating a full `composer.json` file for your project. Either way, once you've created your `composer.json` file you can tell Composer to download and install your dependencies into the `vendors/` directory. This also applies to projects you've downloaded that already provide a `composer.json` file:
-
-    composer install
-
-Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
+	php composer.phar install
+	
+Posle toga, dodajte sledeću liniju u glavni PHP fajl vaše aplikacije; Ovo će reći PHP-u da koristi _Composer_-ov _autoloader_  za zavisnosti vašeg projekta.	
 
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 {% endhighlight %}
 
-Now you can use your project dependencies, and they'll be autoloaded on demand.
+Sada možete koristiti zavisnosti vašeg projekta, jer će biti uključeni automatski , kada budu zatraženi.
 
-### Updating your dependencies
+### Ažuriranje vaših zavisnosti
 
-Composer creates a file called `composer.lock` which stores the exact version of each package it downloaded when you first ran `php composer.phar install`. If you share your project with other coders and the `composer.lock` file is part of your distribution, when they run `php composer.phar install` they'll get the same versions as you. To update your dependencies, run `php composer.phar update`.
+_Composer_ kreira fajl nazvan `composer.lock` koji čuva tačnu verziju svakog paketa koji je skinuo kada ste prvi put pokrenuli `php composer.phar install` komandu. Ako delite vaš projekat sa drugim programerima, a `composer.lock` fajl je deo vaše distribucije, kada oni budu pokrenuli `php composer.phar install` komandu, _Composer_ će se pobrinuti da i oni imaju iste verzije paketa kao i vi. Da biste ažurirali vaše zavisnosti pokrenite `php composer.phar update`.
 
-This is most useful when you define your version requirements flexibly. For instance a version requirement of ~1.8  means "anything newer than 1.8.0, but less than 2.0.x-dev". You can also use the `*` wildcard as in `1.8.*`. Now Composer's `php composer.phar update` command will upgrade all your dependencies to the newest version that fits the restrictions you define.
+To je veoma korisno kada verzije paketa definišete fleksibilno. Npr. zahtevamo verziju ~1.8 znači "bilo koja novija verzija od 1.8.0, ali manja od 2.0.x-dev", takođe možete koristiti `*` džoker kao u `1.8.*`. Sada će komanda `php composer.phar update` unaprediti sve vaše zavisnosti na najnovije verzije koje se slažu sa zahtevima koje ste naveli.
 
-### Update Notifications
+### Bezbednost - provera vaših zavisnosti
 
-To receive notifications about new version releases you can sign up for [VersionEye][3], a web service that can monitor 
-your GitHub and BitBucket accounts for `composer.json` files and send emails with new package releases.
+[Security Advisories Checker][3] je _web_ servis i CLI alat, koji će ispitati vaš `composer.lock` fajl i reći vam ako treba da ažurirate neke zavisnosti.
 
-### Checking your dependencies for security issues
-
-The [Security Advisories Checker][4] is a web service and a command-line tool, both will examine your `composer.lock` file and tell you if you need to update any of your dependencies.
-
-* [Learn about Composer][5]
+* [Naučite o Composer-u][4]
 
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org
-[3]: https://www.versioneye.com/
-[4]: https://security.sensiolabs.org/
-[5]: http://getcomposer.org/doc/00-intro.md
-[6]: https://getcomposer.org/Composer-Setup.exe
+[3]: https://security.sensiolabs.org/
+[4]: http://getcomposer.org/doc/00-intro.md
 

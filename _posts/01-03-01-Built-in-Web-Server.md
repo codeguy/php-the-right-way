@@ -1,16 +1,15 @@
 ---
-title: Ugradjen Web Server
+title: Ugrađen web server
 isChild: true
-anchor: builtin_web_server
 ---
 
-## Ugradjen web server {#builtin_web_server_title}
+## Ugrađen web server {#builtin_web_server_title}
 
-Mozete poceti uciti PHP bez muke samog instaliranja i konfigurisanja completnog web servera ( min PHP 5.4+
-potreban za ovu opciju). Da pokrenete server, ukucajte sledece u terminal (konzola) vaseg foldera projekta:
+Možete da počnete sa učenjem PHP-a bez mučenja sa instalacijom i konfiguracijom punog _web_ servera (zahteva PHP 5.4+)
+Da pokrenete server, u konzoli pokrenite sledeću komandu u _web root-u_ vašeg projekta:
 
     > php -S localhost:8000
 
-* [Saznajte vise o built-in, komandnoj liniji web servera][cli-server]
+* [Saznaj više o ugrađenom, konzolnom web server-u][cli-server]
 
 [cli-server]: http://www.php.net/manual/en/features.commandline.webserver.php
