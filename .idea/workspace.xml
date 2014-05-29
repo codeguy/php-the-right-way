@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="942680eb-cbf6-4945-b694-36d7050f9861" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="$PROJECT_DIR$/_layouts/page.html" />
     </list>
     <ignored path="php-the-right-way.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +37,7 @@
       <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="45" selection-start="888" selection-end="888" vertical-scroll-proportion="-2.916854" vertical-offset="1571" max-vertical-offset="2016">
+            <state line="18" column="74" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.4247191" vertical-offset="189" max-vertical-offset="2016">
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -525,7 +524,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="888" selection-end="888" vertical-scroll-proportion="-2.916854" vertical-offset="1571" max-vertical-offset="2016">
+        <state line="18" column="74" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.4247191" vertical-offset="189" max-vertical-offset="2016">
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
