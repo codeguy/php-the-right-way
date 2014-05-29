@@ -1,15 +1,15 @@
 # Dobrodošli
 
 Na internetu postoji mnogo zastarelih informacija koje navode korisnike na pogrešan put,
-šireći loš i nebezbedan način pisanja koda. _PHP: na pravi način_ je lako za čitanje 
+šireći loš i nebezbedan način pisanja koda. _PHP: na pravi način_ je lako za čitanje
 uputstvo za popularne standarde kodiranja u PHP-u, koje sadrži skup linkova ka vodećim tutorijalima
-na internetu, kao i ono što saradnici trenutno smatraju najboljom praksom. 
+na internetu, kao i ono što saradnici trenutno smatraju najboljom praksom.
 
-_Ne postoji kanonski način upotrebe PHP-a_. Ovaj sajt ima za cilj da pomogne 
-novim PHP developerima upoznavajući ih sa nekim temama koje možda neće otkriti 
+_Ne postoji kanonski način upotrebe PHP-a_. Ovaj sajt ima za cilj da pomogne
+novim PHP developerima upoznavajući ih sa nekim temama koje možda neće otkriti
 pre nego što bude prekasno, i želi da iskusnim programerima da nove ideje o načinu
-na koji obavljaju neke radnje o kojima nisu ni razmišljali. Ovaj sajt vam neće reći 
-koje alate da koristite, već će vam predstaviti više opcija, i kada je moguće 
+na koji obavljaju neke radnje o kojima nisu ni razmišljali. Ovaj sajt vam neće reći
+koje alate da koristite, već će vam predstaviti više opcija, i kada je moguće
 objasniti razlike u pristupu, kao i moguće slučajeve upotrebe.
 
 Ovo je aktivan dokument i biće ažuriran u budućnosti sa još korisnih informacija i primera, kako budu postali dostupni.
@@ -32,7 +32,7 @@ _PHP: Na pravi način_ je (ili će uskoro biti) preveden na mnoge jezike:
 * [Bugarski](http://bg.phptherightway.com/)
 * [Nemački](http://rwetzlmayr.github.io/php-the-right-way/)
 * [Turski](http://hkulekci.github.io/php-the-right-way/)
-* [Srpski](http://mzj.github.io/php-the-right-way/)
+* [Srpski](http://smatejic.github.io/php-the-right-way/)
 
 ## Kako da doprinesete
 
@@ -46,4 +46,4 @@ pomozite novim PHP developerima gde da nađu dobre informacije!
 [Baner slike][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: http://mzj.github.io/php-the-right-way//banners.html
+[2]: http://smatejic.github.io/php-the-right-way/banners.html
