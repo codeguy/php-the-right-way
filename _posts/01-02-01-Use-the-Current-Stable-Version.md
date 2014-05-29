@@ -1,5 +1,5 @@
 ---
-title: Uvek Koristite Stabilnu Verziju (5.5)
+title: Koristite Stabilnu Verziju (5.5)
 isChild: true
 anchor: use_the_current_stable_version
 ---
