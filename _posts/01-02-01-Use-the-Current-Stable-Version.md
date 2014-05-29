@@ -1,10 +1,10 @@
 ---
-title: Uvek Koristite Trenutno najnoviju Stabilnu Verziju (5.5)
+title: Uvek Koristite Stabilnu Verziju (5.5)
 isChild: true
 anchor: use_the_current_stable_version
 ---
 
-## Uvek Koristite Trenutno najnoviju Stabilnu Verziju (5.5) {#use_the_current_stable_version_title}
+## Uvek Koristite Stabilnu Verziju (5.5) {#use_the_current_stable_version_title}
 
 Ako upravo pocinjete sa PHP-om uvek to radite sa poslednjom stabilnom verzijom [PHP 5.5][php-release].
 PHP je napravio korake dodajuci mocne [new features](#language_highlights) u poslednjih nekoliko godina.
