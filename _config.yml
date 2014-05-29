@@ -1,9 +1,8 @@
 safe: true
-baseurl: "http://smatejic.github.io/php-the-right-way"
-url: http://localhost:4000
+baseurl: "http://smatejic.github.io/php-the-right-way/"
 
 pygments: true
-markdown: kramdown
+markdown: maruku
 permalink: date
 maruku:
     use_tex:    false

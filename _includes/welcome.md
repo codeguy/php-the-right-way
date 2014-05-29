@@ -1,56 +1,49 @@
-# Dobrodosli
+# Dobrodošli
 
-Postoji mnogo zastarelih informacija na Web-u koje vode nove PHP korisnike na stranputicu,
-propagiraju lose iskustvo i nesiguran i nebezbedan kod. _PHP: The Right Way_ je lak za
-citanje, daje brze informacije i reference za popularne PHP razvojne standarde, linkove
-ka autoritativnim tutorijalima na Web-u i ono sto danasnji programeri smatraju najboljom praksom
-u ovom trnutku.
+Na internetu postoji mnogo zastarelih informacija koje navode korisnike na pogrešan put,
+šireći loš i nebezbedan način pisanja koda. _PHP: na pravi način_ je lako za čitanje 
+uputstvo za popularne standarde kodiranja u PHP-u, koje sadrži skup linkova ka vodećim tutorijalima
+na internetu, kao i ono što saradnici trenutno smatraju najboljom praksom. 
 
-_Ne postoji neki striktan nacin da se koristi PHP_. Ipak Ovaj web sajt ima za cilj da
-predstavi novim PHP programerima neke od tema koje mogu otkriti prekasno, i ima za cilj
-da starim profesionalcima da neke sveze ideje na teme koje su oni radili godinama bez ikakvog
-preispitivanja ili prethodnog razmisljana odredjenih stvari.Ovaj web sajt vam nece reci koje alate da
-koristite, vec ustvari da vam ponudi i predlozi vise opcija, kada je moguce cak i objasniti
-razlike u njihovom pristupu i koriscenju.
+_Ne postoji kanonski način upotrebe PHP-a_. Ovaj sajt ima za cilj da pomogne 
+novim PHP developerima upoznavajući ih sa nekim temama koje možda neće otkriti 
+pre nego što bude prekasno, i želi da iskusnim programerima da nove ideje o načinu
+na koji obavljaju neke radnje o kojima nisu ni razmišljali. Ovaj sajt vam neće reći 
+koje alate da koristite, već će vam predstaviti više opcija, i kada je moguće 
+objasniti razlike u pristupu, kao i moguće slučajeve upotrebe.
 
-
-Ovaj dokument je josh uvek u razvoju tako da ce nastaviti da raste sa mnogo vise pomocnih informacija
-i primerima kako oni budu bili dostupni.
+Ovo je aktivan dokument i biće ažuriran u budućnosti sa još korisnih informacija i primera, kako budu postali dostupni.
 
 ## Prevodi
 
-_PHP: The Right Way_ je (ili ce uskoro biti) preveden na mnogo razlicitih jezika:
+_PHP: Na pravi način_ je (ili će uskoro biti) preveden na mnoge jezike:
 
-* [English](http://www.phptherightway.com)
-* [Chinese (Simplified)](http://wulijun.github.com/php-the-right-way)
-* [French](http://eilgin.github.io/php-the-right-way/)
-* [Japanese](http://ja.phptherightway.com)
-* [Korean](http://wafe.github.io/php-the-right-way/)
-* [Indonesian](http://id.phptherightway.com/)
-* [Italian](http://it.phptherightway.com/)
-* [Polish](http://pl.phptherightway.com/)
-* [Portuguese](http://br.phptherightway.com/)
-* [Romanian](https://bgui.github.io/php-the-right-way/)
-* [Russian](http://getjump.github.io/ru-php-the-right-way)
-* [Spanish](http://phpdevenezuela.github.io/php-the-right-way/)
-* [Ukrainian](http://iflista.github.com/php-the-right-way/)
-* [Bulgarian](http://bg.phptherightway.com/)
-* [German](http://rwetzlmayr.github.io/php-the-right-way/)
-* [Thai](https://apzentral.github.io/php-the-right-way/)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
-* [Slovenian](http://sl.phptherightway.com)
-* [Serbian](http://smatejic.github.io/php-the-right-way/)
+* [Engleski](http://www.phptherightway.com)
+* Katalonski (Link trenutno neispravan...)
+* [Kineski](http://wulijun.github.com/php-the-right-way)
+* [Japanski](http://ja.phptherightway.com)
+* [Korejski](http://wafe.github.io/php-the-right-way/)
+* Italjijanski (Link trenutno neispravan...)
+* [Poljski](http://pl.phptherightway.com/)
+* [Portugalski](http://br.phptherightway.com/)
+* [Ruski](http://getjump.github.io/ru-php-the-right-way)
+* Španski (Link trenutno neispravan...)
+* [Ukrajinski](http://iflista.github.com/php-the-right-way/)
+* [Bugarski](http://bg.phptherightway.com/)
+* [Nemački](http://rwetzlmayr.github.io/php-the-right-way/)
+* [Turski](http://hkulekci.github.io/php-the-right-way/)
+* [Srpski](http://mzj.github.io/php-the-right-way/)
 
-## Kako doprineti
+## Kako da doprinesete
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
+Pomozite da ovaj sajt postane najbolji resurs za nove PHP programere! [Doprinesite na GitHub-u][1]
 
-## Obavesti Druge!
+## Raširite vest
 
-_PHP: The Right Way_ ima web banner slike koje mozete koristiti na svom sajtu. Iskazite podrsku,
-i obavestite ostale PHP programere gde mogu naci pouzdane i kvalitetne informacije!
+_PHP: Na pravi način_ ima baner slike koje možete da iskoristite na svom _web_ sajtu. Pokažite vašu podršku, i
+pomozite novim PHP developerima gde da nađu dobre informacije!
 
-[See Banner Images][2]
+[Baner slike][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: /banners.html
+[2]: http://mzj.github.io/php-the-right-way//banners.html

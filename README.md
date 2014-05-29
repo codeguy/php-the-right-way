@@ -1,82 +1,79 @@
-# PHP: The Right Way
+# PHP: Na pravi način
 
-## Kratak Pregled
+## Pregled
 
-Ovo su GitHub Stranice repozitorija _PHP: The Right Way_ projekta.
+Ovo je _GitHub pages_ repozitorijum za _PHP: Na pravi način_ projekat, na srpskom jeziku.
 
-* Ovaj website je Jekyll projekat.
-* Svaka sekcija i pod-sekcija su Markdown fajla koji se nalazi u `_posts/`.
-* Pod-sekcije imaju `isChild: true` u svojem zaglavlju.
-* Navigacija kao i struktura stranica su automatski generisane.
+Orginalni dokument na engleskom možete naći [ovde](http://phptherightway.com)
 
-## Spread the Word!
+* Ovaj sajt je koristi [Jekyll](http://jekyllrb.com/).
+* Svaka sekcija i podsekcija su u Markdown fajlu u `_posts/` direktorijumu.
+* Podsekcije imaju atribut `isChild: true` u zaglavlju.
+* Navigacija i struktura strane se automatski generišu.
 
-_PHP: The Right Way_ ima web banere i slike koje mozete koristiti na svojim web sajtovima.
-Izrazite podrsku, kako bi i drugi PHP programeri znali gde da nadju dobre informacije!
+## Raširite vest!
 
-[See Banner Images](http://www.phptherightway.com/banners.html)
+_PHP: Na pravi način_ ima baner slike koje možete da koristite na svom sajtu. Iskažite vašu podršku i pokažite novim 
+PHP developerima gde da nađu dobre informacije!
 
-## Kako nam Pomoci
+[Baner slike](http://www.phptherightway.com/banners.html)
 
-1. Fork and edit
-2. Opciono instaliraj [Ruby](https://rvm.io/rvm/install/) sa [Jekyll](https://github.com/mojombo/jekyll/) gem za
-lokalni pregled
-3. Posalji pull request za razmatranje
+## Kako da doprinesete
 
-### Contributor Style Guide
+1. _Forkujte_ i modifikujte
+2. Opciono, možete instalirati [Ruby](https://rvm.io/rvm/install/) sa [Jekyll-om](https://github.com/mojombo/jekyll/) 
+da vidite sajt u lokalu
+3. Pošaljite _pull request_ na razmatranje
 
-1. Koristite American English alphabet (* samo English repo only*) - mi koristimo Latinicu
-2. Koristite cetiri (4) space karaktera za indent (prelaz na novi red) teksta;
-Nikako ne koristiti tabove (tabs).
-3. Svaki red teksta  mora imati max do 120 karaktera.
-4. Primeri koda moraju zadovoljavati standard PSR-1 ili vise.
+### Uputstvo za saradnike
 
-## Gde
+1. Koristite četiri (4) prazna mesta za uvlačenje teksta, a ne tabove.
+2. 120 karaktera po liniji.
+3. Primeri koda treba da poštuju PSR-1 standard ili više.
+
+## Prevodi
 
 <http://www.phptherightway.com>
 
-* [English](http://www.phptherightway.com)
-* [Catalan] (http://ca.phptherightway.com)
-* [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Japanese] (http://ja.phptherightway.com)
-* [Korean] (http://wafe.github.io/php-the-right-way)
-* [Italian] (http://it.phptherightway.com)
-* [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
-* [Russian] (http://getjump.github.io/ru-php-the-right-way)
-* [Spanish] (http://es.phptherightway.com)
-* [Ukrainian](http://iflista.github.com/php-the-right-way)
-* [Bulgarian](http://bg.phptherightway.com)
-* [German] (http://rwetzlmayr.github.io/php-the-right-way)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
-* [Slovenian](http://sl.phptherightway.com)
-* [Serbian](http://smatejic.github.io/php-the-right-way/)
+* [Engleski](http://www.phptherightway.com)
+* Katalonski (Link trenutno neispravan...)
+* [Kineski](http://wulijun.github.com/php-the-right-way)
+* [Japanski](http://ja.phptherightway.com)
+* [Korejski](http://wafe.github.io/php-the-right-way/)
+* Italjijanski (Link trenutno neispravan...)
+* [Poljski](http://pl.phptherightway.com/)
+* [Portugalski](http://br.phptherightway.com/)
+* [Ruski](http://getjump.github.io/ru-php-the-right-way)
+* Španski (Link trenutno neispravan...)
+* [Ukrajinski](http://iflista.github.com/php-the-right-way/)
+* [Bugarski](http://bg.phptherightway.com/)
+* [Nemački](http://rwetzlmayr.github.io/php-the-right-way/)
+* [Turski](http://hkulekci.github.io/php-the-right-way/)
+* [Srpski](http://mzj.github.io/php-the-right-way/)
 
-### Prevodi
+Ako ste zainteresovani da prevedete ovaj projekat, _fork_-ujte ovaj repozitorijum i objavite vašu lokalizovanu kopiju na 
+vaš _GitHub pages_ nalog. Mi ćemo linkovati do vašeg prevoda iz glavnog dokumenta.
 
-Ako ste zainteresovani za prevodjenje _PHP: The Right Way_, fork ovaj repo na GitHub i objavite ovaj prevod
-na svojim GitHub Stranicama naloga. Mi ce mo linkovati prevod sa nasih galvnih stranica projekta.
+Da bismo izbegli fragmentaciju i da ne bismo zbunjivali čitaoce, molimo Vas da izaberete jednu od sledećih opcija:
 
-Kako bi izbegli fragmentaciju ili konfuziju citalaca, molimo vas da izaberete jednu od ovih opcija:
+1. Link do vaše lokalizovane verzije izgleda ovako `[korisničkoIme].github.com/php-the-right-way`
+2. Link do vaše lokalizovane verzije izgleda ovako sa poddomenom (npr. "sr.phptherightway.com")
 
-1. Da postavimo link ka vasim GitHub Stranicama uradi fork sa
-`[korisnickoime].github.com/php-the-right-way`
-2. Da postavimo link ka vasim GitHub Stranicama uradi fork sa poddomenom (e.g. "ru.phptherightway.com")
+Ako koristite poddomen, upišite poddomen u `CNAME` fajl, i pitajte nas da podesimo DNS. Ako ne koristite poddomen, 
+uklonite `CNAME` fajl iz vašeg repozitorijuma.
 
-Ako koristite poddomen, unesite poddomen u `CNAME` fajl, i zamoli te nas da postavimo DNS za vas. Ako ne koristite
-poddomen, uklonite `CNAME` fajl potpuno inace vas fork nece biti napravljen kada gurate.
+Kada prevod bude spreman, otvorite _issue_ na github-u i obavestite nas.
 
-Kada je vas prevod spreman, napravite radni nalog na Issue Tracker kako bi nas obavestili.
 
-## Zasto
+## Zašto
 
-Bilo je dosta diskusije do skora o tome kako PHP zajednici nedostaje dovoljno, kredibilnih informacija za programere
-novih u PHP-u. Cilj ovog repositorija je da resi taj problem.
+U poslednje vreme bilo je dosta rasprava kako PHP zajednica nema zadovoljavajući i pouzdan izvor informacija za nove 
+PHP programere. Ovaj projekat želi da reši taj problem.
 
 ## Ko
 
-Moje ime je [Josh Lockhart](http://twitter.com/codeguy). Ja sam autor [Slim Framework](http://www
-.slimframework.com/), i ja radim za [New Media Campaigns](http://www.newmediacampaigns.com/).
+Moje ime je [Josh Lockhart](http://twitter.com/codeguy). Ja sam autor [Slim Framework](http://www.slimframework.com/), 
+i radim za [New Media Campaigns](http://www.newmediacampaigns.com/).
 
 ### Saradnici
 
