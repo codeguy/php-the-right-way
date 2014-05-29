@@ -2,7 +2,7 @@
 
 ## Kratak Pregled
 
-Ovo su GitHub Stranice repozitorija _PHP: The Right Way_ projekata.
+Ovo su GitHub Stranice repozitorija _PHP: The Right Way_ projekta.
 
 * Ovaj website je Jekyll projekat.
 * Svaka sekcija i pod-sekcija su Markdown fajla koji se nalazi u `_posts/`.
@@ -28,7 +28,7 @@ lokalni pregled
 1. Koristite American English alphabet (* samo English repo only*) - mi koristimo Latinicu
 2. Koristite cetiri (4) space karaktera za indent (prelaz na novi red) teksta;
 Nikako ne koristiti tabove (tabs).
-3. Svaki tekst  mora imati do 120 karaktera.
+3. Svaki red teksta  mora imati max do 120 karaktera.
 4. Primeri koda moraju zadovoljavati standard PSR-1 ili vise.
 
 ## Gde
@@ -60,7 +60,8 @@ na svojim GitHub Stranicama naloga. Mi ce mo linkovati prevod sa nasih galvnih s
 
 Kako bi izbegli fragmentaciju ili konfuziju citalaca, molimo vas da izaberete jednu od ovih opcija:
 
-1. Da postavimo link ka vasim GitHub Stranicama uradi fork sa `[korisnickoime].github.com/php-the-right-way`
+1. Da postavimo link ka vasim GitHub Stranicama uradi fork sa
+`[korisnickoime].github.com/php-the-right-way`
 2. Da postavimo link ka vasim GitHub Stranicama uradi fork sa poddomenom (e.g. "ru.phptherightway.com")
 
 Ako koristite poddomen, unesite poddomen u `CNAME` fajl, i zamoli te nas da postavimo DNS za vas. Ako ne koristite
