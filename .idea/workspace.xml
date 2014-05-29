@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="942680eb-cbf6-4945-b694-36d7050f9861" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/page.html" afterPath="$PROJECT_DIR$/_layouts/page.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="php-the-right-way.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,19 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="07-01-01-Errors-and-Exceptions.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/07-01-01-Errors-and-Exceptions.md">
+      <file leaf-file-name="default.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_layouts/default.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+            <state line="82" column="21" selection-start="5400" selection-end="5400" vertical-scroll-proportion="-5.0333333" vertical-offset="1571" max-vertical-offset="2016">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_layouts/default.html">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="21" selection-start="5400" selection-end="5400" vertical-scroll-proportion="0.33932585" vertical-offset="1571" max-vertical-offset="2016">
+            <state line="56" column="52" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.4488889" vertical-offset="974" max-vertical-offset="1911">
               <folding />
             </state>
           </provider>
@@ -135,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_includes/welcome.md" />
         <option value="$PROJECT_DIR$/_posts/01-01-01-Getting-Started.md" />
@@ -146,6 +144,7 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_layouts/page.html" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -197,20 +196,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="php-the-right-way" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-the-right-way" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php-the-right-way" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -510,11 +495,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.6094675" vertical-offset="882" max-vertical-offset="67683" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="45" selection-start="1985" selection-end="1985" vertical-scroll-proportion="1.2747604" vertical-offset="693" max-vertical-offset="1974" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/welcome.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="0" selection-start="2272" selection-end="2272" vertical-scroll-proportion="-7.56" vertical-offset="819" max-vertical-offset="1302" />
@@ -605,7 +585,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="21" selection-start="5400" selection-end="5400" vertical-scroll-proportion="0.33932585" vertical-offset="1571" max-vertical-offset="2016">
+        <state line="82" column="21" selection-start="5400" selection-end="5400" vertical-scroll-proportion="-5.0333333" vertical-offset="1571" max-vertical-offset="2016">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="52" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.4488889" vertical-offset="974" max-vertical-offset="1911">
           <folding />
         </state>
       </provider>

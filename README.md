@@ -13,7 +13,7 @@ Orginalni dokument na engleskom možete naći [ovde](http://phptherightway.com)
 
 ## Raširite vest!
 
-_PHP: Na pravi način_ ima baner slike koje možete da koristite na svom sajtu. Iskažite vašu podršku i pokažite novim 
+_PHP: Na pravi način_ ima baner slike koje možete da koristite na svom sajtu. Iskažite vašu podršku i pokažite novim
 PHP developerima gde da nađu dobre informacije!
 
 [Baner slike](http://www.phptherightway.com/banners.html)
@@ -21,7 +21,7 @@ PHP developerima gde da nađu dobre informacije!
 ## Kako da doprinesete
 
 1. _Forkujte_ i modifikujte
-2. Opciono, možete instalirati [Ruby](https://rvm.io/rvm/install/) sa [Jekyll-om](https://github.com/mojombo/jekyll/) 
+2. Opciono, možete instalirati [Ruby](https://rvm.io/rvm/install/) sa [Jekyll-om](https://github.com/mojombo/jekyll/)
 da vidite sajt u lokalu
 3. Pošaljite _pull request_ na razmatranje
 
@@ -49,9 +49,9 @@ da vidite sajt u lokalu
 * [Bugarski](http://bg.phptherightway.com/)
 * [Nemački](http://rwetzlmayr.github.io/php-the-right-way/)
 * [Turski](http://hkulekci.github.io/php-the-right-way/)
-* [Srpski](http://mzj.github.io/php-the-right-way/)
+* [Srpski](http://smatejic.github.io/php-the-right-way/)
 
-Ako ste zainteresovani da prevedete ovaj projekat, _fork_-ujte ovaj repozitorijum i objavite vašu lokalizovanu kopiju na 
+Ako ste zainteresovani da prevedete ovaj projekat, _fork_-ujte ovaj repozitorijum i objavite vašu lokalizovanu kopiju na
 vaš _GitHub pages_ nalog. Mi ćemo linkovati do vašeg prevoda iz glavnog dokumenta.
 
 Da bismo izbegli fragmentaciju i da ne bismo zbunjivali čitaoce, molimo Vas da izaberete jednu od sledećih opcija:
@@ -59,7 +59,7 @@ Da bismo izbegli fragmentaciju i da ne bismo zbunjivali čitaoce, molimo Vas da 
 1. Link do vaše lokalizovane verzije izgleda ovako `[korisničkoIme].github.com/php-the-right-way`
 2. Link do vaše lokalizovane verzije izgleda ovako sa poddomenom (npr. "sr.phptherightway.com")
 
-Ako koristite poddomen, upišite poddomen u `CNAME` fajl, i pitajte nas da podesimo DNS. Ako ne koristite poddomen, 
+Ako koristite poddomen, upišite poddomen u `CNAME` fajl, i pitajte nas da podesimo DNS. Ako ne koristite poddomen,
 uklonite `CNAME` fajl iz vašeg repozitorijuma.
 
 Kada prevod bude spreman, otvorite _issue_ na github-u i obavestite nas.
@@ -67,12 +67,12 @@ Kada prevod bude spreman, otvorite _issue_ na github-u i obavestite nas.
 
 ## Zašto
 
-U poslednje vreme bilo je dosta rasprava kako PHP zajednica nema zadovoljavajući i pouzdan izvor informacija za nove 
+U poslednje vreme bilo je dosta rasprava kako PHP zajednica nema zadovoljavajući i pouzdan izvor informacija za nove
 PHP programere. Ovaj projekat želi da reši taj problem.
 
 ## Ko
 
-Moje ime je [Josh Lockhart](http://twitter.com/codeguy). Ja sam autor [Slim Framework](http://www.slimframework.com/), 
+Moje ime je [Josh Lockhart](http://twitter.com/codeguy). Ja sam autor [Slim Framework](http://www.slimframework.com/),
 i radim za [New Media Campaigns](http://www.newmediacampaigns.com/).
 
 ### Saradnici
