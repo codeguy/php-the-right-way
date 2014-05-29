@@ -3,14 +3,14 @@
 Postoji mnogo zastarelih informacija na Web-u koje vode nove PHP korisnike na stranputicu,
 propagiraju lose iskustvo i nesiguran i nebezbedan kod. _PHP: The Right Way_ je lak za
 citanje, daje brze informacije i reference za popularne PHP razvojne standarde, linkove
-ka autoritativnim tutorilima na Web-u i ono sto danasnji programeri smatraju najboljom praksom
+ka autoritativnim tutorijalima na Web-u i ono sto danasnji programeri smatraju najboljom praksom
 u ovom trnutku.
 
 _Ne postoji neki striktan nacin da se koristi PHP_. Ipak Ovaj web sajt ima za cilj da
-da predstavi novim PHP programerima neke od tema koje mogu otkriti prekasno, i ima za cilj
-da starim profesionalcima da neke sveze ideje na teme koje so oni radili godinama bez ikakvog
-preispitivanja ili razmisljana odredjene stvari.Ovaj web sajt vam nece reci koje alate da
-koristite, vec ustvari da vam ponudi i predlozi vise opcija, kada je moguce caj i objasniti
+predstavi novim PHP programerima neke od tema koje mogu otkriti prekasno, i ima za cilj
+da starim profesionalcima da neke sveze ideje na teme koje su oni radili godinama bez ikakvog
+preispitivanja ili prethodnog razmisljana odredjenih stvari.Ovaj web sajt vam nece reci koje alate da
+koristite, vec ustvari da vam ponudi i predlozi vise opcija, kada je moguce cak i objasniti
 razlike u njihovom pristupu i koriscenju.
 
 
