@@ -38,7 +38,7 @@ $statement = $pdo->query("SELECT some\_field FROM some\_table");
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 echo htmlentities($row['some_field']);
 
-// PDO + MySQL
+// PDO + SQLite
 $pdo = new PDO('sqlite:/path/db/foo.sqlite');
 $statement = $pdo->query("SELECT some\_field FROM some\_table");
 $row = $statement->fetch(PDO::FETCH_ASSOC);
