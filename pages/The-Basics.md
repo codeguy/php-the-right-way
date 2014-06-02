@@ -285,11 +285,12 @@ stacked/nested, it is advised to use one per line for readability.
 <?php
 $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
+{% endhighlight %}
 
-vs.
+In comparison, here is an example that sacrifices all forms of readability for the sake of reducing the line count.
 
-// nested ternary
-$b = 10;
+{% highlight php %}
+<?php
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
 {% endhighlight %}
 
@@ -339,42 +340,20 @@ vs
 <?php
 $a = 3;
 return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
-
 {% endhighlight %}
 
-It is down to the judgement of the developer where and when to use this method to improve code readability as it is debatable what is an improvement and what is a hinderance. Here is an example where it might be wise to use bracketing.
+Bracketing also affords us the capability of creating unions within a statement block where the block will be checked as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is also true.
 
 {% highlight php %}
 <?php
-$a = 3;
-$b = 4;
-$c = 5;
-
-return $a == 3 || $b === 4 || $c !== 5; // return true if $a == 3 or $b === 4(value and type) or $c !== 5(value and type)
-
-vs
-
-<?php
-$a = 3;
-$b = 4;
-$c = 5;
-
-return ($a == 3) && ($b === 4) && ($c !== 5); // return true if $a == 3 or $b === 4(value and type) or $c !== 5(value and type)
-
+return ($a == 3 && $b == 4) && $c == 5;
 {% endhighlight %}
 
-Another reason to utilise bracketing is the ability to create unions within a statement block where the block will be checked as a whole. Such as:
+Another example is the snippet below which will return true if ($a != 3 AND $b != 4) OR $c == 5.
 
 {% highlight php %}
 <?php
-$a = 3;
-$b = 4;
-$c = 5;
-
-return ($a == 3 && $b == 4) && $c == 5; // return true if both ($a == 3 and $b == 4) are true and $c == 5 is true.
-return ($a != 3 && $b != 4) || $c == 5; // return true if ($a != 3 AND $b != 4) OR $c == 5
-return (($a == $b || $a == $c) && $b != 4) || $c == 5; // return true if (($a == $b or $a == $c) and $b != 4) OR $c == 5
-
+return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
 * [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
