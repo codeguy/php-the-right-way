@@ -26,7 +26,7 @@ if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is i
     // code...
 }
 
-vs.
+// vs
 
 if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
     // code...
@@ -55,7 +55,7 @@ function test($a)
     }
 }
 
-vs.
+// vs
 
 function test($a)
 {
@@ -132,7 +132,7 @@ function array()
 ### Concatenation
 
 - If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it's best to use concatenation operators over concatenating assignment operators
+- For readability it is best to use concatenation operators over concatenating assignment operators
 - While within the original scope of the variable, indent when concatenation uses a new line
 
 
@@ -142,7 +142,7 @@ $a  = 'Multi-line example';    // concatenating assignment operator (.=)
 $a .= "\n";
 $a .= 'of what not to do';
 
-vs.
+// vs
 
 $a = 'Multi-line example'      // concatenation operator (.)
     . "\n"                     // indenting new lines
@@ -159,7 +159,7 @@ differences between the string types and their benefits/uses.
 #### Single quotes
 
 Single quotes are the simplest way to define a string and are often the quickest. Their speed stems from PHP not
-parsing the string (doesn't parse for variables). They're best suited for:
+parsing the string (does not parse for variables). They are best suited for:
 
 - Strings that do not need to be parsed
 - Writing of a variable into plain text
@@ -179,7 +179,7 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
 
 #### Double quotes
 
-Double quotes are the Swiss army knife of strings, but are slower due to the string being parsed. They're best
+Double quotes are the Swiss army knife of strings, but are slower due to the string being parsed. They are best
 suited for:
 
 - Escaped strings
@@ -192,13 +192,13 @@ echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that
     . "\n"                                       // variables and escaped string
     . 'I love learning' . $code . '!';
 
-vs.
+// vs
 
 echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
                                                                // enables us to use a parsable string
 {% endhighlight %}
 
-While using double quotes that contain variables, it's often the case that the variable will be touching another
+While using double quotes that contain variables, it is often the case that the variable will be touching another
 character. This will result in PHP not parsing the variable due to the variable being camouflaged. To fix this problem,
 wrap the variable within a pair of curly brackets.
 
@@ -207,7 +207,7 @@ wrap the variable within a pair of curly brackets.
 $juice = 'plum';
 echo "I drank some juice made of $juices";    // $juice cannot be parsed
 
-vs.
+// vs
 
 $juice = 'plum';
 echo "I drank some juice made of {$juice}s";    // $juice will be parsed
@@ -224,7 +224,7 @@ echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 
 #### Nowdoc syntax
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it's suited toward the
+Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
 use of multi-line strings without the need for concatenating.
 
 {% highlight php %}
@@ -250,7 +250,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 #### Heredoc syntax
 
-Heredoc syntax internally behaves the same way as double quotes except it's suited toward the use of multi-line
+Heredoc syntax internally behaves the same way as double quotes except it is suited toward the use of multi-line
 strings without the need for concatenating.
 
 {% highlight php %}
@@ -301,7 +301,7 @@ To 'return' a value with ternary operators use the correct syntax.
 $a = 5;
 echo ($a == 5) ? return true : return false;    // this example will output an error
 
-vs.
+// vs
 
 $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
@@ -315,16 +315,14 @@ It should be noted that you do not need to use a ternary operator for returning 
 $a = 3;
 return ($a == 3) ? true : false; // Will return true or false if $a == 3
 
-vs
+// vs
 
 $a = 3;
 return $a == 3; // Will return true or false if $a == 3
 
-{% endhighlight php %}
+{% endhighlight %}
 
 This can also be said for all operations(===, !==, !=, == etc).
-
-{% endhighlight %}
 
 #### Utilising brackets with ternary operators for form and function
 
@@ -335,7 +333,7 @@ When utilising a ternary operator, brackets can play their part to improve code 
 $a = 3;
 return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
 
-vs
+// vs
 
 <?php
 $a = 3;
@@ -361,7 +359,7 @@ return ($a != 3 && $b != 4) || $c == 5;
 ## Variable declarations
 
 At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let's say
+this does in reality is to double the memory consumption of said script. For the example below, let us say
 an example string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to
 2MB.
 
@@ -370,7 +368,7 @@ an example string of text contains 1MB worth of data, by copying the variable yo
 $about = 'A very long string of text';    // uses 2MB memory
 echo $about;
 
-vs.
+// vs
 
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
