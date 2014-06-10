@@ -285,11 +285,12 @@ stacked/nested, it is advised to use one per line for readability.
 <?php
 $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
+{% endhighlight %}
 
-vs.
+In comparison, here is an example that sacrifices all forms of readability for the sake of reducing the line count.
 
-// nested ternary
-$b = 10;
+{% highlight php %}
+<?php
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
 {% endhighlight %}
 
@@ -304,6 +305,55 @@ vs.
 
 $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
+
+{% endhighlight %}
+
+It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this would be.
+
+{% highlight php %}
+<?php
+$a = 3;
+return ($a == 3) ? true : false; // Will return true or false if $a == 3
+
+vs
+
+$a = 3;
+return $a == 3; // Will return true or false if $a == 3
+
+{% endhighlight php %}
+
+This can also be said for all operations(===, !==, !=, == etc).
+
+{% endhighlight %}
+
+#### Utilising brackets with ternary operators for form and function
+
+When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions within blocks of statements. An example of when there is no requirement to use bracketing is:
+
+{% highlight php %}
+<?php
+$a = 3;
+return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
+
+vs
+
+<?php
+$a = 3;
+return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
+{% endhighlight %}
+
+Bracketing also affords us the capability of creating unions within a statement block where the block will be checked as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is also true.
+
+{% highlight php %}
+<?php
+return ($a == 3 && $b == 4) && $c == 5;
+{% endhighlight %}
+
+Another example is the snippet below which will return true if ($a != 3 AND $b != 4) OR $c == 5.
+
+{% highlight php %}
+<?php
+return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
 * [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
