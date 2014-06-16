@@ -14,14 +14,14 @@ title: PHP 기본
 $a = 5;   // integer 타입의 숫자 5
 
 var_dump($a == 5);       // 값을 비교; true
-var_dump($a == '5');     // 타입을 무시하고 같을 비교; true
+var_dump($a == '5');     // 타입을 무시하고 값을 비교; true
 var_dump($a === 5);      // 타입과 값을 모두 비교 (integer 와 integer); true
 var_dump($a === '5');    // 타입과 값을 (integer 와 string); false
 
 /**
  * 타입을 무시한 비교
  */
-if (strpos('testing', 'test')) {    // 'test'가 인덱스 0에스 발견되어 strpos 는 0을 리턴. 0은 false로 취급된다.
+if (strpos('testing', 'test')) {    // 'test'가 인덱스 0에서 발견되어 strpos 는 0을 리턴. 0은 false로 취급된다.
     // code...
 }
 
