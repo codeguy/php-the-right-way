@@ -10,7 +10,7 @@
             dataType: 'jsonp',
             timeout: 3000,
             type: 'GET',
-            url: 'https://api.github.com/repos/codeguy/php-the-right-way/contributors'
+            url: 'https://api.github.com/repos/codeguy/php-the-right-way/contributors?per_page=100'
         }).done(function (data) {
             if ( data.data && data.data.length ) {
                 var $ul = $('<ul></ul>'), dataLength = data.data.length;
