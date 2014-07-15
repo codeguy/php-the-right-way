@@ -1,9 +1,10 @@
 ---
+title: Working with UTF-8
 isChild: true
 anchor: php_and_utf8
 ---
 
-## PHP and UTF-8 {#php_and_utf8_title}
+## Working with UTF-8 {#php_and_utf8_title}
 
 _This section was originally written by [Alex Cabal](https://alexcabal.com/) over at 
 [PHP Best Practices](https://phpbestpractices.org/#utf-8) and has now been shared here_.
