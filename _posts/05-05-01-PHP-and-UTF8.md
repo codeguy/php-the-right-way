@@ -7,7 +7,7 @@ anchor: php_and_utf8
 ## Working with UTF-8 {#php_and_utf8_title}
 
 _This section was originally written by [Alex Cabal](https://alexcabal.com/) over at 
-[PHP Best Practices](https://phpbestpractices.org/#utf-8) and has now been shared here_.
+[PHP Best Practices](https://phpbestpractices.org/#utf-8) and has been used as the basis for our own UTF-8 advice_.
 
 ### There's no one-liner. Be careful, detailed, and consistent.
 
@@ -62,8 +62,9 @@ Further Reading for why.
 
 ### UTF-8 at the browser level
 
-Use the `mb_http_output()` function to ensure that your PHP script outputs UTF-8 strings to your browser. In your HTML, 
-include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in your page's `<head>` tag. 
+Use the `mb_http_output()` function to ensure that your PHP script outputs UTF-8 strings to your browser. 
+
+The browser will then need to be told by the HTTP response that this page should be considered as UTF-8. The historic approach to doing that was to include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in your page's `<head>` tag. This approach is perfectly valid, but setting the charset in the `Content-Type` header is actually [much faster](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly).
 
 {% highlight php %}
 <?php
@@ -107,10 +108,11 @@ $handle->execute();
  
 // Store the result into an object that we'll output later in our HTML
 $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+
+header('Content-Type: text/html; charset=utf-8');
 ?><!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8" />
         <title>UTF-8 test page</title>
     </head>
     <body>
