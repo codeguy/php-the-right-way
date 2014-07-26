@@ -19,6 +19,7 @@ anchor: templating_further_reading
 - [Aura.View](https://github.com/auraphp/Aura.View) *(native)*
 - [Blade](http://laravel.com/docs/templates) *(compiled, framework specific)*
 - [Dwoo](http://dwoo.org/) *(compiled)*
+- [Latte](https://github.com/nette/latte) *(compiled)*
 - [Mustache](https://github.com/bobthecow/mustache.php) *(compiled)*
 - [PHPTAL](http://phptal.org/) *(compiled)*
 - [Plates](http://platesphp.com/) *(native)*
