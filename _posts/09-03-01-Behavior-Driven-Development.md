@@ -11,7 +11,7 @@ StoryBDD 기법을 사용한다면, 어플리케이션의 행위를 기술하는
 
 SpecBDD 기법을 사용한다면 여러분의 코드가 어떻게 행위할 것인지 기술하는 스펙을 작성하게 됩니다. 함수나 메소드를 테스트한다는 개념으로 바라보는 것이 아니라, 그 함수나 메소드가 어떻게 행위하는지 기술한다는 개념으로 바라봅니다. PHPSpec 프레임워크가 바로 이런 목적으로 사용할 수 있는 프레임워크입니다. 이 프레임워크는 Ruby의 [RSpec 프로젝트](http://rspec.info/)에 영향을 받았습니다.
 
-### BDD Links    
+### BDD Links
 
 * [Behat](http://behat.org/)는 Ruby의 [Cucumber](http://cukes.info/) 프로젝트에 영향을 받은 StoryBDD 프레임워크입니다.
 * [PHPSpec](http://www.phpspec.net/)은 Ruby의 [RSpec](http://rspec.info/) 프로젝트에 영향을 받은 SpecBDD 프레임워크입니다.

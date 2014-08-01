@@ -27,5 +27,5 @@ PHP 커뮤니티는 매우 거대하고 널리 퍼져있습니다. 멤버들은 
 [php-conf]: http://php.net/conferences/index.php
 [phpc-twitter]: https://twitter.com/phpc
 [php-programmers-gplus]: https://plus.google.com/u/0/communities/104245651975268426012
-[php-irc]: http://webchat.freenode.net/
+[php-irc]: http://webchat.freenode.net/?channels=phpc
 [php-so]: http://stackoverflow.com/questions/tagged/php
