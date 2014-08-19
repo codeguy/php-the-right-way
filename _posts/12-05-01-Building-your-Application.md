@@ -53,7 +53,6 @@ Chef resources for PHP developers:
 Further reading:
 
 * [Automate your project with Apache Ant](http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/)
-* [Maven](http://maven.apache.org/), a build framework based on Ant and [how to use it with PHP](http://www.php-maven.org/)
 
 ### Continuous Integration
 
