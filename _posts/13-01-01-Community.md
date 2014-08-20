@@ -10,7 +10,7 @@ PHP 커뮤니티는 매우 거대하고 널리 퍼져있습니다. 멤버들은 
 
 ## PHP 사용자 그룹
 
-여러분의 지역에 PHP 사용자 그룹(PUG)이 있을 것입니다. 공식적인 사용자 그룹 목록에 나와있지 않더라도 [Google][google]이나 [Meetup.com][meetup]에서 검색해보면 가까운 곳에서 모이는 PUG를 쉽게 찾을 수 있습니다. 혹시 주변에 PUG가 없나요? 그러면 하나 만들어 보는 것이 어떨까요?
+여러분의 지역에 PHP 사용자 그룹(PUG)이 있을 것입니다. 공식적인 사용자 그룹 목록에 나와있지 않더라도 [Google][google] 혹은 [Meetup.com][meetup]이나 [PHP.ug][php-ug]에서 검색해보면 가까운 곳에서 모이는 PUG를 쉽게 찾을 수 있습니다. 혹시 주변에 PUG가 없나요? 그러면 하나 만들어 보는 것이 어떨까요?
 
 [PHP 위키에서 사용자 그룹에 대해 읽어보기][php-wiki]
 
@@ -23,6 +23,7 @@ PHP 커뮤니티는 매우 거대하고 널리 퍼져있습니다. 멤버들은 
 [php-calendar]: http://www.php.net/cal.php
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: http://www.meetup.com/find/
+[php-ug]: http://php.ug
 [php-wiki]: https://wiki.php.net/usergroups
 [php-conf]: http://php.net/conferences/index.php
 [phpc-twitter]: https://twitter.com/phpc
