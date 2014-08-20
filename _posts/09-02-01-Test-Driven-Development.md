@@ -43,3 +43,4 @@ From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
 * [Codeception](http://codeception.com)은 인수 테스트 도구를 포함하는 풀스택(full-stack) 테스트 프레임워크입니다.
+* [Storyplayer](http://datasift.github.io/storyplayer)는 테스트 환경을 필요에 따라 생성하거나 파괴할 수 있는 기능을 포함하는 풀스택(full-stack) 테스트 프레임워크입니다.
