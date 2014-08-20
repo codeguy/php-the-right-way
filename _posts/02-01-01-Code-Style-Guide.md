@@ -23,6 +23,7 @@ PEAR나 Zend에서 만든 스타일 표준을 사용할 수도 있습니다. 그
 * [Read about PSR-2][psr2]
 * [Read about PEAR Coding Standards][pear-cs]
 * [Read about Zend Coding Standards][zend-cs]
+* [Read about Symfony Coding Standards][symfony-cs]
 
 [PHP_CodeSniffer][phpcs]라는 도구를 사용하면 코드가 이들 가이드를 따르는지 체크할 수 있습니다.
 [Sublime Text 2][st-cs] 같은 텍스트 편집기에는 실시간으로 코드를 체크해주는 플러그인도 제공됩니다.
@@ -39,6 +40,7 @@ Fabien Potencier의 [PHP Coding Standards Fixer][phpcsfixer]라는 도구는
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [zend-cs]: http://framework.zend.com/wiki/display/ZFDEV2/Coding+Standards
+[symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/

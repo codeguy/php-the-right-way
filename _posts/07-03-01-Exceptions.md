@@ -42,7 +42,7 @@ catch(Fuel\Email\SendingFailedException $e)
 }
 finally
 {
-    // 메일이 전송되었다는 것을 사용자에게 알리는 것은 여기서
+    // 이 부분은 예외가 발생했는지 아닌지와 상관없이 항상 실행됨
 }
 {% endhighlight %}
 

@@ -9,6 +9,6 @@ isChild: true
 
 ### Tool Links
 
-* [Selenium](http://seleniumhq.org/)은 [PHPUnit과 연동하여 사용할 수도 있는](http://www.phpunit.de/manual/3.1/en/selenium.html) 웹브라우저 자동화 도구입니다.
+* [Selenium](http://seleniumhq.org/)은 [PHPUnit과 연동하여 사용할 수도 있는](http://phpunit.de/manual/current/en/selenium.html) 웹브라우저 자동화 도구입니다.
 * [Mockery](https://github.com/padraic/mockery)는 [PHPUnit](http://phpunit.de/)이나 [PHPSpec](http://www.phpspec.net/)과 연동하여 사용할 수 있는 Mock Object 프레임워크입니다.
 * [Prophecy](https://github.com/phpspec/prophecy)는 강력하고 유연한 PHP용 mock 프레임워크입니다. [PHPSpec](http://www.phpspec.net/)와 연동하거나 [PHPUnit](http://phpunit.de/)과 함께 사용할 수 있습니다.
