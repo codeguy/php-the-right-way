@@ -23,8 +23,9 @@ PHP 5.3.7 이상의 버전들과의 호환성을 제공하기 위해서 `passwor
 아래 코드에서는 문자열을 해시하고, 다른 문자열의 해시와 비교합니다. 두 개의 문자열이 서로 다르기 때문에
 이 로그인은 실패한 것으로 간주될 것입니다.
 
-{% highlight php %}                                                                                                                                                                                              
-<?php                                                                                                                                                                                                            
+{% highlight php %}
+<?php
+                      
 require 'password.php';
 
 $passwordHash = password_hash('secret-password', PASSWORD_DEFAULT);
