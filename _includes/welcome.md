@@ -19,23 +19,26 @@ kako budu dostupni.
 
 _PHP: The Right Way_ je (ili će uskoro biti) preveden u mnogo različitih jezika:
 
-* [Engleski](http://www.phptherightway.com)
-* Katalonski (Prekinut link... proveravamo)
-* [Kineski](http://wulijun.github.com/php-the-right-way)
-* [Japanski](http://ja.phptherightway.com)
-* [Korejski](http://wafe.github.io/php-the-right-way/)
-* [Italijanski](http://it.phptherightway.com/)
-* [Poljski](http://pl.phptherightway.com/)
-* [Portugalski](http://br.phptherightway.com/)
-* [Ruski](http://getjump.github.io/ru-php-the-right-way)
-* Španski (Prekinut link... proveravamo)
-* [Ukrajinski](http://iflista.github.com/php-the-right-way/)
-* [Bugarski](http://bg.phptherightway.com/)
-* [Nemački](http://rwetzlmayr.github.io/php-the-right-way/)
-* [Turski](http://hkulekci.github.io/php-the-right-way/)
-* [Srpski](http://rs.phptherightway.com/)
+* [English](http://www.phptherightway.com)
+* [Chinese (Simplified)](http://wulijun.github.com/php-the-right-way)
+* [French](http://eilgin.github.io/php-the-right-way/)
+* [Japanese](http://ja.phptherightway.com)
+* [Korean](http://wafe.github.io/php-the-right-way/)
+* [Indonesian](http://id.phptherightway.com/)
+* [Italian](http://it.phptherightway.com/)
+* [Polish](http://pl.phptherightway.com/)
+* [Portuguese](http://br.phptherightway.com/)
+* [Romanian](https://bgui.github.io/php-the-right-way/)
+* [Russian](http://getjump.github.io/ru-php-the-right-way)
+* [Spanish](http://phpdevenezuela.github.io/php-the-right-way/)
+* [Ukrainian](http://iflista.github.com/php-the-right-way/)
+* [Bulgarian](http://bg.phptherightway.com/)
+* [German](http://rwetzlmayr.github.io/php-the-right-way/)
+* [Thai](https://apzentral.github.io/php-the-right-way/)
+* [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [Slovenian](http://sl.phptherightway.com)
 
-## Kako da doprinesete
+## How to Contribute
 
 Pomozite da ovaj sajt postane najbolji izvor za nove PHP programere! [Kontributujte na GitHub-u][1]
 
