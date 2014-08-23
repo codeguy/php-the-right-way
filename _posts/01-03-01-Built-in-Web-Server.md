@@ -1,6 +1,7 @@
 ---
-title: Ugrađeni web server
 isChild: true
+title: Ugrađeni web server
+anchor: builtin_web_server
 ---
 
 ## Ugrađeni web server {#builtin_web_server_title}

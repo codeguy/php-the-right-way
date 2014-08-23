@@ -1,5 +1,7 @@
 ---
 isChild: true
+title: Windows podešavanje
+anchor: windows_setup
 ---
 
 ## Windows podešavanje {#windows_setup_title}

@@ -1,5 +1,7 @@
 ---
 isChild: true
+title: Osnovni koncept
+anchor: basic_concept
 ---
 
 ## Osnovni koncept {#basic_concept_title}

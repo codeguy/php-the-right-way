@@ -1,6 +1,7 @@
 ---
-title: Interfejs sa komandne linije
 isChild: true
+title: Interfejs sa komandne linije
+anchor: command_line_interface
 ---
 
 ## Interfejs sa komandne linije (Command Line Interface) {#command_line_interface_title}

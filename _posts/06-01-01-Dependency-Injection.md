@@ -1,5 +1,7 @@
 ---
+isChild: false
 title: Injektovanje zavisnosti (Dependency Injection)
+anchor: dependency_injection
 ---
 
 # Injektovanje zavisnosti (Dependency Injection) {#dependency_injection_title}

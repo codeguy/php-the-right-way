@@ -1,3 +1,9 @@
+---
+isChild: false
+title: Upravljanje zavisnostima
+anchor: dependency_management
+---
+
 # Upravljanje zavisnostima (Dependency) {#dependency_management_title}
 
 Postoji izbor između tone PHP biblioteka, frejmvorkova i komponenti. U vašem projektu koristićete najverovatnije

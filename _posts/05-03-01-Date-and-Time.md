@@ -1,5 +1,7 @@
 ---
 isChild: true
+title: Datum i vreme
+anchor: date_and_time
 ---
 
 ## Datum i vreme {#date_and_time_title}

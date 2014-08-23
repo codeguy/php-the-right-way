@@ -1,5 +1,7 @@
 ---
 isChild: true
+title: Dizajn paterni (šabloni)
+anchor: design_patterns
 ---
 
 ## Dizajn paterni (šabloni) {#design_patterns_title}

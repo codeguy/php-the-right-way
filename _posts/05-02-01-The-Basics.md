@@ -1,5 +1,7 @@
 ---
 isChild: true
+title: Osnove
+anchor: the_basics
 ---
 
 ## Osnove {#the_basics_title}

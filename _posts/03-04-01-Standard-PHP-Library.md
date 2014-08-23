@@ -1,6 +1,7 @@
 ---
-title:   Standardna PHP biblioteka
 isChild: true
+title:   Standardna PHP biblioteka
+anchor: standard_php_library
 ---
 
 ## Standardna PHP biblioteka {#standard_php_library_title}

@@ -1,5 +1,7 @@
 ---
 isChild: true
+title: Mac podešavanje
+anchor: mac_setup
 ---
 
 ## Mac podešavanje  {#mac_setup_title}

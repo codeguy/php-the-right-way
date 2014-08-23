@@ -1,8 +1,10 @@
-﻿---
+---
+isChild: false
 title: Vodič za stil kodiranja
+anchor: code_style_guide
 ---
 
-# Vodič za stil kodiranja {#code_style_guide_title}
+# Vodič za stil kodiranja {#code_style_guide}
 
 PHP zajednica je velika i raznovrsna, i sastoji se od nebrojenih biblioteka, frejmvorkova i komponenti. Uobičajeno je da
 PHP programeri izaberu nekoliko i iskombinuju ih u jedan projekat. Bitno je da se PHP kod pridržava (što je bliže

@@ -1,6 +1,7 @@
 ---
-title: Namespace-ovi (imenski prostor)
 isChild: true
+title: Namespace-ovi (imenski prostor)
+anchor: namespaces
 ---
 
 ## Namespace-ovi (imenski prostor) {#namespaces_title}

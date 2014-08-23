@@ -1,5 +1,7 @@
 ---
 isChild: true
+title: Složeniji problem
+anchor: complex_problem
 ---
 
 ## Složeniji problem {#complex_problem_title}
