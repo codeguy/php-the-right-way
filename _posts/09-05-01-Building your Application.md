@@ -4,9 +4,9 @@ isChild: true
 
 ## Izgradnja i isporučivanje vaše aplikacije {#build_title}
 
-Ako zateknete sebe da ručno radite promene šeme baze podataka ili ručno pokrećete testove pre nego što ažurirate svoje 
+Ako zateknete sebe da ručno radite promene šeme baze podataka ili ručno pokrećete testove pre nego što ažurirate svoje
 fajlove (ručno), razmislite još jednom! Uz svaki dodatni zadatak koji se izvodi ručno potreban da razvijete novu verziju
-aplikacije, šanse za potencijalno fatalne greške se povećavaju. Bez obzira da li se bavite jednostavnim ažuriranjem, 
+aplikacije, šanse za potencijalno fatalne greške se povećavaju. Bez obzira da li se bavite jednostavnim ažuriranjem,
 sveobuhvatnom izgradnjom procesa ili čak strategijom kontinuirane integracije, [build automation](http://en.wikipedia.org/wiki/Build_automation) je Vaš prijatelj.
 
 Među zadacima koje biste možda želeli da automatizujete su:
@@ -21,19 +21,19 @@ Među zadacima koje biste možda želeli da automatizujete su:
 
 ### Alati za automatizaciju izgradnje
 
-Alati za izgradnju mogu biti opisani kao skup skripti koje rukuju zajedničkim zadacima razvoja softvera. Alat za 
+Alati za izgradnju mogu biti opisani kao skup skripti koje rukuju zajedničkim zadacima razvoja softvera. Alat za
 zgradnju nije deo vašeg softvera, on deluje na vaš softver 'izvana'.
 
 Postoji mnogo dostupnih alata otvorenog koda da vam pomogne sa automatizacijom, neki su napisani u PHP-u, drugi nisu.
 To ne treba da vas sputava da ih koristite, ako više odgovaraju za određeni posao. Evo nekoliko primera:
 
-[Phing](http://www.phing.info/) je najlakši način da počnete sa primenom automatizacije isporuivanja koda u svetu PHP-a. Pomoću Phing-a 
+[Phing](http://www.phing.info/) je najlakši način da počnete sa primenom automatizacije isporuivanja koda u svetu PHP-a. Pomoću Phing-a
 možete da kontrolišete pakovanje, angažovanje(deployment) ili testiranje procesa unutar jednostavne XML build datoteke. Phing (koji se zasniva na [Apache Ant](http://ant.apache.org/)) obezbeđuje bogat set zadataka, obično potrebnih za instalaciju ili ažuriranje web aplikacija i može se proširiti dodatnim prilagođenim zadacima, pisanim u PHP-u.
 
-[Capistrano](https://github.com/capistrano/capistrano/wiki) je sistem namenjen *srednjim-do-naprednim programerima* za 
+[Capistrano](https://github.com/capistrano/capistrano/wiki) je sistem namenjen *srednjim-do-naprednim programerima* za
 izvršavanje komandi na struktuiran, ponovljivi način na jednoj ili više udaljenih mašina. Prekonfigurisan je za primenu (deploying) na Ruby on Rails applikacijama, međutim ljudi **uspešno angažuju(deploying) PHP sisteme** sa njim. Uspešno korišćenje Capistrana zavisi od radnog iskustva sa Ruby i Rake.
 
-Blog post Dejva Gardnera [PHP Deployment with Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/) 
+Blog post Dejva Gardnera [PHP Deployment with Capistrano](http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/)
 je dobra polazna tačka za PHP developere zainteresovane za Capistrano.
 
 [Chef](http://www.opscode.com/chef/) je više od skeleta(framework) za primenu(deployment), to je veoma moćan Ruby baziran sistemski integracioni skelet(framework) koji ne samo da razvija(deploy) Vaše aplikacije već može da izgradi i celokupno serversko okruženje ili virtuelne kutije(virtual boxes).
@@ -51,7 +51,7 @@ Dalje čitanje:
 ### Continuous Integration
 
 > Kontinuirana integracija je praksa softverskog razvoja u kojoj članovi tima često integrišu svoj rad, uglavnom svaka
-> osoba integriše najmanje jednom dnevno — što rezultira sa više integracija dnevno. Mnogi timovi nalaze da ovakav 
+> osoba integriše najmanje jednom dnevno — što rezultira sa više integracija dnevno. Mnogi timovi nalaze da ovakav
 > pristup vodi do značajnog smanjenja integracionih problema i omogućava timu da razvija kohezivni softver mnogo brže.
 
 *-- Martin Fowler*

@@ -6,8 +6,8 @@ isChild: true
 
 Možemo demonstrirati koncept sa jednostavnim, a ipak naivnim primerom.
 
-Ovde imamo klasu `Database` koja zahteva adapter da bi komunicirala sa bazom podataka. Instancujemo adapter 
-u konstruktoru i kreiramo čvrstu zavisnost. Ovo čini testiranje teškim i znači da je klasa `Database` 
+Ovde imamo klasu `Database` koja zahteva adapter da bi komunicirala sa bazom podataka. Instancujemo adapter
+u konstruktoru i kreiramo čvrstu zavisnost. Ovo čini testiranje teškim i znači da je klasa `Database`
 usko povezana sa adapterom.
 
 {% highlight php %}
@@ -46,6 +46,6 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Sada klasi `Database` mi dajemo njenu zavisnost radije nego da ona to sama kreira. Mogli smo čak da napravimo 
-metod koji bi prihvatao argument zavisnosti i na taj način je postavljao, ili da je polje `$adapter` bilo 
+Sada klasi `Database` mi dajemo njenu zavisnost radije nego da ona to sama kreira. Mogli smo čak da napravimo
+metod koji bi prihvatao argument zavisnosti i na taj način je postavljao, ili da je polje `$adapter` bilo
 javno mogli smo da je postavimo direktno.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Specifičnosti PHP jezika
 ---
 

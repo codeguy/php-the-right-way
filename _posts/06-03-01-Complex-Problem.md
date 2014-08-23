@@ -4,23 +4,23 @@ isChild: true
 
 ## Složeniji problem {#complex_problem_title}
 
-Ako ste ikada čitali o Dependency Injection onda ste sigurno videli izraze *"Inverzija kontrole (Inversion of Control)"* ili 
+Ako ste ikada čitali o Dependency Injection onda ste sigurno videli izraze *"Inverzija kontrole (Inversion of Control)"* ili
 *"Princip inverzije zavisnosti (Dependency Inversion Principle)"*. Ovo su složeni problemi koje Dependency Injection rešava.
 
 ### Inverzija kontrole
 
-Inversion of Control je kao što i sam naziv kaže, "zamena kontrole" sistema tako što držimo organizacioni kod potpuno 
+Inversion of Control je kao što i sam naziv kaže, "zamena kontrole" sistema tako što držimo organizacioni kod potpuno
 odvojeno od naših objekata.
 
-U kontekstu Dependency Injection ovo se odnosi na olabljavanje zavisnosti tako što ih kontrolišemo i instancujemo na 
+U kontekstu Dependency Injection ovo se odnosi na olabljavanje zavisnosti tako što ih kontrolišemo i instancujemo na
 drugom mestu u sistemu.
 
 PHP frejmvorci su godinama postizali Inverziju kontrole, međutim postavlja se pitanje koji deo kontrole vi zamenjujete
-i gde to? Na primer, MVC frejmvorci bi generalno omogućili super objekat ili osnovnu kontroler klasu koju ostali 
-kontroleri moraju da naslede da bi dobili pristup njenim zavisnostima. Ovo **je** Inverzija kontrole, međutim, umesto 
+i gde to? Na primer, MVC frejmvorci bi generalno omogućili super objekat ili osnovnu kontroler klasu koju ostali
+kontroleri moraju da naslede da bi dobili pristup njenim zavisnostima. Ovo **je** Inverzija kontrole, međutim, umesto
 da olabavi zavisnosti, ovaj metod ih jednostavno premešta.
 
-Dependency Injection nam omogućava da na elegantniji način rešimo ovaj problem tako što ćemo da injektujemo samo one 
+Dependency Injection nam omogućava da na elegantniji način rešimo ovaj problem tako što ćemo da injektujemo samo one
 zavisnosti koje su nam potrebne, kada su nam potrebne, bez ikakvne potrebe da hardkodujemo bilo kakve zavisnosti.
 
 For years, PHP frameworks have been achieving Inversion of Control, however, the question became, which part of control

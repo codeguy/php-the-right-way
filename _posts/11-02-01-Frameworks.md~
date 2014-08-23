@@ -14,14 +14,14 @@ onda Vam na raspolaganju stoje tri osnovne vrste:
 * Full-Stack Frameworks
 * Component Frameworks
 
-Micro-frameworks su u suštini omot za usmeravanje HTTP zahteva za povratni poziv, kontroler, metod, itd što je brže 
+Micro-frameworks su u suštini omot za usmeravanje HTTP zahteva za povratni poziv, kontroler, metod, itd što je brže
 moguće, a ponekad dolazi sa nekoliko dodatnih biblioteka koje pomažu u razvoju kao što su omotači osnovnih baza podataka
 i slično. Oni se ističu prilikom izgradnje udaljenih HTTP servisa.
 
-Mnogi okviri (frameworks) dodaju značajan broj funkcija na ono što je dostupno u micro-framework i oni su poznati kao 
+Mnogi okviri (frameworks) dodaju značajan broj funkcija na ono što je dostupno u micro-framework i oni su poznati kao
 Full-Stack Frameworks. Oni često dolaze u paketu sa ORM-om, Autentikacionim paketima, itd.
 
-Component-based frameworks su kolekcije specijalizovanih biblioteka sa jednim ciljem. Najrazličitiji component-based 
+Component-based frameworks su kolekcije specijalizovanih biblioteka sa jednim ciljem. Najrazličitiji component-based
 frameworks se mogu koristiti zajedno radi pravljenja micro- ili full-stack frameworka.
 
 * [Popularni PHP Frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)

@@ -4,8 +4,8 @@ isChild: true
 
 ## Alati za komplementarno testiranje {#complementary_testing_tools_title}
 
-Pored individualnog testiranja i frejmvorkova zasnovanih na ponašanju, takođe postoji i niz generičkih frejmvorkova i 
-pomoćnih biblioteka korisnih za bilo koji izabrani pristup. 
+Pored individualnog testiranja i frejmvorkova zasnovanih na ponašanju, takođe postoji i niz generičkih frejmvorkova i
+pomoćnih biblioteka korisnih za bilo koji izabrani pristup.
 
 ### Linkovi alata
 

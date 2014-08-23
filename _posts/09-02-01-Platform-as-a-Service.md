@@ -9,4 +9,4 @@ PaaS obezbeđuje sistem i mrežnu arhitekturu neophodnu za pokretanje PHP aplika
 konfigurisanja za pokretanje PHP aplikacija ili PHP frejmvorka.
 
 PaaS je nedavno postao popularan metod za isporučivanje, hosting i skaliranje PHP aplikacija svih veličina. Možete naći
-spisak [pružalaca usluge PHP PaaS "Platforma kao servis"](#php_paas_providers) u našoj [sekciji resursa](#resources).  
+spisak [pružalaca usluge PHP PaaS "Platforma kao servis"](#php_paas_providers) u našoj [sekciji resursa](#resources).
