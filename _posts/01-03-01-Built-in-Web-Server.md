@@ -6,12 +6,11 @@ anchor: builtin_web_server
 
 ## Ugrađeni web server {#builtin_web_server_title}
 
-Možete da počnete sa učenjem PHP-a bez maltretiranja oko instalacije i podešavanja samostalnog web servera (od verzije
-PHP 5.4). Da biste pokrenuli server, pozicionirajte se na _root_ direktorijum vašeg web projekta u terminalu i izvršite
-sledeću komandu:
+Počevši od verzije 5.4, mozete početi sa učenjem PHP bez instaliranja i podešavanja potpunog web servera.
+Za pokretanje servera, u direktorijumu vašeg projekta, izvršite sledeću komandu u terminalu:
 
     > php -S localhost:8000
 
-* [Saznajte više o ugrađenom web serveru koji se pokreće sa komandne linije][cli-server]
+* [Naučite više o ugrađenom web serveru][cli-server]
 
 [cli-server]: http://www.php.net/manual/en/features.commandline.webserver.php
