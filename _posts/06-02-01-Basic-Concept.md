@@ -2,13 +2,11 @@
 isChild: true
 ---
 
-## Basic Concept {#basic_concept_title}
+## 기본 개념 {#basic_concept_title}
 
-We can demonstrate the concept with a simple, yet naive example.
+간단한 예제를 통해서 기본적인 개념을 보여드리겠습니다.
 
-Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the
-adapter in the constructor and create a hard dependency. This makes testing difficult and means the `Database` class is
-very tightly coupled to the adapter.
+아래 코드를 보면 데이터베이스와 통신하기 위한 어댑터를 필요로 하는 `Database`라는 클래스가 있습니다. 생성자에서 어댑터 인스턴스를 생성하는 방식으로 되어 있어서 두 클래스는 서로 강한 의존 관계를 가지고 있습니다. 그래서 `Database` 클래스를 테스트하기도 어렵습니다.
 
 {% highlight php %}
 <?php
@@ -27,7 +25,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-This code can be refactored to use Dependency Injection and therefore loosen the dependency.
+아래와 같이 리팩터링하여 의존성 주입을 사용하도록 하면 의존 관계를 약화시킬 수 있습니다.
 
 {% highlight php %}
 <?php
@@ -46,6 +44,6 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class its dependency rather than it creating it itself. We could even create a method
-that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we could
-set it directly.
+이제 `Database`는 내부에서 직접 의존 관계에 있는 클래스 인스턴스를 생성하지 않고, 외부에서 전달받게 되었습니다.
+어댑터 인스턴스를 인자로 전달받는 메소드를 만들어서 해당 어댑터를 사용하도록 설정하는 방식을 적용하거나, 
+`$adapter` 프로퍼티를 `public` 으로 만들어서 프로퍼티를 직접 설정하게 할 수도 있을 것입니다.
