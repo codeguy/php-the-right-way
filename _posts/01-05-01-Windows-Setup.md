@@ -1,24 +1,26 @@
 ---
 isChild: true
-title: Windows podešavanje
+title: Instalacija za Windows
 anchor: windows_setup
 ---
 
-## Windows podešavanje {#windows_setup_title}
+## Instalacija za Windows {#windows_setup_title}
 
-PHP je na raspolaganju na nekoliko načina u Windows-u. Možete [preuzeti binarne verzije](php-downloads) i do skoro ste
-mogli da koristite '.msi' instaler. Instaler više nije podržan i prestaje sa verzijom PHP 5.3.0.
+PHP je dostupan na nekoliko načina na Windows-u. Možete [skinuti binarnu verziju](php-downloads)(php-downloads)
+a do skora ste mogli da koristite i '.msi' alat za instalaciju. Podrška za alat za instalaciju prestaje sa
+PHP verzijom 5.3.0.
 
-U svrhe učenja i razvoja u lokalu možete da koristite ugrađeni web server uz PHP 5.4+ tako da nema potrebe da se brinete
-oko njegovog konfigurisanja. Ako biste želeli sveobuhvatno rešenje koje obuhvata webserver i MySQL onda će vam alati kao
-što su [Web Platform Installer][wpi], [Zend Server CE][zsce], [XAMPP][xampp] i [WAMP][wamp] pomoći da brzo podignete i
-pokrenete Windows razvojno okruženje. Ovi alati će se donekle razlikovati od produkcije, tako da morate paziti na
-razlike u okruženju ako radite na Windows-u a razvijate na Linux-u.
+Za učenje i razvoj u lokalu, možete koristiti ugrađeni web server sa PHP 5.4+
+tako da se ne morate brinuti o konfiguraciji. Ako preferirate kompletne "Sve-u-jednom" pakete koji potpuni web server
+sa MySQL bazom podataka, onda ce Vam alati kao [Web Platform Installer][wpi], [Zend Server CE][zsce], [XAMPP][xampp] i
+[WAMP][wamp] pomoći da brzo podesite i pokrenete okruženje pod Windowsom. Treba napomenuti da se ovi alati razlikuju od
+verzija u produkciji, tako da morate paziti na razlike u okrućenju ako razvijate na Windows-u
+a produkcija Vam je na Linux-u.
 
-Ako vam je potrebno da produkcioni sistem pokrećete na Windows-u, onda će vam IIS7 pružiti najstabilnije i najbolje
-performanse. Možete da koristite [phpmanager][phpmanager] (GUI plugin za IIS7) da biste pojednostavili konfigurisanje i
-upravljanje PHP-a. IIS7 dolazi sa ugrađenim FastCGI-om spremnim za rad, samo morate podesiti PHP kao handler. Za
-podršku i dodatne informacije tu je [namenski prostor na iis.net][php-iis] za PHP.
+Ako je potrebno da Vam produkcija bude na Windows-u, onda će Vam IIS7 pružiti najveću stabilnost i najbolje performanse.
+Možete koristiti [phpmanager][phpmanager] (GUI dodatak za IIS7) za pojednostavljenje konfiguracije i upravljanje PHP-om.
+IIS7 dolazi sa FastCGI ugradjenim i spremnim za upotrebu, samo je podtreno konfigurisati PHP kao handler.
+Za podrsku i dodatne resurse pogledajte [deo posvecen PHP na iis.net][php-iis]
 
 [php-downloads]: http://windows.php.net
 [phpmanager]: http://phpmanager.codeplex.com/
