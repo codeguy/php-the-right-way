@@ -1,14 +1,16 @@
 ---
 isChild: true
+title: Datum i vreme
+anchor: date_and_time
 ---
 
 ## Datum i vreme {#date_and_time_title}
 
 PHP ima klasu sa nazivom DateTime koja služi da vam pomogne kada čitate, pišete, poredite ili računate datume ili vreme.
-Postoji mnogo funkcija koje se odnose na datum i vreme u PHP-u pored DateTime, ali ona pruža dobar objektno-orijentisani 
+Postoji mnogo funkcija koje se odnose na datum i vreme u PHP-u pored DateTime, ali ona pruža dobar objektno-orijentisani
 interfejs za najčešće upotrebe. Može da rukuje vremenskim zonama, ali to je van opsega ovog kratkog uvoda.
 
-Da biste započeli sa radom sa DateTime, konvertujte sirov string koji sadrži datum i vreme u objekat pomoću 
+Da biste započeli sa radom sa DateTime, konvertujte sirov string koji sadrži datum i vreme u objekat pomoću
 `createFromFormat()` factory metode ili stavite `new \DateTime` da dobijete trenutni datum i vreme. Koristite `format()`
 metodu da konvertujete DateTime nazad u string za izlaz.
 {% highlight php %}
@@ -20,8 +22,8 @@ echo 'Start date: ' . $start->format('m/d/Y') . "\n";
 {% endhighlight %}
 
 Računanje sa DateTime je moguće korišćenjem klase DateInterval. DateTime ima metode kao `add()` and `sub()` koje primaju
-DateInterval kao argument. Nemojte pisati kod koji pretpostavlja isti broj sekundi svakog dana, i letnje i zimsko 
-pomeranje vremena i promene vremenske zone će oboriti tu pretpostavku. Umesto toga koristite vremenske intervale. Za 
+DateInterval kao argument. Nemojte pisati kod koji pretpostavlja isti broj sekundi svakog dana, i letnje i zimsko
+pomeranje vremena i promene vremenske zone će oboriti tu pretpostavku. Umesto toga koristite vremenske intervale. Za
 računanje razlike u datumima koristite metodu `diff()`. Ona vraća new DateInterval, što je vrlo lako prikazati.
 {% highlight php %}
 <?php
@@ -42,7 +44,7 @@ if ($start < $end) {
 }
 {% endhighlight %}
 
-Poslednji primer će demonstrirati DatePeriod klasu. Koristi se za iteraciju nad rekurzivnim događajima (recurring). 
+Poslednji primer će demonstrirati DatePeriod klasu. Koristi se za iteraciju nad rekurzivnim događajima (recurring).
 Može da primi dva DateTime objekta, početak i kraj, i interval za koji vraća sve događaje između.
 {% highlight php %}
 <?php
