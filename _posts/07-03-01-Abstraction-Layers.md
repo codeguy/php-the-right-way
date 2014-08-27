@@ -22,7 +22,7 @@ Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4]
 [2]: http://www.doctrine-project.org/projects/dbal.html
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [6]: https://github.com/auraphp/Aura.Sql
-[7]: http://propelorm.org/Propel/
+[7]: http://propelorm.org/
 
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
