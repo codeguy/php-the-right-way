@@ -26,11 +26,11 @@ Consider the most basic step:
 
 {% highlight php %}
 <?php
-function getAllSomethings($db) {
+function getAllFoos($db) {
     return $db->query('SELECT * FROM table');
 }
 
-foreach (getAllFoos() as $row) {
+foreach (getAllFoos($db) as $row) {
     echo "<li>".$row['field1']." - ".$row['field1']."</li>"; // BAD!!
 }
 {% endhighlight %}
