@@ -29,6 +29,7 @@ If you need a little help to start using Vagrant there are three services that m
 - [Puphpet][puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides
   local VMs, can be used to deploy to cloud services as well. The provisioning is made with Puppet.
 - [Protobox][protobox]: is a layer on top of vagrant and a web GUI to setup virtual machines for web development. A single YAML document controls everything that is installed on the virtual machine.
+- [Phansible][phansible]: provides an easy to use interface that helps you generate Ansible Playbooks for PHP based projects.
 
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/
@@ -36,3 +37,4 @@ If you need a little help to start using Vagrant there are three services that m
 [rove]: http://rove.io/
 [puphpet]: https://puphpet.com/
 [protobox]: http://getprotobox.com/
+[phansible]: http://phansible.com/
