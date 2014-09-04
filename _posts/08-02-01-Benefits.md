@@ -13,8 +13,8 @@ the client-side code (markup).
 
 Templates also improve the organization of presentation code. Templates are typically placed in a "views" folder, each
 defined within a single file. This approach encourages code reuse where larger blocks of code are broken into smaller,
-reusable pieces. For example, your site header and footer can each be defined as templates, which are then included
-before and after each page template.
+reusable pieces, often called partials. For example, your site header and footer can each be defined as templates,
+which are then included before and after each page template.
 
 Finally, depending on the library you use, templates can offer more security by automatically escaping user-generated
 content. Some libraries even offer sand-boxing, where template designers are only given access to white-listed

@@ -16,13 +16,47 @@ frameworks, libraries like [Plates](http://platesphp.com/) or [Aura.View](https:
 working with plain PHP templates easier by offering modern template functionality such as inheritance, layouts and
 extensions.
 
-Example of a plain PHP template (using the [Plates](http://platesphp.com/) library):
+### Simple example of a plain PHP template
+
+Using the [Plates](http://platesphp.com/) library.
 
 {% highlight php %}
+<?php // user_profile.php ?>
+
 <?php $this->insert('header', ['title' => 'User Profile']) ?>
 
 <h1>User Profile</h1>
 <p>Hello, <?=$this->escape($name)?></p>
 
 <?php $this->insert('footer') ?>
+{% endhighlight %}
+
+### Example of plain PHP templates using inheritance
+
+Using the [Plates](http://platesphp.com/) library.
+
+{% highlight php %}
+<?php // template.php ?>
+
+<html>
+<head>
+    <title><?=$title?></title>
+</head>
+<body>
+
+<main>
+    <?=$this->section('content')?>
+</main>
+
+</body>
+</html>
+{% endhighlight %}
+
+{% highlight php %}
+<?php // user_profile.php ?>
+
+<?php $this->layout('template', ['title' => 'User Profile']) ?>
+
+<h1>User Profile</h1>
+<p>Hello, <?=$this->escape($name)?></p>
 {% endhighlight %}
