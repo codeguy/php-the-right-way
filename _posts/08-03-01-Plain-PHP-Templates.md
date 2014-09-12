@@ -26,7 +26,7 @@ Using the [Plates](http://platesphp.com/) library.
 <?php $this->insert('header', ['title' => 'User Profile']) ?>
 
 <h1>User Profile</h1>
-<p>Hello, <?=$this->escape($name)?></p>
+<p>Hello, <?php echo $this->escape($name)?></p>
 
 <?php $this->insert('footer') ?>
 {% endhighlight %}
@@ -40,12 +40,12 @@ Using the [Plates](http://platesphp.com/) library.
 
 <html>
 <head>
-    <title><?=$title?></title>
+    <title><?php echo $title?></title>
 </head>
 <body>
 
 <main>
-    <?=$this->section('content')?>
+    <?php echo $this->section('content')?>
 </main>
 
 </body>
