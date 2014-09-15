@@ -20,6 +20,6 @@ For a complete "all-in-one" package that includes PHP, Apache web server and MyS
 [mac-compile]: http://www.php.net/manual/en/install.macosx.compile.php
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
 [apple-developer]: https://developer.apple.com/downloads
-[mamp-downloads]: http://www.mamp.info/en/downloads/index.html
+[mamp-downloads]: http://www.mamp.info/en/downloads/
 [php-osx-downloads]: http://php-osx.liip.ch/
 [xampp]: http://www.apachefriends.org/en/xampp.html
