@@ -22,7 +22,7 @@ create and edit your files on your host machine and then run the code inside you
 
 ### A little help
 
-If you need a little help to start using Vagrant there are three services that might be useful:
+If you need a little help to start using Vagrant there are some services that might be useful:
 
 - [Rove][rove]: service that allows you to pre-generate typical Vagrant builds, PHP among the options. The
   provisioning is made with Chef.
