@@ -4,7 +4,7 @@ title: Interacting with Databases
 anchor: databases_interacting
 ---
 
-## Interacting with Databases
+## Interacting with Databases {#databases_interacting_title}
 
 When developers first start to learn PHP, they often end up mixing their database interaction up with their 
 presentation logic, using code that might look like this:
@@ -20,14 +20,14 @@ foreach ($db->query('SELECT * FROM table') as $row) {
 
 This is bad practice for all sorts of reasons, mainly that its hard to debug, hard to test, hard to read and it is going to output a lot of fields if you don't put a limit on there.
 
-While there are many other solutions to doing this - depending on if you prefer [OOP](/#object-oriented-programming) or [functional programming](/#functional-programming) - there must be some element of seperation. 
+While there are many other solutions to doing this - depending on if you prefer [OOP](/#object-oriented-programming) or [functional programming](/#functional-programming) - there must be some element of separation. 
 
 Consider the most basic step:
 
 {% highlight php %}
 <?php
-functon getAllSomethings($db) {
-	return $db->query('SELECT * FROM table');
+function getAllSomethings($db) {
+    return $db->query('SELECT * FROM table');
 }
 
 foreach (getAllFoos() as $row) {
@@ -35,7 +35,7 @@ foreach (getAllFoos() as $row) {
 }
 {% endhighlight %}
 
-That is a good start. Put those two items in two different files and you've got some clean seperation.
+That is a good start. Put those two items in two different files and you've got some clean separation.
 
 Create a class to place that method in and you have a "Model". Create a simple `.php` file to put the presentation logic in and you have a "View", which is very nearly [MVC] - a common OOP architecture for most [frameworks](/#frameworks_title).
 
@@ -63,16 +63,16 @@ include 'views/foo-list.php';
 <?php
 class Foo()
 {
-	protected $db;
+    protected $db;
 
-	public function __construct(PDO $db)
-	{
-		$this->db = $db;
-	}
+    public function __construct(PDO $db)
+    {
+        $this->db = $db;
+    }
 
-	public functon getAllFoos() {
-		return $this->db->query('SELECT * FROM table');
-	}
+    public function getAllFoos() {
+        return $this->db->query('SELECT * FROM table');
+    }
 }
 {% endhighlight %}
 

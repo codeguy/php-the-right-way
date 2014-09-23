@@ -37,7 +37,8 @@ The solutions listed above mainly handle PHP itself, and do not supply things li
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
 [mac-compile]: http://www.php.net/manual/en/install.macosx.compile.php
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
+
 ["Command Line Tools for XCode"]: https://developer.apple.com/downloads
-[mamp-downloads]: http://www.mamp.info/en/downloads/index.html
+[mamp-downloads]: http://www.mamp.info/en/downloads/
 [phpbrew]: https://github.com/phpbrew/phpbrew
 [xampp]: http://www.apachefriends.org/en/xampp.html

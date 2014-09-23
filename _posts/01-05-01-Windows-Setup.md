@@ -24,5 +24,5 @@ PHP.
 [zsce]: http://www.zend.com/en/products/server-ce/
 [xampp]: http://www.apachefriends.org/en/xampp.html
 [easyphp]: http://www.easyphp.org/
-[wamp]: http://www.wampserver.com/
+[wamp]: http://www.wampserver.com/en/
 [php-iis]: http://php.iis.net/
