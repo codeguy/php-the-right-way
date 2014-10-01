@@ -47,7 +47,7 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 <?php
 $pdo = new PDO('sqlite:users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); //<-- PDO 가 자동으로 입력값을 체크해서 안전하게 만들어 준다.
+$stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); // <-- PDO 가 자동으로 입력값을 체크해서 안전하게 만들어 준다.
 $stmt->execute();
 {% endhighlight %}
 

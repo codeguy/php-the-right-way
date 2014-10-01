@@ -31,9 +31,9 @@ require 'password.php';
 $passwordHash = password_hash('secret-password', PASSWORD_DEFAULT);
 
 if (password_verify('bad-password', $passwordHash)) {
-    //맞는 패스워드
+    // 맞는 패스워드
 } else {
-    //틀린 패스워드
+    // 틀린 패스워드
 }
 {% endhighlight %}  
 
