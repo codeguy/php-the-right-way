@@ -153,16 +153,18 @@ $a = 'Multi-line example'      // concatenation operator (.)
 
 ### String types
 
-String types are a constant feature within the PHP community, but hopefully this section will explain the
-differences between the string types and their benefits/uses.
+Strings are a series of characters, which should sound fairly simple. That said, there are a few different types 
+of strings and they offer slightly different syntax, with slightly different behaviors.
 
 #### Single quotes
 
-Single quotes are the simplest way to define a string and are often the quickest. Their speed stems from PHP not
-parsing the string (does not parse for variables). They are best suited for:
+Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters 
+or variables. 
 
-- Strings that do not need to be parsed
-- Writing of a variable into plain text
+If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would 
+see the exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable 
+name and show errors if no variable was found.
+
 
 {% highlight php %}
 <?php
@@ -179,12 +181,8 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
 
 #### Double quotes
 
-Double quotes are the Swiss army knife of strings, but are slower due to the string being parsed. They are best
-suited for:
-
-- Escaped strings
-- Strings with multiple variables and plain text
-- Condensing multi-line concatenation, and improving readability
+Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
+of special characters, like `\n` for newline, `\t` for a tab, etc. 
 
 {% highlight php %}
 <?php
@@ -198,9 +196,18 @@ echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of mul
                                                                // enables us to use a parsable string
 {% endhighlight %}
 
-While using double quotes that contain variables, it is often the case that the variable will be touching another
-character. This will result in PHP not parsing the variable due to the variable being camouflaged. To fix this problem,
-wrap the variable within a pair of curly brackets.
+Double quotes can contain variables; this is called "interpolation".
+
+{% highlight php %}
+<?php
+$juice = 'plum';
+echo "I like $juice juice";    // Output: I like plum juice
+{% endhighlight %}
+
+When using interpolation, it is often the case that the variable will be touching another character.
+This will result in some confusion as to what is the name of the variable, and what is a literal character.
+
+To fix this problem, wrap the variable within a pair of curly brackets.
 
 {% highlight php %}
 <?php
@@ -275,6 +282,25 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 {% endhighlight %}
 
 * [Heredoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc)
+
+### Which is quicker? 
+
+There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This 
+is fundamentally not true.
+
+If you are defining a single string and not trying to concatenate values or anything complicated, then either a single or 
+double quoted string will be entirely identical. Neither are quicker.
+
+If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the results can
+vary. If you are working with a small number of values, concatenation is minutely fasture. With a lot of values, interpolating 
+is minutely faster.
+
+Regardless of what you are doing with strings, none of the types will ever have any noticable impact on your application.
+Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-optimization unless you really
+understand the meaning and impact of the differences.
+
+[Disproving the Single Quotes Performance Myth]: http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html
+
 
 ## Ternary operators
 
