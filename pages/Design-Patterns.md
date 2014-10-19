@@ -21,18 +21,18 @@ the object you want to use. Consider the following example of the factory patter
 <?php
 class Automobile
 {
-    private $vehicle_make;
-    private $vehicle_model;
+    private $vehicleMake;
+    private $vehicleModel;
 
     public function __construct($make, $model)
     {
-        $this->vehicle_make = $make;
-        $this->vehicle_model = $model;
+        $this->vehicleMake = $make;
+        $this->vehicleModel = $model;
     }
 
-    public function get_make_and_model()
+    public function getMakeAndModel()
     {
-        return $this->vehicle_make . ' ' . $this->vehicle_model;
+        return $this->vehicleMake . ' ' . $this->vehicleModel;
     }
 }
 
@@ -47,7 +47,7 @@ class AutomobileFactory
 // have the factory create the Automobile object
 $veyron = AutomobileFactory::create('Bugatti', 'Veyron');
 
-print_r($veyron->get_make_and_model()); // outputs "Bugatti Veyron"
+print_r($veyron->getMakeAndModel()); // outputs "Bugatti Veyron"
 {% endhighlight %}
 
 This code uses a factory to create the Automobile object. There are two possible benefits to building your code this
