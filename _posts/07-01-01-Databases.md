@@ -21,14 +21,14 @@ versions of PHP. This means you will be faced with a rewrite at some point down 
 replace mysql usage with [mysqli] or [PDO] in your applications within your own development schedules so you won't be
 rushed later on. 
 
-**If you are starting from scratch then absolutely do not use the [mysql] extension: use the [MySQLi extension][mysqli], or use PDO.**
+**If you are starting from scratch then absolutely do not use the [mysql] extension: use the [MySQLi extension][mysqli], or use [PDO].**
 
 * [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
 * [PDO Tutorial for MySQL Developers](http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers)
 
 ## PDO Extension
 
-PDO is a database connection abstraction library &mdash; built into PHP since 5.1.0 &mdash; that provides a common interface to talk with
+[PDO] is a database connection abstraction library &mdash; built into PHP since 5.1.0 &mdash; that provides a common interface to talk with
 many different databases. For example, you can use basically identical code to interface with MySQL or SQLite:
 
 {% highlight php %}
