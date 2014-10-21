@@ -40,7 +40,7 @@ The path `$HOME/local/bin` (or a directory of your choice) should be in your `$P
 When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
 
     composer install
-    
+
 This section will assume you have installed composer globally.
 
 ### How to Define and Install Dependencies
@@ -70,7 +70,7 @@ This is most useful when you define your version requirements flexibly. For inst
 
 ### Update Notifications
 
-To receive notifications about new version releases you can sign up for [VersionEye][3], a web service that can monitor 
+To receive notifications about new version releases you can sign up for [VersionEye][3], a web service that can monitor
 your GitHub and BitBucket accounts for `composer.json` files and send emails with new package releases.
 
 ### Checking your dependencies for security issues
@@ -86,3 +86,10 @@ The [Security Advisories Checker][4] is a web service and a command-line tool, b
 [5]: http://getcomposer.org/doc/00-intro.md
 [6]: https://getcomposer.org/Composer-Setup.exe
 
+### Handling global dependencies with Composer
+
+Composer can also handle global dependencies and their binaries. Usage is straight-forward, all you need to do is prefix your command with `global`. If per example you wanted to install PHPUnit and have it available globally, you'd run the following command:
+
+    composer global require phpunit/phpunit
+
+This will create a `~/.composer` folder where your global dependencies reside. To have the installed packages' binaries available everywhere, you'd then add the `~/.composer/vendor/bin` folder to your PATH.
