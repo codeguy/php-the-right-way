@@ -20,6 +20,12 @@ The PHP community also hosts larger regional and national conferences in many co
 
 [Find a PHP Conference][php-conf]
 
+## ElePHPants
+
+[ElePHPant][elephpant] is that beautiful mascot of the PHP project with elephant in their design. It was originally designed for the PHP project in 1998 by Vincent Pontier - spiritual father of thousands of elePHPants around the world and 10 years later adorable plush elephant toy came to birth as well. Now elePHPants are present at many PHP conferences and with many PHP developers at their computers for fun and inspiration.
+
+[Interview with Vincent Pontier][vincent-pontier-interview]
+
 [php-calendar]: http://www.php.net/cal.php
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: http://www.meetup.com/find/
@@ -30,3 +36,5 @@ The PHP community also hosts larger regional and national conferences in many co
 [php-programmers-gplus]: https://plus.google.com/u/0/communities/104245651975268426012
 [php-irc]: http://webchat.freenode.net/?channels=phpc
 [php-so]: http://stackoverflow.com/questions/tagged/php
+[elephpant]: http://php.net/elephpant.php
+[vincent-pontier-interview]: http://7php.com/elephpant/
