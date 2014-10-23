@@ -23,7 +23,7 @@ If you need a little help to start using Vagrant there are some services that mi
 - [Rove][rove]: service that allows you to pre-generate typical Vagrant builds, PHP among the options. The
   provisioning is made with Chef.
 - [Puphpet][puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides
-  local VMs, can be used to deploy to cloud services as well. The provisioning is made with Puppet.
+  local VMs, it can be used to deploy to cloud services as well. The provisioning is made with Puppet.
 - [Protobox][protobox]: is a layer on top of vagrant and a web GUI to setup virtual machines for web development. A single YAML document controls everything that is installed on the virtual machine.
 - [Phansible][phansible]: provides an easy to use interface that helps you generate Ansible Playbooks for PHP based projects.
 

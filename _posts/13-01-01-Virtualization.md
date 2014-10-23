@@ -11,4 +11,4 @@ version for all libraries used when working with a team of developers.
 If you are developing on Windows and deploying to Linux (or anything non-Windows) or are developing in a team, you 
 should consider using a virtual machine.  
 This sounds tricky, but beside the widely known virtualization environments like VMware or VirtualBox, there are
-additional tools that may help you setting up a virtual environment in a vew easy steps.
+additional tools that may help you setting up a virtual environment in a few easy steps.
