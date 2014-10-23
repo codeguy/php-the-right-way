@@ -85,14 +85,14 @@ $string = mb_substr($string, 0, 15);
 // See the PDO example in this document for more information
 // Note the `set names utf8mb4` commmand!
 $link = new \PDO(   
-                    'mysql:host=your-hostname;dbname=your-db;charset=utf8mb4',
-                    'your-username',
-                    'your-password',
-                    array(
-                        \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
-                        \PDO::ATTR_PERSISTENT => false
-                    )
-                );
+    'mysql:host=your-hostname;dbname=your-db;charset=utf8mb4',
+    'your-username',
+    'your-password',
+    array(
+        \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
+        \PDO::ATTR_PERSISTENT => false
+    )
+);
  
 // Store our transformed string as UTF-8 in our database
 // Your DB and tables are in the utf8mb4 character set and collation, right?
