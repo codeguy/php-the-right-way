@@ -15,6 +15,7 @@ presentation logic, using code that might look like this:
 foreach ($db->query('SELECT * FROM table') as $row) {
     echo "<li>".$row['field1']." - ".$row['field1']."</li>";
 }
+?>
 </ul>
 {% endhighlight %}
 
