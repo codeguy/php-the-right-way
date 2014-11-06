@@ -37,6 +37,6 @@ anchor: resources
 * [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/)
 * [cloudControl](https://www.cloudcontrol.com/)
 * [Windows Azure](http://www.windowsazure.com/)
-* [Zend Developer Cloud](http://www.phpcloud.com/develop)
+* [Gandi.net](https://www.gandi.net/hosting/simple?language=php&db=mysql)
 * [Google App Engine](https://developers.google.com/appengine/docs/php/gettingstarted/)
 * [Jelastic](http://jelastic.com/)
