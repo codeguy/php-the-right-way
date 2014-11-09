@@ -6,10 +6,10 @@ anchor: opcode_cache
 ## Opcode Cache {#opcode_cache_title}
 
 When a PHP file is executed, under the hood it is first compiled to opcodes and, only then, the opcodes are executed.
-If a PHP file is not modified, the opcode will always be the same. This means that the compilation step is a waste of CPU resources.
+If a PHP file is not modified, the opcodes will always be the same. This means that the compilation step is a waste of CPU resources.
 
 This is where opcode caches come in. They prevent redundant compilation by storing opcodes in memory and reusing it on successive calls.
-Setting up an opcode cache is a matter of minutes, and your application will speed up significantly. There's really no reason not to use it.
+Setting up an opcode cache takes a matter of minutes, and your application will speed up significantly. There's really no reason not to use it.
 
 As of PHP 5.5, there is a built-in opcode cache called [OPcache][opcache-book]. It is also available for earlier versions.
 
