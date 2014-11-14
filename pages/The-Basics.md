@@ -400,3 +400,7 @@ echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
 * [Performance tips](https://developers.google.com/speed/articles/optimizing-php)
+
+Link about performance tips don't work. You can add some other link for optimizing php or add this archived link:
+http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php
+
