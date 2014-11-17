@@ -1,5 +1,6 @@
 ---
 isChild: true
+anchor: composer_and_packagist
 ---
 
 ## Composer and Packagist {#composer_and_packagist_title}
@@ -15,6 +16,9 @@ You can install Composer locally (in your current working directory; though this
     curl -s https://getcomposer.org/installer | php
 
 This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
+
+#### Installing on Windows
+For Windows users the easiest way to get up and running is to use the [ComposerSetup][6] installer, which performs a global install and sets up your `$PATH` so that you can just call `composer` from any directory in your command line.
 
 ### How to Install Composer (manually)
 
@@ -80,4 +84,5 @@ The [Security Advisories Checker][4] is a web service and a command-line tool, b
 [3]: https://www.versioneye.com/
 [4]: https://security.sensiolabs.org/
 [5]: http://getcomposer.org/doc/00-intro.md
+[6]: https://getcomposer.org/Composer-Setup.exe
 
