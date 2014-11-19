@@ -20,4 +20,4 @@ by the [RSpec project](http://rspec.info/) for Ruby.
 
 * [Behat](http://behat.org/), the StoryBDD framework for PHP, inspired by Ruby's [Cucumber](http://cukes.info/) project;
 * [PHPSpec](http://www.phpspec.net/), the SpecBDD framework for PHP, inspired by Ruby's [RSpec](http://rspec.info/) project;
-* [Codeception](http://www.codeception.com) is a full-stack testing framework that uses BDD principles.
+* [Codeception](http://codeception.com) is a full-stack testing framework that uses BDD principles.
