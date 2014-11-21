@@ -37,7 +37,7 @@ Using the [Twig](http://twig.sensiolabs.org/) library.
 
 {% highlight text %}
 {% raw %}
-// template.php
+// template.html
 
 <html>
 <head>
@@ -56,7 +56,7 @@ Using the [Twig](http://twig.sensiolabs.org/) library.
 
 {% highlight text %}
 {% raw %}
-// user_profile.php
+// user_profile.html
 
 {% extends "template.html" %}
 
