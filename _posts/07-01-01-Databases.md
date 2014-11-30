@@ -72,10 +72,11 @@ PHP가 자동으로 데이터베이스 연결을 닫아줄 것입니다.
 MySQL, PostgreSQL, SQLite 등의 여러 데이터베이스를 선택적으로 사용할 수 있는 유연한 어플리케이션을 만들기로 했다면
 그 정도의 오버헤드는 코드의 간결함과 유지보수성을 위해서라면 문제가 되지 않는 수준일 것입니다.
 
-몇몇 추상화 레이어는 PSR-0 네임스페이스 표준에 따르고 있기 때문에 어느 어플리케이션에도 자유롭게 설치하여 사용할 수 있습니다.
+몇몇 추상화 레이어는 PSR-0나 PSR-4 네임스페이스 표준에 따르고 있기 때문에 어느 어플리케이션에도 자유롭게 설치하여 사용할 수 있습니다.
 
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
+* [Propel][7]
 * [ZF2 Db][4]
 * [ZF1 Db][3]
 
@@ -85,7 +86,10 @@ MySQL, PostgreSQL, SQLite 등의 여러 데이터베이스를 선택적으로 �
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [5]: http://php.net/manual/en/pdo.connections.php
 [6]: https://github.com/auraphp/Aura.Sql
+[7]: http://propelorm.org/Propel/
 
 [mysql]: http://php.net/mysql
 [mysqli]: http://php.net/mysqli
 [pgsql]: http://php.net/pgsql
+[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md

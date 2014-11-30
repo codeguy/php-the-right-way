@@ -29,7 +29,7 @@
   (PHP 지원이 문서화되어 있는 것은 아니지만 안정적인 Facebook과의 파트너쉽을 통해서 지원됨. [링크](http://net.tutsplus.com/tutorials/php/quick-tip-deploy-php-to-heroku-in-seconds/))
 * [fortrabbit](http://fortrabbit.com/)
 * [Engine Yard Cloud](https://www.engineyard.com/products/cloud)
-* [Red Hat OpenShift Platform](http://www.redhat.com/products/cloud-computing/openshift/)
+* [Red Hat OpenShift Platform](http://openshift.com)
 * [dotCloud](http://docs.dotcloud.com/services/php/)
 * [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/)
 * [cloudControl](https://www.cloudcontrol.com/)
