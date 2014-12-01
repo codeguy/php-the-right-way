@@ -29,11 +29,11 @@ and applications that implement the components can have consistency even when wo
 You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text editors 
 like [Sublime Text 2][st-cs] to be given real time feedback. 
 
-You can fix the code layout automatically one of the two possible tools. One is Fabien Potencier's
-[PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase. It's bigger and slower, but very stable
+You can fix the code layout automatically by using one of the two possible tools. One is Fabien Potencier's
+[PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase. It is bigger and slower, but very stable
 and used by some huge projects like Magento and Symfony. Another option is [php.tools][phptools], which is made popular
 by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in performance,
-meaning real-time editor fixing is a bit more fluid.
+meaning real-time editor fixing is more fluid.
 
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily readable 
 by all current and future parties who may be working on the codebase.
