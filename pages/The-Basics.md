@@ -399,4 +399,4 @@ echo $about;
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
-* [Performance tips](https://developers.google.com/speed/articles/optimizing-php)
+* [Performance tips](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
