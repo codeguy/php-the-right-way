@@ -104,8 +104,8 @@ function test($a)
 
 ## Global namespace
 
-When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this,
-refer to the global function by using a backslash before the function name.
+When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this, refer to
+the global function by using a backslash before the function name.
 
 {% highlight php %}
 <?php
@@ -153,17 +153,17 @@ $a = 'Multi-line example'      // concatenation operator (.)
 
 ### String types
 
-Strings are a series of characters, which should sound fairly simple. That said, there are a few different types 
-of strings and they offer slightly different syntax, with slightly different behaviors.
+Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
+strings and they offer slightly different syntax, with slightly different behaviors.
 
 #### Single quotes
 
-Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters 
-or variables. 
+Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
+variables.
 
-If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would 
-see the exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable 
-name and show errors if no variable was found.
+If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
+exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
+errors if no variable was found.
 
 
 {% highlight php %}
@@ -182,7 +182,7 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
 #### Double quotes
 
 Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
-of special characters, like `\n` for newline, `\t` for a tab, etc. 
+of special characters, like `\n` for newline, `\t` for a tab, etc.
 
 {% highlight php %}
 <?php
@@ -204,8 +204,8 @@ $juice = 'plum';
 echo "I like $juice juice";    // Output: I like plum juice
 {% endhighlight %}
 
-When using interpolation, it is often the case that the variable will be touching another character.
-This will result in some confusion as to what is the name of the variable, and what is a literal character.
+When using interpolation, it is often the case that the variable will be touching another character. This will result
+in some confusion as to what is the name of the variable, and what is a literal character.
 
 To fix this problem, wrap the variable within a pair of curly brackets.
 
@@ -285,21 +285,21 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 ### Which is quicker? 
 
-There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This 
-is fundamentally not true.
+There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
+fundamentally not true.
 
-If you are defining a single string and not trying to concatenate values or anything complicated, then either a single or 
-double quoted string will be entirely identical. Neither are quicker.
+If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
+or double quoted string will be entirely identical. Neither are quicker.
 
-If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the results can
-vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of values, interpolating 
-is minutely faster.
+If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
+results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
+values, interpolating is minutely faster.
 
-Regardless of what you are doing with strings, none of the types will ever have any noticable impact on your application.
-Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-optimization unless you really
-understand the meaning and impact of the differences.
+Regardless of what you are doing with strings, none of the types will ever have any noticable impact on your
+application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
+optimization unless you really understand the meaning and impact of the differences.
 
-[Disproving the Single Quotes Performance Myth]: http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html
+* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 
 ## Ternary operators
@@ -334,7 +334,8 @@ return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 
 {% endhighlight %}
 
-It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this would be.
+It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
+would be.
 
 {% highlight php %}
 <?php
@@ -352,7 +353,8 @@ This can also be said for all operations(===, !==, !=, == etc).
 
 #### Utilising brackets with ternary operators for form and function
 
-When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions within blocks of statements. An example of when there is no requirement to use bracketing is:
+When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
+within blocks of statements. An example of when there is no requirement to use bracketing is:
 
 {% highlight php %}
 <?php
@@ -365,7 +367,9 @@ $a = 3;
 return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
 {% endhighlight %}
 
-Bracketing also affords us the capability of creating unions within a statement block where the block will be checked as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is also true.
+Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
+as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is
+also true.
 
 {% highlight php %}
 <?php
@@ -384,9 +388,8 @@ return ($a != 3 && $b != 4) || $c == 5;
 ## Variable declarations
 
 At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let us say
-an example string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to
-2MB.
+this does in reality is to double the memory consumption of said script. For the example below, let us say an example
+string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
 
 {% highlight php %}
 <?php

@@ -6,11 +6,12 @@ anchor: databases
 # Databases {#databases_title}
 
 Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysqli], [pgsql], [mssql], etc.
+with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysqli], [pgsql],
+[mssql], etc.
 
 Native drivers are great if you are only using _one_ database in your application, but if, for example, you are using
-MySQL and a little bit of MSSQL, or you need to connect to an Oracle database, then you will not be able to use the same
-drivers. You'll need to learn a brand new API for each database &mdash; and that can get silly.
+MySQL and a little bit of MSSQL, or you need to connect to an Oracle database, then you will not be able to use the
+same drivers. You'll need to learn a brand new API for each database &mdash; and that can get silly.
 
 ## MySQL Extension
 
@@ -21,15 +22,17 @@ versions of PHP. This means you will be faced with a rewrite at some point down 
 replace mysql usage with [mysqli] or [PDO] in your applications within your own development schedules so you won't be
 rushed later on.
 
-**If you are starting from scratch then absolutely do not use the [mysql] extension: use the [MySQLi extension][mysqli], or use [PDO].**
+**If you are starting from scratch then absolutely do not use the [mysql] extension: use the [MySQLi extension][mysqli],
+or use [PDO].**
 
 * [PHP: Choosing an API for MySQL](http://php.net/mysqlinfo.api.choosing)
 * [PDO Tutorial for MySQL Developers](http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers)
 
 ## PDO Extension
 
-[PDO] is a database connection abstraction library &mdash; built into PHP since 5.1.0 &mdash; that provides a common interface to talk with
-many different databases. For example, you can use basically identical code to interface with MySQL or SQLite:
+[PDO] is a database connection abstraction library &mdash; built into PHP since 5.1.0 &mdash; that provides a common
+interface to talk with many different databases. For example, you can use basically identical code to interface with
+MySQL or SQLite:
 
 {% highlight php %}
 <?php
@@ -46,14 +49,15 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
 echo htmlentities($row['some_field']);
 {% endhighlight %}
 
-PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types
-of database with the same API.
+PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types of
+database with the same API.
 
-More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying about database SQL injection attacks.
+More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying
+about database SQL injection attacks.
 This is possible using PDO statements and bound parameters.
 
-Let's assume a PHP script receives a numeric ID as a query parameter. This ID should be used to fetch a user record from a database. This is the `wrong`
-way to do this:
+Let's assume a PHP script receives a numeric ID as a query parameter. This ID should be used to fetch a user record
+from a database. This is the `wrong` way to do this:
 
 {% highlight php %}
 <?php
@@ -62,9 +66,10 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
 This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
-heartbeat, using a practice called [SQL Injection](http://wiki.hashphp.org/Validation). Just imagine if a hacker passes in an inventive `id` parameter by calling a URL like
-`http://domain.com/?id=1%3BDELETE+FROM+users`.  This will set the `$_GET['id']` variable to `1;DELETE FROM users`
-which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
+heartbeat, using a practice called [SQL Injection](http://wiki.hashphp.org/Validation). Just imagine if a hacker
+passes in an inventive `id` parameter by calling a URL like `http://domain.com/?id=1%3BDELETE+FROM+users`. This will
+set the `$_GET['id']` variable to `1;DELETE FROM users` which will delete all of your users! Instead, you should
+sanitize the ID input using PDO bound parameters.
 
 {% highlight php %}
 <?php
@@ -74,15 +79,15 @@ $stmt->bindParam(':id', $_GET['id'], PDO::PARAM_INT); // <-- Automatically sanit
 $stmt->execute();
 {% endhighlight %}
 
-This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is introduced to the
-database preventing potential SQL injection attacks.
+This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is
+introduced to the database preventing potential SQL injection attacks.
 
 * [Learn about PDO]
 
 You should also be aware that database connections use up resources and it was not unheard-of to have resources
-exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you
-can implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted,
-i.e. set to NULL.  If you don't do this explicitly, PHP will automatically close the connection when your script ends -
+exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you can
+implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted, i.e.
+set to NULL. If you don't do this explicitly, PHP will automatically close the connection when your script ends -
 unless of course you are using persistent connections.
 
 * [Learn about PDO connections]
