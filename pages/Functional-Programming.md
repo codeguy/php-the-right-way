@@ -83,5 +83,5 @@ defined to capture variables in scope and access them later when the anonymous f
 * [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
 
 [anonymous-functions]: http://php.net/functions.anonymous
-[call-user-func-array]: http://php.net/function.call-user-func-array
 [closures-rfc]: https://wiki.php.net/rfc/closures
+[call-user-func-array]: http://php.net/function.call-user-func-array

@@ -95,6 +95,7 @@ real problem if you ever want to [unit-test](/#unit-testing) your application.
 [PHPBridge] have a great resource called [Creating a Data Class] which covers a very similar topic, and is great for
 developers just getting used to the concept of interacting with databases.
 
+
 [MVC]: http://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
 [PHPBridge]: http://phpbridge.org/
 [Creating a Data Class]: http://phpbridge.org/intro-to-php/creating_a_data_class

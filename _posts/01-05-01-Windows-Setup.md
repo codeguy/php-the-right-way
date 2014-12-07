@@ -20,10 +20,10 @@ FastCGI built in and ready to go, you just need to configure PHP as a handler. F
 there is a [dedicated area on iis.net][php-iis] for PHP.
 
 [php-downloads]: http://windows.php.net
-[phpmanager]: http://phpmanager.codeplex.com/
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
 [zsce]: http://www.zend.com/en/products/server-ce/
 [xampp]: http://www.apachefriends.org/en/xampp.html
 [easyphp]: http://www.easyphp.org/
 [wamp]: http://www.wampserver.com/en/
+[phpmanager]: http://phpmanager.codeplex.com/
 [php-iis]: http://php.iis.net/

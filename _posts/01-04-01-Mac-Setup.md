@@ -12,9 +12,8 @@ There are multiple ways to install PHP on OS X.
 
 ### Install PHP via Homebrew
 
-[Homebrew](http://brew.sh/) is a powerful package manager for OS X, which can help you install PHP and various
-extensions easily. [Homebrew PHP] is a repository that contains PHP-related "formulae" for Homebrew, and will let you
-install PHP.
+[Homebrew] is a powerful package manager for OS X, which can help you install PHP and various extensions easily.
+[Homebrew PHP] is a repository that contains PHP-related "formulae" for Homebrew, and will let you install PHP.
 
 At this point, you can install `php53`, `php54`, `php55` or `php56` using the `brew install` command, and switch
 between them by modifying your `PATH` variable.
@@ -27,8 +26,8 @@ applications/projects require different versions of PHP, and you are not using v
 ### Compile from Source
 
 Another option that gives you control over the version of PHP you install, is to [compile it yourself][mac-compile].
-In that case be sure to have installed either Xcode or Apple's substitute ["Command Line Tools for XCode"]
-downloadable from Apple's Mac Developer Center.
+In that case be sure to have installed either [Xcode][xcode-gcc-substitution] or Apple's substitute
+["Command Line Tools for XCode"] downloadable from Apple's Mac Developer Center.
 
 ### All-in-One Installers
 
@@ -38,10 +37,9 @@ you and tie them all together, but ease of setup comes with a trade-off of flexi
 
 [Homebrew]: http://brew.sh/
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
+[phpbrew]: https://github.com/phpbrew/phpbrew
 [mac-compile]: http://php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
-
 ["Command Line Tools for XCode"]: https://developer.apple.com/downloads
 [mamp-downloads]: http://www.mamp.info/en/downloads/
-[phpbrew]: https://github.com/phpbrew/phpbrew
 [xampp]: http://www.apachefriends.org/en/xampp.html

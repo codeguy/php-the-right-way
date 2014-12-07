@@ -47,15 +47,17 @@ available as `__call()` and `__callStatic()`.
 
 * [Read about Magic Methods][magic-methods]
 * [Read about Reflection][reflection]
+* [Read about Overloading][overloading]
 
-[namespaces]: http://php.net/language.namespaces
-[overloading]: http://php.net/language.oop5.overloading
+
 [oop]: http://php.net/language.oop5
+[traits]: http://php.net/language.oop5.traits
 [anonymous-functions]: http://php.net/functions.anonymous
 [closure-class]: http://php.net/class.closure
+[closures-rfc]: https://wiki.php.net/rfc/closures
 [callables]: http://php.net/language.types.callable
+[call-user-func-array]: http://php.net/function.call-user-func-array
 [magic-methods]: http://php.net/language.oop5.magic
 [reflection]: http://php.net/intro.reflection
-[traits]: http://php.net/language.oop5.traits
-[call-user-func-array]: http://php.net/function.call-user-func-array
-[closures-rfc]: https://wiki.php.net/rfc/closures
+[overloading]: http://php.net/language.oop5.overloading
+

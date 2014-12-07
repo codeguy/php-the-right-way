@@ -15,18 +15,18 @@ same drivers. You'll need to learn a brand new API for each database &mdash; and
 
 ## MySQL Extension
 
-The [mysql] extension for PHP is no longer in active development, and is [officially deprecated as of PHP 5.5.0],
-meaning that it will be removed within the next few releases. If you are using any functions that start with `mysql_*`
-such as `mysql_connect()` and `mysql_query()` in your applications then these will simply not be available in later
-versions of PHP. This means you will be faced with a rewrite at some point down the line, so the best option is to
-replace mysql usage with [mysqli] or [PDO] in your applications within your own development schedules so you won't be
-rushed later on.
+The [mysql] extension for PHP is no longer in active development, and is [officially deprecated as of PHP 5.5.0]
+[mysql_deprecated], meaning that it will be removed within the next few releases. If you are using any functions that
+start with `mysql_*` such as `mysql_connect()` and `mysql_query()` in your applications then these will simply not be
+available in later versions of PHP. This means you will be faced with a rewrite at some point down the line, so the
+best option is to replace mysql usage with [mysqli] or [PDO] in your applications within your own development schedules
+so you won't be rushed later on.
 
 **If you are starting from scratch then absolutely do not use the [mysql] extension: use the [MySQLi extension][mysqli],
 or use [PDO].**
 
-* [PHP: Choosing an API for MySQL](http://php.net/mysqlinfo.api.choosing)
-* [PDO Tutorial for MySQL Developers](http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers)
+* [PHP: Choosing an API for MySQL][mysql_api]
+* [PDO Tutorial for MySQL Developers][pdo4mysql_devs]
 
 ## PDO Extension
 
@@ -66,10 +66,9 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
 This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
-heartbeat, using a practice called [SQL Injection](http://wiki.hashphp.org/Validation). Just imagine if a hacker
-passes in an inventive `id` parameter by calling a URL like `http://domain.com/?id=1%3BDELETE+FROM+users`. This will
-set the `$_GET['id']` variable to `1;DELETE FROM users` which will delete all of your users! Instead, you should
-sanitize the ID input using PDO bound parameters.
+heartbeat, using a practice called [SQL Injection]. Just imagine if a hacker passes in an inventive `id` parameter by
+calling a URL like `http://domain.com/?id=1%3BDELETE+FROM+users`. This will set the `$_GET['id']` variable to `1;DELETE
+FROM users` which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
 
 {% highlight php %}
 <?php
@@ -92,10 +91,13 @@ unless of course you are using persistent connections.
 
 * [Learn about PDO connections]
 
+
+[mysql_deprecated]: http://php.net/migration55.deprecated
+[mysql_api]: http://php.net/mysqlinfo.api.choosing
+[pdo4mysql_devs]: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers
+[SQL Injection]: http://wiki.hashphp.org/Validation
 [Learn about PDO]: http://php.net/book.pdo
 [Learn about PDO connections]: http://php.net/pdo.connections
-[officially deprecated as of PHP 5.5.0]: http://php.net/migration55.deprecated
-[SQL Injection]: http://wiki.hashphp.org/Validation
 
 [pdo]: http://php.net/pdo
 [mysql]: http://php.net/mysql

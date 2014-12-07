@@ -58,6 +58,6 @@ Hello, world
 [cli-options]: http://php.net/features.commandline.options
 [argc]: http://php.net/reserved.variables.argc
 [argv]: http://php.net/reserved.variables.argv
+[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
 [php-cli]: http://php.net/features.commandline
 [php-cli-windows]: http://php.net/install.windows.commandline
-[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
