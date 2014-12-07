@@ -361,7 +361,6 @@ return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
 
 // vs
 
-<?php
 $a = 3;
 return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
 {% endhighlight %}
