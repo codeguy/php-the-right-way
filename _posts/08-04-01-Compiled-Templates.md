@@ -20,7 +20,7 @@ when proper caching is used.
 
 Using the [Twig](http://twig.sensiolabs.org/) library.
 
-{% highlight text %}
+{% highlight html+jinja %}
 {% raw %}
 {% include 'header.html' with {'title': 'User Profile'} %}
 
@@ -35,7 +35,7 @@ Using the [Twig](http://twig.sensiolabs.org/) library.
 
 Using the [Twig](http://twig.sensiolabs.org/) library.
 
-{% highlight text %}
+{% highlight html+jinja %}
 {% raw %}
 // template.html
 
@@ -54,7 +54,7 @@ Using the [Twig](http://twig.sensiolabs.org/) library.
 {% endraw %}
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight html+jinja %}
 {% raw %}
 // user_profile.html
 
