@@ -6,20 +6,20 @@ anchor: databases
 # Databases {#databases_title}
 
 Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysqli], [pgsql], [mssql], etc. 
+with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysqli], [pgsql], [mssql], etc.
 
-Native drivers are great if you are only using _one_ database in your application, but if, for example, you are using 
+Native drivers are great if you are only using _one_ database in your application, but if, for example, you are using
 MySQL and a little bit of MSSQL, or you need to connect to an Oracle database, then you will not be able to use the same
 drivers. You'll need to learn a brand new API for each database &mdash; and that can get silly.
 
-## MySQL Extension 
+## MySQL Extension
 
-The [mysql] extension for PHP is no longer in active development, and is [officially deprecated as of PHP 5.5.0], 
+The [mysql] extension for PHP is no longer in active development, and is [officially deprecated as of PHP 5.5.0],
 meaning that it will be removed within the next few releases. If you are using any functions that start with `mysql_*`
 such as `mysql_connect()` and `mysql_query()` in your applications then these will simply not be available in later
-versions of PHP. This means you will be faced with a rewrite at some point down the line, so the best option is to 
+versions of PHP. This means you will be faced with a rewrite at some point down the line, so the best option is to
 replace mysql usage with [mysqli] or [PDO] in your applications within your own development schedules so you won't be
-rushed later on. 
+rushed later on.
 
 **If you are starting from scratch then absolutely do not use the [mysql] extension: use the [MySQLi extension][mysqli], or use [PDO].**
 
@@ -32,6 +32,7 @@ rushed later on.
 many different databases. For example, you can use basically identical code to interface with MySQL or SQLite:
 
 {% highlight php %}
+<?php
 // PDO + MySQL
 $pdo = new PDO('mysql:host=example.com;dbname=database', 'user', 'password');
 $statement = $pdo->query("SELECT some\_field FROM some\_table");
