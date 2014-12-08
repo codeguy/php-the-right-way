@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor: components
+anchor:  components
 ---
 
 ## Components {#components_title}

@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor: user_groups
+anchor:  user_groups
 ---
 
 ## PHP User Groups {#user_groups_title}
