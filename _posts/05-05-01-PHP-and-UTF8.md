@@ -1,7 +1,7 @@
 ---
-title: Working with UTF-8
+title:   Working with UTF-8
 isChild: true
-anchor: php_and_utf8
+anchor:  php_and_utf8
 ---
 
 ## Working with UTF-8 {#php_and_utf8_title}

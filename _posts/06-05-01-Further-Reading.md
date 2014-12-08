@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor: further_reading
+anchor:  further_reading
 ---
 
 ## Further Reading {#further_reading_title}

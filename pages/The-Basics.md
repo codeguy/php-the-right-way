@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The Basics
+title:  The Basics
 ---
 
 # The Basics

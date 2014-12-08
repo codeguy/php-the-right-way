@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor: date_and_time
+anchor:  date_and_time
 ---
 
 ## Date and Time {#date_and_time_title}

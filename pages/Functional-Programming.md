@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Functional Programming in PHP
+title:  Functional Programming in PHP
 ---
 
 # Functional Programming in PHP
@@ -81,6 +81,7 @@ defined to capture variables in scope and access them later when the anonymous f
 * [Read about Anonymous functions][anonymous-functions]
 * [More details in the Closures RFC][closures-rfc]
 * [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
+
 
 [anonymous-functions]: http://php.net/functions.anonymous
 [closures-rfc]: https://wiki.php.net/rfc/closures
