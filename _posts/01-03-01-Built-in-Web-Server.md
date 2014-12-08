@@ -12,4 +12,4 @@ With PHP 5.4 or newer, you can start learning PHP without installing and configu
 
 * [Learn about the built-in, command line web server][cli-server]
 
-[cli-server]: http://www.php.net/manual/en/features.commandline.webserver.php
+[cli-server]: http://php.net/features.commandline.webserver

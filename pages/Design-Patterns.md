@@ -196,7 +196,7 @@ add new output types without affecting the client code.
 
 You will see how each concrete 'output' class implements an OutputInterface - this serves two purposes, primarily it
 provides a simple contract which must be obeyed by any new concrete implementations. Secondly by implementing a common
-interface you will see in the next section that you can now utilise [Type Hinting](http://php.net/manual/en/language.oop5.typehinting.php) to ensure that the client which is utilising these behaviours is of the correct type in
+interface you will see in the next section that you can now utilise [Type Hinting](http://php.net/language.oop5.typehinting) to ensure that the client which is utilising these behaviours is of the correct type in
 this case 'OutputInterface'.
 
 The next snippet of code outlines how a calling client class might use one of these algorithms and even better set the
