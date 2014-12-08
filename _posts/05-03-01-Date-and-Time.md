@@ -59,5 +59,5 @@ foreach ($periodIterator as $date) {
 * [Read about DateTime][datetime]
 * [Read about date formatting][dateformat] (accepted date format string options)
 
-[datetime]: http://www.php.net/manual/book.datetime.php
-[dateformat]: http://www.php.net/manual/function.date.php
+[datetime]: http://php.net/book.datetime
+[dateformat]: http://php.net/function.date

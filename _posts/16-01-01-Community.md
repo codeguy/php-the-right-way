@@ -26,7 +26,7 @@ The PHP community also hosts larger regional and national conferences in many co
 
 [Find a PHP Conference][php-conf]
 
-[php-calendar]: http://www.php.net/cal.php
+[php-calendar]: http://php.net/cal.php
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: http://www.meetup.com/find/
 [php-ug]: http://php.ug/

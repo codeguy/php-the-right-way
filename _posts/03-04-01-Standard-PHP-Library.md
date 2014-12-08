@@ -10,4 +10,4 @@ The Standard PHP Library (SPL) is packaged with PHP and provides a collection of
 
 * [Read about the SPL][spl]
 
-[spl]: http://php.net/manual/en/book.spl.php 
+[spl]: http://php.net/book.spl

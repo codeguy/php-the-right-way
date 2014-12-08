@@ -33,8 +33,8 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 }
 {% endhighlight %}
 
-* [Comparison operators](http://php.net/manual/en/language.operators.comparison.php)
-* [Comparison table](http://php.net/manual/en/types.comparisons.php)
+* [Comparison operators](http://php.net/language.operators.comparison)
+* [Comparison table](http://php.net/types.comparisons)
 
 ## Conditional statements
 
@@ -66,7 +66,7 @@ function test($a)
 }
 {% endhighlight %}
 
-* [If statements](http://php.net/manual/en/control-structures.if.php)
+* [If statements](http://php.net/control-structures.if)
 
 ### Switch statements
 
@@ -99,7 +99,7 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch statements](http://php.net/manual/en/control-structures.switch.php)
+* [Switch statements](http://php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
 ## Global namespace
@@ -124,8 +124,8 @@ function array()
 }
 {% endhighlight %}
 
-* [Global space](http://php.net/manual/en/language.namespaces.global.php)
-* [Global rules](http://php.net/manual/en/userlandnaming.rules.php)
+* [Global space](http://php.net/language.namespaces.global)
+* [Global rules](http://php.net/userlandnaming.rules)
 
 ## Strings
 
@@ -149,7 +149,7 @@ $a = 'Multi-line example'      // concatenation operator (.)
     . 'of what to do';
 {% endhighlight %}
 
-* [String Operators](http://php.net/manual/en/language.operators.string.php)
+* [String Operators](http://php.net/language.operators.string)
 
 ### String types
 
@@ -177,7 +177,7 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
  */
 {% endhighlight %}
 
-* [Single quote](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.single)
+* [Single quote](http://php.net/language.types.string#language.types.string.syntax.single)
 
 #### Double quotes
 
@@ -227,7 +227,7 @@ $juice = array('apple', 'orange', 'plum');
 echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 {% endhighlight %}
 
-* [Double quotes](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.double)
+* [Double quotes](http://php.net/language.types.string#language.types.string.syntax.double)
 
 #### Nowdoc syntax
 
@@ -253,7 +253,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  */
 {% endhighlight %}
 
-* [Nowdoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc)
+* [Nowdoc syntax](http://php.net/language.types.string#language.types.string.syntax.nowdoc)
 
 #### Heredoc syntax
 
@@ -281,7 +281,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  */
 {% endhighlight %}
 
-* [Heredoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc)
+* [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
 ### Which is quicker? 
 
@@ -380,7 +380,7 @@ Another example is the snippet below which will return true if ($a != 3 AND $b !
 return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
-* [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
+* [Ternary operators](http://php.net/language.operators.comparison)
 
 ## Variable declarations
 

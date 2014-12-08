@@ -18,7 +18,7 @@ Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4]
 * [Propel][7]
 * [ZF2 Db][4]
 
-[1]: http://www.php.net/manual/en/book.pdo.php
+[1]: http://php.net/book.pdo
 [2]: http://www.doctrine-project.org/projects/dbal.html
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [6]: https://github.com/auraphp/Aura.Sql

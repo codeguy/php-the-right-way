@@ -16,10 +16,10 @@ As of PHP 5.5, there is a built-in opcode cache called [OPcache][opcache-book]. 
 Read more about opcode caches:
 
 * [OPcache][opcache-book] (built-in since PHP 5.5)
-* [APC](http://php.net/manual/en/book.apc.php) (PHP 5.4 and earlier)
+* [APC](http://php.net/book.apc) (PHP 5.4 and earlier)
 * [XCache](http://xcache.lighttpd.net/)
 * [Zend Optimizer+](http://www.zend.com/products/server/) (part of Zend Server package)
 * [WinCache](http://www.iis.net/download/wincacheforphp) (extension for MS Windows Server)
 * [list of PHP accelerators on Wikipedia](http://en.wikipedia.org/wiki/List_of_PHP_accelerators)
 
-[opcache-book]: http://php.net/manual/en/book.opcache.php
+[opcache-book]: http://php.net/book.opcache

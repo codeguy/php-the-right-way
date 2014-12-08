@@ -23,7 +23,7 @@ rushed later on.
 
 **If you are starting from scratch then absolutely do not use the [mysql] extension: use the [MySQLi extension][mysqli], or use [PDO].**
 
-* [PHP: Choosing an API for MySQL](http://php.net/manual/en/mysqlinfo.api.choosing.php)
+* [PHP: Choosing an API for MySQL](http://php.net/mysqlinfo.api.choosing)
 * [PDO Tutorial for MySQL Developers](http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers)
 
 ## PDO Extension
@@ -87,9 +87,9 @@ unless of course you are using persistent connections.
 
 * [Learn about PDO connections]
 
-[Learn about PDO]: http://www.php.net/manual/en/book.pdo.php
-[Learn about PDO connections]: http://php.net/manual/en/pdo.connections.php
-[officially deprecated as of PHP 5.5.0]: http://php.net/manual/en/migration55.deprecated.php
+[Learn about PDO]: http://php.net/book.pdo
+[Learn about PDO connections]: http://php.net/pdo.connections
+[officially deprecated as of PHP 5.5.0]: http://php.net/migration55.deprecated
 [SQL Injection]: http://wiki.hashphp.org/Validation
 
 [pdo]: http://php.net/pdo
