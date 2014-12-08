@@ -10,12 +10,12 @@ many date and time related functions in PHP besides DateTime, but it provides ni
 common uses. It can handle time zones, but that is outside this short introduction.
 
 To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
-or do `new \DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
+or do `new DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
 output.
 {% highlight php %}
 <?php
 $raw = '22. 11. 1968';
-$start = \DateTime::createFromFormat('d. m. Y', $raw);
+$start = DateTime::createFromFormat('d. m. Y', $raw);
 
 echo 'Start date: ' . $start->format('Y-m-d') . "\n";
 {% endhighlight %}
@@ -28,7 +28,7 @@ the `diff()` method. It will return new DateInterval, which is super easy to dis
 <?php
 // create a copy of $start and add one month and 6 days
 $end = clone $start;
-$end->add(new \DateInterval('P1M6D'));
+$end->add(new DateInterval('P1M6D'));
 
 $diff = $end->diff($start);
 echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
@@ -48,8 +48,8 @@ DateTime objects, start and end, and the interval for which it will return all e
 {% highlight php %}
 <?php
 // output all thursdays between $start and $end
-$periodInterval = \DateInterval::createFromDateString('first thursday');
-$periodIterator = new \DatePeriod($start, $periodInterval, $end, \DatePeriod::EXCLUDE_START_DATE);
+$periodInterval = DateInterval::createFromDateString('first thursday');
+$periodIterator = new DatePeriod($start, $periodInterval, $end, DatePeriod::EXCLUDE_START_DATE);
 foreach ($periodIterator as $date) {
     // output each date in the period
     echo $date->format('Y-m-d') . ' ';
