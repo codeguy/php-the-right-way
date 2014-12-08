@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor: plain_php_templates
+anchor:  plain_php_templates
 ---
 
 ## Plain PHP Templates {#plain_php_templates_title}
@@ -12,13 +12,12 @@ code editors already have PHP syntax highlighting and auto-completion built-in. 
 very fast as no compiling stage is required.
 
 Every modern PHP framework employs some kind of template system, most of which use plain PHP by default. Outside of
-frameworks, libraries like [Plates](http://platesphp.com/) or [Aura.View](https://github.com/auraphp/Aura.View) make
-working with plain PHP templates easier by offering modern template functionality such as inheritance, layouts and
-extensions.
+frameworks, libraries like [Plates][plates] or [Aura.View][aura] make working with plain PHP templates easier by
+offering modern template functionality such as inheritance, layouts and extensions.
 
 ### Simple example of a plain PHP template
 
-Using the [Plates](http://platesphp.com/) library.
+Using the [Plates][plates] library.
 
 {% highlight php %}
 <?php // user_profile.php ?>
@@ -33,7 +32,7 @@ Using the [Plates](http://platesphp.com/) library.
 
 ### Example of plain PHP templates using inheritance
 
-Using the [Plates](http://platesphp.com/) library.
+Using the [Plates][plates] library.
 
 {% highlight php %}
 <?php // template.php ?>
@@ -60,3 +59,7 @@ Using the [Plates](http://platesphp.com/) library.
 <h1>User Profile</h1>
 <p>Hello, <?=$this->escape($name)?></p>
 {% endhighlight %}
+
+
+[plates]: http://platesphp.com/
+[aura]: https://github.com/auraphp/Aura.View
