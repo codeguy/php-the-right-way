@@ -1,5 +1,5 @@
 ---
-title: Errors and Exceptions
+title:  Errors and Exceptions
 anchor: errors_and_exceptions
 ---
 
