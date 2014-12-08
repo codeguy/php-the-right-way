@@ -13,7 +13,9 @@ There are already a lot of PHP libraries that are compatible with Composer, read
 
 You can install Composer locally (in your current working directory; though this is no longer recommended) or globally (e.g. /usr/local/bin). Let's assume you want to install Composer locally. From your project's root directory:
 
-    curl -s https://getcomposer.org/installer | php
+{% highlight console %}
+curl -s https://getcomposer.org/installer | php
+{% endhighlight %}
 
 This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the code online first to confirm it is safe.
 
@@ -32,26 +34,34 @@ Manually installing Composer is an advanced technique; however, there are variou
 
 Since a manual installation performs none of these checks, you have to decide whether the trade-off is worth it for you. As such, below is how to obtain Composer manually:
 
-    curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
-    chmod +x $HOME/local/bin/composer
+{% highlight console %}
+curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
+chmod +x $HOME/local/bin/composer
+{% endhighlight %}
 
 The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment variable. This will result in a `composer` command being available.
 
 When you come across documentation that states to run Composer as `php composer.phar install`, you can substitute that with:
 
-    composer install
-    
+{% highlight console %}
+composer install
+{% endhighlight %}
+
 This section will assume you have installed composer globally.
 
 ### How to Define and Install Dependencies
 
 Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it by hand if you like, or use Composer itself. The `composer require` command adds a project dependency and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig][2] as a dependency of your project.
 
-	composer require twig/twig:~1.8
+{% highlight console %}
+composer require twig/twig:~1.8
+{% endhighlight %}
 
 Alternatively the `composer init` command will guide you through creating a full `composer.json` file for your project. Either way, once you've created your `composer.json` file you can tell Composer to download and install your dependencies into the `vendor/` directory. This also applies to projects you've downloaded that already provide a `composer.json` file:
 
-    composer install
+{% highlight console %}
+composer install
+{% endhighlight %}
 
 Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's autoloader for your project dependencies.
 

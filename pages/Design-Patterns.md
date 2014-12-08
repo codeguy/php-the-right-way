@@ -203,7 +203,6 @@ The next snippet of code outlines how a calling client class might use one of th
 behaviour required at runtime:
 {% highlight php %}
 <?php
-
 class SomeClient
 {
     private $output;
@@ -225,7 +224,6 @@ once this property is set a call to loadOutput() will call the load() method in 
 that has been set.
 {% highlight php %}
 <?php
-
 $client = new SomeClient();
 
 // Want an array?

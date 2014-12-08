@@ -17,7 +17,6 @@ Below we hash a string, and then check the hash against a new string. Because ou
 
 {% highlight php %}
 <?php
-                      
 require 'password.php';
 
 $passwordHash = password_hash('secret-password', PASSWORD_DEFAULT);

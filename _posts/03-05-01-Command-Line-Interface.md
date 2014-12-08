@@ -11,7 +11,7 @@ CLI PHP programs are powerful because you can use your app's code directly witho
 
 Try running PHP from your command line:
 
-{% highlight bash %}
+{% highlight console %}
 > php -i
 {% endhighlight %}
 
@@ -37,7 +37,7 @@ The `exit()` expression is used with a non-zero number to let the shell know tha
 
 To run our script, above, from the command line:
 
-{% highlight bash %}
+{% highlight console %}
 > php hello.php
 Usage: php hello.php [name]
 > php hello.php world
