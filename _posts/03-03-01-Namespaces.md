@@ -28,6 +28,7 @@ to look into PSR-4.
 * [Read about PSR-0][psr0]
 * [Read about PSR-4][psr4]
 
+
 [namespaces]: http://php.net/language.namespaces
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md

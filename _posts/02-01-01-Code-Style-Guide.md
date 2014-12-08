@@ -39,6 +39,7 @@ performance, meaning real-time editor fixing is more fluid.
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
 readable by all current and future parties who may be working on the codebase.
 
+
 [fig]: http://www.php-fig.org/
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md

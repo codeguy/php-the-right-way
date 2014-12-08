@@ -35,6 +35,7 @@ The solutions listed above mainly handle PHP itself, and do not supply things li
 "All-in-one" solutions such as [MAMP][mamp-downloads] and [XAMPP][xampp] will install these other bits of software for
 you and tie them all together, but ease of setup comes with a trade-off of flexibility.
 
+
 [Homebrew]: http://brew.sh/
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
 [phpbrew]: https://github.com/phpbrew/phpbrew

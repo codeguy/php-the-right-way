@@ -11,8 +11,8 @@ dependencies. Even if you managed them manually, you still had to worry about au
 Currently there are two major package management systems for PHP - Composer and PEAR. Which one is right for you? The
 answer is both.
 
- * Use **Composer** when managing dependencies for a single project.
- * Use **PEAR** when managing dependencies for PHP as a whole on your system.
+* Use **Composer** when managing dependencies for a single project.
+* Use **PEAR** when managing dependencies for PHP as a whole on your system.
 
 In general, Composer packages will be available only in the projects that you explicitly specify whereas a PEAR package
 would be available to all of your PHP projects. While PEAR might sound like the easier approach at first glance, there

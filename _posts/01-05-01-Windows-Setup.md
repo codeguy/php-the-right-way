@@ -19,6 +19,7 @@ can use [phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and
 FastCGI built in and ready to go, you just need to configure PHP as a handler. For support and additional resources
 there is a [dedicated area on iis.net][php-iis] for PHP.
 
+
 [php-downloads]: http://windows.php.net
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
 [zsce]: http://www.zend.com/en/products/server-ce/

@@ -114,10 +114,10 @@ file and tell you if you need to update any of your dependencies.
 
 * [Learn about Composer][5]
 
+
 [1]: http://packagist.org/
 [2]: http://twig.sensiolabs.org
 [3]: https://www.versioneye.com/
 [4]: https://security.sensiolabs.org/
 [5]: http://getcomposer.org/doc/00-intro.md
 [6]: https://getcomposer.org/Composer-Setup.exe
-
