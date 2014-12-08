@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://www.phptherightway.com/index.html</loc>
-        <lastmod>2012-07-07T01:00:00-05:00</lastmod>
+        <lastmod>2014-12-09T00:00:00-05:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1</priority>
+    </url>
+    <url>
+        <loc>http://www.phptherightway.com/pages/The-Basics.html</loc>
+        <lastmod>2014-12-09T00:00:00-05:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.phptherightway.com/pages/Functional-Programming.html</loc>
+        <lastmod>2014-12-09T00:00:00-05:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://www.phptherightway.com/pages/Design-Patterns.html</loc>
+        <lastmod>2014-12-09T00:00:00-05:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>http://www.phptherightway.com/banners.html</loc>
