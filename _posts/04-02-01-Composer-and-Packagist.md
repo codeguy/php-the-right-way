@@ -22,7 +22,8 @@ curl -s https://getcomposer.org/installer | php
 {% endhighlight %}
 
 This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project
-dependencies. <strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the
+dependencies.
+<strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the
 code online first to confirm it is safe.
 
 #### Installing on Windows

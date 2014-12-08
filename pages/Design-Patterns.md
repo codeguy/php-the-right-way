@@ -134,11 +134,11 @@ var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
 The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
 Note the following:
 
-* The constructor [`__construct`](http://php.net/language.oop5.decon#object.construct) is declared as protected to
+* The constructor [`__construct()`](http://php.net/language.oop5.decon#object.construct) is declared as protected to
 prevent creating a new instance outside of the class via the `new` operator.
-* The magic method [`__clone`](http://php.net/language.oop5.cloning#object.clone) is declared as private to prevent
+* The magic method [`__clone()`](http://php.net/language.oop5.cloning#object.clone) is declared as private to prevent
 cloning of an instance of the class via the [`clone`](http://php.net/language.oop5.cloning) operator.
-* The magic method [`__wakeup`](http://php.net/language.oop5.magic#object.wakeup) is declared as private to prevent
+* The magic method [`__wakeup()`](http://php.net/language.oop5.magic#object.wakeup) is declared as private to prevent
 unserializing of an instance of the class via the global function [`unserialize()`](http://php.net/function.unserialize)
 .
 * A new instance is created via [late static binding](http://php.net/language.oop5.late-static-bindings) in the static

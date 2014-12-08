@@ -36,7 +36,7 @@ can be used interchangeably with anonymous functions in almost all cases.
 * [Read about the Closure class][closure-class]
 * [More details in the Closures RFC][closures-rfc]
 * [Read about Callables][callables]
-* [Read about dynamically invoking functions with `call_user_func_array`][call-user-func-array]
+* [Read about dynamically invoking functions with `call_user_func_array()`][call-user-func-array]
 
 ### Meta Programming
 

@@ -17,7 +17,7 @@ Try running PHP from your command line:
 > php -i
 {% endhighlight %}
 
-The `-i` option will print your PHP configuration just like the [`phpinfo`][phpinfo] function.
+The `-i` option will print your PHP configuration just like the [`phpinfo()`][phpinfo] function.
 
 The `-a` option provides an interactive shell, similar to ruby's IRB or python's interactive shell. There are a number
 of other useful [command line options][cli-options], too.
@@ -39,7 +39,7 @@ variable containing the argument *count* and [`$argv`][argv] is an array variabl
 The first argument is always the name of your PHP script file, in this case `hello.php`.
 
 The `exit()` expression is used with a non-zero number to let the shell know that the command failed. Commonly used
-exit codes can be found [here][exit-codes]
+exit codes can be found [here][exit-codes].
 
 To run our script, above, from the command line:
 
@@ -54,10 +54,11 @@ Hello, world
  * [Learn about running PHP from the command line][php-cli]
  * [Learn about setting up Windows to run PHP from the command line][php-cli-windows]
 
+
 [phpinfo]: http://php.net/function.phpinfo
 [cli-options]: http://php.net/features.commandline.options
 [argc]: http://php.net/reserved.variables.argc
 [argv]: http://php.net/reserved.variables.argv
-[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
+[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&amp;topic=sysexits
 [php-cli]: http://php.net/features.commandline
 [php-cli-windows]: http://php.net/install.windows.commandline
