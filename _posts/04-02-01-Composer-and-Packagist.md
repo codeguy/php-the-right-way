@@ -49,7 +49,7 @@ Composer keeps track of your project's dependencies in a file called `composer.j
 
 	composer require twig/twig:~1.8
 
-Alternatively the `composer init` command will guide you through creating a full `composer.json` file for your project. Either way, once you've created your `composer.json` file you can tell Composer to download and install your dependencies into the `vendors/` directory. This also applies to projects you've downloaded that already provide a `composer.json` file:
+Alternatively the `composer init` command will guide you through creating a full `composer.json` file for your project. Either way, once you've created your `composer.json` file you can tell Composer to download and install your dependencies into the `vendor/` directory. This also applies to projects you've downloaded that already provide a `composer.json` file:
 
     composer install
 
