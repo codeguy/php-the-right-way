@@ -42,7 +42,7 @@ That is a good start. Put those two items in two different files and you've got 
 
 Create a class to place that method in and you have a "Model". Create a simple `.php` file to put the presentation
 logic in and you have a "View", which is very nearly [MVC] - a common OOP architecture for most
-[frameworks](/#frameworks_title).
+[frameworks](/#frameworks).
 
 **foo.php**
 
