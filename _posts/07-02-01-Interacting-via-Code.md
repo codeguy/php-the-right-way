@@ -54,7 +54,10 @@ $db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'pa
 include 'models/FooModel.php';
 
 // Create an instance
-$fooList = new FooModel($db);
+$foo = new FooModel($db);
+
+// Call method to retrieve results
+$fooList = $foo->getAllFoos();
 
 // Show the view
 include 'views/foo-list.php';
