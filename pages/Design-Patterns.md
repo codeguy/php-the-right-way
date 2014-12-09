@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  Design Patterns
+sitemap: true
 ---
 
 # Design Patterns

@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  The Basics
+sitemap: true
 ---
 
 # The Basics
@@ -283,7 +284,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 * [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
-### Which is quicker? 
+### Which is quicker?
 
 There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
 fundamentally not true.

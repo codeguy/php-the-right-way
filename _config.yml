@@ -1,4 +1,3 @@
-safe: true
 baseurl: /
 url: http://localhost:4000
 
@@ -11,3 +10,15 @@ maruku:
     png_engine: blahtex
     png_dir:    images/latex
     png_url:    /images/latex
+
+gems:
+    - jekyll-sitemap
+
+defaults:
+    -
+      scope:
+          path: ""
+      values:
+          sitemap: false
+
+exclude: ['CNAME', 'CONTRIBUTING.md', 'LICENSE', 'README.md', 'pages/example.md']
