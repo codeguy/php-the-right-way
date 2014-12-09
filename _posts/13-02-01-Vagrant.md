@@ -5,7 +5,7 @@ anchor:  vagrant
 
 ## Vagrant {#vagrant_title}
 
-[Vagrant] helps you building your virtual boxes on top of the known virtual environments and will configure these
+[Vagrant] helps you build your virtual boxes on top of the known virtual environments and will configure these
 environments based on a single configuration file. These boxes can be set up manually, or you can use "provisioning"
 software such as [Puppet] or [Chef] to do this for you. Provisioning the base box is a great way to ensure that
 multiple boxes are set up in an identical fashion and removes the need for you to maintain complicated "set up"
