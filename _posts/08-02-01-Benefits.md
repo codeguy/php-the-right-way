@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor: templating_benefits
+anchor:  templating_benefits
 ---
 
 ## Benefits {#templating_benefits_title}

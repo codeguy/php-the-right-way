@@ -109,3 +109,4 @@ All content is completely free now, and always will be.
 3. Wrap all text to 120 characters
 4. Code samples should adhere to PSR-1 or higher
 5. Use [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) for all content
+6. Use language agnostic urls when refering to external websites such as the [php.net](http://php.net/urlhowto.php) manual
