@@ -73,7 +73,7 @@ one instance of a particular class. The singleton pattern enables us to do this.
 class Singleton
 {
     /**
-     * @static Singleton The reference to *Singleton* instance of this class
+     * @var Singleton The reference to *Singleton* instance of this class
      */
     private static $instance;
     
