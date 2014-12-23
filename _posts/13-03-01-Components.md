@@ -18,6 +18,13 @@ isChild: true
   [fuelval]: https://github.com/fuelphp/validation
 
 * [Aura](http://auraphp.github.com/)
-* [FuelPHP (2.0 only)](https://github.com/fuelphp)
-* [Laravel's "Illuminate Components"](https://github.com/illuminate)
+* [FuelPHP](https://github.com/fuelphp)
 * [Symfony Components](http://symfony.com/doc/current/components/index.html)
+* [The League of Extraordinary Packages](http://thephpleague.com/)
+* Laravel's Illuminate Components
+    * [Eloquent ORM](https://github.com/illuminate/database)
+    * [Queue](https://github.com/illuminate/queue)
+
+_Laravel 의 [Illuminate 컴포넌트](https://github.com/illuminate)는 
+Laravel 프레임워크로부터 좀더 디커플링 될 것입니다. 현재로서는 위에 언급된 것들만이 Laravel 
+프레임워크로부터 가장 잘 디커플링 되어 있는 컴포넌트들입니다._
