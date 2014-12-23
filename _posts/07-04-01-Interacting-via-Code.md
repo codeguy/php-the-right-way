@@ -88,7 +88,7 @@ class Foo()
 <?php endforeach ?>
 {% endhighlight %}
 
-This is essentially the same as what most modern frameworks are doing, all be it a little more manual. You might not
+This is essentially the same as what most modern frameworks are doing, albeit a little more manual. You might not
 need to do all of that every time, but mixing together too much presentation logic and database interaction can be a
 real problem if you ever want to [unit-test](/#unit-testing) your application.
 
