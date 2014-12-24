@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor: object_caching
+anchor:  object_caching
 ---
 
 ## Object Caching {#object_caching_title}
@@ -16,17 +16,17 @@ advantage of them. APCu, XCache, and WinCache all provide APIs to save data from
 
 The most commonly used memory object caching systems are APCu and memcached. APCu is an excellent choice for object
 caching, it includes a simple API for adding your own data to its memory cache and is very easy to setup and use. The
-one real limitation of APCu is that it is tied to the server it's installed on. Memcached on the other hand is installed
-as a separate service and can be accessed across the network, meaning that you can store objects in a hyper-fast data
-store in a central location and many different systems can pull from it.
+one real limitation of APCu is that it is tied to the server it's installed on. Memcached on the other hand is
+installed as a separate service and can be accessed across the network, meaning that you can store objects in a
+hyper-fast data store in a central location and many different systems can pull from it.
 
-Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own
-cache, i.e. APCu data is not shared between your worker processes. In these cases, you might want to consider using
-memcached instead, as it's not tied to the PHP processes.
+Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own cache,
+i.e. APCu data is not shared between your worker processes. In these cases, you might want to consider using memcached
+instead, as it's not tied to the PHP processes.
 
-In a networked configuration APCu will usually outperform memcached in terms of access speed, but memcached will be able
-to scale up faster and further. If you do not expect to have multiple servers running your application, or do not need
-the extra features that memcached offers then APCu is probably your best choice for object caching.
+In a networked configuration APCu will usually outperform memcached in terms of access speed, but memcached will be
+able to scale up faster and further. If you do not expect to have multiple servers running your application, or do not
+need the extra features that memcached offers then APCu is probably your best choice for object caching.
 
 Example logic using APCu:
 
@@ -45,11 +45,11 @@ print_r($data);
 Note that prior to PHP 5.5, APC provides both an object cache and a bytecode cache. APCu is a project to bring APC's
 object cache to PHP 5.5+, since PHP now has a built-in bytecode cache (OPcache).
 
-Learn more about popular object caching systems:
+### Learn more about popular object caching systems:
 
 * [APCu](https://github.com/krakjoe/apcu)
-* [APC Functions](http://php.net/manual/en/ref.apc.php)
+* [APC Functions](http://php.net/ref.apc)
 * [Memcached](http://memcached.org/)
 * [Redis](http://redis.io/)
 * [XCache APIs](http://xcache.lighttpd.net/wiki/XcacheApi)
-* [WinCache Functions](http://www.php.net/manual/en/ref.wincache.php)
+* [WinCache Functions](http://php.net/ref.wincache)

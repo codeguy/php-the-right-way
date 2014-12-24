@@ -2,7 +2,7 @@ safe: true
 baseurl: /
 url: http://localhost:4000
 
-pygments: true
+highlighter: pygments
 markdown: kramdown
 permalink: date
 maruku:
