@@ -14,13 +14,13 @@ MySQL or SQLite:
 <?php
 // PDO + MySQL
 $pdo = new PDO('mysql:host=example.com;dbname=database', 'user', 'password');
-$statement = $pdo->query("SELECT some\_field FROM some\_table");
+$statement = $pdo->query("SELECT some_field FROM some_table");
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 echo htmlentities($row['some_field']);
 
 // PDO + SQLite
 $pdo = new PDO('sqlite:/path/db/foo.sqlite');
-$statement = $pdo->query("SELECT some\_field FROM some\_table");
+$statement = $pdo->query("SELECT some_field FROM some_table");
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 echo htmlentities($row['some_field']);
 {% endhighlight %}
