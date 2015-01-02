@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor: design_patterns
+anchor:  design_patterns
 ---
 
 ## Design Patterns {#design_patterns_title}
