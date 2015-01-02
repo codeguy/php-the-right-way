@@ -18,7 +18,7 @@ there is a slight performance hit, however this is very minimal when proper cach
 
 Using the [Twig] library.
 
-{% highlight text %}
+{% highlight html+jinja %}
 {% raw %}
 {% include 'header.html' with {'title': 'User Profile'} %}
 
@@ -33,7 +33,7 @@ Using the [Twig] library.
 
 Using the [Twig] library.
 
-{% highlight text %}
+{% highlight html+jinja %}
 {% raw %}
 // template.html
 
@@ -52,7 +52,7 @@ Using the [Twig] library.
 {% endraw %}
 {% endhighlight %}
 
-{% highlight text %}
+{% highlight html+jinja %}
 {% raw %}
 // user_profile.html
 
