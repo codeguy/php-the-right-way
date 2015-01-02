@@ -18,7 +18,7 @@ and examples as they become available.
 
 ## Translations
 
-_PHP: The Right Way_ is (or soon will be) translated into many different languages:
+_PHP: The Right Way_ is translated into many different languages:
 
 * [English](http://www.phptherightway.com)
 * [Bulgarian](http://bg.phptherightway.com/)
