@@ -59,7 +59,7 @@ If you are interested in translating _PHP: The Right Way_, fork this repo on Git
 
 To avoid fragmentation and reader confusion, please choose one of these options:
 
-1. We link to your GitHub Pages fork with `[username].github.com/php-the-right-way`
+1. We link to your GitHub Pages fork with `[username].github.io/php-the-right-way`
 2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
 
 If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
