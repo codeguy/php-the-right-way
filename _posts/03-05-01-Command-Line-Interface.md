@@ -9,7 +9,7 @@ PHP was created to write web applications, but is also useful for scripting comm
 Command line PHP programs can help automate common tasks like testing, deployment, and application administrivia.
 
 CLI PHP programs are powerful because you can use your app's code directly without having to create and secure a web
-GUI for it. Just be sure not to put your CLI PHP scripts in your public web root!
+GUI for it. Just be sure **not** to put your CLI PHP scripts in your public web root!
 
 Try running PHP from your command line:
 
