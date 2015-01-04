@@ -1,6 +1,3 @@
-baseurl: /
-url: http://localhost:4000
-
 highlighter: pygments
 markdown: kramdown
 permalink: date
