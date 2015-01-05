@@ -1,3 +1,4 @@
+baseurl: /
 highlighter: pygments
 markdown: kramdown
 permalink: date
