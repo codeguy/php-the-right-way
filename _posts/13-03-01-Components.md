@@ -18,7 +18,7 @@ isChild: true
 
 예를 들면 [FuelPHP Validation package][fuelval]는 FuelPHP 프레임워크를 사용하지 않더라도 여러분의 프로젝트에서 사용할 수 있게 되어 있습니다. 이러한 프로젝트들은 재사용 가능한 컴포넌트들을 별도의 저장소에서 관리하고 있습니다.
 
-  [dm]: /#의존성_관리
+  [dm]: #의존성_관리
   [fuelval]: https://github.com/fuelphp/validation
 
 * [Aura](http://auraphp.github.com/)
