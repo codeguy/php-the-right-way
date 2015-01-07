@@ -10,4 +10,4 @@ However while advancing through the language, we often forget the basics that we
 of short cuts and/or bad habits. To help combat this common issue, this section is aimed at reminding coders of the
 basic coding practices within PHP.
 
-* Continue reading on [The Basics](/pages/The-Basics.html)
+* Continue reading on [The Basics](pages/The-Basics.html)
