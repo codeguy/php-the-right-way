@@ -21,10 +21,10 @@ interfaces, inheritance, constructors, cloning, exceptions, and more.
 
 PHP supports first-class function, meaning that a function can be assigned to a variable. Both user-defined and
 built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
-other functions (feature called Higher-order functions) and function can return other functions.
+other functions (a feature called _Higher-order Functions_) and function can return other functions.
 
-Recursion, a feature that allows a function to call itself, is supported by the language, but most of the PHP code
-focus on iteration.
+Recursion, a feature that allows a function to call itself, is supported by the language, but most PHP code
+is focused on iteration.
 
 New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
 
