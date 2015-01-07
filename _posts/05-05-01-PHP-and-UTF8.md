@@ -76,10 +76,14 @@ The historic approach to doing that was to include the [charset `<meta>` tag](ht
 <?php
 // Tell PHP that we're using UTF-8 strings until the end of the script
 mb_internal_encoding('UTF-8');
+$utf_set = ini_set('default_charset', 'utf-8');
+if (!$utf_set) {
+    throw new Exception('could not set default_charset to utf-8, please ensure it\'s set on your system!');
+}
 
 // Tell PHP that we'll be outputting UTF-8 to the browser
 mb_http_output('UTF-8');
-
+ 
 // Our UTF-8 test string
 $string = 'Êl síla erin lû e-govaned vîn.';
 
@@ -102,20 +106,28 @@ $link = new PDO(
 
 // Store our transformed string as UTF-8 in our database
 // Your DB and tables are in the utf8mb4 character set and collation, right?
-$handle = $link->prepare('insert into ElvishSentences (Id, Body) values (?, ?)');
-$handle->bindValue(1, 1, PDO::PARAM_INT);
-$handle->bindValue(2, $string);
+$handle = $link->prepare('insert into ElvishSentences (Id, Body, Priority) values (default, :body, :priority)');
+$handle->bindParam(':body', $string, PDO::PARAM_STR);
+$priority = 45;
+$handle->bindParam(':priority', $priority, PDO::PARAM_INT); // explicitly tell pdo to expect an int
 $handle->execute();
 
 // Retrieve the string we just stored to prove it was stored correctly
-$handle = $link->prepare('select * from ElvishSentences where Id = ?');
-$handle->bindValue(1, 1, PDO::PARAM_INT);
+$handle = $link->prepare('select * from ElvishSentences where Id = :id');
+$id = 7;
+$handle->bindParam(':id', $id, PDO::PARAM_INT);
 $handle->execute();
 
 // Store the result into an object that we'll output later in our HTML
+// This object won't kill your memory because it fetches the data Just-In-Time to
 $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 
-header('Content-Type: text/html; charset=UTF-8');
+// An example wrapper to allow you to escape data to html
+function escape_to_html($dirty){
+    echo htmlspecialchars($dirty, ENT_QUOTES, 'UTF-8');
+}
+
+header('Content-Type: text/html; charset=UTF-8'); // Unnecessary if your default_charset is set to utf-8 already
 ?><!doctype html>
 <html>
     <head>
@@ -125,7 +137,7 @@ header('Content-Type: text/html; charset=UTF-8');
     <body>
         <?php
         foreach($result as $row){
-            print($row->Body);  // This should correctly output our transformed UTF-8 string to the browser
+            escape_to_html($row->Body);  // This should correctly output our transformed UTF-8 string to the browser
         }
         ?>
     </body>
