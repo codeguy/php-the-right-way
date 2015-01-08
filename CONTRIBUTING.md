@@ -1,111 +1,109 @@
-# Contributing to PHP The Right Way
+# PHP The Right Way 프로젝트에 기여하기
 
-Enjoy [PHP The Right Way](http://phptherightway.com) and want to get 
-involved? Great! There are plenty of ways you can help out.
+이 문서는 프로젝트의 중심이라고 할 수 있는 영어판 PHP The Right Way 프로젝트에
+포함되어 있는 문서를 번역한 것이라서 영어판 프로젝트에 기여하는 방법을 설명하고 있습니다.
 
-Please take a moment to review this document in order to make the contribution
-process easy and effective for everyone involved.
+[PHP The Right Way](http://phptherightway.com) 를 즐기고 있습니까?
+참여하고 싶습니까? 좋습니다! 도움을 줄 수 있는 많은 방법이 있습니다.
 
-Following these guidelines helps to communicate that you respect the time of
-the developers managing and developing this open source project. In return,
-they should reciprocate that respect in addressing your issue or assessing
-patches and features.
+관련된 모두에게 쉽고 효과적인 프로젝트 기여 프로세스를 만들기 위해서 이 문서를 리뷰하는데에
+잠깐 시간을 내 주세요.
+
+이 문서에서 제시하는 가이드라인을 따라 주신다면, 이 오픈소스 프로젝트를 관리하고 개발하는 개발자들의
+시간을 존중해주는 것과 마찬가지입니다. 여러분이 올려준 이슈나 패치, 새 기능에 대해서 개발자들이
+검토할 때, 그런 존중에 대한 답례를 반드시 하게 될 것입니다.
 
 
-## Using the issue tracker
+## 이슈 트래커 사용하기
 
-The [issue tracker](https://github.com/codeguy/php-the-right-way/issues) is
-the preferred channel for changes: spelling mistakes, wording changes, new 
-content and generally [submitting pull requests](#pull-requests), but please 
-respect the following restrictions:
+[이슈 트래커](https://github.com/codeguy/php-the-right-way/issues)는 모든 
+변경 사항( 철자 오류, 표현 정정, 새로운 내용, 일반적인 [풀 리퀘스트](#pull-requests) 등)을
+교환하는데에 좋은 채널입니다. 하지만 아래의 규칙을 유념해 주십시오.
 
-* Please **do not** use the issue tracker for personal support requests (use
-  [Stack Overflow](http://stackoverflow.com/questions/tagged/php) or IRC).
+* 개인적인 질문이나 지원을 요청하는데에 이슈 트래커를 **사용하지 마십시오**. (그럴 때는 
+  [Stack Overflow](http://stackoverflow.com/questions/tagged/php) 나 
+  IRC를 사용해 주십시오)
 
-* Please **do not** derail or troll issues. Keep the discussion on topic and
-  respect the opinions of others.
+* 이슈의 논점을 흐리거나 논란을 일으키기 위한 도발은 **하지 마십시오**. 논의 주제에 맞게, 
+  다른 사용자의 의견을 존중하면서 토론을 해 주시기 바랍니다.
 
 
 <a name="pull-requests"></a>
-## Pull Requests
+## 풀 리퀘스트
 
-Pull requests are a great way to add new content to PHP The Right Way, as well 
-as updating any browser issues or other style changes. Pretty much any sort of 
-change is accepted if seen as constructive.
+풀 리퀘스트(Pull Requests)는 PHP The Right Way 에 새로운 내용을 추가하거나,
+웹 브라우저 이슈를 해결하거나, 다른 여러 변경사항을 적용하기 위한 훌륭한 수단입니다.
+건설적인 제안이라면 거의 대부분 받아들여질 것입니다.
 
-Adhering to the following this process is the best way to get your work
-included in the project:
+여러분의 작업 결과물을 반영하려면 아래와 같은 과정을 거치면 됩니다.
 
-1. [Fork](http://help.github.com/fork-a-repo/) the project, clone your fork,
-   and configure the remotes:
+1. 이 프로젝트를 [Fork](http://help.github.com/fork-a-repo/)하여 생성된 여러분의
+   저장소를 clone 한 후에 리모트 저장소를 설정합니다.
 
    ```bash
-   # Clone your fork of the repo into the current directory
+   # 현재 디렉토리에 저장소를 clone 합니다.
    git clone https://github.com/<your-username>/php-the-right-way.git
-   # Navigate to the newly cloned directory
+   # clone 이 완료된 디렉토리 안으로 이동합니다.
    cd php-the-right-way
-   # Assign the original repo to a remote called "upstream"
+   # 원본 프로젝트 저장소를 "upstream"이라는 리모트 저장소로 등록합니다.
    git remote add upstream https://github.com/codeguy/php-the-right-way.git
    ```
 
-2. If you cloned a while ago, get the latest changes from upstream:
+2. clone 을 한 지 시간이 좀 지났다면, upstream 으로부터 최신 변경 내역을 받아옵니다.
 
    ```bash
    git checkout master
    git pull upstream master
    ```
 
-3. Create a new topic branch (off the main project development branch) to
-   contain your change or fix:
+3. 토픽 브랜치를 새로 만들고 여러분의 작업을 합니다.
 
    ```bash
    git checkout -b <topic-branch-name>
    ```
 
-4. Install the [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally.
+4. 작업 환경에서 수정된 결과물을 미리보고 싶다면 
+   [Jekyll](https://github.com/mojombo/jekyll/) gem 을 설치합니다.
 
-5. Commit your changes in logical chunks. Please adhere to these [git commit
-   message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-   or your content is unlikely be merged into the main project. Use Git's
-   [interactive rebase](https://help.github.com/articles/interactive-rebase)
-   feature to tidy up your commits before making them public.
+5. 논리적인 단위로 여러분의 수정 내용을 commit 합니다. [git commit
+   message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)에 따라 메시지를 적절히 작성합니다. 여러분의 커밋을 공개하기 전에, 
+   git의 [interactive rebase](https://help.github.com/articles/interactive-rebase) 기능을 사용해서 커밋을 깔끔하게 정리합니다.
 
-6. Locally merge (or rebase) the upstream development branch into your topic branch:
+6. 로컬 저장소에서 upstream 개발 브랜치를 여러분의 토픽 브랜치로 merge(혹은 rebase)합니다.
 
    ```bash
    git pull [--rebase] upstream master
    ```
 
-7. Push your topic branch up to your fork:
+7. 토픽 브랜치를 여러분의 github 저장소에 push 합니다.
 
    ```bash
    git push origin <topic-branch-name>
    ```
 
-8. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description.
+8. 알아보기 쉬운 제목과 설명을 붙여서 [풀 리퀘스트를 보냅니다.](https://help.github.com/articles/using-pull-requests/)
 
 
-## Contribution Agreement and Usage
+## 프로젝트에 기여함으로써 동의하게 되는 내용
 
-By subitting a pull request to this repository, you agree to allow the project 
-owners to license your work under the the terms of the [Creative Commons Attribution-NonCommercial-ShareAlike
-3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+이 프로젝트의 저장소로 풀 리퀘스트를 보낸다는 것은, 이 프로젝트 관리자가 여러분의 저작 내용을
+[크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 3.0 Unported 라이선스](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.ko)에 따라
+공개하고 사용허가를 한다는 것에 동의한다는 의미가 됩니다.
 
-The same content and license will be used for all PHP The Right Way publications,
-including - but not limited to:
+모든 PHP The Right Way 출판물은 아래에 나열된 출판 방식/위치와 미래에 추가될 수 있는
+다른 방식/위치를 포함하여 동일한 내용과 동일한 라이선스에 따라 사용 허가됩니다. 
 
 * [phptherightway.com](http://phptherightway.com)
-* Translations of phptherightway.com
+* phptherightway.com 을 다른 언어로 번역한 출판물
 * [LeanPub: PHP The Right Way](https://leanpub.com/phptherightway/)
-* Translations of "LeanPub: PHP The Right Way"
+* "LeanPub: PHP The Right Way"을 다른 언어로 번역한 출판물
 
-All content is completely free now, and always will be.
+모든 내용은 무료이며 계속 무료로 제공될 것입니다.
 
-## Contributor Style Guide
+## 프로젝트 기여를 위한 문서 서식 가이드라인
 
-1. Use American English spelling (*primary English repo only*)
-2. Use four (4) spaces to indent text; do not use tabs
-3. Wrap all text to 120 characters
-4. Code samples should adhere to PSR-1 or higher
-5. Use [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) for all content
+1. 미국 영어 철자를 사용합니다. (*메인 프로젝트인 영어판 저장소에 적용되는 이야기*)
+2. 스페이스 네 개를 사용하여 들여쓰기를 합니다. 탭을 사용하여 들여쓰기 하지 마십시오.
+3. 한 줄 너비는 120글자로 합니다. (한국어판의 경우 한 줄 너비를 60자로 쓰려고 합니다.)
+4. 예제 코드는 PSR-1 이나 그 이상 버전을 준수해야 합니다.
+5. 내용은 [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) 문서 형식으로 작성합니다. 
