@@ -3,21 +3,13 @@ isChild: true
 anchor:  windows_setup
 ---
 
-## Windows Setup {#windows_setup_title}
+## Windows 安装 {#windows_setup_title}
 
-PHP is available in several ways for Windows. You can [download the binaries][php-downloads] and until recently you
-could use a '.msi' installer. The installer is no longer supported and stops at PHP 5.3.0.
+Windows 下有多种安装 PHP 的方式，你可以 [下载二进制安装包][php-downloads] 并使用 `.msi` 安装程序。从 PHP 5.3.0 之后，这个安装程序将不再提供下载支持。
 
-For learning and local development you can use the built in webserver with PHP 5.4+ so you don't need to worry about
-configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
-as the [Web Platform Installer][wpi], [Zend Server CE][zsce], [XAMPP][xampp], [EasyPHP][easyphp] and [WAMP][wamp] will
-help get a Windows development environment up and running fast. That said, these tools will be a little different from
-production so be careful of environment differences if you are working on Windows and deploying to Linux.
+如果只是学习或者本地开发，可以直接使用 PHP 5.4+ 内置的 Web 服务器， 还能省去配置服务器的麻烦。如果你也想要包含有网页服务器以及 MySql 的集成包，那像是[Web Platform Installer][wpi], [Zend Server CE][zsce], [XAMPP][xampp], [EasyPHP][easyphp] 和 [WAMP][wamp] 将会帮助你快速建立 Windows 开发环境。不过这些工具将会与线上环境有些许差别，如果你在 Windows 下开发，而部署至 Linux 上的情况下，请小心。
 
-If you need to run your production system on Windows then IIS7 will give you the most stable and best performance. You
-can use [phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and managing PHP simple. IIS7 comes with
-FastCGI built in and ready to go, you just need to configure PHP as a handler. For support and additional resources
-there is a [dedicated area on iis.net][php-iis] for PHP.
+如果你需要将生产环境部署在 Windows 上，那 IIS7 将会提供最稳定和最佳的性能。你可以使用 [phpmanager][phpmanager] (IIS7 的图形化插件) 让你简单的设置并管理 PHP。IIS7 也有内置的 FastCGI ，你只需要将 PHP 配置为它的处理器即可。更多详情请见[dedicated area on iis.net][php-iis]。
 
 
 [php-downloads]: http://windows.php.net
