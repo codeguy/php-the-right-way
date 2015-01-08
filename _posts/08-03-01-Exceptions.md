@@ -61,7 +61,7 @@ class ValidationException extends Exception {}
 포함되어 있는 SPL 예외 클래스들을 적절히 사용한다면 그런 문제를 줄일 수 있을 것입니다.
 
 예를 들어 `__call()` Magic Method 에 잘못된 메소드 호출이 들어온 상황을 처리할 때, 두루뭉실하게 그냥 Exception 을 
-던지거나 Exception 클래스를 상속받은 예외 클래스를 작성해서 던지는 대신에 `throw new BadFunctionCallException;`
+던지거나 Exception 클래스를 상속받은 예외 클래스를 작성해서 던지는 대신에 `throw new BadMethodCallException;`
 이라고 할 수 있겠습니다.
 
 * [Read about Exceptions][exceptions]
