@@ -23,6 +23,10 @@ between them by modifying your `PATH` variable.
 [phpbrew] is a tool for installing and managing multiple PHP versions. This can be really useful if two different
 applications/projects require different versions of PHP, and you are not using virtual machines.
 
+### Install PHP via Liip's binary installer
+Another popular option is [php-osx.liip.ch] which provides one liner installation method from version 5.3 to 5.6.
+It doesn't overwrite the php binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
+
 ### Compile from Source
 
 Another option that gives you control over the version of PHP you install, is to [compile it yourself][mac-compile].
@@ -39,6 +43,7 @@ you and tie them all together, but ease of setup comes with a trade-off of flexi
 [Homebrew]: http://brew.sh/
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
 [phpbrew]: https://github.com/phpbrew/phpbrew
+[php-osx.liip.ch]: http://php-osx.liip.ch/
 [mac-compile]: http://php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
 ["Command Line Tools for XCode"]: https://developer.apple.com/downloads
