@@ -1,6 +1,7 @@
 ---
 title:   가상 서버나 전용 서버
 isChild: true
+anchor: virtual_or_dedicated_servers
 ---
 
 ## 가상 서버나 전용 서버 {#virtual_or_dedicated_servers_title}

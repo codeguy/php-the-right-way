@@ -1,6 +1,7 @@
 ---
 title:   보조적인 테스트 도구 
 isChild: true
+anchor: complementary_testing_tools
 ---
 
 ## 보조적인 테스트 도구 {#complementary_testing_tools_title}

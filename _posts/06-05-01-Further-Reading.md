@@ -1,6 +1,7 @@
 ---
 title:   더 읽을 거리
 isChild: true
+anchor: further_reading
 ---
 
 ## 더 읽을 거리 {#further_reading_title}

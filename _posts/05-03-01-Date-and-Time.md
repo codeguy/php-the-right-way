@@ -1,6 +1,7 @@
 ---
 title:   날짜와 시간
 isChild: true
+anchor: date_and_time
 ---
 
 ## 날짜와 시간 {#date_and_time_title}

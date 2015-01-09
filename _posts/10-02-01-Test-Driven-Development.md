@@ -1,6 +1,7 @@
 ---
 title:   테스트 주도 개발
 isChild: true
+anchor: test_driven_development
 ---
 
 ## 테스트 주도 개발 {#test_driven_development_title}

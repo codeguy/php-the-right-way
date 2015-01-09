@@ -1,6 +1,7 @@
 ---
 title:   데이터 필터링
 isChild: true
+anchor: data_filtering
 ---
 
 ## 데이터 필터링 {#data_filtering_title}

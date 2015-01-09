@@ -1,5 +1,6 @@
 ---
 title:   캐시
+anchor: caching
 ---
 
 # 캐시 {#caching_title}

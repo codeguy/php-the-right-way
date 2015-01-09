@@ -1,6 +1,7 @@
 ---
 title:   PHP 기본 
 isChild: true
+anchor: the_basics
 ---
 
 ## PHP 기본 {#the_basics_title}

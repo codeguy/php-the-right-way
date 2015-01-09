@@ -1,9 +1,10 @@
 ---
 title:   어플리케이션의 빌드와 배포
 isChild: true
+anchor: building_and_deploying_your_application
 ---
 
-## 어플리케이션 빌드와 배포 {#build_title}
+## 어플리케이션 빌드와 배포 {#building_and_deploying_your_application_title}
 
 여러분이 어플리케이션을 업데이트할 때, 업데이트도 수작업으로 하는데 데이터베이스 스키마 변경도 수작업으로 하고 테스트도 수작업으로 하고 있다면 다시 한 번 생각해 보시기 바랍니다. 어플리케이션 업데이트 때마다 사람이 직접해야 하는 작업이 있고, 그 작업의 수만큼 치명적인 실수가 발생할 가능성도 올라갑니다. 간단한 업데이트를 하는 상황이든지, 복잡한 빌드 과정을 수행하고 있든지, 지속적인 통합 전략을 사용하려고 하든지 간에 [빌드 자동화](http://en.wikipedia.org/wiki/Build_automation)가 여러분에게 꼭 필요할 것입니다.
 

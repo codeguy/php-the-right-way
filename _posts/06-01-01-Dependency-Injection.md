@@ -1,5 +1,6 @@
 ---
 title: 의존성 주입
+anchor: dependency_injection
 ---
 
 # 의존성 주입 {#dependency_injection_title}

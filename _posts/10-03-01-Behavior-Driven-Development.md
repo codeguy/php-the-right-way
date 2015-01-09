@@ -1,6 +1,7 @@
 ---
 title:   행위 주도 개발 
 isChild: true
+anchor: behavior_driven_development
 ---
 
 ## 행위 주도 개발 {#behavior_driven_development_title}

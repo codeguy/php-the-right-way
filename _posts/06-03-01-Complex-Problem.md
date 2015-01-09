@@ -1,6 +1,7 @@
 ---
 title:   복잡한 문제
 isChild: true
+anchor: complex_problem
 ---
 
 ## 복잡한 문제 {#complex_problem_title}

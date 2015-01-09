@@ -1,6 +1,7 @@
 ---
 title:   공유 서버 
 isChild: true
+anchor: shared_servers
 ---
 
 ## 공유 서버 {#shared_servers_title}

@@ -1,6 +1,7 @@
 ---
 title:   기본 개념
 isChild: true
+anchor: basic_concept
 ---
 
 ## 기본 개념 {#basic_concept_title}

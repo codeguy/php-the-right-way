@@ -1,6 +1,7 @@
 ---
 title:   개체 캐시 
 isChild: true
+anchor: object_caching
 ---
 
 ## 개체 캐시 {#object_caching_title}

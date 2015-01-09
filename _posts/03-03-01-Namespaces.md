@@ -1,6 +1,7 @@
 ---
 title: 네임스페이스
 isChild: true
+anchor: namespaces
 ---
 
 ## 네임스페이스 {#namespaces_title}

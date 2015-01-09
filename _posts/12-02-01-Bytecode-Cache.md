@@ -1,6 +1,7 @@
 ---
 title:   바이트코드 캐시 
 isChild: true
+anchor: bytecode_cache
 ---
 
 ## 바이트코드 캐시 {#bytecode_cache_title}

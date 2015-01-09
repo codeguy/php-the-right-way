@@ -42,20 +42,20 @@ developers know where to find good information!
 
 <http://www.phptherightway.com>
 
-* [English](http://www.phptherightway.com)
-* [Catalan] (http://ca.phptherightway.com)
-* [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Japanese] (http://ja.phptherightway.com)
-* [Korean] (http://wafe.github.io/php-the-right-way)
-* [Italian] (http://it.phptherightway.com)
-* [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
-* [Russian] (http://getjump.github.io/ru-php-the-right-way)
-* [Spanish] (http://es.phptherightway.com)
-* [Ukrainian](http://iflista.github.com/php-the-right-way)
-* [Bulgarian](http://bg.phptherightway.com)
-* [German] (http://rwetzlmayr.github.io/php-the-right-way)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [영어판](http://www.phptherightway.com)
+* [중국어판 (간체)](http://wulijun.github.com/php-the-right-way)
+* [일본어판](http://ja.phptherightway.com)
+* [한국어판](http://wafe.github.io/php-the-right-way/)
+* [이탈리아어판](http://it.phptherightway.com/)
+* [폴란드어판](http://pl.phptherightway.com/)
+* [포르투갈어판](http://br.phptherightway.com/)
+* [러시아어판](http://getjump.github.io/ru-php-the-right-way)
+* [스페인어판](http://phpdevenezuela.github.io/php-the-right-way/)
+* [우크라이나어판](http://iflista.github.com/php-the-right-way/)
+* [불가리아어판](http://bg.phptherightway.com/)
+* [독일어판](http://rwetzlmayr.github.io/php-the-right-way/)
+* [터키어판](http://hkulekci.github.io/php-the-right-way/)
+* [슬로베니아어판](http://sl.phptherightway.com)
 
 ### Translations
 

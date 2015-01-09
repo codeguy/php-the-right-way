@@ -1,6 +1,7 @@
 ---
 title:   표준 PHP 라이브러리
 isChild: true
+anchor: standard_php_library
 ---
 
 ## 표준 PHP 라이브러리 {#standard_php_library_title}

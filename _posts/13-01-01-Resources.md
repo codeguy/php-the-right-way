@@ -1,3 +1,7 @@
+---
+anchor: resources
+---
+
 # Resources {#resources_title}
 
 ## 공식 사이트

@@ -1,6 +1,7 @@
 ---
 title: 프로그래밍 패러다임
 isChild: true
+anchor: programming_paradigms
 ---
 
 ## 프로그래밍 패러다임 {#programming_paradigms_title}

@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스
+anchor: databases
 ---
 
 # 데이터베이스 {#databases_title}
