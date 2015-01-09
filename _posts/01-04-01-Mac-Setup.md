@@ -24,7 +24,7 @@ between them by modifying your `PATH` variable.
 applications/projects require different versions of PHP, and you are not using virtual machines.
 
 ### Install PHP via Liip's binary installer
-Another popular option is [php-osx.liip.ch] which provides one liner installation method from version 5.3 to 5.6.
+Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 5.6.
 It doesn't overwrite the php binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
 
 ### Compile from Source
