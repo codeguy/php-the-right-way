@@ -47,7 +47,7 @@
                             {% assign insideSection = false %}
                         {% endif %}
                     {% endif %}
-                    <li><a href="/#{{ post.anchor }}">{{ post.title }}</a>
+                    <li><a href="#{{ post.anchor }}">{{ post.title }}</a>
                     {% if post.isChild %}
                         </li>
                     {% else %}
@@ -58,7 +58,7 @@
                 {% endfor %}
                     </ul>
                 </li>
-                <li><a href="/#site-footer">Credits</a></li>
+                <li><a href="#site-footer">Credits</a></li>
             </ul>
         </nav>
         <div class="site-content">
