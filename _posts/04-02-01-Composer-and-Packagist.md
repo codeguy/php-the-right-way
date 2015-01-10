@@ -24,6 +24,12 @@ Composer를 로컬 디렉토리에 설치할 수 있습니다. (즉, 현재 작�
 <strong>Please Note:</strong> 여기서 하는 것처럼 웹에서 다운로드한 코드를 바로 php 인터프리터에 파이프로 전달하여 실행하는 경우에는
 실행하기 전에 먼저 코드 내용을 보고 안전한 코드인 것을 확인한 후에 실행하기 바랍니다.
 
+#### Windows 에 Composer 설치
+Windows 에 설치하는 가장 간단한 방법은 [ComposerSetup(EXE)][6] 인스톨러를 
+사용하는 것입니다. 링크에서 설치 파일을 받아 설치하면, 시스템의 프로그램 설치 경로에 설치를 해주고
+`PATH` 환경변수에도 추가해주기 때문에 어느 디렉토리에서 커맨드라인을 실행하든지
+그냥 `composer` 명령을 실행할 수 있게 됩니다.
+
 ### Composer 설치 (수작업으로)
 
 Composer를 수작업으로 설치하는 건 고급 기술에 속한다고 할 수 있습니다. 하지만 자동으로 설치해주는 것이 비해서 수작업 설치를 더 좋아할 만한 이유는
@@ -104,4 +110,4 @@ require 'vendor/autoload.php';
 [3]: https://www.versioneye.com/
 [4]: https://security.sensiolabs.org/
 [5]: http://getcomposer.org/doc/00-intro.md
-
+[6]: https://getcomposer.org/Composer-Setup.exe
