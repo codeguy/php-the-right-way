@@ -62,7 +62,7 @@ included in the project:
    git checkout -b <topic-branch-name>
    ```
 
-4. Install the [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally.
+4. Install the [Jekyll](https://github.com/jekyll/jekyll/) gem to preview locally.
 
 5. Commit your changes in logical chunks. Please adhere to these [git commit
    message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)

@@ -64,6 +64,8 @@ To avoid fragmentation and reader confusion, please choose one of these options:
 
 If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
 
+Add information about your translation in the [wiki page](https://github.com/codeguy/php-the-right-way/wiki/Translations).
+
 When your translation is ready, open an issue on the Issue Tracker to let us know.
 
 ## Why
