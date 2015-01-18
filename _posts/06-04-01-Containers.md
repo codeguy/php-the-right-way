@@ -1,16 +1,16 @@
 ---
 isChild: true
-title: Containers
+title: Kontejneri
 anchor: containers
 ---
 
-## Containers {#containers_title}
+## Kontejneri (Containers) {#containers_title}
 
-The first thing you should understand about Dependency Injection Containers is that they are not the same thing as Dependency
-Injection. A container is a convenience utility that helps us implement Dependency Injection, however, they can be and often
-are misused to implement an anti-pattern, Service Location. Injecting a DI container as a Service Locator in to your classes arguably
-creates a harder dependency on the container than the dependency you are replacing. It also makes your code much less transparent
-and ultimately harder to test.
+Prva stvar koju treba razumeti u vezi Dependency Injection kontejnera jeste da oni nisu isto što i Dependency Injection.
+Kontejner je praktičan alat koji nam pomaže u implementaciji Dependency Injection pristupa, pri čemu oni mogu biti i loše
+iskorišćeni za implementaciju anti-paterna, Service Lokacije (Service Location). Injektovanje DI kontejnera kao Servis Lokatora
+u klase verovatno stvara jače zavisnosti na sâm kontejner nego na zavisnost koju menjate. To takođe čini vaš kôd mnogo manje 
+transparentim i u kranjem slučaju težim za testiranje.
 
-Most modern frameworks have their own Dependency Injection Container that allows you to wire your dependencies together through configuration.
-What this means in practice is that you can write application code that is as clean and de-coupled as the framework it is built on.
+Većina modernih framework-ova imaju svoje Dependency Injection kontejnera koji omogućavaju da povezujete vaše zavisnosti putem 
+konfiguracije. Ovo zapravo znači da možete pisati kôd aplikacije koji je čist i razdvojen kao i framework nad kojim je izgrađen.

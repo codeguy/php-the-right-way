@@ -6,11 +6,11 @@ anchor: basic_concept
 
 ## Osnovni koncept {#basic_concept_title}
 
-Možemo demonstrirati koncept sa jednostavnim, a ipak naivnim primerom.
+Ovaj koncept se može demonstrirati jednim jednostavnim, a opet naivnim primerom.
 
-Ovde imamo klasu `Database` koja zahteva adapter da bi komunicirala sa bazom podataka. Instancujemo adapter
-u konstruktoru i kreiramo čvrstu zavisnost. Ovo čini testiranje teškim i znači da je klasa `Database`
-usko povezana sa adapterom.
+Imamo klasu `Database` koja zahteva adapter kako bi komunicirala sa bazom podataka. Instanciranjem adaptera
+direktno u konstruktoru kreiramo čvrstu zavisnost. Ovo znatno otežava testiranje i čini klasu `Database`
+usko vezanu za adapter.
 
 {% highlight php %}
 <?php
@@ -29,7 +29,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Ovaj kod se može refaktorisati da koristi Dependency Injection i prema tome olabavi zavisnost.
+Ovaj kôd se može refaktorisati na način da koristi Dependency Injection, kako bi "olabavio" zavisnost.
 
 {% highlight php %}
 <?php
@@ -48,6 +48,6 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Sada klasi `Database` mi dajemo njenu zavisnost radije nego da ona to sama kreira. Mogli smo čak da napravimo
+Sada klasi `Database` dostavljamo njenu zavisnost umesto da je ona sama kreira. Mogli smo da napravimo i
 metod koji bi prihvatao argument zavisnosti i na taj način je postavljao, ili da je polje `$adapter` bilo
-javno mogli smo da je postavimo direktno.
+javno, mogli smo da je postavimo direktno.
