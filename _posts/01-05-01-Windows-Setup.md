@@ -10,7 +10,7 @@ could use a '.msi' installer. The installer is no longer supported and stops at 
 
 For learning and local development you can use the built in webserver with PHP 5.4+ so you don't need to worry about
 configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
-as the [Web Platform Installer][wpi], [Zend Server CE][zsce], [XAMPP][xampp], [EasyPHP][easyphp] and [WAMP][wamp] will
+as the [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp] and [WAMP][wamp] will
 help get a Windows development environment up and running fast. That said, these tools will be a little different from
 production so be careful of environment differences if you are working on Windows and deploying to Linux.
 
@@ -22,7 +22,6 @@ there is a [dedicated area on iis.net][php-iis] for PHP.
 
 [php-downloads]: http://windows.php.net
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
-[zsce]: http://www.zend.com/en/products/server-ce/
 [xampp]: http://www.apachefriends.org/en/xampp.html
 [easyphp]: http://www.easyphp.org/
 [wamp]: http://www.wampserver.com/en/
