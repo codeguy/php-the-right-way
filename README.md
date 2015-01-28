@@ -43,6 +43,7 @@ developers know where to find good information!
 * [Italian](http://it.phptherightway.com)
 * [Japanese](http://ja.phptherightway.com)
 * [Korean](http://wafe.github.io/php-the-right-way)
+* [Persian](http://novid.github.io/php-the-right-way/)
 * [Polish](http://pl.phptherightway.com)
 * [Portuguese](http://br.phptherightway.com)
 * [Romanian](https://bgui.github.io/php-the-right-way/)
