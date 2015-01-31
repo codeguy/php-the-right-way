@@ -18,17 +18,21 @@ PHP를 사용하는 사람들이 그동안 생각해보지 않았을지도 모�
 _PHP: The Right Way_는 다양한 언어로 변역되어 있습니다.
 
 * [영어판](http://www.phptherightway.com)
+* [프랑스어판](http://eilgin.github.io/php-the-right-way/)
 * [중국어판 (간체)](http://wulijun.github.com/php-the-right-way)
 * [일본어판](http://ja.phptherightway.com)
 * [한국어판](http://wafe.github.io/php-the-right-way/)
+* [인도네시아어판](http://id.phptherightway.com/)
 * [이탈리아어판](http://it.phptherightway.com/)
 * [폴란드어판](http://pl.phptherightway.com/)
 * [포르투갈어판](http://br.phptherightway.com/)
+* [루마니아어판](https://bgui.github.io/php-the-right-way/)
 * [러시아어판](http://getjump.github.io/ru-php-the-right-way)
 * [스페인어판](http://phpdevenezuela.github.io/php-the-right-way/)
 * [우크라이나어판](http://iflista.github.com/php-the-right-way/)
 * [불가리아어판](http://bg.phptherightway.com/)
 * [독일어판](http://rwetzlmayr.github.io/php-the-right-way/)
+* [태국어판](https://apzentral.github.io/php-the-right-way/)
 * [터키어판](http://hkulekci.github.io/php-the-right-way/)
 * [슬로베니아어판](http://sl.phptherightway.com)
 
