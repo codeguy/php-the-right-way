@@ -10,14 +10,14 @@ PHP는 다양한 프로그래밍 테크닉을 지원하는 유연하고 동적�
 PHP 5.0(2004)에서 개체지향 프로그래밍(Object-oriented Programming) 개념이 추가되었고 PHP 5.3(2009)에서는 익명 함수와 네임스페이스가, 
 PHP 5.4(2012)에서는 특징(trait) 개념이 추가되었습니다.
 
-### 개체지향 프로그래밍
+### 개체지향 프로그래밍 {#object-oriented-programming}
 
 PHP는 클래스, 추상 클래스, 인터페이스, 상속, 생성자, 복제(cloning), 예외 등 완전한 개체지향 프로그래밍 개념을 가지고 있습니다.
 
 * [Read about Object-oriented PHP][oop]
 * [Read about Traits][traits]
 
-### 함수형 프로그래밍
+### 함수형 프로그래밍 {#functional-programming}
 
 PHP는 일급 함수(first-class function)을 지원합니다. 이는 함수가 변수에 할당될 수 있다는 이야기입니다.
 사용자가 정의한 함수나 내장 함수 모두 변수에 의해서 참조될 수 있고 동적으로 호출될 수 있습니다.
