@@ -2,7 +2,7 @@
 
 ## 개요
 
-이 페이지는 _PHP: The Right Way 한국어판_ 프로젝트의 GitHub 저장소 페이지입니다.
+이 페이지는 [_PHP: The Right Way 한국어판_](http://modernpug.github.io/php-the-right-way/) 프로젝트의 GitHub 저장소 페이지입니다.
 
 ## 내용 보기
 
