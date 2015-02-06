@@ -21,7 +21,7 @@ _PHP: The Right Way_는 다양한 언어로 변역되어 있습니다.
 * [프랑스어판](http://eilgin.github.io/php-the-right-way/)
 * [중국어판 (간체)](http://wulijun.github.com/php-the-right-way)
 * [일본어판](http://ja.phptherightway.com)
-* [한국어판](http://wafe.github.io/php-the-right-way/)
+* [한국어판](http://modernpug.github.io/php-the-right-way/)
 * [인도네시아어판](http://id.phptherightway.com/)
 * [이탈리아어판](http://it.phptherightway.com/)
 * [폴란드어판](http://pl.phptherightway.com/)
@@ -48,5 +48,5 @@ _PHP: The Right Way_는 다양한 언어로 변역되어 있습니다.
 
 [배너 이미지 보기][2]
 
-[1]: https://github.com/wafe/php-the-right-way
+[1]: https://github.com/modernpug/php-the-right-way
 [2]: /php-the-right-way/banners.html

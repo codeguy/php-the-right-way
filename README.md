@@ -45,7 +45,7 @@ developers know where to find good information!
 * [영어판](http://www.phptherightway.com)
 * [중국어판 (간체)](http://wulijun.github.com/php-the-right-way)
 * [일본어판](http://ja.phptherightway.com)
-* [한국어판](http://wafe.github.io/php-the-right-way/)
+* [한국어판](http://modernpug.github.io/php-the-right-way/)
 * [이탈리아어판](http://it.phptherightway.com/)
 * [폴란드어판](http://pl.phptherightway.com/)
 * [포르투갈어판](http://br.phptherightway.com/)
