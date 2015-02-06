@@ -7,7 +7,7 @@
 ## 내용 보기
 
 * [영어판](http://www.phptherightway.com)
-* [한국어판](http://wafe.github.io/php-the-right-way/)
+* [한국어판](http://modernpug.github.io/php-the-right-way/)
 
 ## Overview
 
