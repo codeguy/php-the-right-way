@@ -91,4 +91,4 @@ PHP.
 [Jenkins]: http://jenkins-ci.org/
 [PHPCI]: http://www.phptesting.org/
 [Teamcity]: http://www.jetbrains.com/teamcity/
-[Deployer]: http://deployer.org/
+[Deployer]: https://github.com/deployphp/deployer
