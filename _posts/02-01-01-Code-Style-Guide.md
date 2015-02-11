@@ -36,6 +36,14 @@ stable and used by some huge projects like Magento and Symfony. Another option i
 popular by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in
 performance, meaning real-time editor fixing is more fluid.
 
+And you can run phpcs manually from shell:
+
+    phpcs -sw --standard=PSR2 file.php
+
+It will show errors and descriptions how to fix them.
+And it can be very helpful to build own git hook, that will be avoid push branches into your repo that
+violate standards.
+
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
 readable by all current and future parties who may be working on the codebase.
 
