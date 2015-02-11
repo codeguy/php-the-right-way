@@ -41,8 +41,9 @@ And you can run phpcs manually from shell:
     phpcs -sw --standard=PSR2 file.php
 
 It will show errors and descriptions how to fix them.
-And it can be very helpful to build own git hook, that will be avoid push branches into your repo that
-violate standards.
+It can also be helpful to include this command in a git hook.
+That way branches which contain violations against the chosen standard cannot enter the repository
+until those violations have been fixed.
 
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
 readable by all current and future parties who may be working on the codebase.
