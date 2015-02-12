@@ -63,7 +63,7 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
 이건 끔직한 코드라고 할 수 있겠습니다. SQL 쿼리에 외부 입력을 그대로 넣고 있군요. 당장이라도 
-[SQL 인젝션][SQL Injection] 해킹을 당할 것 같습니다.
+[SQL 인젝션](http://wiki.hashphp.org/Validation) 공격에 당할 것 같습니다.
 해커가 `http://domain.com/?id=1%3BDELETE+FROM+users` 같이 창의적인 `id` 인자를 넣어서 이 코드를 호출했다고
 생각해봅시다. `$_GET['id']`는 `1;DELETE FROM users` 가 되어서 모든 users 데이터가 삭제되어 버립니다!
 이렇게 하지 말고 아래처럼 PDO의 인자 바인딩을 사용해서 ID 입력값을 안전하게 전달해야 합니다.
