@@ -25,7 +25,7 @@ if (strpos('testing', 'test')) {    // 'test'가 인덱스 0에서 발견되어 
     // code...
 }
 
-vs.
+// vs
 
 if (strpos('testing', 'test') !== false) {    // (0 !== false)의 비교 결과는 true 이다.
     // code...
@@ -52,7 +52,7 @@ function test($a)
     }
 }
 
-vs.
+// vs
 
 function test($a)
 {
@@ -128,7 +128,7 @@ function array()
 ### 연결
 
 - 코드 작성 시 한 줄이 적정 길이(120 글자)를 넘으면 줄을 나눠서 작성한 뒤 문자열을 연결시켜 줄 수 있습니다.
-- 가독성을 위해 연결 및 대입 연산자를 사용하는 것보다는 연결 연산자를 사용하는 것이 좋습니다.
+- 연결 및 대입 연산자를 사용하는 것보다는 연결 연산자를 사용하는 편이 가독성을 높이는데에는 더 낫습니다.
 - 연결 연산자를 이용하는 여러 줄의 코드를 작성할 때에는 들여쓰기를 해주는 것이 좋습니다.
 
 
@@ -138,7 +138,7 @@ $a  = 'Multi-line example';    // 연결 및 대입 연산자 (.=)
 $a .= "\n";
 $a .= 'of what not to do';
 
-vs.
+// vs
 
 $a = 'Multi-line example'      // 연결 연산자 (.)
     . "\n"                     // 두 번째 라인부터는 들여써준다.
@@ -185,7 +185,7 @@ echo 'phptherightway is ' . $adjective . '.'     // 변수와 이스케이프 �
     . "\n"                                       // 여러 줄에 걸쳐서 연결 연산자로 연결시키는 예제 코드
     . 'I love learning' . $code . '!';
 
-vs.
+// vs
 
 echo "phptherightway is $adjective.\n I love learning $code!"  // 큰따옴표 문자열을 사용하면 연결 연산자를 여러번 
                                                                // 쓰지 않고도 한 방에 해결할 수 있다.
@@ -198,7 +198,7 @@ echo "phptherightway is $adjective.\n I love learning $code!"  // 큰따옴표 �
 $juice = 'plum';
 echo "I drank some juice made of $juices";    // $juice 라는 변수를 읽을 수 없다.
 
-vs.
+// vs
 
 $juice = 'plum';
 echo "I drank some juice made of {$juice}s";    // $juice 가 제대로 분석된다.
@@ -273,9 +273,11 @@ EOD;                        // 끝을 나타내는 'EOD'는 반드시 줄의 가
 <?php
 $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
+{% endhighlight %}
 
-vs.
+코드 줄 수를 줄이기 위해서 모든 가독성을 포기한 코드를 한 번 비교해 봅시다.
 
+{% highlight php %}
 // 중첩된 삼항 연산자
 $b = 10;
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // 코드를 알아볼 수 없다
@@ -288,10 +290,60 @@ echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // �
 $a = 5;
 echo ($a == 5) ? return true : return false;    // 이렇게 하면 에러가 발생한다.
 
-vs.
+// vs
 
 $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // 'yay'를 리턴한다.
+{% endhighlight %}
+
+boolean 값을 리턴하는데에 꼭 삼항 연산자를 사용할 필요는 없다는 걸 기억하세요.
+
+{% highlight php %}
+<?php
+$a = 3;
+return ($a == 3) ? true : false; // $a == 3 인지에 따라 true나 false 를 리턴한다.
+
+// vs
+
+$a = 3;
+return $a == 3; // $a == 3 인지에 따라 true나 false 를 리턴한다.
+
+{% endhighlight %}
+
+===, !==, !=, == 등의 모든 비교 연산자에 마찬가지로 적용되는 사실입니다.
+
+#### 삼항 연산자 사용 시 가독성과 기능을 고려한 괄호 사용하기
+
+삼항 연산자를 사용할 때, 괄호를 적절히 활용하면 가독성을 높여주기도 하고, 여러 구문을 묶어서 
+의미를 다르게 만들어 주기도 합니다. 괄호를 넣지 않아도 되는 경우를 한 번 보시죠.
+
+{% highlight php %}
+<?php
+$a = 3;
+return ($a == 3) ? "yay" : "nope"; // $a == 3 일 때에는 yay 를 리턴한다.
+
+// vs
+
+<?php
+$a = 3;
+return $a == 3 ? "yay" : "nope"; // $a == 3 일 때에는 yay 를 리턴한다.
+{% endhighlight %}
+
+구문 여러개를 묶어서 한 덩어리로 조건 판단이 되도록 하는데에 괄호를 사용하는 것이 일반적인 일이죠.
+($a == 3 and $b == 4)이라는 조건과 $c == 5 이라는 조건이 모두 참일 때에 true 를 리턴하는 예제
+코드입니다.
+
+{% highlight php %}
+<?php
+return ($a == 3 && $b == 4) && $c == 5;
+{% endhighlight %}
+
+아래 코드는 ($a != 3 AND $b != 4)이라는 조건이나 $c == 5 라는 조건 둘 중에 하나만 
+참이면 true 를 리턴하는 예제 코드입니다.
+
+{% highlight php %}
+<?php
+return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
 * [삼항 연산자](http://php.net/manual/en/language.operators.comparison.php)
@@ -305,7 +357,7 @@ return ($a == 5) ? 'yay' : 'nope';    // 'yay'를 리턴한다.
 $about = 'A very long string of text';    // uses 2MB memory
 echo $about;
 
-vs.
+// vs
 
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
