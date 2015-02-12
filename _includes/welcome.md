@@ -29,7 +29,7 @@ _PHP: The Right Way_ is translated into many different languages:
 * [Indonesian](http://id.phptherightway.com/)
 * [Italian](http://it.phptherightway.com/)
 * [Japanese](http://ja.phptherightway.com)
-* [Korean](http://wafe.github.io/php-the-right-way/)
+* [Korean](http://modernpug.github.io/php-the-right-way/)
 * [Persian](http://novid.github.io/php-the-right-way/)
 * [Polish](http://pl.phptherightway.com/)
 * [Portuguese](http://br.phptherightway.com/)
