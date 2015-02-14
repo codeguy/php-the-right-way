@@ -1,14 +1,14 @@
 ---
-title: PHP와 UTF-8
+title: UTF-8 사용하기
 isChild: true
 anchor: php_and_utf8
 ---
 
-## PHP와 UTF-8 {#php_and_utf8_title}
+## UTF-8 사용하기 {#php_and_utf8_title}
 
 _이 섹션은 [Alex Cabal](https://alexcabal.com/)이 작성한
-[PHP Best Practices](https://phpbestpractices.org/#utf-8)에 포함되어 있는 내용입니다.
-이제 이곳에서도 볼 수 있게 되었습니다._
+[PHP Best Practices](https://phpbestpractices.org/#utf-8)에 포함되어 있는 내용을
+기반으로 하여 작성되었습니다._
 
 ### 한 줄로 끝나는 팁은 없습니다. 주의깊고 일관성있게 작업해야 합니다.
 
@@ -23,7 +23,8 @@ PHP는 현재 유니코드 지원을 언어 내부적으로 해주고 있지 않
 해도 특별할 것이 없습니다. 하지만 `strpos()`나 `strlen()`과 같은 대부분의 문자열
 함수들은 신경을 써야 합니다. 이런 함수들은 `mb_strpos()`나 `mb_strlen()` 같이
 원래 이름 앞에 `mb_`가 붙은 함수들이 별도로 존재합니다. 그런 함수들을 멀티바이트 문자열 함수라고
-부릅니다. 멀티바이트 문자열 함수들은 유니코드 문자열을 다루기 위해서 특별히 제공되는 함수들입니다.
+하고, [멀티바이트 문자열 익스텐션]에 의해서 제공됩니다. 멀티바이트 문자열 함수들은 유니코드 
+문자열을 다루기 위해서 특별히 제공되는 함수들입니다.
 
 유니코드 문자열을 다룰 때에는 항상 `mb_`로 시작하는 함수들을 사용해야 합니다. 예를 들어
 `substr()` 함수를 UTF-8 문자열에 대해서 사용해보면, 결과물에는 이상하게 깨진 글자가
@@ -37,20 +38,26 @@ PHP는 현재 유니코드 지원을 언어 내부적으로 해주고 있지 않
 모든 문자열 함수가 그에 해당되는 멀티바이트 버전의 `mb_` 로 시작되는 함수를 가지고 있는 것은 
 아닙니다. 여러분이 사용하려고 했던 문자열 함수 그런 경우라면, 운이 없었다고 할 수 밖에요.
 
-추가로, 모든 PHP 스크립트 파일(또는 모든 PHP 스크립트에 include 되는 공용 스크립트)의 
+모든 PHP 스크립트 파일(또는 모든 PHP 스크립트에 include 되는 공용 스크립트)의 
 가장 윗부분에 `mb_internal_encoding()` 함수를 사용해서 문자열 인코딩을 지정하고, 그 바로 
 다음에 `mb_http_output()` 함수로 브라우저에 출력될 문자열 인코딩도 지정해야 합니다. 이런 
 식으로 모든 스크립트에 문자열의 인코딩을 명시적으로 지정하는 것이, 나중에 고생할 일을 아주
 많이 줄여줍니다.
 
-마지막으로, 많은 문자열 함수들이 함수 파라미터의 문자열 인코딩을 지정할 수 있는 옵셔널 파라미터를
+추가로, 많은 문자열 함수들이 함수 파라미터의 문자열 인코딩을 지정할 수 있는 옵셔널 파라미터를
 제공한다는 사실을 이야기해야겠습니다. 그런 경우마다 항상 UTF-8 문자열 인코딩을 명시적으로
 지정해야 합니다. 예를 들어, `htmlentities()` 함수의 경우가 그렇습니다. UTF-8 문자열을 전달하는 
-경우 항상 UTF-8로 지정하십시오.
+경우 항상 UTF-8로 지정하십시오. 또한 PHP 5.4.0 부터는  `htmlentities()` 함수와 `htmlspecialchars()` 
+함수의 경우에 UTF-8이 기본 인코딩으로 변경되었다는 것을 알아두는게 좋겠습니다.
 
-PHP 5.4.0 부터는  `htmlentities()` 함수와 `htmlspecialchars()` 함수의 경우에 
-UTF-8이 기본 인코딩으로 변경되었음을 알아두십시오.
+마지막으로, 만약 분산 배포되는 환경에서 동작하는 어플리케이션을 만들어야 하는데, `mbstring` 
+익스텐션이 활성화 되어 있는지 확신할 수 없는 상황이라면, [patchwork/utf8]이라는 Composer 패키지를
+사용해보는 것도 좋겠습니다. 그 패키지를 사용하면, `mbstring` 익스텐션이 활성화되어 있으면 
+그쪽 함수들을 사용하고 활성화되어 있지 않으면 일반 문자열 함수가 대신 호출되는 식으로 
+동작하게 만들어줍니다.
 
+[멀티바이트 문자열 익스텐션]: http://php.net/manual/en/book.mbstring.php
+[patchwork/utf8]: https://packagist.org/packages/patchwork/utf8
 
 ### 데이터베이스 수준에서의 UTF-8
 
@@ -68,7 +75,15 @@ UTF-8 문자열을 제대로 사용하려면 반드시 `utf8mb4` 캐릭터 셋�
 ### 브라우저 수준에서의 UTF-8
 
 PHP 스크립트가 UTF-8 문자열을 브라우저에 제대로 전송하게 하려면 `mb_http_output()`
-함수를 사용하세요. HTML의 `<head>` 태그에는 [charset `<meta>` 태그](http://htmlpurifier.org/docs/enduser-utf8.html)를 넣습니다.
+함수를 사용하세요.
+
+그리고 HTTP 응답이 UTF-8로 되어 있다는 것을 브라우저도 알 수 있게 해줘야 되겠지요.
+HTML 응답 내용의 `<head>` 태그에 [charset `<meta>` 태그](http://htmlpurifier.org/docs/enduser-utf8.html)
+를 넣는 것이 전통적인 방법입니다. 이렇게 하는 데에 잘못된 점은 하나도 없지만, 성능을
+좀 더 올릴 수 있는 방법도 있습니다. HTTP 응답의 `Content-Type` 헤더에 charset 설정을 하면
+[훨씬 빠르게 동작](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly)
+한다고 합니다. (역자 주: 현재 해당 링크는 charset 관련된 내용을 담고 있지 않네요. 오래된 글이긴 하지만
+[이 링크](https://code.google.com/p/page-speed/wiki/SpecifyCharsetEarly)를 참고하면 도움이 될 것 같습니다.)
 
 {% highlight php %}
 <?php
@@ -111,10 +126,11 @@ $handle->execute();
  
 // HTML에 출력하기 위해서 변수에 결과값을 저장해둡니다.
 $result = $handle->fetchAll(\PDO::FETCH_OBJ);
+
+header('Content-Type: text/html; charset=utf-8');
 ?><!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8" />
         <title>UTF-8 test page</title>
     </head>
     <body>
