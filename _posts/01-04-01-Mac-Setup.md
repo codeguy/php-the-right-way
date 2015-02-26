@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: Mac 安裝
 anchor:  mac_setup
 ---
 

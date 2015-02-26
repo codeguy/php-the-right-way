@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: Windows 安裝
 anchor:  windows_setup
 ---
 
