@@ -17,6 +17,22 @@ Mavericks 是 5.4.17， Yosemite 则是 5.5.9， 但在 PHP 5.6 出来之后， 
 
 也就是说, 你可以通过 `brew install` 命令安装 `php53`, `php54`, `php55` 或者 `php56` ，并且通过修改 `PATH` 变量来切换各个版本。
 
+### 通过 Macports 安装 PHP
+
+[MacPorts] 是一个开源的，社区发起的项目，它的目的在于设计一个易于使用的系统，方便编译，安装以及升级 OS X 系统上的 command-line, X11 或者基于 Aqua 的开源软件。
+
+MacPorts 支持预编译的二进制文件，因此你不必每次都重新从源码压缩包编译，如果你的系统没有安装这些包，它会节省你很多时间。
+
+此时，你可以通过 `port install` 命名来安装 `php53`，`php54`，`php55` 或者 `php56`，比如：
+
+    sudo port install php54
+    sudo port install php55
+
+你也可以执行 `select` 命令来切换当前的 php 版本：
+
+    sudo port select --set php php55
+
+
 ### 通过 phpbrew 安装 PHP
 
 [phpbrew] 是一个安装与管理多个 PHP 版本的工具。它在应用程序或者项目需求不同版本的 PHP 时非常有用，让你不再需要使用虚拟机来处理这些情况。
@@ -34,6 +50,7 @@ Mavericks 是 5.4.17， Yosemite 则是 5.5.9， 但在 PHP 5.6 出来之后， 
 
 [Homebrew]: http://brew.sh/
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
+[MacPorts]: https://www.macports.org/install.php
 [phpbrew]: https://github.com/phpbrew/phpbrew
 [mac-compile]: http://php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer

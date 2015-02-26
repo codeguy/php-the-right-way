@@ -15,13 +15,12 @@ PHP社区百花齐放，拥有大量的函数库、框架和组件。PHP开发�
 * [阅读 PSR-2][psr2]
 * [阅读 PSR-4][psr4]
 * [阅读 PEAR 编码准则][pear-cs]
-* [阅读 Zend 编码准则][zend-cs]
 * [阅读 Symfony 编码准则][symfony-cs]
 
 你可以使用 [PHP_CodeSniffer][phpcs] 来检查代码是否符合这些准则，文本编辑器 [Sublime Text 2][st-cs] 的插件也可以提供实时检查。
 
 你可以通过以下两个工具来自动修正你的程序语法，让它符合标准。
-一个是 Fabien Potencier 的 [PHP Coding Standards Fixer][phpcsfixer]，它具有良好的测试，虽然有一些庞大，运行也有些缓慢，但是非常的稳定。在一些大型项目比如 Magento、Symfony 中都会用到。
+一个是 [PHP Coding Standards Fixer][phpcsfixer]，它具有良好的测试。
 另外一个工具是 [php.tools][phptools]， 它是 sublime text 的一个非常流行的插件[sublime-phpfmt][sublime-phpfmt]，虽然比较新，但是在性能上有了很大的提高，这意味着实时的修复语法会更加的流畅。
 
 所有的变量名称以及代码结构建议用英文编写。注释可以使用任何语言，只要让现在以及未来的伙伴能够容易阅读理解即可。
@@ -33,7 +32,6 @@ PHP社区百花齐放，拥有大量的函数库、框架和组件。PHP开发�
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 [psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 [pear-cs]: http://pear.php.net/manual/en/standards.php
-[zend-cs]: http://framework.zend.com/wiki/display/ZFDEV2/Coding+Standards
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [st-cs]: https://github.com/benmatselby/sublime-phpcs

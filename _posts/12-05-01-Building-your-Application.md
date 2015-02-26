@@ -44,7 +44,7 @@ developers interested in Capistrano.
 [Chef] is more than a deployment framework, it is a very powerful Ruby based system integration framework that doesn't
 just deploy your app but can build your whole server environment or virtual boxes.
 
-[Deployer] is a deployment tool written in PHP, it's simple and functional. Deploy your code to all servers you want, it supports deploy via copy, or via VCS (like git), or via rsync. Run your tasks on all your servers, or use our recipes of common tasks for Symfony, Laravel, Zend Framework and Yii.
+[Deployer] is a deployment tool written in PHP, it's simple and functional. Runs tasks in parallel, atomic deployment, keeps consistency between servers. Recipes of common tasks for Symfony, Laravel, Zend Framework and Yii.
 
 #### Chef resources for PHP developers:
 
@@ -91,4 +91,4 @@ PHP.
 [Jenkins]: http://jenkins-ci.org/
 [PHPCI]: http://www.phptesting.org/
 [Teamcity]: http://www.jetbrains.com/teamcity/
-[Deployer]: http://deployer.in/
+[Deployer]: https://github.com/deployphp/deployer
