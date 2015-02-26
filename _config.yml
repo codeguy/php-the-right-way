@@ -1,4 +1,4 @@
-baseurl: /
+baseurl: /php-the-right-way/
 highlighter: pygments
 markdown: kramdown
 permalink: date
