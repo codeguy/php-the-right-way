@@ -42,11 +42,13 @@
 * [Indonesian](http://id.phptherightway.com)
 * [Italian](http://it.phptherightway.com)
 * [Japanese](http://ja.phptherightway.com)
-* [Korean](http://wafe.github.io/php-the-right-way)
+* [Korean](http://modernpug.github.io/php-the-right-way)
+* [Persian](http://novid.github.io/php-the-right-way/)
 * [Polish](http://pl.phptherightway.com)
 * [Portuguese](http://br.phptherightway.com)
 * [Romanian](https://bgui.github.io/php-the-right-way/)
 * [Russian](http://getjump.github.io/ru-php-the-right-way)
+* [Serbian](http://smatejic.github.io/php-the-right-way/)
 * [Slovenian](http://sl.phptherightway.com)
 * [Spanish](http://phpdevenezuela.github.io/php-the-right-way)
 * [Thai](https://apzentral.github.io/php-the-right-way/)
@@ -63,6 +65,8 @@
 2. 我们用子域名(如： "ru.phptherightway.com") 的方式链接您的 GitHub Pages。
 
 如果您使用的是子域名，请在 `CNAME` 文件中输入您的子域名，并且通知我们设定对应的DNS。如果您不想使用子域名，请移除 `CNAME` 文件，那么在推送的过程中将不会被建立。
+
+在 [wiki 页面](https://github.com/codeguy/php-the-right-way/wiki/Translations) 增加你的翻译信息。
 
 当您的翻译完成后， 请在 Issue Tracker 中新建一个 issue 让我们知道。
 
