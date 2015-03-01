@@ -3,21 +3,15 @@ isChild: true
 anchor:  opcode_cache
 ---
 
-## Opcode Cache {#opcode_cache_title}
+## Opcode 缓存 {#opcode_cache_title}
 
-When a PHP file is executed, under the hood it is first compiled to opcodes and, only then, the opcodes are executed.
-If a PHP file is not modified, the opcodes will always be the same. This means that the compilation step is a waste of
-CPU resources.
+当一个PHP文件被解释执行的时候，首先是被编译成名为opcode的中间代码，然后才被底层的虚拟机执行。
+如果PHP文件没有被修改过，opcode始终是一样的。这就意味着编译步骤白白浪费了CPU的资源。
 
-This is where opcode caches come in. They prevent redundant compilation by storing opcodes in memory and reusing it on
-successive calls. Setting up an opcode cache takes a matter of minutes, and your application will speed up
-significantly. There's really no reason not to use it.
+此时opcode缓存就派上用场了。通过将opcode缓存在内存中，它能防止冗余的编译步骤，并且在下次调用执行时得到重用。设置opcode缓存只需要几分钟的时间，你的应用程序便会因此大大加速，实在没有理由不用它。
 
-As of PHP 5.5, there is a built-in opcode cache called [OPcache][opcache-book]. It is also available for earlier
-versions.
-
-Read more about opcode caches:
-
+PHP 5.5中自带了opcode缓存工具，叫做[OPcache][opcache-book]，早期的版本也能通过一定的配置使用它。
+更多关于opcode缓存的资料：
 * [OPcache][opcache-book] (built-in since PHP 5.5)
 * [APC] (PHP 5.4 and earlier)
 * [XCache]
