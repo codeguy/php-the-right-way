@@ -16,8 +16,7 @@ anchor:  object_caching
 通常APCu在存取速度上比Memcached更快，但是Memcached在扩展上更有优势。如果你不希望应用程序涉及多个服务器，或者不需要Memcached提供的其他特性，那么APCu可能是最好的选择。
 
 使用APCu的例子：
-
-{% highlight php %}
+```php
 <?php
 // check if there is data saved as 'expensive_data' in cache
 $data = apc_fetch('expensive_data');
@@ -25,9 +24,8 @@ if ($data === false) {
     // data is not in cache; save result of expensive call for later use
     apc_add('expensive_data', $data = get_expensive_data());
 }
-
 print_r($data);
-{% endhighlight %}
+```
 
 注意在PHP 5.5之前，APC同时提供了对象缓存与字节码缓存。APCu是为了将APC的对象缓存移植到PHP 5.5+的一个项目，因为现在PHP有了内建的字节码缓存方案(OPcache)。
 
