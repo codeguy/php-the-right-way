@@ -3,30 +3,21 @@ isChild: true
 anchor:  namespaces
 ---
 
-## Namespaces {#namespaces_title}
+## 命名空间 {#namespaces_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP
-code may use the same class name as another library. When both libraries are used in the same namespace, they collide
-and cause trouble.
+如前所述，PHP 社区已经有许多开发者开发了大量的代码。这意味着一个类库的 PHP 代码可能使用了另外一个类库中相同的类名。如果他們使用同一个命名空间，那将会产生冲突导致异常。
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating
-system directories that _namespace_ files; two files with the same name may co-exist in separate directories. Likewise,
-two PHP classes with the same name may co-exist in separate PHP namespaces. It's as simple as that.
+_命名空间_ 解决了这个问题。如 PHP 手册里所描述，命名空间好比操作系统中的目录，两个同名的文件可以共存在不同的目录下。同理两个同名的 PHP 类可以在不同的 PHP 命名空间下共存，就这么简单。
 
-It is important for you to namespace your code so that it may be used by other developers without fear of colliding
-with other libraries.
+因此把你的代码放在你的命名空间下就非常重要，避免其他开发者担心与第三方类库冲突。
 
-One recommended way to use namespaces is outlined in [PSR-4][psr4], which aims to provide a standard file, class and
-namespace convention to allow plug-and-play code.
+[PSR-4][psr4] 提供了一种命名空间的推荐使用方式，它提供一个标准的文件、类和命名空间的使用惯例，进而让代码做到随插即用。
 
-In October 2014 the PHP-FIG deprecated the previous autoloading standard: [PSR-0][psr0], which has been replaced with
-[PSR-4][psr4]. Currently both are still usable, as PSR-4 requires PHP 5.3 and many PHP 5.2-only projects currently implement
-PSR-0. If you're going to use an autoloader standard for a new application or package then you almost certainly want
-to look into PSR-4.
+2014 年 10 月，PHP-FIG 废弃了上一个自动加载标准： [PSR-0][psr0]，而采用新的自动加载标准 [PSR-4][psr4]。但 PSR-4 要求 PHP 5.3 以上的版本，而许多项目都还是使用 PHP 5.2，所以目前两者都能使用。如果你在新应用或扩展包中使用自动加载标准，应优先考虑使用 PSR-4。
 
-* [Read about Namespaces][namespaces]
-* [Read about PSR-0][psr0]
-* [Read about PSR-4][psr4]
+* [阅读命名空间][namespaces]
+* [阅读 PSR-0][psr0]
+* [阅读 PSR-4][psr4]
 
 
 [namespaces]: http://php.net/language.namespaces
