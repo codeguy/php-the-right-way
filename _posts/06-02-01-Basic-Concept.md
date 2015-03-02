@@ -45,7 +45,4 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class its dependency rather than it creating it itself. We could even create a method
-that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we
-could set it directly.
 现在我们通过外界给予 `Database` 类的依赖，而不是让他自己产生依赖的对象。我们甚至能用可以接受依赖对象参数的成员函数来设置，或者如果 `$adapter` 属性本身是 `public`的，我们可以直接给他赋值。
