@@ -1,24 +1,14 @@
-# Welcome
+# 欢迎
 
-There's a lot of outdated information on the Web that leads new PHP users astray,
-propagating bad practices and insecure code. _PHP: The Right Way_ is an easy-to-read,
-quick reference for PHP popular coding standards, links to authoritative tutorials
-around the Web and what the contributors consider to be best practices at the present
-time.
+目前网络上充斥着大量的过时资讯，让 PHP 新手误入歧途，并且传播着错误的实践以及不安全的代码。_PHP 之道_ 收集了现有的 PHP 最佳实践、编码规范和权威学习指南，方便 PHP 开发者阅读和查找
 
-_There is no canonical way to use PHP_. This website aims to introduce new PHP
-developers to some topics which they may not discover until it is too late, and aims
-to give seasoned pros some fresh ideas on those topics they've been doing for years
-without ever reconsidering. This website will also not tell you which tools to use, but
-instead offer suggestions for multiple options, when possible explaining the differences
-in approach and use-case.
+_使用 PHP 沒有规范化的方式_。本网站主要是向 PHP 新手介绍一些他们没有发现或者是太晚发现的主题， 或是经验丰富的专业人士已经实践已久的做法提供一些新想法。本网站也不会告诉您应该使用什么样的工具，而是提供多种选择的建议，并尽可能地说明方法及用法上的差异。
 
-This is a living document and will continue to be updated with more helpful information
-and examples as they become available.
+当有更多有用的资讯以及范例时，此文件会随着相关技术的发展而持续更新。
 
-## Translations
+## 翻译
 
-_PHP: The Right Way_ is translated into many different languages:
+_PHP 之道_已经翻译成多种语言：
 
 * [English](http://www.phptherightway.com)
 * [Bulgarian](http://bg.phptherightway.com/)
@@ -42,16 +32,15 @@ _PHP: The Right Way_ is translated into many different languages:
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Ukrainian](http://iflista.github.com/php-the-right-way/)
 
-## How to Contribute
+## 如何贡献
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
+帮助我们让本网站作为 PHP 新手的最佳资源！[在 GitHub 上贡献][1]
 
-## Spread the Word!
+## 推广
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP developers
-know where to find good information!
+您可以在网站上放置 PHP之道 的横幅来支持我们，让 PHP 的新人知道哪里可以获取到好的资料！
 
-[See Banner Images][2]
+[广告横幅][2]
 
 [1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
 [2]: /banners.html
