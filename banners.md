@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Website Banners
-description: "Spread the word! Use these banner to let new PHP programmers know about PHP: The Right Way"
+title: 广告横幅
+description: "利用 _PHP 之道_ 广告横幅宣传！让 PHP 新手知道哪里可以获取好的资讯。"
 sitemap: true
 ---
 
-# Web Banners
+# 广告横幅
 
-Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers where to find good information.
+利用 _PHP 之道_ 广告横幅宣传！让 PHP 新手知道哪里可以获取好的资讯。
 
 ## Button 1 (120x90)
 
