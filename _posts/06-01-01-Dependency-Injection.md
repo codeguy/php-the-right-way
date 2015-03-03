@@ -1,5 +1,5 @@
 ---
-title:  Dependency Injection
+title:  依赖注入
 anchor: dependency_injection
 ---
 

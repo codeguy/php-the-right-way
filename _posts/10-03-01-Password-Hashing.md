@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 密码哈希
 anchor:  password_hashing
 ---
 
@@ -26,7 +27,7 @@ if (password_verify('bad-password', $passwordHash)) {
 } else {
     // Wrong password
 }
-{% endhighlight %}  
+{% endhighlight %}
 
 
 * [了解 `password_hash()`] [1]

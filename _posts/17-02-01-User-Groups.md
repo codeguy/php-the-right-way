@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: User Group
 anchor:  user_groups
 ---
 

@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 设计模式
 anchor:  design_patterns
 ---
 

@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: Mentoring
 anchor:  mentoring
 ---
 

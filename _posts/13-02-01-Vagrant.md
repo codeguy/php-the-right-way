@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: Vagrant
 anchor:  vagrant
 ---
 

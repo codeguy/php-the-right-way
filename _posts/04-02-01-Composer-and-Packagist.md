@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: Composer 与 Packagist
 anchor:  composer_and_packagist
 ---
 
@@ -86,7 +87,7 @@ Composer 也可以处理全局依赖和他们的二进制文件。用法很直�
 composer global require phpunit/phpunit
 {% endhighlight %}
 
-这将会创建一个 `~/.composer` 目录存放全局依赖，要让已安装依赖的二进制命令随处可用，你需要添加 `~/.composer/vendor/bin` 目录到你的 `$PATH` 变量。 
+这将会创建一个 `~/.composer` 目录存放全局依赖，要让已安装依赖的二进制命令随处可用，你需要添加 `~/.composer/vendor/bin` 目录到你的 `$PATH` 变量。
 
 * [其他学习 Composer 相关资源][Learn about Composer]
 

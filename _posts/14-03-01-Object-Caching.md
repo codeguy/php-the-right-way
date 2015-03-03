@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 对象缓存
 anchor:  object_caching
 ---
 

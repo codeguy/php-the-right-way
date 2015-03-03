@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 复杂的问题
 anchor:  complex_problem
 ---
 

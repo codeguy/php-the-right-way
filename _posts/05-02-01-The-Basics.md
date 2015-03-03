@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 基础知识
 anchor:  the_basics
 ---
 

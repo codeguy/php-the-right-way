@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 编译模板
 anchor:  compiled_templates
 ---
 

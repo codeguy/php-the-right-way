@@ -1,6 +1,6 @@
 ---
 isChild: true
-title:   MySQL Extension
+title:   MySQL 扩展
 anchor:  mysql_extension
 ---
 

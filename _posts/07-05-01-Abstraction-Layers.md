@@ -1,6 +1,6 @@
 ---
 isChild: true
-title:   Abstraction Layers
+title:   数据库抽象层
 anchor:  databases_abstraction_layers
 ---
 

@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 命令行界面
 anchor:  command_line_interface
 ---
 

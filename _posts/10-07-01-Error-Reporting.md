@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 错误报告
 anchor:  error_reporting
 ---
 

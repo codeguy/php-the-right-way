@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 共享服务器
 anchor:  shared_servers
 ---
 

@@ -1,6 +1,6 @@
 ---
-title:   Standard PHP Library
 isChild: true
+title:   PHP 标准库
 anchor:  standard_php_library
 ---
 

@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 值得关注的大牛
 anchor:  people_to_follow
 ---
 

@@ -1,6 +1,6 @@
 ---
-title:   使用当前稳定版本 (5.6)
 isChild: true
+title:   使用当前稳定版本 (5.6)
 anchor:  use_the_current_stable_version
 ---
 

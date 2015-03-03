@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 虚拟或专用服务器
 anchor:  virtual_or_dedicated_servers
 ---
 
@@ -20,7 +21,7 @@ especially important on virtual servers that don't have much memory to spare.
 
 ### Apache and PHP
 
-PHP and Apache have a long history together. Apache is wildly configurable and has many available 
+PHP and Apache have a long history together. Apache is wildly configurable and has many available
 [modules][apache-modules] to extend functionality. It is a popular choice for shared servers and an easy setup for PHP
 frameworks and open source apps like WordPress. Unfortunately, Apache uses more resources than nginx by default and
 cannot handle as many visitors at the same time.

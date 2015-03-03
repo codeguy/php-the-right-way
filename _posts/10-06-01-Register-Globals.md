@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: 注册全局变量
 anchor:  register_globals
 ---
 

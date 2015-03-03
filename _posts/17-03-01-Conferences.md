@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: PHP 会议
 anchor:  conferences
 ---
 
