@@ -1,4 +1,4 @@
-# 欢迎
+# 欢迎 {#site-header}
 
 目前网络上充斥着大量的过时资讯，让 PHP 新手误入歧途，并且传播着错误的实践以及不安全的代码。_PHP 之道_ 收集了现有的 PHP 最佳实践、编码规范和权威学习指南，方便 PHP 开发者阅读和查找
 
@@ -6,7 +6,7 @@ _使用 PHP 沒有规范化的方式_。本网站主要是向 PHP 新手介绍�
 
 当有更多有用的资讯以及范例时，此文件会随着相关技术的发展而持续更新。
 
-## 翻译
+## 翻译 {#translations}
 
 _PHP 之道_已经翻译成多种语言：
 
@@ -32,11 +32,11 @@ _PHP 之道_已经翻译成多种语言：
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Ukrainian](http://iflista.github.com/php-the-right-way/)
 
-## 如何贡献
+## 如何贡献 {#how-to-contribute}
 
 帮助我们让本网站作为 PHP 新手的最佳资源！[在 GitHub 上贡献][1]
 
-## 推广
+## 推广 {#spread-the-word}
 
 您可以在网站上放置 PHP之道 的横幅来支持我们，让 PHP 的新人知道哪里可以获取到好的资料！
 
