@@ -1,5 +1,7 @@
 # PHP 之道
 
+[在线地址](http://laravel-china.github.io/php-the-right-way/)
+
 ## 概览
 
 这是 _PHP之道_ 项目的 GitHub Pages 仓库。
@@ -19,7 +21,7 @@
 
 1. Fork 然后编辑
 2. 安装 [Ruby](https://rvm.io/rvm/install/) 和 [Jekyll](https://github.com/mojombo/jekyll/) 在本地预览
-3. 提交一个 pull request 
+3. 提交一个 pull request
 
 ### 贡献者样式规范
 
