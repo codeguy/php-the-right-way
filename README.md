@@ -15,7 +15,7 @@
 
 您可以在网站上放置 _PHP之道_ 的横幅来支持我们，让 PHP 的新人知道哪里可以获取到好的资料！
 
-[横幅图片](http://www.phptherightway.com/banners.html)
+[横幅图片](http://laravel-china.github.io/php-the-right-way//banners.html)
 
 ## 如何贡献
 

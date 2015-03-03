@@ -1,6 +1,6 @@
 # Contributing to PHP The Right Way
 
-Enjoy [PHP The Right Way](http://phptherightway.com) and want to get 
+Enjoy [PHP The Right Way](http://laravel-china.github.io/php-the-right-way/) and want to get
 involved? Great! There are plenty of ways you can help out.
 
 Please take a moment to review this document in order to make the contribution
@@ -14,9 +14,9 @@ patches and features.
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/codeguy/php-the-right-way/issues) is
-the preferred channel for changes: spelling mistakes, wording changes, new 
-content and generally [submitting pull requests](#pull-requests), but please 
+The [issue tracker](https://github.com/laravel-china/php-the-right-way/issues) is
+the preferred channel for changes: spelling mistakes, wording changes, new
+content and generally [submitting pull requests](#pull-requests), but please
 respect the following restrictions:
 
 * Please **do not** use the issue tracker for personal support requests (use
@@ -29,8 +29,8 @@ respect the following restrictions:
 <a name="pull-requests"></a>
 ## Pull Requests
 
-Pull requests are a great way to add new content to PHP The Right Way, as well 
-as updating any browser issues or other style changes. Pretty much any sort of 
+Pull requests are a great way to add new content to PHP The Right Way, as well
+as updating any browser issues or other style changes. Pretty much any sort of
 change is accepted if seen as constructive.
 
 Adhering to the following this process is the best way to get your work
@@ -45,7 +45,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd php-the-right-way
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/codeguy/php-the-right-way.git
+   git remote add upstream https://github.com/laravel-china/php-the-right-way.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
@@ -88,7 +88,7 @@ included in the project:
 
 ## Contribution Agreement and Usage
 
-By submitting a pull request to this repository, you agree to allow the project 
+By submitting a pull request to this repository, you agree to allow the project
 owners to license your work under the the terms of the [Creative Commons Attribution-NonCommercial-ShareAlike
 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
