@@ -8,7 +8,7 @@ _使用 PHP 沒有规范化的方式_。本网站主要是向 PHP 新手介绍�
 
 ## 翻译 {#translations}
 
-_PHP 之道_已经翻译成多种语言：
+_PHP 之道_ 已经翻译成多种语言：
 
 * [English](http://www.phptherightway.com)
 * [Bulgarian](http://bg.phptherightway.com/)
