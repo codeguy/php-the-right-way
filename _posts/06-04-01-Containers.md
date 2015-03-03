@@ -3,14 +3,8 @@ isChild: true
 anchor:  containers
 ---
 
-## Containers {#containers_title}
+## 容器 {#containers_title}
 
-The first thing you should understand about Dependency Injection Containers is that they are not the same thing as
-Dependency Injection. A container is a convenience utility that helps us implement Dependency Injection, however, they
-can be and often are misused to implement an anti-pattern, Service Location. Injecting a DI container as a Service
-Locator in to your classes arguably creates a harder dependency on the container than the dependency you are replacing.
-It also makes your code much less transparent and ultimately harder to test.
+你应该明白的第一件事是依赖注入容器和依赖注入不是相同的概念。容器是帮助我们更方便地实现依赖注入的工具，但是他们通常被误用来实现反模式设计 Service Location 。把一个依赖注入容器作为 Service Locator 注入进类中隐式地建立了对于容器的依赖，而不是真正需要替换的依赖，而且还会让你的代码更不透明，最终变得更难测试。
 
-Most modern frameworks have their own Dependency Injection Container that allows you to wire your dependencies together
-through configuration. What this means in practice is that you can write application code that is as clean and de-
-coupled as the framework it is built on.
+大多数现代的框架都有自己的依赖注入容器，允许你通过配置将依赖绑定在一起。这实际上意味着你能写出和框架层同样干净、解耦的应用层代码。
