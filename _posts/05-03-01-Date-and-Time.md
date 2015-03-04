@@ -4,15 +4,11 @@ title: 日期和时间
 anchor:  date_and_time
 ---
 
-## Date and Time {#date_and_time_title}
+## 日期和时间 {#date_and_time_title}
 
-PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There
-are many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to
-most common uses. It can handle time zones, but that is outside this short introduction.
+PHP 中 DateTime 类的作用是在你读、写、比较或者计算日期和时间时提供帮助。除了 DateTime 类之外，PHP 还有很多与日期和时间相关的函数，但 DateTime 类为大多数常规使用提供了优秀的面向对象接口。它还可以处理时区，不过这并不在这篇简短的介绍之内。
 
-To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
-or do `new DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
-output.
+在使用 DateTime 之前，通过 `createFromFormat()` 工厂方法将原始的日期与时间字符串转换为对象或使用 `new DateTime` 来取得当前的日期和时间。使用 `format()` 将 DateTime 转换回字符串用于输出。
 
 {% highlight php %}
 <?php
@@ -22,10 +18,7 @@ $start = DateTime::createFromFormat('d. m. Y', $raw);
 echo 'Start date: ' . $start->format('Y-m-d') . "\n";
 {% endhighlight %}
 
-Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
-saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference
-use the `diff()` method. It will return new DateInterval, which is super easy to display.
+对 DateTime 进行计算时可以使用 DateInterval 类。DateTime 类具有例如 `add()` 和 `sub()` 等将 DateInterval 当作参数的方法。编写代码时注意不要认为每一天都是由相同的秒数构成的，不论是夏令时（DST）还是时区转换，使用时间戳计算都会遇到问题，应当选择日期间隔。使用 `diff()` 方法来计算日期之间的间隔，它会返回新的 DateInterval，非常容易进行展示。
 
 {% highlight php %}
 <?php
@@ -38,7 +31,7 @@ echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n"
 // Difference: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
-On DateTime objects you can use standard comparison:
+DateTime 对象之间可以直接进行比较：
 
 {% highlight php %}
 <?php
@@ -47,8 +40,7 @@ if ($start < $end) {
 }
 {% endhighlight %}
 
-One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
-DateTime objects, start and end, and the interval for which it will return all events in between.
+最后一个例子来演示 DatePeriod 类。它用来对循环的事件进行迭代。向它传入开始时间、结束时间和间隔区间，会得到这其中所有的事件。
 
 {% highlight php %}
 <?php
@@ -61,8 +53,8 @@ foreach ($periodIterator as $date) {
 }
 {% endhighlight %}
 
-* [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (accepted date format string options)
+* [阅读 DateTime][datetime]
+* [阅读日期格式][dateformat] (支持的日期字符串格式)
 
 [datetime]: http://php.net/book.datetime
 [dateformat]: http://php.net/function.date
