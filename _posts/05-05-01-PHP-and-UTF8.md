@@ -6,67 +6,44 @@ anchor:  php_and_utf8
 
 ## Working with UTF-8 {#php_and_utf8_title}
 
-_This section was originally written by [Alex Cabal](https://alexcabal.com/) over at
-[PHP Best Practices](https://phpbestpractices.org/#utf-8) and has been used as the basis for our own UTF-8 advice_.
+_本章是由 [Alex Cabal](https://alexcabal.com/) 最初撰写在 [PHP Best Practices](https://phpbestpractices.org/#utf-8) 中的，我们使用它作为进行建议的基础_。
 
-### There's no one-liner. Be careful, detailed, and consistent.
+### 这不是在开玩笑。请小心、仔细并且前后一致的处理它。
 
-Right now PHP does not support Unicode at a low level. There are ways to ensure that UTF-8 strings are processed OK,
-but it's not easy, and it requires digging in to almost all levels of the web app, from HTML to SQL to PHP. We'll aim
-for a brief, practical summary.
+目前，PHP 仍未在底层实现对 Unicode 的支持。虽然有很多途径可以确保 UTF-8 字符串能够被正确地处理，但这并不是很简单的事情，通常需要对 Web 应用进行全方面的检查，从 HTML 到 SQL 再到 PHP。我们将争取进行一个简洁实用的总结。
 
-### UTF-8 at the PHP level
+### PHP 层面的 UTF-8
 
-The basic string operations, like concatenating two strings and assigning strings to variables, don't need anything
-special for UTF-8. However most string functions, like `strpos()` and `strlen()`, do need special consideration. These
-functions often have an `mb_*` counterpart: for example, `mb_strpos()` and `mb_strlen()`. These `mb_*` strings are made
-available to you via the [Multibyte String Extension], and are specifically designed to operate on Unicode strings.
+最基本的字符串操作，像是连结两个字符串或将字符串赋值给变量，并不需要对 UTF-8 做特别的处理。然而大多数字符串的函数，像 `strpos()` 和 `strlen()`，确实需要特别的处理。这些函数名中通常包含 `mb_*`：比如，`mb_strpos()` 和 `mb_strlen()`。这些 `mb_*` 字符串是由 [Multibyte String Extension] 提供支持的，它专门为操作 Unicode 字符串而特别进行了设计。
 
-You must use the `mb_*` functions whenever you operate on a Unicode string. For example, if you use `substr()` on a
-UTF-8 string, there's a good chance the result will include some garbled half-characters. The correct function to use
-would be the multibyte counterpart, `mb_substr()`.
+在操作 Unicode 字符串时，请你务必使用 `mb_*` 函数。例如，如果你对一个 UTF-8 字符串使用 `substr()`，那返回的结果中有很大可能会包含一些乱码。正确的方式是使用 `mb_substr()`。
 
-The hard part is remembering to use the `mb_*` functions at all times. If you forget even just once, your Unicode
-string has a chance of being garbled during further processing.
+最难的地方在于每次都要记得使用 `mb_*` 函数。如果你哪怕只有一次忘记了使用，你的 Unicode 字符串就有在接下来的过程中变成乱码的风险。
 
-Not all string functions have an `mb_*` counterpart. If there isn't one for what you want to do, then you might be out
-of luck.
+不是所有的字符串函数都有一个对应的 `mb_*` 函数。如果你想要的功能没有对应的 `mb_*` 函数的话，那只能说你运气不佳了。
 
-You should use the `mb_internal_encoding()` function at the top of every PHP script you write (or at the top of your
-global include script), and the `mb_http_output()` function right after it if your script is outputting to a browser.
-Explicitly defining the encoding of your strings in every script will save you a lot of headaches down the road.
+你应该在你所有的 PHP 脚本（或全局包含的脚本）的开头使用 `mb_internal_encoding()` 函数，然后紧接着在会对浏览器进行输出的脚本中使用 `mb_http_output()`。在每一个脚本当中明确声明字符串的编码可以免去很多日后的烦恼。
 
-Additionally, many PHP functions that operate on strings have an optional parameter letting you specify the character
-encoding. You should always explicitly indicate UTF-8 when given the option. For example, `htmlentities()` has an
-option for character encoding, and you should always specify UTF-8 if dealing with such strings. Note that as of PHP 5.4.0, UTF-8 is the default encoding for `htmlentities()` and `htmlspecialchars()`.
+另外，许多对字符串进行操作的函数都有一个可选的参数用来指定字符串编码。当可以设定这类参数时，你应该始终明确指定使用 UTF-8。例如，`htmlentities()` 有一个字符编码的选项，你应该始终将其设为 UTF-8。从 PHP 5.4.0 开始, `htmlentities()` 和 `htmlspecialchars()` 的编码都已经被默认设为了 UTF-8。
 
-Finally, If you are building an distributed application and cannot be certain that the `mbstring` extension will be
-enabled, then consider using the [patchwork/utf8] Composer package. This will use `mbstring` if it is available, and
-fall back to non UTF-8 functions if not.
+最后，如果你所编写的是分布式的应用程序并且不能确定 `mbstring` 扩展一定开启的话，可以考虑使用 [patchwork/utf8] Composer 包。它会在 `mbstring` 可用时自动使用，否则自动切换回非 UTF-8 函数。
 
 [Multibyte String Extension]: http://php.net/book.mbstring
 [patchwork/utf8]: https://packagist.org/packages/patchwork/utf8
 
-### UTF-8 at the Database level
+### 数据库层面的 UTF-8
 
-If your PHP script accesses MySQL, there's a chance your strings could be stored as non-UTF-8 strings in the database
-even if you follow all of the precautions above.
+如果你使用 PHP 来操作到 MySQL，有些时候即使你做到了上面的没一点，你的字符串仍可能面临在数据库中以非 UTF-8 的格式进行存储的问题。
 
-To make sure your strings go from PHP to MySQL as UTF-8, make sure your database and tables are all set to the
-`utf8mb4` character set and collation, and that you use the `utf8mb4` character set in the PDO connection string. See
-example code below. This is _critically important_.
+为了确保你的字符串从 PHP 到 MySQL都使用 UTF-8，请检查确认你的数据库和数据表都设定为 `utf8mb4` 字符集和整理，并且确保你的 PDO 连接请求也使用了 `utf8mb4` 字符集。请看下方的示例代码，这是 _非常重要_ 的。
 
-Note that you must use the `utf8mb4` character set for complete UTF-8 support, not the `utf8` character set! See
-Further Reading for why.
+请注意为了完整的 UTF-8 支持，你必须使用 `utf8mb4` 而不是  `utf8`！你会在进一步阅读中找到原因。
 
-### UTF-8 at the browser level
+### 浏览器层面的 UTF-8
 
-Use the `mb_http_output()` function to ensure that your PHP script outputs UTF-8 strings to your browser.
+使用 `mb_http_output()` 函数来确保 PHP 向浏览器输出 UTF-8 格式的字符串。
 
-The browser will then need to be told by the HTTP response that this page should be considered as UTF-8. The historic
-approach to doing that was to include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in
-your page's `<head>` tag. This approach is perfectly valid, but setting the charset in the `Content-Type` header is
-actually [much faster](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly).
+随后浏览器需要接收 HTTP 应答来指定页面是由 UTF-8 进行编码的。以前这一步是通过在页面 `<head>` 标签下包含[字符集 `<meta>` 标签](http://htmlpurifier.org/docs/enduser-utf8.html)实现的，这是一种可行的方式。但更好的做法是在 `Content-Type` 响应头中进行设置，因为这样做的速度会[更快](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly)。
 
 {% highlight php %}
 <?php
@@ -128,14 +105,14 @@ header('Content-Type: text/html; charset=UTF-8');
 </html>
 {% endhighlight %}
 
-### Further reading
+### 延伸阅读
 
-* [PHP Manual: String Operations](http://php.net/language.operators.string)
-* [PHP Manual: String Functions](http://php.net/ref.strings)
+* [PHP 手册：字符串运算符](http://php.net/language.operators.string)
+* [PHP 手册：字符串函数](http://php.net/ref.strings)
     * [`strpos()`](http://php.net/function.strpos)
     * [`strlen()`](http://php.net/function.strlen)
     * [`substr()`](http://php.net/function.substr)
-* [PHP Manual: Multibyte String Functions](http://php.net/ref.mbstring)
+* [PHP 手册：多字节字符串函数](http://php.net/ref.mbstring)
     * [`mb_strpos()`](http://php.net/function.mb-strpos)
     * [`mb_strlen()`](http://php.net/function.mb-strlen)
     * [`mb_substr()`](http://php.net/function.mb-substr)
