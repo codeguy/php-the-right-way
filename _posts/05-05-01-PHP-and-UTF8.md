@@ -8,7 +8,7 @@ anchor:  php_and_utf8
 
 _本章是由 [Alex Cabal](https://alexcabal.com/) 最初撰写在 [PHP Best Practices](https://phpbestpractices.org/#utf-8) 中的，我们使用它作为进行建议的基础_。
 
-### 这不是在开玩笑。请小心、仔细并且前后一致的处理它。
+### 这不是在开玩笑。请小心、仔细并且前后一致地处理它。
 
 目前，PHP 仍未在底层实现对 Unicode 的支持。虽然有很多途径可以确保 UTF-8 字符串能够被正确地处理，但这并不是很简单的事情，通常需要对 Web 应用进行全方面的检查，从 HTML 到 SQL 再到 PHP。我们将争取进行一个简洁实用的总结。
 

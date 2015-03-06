@@ -42,5 +42,5 @@ _PHP 之道_ 已经翻译成多种语言：
 
 [广告横幅][2]
 
-[1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: /banners.html
+[1]: https://github.com/laravel-china/php-the-right-way/
+[2]: /php-the-right-way/banners.html
