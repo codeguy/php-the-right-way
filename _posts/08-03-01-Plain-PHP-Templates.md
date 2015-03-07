@@ -4,21 +4,16 @@ title: 原生 PHP 模板
 anchor:  plain_php_templates
 ---
 
-## Plain PHP Templates {#plain_php_templates_title}
+## 原生 PHP 模板 {#plain_php_templates_title}
 
-Plain PHP templates are simply templates that use native PHP code. They are a natural choice since PHP is actually a
-template language itself. That simply means that you can combine PHP code within other code, like HTML. This is
-beneficial to PHP developers as there is no new syntax to learn, they know the functions available to them, and their
-code editors already have PHP syntax highlighting and auto-completion built-in. Further, plain PHP templates tend to be
-very fast as no compiling stage is required.
+原生 PHP 模板就是指直接用 PHP 来写模板，这是很自然的选择，因为 PHP 本身其实是个模板语言。这代表你可以在其他的语言中结合 PHP 使用，比如 HTML 。这对 PHP 开发者相当有利，因为不需要额外学习新的语法，他们熟知可以使用的函数，并且使用的编辑器也已经内置了语法高亮和自动补全。此外，原生的 PHP 模板没有了编译阶段，速度会更快。
 
-Every modern PHP framework employs some kind of template system, most of which use plain PHP by default. Outside of
-frameworks, libraries like [Plates][plates] or [Aura.View][aura] make working with plain PHP templates easier by
-offering modern template functionality such as inheritance, layouts and extensions.
+现今的 PHP 框架都会使用一些模板系统，这当中多数是使用原生的 PHP 语法。在框架之外，一些类库比如 [Plates][plates] 或 [Aura.View][aura]，提供了现代化模板的常见功能，比如继承、布局、扩展，让原生的 PHP 模板更容易使用。
 
-### Simple example of a plain PHP template
 
-Using the [Plates][plates] library.
+### 原生 PHP 模板的简单示例
+
+使用 [Plates][plates] 类库。
 
 {% highlight php %}
 <?php // user_profile.php ?>
@@ -31,9 +26,9 @@ Using the [Plates][plates] library.
 <?php $this->insert('footer') ?>
 {% endhighlight %}
 
-### Example of plain PHP templates using inheritance
+### 原生 PHP 模板使用继承的示例
 
-Using the [Plates][plates] library.
+使用 [Plates][plates] 类库。
 
 {% highlight php %}
 <?php // template.php ?>
