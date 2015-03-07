@@ -4,7 +4,7 @@ title: Paas 提供商
 anchor:  php_paas_providers
 ---
 
-## PHP PaaS Providers {#php_paas_providers_title}
+## PHP 的 Paas 提供商 {#php_paas_providers_title}
 
 * [PagodaBox](https://pagodabox.com/)
 * [AppFog](https://appfog.com/)

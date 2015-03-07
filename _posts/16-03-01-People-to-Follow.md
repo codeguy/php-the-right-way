@@ -4,7 +4,7 @@ title: 值得关注的大牛
 anchor:  people_to_follow
 ---
 
-## People to Follow {#people_to_follow_title}
+## 值得关注的大牛 {#people_to_follow_title}
 
 * [Rasmus Lerdorf](http://twitter.com/rasmus)
 * [Fabien Potencier](http://twitter.com/fabpot)
