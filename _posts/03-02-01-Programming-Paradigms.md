@@ -19,9 +19,9 @@ interfaces, inheritance, constructors, cloning, exceptions, and more.
 
 ### Functional Programming
 
-PHP supports first-class function, meaning that a function can be assigned to a variable. Both user-defined and
+PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and
 built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
-other functions (a feature called _Higher-order Functions_) and function can return other functions.
+other functions (a feature called _Higher-order Functions_) and functions can return other functions.
 
 Recursion, a feature that allows a function to call itself, is supported by the language, but most PHP code
 is focused on iteration.
