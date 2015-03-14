@@ -1,26 +1,26 @@
 ---
-title: 命令行接口
-anchorid: command_line_interface
 isChild: true
+title: 命令行接口
+anchor: command_line_interface
 ---
 
-<h2 id="command_line_interface">命令行接口</h2>
+## 命令行接口 {#command_line_interface_title}
 
-PHP 是为开发 Web 应用而创建，不过它的命令行脚本接口(CLI)也非常有用。PHP命令行编程可以帮你完成自动化的任务，如测试，部署和应用管理。
+PHP 是为开发 Web 应用而创建，不过它的命令行脚本接口(CLI)也非常有用。PHP 命令行编程可以帮你完成自动化的任务，如测试，部署和应用管理。
 
-CLI PHP 编程非常强大，可以直接调用你自己的程序代码而无需创建 Web 图形界面，需要注意的是不要把 CLI PHP 脚本放在公开的 web 目录下！
+CLI PHP 编程非常强大，可以直接调用你自己的程序代码而无需创建 Web 图形界面，需要注意的是**不要**把 CLI PHP 脚本放在公开的 web 目录下！
 
 在命令行下运行 PHP :
 
-{% highlight bash %}
+{% highlight console %}
 > php -i
 {% endhighlight %}
 
-选项 `-i` 将会打印PHP配置，类似于[`phpinfo()`][phpinfo]函数。 
+选项 `-i` 将会打印 PHP 配置，类似于 [`phpinfo()`][phpinfo] 函数。 
 
 选项 `-a` 提供交互式 shell，和 Ruby 的 IRB 或 python 的交互式 shell 相似，此外还有很多其他有用的[命令行选项][cli-options]。
 
-接下来写一个简单的 "Hello, $name" CLI程序，先创建名为 `hello.php` 的脚本：
+接下来写一个简单的 "Hello, $name" CLI 程序，先创建名为 `hello.php` 的脚本：
 
 {% highlight php %}
 <?php
@@ -39,7 +39,7 @@ PHP 会在脚本运行时根据参数设置两个特殊的变量，[`$argc`][arg
 
 运行上面的脚本，在命令行输入：
 
-{% highlight bash %}
+{% highlight console %}
 > php hello.php
 Usage: php hello.php [name]
 > php hello.php world
