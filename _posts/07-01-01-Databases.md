@@ -3,15 +3,11 @@ title:  数据库
 anchor: databases
 ---
 
-# Databases {#databases_title}
+# 数据库 {#databases_title}
 
-Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysqli], [pgsql],
-[mssql], etc.
+绝大多数时候你的 PHP 程序都需要使用数据库来长久地保存数据。这时你有一些不同的选择可以来连接并与数据库进行交互。在 **PHP 5.1.0 之前**，我们推荐的方式是使用例如 [mysqli]，[pgsql]，[mssql] 等原生驱动。
 
-Native drivers are great if you are only using _one_ database in your application, but if, for example, you are using
-MySQL and a little bit of MSSQL, or you need to connect to an Oracle database, then you will not be able to use the
-same drivers. You'll need to learn a brand new API for each database &mdash; and that can get silly.
+原生驱动是在只使用 _一个_ 数据库的情况下的不错的方式，但如果，举个例子来说，你同时使用了 MySQL 和一点点 MSSQL，或者你需要使用 Oracle 的数据库，那你就不能够只使用一个数据库驱动了。你需要为每一个数据库去学习各自不同的 API &mdash; 这样做显然不科学。
 
 
 [mysqli]: http://php.net/mysqli
