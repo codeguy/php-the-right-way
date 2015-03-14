@@ -22,9 +22,37 @@ instead of loosening dependencies, this method simply moved them.
 Dependency Injection allows us to more elegantly solve this problem by only injecting the dependencies we need, when we
 need them, without the need for any hard coded dependencies at all.
 
-### Dependency Inversion Principle
+### SOLID
 
-Dependency Inversion Principle is the "D" in the S.O.L.I.D set of object oriented design principles that states one
+#### Single responsibility principle
+
+It's very helpful principle because it improve code reusability and
+states that every class should have responsibility over a single part of the functionality provided by the software.
+Your class should do just one thing and no more. And you can use it in any place of program without changing it.
+
+#### Open/closed principle
+
+States that classes should be open for extension, but closed for modification.
+it's very important and helpful especially in production,
+because it provides ability to change program behaviour without changing source code.
+
+#### Liskov substitution principle
+
+This principle extends previous principle, and states
+if S is a subtype of T, then objects of type T in a program may be replaced with objects of type S
+without altering any class of the program.
+That's amazing principle provides ability to build very flexible and easily configurable programs
+because when you change one object to another you don't need to change anything in your program.
+
+#### Interface segregation principle
+
+Splits interfaces which are very large into smaller and more specific ones.
+It provides to work in each time only with methods that interesting for client,
+and facilitate conceptual explanation of the code.
+
+#### Dependency Inversion Principle
+
+Dependency Inversion Principle set of object oriented design principles that states one
 should *"Depend on Abstractions. Do not depend on concretions."*. Put simply, this means our dependencies should be
 interfaces/contracts or abstract classes rather than concrete implementations. We can easily refactor the above example
 to follow this principle.
