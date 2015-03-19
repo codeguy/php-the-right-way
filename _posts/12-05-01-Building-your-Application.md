@@ -1,15 +1,17 @@
 ---
 isChild: true
-title: 建立及部署应用
+title: 构建及部署应用
 anchor:  building_and_deploying_your_application
 ---
 
-## Building and Deploying your Application {#building_and_deploying_your_application_title}
+## 构建及部署应用 {#building_and_deploying_your_application_title}
 
 If you find yourself doing manual database schema changes or running your tests manually before updating your files
 (manually), think twice! With every additional manual task needed to deploy a new version of your app, the chances for
 potentially fatal mistakes increase. Whether you're dealing with a simple update, a comprehensive build process or even
 a continuous integration strategy, [build automation][buildautomation] is your friend.
+
+如果你在手动的进行数据库结构的修改或者在更新文件前手动运行测试，请三思而后行！因为随着每一个额外的手动任务的添加都需要去部署一个新的版本到应用程序，这些更改会增加程序潜在的致命错误。即使你是在处理一个简单的更新，全面的构建处理或者持续集成策略，[构建自动化][buildautomation]绝对是你的朋友。
 
 Among the tasks you might want to automate are:
 
