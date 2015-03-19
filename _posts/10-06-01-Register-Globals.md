@@ -4,16 +4,12 @@ title: 注册全局变量
 anchor:  register_globals
 ---
 
-## Register Globals {#register_globals_title}
+## 注册全局变量 {#register_globals_title}
 
-**NOTE:** As of PHP 5.4.0 the `register_globals` setting has been removed and can no longer be used. This is only
-included as a warning for anyone in the process of upgrading a legacy application.
+**注意：** 自 PHP 5.4.0 开始，`register_globals` 选项已经被移除并不再使用。这是在提醒你如果你正在升级旧的应用程序的话，你需要注意这一点。
 
-When enabled, the `register_globals` configuration setting that makes several types of variables (including ones from
-`$_POST`, `$_GET` and `$_REQUEST`) available in the global scope of your application. This can easily lead to security
-issues as your application cannot effectively tell where the data is coming from.
+当 `register_globals` 选项被开启时，它会使许多类型的变量（包括 `$_POST`, `$_GET` 和 `$_REQUEST`）被注册为全局变量。这将很容易使你的程序无法有效地判断数据的来源并导致安全问题。
 
-For example: `$_GET['foo']` would be available via `$foo`, which can override variables that have not been declared.
-If you are using PHP < 5.4.0 __make sure__ that `register_globals` is __off__.
+例如：`$_GET['foo']` 可以通过 `$foo` 被访问到，也就是可以对未声明的变量进行覆盖。如果你使用低于 5.4.0 版本的 PHP 的话，请 __确保__ `register_globals` 是被设为 __off__ 的。
 
-* [Register_globals in the PHP manual](http://php.net/security.globals)
+* [在 PHP 手册中了解 Register_globals](http://php.net/security.globals)

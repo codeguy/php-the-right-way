@@ -4,14 +4,10 @@ title: 配置文件
 anchor:  configuration_files
 ---
 
-## Configuration Files {#configuration_files_title}
+## 配置文件 {#configuration_files_title}
 
-When creating configuration files for your applications, best practices recommend that one of the following methods be
-followed:
+当你在为你的应用程序创建配置文件时，最好的选择时参照以下的做法：
 
-- It is recommended that you store your configuration information where it cannot be accessed directly and pulled in
-via the file system.
-- If you must store your configuration files in the document root, name the files with a `.php` extension. This ensures
-that, even if the script is accessed directly, it will not be output as plain text.
-- Information in configuration files should be protected accordingly, either through encryption or group/user file
-system permissions
+- 推荐你将你的配置信息存储在无法被直接读取和上传的位置上。
+- 如果你一定要存储配置文件在根目录下，那么请使用 `.php` 的扩展名来进行命名。这将可以确保即使脚本被直接访问到，它也不会被以明文的形式输出出来。
+- 配置文件中的信息需要被针对性的保护起来，对其进行加密或者设置访问权限。

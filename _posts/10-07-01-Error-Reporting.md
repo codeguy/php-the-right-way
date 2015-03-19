@@ -4,16 +4,13 @@ title: 错误报告
 anchor:  error_reporting
 ---
 
-## Error Reporting {#error_reporting_title}
+## 错误报告 {#error_reporting_title}
 
-Error logging can be useful in finding the problem spots in your application, but it can also expose information about
-the structure of your application to the outside world. To effectively protect your application from issues that could
-be caused by the output of these messages, you need to configure your server differently in development versus
-production (live).
+错误日志对于发现程序中的错误是非常有帮助的，但是有些时候它也会将应用程序的结构暴露给外部。为了有效的保护你的应用程序不受到由此而引发的问题。你需要将在你的服务器上使用开发和生产（线上）两套不同的配置。
 
-### Development
+### 开发环境
 
-To show every possible error during <strong>development</strong>, configure the following settings in your `php.ini`:
+为了在<strong>开发</strong>环境中显示所有可能的错误，将你的 `php.ini` 进行如下配置：
 
 {% highlight ini %}
 display_errors = On
@@ -22,23 +19,21 @@ error_reporting = -1
 log_errors = On
 {% endhighlight %}
 
-> Passing in the value `-1` will show every possible error, even when new levels and constants are added in future PHP
-> versions. The `E_ALL` constant also behaves this way as of PHP 5.4. -
+> 将值设为 `-1` 将会显示出所有的错误，甚至包括在未来的 PHP 版本中新增加的类型和参数。
+> 和 PHP 5.4 起开始使用的 `E_ALL` 是相同的。-
 > [php.net](http://php.net/function.error-reporting)
 
-The `E_STRICT` error level constant was introduced in 5.3.0 and is not part of `E_ALL`, however it became part of
-`E_ALL` in 5.4.0. What does this mean? In terms of reporting every possible error in version 5.3 it means you must
-use either `-1` or `E_ALL | E_STRICT`.
+`E_STRICT` 类型的错误是在 5.3.0 中被引入的，并没有被包含在 `E_ALL` 中。然而从 5.4.0 开始，它被包含在了 `E_ALL` 中。这意味着什么？这表示如果你想要在 5.3 中显示所有的错误信息，你需要使用 `-1` 或者 `E_ALL | E_STRICT`。
 
-**Reporting every possible error by PHP version**
+**不同 PHP 版本下开启全部错误显示**
 
-* &lt; 5.3 `-1` or `E_ALL`
-* &nbsp; 5.3 `-1` or `E_ALL | E_STRICT`
-* &gt; 5.3 `-1` or `E_ALL`
+* &lt; 5.3 `-1` 或 `E_ALL`
+* &nbsp; 5.3 `-1` 或 `E_ALL | E_STRICT`
+* &gt; 5.3 `-1` 或 `E_ALL`
 
-### Production
+### 生产环境
 
-To hide errors on your <strong>production</strong> environment, configure your `php.ini` as:
+为了在<strong>生产</strong>环境中隐藏错误显示，将你的 `php.ini` 进行如下配置：
 
 {% highlight ini %}
 display_errors = Off
@@ -47,10 +42,9 @@ error_reporting = E_ALL
 log_errors = On
 {% endhighlight %}
 
-With these settings in production, errors will still be logged to the error logs for the web server, but will not be
-shown to the user. For more information on these settings, see the PHP manual:
+当在生产环境中使用这个配置时，错误信息依旧会被照常存储在 web 服务器的错误日志中，唯一不同的是将不再显示给用户。更多关于设置的信息，请参考 PHP 手册：
 
-* [error_reporting](http://php.net/errorfunc.configuration#ini.error-reporting)
-* [display_errors](http://php.net/errorfunc.configuration#ini.display-errors)
-* [display_startup_errors](http://php.net/errorfunc.configuration#ini.display-startup-errors)
-* [log_errors](http://php.net/errorfunc.configuration#ini.log-errors)
+* [错误报告](http://php.net/errorfunc.configuration#ini.error-reporting)
+* [显示错误](http://php.net/errorfunc.configuration#ini.display-errors)
+* [显示启动错误](http://php.net/errorfunc.configuration#ini.display-startup-errors)
+* [记录错误](http://php.net/errorfunc.configuration#ini.log-errors)
