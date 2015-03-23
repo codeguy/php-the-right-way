@@ -3,6 +3,6 @@ title: 服务器与部署
 anchor: servers_and_deployment
 ---
 
-# Servers and Deployment {#servers_and_deployment_title}
+# 服务器与部署 {#servers_and_deployment_title}
 
-PHP applications can be deployed and run on production web servers in a number of ways.
+部署 PHP 应用程序到生产环境中有多种方式。
