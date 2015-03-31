@@ -16,7 +16,7 @@ Mavericks 是 5.4.17， Yosemite 则是 5.5.9， 但在 PHP 5.6 出来之后， 
 [Homebrew] 是一个强大的 OS X 专用包管理器， 它可以帮助你轻松的安装 PHP 和各种扩展。
 [Homebrew PHP] 是一个包含与 PHP 相关的 Formulae，能让你通过 homebrew 安装 PHP 的仓库。
 
-也就是说, 你可以通过 `brew install` 命令安装 `php53`, `php54`, `php55` 或者 `php56` ，并且通过修改 `PATH` 变量来切换各个版本。
+也就是说, 你可以通过 `brew install` 命令安装 `php53`, `php54`, `php55` 或者 `php56` ，并且通过修改 `PATH` 变量来切换各个版本。或者你也可以使用 [brew-php-switcher][brew-php-switcher] 来自动切换。
 
 ### 通过 Macports 安装 PHP
 
@@ -58,3 +58,4 @@ MacPorts 支持预编译的二进制文件，因此你不必每次都重新从�
 ["Command Line Tools for XCode"]: https://developer.apple.com/downloads
 [mamp-downloads]: http://www.mamp.info/en/downloads/
 [xampp]: http://www.apachefriends.org/en/xampp.html
+[brew-php-switcher]: https://github.com/philcook/brew-php-switcher
