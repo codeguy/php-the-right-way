@@ -16,7 +16,7 @@ There are multiple ways to install PHP on OS X.
 [Homebrew PHP] is a repository that contains PHP-related "formulae" for Homebrew, and will let you install PHP.
 
 At this point, you can install `php53`, `php54`, `php55` or `php56` using the `brew install` command, and switch
-between them by modifying your `PATH` variable.
+between them by modifying your `PATH` variable. Alternatively you can use [brew-php-switcher][brew-php-switcher] which will switch automatically for you.
 
 ### Install PHP via Macports
 
@@ -65,3 +65,4 @@ you and tie them all together, but ease of setup comes with a trade-off of flexi
 ["Command Line Tools for XCode"]: https://developer.apple.com/downloads
 [mamp-downloads]: http://www.mamp.info/en/downloads/
 [xampp]: http://www.apachefriends.org/en/xampp.html
+[brew-php-switcher]: https://github.com/philcook/brew-php-switcher
