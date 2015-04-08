@@ -67,7 +67,7 @@ include 'views/foo-list.php';
 
 {% highlight php %}
 <?php
-class FooModel()
+class FooModel
 {
     protected $db;
 
