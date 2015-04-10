@@ -1,9 +1,10 @@
 ---
+title:   공유서버
 isChild: true
 anchor:  shared_servers
 ---
 
-## 공유 서버 {#shared_servers_title}
+## 공유서버 {#shared_servers_title}
 
 PHP는 인기있는 언어라서 공유 서버에서 PHP를 사용할 수도 있습니다. PHP가 설치되지 않은 호스팅 서비스를 찾기는 쉽지
 않겠지만 최신 버전 PHP가 설치되어 있는지는 확인을 해보아야 합니다. 여러분의 웹 어플리케이션과 다른 개발자들의 웹

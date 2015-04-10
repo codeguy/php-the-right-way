@@ -1,5 +1,5 @@
 ---
-title:   예외
+title:   예외 (Exceptions)
 isChild: true
 anchor:  exceptions
 ---

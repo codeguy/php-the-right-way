@@ -1,5 +1,5 @@
 ---
-title:   서버와 배포
+title:  서버와 배포
 anchor: servers_and_deployment
 ---
 

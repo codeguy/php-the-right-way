@@ -1,9 +1,10 @@
 ---
+title:   사용자 그룹
 isChild: true
 anchor:  user_groups
 ---
 
-## PHP 사용자 그룹 {#user_groups_title}
+## 사용자 그룹 {#user_groups_title}
 
 If you live in a larger city, odds are there's a PHP user group nearby. You can easily find your local PUG at
 the [usergroup-list at php.net][php-uglist] which is based upon [PHP.ug][php-ug]. Alternate sources might be

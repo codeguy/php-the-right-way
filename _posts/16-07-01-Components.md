@@ -1,9 +1,10 @@
 ---
+title:   컴포넌트
 isChild: true
 anchor:  components
 ---
 
-## 컴포넌트들 {#components_title}
+## 컴포넌트 {#components_title}
 
 "컴포넌트"는 공유될 수 있는 코드를 작성하고 배포하기 위한 또다른 접근 방식입니다. 다양한 컴포넌트 저장소가 존재하지만
 주요한 것은 두 가지가 있습니다.

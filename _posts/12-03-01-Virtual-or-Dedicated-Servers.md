@@ -1,9 +1,10 @@
 ---
+title:   가상서버 또는 전용서버
 isChild: true
 anchor:  virtual_or_dedicated_servers
 ---
 
-## 가상 서버나 전용 서버 {#virtual_or_dedicated_servers_title}
+## 가상서버 또는 전용서버 {#virtual_or_dedicated_servers_title}
 
 시스템 관리에 이미 익숙하거나 배우고 싶은 생각이 있다면 가상 서버나 전용 서버를 사용하는 것이 좋겠습니다.
 어플리케이션의 운영 환경에 대한 모든 것을 직접 조절할 수 있으니까요.

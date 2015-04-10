@@ -1,9 +1,10 @@
 ---
+title:   행위 주도 개발 (BDD)
 isChild: true
 anchor:  behavior_driven_development
 ---
 
-## 행위 주도 개발 {#behavior_driven_development_title}
+## 행위 주도 개발 (BDD) {#behavior_driven_development_title}
 
 행위 주도 개발(Behavior-Driven Development, BDD)에는 SpecBDD와 StoryBDD라는 두 가지 형태가 있습니다. SpecBDD는 코드의
 기술적인 행위에 초점을 맞추는 반면, StoryBDD는 비즈니스 관점이나 기능 관점의 행위와 상호작용에 초점을 맞춥니다. 두

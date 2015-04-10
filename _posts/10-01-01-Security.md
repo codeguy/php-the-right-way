@@ -1,5 +1,5 @@
 ---
-title:   보안
+title:  보안
 anchor: security
 ---
 
