@@ -1,6 +1,7 @@
 ---
 layout: page
 title: PHP 기본
+sitemap: true
 ---
 
 # PHP 기본
@@ -32,8 +33,9 @@ if (strpos('testing', 'test') !== false) {    // (0 !== false)의 비교 결과�
 }
 {% endhighlight %}
 
-* [Comparison operators](http://php.net/manual/en/language.operators.comparison.php)
-* [Comparison table](http://php.net/manual/en/types.comparisons.php)
+* [Comparison operators](http://php.net/language.operators.comparison)
+* [Comparison table](http://php.net/types.comparisons)
+* [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
 
 ## 조건 구문
 
@@ -63,7 +65,7 @@ function test($a)
 }
 {% endhighlight %}
 
-* [If 구문](http://php.net/manual/en/control-structures.if.php)
+* [If 구문](http://php.net/control-structures.if)
 
 ### Switch 구문
 
@@ -96,7 +98,7 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch 구문](http://php.net/manual/en/control-structures.switch.php)
+* [Switch 구문](http://php.net/control-structures.switch))
 * [PHP switch](http://phpswitch.com/)
 
 ## 전역 네임스페이스
@@ -120,8 +122,8 @@ function array()
 }
 {% endhighlight %}
 
-* [Global space](http://php.net/manual/en/language.namespaces.global.php)
-* [Global rules](http://php.net/manual/en/userlandnaming.rules.php)
+* [Global space](http://php.net/language.namespaces.global)
+* [Global rules](http://php.net/userlandnaming.rules)
 
 ## 문자열
 
@@ -145,18 +147,21 @@ $a = 'Multi-line example'      // 연결 연산자 (.)
     . 'of what to do';
 {% endhighlight %}
 
-* [문자열 연산자](http://php.net/manual/en/language.operators.string.php)
+* [문자열 연산자](http://php.net/language.operators.string)
 
 ### 문자열의 유형
 
-문자열은 PHP 커뮤니티에서 오랫동안 유지되어 온 기능입니다. 문자열 유형들 간의 차이와 장단점에 대해서 설명해 보겠습니다.
+Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
+strings and they offer slightly different syntax, with slightly different behaviors.
 
 #### 작은따옴표
 
-작은따옴표(single quotes)는 문자열을 정의하는 가장 쉬운 방법이면서 또 종종 가장 빠르게 수행되는 문자열 구문이기도 합니다. 작은따옴표 문자열은 PHP가 문자열의 내용을 분석하지 않아도 되기 때문에 실행 속도가 빨라질 수 있는 것입니다. 아래와 같은 문자열을 사용하려는 경우 작은따옴표 문자열을 사용하세요.
+Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
+variables.
 
-- PHP가 내용을 분석하지 않아도 되는 문자열 
-- 변수명을 일반 텍스트로 출력하려고 하는 경우
+If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
+exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
+errors if no variable was found.
 
 {% highlight php %}
 <?php
@@ -169,15 +174,12 @@ echo 'This is my string, look at how pretty it is.';    // 단순히 텍스트�
  */
 {% endhighlight %}
 
-* [작은따옴표 문자열](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.single)
+* [작은따옴표](http://php.net/language.types.string#language.types.string.syntax.single)
 
 #### 큰따옴표
 
-큰따옴표(double quotes)는 문자열계의 스위스칼이라고 할 수 있습니다. 하지만 PHP가 내용을 분석하여 실행하기 때문에 상대적으로 느리기도 합니다. 아래와 같은 경우에 사용하세요.
-
-- 이스케이프된 문자가 포함되는 경우
-- 문자열에 변수의 값을 포함하려는 경우
-- 여러 줄에 걸쳐 연결 연산자로 잇는 문자열을 한 줄로 줄여서 가독성을 높이려는 경우
+Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
+of special characters, like `\n` for newline, `\t` for a tab, etc.
 
 {% highlight php %}
 <?php
@@ -191,7 +193,18 @@ echo "phptherightway is $adjective.\n I love learning $code!"  // 큰따옴표 �
                                                                // 쓰지 않고도 한 방에 해결할 수 있다.
 {% endhighlight %}
 
-큰따옴표 문자열 안에 포함된 변수 바로 뒤에 일반 텍스트를 붙여야 할 때, 뒤에 붙는 문자 때문에 PHP가 변수명을 제대로 읽지 못할 수가 있습니다. 이럴 때에는 중괄호로 변수를 감싸주면 됩니다.
+Double quotes can contain variables; this is called "interpolation".
+
+{% highlight php %}
+<?php
+$juice = 'plum';
+echo "I like $juice juice";    // Output: I like plum juice
+{% endhighlight %}
+
+When using interpolation, it is often the case that the variable will be touching another character. This will result
+in some confusion as to what is the name of the variable, and what is a literal character.
+
+To fix this problem, wrap the variable within a pair of curly brackets.
 
 {% highlight php %}
 <?php
@@ -211,7 +224,7 @@ $juice = array('apple', 'orange', 'plum');
 echo "I drank some juice made of {$juice[1]}s";   // $juice[1] 이 잘 분석된다.
 {% endhighlight %}
 
-* [큰따옴표 문자열](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.double)
+* [큰따옴표](http://php.net/language.types.string#language.types.string.syntax.double)
 
 #### Nowdoc 문법
 
@@ -236,7 +249,7 @@ EOD;                        // 끝을 나타내는 'EOD'는 반드시 줄의 가
  */
 {% endhighlight %}
 
-* [Nowdoc 문법](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc)
+* [Nowdoc 문법](http://php.net/language.types.string#language.types.string.syntax.nowdoc)
 
 #### Heredoc 문법
 
@@ -263,7 +276,25 @@ EOD;                        // 끝을 나타내는 'EOD'는 반드시 줄의 가
  */
 {% endhighlight %}
 
-* [Heredoc 문법](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc)
+* [Heredoc 문법](http://php.net/language.types.string#language.types.string.syntax.heredoc)
+
+### Which is quicker?
+
+There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
+fundamentally not true.
+
+If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
+or double quoted string will be entirely identical. Neither are quicker.
+
+If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
+results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
+values, interpolating is minutely faster.
+
+Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
+application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
+optimization unless you really understand the meaning and impact of the differences.
+
+* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 ## 삼항 연산자
 
@@ -296,7 +327,8 @@ $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // 'yay'를 리턴한다.
 {% endhighlight %}
 
-boolean 값을 리턴하는데에 꼭 삼항 연산자를 사용할 필요는 없다는 걸 기억하세요.
+It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
+would be.
 
 {% highlight php %}
 <?php
@@ -314,8 +346,8 @@ return $a == 3; // $a == 3 인지에 따라 true나 false 를 리턴한다.
 
 #### 삼항 연산자 사용 시 가독성과 기능을 고려한 괄호 사용하기
 
-삼항 연산자를 사용할 때, 괄호를 적절히 활용하면 가독성을 높여주기도 하고, 여러 구문을 묶어서 
-의미를 다르게 만들어 주기도 합니다. 괄호를 넣지 않아도 되는 경우를 한 번 보시죠.
+When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
+within blocks of statements. An example of when there is no requirement to use bracketing is:
 
 {% highlight php %}
 <?php
@@ -324,7 +356,6 @@ return ($a == 3) ? "yay" : "nope"; // $a == 3 일 때에는 yay 를 리턴한다
 
 // vs
 
-<?php
 $a = 3;
 return $a == 3 ? "yay" : "nope"; // $a == 3 일 때에는 yay 를 리턴한다.
 {% endhighlight %}
@@ -346,7 +377,7 @@ return ($a == 3 && $b == 4) && $c == 5;
 return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
-* [삼항 연산자](http://php.net/manual/en/language.operators.comparison.php)
+* [삼항 연산자](http://php.net/language.operators.comparison)
 
 ## 변수 선언
 
@@ -362,4 +393,4 @@ echo $about;
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
-* [성능 팁](https://developers.google.com/speed/articles/optimizing-php)
+* [성능 팁](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)

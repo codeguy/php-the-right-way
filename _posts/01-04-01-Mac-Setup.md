@@ -1,22 +1,69 @@
 ---
 isChild: true
-anchor: mac_setup
+anchor:  mac_setup
 ---
 
-## Mac Setup  {#mac_setup_title}
+## Mac Setup {#mac_setup_title}
 
-OS X 에는 기본적으로 PHP 가 포함되어 있지만, 최신의 안정버전 릴리스가 포함되지는 않습니다. Lion 에는 PHP 5.3.6 버전이 포함되어 있고, Mountain Lion 에는 5.3.10, Mavericks 에는 5.4.17 버전이 포함되어 있습니다.
+OS X 에는 기본적으로 PHP 가 포함되어 있지만, 최신의 안정버전 릴리스가 포함되지는 않습니다. Mountain Lion 에는 PHP
+5.3.10 버전이 포함되어 있고, Mavericks 에는 5.4.17, Yosemite에는 5.5.9 버전이 포함되어 있습니다. 그러나 PHP 5.6이
+나왔기 때문에 이로는 충분치 않습니다.
 
-OS X 에서 PHP 를 업데이트하려면 [각종 패키지 관리자][mac-package-managers]나 [php-osx by Liip][php-osx-downloads] 를 사용하면 됩니다.
+OS X에 PHP를 설치하기 위해선 여러가지 방법이 있습니다.
 
-[직접 컴파일하여][mac-compile] 설치할 수도 있는데, 그럴 때에는 Xcode 나 ["Command Line Tools for Xcode"][apple-developer]가 설치되어 있어야 합니다.
+### Install PHP via Homebrew
 
-PHP, Apache 웹서버, MySQL 데이터베이스와 GUI 기반의 관리 도구까지 포함한 "올인원" 패키지인 [MAMP][mamp-downloads]나 [XAMPP][xampp]도 고려해볼만 합니다.
+[Homebrew] is a powerful package manager for OS X, which can help you install PHP and various extensions easily.
+[Homebrew PHP] is a repository that contains PHP-related "formulae" for Homebrew, and will let you install PHP.
 
-[mac-package-managers]: http://www.php.net/manual/en/install.macosx.packages.php
-[mac-compile]: http://www.php.net/manual/en/install.macosx.compile.php
+At this point, you can install `php53`, `php54`, `php55` or `php56` using the `brew install` command, and switch
+between them by modifying your `PATH` variable. Alternatively you can use [brew-php-switcher][brew-php-switcher] which will switch automatically for you.
+
+### Install PHP via Macports
+
+The [MacPorts] Project is an open-source community initiative to design an
+easy-to-use system for compiling, installing, and upgrading either
+command-line, X11 or Aqua based open-source software on the OS X operating
+system.
+
+MacPorts supports pre-compiled binaries, so you don't need to recompile every
+dependencies from the source tarball files, it saves your life if you don't
+have any package installed on your system.
+
+At this point, you can install `php53`, `php54`, `php55` or `php56` using the `port install` command, for example:
+
+    sudo port install php54
+    sudo port install php55
+
+And you can run `select` command to switch your active php:
+
+    sudo port select --set php php55
+
+### Install PHP via phpbrew
+
+[phpbrew] is a tool for installing and managing multiple PHP versions. This can be really useful if two different
+applications/projects require different versions of PHP, and you are not using virtual machines.
+
+### Compile from Source
+
+Another option that gives you control over the version of PHP you install, is to [compile it yourself][mac-compile].
+In that case be sure to have installed either [Xcode][xcode-gcc-substitution] or Apple's substitute
+["Command Line Tools for XCode"] downloadable from Apple's Mac Developer Center.
+
+### All-in-One Installers
+
+The solutions listed above mainly handle PHP itself, and do not supply things like Apache, Nginx or a SQL server.
+"All-in-one" solutions such as [MAMP][mamp-downloads] and [XAMPP][xampp] will install these other bits of software for
+you and tie them all together, but ease of setup comes with a trade-off of flexibility.
+
+
+[Homebrew]: http://brew.sh/
+[Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
+[MacPorts]: https://www.macports.org/install.php
+[phpbrew]: https://github.com/phpbrew/phpbrew
+[mac-compile]: http://php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
-[apple-developer]: https://developer.apple.com/downloads
-[mamp-downloads]: http://www.mamp.info/en/downloads/index.html
-[php-osx-downloads]: http://php-osx.liip.ch/
+["Command Line Tools for XCode"]: https://developer.apple.com/downloads
+[mamp-downloads]: http://www.mamp.info/en/downloads/
 [xampp]: http://www.apachefriends.org/en/xampp.html
+[brew-php-switcher]: https://github.com/philcook/brew-php-switcher

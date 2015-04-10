@@ -1,7 +1,7 @@
 # 환영합니다!
 
 웹상에는 오래되어 잘못된 정보들이 많습니다. 이런 정보들 때문에 새로 PHP를 접하는 사용자들이 잘못된 길로 접어들고, 
-옳지 않은 프랙티스를 접하는 일은 막아야 합니다. _PHP: The Right Way_ 는 PHP 를 사용하는 사람들에게 널리 받아들여진
+잘못된 습관과 안전하지 못한 코드를 양산하게 됩니다. _PHP: The Right Way_ 는 PHP 를 사용하는 사람들에게 널리 받아들여진
 코딩 표준, 권위있는 튜토리얼로의 링크를 제공하며, 이 프로젝트에 참여하고 있는 공헌자들이 생각하기에
 현 시점에서 PHP의 베스트 프랙티스라고 할 수 있는 내용들을 포함하고 있습니다.
 
@@ -17,25 +17,27 @@ PHP를 사용하는 사람들이 그동안 생각해보지 않았을지도 모�
 
 _PHP: The Right Way_ 는 다양한 언어로 변역되어 있습니다.
 
-* [영어판](http://www.phptherightway.com)
-* [프랑스어판](http://eilgin.github.io/php-the-right-way/)
-* [중국어판 (간체)](http://wulijun.github.com/php-the-right-way)
-* [일본어판](http://ja.phptherightway.com)
-* [한국어판](http://modernpug.github.io/php-the-right-way/)
-* [인도네시아어판](http://id.phptherightway.com/)
-* [이탈리아어판](http://it.phptherightway.com/)
-* [폴란드어판](http://pl.phptherightway.com/)
-* [포르투갈어판](http://br.phptherightway.com/)
-* [루마니아어판](https://bgui.github.io/php-the-right-way/)
-* [러시아어판](http://getjump.github.io/ru-php-the-right-way)
-* [스페인어판](http://phpdevenezuela.github.io/php-the-right-way/)
-* [우크라이나어판](http://iflista.github.com/php-the-right-way/)
-* [불가리아어판](http://bg.phptherightway.com/)
 * [독일어판](http://rwetzlmayr.github.io/php-the-right-way/)
-* [태국어판](https://apzentral.github.io/php-the-right-way/)
-* [터키어판](http://hkulekci.github.io/php-the-right-way/)
+* [러시아어판](http://getjump.github.io/ru-php-the-right-way)
+* [루마니아어](https://bgui.github.io/php-the-right-way/)
+* [불가리아어판](http://bg.phptherightway.com/)
+* [세르비아어](http://smatejic.github.io/php-the-right-way/)
+* [스페인어판](http://phpdevenezuela.github.io/php-the-right-way/)
 * [슬로베니아어판](http://sl.phptherightway.com)
-
+* [영어판](http://www.phptherightway.com)
+* [우크라이나어판](http://iflista.github.com/php-the-right-way/)
+* [이탈리아어](http://it.phptherightway.com)
+* [인도네시아어](http://id.phptherightway.com)
+* [일본어판](http://ja.phptherightway.com)
+* [중국어판 (간체)](http://wulijun.github.com/php-the-right-way)
+* [중국어판 (번체)](http://laravel-taiwan.github.io/php-the-right-way)
+* [태국어](https://apzentral.github.io/php-the-right-way/)
+* [터키어판](http://hkulekci.github.io/php-the-right-way/)
+* [페르시아어(이란어)](http://novid.github.io/php-the-right-way/)
+* [포르투갈어판](http://br.phptherightway.com/)
+* [폴란드어판](http://pl.phptherightway.com/)
+* [프랑스어](http://eilgin.github.io/php-the-right-way/)
+* [한국어판](http://modernpug.github.io/php-the-right-way/)
 
 ## 프로젝트에 기여하기 {#how_to_contribute}
 

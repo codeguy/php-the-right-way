@@ -1,7 +1,7 @@
 ---
 title:   커맨드라인 인터페이스
 isChild: true
-anchor: command_line_interface
+anchor:  command_line_interface
 ---
 
 ## 커맨드라인 인터페이스 {#command_line_interface_title}
@@ -10,15 +10,15 @@ PHP는 웹어플리케이션 작성을 지원하는 것을 주요 목적으로 �
 커맨드라인 PHP 프로그램은 테스트, 배포, 관리 등의 일반적인 작업을 자동화하는데 도움을 줄 수 있습니다.
 
 여러분의 웹어플리케이션 코드를 그대로 사용할 수 있다는 점이 CLI PHP 프로그램의 장점입니다. 웹 GUI 만들기나 웹 보안에 신경쓰지 않고도 말이죠.
-CLI PHP 스크립트를 웹어플리케이션 경로에 두지 않도록 조심하기만 하면 됩니다.
+CLI PHP 스크립트를 웹어플리케이션 경로에 두지 **않도록** 조심하기만 하면 됩니다.
 
 커맨드라인에서 PHP를 실행해봅시다.
 
-{% highlight bash %}
+{% highlight console %}
 > php -i
 {% endhighlight %}
 
-`-i` 옵션은 [`phpinfo`][phpinfo] 함수와 동일하게 PHP 설정을 출력해줍니다.
+`-i` 옵션은 [`phpinfo()`][phpinfo] 함수와 동일하게 PHP 설정을 출력해줍니다.
 
 `-a` 옵션은 Ruby의 IRB나 Python의 대화형 쉘 같은 대화형 쉘을 제공해줍니다. 이것 말고도 유용한 [커맨드라인 옵션들][cli-options]이 많이 있습니다.
 
@@ -26,7 +26,7 @@ CLI PHP 스크립트를 웹어플리케이션 경로에 두지 않도록 조심�
 
 {% highlight php %}
 <?php
-if ($argc != 2) {
+if ($argc !== 2) {
     echo "Usage: php hello.php [name].\n";
     exit(1);
 }
@@ -43,7 +43,7 @@ PHP는 스크립트가 실행될 때 주어진 인자를 가지고 특별한 변
 
 커맨드라인에서 아래와 같이 실행해봅시다.
 
-{% highlight bash %}
+{% highlight console %}
 > php hello.php
 Usage: php hello.php [name]
 > php hello.php world
@@ -54,10 +54,11 @@ Hello, world
  * [커맨드라인 PHP 프로그램에 대해서 더 알아보기][php-cli]
  * [Windows 환경에서 커맨드라인 PHP 프로그램을 실행하기 위한 설정 알아보기][php-cli-windows]
 
-[phpinfo]: http://php.net/manual/en/function.phpinfo.php
-[cli-options]: http://www.php.net/manual/en/features.commandline.options.php
-[argc]: http://php.net/manual/en/reserved.variables.argc.php
-[argv]: http://php.net/manual/en/reserved.variables.argv.php
-[php-cli]: http://php.net/manual/en/features.commandline.php
-[php-cli-windows]: http://www.php.net/manual/en/install.windows.commandline.php
-[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&topic=sysexits
+
+[phpinfo]: http://php.net/function.phpinfo
+[cli-options]: http://php.net/features.commandline.options
+[argc]: http://php.net/reserved.variables.argc
+[argv]: http://php.net/reserved.variables.argv
+[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&amp;topic=sysexits
+[php-cli]: http://php.net/features.commandline
+[php-cli-windows]: http://php.net/install.windows.commandline

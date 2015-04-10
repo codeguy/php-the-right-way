@@ -52,8 +52,8 @@
 2. clone 을 한 지 시간이 좀 지났다면, upstream 으로부터 최신 변경 내역을 받아옵니다.
 
    ```bash
-   git checkout master
-   git pull upstream master
+   git checkout gh-pages
+   git pull upstream gh-pages
    ```
 
 3. 토픽 브랜치를 새로 만들고 여러분의 작업을 합니다.
@@ -72,7 +72,7 @@
 6. 로컬 저장소에서 upstream 개발 브랜치를 여러분의 토픽 브랜치로 merge(혹은 rebase)합니다.
 
    ```bash
-   git pull [--rebase] upstream master
+   git pull [--rebase] upstream gh-pages
    ```
 
 7. 토픽 브랜치를 여러분의 github 저장소에 push 합니다.
@@ -104,6 +104,7 @@
 
 1. 미국 영어 철자를 사용합니다. (*메인 프로젝트인 영어판 저장소에 적용되는 이야기*)
 2. 스페이스 네 개를 사용하여 들여쓰기를 합니다. 탭을 사용하여 들여쓰기 하지 마십시오.
-3. 한 줄 너비는 120글자로 합니다. (한국어판의 경우 한 줄 너비를 60자로 쓰려고 합니다.)
+3. 한 줄 너비는 120글자로 합니다. (역주 : 한국어판의 경우 한 줄 너비를 60자로 쓰려고 합니다.)
 4. 예제 코드는 PSR-1 이나 그 이상 버전을 준수해야 합니다.
-5. 내용은 [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) 문서 형식으로 작성합니다. 
+5. 내용은 [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) 문서 형식으로 작성합니다.
+6. Use language agnostic urls when refering to external websites such as the [php.net](http://php.net/urlhowto.php) manual
