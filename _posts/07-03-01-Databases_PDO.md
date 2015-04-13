@@ -50,24 +50,24 @@ users 데이터가 삭제되어 버립니다! 이렇게 하지 말고 아래처�
 <?php
 $pdo = new PDO('sqlite:/path/db/users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
-$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT); // <-- filter your data first (see [Data Filtering](#data_filtering)), especially important for INSERT, UPDATE, etc.
-$stmt->bindParam(':id', $id, PDO::PARAM_INT); // <-- Automatically sanitized for SQL by PDO
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT); // <-- 먼저 데이터를 필터링 ([데이터 필터링](#data_filtering) 참고), INSERT, UPDATE 등에 특히 중요.
+$stmt->bindParam(':id', $id, PDO::PARAM_INT); // <-- PDO가 자동으로 SQL에서 위험한 요소 제거
 $stmt->execute();
 {% endhighlight %}
 
 이렇게 하는게 올바른 코드입니다. PDO 구문과 거기에 바인딩한 인자를 사용하고 있죠. 이렇게 하면 데이터베이스에 외부
 입력값을 전달하기 전에 잠재적인 SQL 인젝션 공격을 방지할 수 있게 됩니다.
 
-For writes, such as INSERT or UPDATE, it's especially critical to still [filter your data](#data_filtering) first and sanitize it for other things (removal of HTML tags, JavaScript, etc).  PDO will only sanitize it for SQL, not for your application.
+먼저 [데이터를 필터링](#_data_filtering)하고, 다른 위험한 요소(HTML 태그, 자바스크립트 등)를 제거하는 것은 INSERT나 UPDATE와 같은 쓰기 작업에 특히 중요합니다. PDO는 여러분이 작성하는 어플리케이션이 아니라, SQL에서만 위험한 요소를 제거합니다.
 
-* [Learn about PDO]
+* [PDO에 대해서 배우기][Learn about PDO]
 
 데이터베이스 연결을 사용할 때에는 데이터베이스 연결을 잘 닫는데 신경쓰지 않았을 경우에 한 번 열어 둔 데이터베이스
 연결이 닫히지 않아서 더이상 새로운 연결을 할 수 없는 경우가 발생하기도 합니다. PDO를 사용하면 PDO 개체가 파괴될 때
 암시적으로 데이터베이스 연결을 닫아 줍니다. 여러분이 영구적인 데이터베이스 연결을 사용하도록 설정해서 어플리케이션을
 돌리고 있는게 아니라면 스크립트의 실행히 종료될 때 PHP가 자동으로 데이터베이스 연결을 닫아줄 것입니다.
 
-* [Learn about PDO connections]
+* [PDO 연결에 대해서 배우기][Learn about PDO connections]
 
 
 [pdo]: http://php.net/pdo
