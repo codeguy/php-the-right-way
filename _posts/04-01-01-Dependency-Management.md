@@ -12,7 +12,7 @@ PHP에는 프로젝트 의존성을 관리할 좋은 방법이 없었습니다. 
 
 요즘은 [Composer]와 [PEAR]라는 패키지 관리 시스템이 주로 사용되고 있습니다. Composer는 PHP를 사용하는데 있어 주된
 패키지 관리자입니다. 그러나 옛날에는 PEAR가 그 역할을 꿰차고 있었습니다.
-Knowing what PEAR is will be a good idea as you may still find references to it, even if you never use it.
+PEAR를 직접 사용하지 않더라도, PEAR 패키지를 사용하고 있는 것들을 볼 수도 있기 때문에 PEAR에 대해서는 알아두는 것이 좋을 것입니다.
 
 [Composer]: #composer_and_packagist
 [PEAR]: #pear
