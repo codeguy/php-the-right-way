@@ -2,13 +2,12 @@
 anchor: virtualization
 ---
 
-# Virtualization {#virtualization_title}
+# 가상화 {#virtualization_title}
 
-Running your application on different environments in development and production can lead to strange bugs popping up
-when you go live. It's also tricky to keep different development environments up to date with the same version for all
-libraries used when working with a team of developers.
+개발환경과 운영환경을 서로 다르게 사용하면 운영환경에 어플리케이션을 배포했을 때 의도하지 않은 이상한 
+버그를 만날 가능성이 높습니다. 또 여러 사람이 같이 개발할 때 서로 다른 환경에서 모두 동일한 라이브러리
+버전을 최신으로 유지하며 관리하는 일은 성가신 일이 되기도 합니다.
 
-If you are developing on Windows and deploying to Linux (or anything non-Windows) or are developing in a team, you
-should consider using a virtual machine. This sounds tricky, but besides the widely known virtualization environments
-like VMware or VirtualBox, there are additional tools that may help you setting up a virtual environment in a few easy
-steps.
+Windows에서 개발하면서 Linux 등의 Windows가 아닌 환경에 배포하여 운영하거나, 팀을 이뤄 개발할 때에는
+가상 머신을 사용하는 게 나을 수도 있습니다. 가상 머신을 사용한다는게 복잡하게 들릴 수도 있겠지만, 
+단지 몇 단계만으로 가상 머신을 구성할 수 있게 도와주는 도구들이 있습니다.
