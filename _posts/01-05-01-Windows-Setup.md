@@ -1,9 +1,10 @@
 ---
+title:   윈도우(Windows)에서 사용하기
 isChild: true
 anchor:  windows_setup
 ---
 
-## Windows Setup {#windows_setup_title}
+## 윈도우(Windows)에서 사용하기 {#windows_setup_title}
 
 Windows 에 PHP를 설치하는 방법에는 여러가지 방법이 있습니다. [PHP 바이너리 다운로드 사이트][php-downloads]에서 '.msi'
 인스톨러를 받을 수 있습니다.
