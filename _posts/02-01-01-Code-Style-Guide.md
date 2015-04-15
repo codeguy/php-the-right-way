@@ -28,8 +28,8 @@ PHP 커뮤니티는 매우 거대하고, 수많은 라이브러리와 프레임�
 [PHP_CodeSniffer][phpcs]라는 도구를 사용하면 코드가 이들 가이드를 따르는지 체크할 수 있습니다.
 [Sublime Text 2][st-cs] 같은 텍스트 편집기에는 실시간으로 코드를 체크해주는 플러그인도 제공됩니다.
 
-You can fix the code layout automatically by using one of the two following tools. One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase. 
-Another option is [php.tools][phptools], which is made popular by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in performance, meaning real-time editor fixing is more fluid.
+다음 두가지 도구 중 하나를 사용하여 코드 구조를 자동으로 고칠 수 있습니다. 하나는 매우 잘 테스트된 코드를 가진 [PHP Coding Standards Fixer][phpcsfixer] 입니다.
+다른 선택지는 [sublime-phpfmt][sublime-phpfmt] 편집기 플러그인으로 유명해진 [php.tools][phptools] 입니다. 나온지는 얼마되지 않았지만, 실시간으로 편집기에서 코드를 고치는 작업이 더 부드럽게 수행되도록 성능면에서 대단한 개선을 이루어냈습니다.
 
 코드에 사용되는 모든 기호는 영어로 작성하는 것이 좋습니다. 주석은 코드를 사용할 사람들이 편하게 읽고 쓸 수 있다면 어떤 언어로 기록해도 됩니다.
 
