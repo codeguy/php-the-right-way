@@ -11,7 +11,8 @@
 
 ## 퍼트려주세요!
 
-_PHP: The Right Way_ 는 당신의 웹사이트에 사용할 수 있는 웹 배너 이미지들을 갖고 있습니다. 당신이 지지하고 있음을 보여주세요, 그리고 새 PHP 개발자들이 어디에서 좋은 정보를 찾을 수 있는지 알려주세요.
+_PHP: The Right Way_ 는 당신의 웹사이트에 사용할 수 있는 웹 배너 이미지들을 갖고 있습니다. 당신이 지지하고 있음을 보여주세요, 
+그리고 새 PHP 개발자들이 어디에서 좋은 정보를 찾을 수 있는지 알려주세요.
 
 [배너 이미지 보기](http://www.phptherightway.com/banners.html)
 
@@ -58,13 +59,16 @@ _PHP: The Right Way_ 는 당신의 웹사이트에 사용할 수 있는 웹 배�
 
 ### 번역
 
-_PHP: The Right Way_ 번역에 관심있으시다면, GitHub에서 이 저장소를 포크하고 당신의 GitHub Pages 계정으로 퍼블리시 하세요. 첫 페이지에 당신들의 번역본의 링크를 걸겠습니다.
+_PHP: The Right Way_ 번역에 관심있으시다면, GitHub에서 이 저장소를 포크하고 당신의 GitHub Pages 계정으로 퍼블리시 하세요. 
+첫 페이지에 당신들의 번역본의 링크를 걸겠습니다.
+
 파편화와 독자의 혼란을 피하기 위해, 다음의 방법 중 하나를 선택해주세요.
 
 1. `[username].github.io/php-the-right-way` 형식의 GitHub 페이지 포크 링크 
 2. 서브도메인 링크 (예를들어 "ru.phptherightway.com")
 
-만약 서브도메인을 사용한다면, 서브도메인을 `CNAME` 파일에 넣어주시고, 우리에게 DNS 설정을 요청해주세요. 만약 서브도메인을 사용하지 않으면, `CNAME` 파일을 완전 제거하세요. 그렇지 않으면 푸시할 때 빌드되지 않습니다.
+만약 서브도메인을 사용한다면, 서브도메인을 `CNAME` 파일에 넣어주시고, 우리에게 DNS 설정을 요청해주세요. 만약 서브도메인을 사용하지 않으면, 
+`CNAME` 파일을 완전 제거하세요. 그렇지 않으면 푸시할 때 빌드되지 않습니다.
 
 당신이ㅡ 번역 정보를 [위키 페이지](https://github.com/codeguy/php-the-right-way/wiki/Translations)에 추가하세요.
 
@@ -72,11 +76,13 @@ _PHP: The Right Way_ 번역에 관심있으시다면, GitHub에서 이 저장소
 
 ## Why
 
-근래에 PHP를 처음 접하는 프로그래머들을 위한 충분하고, 믿을만한 정보가 얼마나 부족한지에 대한 많은 논의가 있었습니다. 이 저장소는 그러한 문제를 해결하기 위한 것입니다.
+근래에 PHP를 처음 접하는 프로그래머들을 위한 충분하고, 믿을만한 정보가 얼마나 부족한지에 대한 많은 논의가 있었습니다. 
+이 저장소는 그러한 문제를 해결하기 위한 것입니다.
 
 ## Who
 
-제 이름은 [Josh Lockhart](http://twitter.com/codeguy) 입니다. 저는 [Slim Framework](http://www.slimframework.com/)를 만들었고, [New Media Campaigns](http://www.newmediacampaigns.com/)에 근무하고 있습니다.
+제 이름은 [Josh Lockhart](http://twitter.com/codeguy) 입니다. 저는 [Slim Framework](http://www.slimframework.com/)를 만들었고, 
+[New Media Campaigns](http://www.newmediacampaigns.com/)에 근무하고 있습니다.
 
 ### 협력자들
 
