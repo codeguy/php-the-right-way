@@ -5,18 +5,15 @@ anchor:  compiled_templates
 
 ## Compiled Templates {#compiled_templates_title}
 
-While PHP has evolved into a mature, object oriented language, it [hasn't improved much][article_templating_engines] as
-a templating language. Compiled templates, like [Twig] or [Smarty]*, fill this void by offering a new syntax that has
-been geared specifically to templating. From automatic escaping, to inheritance and simplified control structures,
-compiled templates are designed to be easier to write, cleaner to read and safer to use. Compiled templates can even be
-shared across different languages, [Mustache] being a good example of this. Since these templates must be compiled
-there is a slight performance hit, however this is very minimal when proper caching is used.
+PHP는 성숙한, 객체 지향적 언어로 성장하고 있지만, [템플릿 언어로는 성장하지 않았다.][article_templating_engines] [Twig], [Smarty]* 와 같이 컴파일된 템플릿은 특히, 템플릿을
+대상으로 제공되는 새로운 구문으로 빈 부분을 채워줍니다.. 자동 이스케이핑, 상속, 그리고 단순화 된 제어구조는 컴파일된 템플릿을 쉽게 쓸 수 있고, 읽기 쉽고, 사용하기 안전하게 설계되었습니다.
+심지어 컴파일된 템플릿은 다른언어와의 교환을 할 수 있습니다. [Mustache] 가 좋은 예 입니다. 이러한 템플릿은 컴파일을 해야하기 때문에 약간의 성능저하가 있을 수 있지만, 적절한 캐싱을 사용하면 아주 적은 양입니다.
 
-**While Smarty offers automatic escaping, this feature is NOT enabled by default.*
+**스마트한 자동 이스케이핑을 지원하는 반면에, 이 기능은 기본적으로 비활성화 되어있습니다.*
 
-### Simple example of a compiled template
+### 컴파일 된 템플릿에 대한 간단한 예제
 
-Using the [Twig] library.
+[Twig] 라이브러리를 사용하였습니다.
 
 {% highlight html+jinja %}
 {% raw %}
@@ -29,9 +26,9 @@ Using the [Twig] library.
 {% endraw %}
 {% endhighlight %}
 
-### Example of compiled templates using inheritance
+### 상속을 이용한 컴파일된 템플릿 예제
 
-Using the [Twig] library.
+[Twig] 라이브러리를 사용하였습니다.
 
 {% highlight html+jinja %}
 {% raw %}
