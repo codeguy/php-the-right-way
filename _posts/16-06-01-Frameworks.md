@@ -13,9 +13,9 @@ anchor:  frameworks
 물론 모든 프로젝트에 프레임워크를 사용할 필요는 없습니다. 때로는 PHP를 그대로 사용하는 게 좋을 때도 있습니다. 존재하는
 프레임워크들을 크게 세 가지 종류로 나눠볼 수 있습니다.
 
-* Micro Frameworks
-* Full-Stack Frameworks
-* Component Frameworks
+* 마이크로 프레임워크(Micro Frameworks)
+* 풀스택 프레임워크(Full-Stack Frameworks)
+* 컴포넌트 프레임워크(Component Frameworks)
 
 마이크로 프레임워크(Micro Framework)는 HTTP 요청을 콜백, 컨트롤러, 클래스의 메소드 등으로 최대한 빠르게 전달해주는
 역할을 하는 정도입니다. 때로는 기본적인 데이터베이스 래퍼 등을 제공해서 개발을 도와주기도 합니다. 원격 HTTP 서비스를

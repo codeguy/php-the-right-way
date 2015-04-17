@@ -20,7 +20,7 @@ SpecBDD 기법을 사용한다면 여러분의 코드가 어떻게 행위할 것
 [PHPSpec] 프레임워크가 바로 이런 목적으로 사용할 수 있는 프레임워크입니다. 이 프레임워크는 Ruby의
 [RSpec 프로젝트][RSpec]에 영향을 받았습니다.
 
-### BDD Links
+### BDD 관련 링크
 
 * [Behat]는 Ruby의 [Cucumber] 프로젝트에 영향을 받은 StoryBDD 프레임워크입니다.
 * [PHPSpec]은 Ruby의 [RSpec] 프로젝트에 영향을 받은 SpecBDD 프레임워크입니다.

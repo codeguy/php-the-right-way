@@ -1,9 +1,10 @@
 ---
+title:   에러 보고
 isChild: true
 anchor:  error_reporting
 ---
 
-## Error Reporting {#error_reporting_title}
+## 에러 보고 {#error_reporting_title}
 
 에러 로깅은 어플리케이션의 문제 지점을 찾는데 유용하기도 하지만, 어플리케이션의 구조를 외부에 노출시키는 문제가 있기도
 합니다. 그러므로 이러한 이슈가 발생하지 않게 하려면 개발용 서버와 운영(라이브) 서버의 설정을 다르게 해야 합니다.

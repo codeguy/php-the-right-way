@@ -1,5 +1,6 @@
 ---
+title:  자료들
 anchor: resources
 ---
 
-# Resources {#resources_title}
+# 자료들 {#resources_title}

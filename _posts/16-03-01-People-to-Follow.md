@@ -1,9 +1,10 @@
 ---
+title:   유명개발자
 isChild: true
 anchor:  people_to_follow
 ---
 
-## People to Follow {#people_to_follow_title}
+## 유명개발자 {#people_to_follow_title}
 
 * [Rasmus Lerdorf](http://twitter.com/rasmus)
 * [Fabien Potencier](http://twitter.com/fabpot)

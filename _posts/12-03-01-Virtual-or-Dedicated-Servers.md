@@ -15,9 +15,9 @@ PHP는 내장된 FastCGI Process Manager (FPM) 덕분에 [nginx]에서 아주 �
 가볍고 아주 빠른 웹서버입니다. Apache에 비해 더 적은 메모리를 사용하고, 더 많은 수의 요청을 동시에 처리할 수 있습니다.
 메모리를 충분히 확보할 수 없는 가상 서버에서라면 이러한 특징이 더 중요합니다.
 
-* [Read more on nginx][nginx]
-* [Read more on PHP-FPM][phpfpm]
-* [Read more on setting up nginx and PHP-FPM securely][secure-nginx-phpfpm]
+* [더 알아보기: nginx][nginx]
+* [더 알아보기: PHP-FPM][phpfpm]
+* [더 알아보기: setting up nginx and PHP-FPM securely][secure-nginx-phpfpm]
 
 ### Apache와 PHP
 
@@ -35,10 +35,10 @@ mod_php5 모듈을 사용한다면 prefork MPM도 반드시 사용해야 한다�
 [worker MPM]이나 [event MPM]을 mod_fastcgi나 mod_fcgid 모듈과 함께 사용하는 것입니다. 앞에서 얘기한 방식이 비하면
 메모리 측면에서도 현저하게 효율적이고 속도도 더 빠르긴 하지만 설정에는 손이 더 많이 갑니다.
 
-* [Read more on Apache][apache]
-* [Read more on Multi-Processing Modules][apache-MPM]
-* [Read more on mod_fastcgi][mod_fastcgi]
-* [Read more on mod_fcgid][mod_fcgid]
+* [더 알아보기: Apache][apache]
+* [더 알아보기: Multi-Processing Modules][apache-MPM]
+* [더 알아보기: mod_fastcgi][mod_fastcgi]
+* [더 알아보기: mod_fcgid][mod_fcgid]
 
 
 [nginx]: http://nginx.org/
