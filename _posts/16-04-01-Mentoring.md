@@ -1,8 +1,9 @@
 ---
+title:   멘토링
 isChild: true
 anchor:  mentoring
 ---
 
-## Mentoring {#mentoring_title}
+## 멘토링 {#mentoring_title}
 
-* [phpmentoring.org](http://phpmentoring.org/) - Formal, peer to peer mentoring in the PHP community.
+* [phpmentoring.org](http://phpmentoring.org/) - 전형적인 PHP 커뮤니티 내 1:1 멘토링.

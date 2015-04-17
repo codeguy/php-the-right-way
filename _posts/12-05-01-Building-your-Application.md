@@ -45,17 +45,19 @@ Capistrano에 관심이 있는 PHP 개발자에게는 Dave Gardner의 [PHP Deplo
 [Chef]는 소프트웨어 배포 프레임워크라기 보다는 아주 강력한 시스템 통합 프레임워크라고 볼 수 있습니다. 어플리케이션을
 배포해주기만 하는게 아니라 서버나 가상 머신 환경 자체까지도 구성할 수 있습니다. Chef는 Ruby로 구현되어 있습니다.
 
-[Deployer] is a deployment tool written in PHP, it's simple and functional. Runs tasks in parallel, atomic deployment, keeps consistency between servers. Recipes of common tasks for Symfony, Laravel, Zend Framework and Yii.
+[Deployer]는 PHP로 작성된 배포도구이며, 이는 단순하고 함수형으로 작성되었습니다. [Deployer]는 작은 배포 환경에서
+서버간의 일관성을 유지하며 병렬적으로 태스크들을 실행합니다. Symfony, Laravel, Zend Framework, Yii를 위한 일반적인
+레시피입니다.
 
 #### PHP 개발자를 위한 Chef 참고 자료들입니다.
 
-* [Three part blog series about deploying a LAMP application with Chef, Vagrant, and EC2][chef_vagrant_and_ec2]
+* [Chef, Vagrant, EC2를 이용한 LAMP 어플리케이션 배포를 다룬 블로그 시리즈][chef_vagrant_and_ec2]
 * [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system][Chef_cookbook]
-* [Chef video tutorial series][Chef_tutorial] by Opscode, the makers of chef
+* [Chef 비디오 튜토리얼 시리즈][Chef_tutorial] by Opscode, the makers of chef
 
 #### 더 읽어볼 만한 것들
 
-* [Automate your project with Apache Ant][apache_ant_tutorial]
+* [Apache Ant를 이용한 프로젝트 자동화][apache_ant_tutorial]
 
 ### 지속적인 통합
 
@@ -73,9 +75,9 @@ PHP 프로젝트에서 지속적인 통합 기법을 사용하는 방법에는 �
 
 #### 더 읽어볼 만한 것들:
 
-* [Continuous Integration with Jenkins][Jenkins]
-* [Continuous Integration with PHPCI][PHPCI]
-* [Continuous Integration with Teamcity][Teamcity]
+* [Jenkins를 이용한 지속적인 통합][Jenkins]
+* [PHPCI를 이용한 지속적인 통합][PHPCI]
+* [Teamcity를 이용한 지속적인 통합][Teamcity]
 
 
 [buildautomation]: http://en.wikipedia.org/wiki/Build_automation
