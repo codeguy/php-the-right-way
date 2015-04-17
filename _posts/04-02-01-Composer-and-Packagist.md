@@ -130,7 +130,7 @@ composer global require phpunit/phpunit
 
 * [컴포저에 대해 더 알아보기][Learn about Composer]
 
-(역주 : 그리고 놀랍게도 컴포저는 한국어 메뉴가 존재합니다!)
+(역주 : 그리고 놀랍게도 컴포저는 한국어 메뉴얼이 존재합니다!)
 
 * [컴포저 한글 웹사이트][Composer Korean]
 
