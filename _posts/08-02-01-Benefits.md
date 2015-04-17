@@ -5,17 +5,13 @@ anchor:  templating_benefits
 
 ## Benefits {#templating_benefits_title}
 
-The main benefit to using templates is the clear separation they create between the presentation logic and the rest of
-your application. Templates have the sole responsibility of displaying formatted content. They are not responsible for
-data lookup, persistence or other more complex tasks. This leads to cleaner, more readable code which is especially
-helpful in a team environment where developers work on the server-side code (controllers, models) and designers work on
-the client-side code (markup).
+템플릿을 사용함으로써 얻는 가장 큰 이익은 프레젠테이션 로직과 어플리케이션의 REST 사이의 완전한 분리입니다. 템플릿은 컨텐츠에서 하나의 포멧을
+보여줘야합니다. 템플릿은 데이터 조회, 지속성 또는 더 복잡한 문제들은 보장하지 않습니다. 읽기 쉬운 코드는 개발자가 서버 코드 (Controller, Model)를
+만들고, 디자이너가 클라이언트 코드를 만드는 (Markup) 팀 환경에서 특히 유용하게 작용합니다.
 
-Templates also improve the organization of presentation code. Templates are typically placed in a "views" folder, each
-defined within a single file. This approach encourages code reuse where larger blocks of code are broken into smaller,
-reusable pieces, often called partials. For example, your site header and footer can each be defined as templates,
-which are then included before and after each page template.
+템플릿은 프레젠테이션 코드의 구조를 향상시킵니다. 템플릿은 "views" 폴더가 대표적이며, 각각 하나의 파일에 정의합니다. 이 방법은 코드의 깨진 작은
+코드들의 큰 블럭, 재사용되는 코드, 자주 사용되는 부분들의 재사용을 권장합니다. 예를 들어, 당신의 사이트의 header, footer는 각각 템플릿에
+정의되어있으며, 이는 페이지 템플릿 이전과, 이후에 각각 포함되어있습니다.
 
-Finally, depending on the library you use, templates can offer more security by automatically escaping user-generated
-content. Some libraries even offer sand-boxing, where template designers are only given access to white-listed
-variables and functions.
+결국, 당신이 사용하는 라이브러리에 따라 달라지는데, 템플릿은 사용자가 이스케이프에 의해 자동으로 생성한 컨텐츠에 더 많은 보안이 제공합니다. 몇몇
+라이브러리들은 템플릿 디자이너들만 허가하는 sand-boxing 변수와 함수를 제공합니다. 
