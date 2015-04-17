@@ -5,19 +5,17 @@ anchor:  plain_php_templates
 
 ## Plain PHP Templates {#plain_php_templates_title}
 
-Plain PHP templates are simply templates that use native PHP code. They are a natural choice since PHP is actually a
-template language itself. That simply means that you can combine PHP code within other code, like HTML. This is
-beneficial to PHP developers as there is no new syntax to learn, they know the functions available to them, and their
-code editors already have PHP syntax highlighting and auto-completion built-in. Further, plain PHP templates tend to be
-very fast as no compiling stage is required.
+Plain PHP 템플릿은 nativa PHP 코드를 사용한 간단한 템플릿입니다. Plain PHP 템플릿이 PHP를 자연적으로 사용한 이래로 PHP는 실제 템플릿 언어 그
+자체입니다. 간단히 말해 PHP 코드를 HTML과 같은 다른언어와 결합해 사용할 수 있다는 것 입니다. PHP개발자가 다른 새로운 문법을 배울 필요가 없기 때문에
+도움이 됩니다. 그들은 자신이 쓸 수 있는 기능에 대해 알고있으며, 개발 툴에는 이미 PHP 구문 강조와 자동완성이 내장되어 있습니다. 더구나, plain PHP
+템플릿은 컴파일 단계를 필요로 하지 않아서 매우 빠른 경향이 있습니다.
 
-Every modern PHP framework employs some kind of template system, most of which use plain PHP by default. Outside of
-frameworks, libraries like [Plates][plates] or [Aura.View][aura] make working with plain PHP templates easier by
-offering modern template functionality such as inheritance, layouts and extensions.
+모든 modern PHP 프레임워크는 몇종류의 템플릿 시스템을 채택하고 있으며, 대부분 기본적으로 plain PHP를 사용합니다. [Plates][plates] or
+[Aura.View][aura] 처럼 프레임워크, 라이브러리들의 외부에서 제공되는 상속, 레이아웃, 확장과 같이 현대적인 템플릿의 기능이 제공되는 plain PHP
+템플릿들을 이용하여 보다 쉽게 작업합니다.
 
-### Simple example of a plain PHP template
-
-Using the [Plates][plates] library.
+### plain PHP 템플릿의 간단한 예제
+[Plates][plates] 라이브러리를 이용했습니다.
 
 {% highlight php %}
 <?php // user_profile.php ?>
@@ -30,9 +28,8 @@ Using the [Plates][plates] library.
 <?php $this->insert('footer') ?>
 {% endhighlight %}
 
-### Example of plain PHP templates using inheritance
-
-Using the [Plates][plates] library.
+### 상속을 이용한 plain PHP 템플릿 예제
+[Plates][plates] 라이브러리를 이용했습니다.
 
 {% highlight php %}
 <?php // template.php ?>
