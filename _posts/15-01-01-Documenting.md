@@ -1,6 +1,6 @@
 ---
 anchor: documenting
-title:  Documenting your Code
+title:  코드 문서화하기
 ---
 
-# Documenting your Code {#documenting_title}
+# 코드 문서화하기 {#documenting_title}
