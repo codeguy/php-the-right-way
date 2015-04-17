@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Website Banners
-description: "Spread the word! Use these banner to let new PHP programmers know about PHP: The Right Way"
+title: 웹사이트 배너
+description: "널리 알려주세요! 이 배너를 사용하여 새로운 PHP프로그래머에게 PHP: The Right Way를 알게 해주세요"
 sitemap: true
 ---
 
-# Web Banners
+# 웹 배너
 
-Spread the word with _PHP: The Right Way_ banner images! Show new PHP developers where to find good information.
+_PHP: The Right Way_ 배너 이미지를 사용해 널리 알려주세요! 새로운 개발자들에게 어디에 좋은 자료가 있는지 찾을 수 있도록
+보여주세요.
 
 ## Button 1 (120x90)
 
