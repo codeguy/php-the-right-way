@@ -16,13 +16,15 @@ _네임스페이스_ 기능은 이런 문제를 해결해줍니다. PHP 매뉴�
 다른 개발자가 사용할 가능성이 있는 코드를 작성한다면, 네임스페이스로 잘 감싸서 다른 라이브러리와 이름 충돌이 발생하지 않게
 하는 것이 좋습니다.
 
-One recommended way to use namespaces is outlined in [PSR-4][psr4], which aims to provide a standard file, class and
-namespace convention to allow plug-and-play code.
+네임스페이스를 사용할 때 추천할 만한 한가지 방법이 [PSR-4][psr4]에 대략적으로 서술되어 있으므로 참고할 만 합니다.
+[PSR-4][psr4]는 파일 이름, 클래스 이름, 네임스페이스 이름에 대한 표준화된 관습을 제공하여, 
+명시적으로 include 하지 않아도 클래스를 자동으로 불러오는 등 플러그 앤 플레이 방식처럼 
+코드를 사용할 수 있게 하는데 목표를 두고 있습니다.
 
-In October 2014 the PHP-FIG deprecated the previous autoloading standard: [PSR-0][psr0], which has been replaced with
-[PSR-4][psr4]. Currently both are still usable, as PSR-4 requires PHP 5.3 and many PHP 5.2-only projects currently implement
-PSR-0. If you're going to use an autoloader standard for a new application or package then you almost certainly want
-to look into PSR-4.
+2014년 10월에 PHP-FIG는 기존의 autoloading 표준인 [PSR-0][psr0]를 폐지(deprecate)하고 [PSR-4][psr4]로 
+대체하였습니다. 현재는 두 가지가 모두 사용가능한 상태인데, PSR-4는 PHP 5.3 이상에서만 적용이 되기 때문에 
+아직도 PHP 5.2 호환 프로젝트들은 PSR-0를 구현해 둔 상태입니다. 새로운 어플리케이션이나 패키지를 만들면서 
+autoloader 표준을 따를 생각이라면, PSR-4에 맞추면 됩니다.
 
 * [Read about Namespaces][namespaces]
 * [Read about PSR-0][psr0]
