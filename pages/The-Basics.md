@@ -8,7 +8,8 @@ sitemap: true
 
 ## 비교 연산자 
 
-비교 연산자는 PHP에서 간과하기 쉬운 측면 중에 하나입니다. 그럴 경우 예상치 못한 결과에 당황하는 일을 많이 겪게 될 것입니다. 그런 문제 중에서 하나는 strict한 비교(boolean 타입을 integer 타입과 비교하는 등 타입을 자동으로 맞춰서 비교하는 것)를 할 때 발생합니다.
+비교 연산자는 PHP에서 간과하기 쉬운 측면 중에 하나입니다. 그럴 경우 예상치 못한 결과에 당황하는 일을 많이 겪게 될 것입니다. 그런 문제 중에서 하나는
+strict한 비교(boolean 타입을 integer 타입과 비교하는 등 타입을 자동으로 맞춰서 비교하는 것)를 할 때 발생합니다.
 
 {% highlight php %}
 <?php
@@ -33,15 +34,16 @@ if (strpos('testing', 'test') !== false) {    // (0 !== false)의 비교 결과�
 }
 {% endhighlight %}
 
-* [Comparison operators](http://php.net/language.operators.comparison)
-* [Comparison table](http://php.net/types.comparisons)
-* [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
+* [비교 연산자](http://php.net/language.operators.comparison)
+* [비교 연산자 테이블](http://php.net/types.comparisons)
+* [비교 연산자 도움말](http://phpcheatsheets.com/index.php?page=compare)
 
 ## 조건 구문
 
 ### If 구문
 
-'if/else' 구문을 함수나 클래스 안에서 사용할 때 흔히 하는 오해는 혹시 발생할 수 있는 경우를 대비해 'else'를 꼭 써야 한다는 것입니다. 하지만 하지만 조건문의 결과가 return 값을 정의하는 것 뿐이라면 'else'가 필수적인 것은 아닙니다.
+'if/else' 구문을 함수나 클래스 안에서 사용할 때 흔히 하는 오해는 혹시 발생할 수 있는 경우를 대비해 'else'를 꼭 써야 한다는 것입니다. 하지만
+조건문의 결과가 return 값을 정의하는 것 뿐이라면 'else'가 필수적인 것은 아닙니다.
 
 {% highlight php %}
 <?php
@@ -103,7 +105,8 @@ function test($a)
 
 ## 전역 네임스페이스
 
-네임스페이스를 사용할 때, 여러분이 작성한 함수 때문에 내장 함수를 사용할 수 없게되는 경우를 만날 수 있습니다. 그럴 때에는 역슬래시를 사용하여 전역 함수를 호출하는 방법이 있습니다.
+네임스페이스를 사용할 때, 여러분이 작성한 함수 때문에 내장 함수를 사용할 수 없게되는 경우를 만날 수 있습니다. 그럴 때에는 역슬래시를 사용하여
+전역 함수를 호출하는 방법이 있습니다.
 
 {% highlight php %}
 <?php
@@ -151,17 +154,13 @@ $a = 'Multi-line example'      // 연결 연산자 (.)
 
 ### 문자열의 유형
 
-Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
-strings and they offer slightly different syntax, with slightly different behaviors.
+매우 간단하게, 문자열은 문자들의 나열 입니다. 그 말은, 문자열들의 타입과는 약간의 차이가 있고 다른 행동과 문법을 제공합니다.
 
 #### 작은따옴표
 
-Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
-variables.
-
-If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
-exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
-errors if no variable was found.
+작은 따옴표는 "리터럴 문자열"을 나타내기 위해 사용합니다. 리터럴 문자열은 특수 문자나 변수로 해석할 수 없습니다. 만약 작은 따옴표를 사용한다면, 
+`'some $thing'`처럼 변수명을 정하며, `some $thing`로 출력을 받을 수 있습니다. 만약 큰 따옴표를 사용하는 경우, 즉, `$thing` 변수명을 찾아서
+결과가 없으면 에러 메세지를 표시해야 합니다.
 
 {% highlight php %}
 <?php
@@ -178,8 +177,8 @@ echo 'This is my string, look at how pretty it is.';    // 단순히 텍스트�
 
 #### 큰따옴표
 
-Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
-of special characters, like `\n` for newline, `\t` for a tab, etc.
+큰 따옴표는 문자열의 스위스 군용 나이프 입니다. 큰 따옴표는 미리 언급한것 처럼  `\n` 개행, `\t` 탭, 기타등등 과 같은 특수문자는 해석하지만,
+특수문자의 모든 종류를 해석하지는 않습니다.
 
 {% highlight php %}
 <?php
@@ -193,7 +192,7 @@ echo "phptherightway is $adjective.\n I love learning $code!"  // 큰따옴표 �
                                                                // 쓰지 않고도 한 방에 해결할 수 있다.
 {% endhighlight %}
 
-Double quotes can contain variables; this is called "interpolation".
+큰 따옴표는 변수를 포함할 수 있는데, 이것을 "interpolation" 이라고 합니다.
 
 {% highlight php %}
 <?php
@@ -201,10 +200,9 @@ $juice = 'plum';
 echo "I like $juice juice";    // Output: I like plum juice
 {% endhighlight %}
 
-When using interpolation, it is often the case that the variable will be touching another character. This will result
-in some confusion as to what is the name of the variable, and what is a literal character.
+interpolation는 종종 변수가 다른 문자를 건드리는 경우에 씁니다. 하지만, 리터럴 문자와 변수명이 약간 혼란스러울 수 있다는 문제가 있습니다.
 
-To fix this problem, wrap the variable within a pair of curly brackets.
+이 문제를 고치자면, 중괄호 안에 한쌍의 변수를 감싸면 됩니다.
 
 {% highlight php %}
 <?php
@@ -280,21 +278,18 @@ EOD;                        // 끝을 나타내는 'EOD'는 반드시 줄의 가
 
 ### Which is quicker?
 
-There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
-fundamentally not true.
+작은 따옴표는 보통 큰 따옴표보다 빠르다는 속설이 있습니다. 하지만 사실이 아닙니다.
 
-If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
-or double quoted string will be entirely identical. Neither are quicker.
+하나의 문자열을 정의하고 복잡한 일이나 값을 연결하려고 하지 않는 경우, 작은 따옴표나 큰 따옴표를 사용한 문장은 전체적으로 동일하게 됩니다.
 
-If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
-results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
-values, interpolating is minutely faster.
+만약 큰 따옴표인 어떤 타입이나 interpolate 값의 여러 문자열을 연결하는 경우, 결과가 다를 수 있습니다. 작은 숫자들로 일하는 경우, 연결이
+미세하게 빠릅니다. 또한 값들이 많을 경우, interpolating이 미세하게 빠릅니다.
 
-Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
-application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
-optimization unless you really understand the meaning and impact of the differences.
+당신의 어플리케이션이 문자열로 하는 작업의 종류에 상관없이, 눈에 띄는 영향을 미치지 않습니다.
+당신이 정말로 의미와 차이를 이해하지 않고 한 개, 또는 여러개의 코드를 재사용하려고 하면 항상 무익합니다. 하지만 이해를 한다면
+micro-optimization를 피할 수 있습니다.
 
-* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+* [작은 따옴표의 성능에 대한 반증](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 ## 삼항 연산자
 
@@ -327,8 +322,7 @@ $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // 'yay'를 리턴한다.
 {% endhighlight %}
 
-It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
-would be.
+boolean 값을 리턴하기 위해 삼항연산자를 할 필요가 없습니다. 예를 들어보겠습니다.
 
 {% highlight php %}
 <?php
@@ -346,8 +340,7 @@ return $a == 3; // $a == 3 인지에 따라 true나 false 를 리턴한다.
 
 #### 삼항 연산자 사용 시 가독성과 기능을 고려한 괄호 사용하기
 
-When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
-within blocks of statements. An example of when there is no requirement to use bracketing is:
+삼항연산자를 사용하는 경우, 괄호는 코드의 가독성과, 블록 내부 결합을 향상시킵니다. 괄호를 사용할 필요가 없는 경우:
 
 {% highlight php %}
 <?php
