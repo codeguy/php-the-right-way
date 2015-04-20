@@ -1,4 +1,5 @@
 ---
+title:   장점
 isChild: true
 anchor:  templating_benefits
 ---

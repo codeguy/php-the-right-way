@@ -1,9 +1,10 @@
 ---
+title:   단순 PHP 템플릿
 isChild: true
 anchor:  plain_php_templates
 ---
 
-## Plain PHP Templates {#plain_php_templates_title}
+## 단순 PHP 템플릿 {#plain_php_templates_title}
 
 Plain PHP 템플릿은 nativa PHP 코드를 사용한 간단한 템플릿입니다. Plain PHP 템플릿이 PHP를 자연적으로 사용한 이래로 PHP는 실제 템플릿 언어 그
 자체입니다. 간단히 말해 PHP 코드를 HTML과 같은 다른언어와 결합해 사용할 수 있다는 것 입니다. PHP개발자가 다른 새로운 문법을 배울 필요가 없기 때문에

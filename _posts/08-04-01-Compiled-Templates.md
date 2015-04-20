@@ -1,9 +1,10 @@
 ---
+title:   컴파일되는 템플릿
 isChild: true
 anchor:  compiled_templates
 ---
 
-## Compiled Templates {#compiled_templates_title}
+## 컴파일되는 템플릿 {#compiled_templates_title}
 
 PHP는 성숙한, 객체 지향적 언어로 성장하고 있지만, [템플릿 언어로는 성장하지 않았다.][article_templating_engines] [Twig], [Smarty]* 와 같이 컴파일된 템플릿은 특히, 템플릿을
 대상으로 제공되는 새로운 구문으로 빈 부분을 채워줍니다.. 자동 이스케이핑, 상속, 그리고 단순화 된 제어구조는 컴파일된 템플릿을 쉽게 쓸 수 있고, 읽기 쉽고, 사용하기 안전하게 설계되었습니다.

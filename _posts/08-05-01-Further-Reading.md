@@ -1,9 +1,10 @@
 ---
+title:   더 읽을거리
 isChild: true
 anchor:  templating_further_reading
 ---
 
-## Further Reading {#templating_further_reading_title}
+## 더 읽을거리 {#templating_further_reading_title}
 
 ### Articles & Tutorials
 

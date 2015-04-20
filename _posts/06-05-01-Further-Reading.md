@@ -1,10 +1,10 @@
 ---
-title:   더 읽을 거리
+title:   더 읽을거리
 isChild: true
 anchor:  further_reading
 ---
 
-## 더 읽을 거리 {#further_reading_title}
+## 더 읽을거리 {#further_reading_title}
 
 * [Learning about Dependency Injection and PHP](http://ralphschindler.com/2011/05/18/learning-about-dependency-injection-and-php)
 * [What is Dependency Injection?](http://fabien.potencier.org/article/11/what-is-dependency-injection)
