@@ -1,6 +1,7 @@
 ---
+title:  시작하기
 anchor: getting_started
 ---
 
-# Getting Started {#getting_started_title}
+# 시작하기 {#getting_started_title}
 
