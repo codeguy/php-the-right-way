@@ -23,7 +23,7 @@ anchor:  user_groups
 역주: 국내에도 PUG를 찾을 수 있습니다. 여러분이 읽고 있는 이 문서 번역에 참가하였으며, 한달에 한번 정기적인 모임을
 갖고 있습니다. 모임에서는 PHP에 대해 심도있는 토론을 나누고, PHP개발자들 간의 소통이 이루어지고 있습니다.
 
-[Modern PUG(모던퍼그, Modern PHP User Group)](modernpug-ko)
+[Modern PUG(모던퍼그, Modern PHP User Group)][modernpug-ko]
 
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: http://www.meetup.com/find/
