@@ -7,7 +7,7 @@ anchor:  composer_and_packagist
 ## Composer와 Packagist {#composer_and_packagist_title}
 
 Composer는 **훌륭한** 의존성 관리자입니다. 프로젝트의 의존성을 `composer.json` 파일에 기록하고 간단한 커맨드 몇 개를
-사용하면 Composer가 알아서 다운로드하고 autoloading 설정을 해줍니다.
+사용하면 Composer가 알아서 다운로드하고 오토로딩(autoloading) 설정을 해줍니다.
 
 이미 Composer와 호환되는 많은 PHP 라이브러리가 있기 때문에 프로젝트에서 바로 사용할 수 있습니다. Composer 패키지들은 
 [Packagist]라는 공식 저장소에서 관리됩니다.
@@ -24,19 +24,19 @@ curl -s https://getcomposer.org/installer | php
 
 이렇게 하면 `composer.phar`라는 PHP 바이너리 파일이 다운로드됩니다. `php`로 이 바이너리를 실행하여 프로젝트의 의존성을
 관리할 수 있습니다.
-<strong>Please Note:</strong> 여기서 하는 것처럼 웹에서 다운로드한 코드를 바로 php 인터프리터에 파이프로 전달하여
+<strong>반드시 참고할것!</strong> 여기서 하는 것처럼 웹에서 다운로드한 코드를 바로 PHP 인터프리터에 파이프로 전달하여
 실행하는 경우에는 실행하기 전에 먼저 코드 내용을 보고 안전한 코드인 것을 확인한 후에 실행하기 바랍니다.
 
-#### Windows에 Composer 설치
+#### 윈도우에 Composer 설치
 
-Windows 에 설치하는 가장 간단한 방법은 [ComposerSetup] 인스톨러를 사용하는 것입니다. 링크에서 설치 파일을 받아
-설치하면, 시스템의 프로그램 설치 경로에 설치를 해주고 `PATH` 환경변수에도 추가해주기 때문에 어느 디렉토리에서
-커맨드라인을 실행하든지 그냥 `composer` 명령을 실행할 수 있게 됩니다.
+윈도우에 설치하는 가장 간단한 방법은 [ComposerSetup] 인스톨러를 사용하는 것입니다. 링크에서 설치 파일을 받아 설치하면,
+시스템의 프로그램 설치 경로에 설치를 해주고 `PATH` 환경변수에도 추가해주기 때문에 어느 디렉토리에서 커맨드라인을
+실행하든지 그냥 `composer` 명령을 실행할 수 있게 됩니다.
 
 ### Composer 설치 (수작업으로)
 
-Composer를 수작업으로 설치하는 건 고급 기술에 속한다고 할 수 있습니다. 하지만 자동으로 설치해주는 것이 비해서 수작업
-설치를 더 좋아할 만한 이유는 다양하게 있을 수 있을 겁니다. 대화형 자동 설치 과정에서는 다음과 같은 내용을 확인해줍니다.
+Composer를 수작업으로 설치하는 건 고급 기술에 속한다고 할 수 있습니다. 하지만 자동설치에 비해서 수작업 설치를 더
+좋아할 만한 이유는 다양합니다. 대화형 자동 설치 과정에서는 다음과 같은 내용을 확인합니다.
 
 - 충분한 PHP 버전이 설치되어 있는지
 - `.phar` 파일이 제대로 수행될 수 있는지
@@ -52,16 +52,17 @@ curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
 chmod +x $HOME/local/bin/composer
 {% endhighlight %}
 
-`$HOME/local/bin` (이나 여러분이 설치하기로 결정한 다른 디렉토리)는 환경변수 `$PATH`에 포함되어 있어야 합니다.
-그래야 `composer` 명령어를 실행할 수 있을테니까요.
+`$HOME/local/bin` (이나 여러분이 설치하기로 결정한 다른 디렉토리)는 환경변수 `$PATH`에 포함되어 있어야 합니다. 그래야
+`composer` 명령어를 실행할 수 있습니다.
 
-이렇게 설치하고 나면 앞에서 Composer를 실행하려고 `composer install`라고 했던 것을 아래처럼 줄여서 실행할 수 있습니다.
+이렇게 설치하고 나면 앞에서 Composer를 실행하려고 `composer install`라고 했던 것을 다음과 같이 줄여서 실행할 수
+있습니다.
 
 {% highlight console %}
 composer install
 {% endhighlight %}
 
-여러분이 Composer를 시스템에 글로벌하게 설치하였다고 가정하고 아래 섹션을 보면 됩니다.
+여러분이 Composer를 시스템에 글로벌하게 설치하였다고 가정하고 다음 항목을 보면 됩니다.
 
 ### 의존관계를 정의하고 설치하기
 
@@ -82,8 +83,8 @@ composer require twig/twig:~1.8
 composer install
 {% endhighlight %}
 
-다음으로, 여러분이 작성하는 어플리케이션의 PHP 파일에 아래와 같은 내용을 추가하여 Composer의 autoloader 를 사용한다는
-것을 PHP에게 알려줍니다.
+다음으로, 여러분이 작성하는 어플리케이션의 PHP 파일에 아래와 같은 내용을 추가하여 Composer의 오토로더(autoloader)를
+사용한다는 것을 PHP에게 알려줍니다.
 
 {% highlight php %}
 <?php
@@ -114,9 +115,9 @@ require 'vendor/autoload.php';
 [Security Advisories Checker]는 `composer.lock` 파일을 확인하여 여러분의 의존관계를 업데이트해야 하는지 알려주는
 웹 서비스와 커맨드라인 도구입니다.
 
-### 컴포저를 이용하여 전역 의존 패키지들 관리하기
+### Composer를 이용하여 전역 의존 패키지들 관리하기
 
-컴포저는 전역 의존성과 바이너리(실행파일) 또한 관리 가능합니다. 사용법은 아주 간단합니다. 그저 모든 커맨드 앞에
+Composer는 전역 의존성과 바이너리(실행파일) 또한 관리 가능합니다. 사용법은 아주 간단합니다. 그저 모든 커맨드 앞에
 `global`만 붙이면 됩니다. PHPUnit을 인스톨 하고 싶고, 이것이 전역에서 사용가능하다면 다음과 같이 커맨드를 입력할 수
 있습니다.
 
@@ -128,11 +129,11 @@ composer global require phpunit/phpunit
 어디에서든 실행되어야 할 바이너리(실행파일)를 갖고 있다면, 이를 실행하기 위해서 `~/.composer/vendor/bin`폴더를
 `$PATH`변수에 추가해야 합니다.
 
-* [컴포저에 대해 더 알아보기][Learn about Composer]
+* [알아보기: Composer][Learn about Composer]
 
-(역주 : 그리고 놀랍게도 컴포저는 한국어 메뉴얼이 존재합니다!)
+(역주 : 그리고 놀랍게도 Composer는 한국어 메뉴얼이 존재합니다!)
 
-* [컴포저 한글 웹사이트][Composer Korean]
+* [Composer 한글 웹사이트][Composer Korean]
 
 [Packagist]: http://packagist.org/
 [Twig]: http://twig.sensiolabs.org

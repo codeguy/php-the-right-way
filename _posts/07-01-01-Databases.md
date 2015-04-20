@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스
+title:  데이터베이스
 anchor: databases
 ---
 

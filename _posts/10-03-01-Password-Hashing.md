@@ -38,9 +38,9 @@ if (password_verify('bad-password', $passwordHash)) {
 {% endhighlight %}  
 
 
-* [Learn about `password_hash()`] [1]
+* [알아보기: `password_hash()`] [1]
 * [`password_compat` for PHP >= 5.3.7 && < 5.5] [2]
-* [Learn about hashing in regards to cryptography] [3]
+* [알아보기: hashing in regards to cryptography] [3]
 * [PHP `password_hash()` RFC] [4]
 
 
