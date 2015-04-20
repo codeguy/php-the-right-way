@@ -20,8 +20,8 @@ HTML 코드, SQL 쿼리, PHP 코드 등 웹 어플리케이션의 모든 레벨�
 문자열을 변수에 할당하거나 두 문자열을 이어붙이는 등의 기본적인 문자열 연산은 UTF-8 문자열이라고 해도 특별할 것이
 없습니다. 하지만 `strpos()`나 `strlen()`과 같은 대부분의 문자열 함수들은 신경을 써야 합니다. 이런 함수들은
 `mb_strpos()`나 `mb_strlen()` 같이 원래 이름 앞에 `mb_`가 붙은 함수들이 별도로 존재합니다. 그런 함수들을 멀티바이트
-문자열 함수라고 하고, [멀티바이트 문자열 익스텐션]에 의해서 제공됩니다. 멀티바이트 문자열 함수들은 유니코드 문자열을
-다루기 위해서 특별히 제공되는 함수들입니다.
+문자열 함수라고 하고, [멀티바이트 문자열 익스텐션][Multibyte String Extension]에 의해서 제공됩니다. 멀티바이트 문자열
+함수들은 유니코드 문자열을 다루기 위해서 특별히 제공되는 함수들입니다.
 
 유니코드 문자열을 다룰 때에는 항상 `mb_`로 시작하는 함수들을 사용해야 합니다. 예를 들어 `substr()` 함수를 UTF-8
 문자열에 대해서 사용해보면, 결과물에는 이상하게 깨진 글자가 나온다는 사실을 알게 될 좋은 기회가 될 것입니다. UTF-8
@@ -31,7 +31,7 @@ HTML 코드, SQL 쿼리, PHP 코드 등 웹 어플리케이션의 모든 레벨�
 까먹고 일반 문자열 함수를 사용하면 깨진 유니코드 문자열을 보게 될 수가 있습니다.
 
 모든 문자열 함수가 그에 해당되는 멀티바이트 버전의 `mb_` 로 시작되는 함수를 가지고 있는 것은 아닙니다. 여러분이
-사용하려고 했던 문자열 함수 그런 경우라면, 운이 없었다고 할 수 밖에요.
+사용하려고 했던 문자열 함수가 그런 경우라면, 운이 없었다고 할 수 밖에요.
 
 모든 PHP 스크립트 파일(또는 모든 PHP 스크립트에 include 되는 공용 스크립트)의 가장 윗부분에 `mb_internal_encoding()`
 함수를 사용해서 문자열 인코딩을 지정하고, 그 바로 다음에 `mb_http_output()` 함수로 브라우저에 출력될 문자열 인코딩도
@@ -49,7 +49,7 @@ HTML 코드, SQL 쿼리, PHP 코드 등 웹 어플리케이션의 모든 레벨�
 사용하면, `mbstring` 익스텐션이 활성화되어 있으면 그쪽 함수들을 사용하고 활성화되어 있지 않으면 일반 문자열 함수가
 대신 호출되는 식으로 동작하게 만들어줍니다.
 
-[멀티바이트 문자열 익스텐션]: http://php.net/book.mbstring
+[Multibyte String Extension]: http://php.net/book.mbstring
 [patchwork/utf8]: https://packagist.org/packages/patchwork/utf8
 
 ### 데이터베이스 수준에서의 UTF-8
@@ -59,7 +59,7 @@ UTF-8이 아닌 다른 인코딩으로 저장될 가능성이 있습니다.
 
 PHP에서 MySQL로 전달되는 문자열이 UTF-8로 확실히 전달되게 하려면, 사용하는 데이터베이스와 테이블이 모두 `utf8mb4`
 캐릭터 셋과 콜레이션(collation)을 사용하게 해야합니다. 그리고 PDO 연결문자열에도 `utf8mb4` 캐릭터 셋을 사용한다고
-명시해야 합니다. 아래의 예제를 보세요. _정말 중요합니다_.
+명시해야 합니다. 다음의 예제를 보세요. _정말 중요합니다_.
 
 UTF-8 문자열을 제대로 사용하려면 반드시 `utf8mb4` 캐릭터 셋을 사용해야 합니다. `utf8` 캐릭터 셋이 아닙니다!
 (놀라워라...) 그 이유는 '더 읽어보기'를 참고하세요.
@@ -69,7 +69,7 @@ UTF-8 문자열을 제대로 사용하려면 반드시 `utf8mb4` 캐릭터 셋�
 PHP 스크립트가 UTF-8 문자열을 브라우저에 제대로 전송하게 하려면 `mb_http_output()` 함수를 사용하세요.
 
 그리고 HTTP 응답이 UTF-8로 되어 있다는 것을 브라우저도 알 수 있게 해줘야 되겠지요. HTML 응답 내용의 `<head>` 태그에
-[charset `<meta>` 태그](http://htmlpurifier.org/docs/enduser-utf8.html) 를 넣는 것이 전통적인 방법입니다. 이렇게 하는
+[charset `<meta>` 태그](http://htmlpurifier.org/docs/enduser-utf8.html)를 넣는 것이 전통적인 방법입니다. 이렇게 하는
 데에 잘못된 점은 하나도 없지만, 성능을 좀 더 올릴 수 있는 방법도 있습니다. HTTP 응답의 `Content-Type` 헤더에 charset
 설정을 하면 [훨씬 빠르게 동작](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly)
 한다고 합니다.
@@ -138,12 +138,12 @@ header('Content-Type: text/html; charset=UTF-8');
 
 ### 더 읽어보기
 
-* [PHP Manual: String Operations](http://php.net/language.operators.string)
-* [PHP Manual: String Functions](http://php.net/ref.strings)
+* [PHP 메뉴얼: String Operations](http://php.net/language.operators.string)
+* [PHP 메뉴얼: String Functions](http://php.net/ref.strings)
     * [`strpos()`](http://php.net/function.strpos)
     * [`strlen()`](http://php.net/function.strlen)
     * [`substr()`](http://php.net/function.substr)
-* [PHP Manual: Multibyte String Functions](http://php.net/ref.mbstring)
+* [PHP 메뉴얼: Multibyte String Functions](http://php.net/ref.mbstring)
     * [`mb_strpos()`](http://php.net/function.mb-strpos)
     * [`mb_strlen()`](http://php.net/function.mb-strlen)
     * [`mb_substr()`](http://php.net/function.mb-substr)
@@ -152,9 +152,9 @@ header('Content-Type: text/html; charset=UTF-8');
     * [`htmlentities()`](http://php.net/function.htmlentities)
     * [`htmlspecialchars()`](http://php.net/function.htmlspecialchars)
 * [PHP UTF-8 Cheatsheet](http://blog.loftdigital.com/blog/php-utf-8-cheatsheet)
-* [Handling UTF-8 with PHP](http://www.phpwact.org/php/i18n/utf-8)
+* [PHP로 UTF-8 다루기](http://www.phpwact.org/php/i18n/utf-8)
 * [Stack Overflow: What factors make PHP Unicode-incompatible?](http://stackoverflow.com/questions/571694/what-factors-make-php-unicode-incompatible)
 * [Stack Overflow: Best practices in PHP and MySQL with international strings](http://stackoverflow.com/questions/140728/best-practices-in-php-and-mysql-with-international-strings)
-* [How to support full Unicode in MySQL databases](http://mathiasbynens.be/notes/mysql-utf8mb4)
+* [MySQL에서 완벽하게 유니코드 지원하게 하는 방법](http://mathiasbynens.be/notes/mysql-utf8mb4)
 * [Bringing Unicode to PHP with Portable UTF-8](http://www.sitepoint.com/bringing-unicode-to-php-with-portable-utf8/)
 * [Stack Overflow: DOMDocument loadHTML does not encode UTF-8 correctly](http://stackoverflow.com/questions/8218230/php-domdocument-loadhtml-not-encoding-utf-8-correctly)

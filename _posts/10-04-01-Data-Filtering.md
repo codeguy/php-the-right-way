@@ -6,7 +6,7 @@ anchor:  data_filtering
 
 ## 데이터 필터링 {#data_filtering_title}
 
-외부로부터의 입력은 절대 (절대로) 믿지 마십시오. 외부에서 입력 받은 데이터를 사용하기 전에는 반드시 검증하고 위험한
+외부로부터의 입력은 절대(절대로) 믿어서는 안됩니다. 외부에서 입력 받은 데이터를 사용하기 전에는 반드시 검증하고 위험한
 요소를 제거해야 합니다. `filter_var()`와 `filter_input()` 함수를 사용하여 텍스트에서 위험한 내용을 제거하고, 규칙(메일
 주소 등)에 맞는지 검증할 수 있습니다.
 
@@ -33,12 +33,12 @@ Cross-Site Scripting (XSS)이라고 합니다. 매우 위험한 공격 기법이
 데이터에서 `"/"`, `"../"`, [null bytes][6] 문자를 제거해야 하고, 그 외에도 숨겨진 파일, 공개되지 않아야 하는 파일,
 민감한 정보가 들어있는 파일의 경로들을 필터링해야 합니다.
 
-* [Learn about data filtering][1]
-* [Learn about `filter_var`][4]
-* [Learn about `filter_input`][5]
-* [Learn about handling null bytes][6]
+* [알아보기: data filtering][1]
+* [알아보기: `filter_var`][4]
+* [알아보기: `filter_input`][5]
+* [알아보기: handling null bytes][6]
 
-### Sanitization (위험한 입력 제거)
+### 위험한 입력 제거(Sanitization)
 
 외부 입력으로 받은 문자열에서 위험하거나 필요없는 문자열을 제거하거나 이스케이프처리 하는 일을 Sanitization 이라고
 합니다.

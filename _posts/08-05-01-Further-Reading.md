@@ -6,12 +6,12 @@ anchor:  templating_further_reading
 
 ## 더 읽을거리 {#templating_further_reading_title}
 
-### Articles & Tutorials
+### 읽을거리 & 튜토리얼
 
 * [PHP 템플릿 엔진](http://fabien.potencier.org/article/34/templating-engines-in-php)
 * [Views 소개 & CodeIgniter 템플릿](http://code.tutsplus.com/tutorials/an-introduction-to-views-templating-in-codeigniter--net-25648)
 * [PHP 템플릿 시작하기](http://www.smashingmagazine.com/2011/10/17/getting-started-with-php-templating/)
-* [내 소유의 php 템플릿 굴려보기](http://code.tutsplus.com/tutorials/roll-your-own-templating-system-in-php--net-16596)
+* [나만의 PHP 템플릿 굴려보기](http://code.tutsplus.com/tutorials/roll-your-own-templating-system-in-php--net-16596)
 * [Master Pages](https://laracasts.com/series/laravel-from-scratch/episodes/7)
 * [Symfony 2 템플릿에서 작업하기](http://code.tutsplus.com/tutorials/working-with-templates-in-symfony-2--cms-21172)
 

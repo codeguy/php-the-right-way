@@ -58,17 +58,17 @@ finally
 class ValidationException extends Exception {}
 {% endhighlight %}
 
-이렇게 예외 클래스를 구체적으로 만들면 여러 개의 catch 문을 달아서 다른 종류의 예외를 서로 다르게 처리할 수 있게 됩니다.
-그러다보면 <em>너무 많은</em> 예외 클래스를 만들어야 하는 것이 문제가 될 수도 있는데, 앞서 얘기한 [SPL 익스텐션][splext]에서
-포함되어 있는 SPL 예외 클래스들을 적절히 사용한다면 그런 문제를 줄일 수 있을 것입니다.
+이렇게 예외 클래스를 구체적으로 만들면 여러 개의 catch 문을 달아서 다른 종류의 예외를 서로 다르게 처리할 수 있게
+됩니다. 그러다보면 <em>너무 많은</em> 예외 클래스를 만들어야 하는 것이 문제가 될 수도 있는데, 앞서 얘기한
+[SPL 익스텐션][splext]에서 포함되어 있는 SPL 예외 클래스들을 적절히 사용한다면 그런 문제를 줄일 수 있습니다.
 
-예를 들어 `__call()` Magic Method 에 잘못된 메소드 호출이 들어온 상황을 처리할 때, 두루뭉실하게 그냥 Exception 을 
-던지거나 Exception 클래스를 상속받은 예외 클래스를 작성해서 던지는 대신에 `throw new BadMethodCallException;`
-이라고 할 수 있겠습니다.
+예를 들어 `__call()` 특수 매서드(Magic Method)에 잘못된 메소드 호출이 들어온 상황을 처리할 때, 두루뭉실하게 그냥
+Exception을 던지거나 Exception 클래스를 상속받은 예외 클래스를 작성해서 던지는 대신에
+`throw new BadMethodCallException;` 이라고 할 수 있겠습니다.
 
-* [Read about Exceptions][exceptions]
-* [Read about SPL Exceptions][splexe]
-* [Nesting Exceptions In PHP][nesting-exceptions-in-php]
+* [읽을거리: Exceptions][exceptions]
+* [읽을거리: SPL Exceptions][splexe]
+* [PHP에서 Nesting Exceptions][nesting-exceptions-in-php]
 * [Exception Best Practices in PHP 5.3][exception-best-practices53]
 
 [splext]: #standard_php_library

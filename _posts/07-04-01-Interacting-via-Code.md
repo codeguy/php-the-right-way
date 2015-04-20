@@ -1,7 +1,7 @@
 ---
 isChild: true
-title: 데이터베이스와 상호작용 하기
-anchor: databases_interacting
+title:   데이터베이스와 상호작용 하기
+anchor:  databases_interacting
 ---
 
 ## 데이터베이스와 상호작용 하기 {#databases_interacting_title}

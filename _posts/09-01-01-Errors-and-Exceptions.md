@@ -1,5 +1,5 @@
 ---
-title: 에러와 예외
+title:  에러와 예외
 anchor: errors_and_exceptions
 ---
 

@@ -62,8 +62,8 @@ foreach ($periodIterator as $date) {
 }
 {% endhighlight %}
 
-* [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (날짜를 문자열로 변경할 때 사용할 수 있는 옵션 패턴들)
+* [읽을거리: DateTime][datetime]
+* [읽을거리: Date Formatting][dateformat] (날짜를 문자열로 변경할 때 사용할 수 있는 옵션 패턴들)
 
 [datetime]: http://php.net/book.datetime
 [dateformat]: http://php.net/function.date

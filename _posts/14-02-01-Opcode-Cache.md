@@ -17,12 +17,12 @@ PHP 5.5부터는 [OPcache][opcache-book]. 라는 opcode 캐시가 내장되어 �
 
 아래는 인기있는 opcode 캐시들입니다.
 
-* [OPcache][opcache-book] (built-in since PHP 5.5)
-* [APC] (PHP 5.4 and earlier)
+* [OPcache][opcache-book] (PHP 5.5 이후 내장)
+* [APC] (PHP 5.4 혹은 그 이전 버전)
 * [XCache]
-* [Zend Optimizer+] (part of Zend Server package)
-* [WinCache] (extension for MS Windows Server)
-* [list of PHP accelerators on Wikipedia][PHP_accelerators]
+* [Zend Optimizer+] (Zend 서비스 패키지의 일부)
+* [WinCache] (MS Windows Server를 위한 익스텐션)
+* [위키백과: PHP 가속화도구(Acceleratior) 목록][PHP_accelerators]
 
 
 [opcache-book]: http://php.net/book.opcache
