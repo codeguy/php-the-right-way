@@ -55,7 +55,7 @@ chmod +x $HOME/local/bin/composer
 `$HOME/local/bin` (이나 여러분이 설치하기로 결정한 다른 디렉토리)는 환경변수 `$PATH`에 포함되어 있어야 합니다. 그래야
 `composer` 명령어를 실행할 수 있습니다.
 
-이렇게 설치하고 나면 앞에서 Composer를 실행하려고 `composer install`라고 했던 것을 다음과 같이 줄여서 실행할 수
+이렇게 설치하고 나면 앞에서 Composer를 실행하려고 `php composer.phar install`라고 했던 것을 다음과 같이 줄여서 실행할 수
 있습니다.
 
 {% highlight console %}
