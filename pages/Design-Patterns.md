@@ -12,7 +12,7 @@ sitemap: true
 
 * [위키백과: Architectural pattern](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [위키백과: Software design pattern](https://en.wikipedia.org/wiki/Software_design_pattern)
-* [위키백과: Collection of implementation examples](https://github.com/domnikl/DesignPatternsPHP)
+* [Collection of implementation examples](https://github.com/domnikl/DesignPatternsPHP)
 
 ## 팩토리(Factory) {#factory}
 
