@@ -30,7 +30,7 @@
     </head>
     <body>
         <nav class="site-navigation">
-            <div class="build-date">Last Updated: {{ site.time }}</div>
+            <div class="build-date">Last Updated: {{ site.time | date: "%F %R" }}</div>
             <ul>
 
                 <li>
