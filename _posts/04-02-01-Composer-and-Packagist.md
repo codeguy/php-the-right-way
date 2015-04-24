@@ -6,7 +6,7 @@ anchor:  composer_and_packagist
 
 ## Composer 与 Packagist {#composer_and_packagist_title}
 
-Composer 是一个**杰出**依赖管理器。在 `composer.json` 文件中列出你项目所需的依赖包，加上一点简单的命令，Composer 将会自动帮你下载并设置你的项目依赖。
+Composer 是一个**杰出** 的依赖管理器。在 `composer.json` 文件中列出你项目所需的依赖包，加上一点简单的命令，Composer 将会自动帮你下载并设置你的项目依赖。
 
 现在已经有许多 PHP 第三方包已兼容 Composer，随时可以在你的项目中使用。这些「packages(包)」都已列在 [Packagist]，这是一个官方的 Composer 兼容包仓库。
 
@@ -16,16 +16,16 @@ Composer 是一个**杰出**依赖管理器。在 `composer.json` 文件中列�
 
     curl -s https://getcomposer.org/installer | php
 
-这条命令将会下载 `composer.phar` (一个PHP二进制档)。你可以使用 `php` 执行这个文件用来管理你的项目依赖。
-**注记:**假如你是直接下载代码来编译，请先在线阅读代码确保它是安全的。
+这条命令将会下载 `composer.phar` (一个 PHP 二进制档)。你可以使用 `php` 执行这个文件用来管理你的项目依赖。
+**请注意：** 假如你是直接下载代码来编译，请先在线阅读代码确保它是安全的。
 
 #### Windows环境下安装
 
-对于Windows的用户而言最简单的获取及执行方法就是使用 [ComposerSetup] 安装程序，它会执行一个全局安装并设置你的 `$PATH`，所以你在任意目录下在命令行中使用 `composer`。
+对于Windows 的用户而言最简单的获取及执行方法就是使用 [ComposerSetup] 安装程序，它会执行一个全局安装并设置你的 `$PATH`，所以你在任意目录下在命令行中使用 `composer`。
 
 ### 如何手动安装 Composer
 
-手动安装Composer是一个高端的技术;仅管如此还是有许多开发者有各种原因喜欢使用这种交互式的应用程序安装 Composer。在安装前请先确认你的PHP安装项目如下：
+手动安装 Compose r是一个高端的技术;仅管如此还是有许多开发者有各种原因喜欢使用这种交互式的应用程序安装 Composer。在安装前请先确认你的PHP安装项目如下：
 
 - 正在使用一个满足条件的 PHP 版本
 - `.phar` 文件可以正确的被执行
