@@ -4,7 +4,7 @@ title: 测试驱动开发
 anchor:  test_driven_development
 ---
 
-## Test Driven Development {#test_driven_development_title}
+## 测试驱动开发 {#test_driven_development_title}
 
 [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development) 上的定义:
 > 测试驱动开发 (TDD) 是一种以非常短的开发周期不断迭代的软件开发过程:首先开发者对将要实现的功能或者新的方法写一个失败的自动化测试用例，然后就去写代码来通过这个测试用例，最终通过重构代码让一其达到可接受的水准。**Kent Beck**， 这个技术创造者或者说重新发现者，在2003年声明TDD 鼓励简单的设计和激励信心。
@@ -21,7 +21,7 @@ anchor:  test_driven_development
 [PHPUnit](https://phpunit.de/) 是业界PHP应用开发单元测试框架的标准，但也有其他可选的框架：
 
 - [atoum](https://github.com/atoum/atoum)
-- [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)  
+- [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
 - [PUnit](http://punit.smf.me.uk/)
 - [SimpleTest](http://simpletest.org/)
 
