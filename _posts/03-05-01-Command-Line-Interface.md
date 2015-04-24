@@ -16,7 +16,7 @@ CLI PHP 编程非常强大，可以直接调用你自己的程序代码而无需
 > php -i
 {% endhighlight %}
 
-选项 `-i` 将会打印 PHP 配置，类似于 [`phpinfo()`][phpinfo] 函数。 
+选项 `-i` 将会打印 PHP 配置，类似于 [`phpinfo()`][phpinfo] 函数。
 
 选项 `-a` 提供交互式 shell，和 Ruby 的 IRB 或 python 的交互式 shell 相似，此外还有很多其他有用的[命令行选项][cli-options]。
 
@@ -32,7 +32,7 @@ $name = $argv[1];
 echo "Hello, $name\n";
 {% endhighlight %}
 
-PHP 会在脚本运行时根据参数设置两个特殊的变量，[`$argc`][argc]是一个整数，表示参数*个数*，[`$argv`][argv]是一个数组变量，包含每个参数的*值*，
+PHP 会在脚本运行时根据参数设置两个特殊的变量，[`$argc`][argc] 是一个整数，表示参数*个数*，[`$argv`][argv] 是一个数组变量，包含每个参数的*值*，
 它的第一个元素一直是 PHP 脚本的名称，如本例中为 `hello.php`。
 
 命令运行失败时，可以通过 `exit()` 表达式返回一个非 0 整数来通知 shell，常用的 exit 返回码可以查看[列表][exit-codes].
