@@ -3,7 +3,7 @@ title:  使用模板
 anchor: templating
 ---
 
-# Templating {#templating_title}
+# 使用模板 {#templating_title}
 
 模板提供了一种简便的方式，将展现逻辑从控制器和业务逻辑中分离出来。
 
