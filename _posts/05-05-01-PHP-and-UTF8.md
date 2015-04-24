@@ -1,10 +1,10 @@
 ---
 isChild: true
-title:   Working with UTF-8
+title:   使用 UTF-8 编码
 anchor:  php_and_utf8
 ---
 
-## Working with UTF-8 {#php_and_utf8_title}
+## 使用 UTF-8 编码 {#php_and_utf8_title}
 
 _本章是由 [Alex Cabal](https://alexcabal.com/) 最初撰写在 [PHP Best Practices](https://phpbestpractices.org/#utf-8) 中的，我们使用它作为进行建议的基础_。
 
@@ -33,7 +33,7 @@ _本章是由 [Alex Cabal](https://alexcabal.com/) 最初撰写在 [PHP Best Pra
 
 ### 数据库层面的 UTF-8
 
-如果你使用 PHP 来操作到 MySQL，有些时候即使你做到了上面的没一点，你的字符串仍可能面临在数据库中以非 UTF-8 的格式进行存储的问题。
+如果你使用 PHP 来操作到 MySQL，有些时候即使你做到了上面的每一点，你的字符串仍可能面临在数据库中以非 UTF-8 的格式进行存储的问题。
 
 为了确保你的字符串从 PHP 到 MySQL都使用 UTF-8，请检查确认你的数据库和数据表都设定为 `utf8mb4` 字符集和整理，并且确保你的 PDO 连接请求也使用了 `utf8mb4` 字符集。请看下方的示例代码，这是 _非常重要_ 的。
 
