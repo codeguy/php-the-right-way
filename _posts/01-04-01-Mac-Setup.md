@@ -36,9 +36,9 @@ MacPorts 支持预编译的二进制文件，因此你不必每次都重新从�
 
 ### 通过 phpbrew 安装 PHP
 
-[phpbrew] 是一个安装与管理多个 PHP 版本的工具。它在应用程序或者项目需求不同版本的 PHP 时非常有用，让你不再需要使用虚拟机来处理这些情况。
+[phpbrew] 是一个安装与管理多个 PHP 版本的工具。它在应用程序或者项目需要不同版本的 PHP 时非常有用，让你不再需要使用虚拟机来处理这些情况。
 
-### 编译源码
+### 源码编译
 
 另一个让你控制安装 PHP 版本的选择就是 [自行编译][mac-compile]。
 如果使用这种方法， 你必须先确认是否已经通过 「Apple's Mac Developer Center」 下载、安装 [Xcode][xcode-gcc-substitution] 或者 ["Command Line Tools for XCode"]。
