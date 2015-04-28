@@ -4,7 +4,7 @@ isChild: true
 anchor:  platform_as_a_service
 ---
 
-## Platfor as a Service (PaaS) {#platform_as_a_service_title}
+## Platform as a Service (PaaS) {#platform_as_a_service_title}
 
 PaaS 提供了运行 PHP 应用程序所必须的系统环境和网络架构。这就意味着只需做少量配置就可以运行 PHP 应用程序或者 PHP 框架。
 
