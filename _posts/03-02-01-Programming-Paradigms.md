@@ -25,7 +25,7 @@ PHP 支持递归，也就是函数自己调用自己，但多数 PHP 代码使�
 
 PHP 5.4 增加了将闭包绑定到对象作用域中的特性，并改善其可调用性，如此即可在大部分情况下使用匿名函数取代一般的函数。
 
-* 学习更多 [PHP 函数式编程](/pages/Functional-Programming.html)
+* 学习更多 [PHP 函数式编程](/php-the-right-way/pages/Functional-Programming.html)
 * [阅读匿名函数][anonymous-functions]
 * [阅读闭包类][closure-class]
 * [更多关于 Closures RFC][closures-rfc]
@@ -51,4 +51,3 @@ PHP 通过反射 API 和魔术方法，可以实现多种方式的元编程。�
 [magic-methods]: http://php.net/language.oop5.magic
 [reflection]: http://php.net/intro.reflection
 [overloading]: http://php.net/language.oop5.overloading
-
