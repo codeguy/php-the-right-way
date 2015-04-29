@@ -29,7 +29,7 @@ _PHP: The Right Way_ 는 다양한 언어로 변역되어 있습니다.
 * [이탈리아어](http://it.phptherightway.com)
 * [인도네시아어](http://id.phptherightway.com)
 * [일본어판](http://ja.phptherightway.com)
-* [중국어판 (간체)](http://wulijun.github.com/php-the-right-way)
+* [중국어판 (간체)](http://laravel-china.github.io/php-the-right-way/)
 * [중국어판 (번체)](http://laravel-taiwan.github.io/php-the-right-way)
 * [태국어](https://apzentral.github.io/php-the-right-way/)
 * [터키어판](http://hkulekci.github.io/php-the-right-way/)
