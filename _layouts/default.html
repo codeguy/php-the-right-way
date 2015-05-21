@@ -89,7 +89,17 @@
                         <li><a href="http://philsturgeon.co.uk/">Phil Sturgeon</a></li>
                     </ul>
                     <h2 class="epsilon">Project contributors</h2>
-                    <div id="contributors">Loading&hellip;</div>
+                    <div id="contributors">
+                    {% unless site.github.contributors.size == 0 or site.github.contributors.empty? %}
+                        <ul>
+                        {% for contributor in site.github.contributors %}
+                            <li><a href="{{ contributor.html_url }}" target="_blank">{{ contributor.login }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>This project would not be possible without the help of <a href="https://github.com/codeguy/php-the-right-way/graphs/contributors">our amazing contributors</a> on GitHub.</p>
+                    {% endunless %}
+                    </div>
                     <h2 class="epsilon">Project sponsors</h2>
                     <ul class="mbd">
                         <li><a href="http://www.newmediacampaigns.com">New Media Campaigns</a></li>
