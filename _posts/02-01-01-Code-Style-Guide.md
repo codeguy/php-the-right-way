@@ -32,6 +32,15 @@ editors like [Sublime Text 2][st-cs] to be given real time feedback.
 You can fix the code layout automatically by using one of the two following tools. One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase. 
 Another option is [php.tools][phptools], which is made popular by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in performance, meaning real-time editor fixing is more fluid.
 
+And you can run phpcs manually from shell:
+
+    phpcs -sw --standard=PSR2 file.php
+
+It will show errors and descriptions how to fix them.
+It can also be helpful to include this command in a git hook.
+That way branches which contain violations against the chosen standard cannot enter the repository
+until those violations have been fixed.
+
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
 readable by all current and future parties who may be working on the codebase.
 
