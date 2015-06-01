@@ -38,6 +38,10 @@ MacPorts 支持预编译的二进制文件，因此你不必每次都重新从�
 
 [phpbrew] 是一个安装与管理多个 PHP 版本的工具。它在应用程序或者项目需要不同版本的 PHP 时非常有用，让你不再需要使用虚拟机来处理这些情况。
 
+### 通过 Liip's binary installer 安装 PHP
+[php-osx.liip.ch] 是另一种流行的选择，它提供了从5.3到5.6版本的单行安装功能。
+它并不会覆盖Apple集成的PHP文件，而是将其安装在了一个独立的目录中(/usr/local/php5)。
+
 ### 源码编译
 
 另一个让你控制安装 PHP 版本的选择就是 [自行编译][mac-compile]。
@@ -51,6 +55,7 @@ MacPorts 支持预编译的二进制文件，因此你不必每次都重新从�
 
 [Homebrew]: http://brew.sh/
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
+[php-osx.liip.ch]: http://php-osx.liip.ch/
 [MacPorts]: https://www.macports.org/install.php
 [phpbrew]: https://github.com/phpbrew/phpbrew
 [mac-compile]: http://php.net/install.macosx.compile
