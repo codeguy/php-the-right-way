@@ -6,8 +6,7 @@ anchor:  windows_setup
 
 ## 윈도우(Windows)에서 사용하기 {#windows_setup_title}
 
-윈도우에 PHP를 설치하는 방법에는 여러가지가 있습니다. [PHP 바이너리 다운로드 사이트][php-downloads]에서 '.msi'
-인스톨러를 받을 수 있습니다.
+[PHP 바이너리 다운로드 사이트][php-downloads]에서 바이너리를 다운로드 받을 수 있습니다. PHP 압축을 푼 뒤에는 PHP 루트 폴더(php.exe가 있는 폴더)를 [PATH][windows-path]에 설정하여 PHP를 어느 곳에서나 실행할 수 있도록 하는 것이 좋습니다.
 
 학습 혹은 로컬에서의 개발이 목적이라면 PHP 5.4 부터 내장되어 있는 웹서버를 사용하면, 웹서버 설치와 설정에 대한
 걱정없이 시작할 수 있습니다. 완전한 웹서버와 MySQL 데이터베이스 등을 포함한 "통합(All-in-One)" 패키지를 선호한다면
@@ -20,7 +19,8 @@ anchor:  windows_setup
 포함되어 있어 단지 PHP를 핸들러로 설정해주기만 하면 됩니다. 자세한 정보는 [iis.net에 있는 PHP 전용 섹션][php-iis]에서
 볼 수 있습니다.
 
-[php-downloads]: http://windows.php.net
+[php-downloads]: http://windows.php.net/download/
+[windows-path]: http://www.windows-commandline.com/set-path-command-line/
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
 [xampp]: http://www.apachefriends.org/en/xampp.html
 [easyphp]: http://www.easyphp.org/

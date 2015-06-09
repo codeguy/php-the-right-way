@@ -18,7 +18,7 @@ OS X에 PHP를 설치하기 위해선 여러가지 방법이 있습니다.
 [Homebrew PHP]는 Homebrew에서 사용되는 PHP와 관련된 다양한 "formulae"를 포함하고 있는 저장소입니다. 그리고 이는 PHP를
 설치할 수 있도록 해줍니다.
 
-`brew install`이라는 커맨드를 이용하여 `php53`, `php54`, `php55` 또는 `php56`를 설치할 수 있습니다. 그리고 `PATH` 
+`brew install`이라는 커맨드를 이용하여 `php53`, `php54`, `php55` 또는 `php56`를 설치할 수 있습니다. 그리고 `PATH`
 변수를 수정하여 설치되어있는 다양한 버전의 PHP를 변경할 수 있습니다. 이러한 과정이 번거롭다면,
 [brew-php-switcher][brew-php-switcher]를 사용하여 자동으로 버전을 변경할 수 있습니다.
 
@@ -44,6 +44,10 @@ MacPorts는 미리 컴파일된 바이너리를 지원하여 의존성 패키지
 [phpbrew]는 여러가지 PHP버전을 설치하고 관리하기 위한 도구입니다. 두 개의 서로 다른 어플리케이션/프로젝트가 다른 버전의
 PHP를 요구하지만, 가상 머신은 사용하고 있지 않을때 매우 유용합니다.
 
+### Liip's binary installer를 사용하여 PHP 설치하기
+다른 유명한 방법은 5.3에서 5.6 버전까지 한줄로 설치할 수 있는 방법인 [php-osx.liip.ch]가 있습니다.
+이 방법은 Apple에서 설치한 PHP를 덮어쓰지 않고 별도의 위치(/usr/local/php5)에 설치합니다.
+
 ### 소스 컴파일하기
 
 설치한 PHP 버전을 조작할 수 있는 또 다른 옵션으로는 [직접 설치][mac-compile]가 있습니다. 이때 애플 맥 개발자 센터에서
@@ -61,6 +65,7 @@ PHP를 요구하지만, 가상 머신은 사용하고 있지 않을때 매우 �
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
 [MacPorts]: https://www.macports.org/install.php
 [phpbrew]: https://github.com/phpbrew/phpbrew
+[php-osx.liip.ch]: http://php-osx.liip.ch/
 [mac-compile]: http://php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
 ["Command Line Tools for XCode"]: https://developer.apple.com/downloads
