@@ -70,5 +70,6 @@ PHP는 성숙한, 객체 지향적 언어로 성장하고 있지만, [템플릿 
 
 [article_templating_engines]: http://fabien.potencier.org/article/34/templating-engines-in-php
 [Twig]: http://twig.sensiolabs.org/
+[Brainy]: https://github.com/box/brainy
 [Smarty]: http://www.smarty.net/
 [Mustache]: http://mustache.github.io/
