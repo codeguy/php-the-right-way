@@ -73,20 +73,22 @@ one instance of a particular class. The singleton pattern enables us to do this.
 class Singleton
 {
     /**
+     * @var Singleton The reference to *Singleton* instance of this class
+     */
+    private static $instance;
+    
+    /**
      * Returns the *Singleton* instance of this class.
-     *
-     * @staticvar Singleton $instance The *Singleton* instances of this class.
      *
      * @return Singleton The *Singleton* instance.
      */
     public static function getInstance()
     {
-        static $instance = null;
-        if (null === $instance) {
-            $instance = new static();
+        if (null === static::$instance) {
+            static::$instance = new static();
         }
-
-        return $instance;
+        
+        return static::$instance;
     }
 
     /**
