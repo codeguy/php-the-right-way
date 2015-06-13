@@ -24,6 +24,12 @@ PHP 社区百花齐放，拥有大量的函数库、框架和组件。PHP 开发
 一个是 [PHP Coding Standards Fixer][phpcsfixer]，它具有良好的测试。
 另外一个工具是 [php.tools][phptools]， 它是 sublime text 的一个非常流行的插件[sublime-phpfmt][sublime-phpfmt]，虽然比较新，但是在性能上有了很大的提高，这意味着实时的修复语法会更加的流畅。
 
+你也可以手动运行 phpcs 命令：
+
+    phpcs -sw --standard=PSR2 file.php
+
+它会显示出相应的错误以及如何修正的方法。同样地，这条命令也可以用在 git hook 中，如果你的分支代码不符合选择的代码标准则无法提交。
+
 所有的变量名称以及代码结构建议用英文编写。注释可以使用任何语言，只要让现在以及未来的小伙伴能够容易阅读理解即可。
 
 
