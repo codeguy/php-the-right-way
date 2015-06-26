@@ -1,6 +1,6 @@
 ---
 layout:  page
-title:   디자인 패턴 
+title:   디자인 패턴
 sitemap: true
 ---
 
@@ -74,20 +74,22 @@ print_r($veyron->getMakeAndModel()); // "Bugatti Veyron"을 출력
 class Singleton
 {
     /**
+     * @var Singleton 이 클래스의 *싱클턴* 인스턴스 레퍼런스
+     */
+    private static $instance;
+
+    /**
      * 이 클래스의 *싱글턴* 인스턴스를 리턴한다.
-     *
-     * @staticvar Singleton $instance 이 클래스의 *싱글턴* 인스턴스
      *
      * @return Singleton *싱글턴* 인스턴스.
      */
     public static function getInstance()
     {
-        static $instance = null;
-        if (null === $instance) {
-            $instance = new static();
+        if (null === static::$instance) {
+            static::$instance = new static();
         }
 
-        return $instance;
+        return static::$instance;
     }
 
     /**
