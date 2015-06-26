@@ -20,9 +20,9 @@ one real limitation of APCu is that it is tied to the server it's installed on. 
 installed as a separate service and can be accessed across the network, meaning that you can store objects in a
 hyper-fast data store in a central location and many different systems can pull from it.
 
-Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own cache,
-i.e. APCu data is not shared between your worker processes. In these cases, you might want to consider using memcached
-instead, as it's not tied to the PHP processes.
+Be aware that when running PHP as a (Fast-)CGI application inside your webserver the APC cache is shared between all 
+PHP-FPM pools, so you should keep it in mind and set APC cache size big enough to hold the opcode cache of all your 
+sites combined.
 
 In a networked configuration APCu will usually outperform memcached in terms of access speed, but memcached will be
 able to scale up faster and further. If you do not expect to have multiple servers running your application, or do not
