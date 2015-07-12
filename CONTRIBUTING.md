@@ -108,3 +108,23 @@
 4. 예제 코드는 PSR-1 이나 그 이상 버전을 준수해야 합니다.
 5. 내용은 [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) 문서 형식으로 작성합니다.
 6. Use language agnostic urls when refering to external websites such as the [php.net](http://php.net/urlhowto.php) manual
+
+## 외부 링크 컨텐트 번역 규칙
+
+1. 외부 링크 컨텐트의 번역본은 more 폴더에 저장한다.
+2. 파일명은 원문 글 제목으로 하고, 단어와 단어 사이는 하이픈(-)으로 연결한다. 파일명에 사용되는 모든 단어는 대문자로 시작한다.
+3. 원래의 링크를 번역본 주소로 바꾸고, 옆에 '[원문]' 이라는 링크를 추가 한다.
+
+
+### [내장 웹 서버](http://modernpug.github.io/php-the-right-way/#builtin_web_server) 섹션의 예
+#### 번역전
+````
+[내장 웹 서버에 대해서 배우기](http://php.net/features.commandline.webserver)
+````
+
+
+#### 번역후
+````
+[내장 웹 서버에 대해서 배우기](http://modernpug.github.io/php-the-right-way/more/Built-In-Web-Server.html) [[원문]](http://php.net/features.commandline.webserver)
+````
+
