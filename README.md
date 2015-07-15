@@ -2,7 +2,7 @@
 
 ## 개요
 
-이 페이지는 _PHP: The Right Way_ 한국어판 프로젝트의 GitHub 저장소 페이지입니다.
+이 페이지는 [_PHP: The Right Way_ 한국어판 프로젝트](http://modernpug.github.io/php-the-right-way/)의 GitHub 저장소 페이지입니다.
 
 * 이 웹사이트는 Jekyll 프로젝트입니다.
 * 각 섹션과 하위 섹션은 `_posts/` 에 있는 마크다운 파일들입니다.
