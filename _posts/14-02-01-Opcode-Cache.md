@@ -24,6 +24,6 @@ PHP 5.5 中自带了 opcode 缓存工具，叫做[OPcache][opcache-book]，早�
 [opcache-book]: http://php.net/book.opcache
 [APC]: http://php.net/book.apc
 [XCache]: http://xcache.lighttpd.net/
-[Zend Optimizer+]: http://www.zend.com/products/server/
+[Zend Optimizer+]: http://www.zend.com/en/products/zend_server
 [WinCache]: http://www.iis.net/download/wincacheforphp
 [PHP_accelerators]: http://en.wikipedia.org/wiki/List_of_PHP_accelerators
