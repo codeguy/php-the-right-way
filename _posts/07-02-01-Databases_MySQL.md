@@ -6,7 +6,7 @@ anchor:  mysql_extension
 
 ## MySQL Extension {#mysql_extension_title}
 
-The [mysql] extension for PHP is no longer in active development, is [deprecated as of PHP 5.5.0]
+The [mysql] extension for PHP is no longer in active development, was [deprecated as of PHP 5.5.0]
 [mysql_deprecated], and has been [officially removed as of PHP 7.0.0][mysql_removed]. If you are using any functions that
 start with `mysql_*` such as `mysql_connect()` and `mysql_query()` in your applications then these will simply not be
 available in PHP 7.0.0. This means you will be faced with a rewrite at some point down the line, so the
