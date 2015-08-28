@@ -124,13 +124,13 @@ var_dump($anotherObj === Singleton::getInstance());      // bool(false)
 var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
 {% endhighlight %}
 
-上面的代码用[**静态** 变量](http://php.net/language.variables.scope#language.variables.scope.static) 实现了单例模式和创建单例的静态方法 `getInstance()`.
+上面的代码用[**静态**变量](http://php.net/language.variables.scope#language.variables.scope.static) 实现了单例模式和创建单例的静态方法 `getInstance()`.
 请注意以下几点：
 
 * 构造函数 [`__construct()`](http://php.net/language.oop5.decon#object.construct) 被声明为 protected 是为了防止用 `new` 操作符在这个类之外创建新的实例。
 * 魔术方法 [`__clone()`](http://php.net/language.oop5.cloning#object.clone) 被声明为 private 是为了防止用 [`clone`](http://php.net/language.oop5.cloning) 操作符克隆出新的实例.
 * 魔术方法 [`__wakeup()`](http://php.net/language.oop5.magic#object.wakeup) 被声明为 private 是为了防止通过全局函数 [`unserialize()`](http://php.net/function.unserialize) 反序列化这个类的实例。
-* 新的实例是用过静态方法 `getInstance()` 使用[后期静态绑定](http://php.net/language.oop5.late-static-bindings) 特性生成的。这允许我们对 `Singleton` 类进行继承，并且在取得 `SingletonChild` 的单例时不会出现问题。
+* 新的实例是用过静态方法 `getInstance()` 使用[后期静态绑定](http://php.net/language.oop5.late-static-bindings)生成的。这允许我们对 `Singleton` 类进行继承，并且在取得 `SingletonChild` 的单例时不会出现问题。
 
 单例模式是非常有用的，特别是我们需要确保在整个请求的声明周期内只有一个实例存在。
 典型的应用场景是，当我们有一个全局的对象（比如配置类）或一个共享的资源（比如事件队列）时。
@@ -182,7 +182,7 @@ class ArrayOutput implements OutputInterface
 
 通过像上面这样把不同类型的输出算法封装起来，其他的开发者可以很容易地在不影响 client 代码的情况下添加新的输出类型。
 
-每个具体的“output”类实现了 `OutputInterface` —— 这有两个目的，第一是它提供了一个所有“output”具体实现都必须遵守的契约，第二，你将会在本文后面的部分看到，通过实现公共的接口，你可以利用[类型约束](http://php.net/language.oop5.typehinting)保证 client 中使用的输出类必须是实现了 `OutputInterface` 的类。
+每个具体的输出类实现了 `OutputInterface` —— 这有两个目的，第一是它提供了一个所有输出类都必须遵守的契约，第二，你将会在本文后面的部分看到，通过实现公共的接口，你可以利用[类型约束](http://php.net/language.oop5.typehinting)保证 client 中使用的输出类必须是实现了 `OutputInterface` 的类。
 
 接下来的一小段代码展示了一个 client 类如何使用其中一个输出算法，并可以在运行时根据需要选用不同的算法。
 
@@ -226,13 +226,13 @@ $data = $client->loadOutput();
 ## 前端控制器模式
 
 前端控制器模式就是给你的 web 应用程序设置单一的入口（比如 index.php），用来集中处理所有请求的机制。
-它的职责是载入所有依赖，处理请求，并发送响应给浏览器。前端控制器模式（对整个架构）是有益的，因为它鼓励模块化代码，并给了你一个单入口，可以写一些每个请求都需要跑的代码（比如输入数据的过滤）。
+它的职责是载入所有依赖，处理请求，并发送响应给浏览器。前端控制器模式对整个架构是有益的，因为它鼓励模块化代码，并给了你一个单入口，可以写一些每个请求都需要跑的代码（比如输入数据的过滤）。
 
 * [维基百科——前端控制器模式](https://en.wikipedia.org/wiki/Front_Controller_pattern)
 
 ## 模型-视图-控制器（MVC）
 
-模型-视图-控制器 (MVC) 模式还有和它相关的 HMVC、HVVM 让你根据逻辑上的对象的不同作用去解耦。
+模型-视图-控制器 (MVC) 模式还有和它相关的 HMVC、HVVM 让你根据逻辑对象的不同作用去解耦。
 模型用来作为数据访问层，并以应用中通用的格式返回数据。
 控制器处理请求，处理从模型层返回的数据，并载入视图，发送响应。
 视图用来展示需要在响应中使用的模板（markup, xml 等等）。
