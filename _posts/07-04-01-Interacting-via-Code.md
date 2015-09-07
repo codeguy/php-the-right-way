@@ -94,7 +94,7 @@ This is essentially the same as what most modern frameworks are doing, albeit a 
 need to do all of that every time, but mixing together too much presentation logic and database interaction can be a
 real problem if you ever want to [unit-test](/#unit-testing) your application.
 
-[PHPBridge] have a great resource called [Creating a Data Class] which covers a very similar topic, and is great for
+[PHPBridge] has a great resource called [Creating a Data Class] which covers a very similar topic, and is great for
 developers just getting used to the concept of interacting with databases.
 
 
