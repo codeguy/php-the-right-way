@@ -34,9 +34,8 @@
         navLinks.filter('[href="/#'+id+'"]').addClass("active");
     }
 
-    $(window).scroll(function() {
-        //console.log("They see me scrollin, they hatin");
-
+    function updateHighlight()
+    {
         //clear highlighting
         var navLinks = $('.site-navigation a');
         navLinks.removeClass("active");
@@ -75,6 +74,13 @@
         if (! foundOne) {
             highlightNav(navLinks, fallback);
         }
+    }
+
+    $(window).scroll(function() {
+        updateHighlight();
     });
+
+    // Initial update so that what's visible from the page opening is highlighted
+    updateHighlight();
 })(jQuery);
 
