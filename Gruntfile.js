@@ -6,6 +6,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     cleancss: true,
+                    compress: true,
                     ieCompat: true
                 },
                 files: {
