@@ -288,6 +288,61 @@ pre{
     }
 }
 
+@media (max-width: 375px) {
+    .site-navigation{
+        background: fade(white, 95%);
+        columns: 1;
+        max-height: 100vh;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+
+        &:before{
+            background: @phpPurpleDark;
+            box-sizing: border-box;
+            content: "\27A4   Table of Contents";
+            display: block;
+            height: 40px;
+            padding: 0 10px;
+            width: 100vh;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: white;
+            font-family: @sans;
+            font-size: 13px;
+            line-height: 40px;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        > ul{
+            background: fade(white, 96%);
+            border-top: 3px solid @phpPurple;
+            box-shadow: fade(black, 25%) 0 -5px 10px;
+            box-sizing: border-box;
+            padding: 20px;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            position: absolute;
+            left: 0;
+            bottom: 40px;
+            height: 50vh;
+            width: 100vh;
+            transform: translate(0,100vh);
+            transition: all 0.2s ease;
+            z-index: 1;
+        }
+
+        &.open{
+            > ul{
+                transform: translate(0,0);
+            }
+        }
+    }
+}
+
 /******************************************************************************
  * Content
  *****************************************************************************/
