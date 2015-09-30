@@ -39,7 +39,7 @@ are several alternatives
 * [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
 * [PUnit](http://punit.smf.me.uk/)
 * [SimpleTest](http://simpletest.org)
-
+* [Kahlan](https://github.com/crysalead/kahlan)
 
 ### Integration Testing
 
