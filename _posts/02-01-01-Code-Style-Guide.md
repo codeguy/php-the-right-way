@@ -55,5 +55,5 @@ readable by all current and future parties who may be working on the codebase.
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
-[phptools]: https://github.com/dericofilho/php.tools
-[sublime-phpfmt]: https://github.com/dericofilho/sublime-phpfmt
+[phptools]: https://github.com/phpfmt/php.tools
+[sublime-phpfmt]: https://github.com/phpfmt/sublime-phpfmt
