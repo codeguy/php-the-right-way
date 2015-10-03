@@ -27,7 +27,7 @@ if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is i
     // code...
 }
 
-// vs
+// vs.
 
 if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
     // code...
@@ -57,7 +57,7 @@ function test($a)
     }
 }
 
-// vs
+// vs.
 
 function test($a)
 {
@@ -66,6 +66,14 @@ function test($a)
     }
     return false;    // else is not necessary
 }
+
+// or even shorter:
+
+function test($a)
+{
+    return (bool) $a;
+}
+
 {% endhighlight %}
 
 * [If statements](http://php.net/control-structures.if)
