@@ -36,9 +36,9 @@ which accepts pull requests then you should suggest this as a requirement.
 are several alternatives
 
 * [atoum](https://github.com/atoum/atoum)
-* [SimpleTest](http://simpletest.org)
+* [Kahlan](https://github.com/crysalead/kahlan)
 * [Peridot](http://peridot-php.github.io/)
-
+* [SimpleTest](http://simpletest.org)
 
 ### Integration Testing
 
