@@ -36,9 +36,8 @@ which accepts pull requests then you should suggest this as a requirement.
 are several alternatives
 
 * [atoum](https://github.com/atoum/atoum)
-* [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
-* [PUnit](http://punit.smf.me.uk/)
 * [SimpleTest](http://simpletest.org)
+* [Peridot](http://peridot-php.github.io/)
 
 
 ### Integration Testing
