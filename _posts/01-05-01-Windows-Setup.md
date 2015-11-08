@@ -5,8 +5,7 @@ anchor:  windows_setup
 
 ## Windows Setup {#windows_setup_title}
 
-PHP is available in several ways for Windows. You can [download the binaries][php-downloads] and until recently you
-could use a '.msi' installer. The installer is no longer supported and stops at PHP 5.3.0.
+You can download the binaries from [windows.php.net/download][php-downloads]. After the extraction of PHP, it is recommended to set the [PATH][windows-path] to the root of your PHP folder (where php.exe is located) so you can execute PHP from anywhere.
 
 For learning and local development you can use the built in webserver with PHP 5.4+ so you don't need to worry about
 configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
@@ -20,7 +19,8 @@ FastCGI built in and ready to go, you just need to configure PHP as a handler. F
 there is a [dedicated area on iis.net][php-iis] for PHP.
 
 
-[php-downloads]: http://windows.php.net
+[php-downloads]: http://windows.php.net/download/
+[windows-path]: http://www.windows-commandline.com/set-path-command-line/
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
 [xampp]: http://www.apachefriends.org/en/xampp.html
 [easyphp]: http://www.easyphp.org/

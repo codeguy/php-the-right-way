@@ -73,20 +73,22 @@ one instance of a particular class. The singleton pattern enables us to do this.
 class Singleton
 {
     /**
+     * @var Singleton The reference to *Singleton* instance of this class
+     */
+    private static $instance;
+    
+    /**
      * Returns the *Singleton* instance of this class.
-     *
-     * @staticvar Singleton $instance The *Singleton* instances of this class.
      *
      * @return Singleton The *Singleton* instance.
      */
     public static function getInstance()
     {
-        static $instance = null;
-        if (null === $instance) {
-            $instance = new static();
+        if (null === static::$instance) {
+            static::$instance = new static();
         }
-
-        return $instance;
+        
+        return static::$instance;
     }
 
     /**
@@ -249,7 +251,7 @@ $data = $client->loadOutput();
 
 ## Front Controller
 
-The front controller pattern is where you have a single entrance point for you web application (e.g. index.php) that
+The front controller pattern is where you have a single entrance point for your web application (e.g. index.php) that
 handles all of the requests. This code is responsible for loading all of the dependencies, processing the request and
 sending the response to the browser. The front controller pattern can be beneficial because it encourages modular code
 and gives you a central place to hook in code that should be run for every request (such as input sanitization).

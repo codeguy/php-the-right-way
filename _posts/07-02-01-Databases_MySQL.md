@@ -6,10 +6,10 @@ anchor:  mysql_extension
 
 ## MySQL Extension {#mysql_extension_title}
 
-The [mysql] extension for PHP is no longer in active development, and is [officially deprecated as of PHP 5.5.0]
-[mysql_deprecated], meaning that it will be removed within the next few releases. If you are using any functions that
+The [mysql] extension for PHP is no longer in active development, was [deprecated as of PHP 5.5.0]
+[mysql_deprecated], and has been [officially removed as of PHP 7.0.0][mysql_removed]. If you are using any functions that
 start with `mysql_*` such as `mysql_connect()` and `mysql_query()` in your applications then these will simply not be
-available in later versions of PHP. This means you will be faced with a rewrite at some point down the line, so the
+available in PHP 7.0.0. This means you will be faced with a rewrite at some point down the line, so the
 best option is to replace mysql usage with [mysqli] or [PDO] in your applications within your own development schedules
 so you won't be rushed later on.
 
@@ -22,6 +22,7 @@ or use [PDO].**
 
 [mysql]: http://php.net/mysql
 [mysql_deprecated]: http://php.net/migration55.deprecated
+[mysql_removed]: http://php.net/manual/en/migration70.removed-exts-sapis.php
 [mysqli]: http://php.net/mysqli
 [pdo]: http://php.net/pdo
 [mysql_api]: http://php.net/mysqlinfo.api.choosing

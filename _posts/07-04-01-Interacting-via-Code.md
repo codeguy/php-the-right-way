@@ -54,7 +54,9 @@ $db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'pa
 include 'models/FooModel.php';
 
 // Create an instance
-$fooList = new FooModel($db);
+$fooModel = new FooModel($db);
+// Get the list of Foos
+$fooList = $fooModel->getAllFoos();
 
 // Show the view
 include 'views/foo-list.php';
@@ -65,7 +67,7 @@ include 'views/foo-list.php';
 
 {% highlight php %}
 <?php
-class FooModel()
+class FooModel
 {
     protected $db;
 
@@ -92,7 +94,7 @@ This is essentially the same as what most modern frameworks are doing, albeit a 
 need to do all of that every time, but mixing together too much presentation logic and database interaction can be a
 real problem if you ever want to [unit-test](/#unit-testing) your application.
 
-[PHPBridge] have a great resource called [Creating a Data Class] which covers a very similar topic, and is great for
+[PHPBridge] has a great resource called [Creating a Data Class] which covers a very similar topic, and is great for
 developers just getting used to the concept of interacting with databases.
 
 
