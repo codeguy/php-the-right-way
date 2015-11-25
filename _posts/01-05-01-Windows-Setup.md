@@ -21,6 +21,8 @@ Generally running your application on different environment in development and p
 live. If you are developing on Windows and deploying to Linux (or anything non-Windows) then you should consider using a Virtual Machine. This 
 sounds tricky, but using [Vagrant][vagrant] you can set up simple wrappers, then using [Puppet][puppet] or [Chef][chef] you can provision these boxes and share them with your colleagues to ensure you're all working on the same stack. More on this soon.
 
+Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP development using Windows][windows-tools].
+
 [php-downloads]: http://windows.php.net
 [phpmanager]: http://phpmanager.codeplex.com/
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
@@ -30,3 +32,4 @@ sounds tricky, but using [Vagrant][vagrant] you can set up simple wrappers, then
 [vagrant]: http://vagrantup.com/
 [puppet]: http://www.puppetlabs.com/
 [chef]: http://www.opscode.com/
+[windows-tools]: http://ctankersley.com/2015/07/01/developing-on-windows/
