@@ -17,3 +17,4 @@ anchor:  php_paas_providers
 * [Windows Azure](http://www.windowsazure.com/)
 * [Google App Engine](https://developers.google.com/appengine/docs/php/gettingstarted/)
 * [Jelastic](http://jelastic.com/)
+* [Platform.sh](https://platform.sh/)
