@@ -7,7 +7,7 @@ anchor:  composer_and_packagist
 
 Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and,
 with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for
-you.
+you. Composer is analogous to NPM in the node.js world, or Bundler in the Ruby world.
 
 There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These
 "packages" are listed on [Packagist], the official repository for Composer-compatible PHP libraries.
