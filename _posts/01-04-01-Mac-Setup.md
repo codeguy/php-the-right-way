@@ -5,8 +5,8 @@ anchor:  mac_setup
 
 ## Mac Setup {#mac_setup_title}
 
-OS X comes prepackaged with PHP but it is normally a little behind the latest stable. Mountain Lion has 5.3.10,
-Mavericks has 5.4.17 and Yosemite has 5.5.9, but with PHP 5.6 out that is often not good enough.
+OS X comes prepackaged with PHP but it is normally a little behind the latest stable. Mavericks has 5.4.17,
+Yosemite has 5.5.9 and El Capitan has 5.5.29, but with PHP 7.0 out that is often not good enough.
 
 There are multiple ways to install PHP on OS X.
 
@@ -29,14 +29,14 @@ MacPorts supports pre-compiled binaries, so you don't need to recompile every
 dependencies from the source tarball files, it saves your life if you don't
 have any package installed on your system.
 
-At this point, you can install `php53`, `php54`, `php55` or `php56` using the `port install` command, for example:
+At this point, you can install `php54`, `php55`, `php56` or `php70` using the `port install` command, for example:
 
-    sudo port install php54
-    sudo port install php55
+    sudo port install php56
+    sudo port install php70
 
 And you can run `select` command to switch your active php:
 
-    sudo port select --set php php55
+    sudo port select --set php php70
 
 ### Install PHP via phpbrew
 
@@ -44,6 +44,7 @@ And you can run `select` command to switch your active php:
 applications/projects require different versions of PHP, and you are not using virtual machines.
 
 ### Install PHP via Liip's binary installer
+
 Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 5.6.
 It doesn't overwrite the php binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
 
