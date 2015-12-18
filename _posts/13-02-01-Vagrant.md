@@ -30,7 +30,7 @@ document controls everything that is installed on the virtual machine.
 
 [Vagrant]: http://vagrantup.com/
 [Puppet]: http://www.puppetlabs.com/
-[Chef]: http://www.opscode.com/
+[Chef]: https://www.chef.io/
 [Rove]: http://rove.io/
 [Puphpet]: https://puphpet.com/
 [Protobox]: http://getprotobox.com/

@@ -49,8 +49,8 @@ just deploy your app but can build your whole server environment or virtual boxe
 #### Chef resources for PHP developers:
 
 * [Three part blog series about deploying a LAMP application with Chef, Vagrant, and EC2][chef_vagrant_and_ec2]
-* [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system][Chef_cookbook]
-* [Chef video tutorial series][Chef_tutorial] by Opscode, the makers of chef
+* [Chef Cookbook which installs and configures PHP and the PEAR package management system][Chef_cookbook]
+* [Chef video tutorial series][Chef_tutorial]
 
 #### Further reading:
 
@@ -82,10 +82,10 @@ PHP.
 [Apache Ant]: http://ant.apache.org/
 [Capistrano]: https://github.com/capistrano/capistrano/wiki
 [phpdeploy_capistrano]: http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/
-[Chef]: http://www.opscode.com/chef/
+[Chef]: https://www.chef.io/
 [chef_vagrant_and_ec2]: http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/
-[Chef_cookbook]: https://github.com/opscode-cookbooks/php
-[Chef_tutorial]: https://www.youtube.com/playlist?list=PLrmstJpucjzWKt1eWLv88ZFY4R1jW8amR
+[Chef_cookbook]: https://github.com/chef-cookbooks/php
+[Chef_tutorial]: https://www.youtube.com/playlist?list=PL11cZfNdwNyPnZA9D1MbVqldGuOWqbumZ
 [apache_ant_tutorial]: http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/
 [Travis CI]: https://travis-ci.org/
 [Jenkins]: http://jenkins-ci.org/
