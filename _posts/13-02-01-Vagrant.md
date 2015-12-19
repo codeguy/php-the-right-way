@@ -33,7 +33,7 @@ Vargrant 사용을 시작하는데 약간의 도움이 필요하신 분은 아�
 
 [Vagrant]: http://vagrantup.com/
 [Puppet]: http://www.puppetlabs.com/
-[Chef]: http://www.opscode.com/
+[Chef]: https://www.chef.io/
 [Rove]: http://rove.io/
 [Puphpet]: https://puphpet.com/
 [Protobox]: http://getprotobox.com/

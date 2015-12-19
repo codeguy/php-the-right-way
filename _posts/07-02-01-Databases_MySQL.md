@@ -6,21 +6,29 @@ anchor:  mysql_extension
 
 ## MySQL 익스텐션 {#mysql_extension_title}
 
-PHP의 [MySQL][mysql]익스텐션은 현재 활발하게 유지되고 있지가 않습니다.
-[PHP 5.5 부터는 공식적으로 사용을 권장하지 않는 상태(deprecated)로][mysql_deprecated] 두고 있습니다. 그 말은 앞으로 몇
-번의 릴리스 중에 제거될 예정이라는 의미입니다. 여러분의 어플리케이션에 `mysql_connect()` 나 `mysql_query()` 같이
-`mysql_`로 시작하는 함수를 사용하는 부분이 있으면 언젠가는 고쳐야 할 것입니다. 나중에 급히 대처하느라 허둥대는
-것보다는 미리 계획해서 [mysqli]나 [PDO]를 사용하도록 변경하는 것이 좋을 것 같습니다.
+PHP의 [MySQL][mysql]익스텐션은 아주 오래되었고, 다음 두 익스텐션으로 대체되었습니다.
 
-**지금 새로 프로젝트를 시작한다면 [mysql] 익스텐션은 절대 사용하면 안됩니다. 그 대신 [MySQLi 익스텐션][mysqli]이나
-PDO를 사용하세요.**
+- [mysqli]
+- [pdo]
+
+[mysql] 익스텐션 개발은 오래전에 개발 중단되었을 뿐만 아니라, [PHP 5.5.0 부터는 공식적으로 사용을 권장하지 않는 상태(deprecated)][mysql_deprecated]였고, **[PHP 7.0에서는 공식적으로 제거][mysql_removed]** 되었습니다.
+
+To save digging into your `php.ini` settings to see which module you are using, one option is to search for `mysql_*`
+in your editor of choice. If any functions such as `mysql_connect()` and `mysql_query()` show up, then `mysql` is
+in use.
+
+Even if you are not using PHP 7.0 yet, failing to consider this upgrade as soon as possible will lead to greater
+hardship when the PHP 7.0 upgrade does come about. The best option is to replace mysql usage with [mysqli] or [PDO] in
+your applications within your own development schedules so you won't be rushed later on.
+
+**If you are upgrading from [mysql] to [mysqli], beware lazy upgrade guides that suggest you can simply find and replace `mysql_*` with `mysqli_*`. Not only is that a gross oversimplification, it misses out on the advantages that mysqli provides, such as parameter binding, which is also offered in [PDO][pdo].**
 
 * [PHP: MySQL을 위한 API 선택][mysql_api]
 * [MySQL 개발자를 위한 PDO 튜토리얼][pdo4mysql_devs]
 
-
 [mysql]: http://php.net/mysql
 [mysql_deprecated]: http://php.net/migration55.deprecated
+[mysql_removed]: http://php.net/manual/en/migration70.removed-exts-sapis.php
 [mysqli]: http://php.net/mysqli
 [pdo]: http://php.net/pdo
 [mysql_api]: http://php.net/mysqlinfo.api.choosing

@@ -53,5 +53,5 @@ FuelPHP, Lithium 등의 프로젝트에서 적용하기 시작한 스타일 규�
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
-[phptools]: https://github.com/dericofilho/php.tools
-[sublime-phpfmt]: https://github.com/dericofilho/sublime-phpfmt
+[phptools]: https://github.com/phpfmt/php.tools
+[sublime-phpfmt]: https://github.com/phpfmt/sublime-phpfmt
