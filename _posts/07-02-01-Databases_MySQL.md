@@ -16,12 +16,14 @@ PHP의 [MySQL][mysql]익스텐션은 아주 오래되었고, 다음 두 익스�
 To save digging into your `php.ini` settings to see which module you are using, one option is to search for `mysql_*`
 in your editor of choice. If any functions such as `mysql_connect()` and `mysql_query()` show up, then `mysql` is
 in use.
+어떤 모듈을 사용하고 있는지 `php.ini`을 뒤져보는 수고를 하지 않는 한가지 방법은, `mysql_*`을 여러분이 사용하는 에디터에서
+검색해보는 것입니다. 만약 `mysql_connect()`나 `mysql_query()`와 같은 함수가 나온다면, `mysql`을 사용하고 있는 것입니다.
 
-Even if you are not using PHP 7.0 yet, failing to consider this upgrade as soon as possible will lead to greater
-hardship when the PHP 7.0 upgrade does come about. The best option is to replace mysql usage with [mysqli] or [PDO] in
-your applications within your own development schedules so you won't be rushed later on.
+PHP 7.0을 아직 사용하지 않더라도 가능한 빨리 익스텐션 업그레이드를 고려하지 않으면, PHP 7.0 업그레이드를 해야할 때에 굉장히 고생하게 됩니다.
+가장 좋은 방법은, 나중에 서두르게 되지 않도록 여러분의 개발 일정에 맞춰서 mysql을 사용하던 것을 [mysqli]나 [PDO]로 변경하는 것입니다.
 
-**If you are upgrading from [mysql] to [mysqli], beware lazy upgrade guides that suggest you can simply find and replace `mysql_*` with `mysqli_*`. Not only is that a gross oversimplification, it misses out on the advantages that mysqli provides, such as parameter binding, which is also offered in [PDO][pdo].**
+**[mysql]에서 [mysqli]로 업그레이드할때에는 단순히 `mysql_*`을 찾아서 `mysqli_*`로 치환하는 게으른 업그레이드 가이드를 조심하세요.
+이것은 지나치게 단순화한 조잡한 방법일 뿐만 아니라, 파라미터 바인딩같은 mysqli가 제공하는([PDO][pdo]도 제공하는) 혜택을 놓치게 됩니다.**
 
 * [PHP: MySQL을 위한 API 선택][mysql_api]
 * [MySQL 개발자를 위한 PDO 튜토리얼][pdo4mysql_devs]

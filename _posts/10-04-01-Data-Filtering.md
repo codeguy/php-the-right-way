@@ -54,9 +54,12 @@ Cross-Site Scripting (XSS)이라고 합니다. 매우 위험한 공격 기법이
 
 ### 역직렬화(Unserialization)
 
-It is dangerous to `unserialize()` data from users or other untrusted sources.  Doing so can allow malicious users to instantiate objects (with user-defined properties) whose destructors will be executed, **even if the objects themselves aren't used**.  You should therefore avoid unserializing untrusted data.
+사용자나 신뢰할 수 없는 곳으로부터 받은 데이터에 `unserialize()` 사용하는 것은 위험합니다. **객체 자체가 사용되지 않는다고 하더라도**
+이는 악의를 가진 사용자가 사용자 정의 프로퍼티를 가지고 소멸자(destructors)는 실행하게되는 객체를 만들어내도록 허용하게 됩니다.
+따라서 신뢰할 수 없는 데이터는 역직렬화하지 말아야합니다.
 
-If you absolutely must unserialize data from untrusted sources, use PHP 7's [`allowed_classes`][unserialize] option to restrict which object types are allowed to be unserialized.
+신뢰할 수 없는 곳으로부터의 데이터를 역직렬화해야만 한다면, PHP 7의 [`allowed_classes`][unserialize] 옵션을 사용하여
+역직렬화 가능한 객체 형식을 제한하세요.
 
 ### 데이터 검증
 
