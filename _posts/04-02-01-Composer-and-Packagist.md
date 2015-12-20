@@ -6,21 +6,23 @@ anchor:  composer_and_packagist
 
 ## Composer와 Packagist {#composer_and_packagist_title}
 
-Composer는 **훌륭한** 의존성 관리자입니다. 프로젝트의 의존성을 `composer.json` 파일에 기록하고 간단한 커맨드 몇 개를
-사용하면 Composer가 알아서 다운로드하고 오토로딩(autoloading) 설정을 해줍니다.
+Composer는 **훌륭한** PHP 의존성 관리자입니다. 프로젝트의 의존성을 `composer.json` 파일에 기록하고 간단한 커맨드 몇 개를
+사용하면 Composer가 알아서 다운로드하고 오토로딩(autoloading) 설정을 해줍니다. Composer는 node.js의 NPM이나 Ruby의 Bundler와 같습니다.
 
-이미 Composer와 호환되는 많은 PHP 라이브러리가 있기 때문에 프로젝트에서 바로 사용할 수 있습니다. Composer 패키지들은 
+이미 Composer와 호환되는 많은 PHP 라이브러리가 있기 때문에 프로젝트에서 바로 사용할 수 있습니다. Composer 패키지들은
 [Packagist]라는 공식 저장소에서 관리됩니다.
 
 ### Composer 설치
 
-Composer를 로컬 디렉토리에 설치할 수 있습니다. (즉, 현재 작업중인 디렉토리에 설치할 수 있습니다. 하지만 권장할만한
-방법은 아닙니다.) 시스템에 글로벌하게 설치할 수도 있습니다. (즉, /usr/local/bin 에 설치됩니다.) 일단 로컬 디렉토리에
-설치해봅시다. 프로젝트의 루트 디렉토리에서 아래와 같이 명령을 실행합니다.
+Composer를 로컬 디렉토리(current working directory)나 글로벌하게 설치(예를 들어 /usr/local/bin)할 수 있습니다.
+Composer를 글로벌하게 설치한다면 다음 명령어를 입력합니다.
 
 {% highlight console %}
-curl -s https://getcomposer.org/installer | php
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
+
+<strong>참고:</strong> 권한때문에 실패한 경우 `mv` 명령어를 `sudo`를 붙여서 실행하세요.
 
 이렇게 하면 `composer.phar`라는 PHP 바이너리 파일이 다운로드됩니다. `php`로 이 바이너리를 실행하여 프로젝트의 의존성을
 관리할 수 있습니다.
@@ -77,7 +79,7 @@ composer require twig/twig:~1.8
 
 이렇게 하는 대신 `composer init` 명령어를 사용하면 여러분의 프로젝트를 위한 완전한 `composer.json` 파일을 만들 수 있게
 도와줍니다. 둘 중 어느 방법을 사용하든지, `composer.json` 파일을 만들고 나면 이제 Composer 를 이용하여 패키지를
-`vendors/` 디렉토리에 설치할 수 있습니다. 
+`vendors/` 디렉토리에 설치할 수 있습니다.
 
 {% highlight console %}
 composer install

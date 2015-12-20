@@ -123,7 +123,7 @@ function fopen()
 
 function array()
 {
-    $iterator = new \ArrayIterator();    // ArrayIterator는 내장 클래스이다. 역슬래시 없이 사용하면 
+    $iterator = new \ArrayIterator();    // ArrayIterator는 내장 클래스이다. 역슬래시 없이 사용하면
                                          // phptherightway 라는 네임스페이스에서 ArrayIterator 를 찾으려고 할 것이다.
 }
 {% endhighlight %}
@@ -192,7 +192,7 @@ echo 'phptherightway is ' . $adjective . '.'     // 변수와 이스케이프 �
 
 // vs
 
-echo "phptherightway is $adjective.\n I love learning $code!"  // 큰따옴표 문자열을 사용하면 연결 연산자를 여러번 
+echo "phptherightway is $adjective.\n I love learning $code!"  // 큰따옴표 문자열을 사용하면 연결 연산자를 여러번
                                                                // 쓰지 않고도 한 방에 해결할 수 있다.
 {% endhighlight %}
 
@@ -377,6 +377,8 @@ return ($a == 3 && $b == 4) && $c == 5;
 return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
+PHP 5.3부터 삼항 연사자의 중간 부분을 생략 가능합니다.
+"expr1 ?: expre3" 표현식은 expr1이 TRUE로 평가되는 경우 expr1을 리턴하고, 아닌 경우에 expr3을 리턴합니다.
 * [삼항 연산자](http://php.net/language.operators.comparison)
 
 ## 변수 선언 {#variable-declarations}

@@ -53,7 +53,7 @@ Capistrano에 관심이 있는 PHP 개발자에게는 Dave Gardner의 [PHP Deplo
 
 * [Chef, Vagrant, EC2를 이용한 LAMP 어플리케이션 배포를 다룬 블로그 시리즈][chef_vagrant_and_ec2]
 * [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system][Chef_cookbook]
-* [Chef 비디오 튜토리얼 시리즈][Chef_tutorial] by Opscode, the makers of chef
+* [Chef 비디오 튜토리얼 시리즈][Chef_tutorial]
 
 #### 더 읽어볼 만한 것들
 
@@ -85,10 +85,10 @@ PHP 프로젝트에서 지속적인 통합 기법을 사용하는 방법에는 �
 [Apache Ant]: http://ant.apache.org/
 [Capistrano]: https://github.com/capistrano/capistrano/wiki
 [phpdeploy_capistrano]: http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/
-[Chef]: http://www.opscode.com/chef/
+[Chef]: https://www.chef.io/
 [chef_vagrant_and_ec2]: http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/
-[Chef_cookbook]: https://github.com/opscode-cookbooks/php
-[Chef_tutorial]: https://www.youtube.com/playlist?list=PLrmstJpucjzWKt1eWLv88ZFY4R1jW8amR
+[Chef_cookbook]: https://github.com/chef-cookbooks/php
+[Chef_tutorial]: https://www.youtube.com/playlist?list=PL11cZfNdwNyPnZA9D1MbVqldGuOWqbumZ
 [apache_ant_tutorial]: http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/
 [Travis CI]: https://travis-ci.org/
 [Jenkins]: http://jenkins-ci.org/

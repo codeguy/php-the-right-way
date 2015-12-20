@@ -52,6 +52,15 @@ Cross-Site Scripting (XSS)이라고 합니다. 매우 위험한 공격 기법이
 
 [PHP의 Sanitization 필터 문서 보기][2]
 
+### 역직렬화(Unserialization)
+
+사용자나 신뢰할 수 없는 곳으로부터 받은 데이터에 `unserialize()` 사용하는 것은 위험합니다. **객체 자체가 사용되지 않는다고 하더라도**
+이는 악의를 가진 사용자가 사용자 정의 프로퍼티를 가지고 소멸자(destructors)는 실행하게되는 객체를 만들어내도록 허용하게 됩니다.
+따라서 신뢰할 수 없는 데이터는 역직렬화하지 말아야합니다.
+
+신뢰할 수 없는 곳으로부터의 데이터를 역직렬화해야만 한다면, PHP 7의 [`allowed_classes`][unserialize] 옵션을 사용하여
+역직렬화 가능한 객체 형식을 제한하세요.
+
 ### 데이터 검증
 
 데이터 검증을 통해서 외부 입력 데이터가 여러분이 기대한 입력 형태가 맞는지 확인하도록 합니다. 예를 들어 메일 주소,
@@ -67,3 +76,4 @@ Cross-Site Scripting (XSS)이라고 합니다. 매우 위험한 공격 기법이
 [5]: http://php.net/function.filter-input
 [6]: http://php.net/security.filesystem.nullbytes
 [html-purifier]: http://htmlpurifier.org/
+[unserialize]: https://secure.php.net/manual/en/function.unserialize.php

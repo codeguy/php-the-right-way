@@ -28,7 +28,7 @@ anchor:  test_driven_development
 클래스나 함수를 만들 때, 그 클래스나 함수의 동작을 검증하는 유닛 테스트도 항상 같이 만들어야 합니다. 아주 기초적인
 레벨에서 보면, 잘못된 인자를 함수에 전달한 경우 그 함수는 에러를 발생시켜야 한다는 것을 테스트하고, 적절한 인자를
 전달한 경우에는 올바르게 동작한다는 것을 테스트 합니다. 이렇게 해두면 나중에 이 클래스나 함수를 변경할 일이 생겼을
-때에도 기존의 기능이 변함없이 제대로 동작하고 있다는 것을 확신할 수 있습니다. 또한 작든 크든 어플리케이션을 만들때 
+때에도 기존의 기능이 변함없이 제대로 동작하고 있다는 것을 확신할 수 있습니다. 또한 작든 크든 어플리케이션을 만들때
 좋지 않은 방법인 test.php에서 `var_dump()`를 사용하는 것을 대체할 수 있습니다.
 
 유닛 테스트는 오픈 소스 프로젝트에 기여하는 방식에도 도움을 줍니다. 만약 여러분이 기능 결함을 재현시키는 유닛 테스트
@@ -41,10 +41,9 @@ anchor:  test_driven_development
 프레임워크들도 상당수 존재합니다.
 
 * [atoum](https://github.com/atoum/atoum)
-* [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
-* [PUnit](http://punit.smf.me.uk/)
+* [Kahlan](https://github.com/crysalead/kahlan)
+* [Peridot](http://peridot-php.github.io/)
 * [SimpleTest](http://simpletest.org)
-
 
 ### 통합 테스트
 

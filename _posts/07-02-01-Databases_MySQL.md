@@ -6,21 +6,31 @@ anchor:  mysql_extension
 
 ## MySQL 익스텐션 {#mysql_extension_title}
 
-PHP의 [MySQL][mysql]익스텐션은 현재 활발하게 유지되고 있지가 않습니다.
-[PHP 5.5 부터는 공식적으로 사용을 권장하지 않는 상태(deprecated)로][mysql_deprecated] 두고 있습니다. 그 말은 앞으로 몇
-번의 릴리스 중에 제거될 예정이라는 의미입니다. 여러분의 어플리케이션에 `mysql_connect()` 나 `mysql_query()` 같이
-`mysql_`로 시작하는 함수를 사용하는 부분이 있으면 언젠가는 고쳐야 할 것입니다. 나중에 급히 대처하느라 허둥대는
-것보다는 미리 계획해서 [mysqli]나 [PDO]를 사용하도록 변경하는 것이 좋을 것 같습니다.
+PHP의 [MySQL][mysql]익스텐션은 아주 오래되었고, 다음 두 익스텐션으로 대체되었습니다.
 
-**지금 새로 프로젝트를 시작한다면 [mysql] 익스텐션은 절대 사용하면 안됩니다. 그 대신 [MySQLi 익스텐션][mysqli]이나
-PDO를 사용하세요.**
+- [mysqli]
+- [pdo]
+
+[mysql] 익스텐션 개발은 오래전에 개발 중단되었을 뿐만 아니라, [PHP 5.5.0 부터는 공식적으로 사용을 권장하지 않는 상태(deprecated)][mysql_deprecated]였고, **[PHP 7.0에서는 공식적으로 제거][mysql_removed]** 되었습니다.
+
+To save digging into your `php.ini` settings to see which module you are using, one option is to search for `mysql_*`
+in your editor of choice. If any functions such as `mysql_connect()` and `mysql_query()` show up, then `mysql` is
+in use.
+어떤 모듈을 사용하고 있는지 `php.ini`을 뒤져보는 수고를 하지 않는 한가지 방법은, `mysql_*`을 여러분이 사용하는 에디터에서
+검색해보는 것입니다. 만약 `mysql_connect()`나 `mysql_query()`와 같은 함수가 나온다면, `mysql`을 사용하고 있는 것입니다.
+
+PHP 7.0을 아직 사용하지 않더라도 가능한 빨리 익스텐션 업그레이드를 고려하지 않으면, PHP 7.0 업그레이드를 해야할 때에 굉장히 고생하게 됩니다.
+가장 좋은 방법은, 나중에 서두르게 되지 않도록 여러분의 개발 일정에 맞춰서 mysql을 사용하던 것을 [mysqli]나 [PDO]로 변경하는 것입니다.
+
+**[mysql]에서 [mysqli]로 업그레이드할때에는 단순히 `mysql_*`을 찾아서 `mysqli_*`로 치환하는 게으른 업그레이드 가이드를 조심하세요.
+이것은 지나치게 단순화한 조잡한 방법일 뿐만 아니라, 파라미터 바인딩같은 mysqli가 제공하는([PDO][pdo]도 제공하는) 혜택을 놓치게 됩니다.**
 
 * [PHP: MySQL을 위한 API 선택][mysql_api]
 * [MySQL 개발자를 위한 PDO 튜토리얼][pdo4mysql_devs]
 
-
 [mysql]: http://php.net/mysql
 [mysql_deprecated]: http://php.net/migration55.deprecated
+[mysql_removed]: http://php.net/manual/en/migration70.removed-exts-sapis.php
 [mysqli]: http://php.net/mysqli
 [pdo]: http://php.net/pdo
 [mysql_api]: http://php.net/mysqlinfo.api.choosing
