@@ -22,11 +22,12 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
-<strong>Note:</strong> If the above fails due to permissions, run the `mv` line again with `sudo`.
+**Note:** If the above fails due to permissions, run the `mv` line again with `sudo`.
 
 This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project
 dependencies.
-<strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the
+
+**Please Note:** If you pipe downloaded code directly into an interpreter, please read the
 code online first to confirm it is safe.
 
 #### Installing on Windows

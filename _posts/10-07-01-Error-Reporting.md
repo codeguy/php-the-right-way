@@ -12,7 +12,7 @@ production (live).
 
 ### Development
 
-To show every possible error during <strong>development</strong>, configure the following settings in your `php.ini`:
+To show every possible error during **development**, configure the following settings in your `php.ini`:
 
 {% highlight ini %}
 display_errors = On
@@ -37,7 +37,7 @@ use either `-1` or `E_ALL | E_STRICT`.
 
 ### Production
 
-To hide errors on your <strong>production</strong> environment, configure your `php.ini` as:
+To hide errors on your **production** environment, configure your `php.ini` as:
 
 {% highlight ini %}
 display_errors = Off
