@@ -17,7 +17,7 @@ libraries useful for any preferred approach taken.
 
 
 [Selenium]: http://seleniumhq.org/
-[integrated with PHPUnit]: http://phpunit.de/manual/current/en/selenium.html
+[integrated with PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
 [Mockery]: https://github.com/padraic/mockery
 [PHPUnit]: http://phpunit.de/
 [PHPSpec]: http://www.phpspec.net/
