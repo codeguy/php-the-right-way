@@ -34,8 +34,7 @@ provides a rich set of tasks usually needed to install or update a web app and c
 tasks, written in PHP.
 
 [Capistrano] is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way
-on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however people are **
-successfully deploying PHP systems** with it. Successful use of Capistrano depends on a working knowledge of Ruby and
+on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however people are **successfully deploying PHP systems** with it. Successful use of Capistrano depends on a working knowledge of Ruby and
 Rake.
 
 Dave Gardner's blog post [PHP Deployment with Capistrano][phpdeploy_capistrano] is a good starting point for PHP
