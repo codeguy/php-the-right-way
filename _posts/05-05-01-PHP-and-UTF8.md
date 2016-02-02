@@ -40,7 +40,7 @@ Additionally, many PHP functions that operate on strings have an optional parame
 encoding. You should always explicitly indicate UTF-8 when given the option. For example, `htmlentities()` has an
 option for character encoding, and you should always specify UTF-8 if dealing with such strings. Note that as of PHP 5.4.0, UTF-8 is the default encoding for `htmlentities()` and `htmlspecialchars()`.
 
-Finally, If you are building an distributed application and cannot be certain that the `mbstring` extension will be
+Finally, If you are building a distributed application and cannot be certain that the `mbstring` extension will be
 enabled, then consider using the [patchwork/utf8] Composer package. This will use `mbstring` if it is available, and
 fall back to non UTF-8 functions if not.
 
