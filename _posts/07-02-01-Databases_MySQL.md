@@ -13,9 +13,6 @@ PHP의 [MySQL][mysql]익스텐션은 아주 오래되었고, 다음 두 익스�
 
 [mysql] 익스텐션 개발은 오래전에 개발 중단되었을 뿐만 아니라, [PHP 5.5.0 부터는 공식적으로 사용을 권장하지 않는 상태(deprecated)][mysql_deprecated]였고, **[PHP 7.0에서는 공식적으로 제거][mysql_removed]** 되었습니다.
 
-To save digging into your `php.ini` settings to see which module you are using, one option is to search for `mysql_*`
-in your editor of choice. If any functions such as `mysql_connect()` and `mysql_query()` show up, then `mysql` is
-in use.
 어떤 모듈을 사용하고 있는지 `php.ini`을 뒤져보는 수고를 하지 않는 한가지 방법은, `mysql_*`을 여러분이 사용하는 에디터에서
 검색해보는 것입니다. 만약 `mysql_connect()`나 `mysql_query()`와 같은 함수가 나온다면, `mysql`을 사용하고 있는 것입니다.
 
