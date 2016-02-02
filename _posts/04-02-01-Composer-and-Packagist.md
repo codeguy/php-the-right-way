@@ -125,7 +125,7 @@ file and tell you if you need to update any of your dependencies.
 ### Handling global dependencies with Composer
 
 Composer can also handle global dependencies and their binaries. Usage is straight-forward, all you need
-to do is prefix your command with `global`. If per example you wanted to install PHPUnit and have it 
+to do is prefix your command with `global`. If for example you wanted to install PHPUnit and have it 
 available globally, you'd run the following command:
 
 {% highlight console %}
