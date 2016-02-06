@@ -5,12 +5,11 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 interpreted as described in [RFC 2119](http://tools.ietf.org/html/rfc2119).
 
 
-## 1. Overview
+## 1. 개요
 
-This PSR describes a specification for [autoloading][] classes from file
-paths. It is fully interoperable, and can be used in addition to any other
-autoloading specification, including [PSR-0][]. This PSR also describes where
-to place files that will be autoloaded according to the specification.
+이 PSR은 파일 경로로부터 클래스를 자동으로 불러들이는 [클래스 자동 로딩][autoloading] 사양에 대해서 
+설명하고 있습니다. 이 샤양은 [PSR-0][]등 다른 자동 로딩 사양과 같이 사용할 수 있습니다. 
+이 사양에 따라 자동으로 로딩되게 하려는 파일을 어떻게 배치하면 되는지도 같이 설명할 것입니다. 
 
 
 ## 2. Specification
