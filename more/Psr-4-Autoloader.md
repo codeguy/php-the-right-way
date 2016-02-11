@@ -53,10 +53,12 @@
     에러도 발생시키면 안되며(MUST NOT), 값을 리턴해도 안됩니다(SHOULD NOT).
 
 
-## 3. Examples
+## 3. 예시
 
 The table below shows the corresponding file path for a given fully qualified
 class name, namespace prefix, and base directory.
+아래 표는 실제로 나타날 수 있는 php 파일 경로와 정규화된 클래스 이름, "namespace prefix", 
+"base directory" 간의 관계를 예시로 보여주는 표입니다. 
 
 | Fully Qualified Class Name    | Namespace Prefix   | Base Directory           | Resulting File Path
 | ----------------------------- |--------------------|--------------------------|-------------------------------------------
