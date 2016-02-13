@@ -1,6 +1,4 @@
 baseurl: /
-highlighter: pygments
-markdown: kramdown
 permalink: date
 maruku:
     use_tex:    false
@@ -20,3 +18,5 @@ defaults:
           sitemap: false
 
 exclude: ['CNAME', 'CONTRIBUTING.md', 'LICENSE', 'README.md', 'pages/example.md']
+
+future: true
