@@ -18,13 +18,15 @@ can use [phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and
 FastCGI built in and ready to go, you just need to configure PHP as a handler. For support and additional resources
 there is a [dedicated area on iis.net][php-iis] for PHP.
 
+Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP development using Windows][windows-tools].
 
-[php-downloads]: http://windows.php.net/download/
-[windows-path]: http://www.windows-commandline.com/set-path-command-line/
-[wpi]: http://www.microsoft.com/web/downloads/platform.aspx
-[xampp]: http://www.apachefriends.org/en/xampp.html
+[phpmanager]: http://phpmanager.codeplex.com/
 [openserver]: http://open-server.ru/
 [easyphp]: http://www.easyphp.org/
 [wamp]: http://www.wampserver.com/en/
-[phpmanager]: http://phpmanager.codeplex.com/
-[php-iis]: http://php.iis.net/
+[php-downloads]: http://windows.php.net/download/
+[php-iis]: http://php.iis.net//
+[windows-path]: http://www.windows-commandline.com/set-path-command-line/
+[windows-tools]: http://ctankersley.com/2015/07/01/developing-on-windows/
+[wpi]: http://www.microsoft.com/web/downloads/platform.aspx
+[xampp]: http://www.apachefriends.org/en/xampp.html
