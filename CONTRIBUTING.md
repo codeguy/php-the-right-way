@@ -62,7 +62,16 @@ included in the project:
    git checkout -b <topic-branch-name>
    ```
 
-4. Install the [Jekyll](https://github.com/jekyll/jekyll/) gem to preview locally.
+4. Install the [Jekyll](https://github.com/jekyll/jekyll/) gem and dependencies to preview locally:
+
+    ```bash
+    # Install the needed gems
+    gem install jekyll jekyll-sitemap pygments.rb
+    # Build and open _site/index.html in your browser...
+    jekyll build [--watch]
+    # ...or run a local server to easily develop:
+    jekyll serve
+    ```
 
 5. Commit your changes in logical chunks. Please adhere to these [git commit
    message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
