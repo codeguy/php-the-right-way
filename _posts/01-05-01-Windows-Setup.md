@@ -28,7 +28,7 @@ Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP d
 [openserver]: http://open-server.ru/
 [wamp]: http://www.wampserver.com/en/
 [php-downloads]: http://windows.php.net/download/
-[php-iis]: http://php.iis.net//
+[php-iis]: http://php.iis.net/
 [windows-path]: http://www.windows-commandline.com/set-path-command-line/
 [windows-tools]: http://ctankersley.com/2015/07/01/developing-on-windows/
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
