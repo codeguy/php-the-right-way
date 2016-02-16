@@ -24,7 +24,6 @@ In other languages such as Russian or Serbian there are two plural forms plus th
 languages with a total of four, five or six forms, such as Slovenian, Irish or Arabic.
 
 ## Common ways to implement
-
 The easiest way to internationalize PHP software is by using array files and using those strings in templates, such as
 `<h1><?=$TRANS['title_about_page']?></h1>`. This is, however, hardly a recommended way for serious projects, as it poses
 some maintenance issues along the road - some might appear in the very beginning, such as pluralization. So, please,
@@ -36,33 +35,89 @@ those if you feel like, but you might find bothering to edit array source files,
 (such as string scaping and so on). The main pro here is integration with the environment you're using - the framework
 is called _full-stack_ for a reason, right?
 
-However, the most classic way and often taken as reference for i18n and l10n is a [UNIX tool called `gettext`][gettext].
+However, the most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext].
 It dates back to 1995 and is still the most complete implementation for translating software. It is pretty easy to get
 running, while it still sports powerful supporting tools. It's about Gettext we will be talking here. Also, to help you
 not get messy over the command-line, we will be presenting a great GUI application that can be used to easily update
 your l10n source files.
 
 ### Discussion on l10n keys
-TODO: talk about static keys versus text keys, as in https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/#What_form_of_msgids_should_be_used
+> TODO: talk about static keys versus text keys, as in https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/#What_form_of_msgids_should_be_used
 
 ## Gettext
 
 ### Installation
-TODO: You might need to install Gettext and the related PHP library by using your package manager, like `apt-get` or `yum`.
+You might need to install Gettext and the related PHP library by using your package manager, like `apt-get` or `yum`.
+After installed, enable it by adding `extension=gettext.so` (Linux/Unix) or `extension=php_gettext.dll` (Windows) to
+your `php.ini`.
 
 ### Structure
-TODO: Talk about POT/PO/MO files and Poedit. Explain details about plural forms, directory structures and domains.
+
+#### Types of files
+There are three files you usually deal with while working with gettext. The main ones are PO (Portable Object) and
+MO (Machine Object) files, the first being a list of readable "translated objects" and the second, the corresponding
+binary to be interpreted by gettext when doing localization. There's also a POT (Template) file, that simply contains
+all existing keys from your source files, and can be used as a guide to generate and update all PO files. Those template
+files are not mandatory: depending on the tool you're using to do l10n, you can go just fine with only PO/MO files.
+You'll always have one pair of PO/MO files per language and region, but only one POT per domain.
+
+### Domains
+There are some cases, in big projects, where you might need to separate translations when the same words convey 
+different meaning given a context. In those cases you split them into different _domains_. They're basically named
+groups of POT/PO/MO files, where the filename is the said _translation domain_. Small and medium-sized projects usually,
+for simplicity, use only one domain; it's name is arbitrary, but we will be using "main" for our code samples.
+
+#### Locale code
+A locale is simple code that identifies a version of a language. It's defined following [ISO 639-1][639-1] and 
+[ISO 3166-1 alpha-2][3166-1] specs: two lower-case letters for the language, optionally followed by an underline and two
+upper-case letters identifying the country or regional code. For [rare languages][rare], three letters are used.
+
+For some speakers, the country part may seem redundant; but in fact, some languages have dialects in different
+countries, such as Austrian German (`de_AT`) or Brazilian Portuguese (`pt_BR`). The second part is used to distinguish
+between those dialects - when it's not present, it's taken as a "generic" or "hybrid" version of the language.
+
+### Directory structure
+To use Gettext, we will need to adhere to a specific structure of folders. First, you'll need to select an arbitrary
+root for your l10n files in your source repository. Inside it you'll have a folder for each needed locale, and a fixed
+`LC_MESSAGES` folder that will contain all your PO/MO pairs. Example:
+
+{% highlight console %}
+<project root>
+ ├─ src/
+ ├─ templates/
+ └─ locales/
+    ├─ forum.pot
+    ├─ site.pot
+    ├─ de/
+    │  └─ LC_MESSAGES/
+    │     ├─ forum.mo
+    │     ├─ forum.po
+    │     ├─ site.mo
+    │     └─ site.po
+    ├─ es_ES/
+    │  └─ LC_MESSAGES/
+    │     └─ ...
+    ├─ fr/
+    │  └─ ...
+    ├─ pt_BR/
+    │  └─ ...
+    └─ pt_PT/
+       └─ ...
+{% endhighlight %}
+
+### Plural forms
+> TODO
 
 ### Sample implementation
-TODO: Add sample code implementing i18n using gettext.
+> TODO: Add sample code implementing i18n using gettext.
 
 ### Everyday usage
-TODO: Explain what's the l10n routine for a project with existing i18n in place, using Poedit (and maybe command line as seen
+> TODO: Explain what's the l10n routine for a project with existing i18n in place, using Poedit (and maybe command line as seen
 in the LingoHub file).
 
 #### Tips & Tricks
-TODO: Talk about possible issue with caching.
-TODO: Suggest creation of helper functions.
+> TODO: Talk about possible issue with caching.
+> TODO: Suggest creation of helper functions.
 
 ### References
 
@@ -70,6 +125,9 @@ TODO: Suggest creation of helper functions.
 * [Wikipedia: Gettext](https://en.wikipedia.org/wiki/Gettext)
 * [LingoHub: PHP internationalization with gettext tutorial](https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/)
 * [PHP Manual: Gettext](http://br2.php.net/manual/en/book.gettext.php)
-
+* [Gettext Manual](http://www.gnu.org/software/gettext/manual/gettext.html)
 
 [gettext]: https://en.wikipedia.org/wiki/Gettext
+[639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+[3166-1]: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+[rare]: http://www.gnu.org/software/gettext/manual/gettext.html#Rare-Language-Codes
