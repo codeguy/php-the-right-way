@@ -65,8 +65,8 @@ included in the project:
 4. Install the [Jekyll](https://github.com/jekyll/jekyll/) gem and dependencies to preview locally:
 
     ```bash
-    # Install the needed gems
-    gem install jekyll jekyll-sitemap pygments.rb
+    # Install the needed gems through Bundler
+    bundle install
     # Build and open _site/index.html in your browser...
     jekyll build [--watch]
     # ...or run a local server to easily develop:
