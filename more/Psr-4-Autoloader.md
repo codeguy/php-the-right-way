@@ -55,21 +55,19 @@
 
 ## 3. 예시
 
-The table below shows the corresponding file path for a given fully qualified
-class name, namespace prefix, and base directory.
 아래 표는 실제로 나타날 수 있는 php 파일 경로와 정규화된 클래스 이름, "namespace prefix", 
 "base directory" 간의 관계를 예시로 보여주는 표입니다. 
 
-| Fully Qualified Class Name    | Namespace Prefix   | Base Directory           | Resulting File Path
+| 정규화된 클래스 이름          | Namespace Prefix   | Base Directory           | PHP 파일 경로
 | ----------------------------- |--------------------|--------------------------|-------------------------------------------
 | \Acme\Log\Writer\File_Writer  | Acme\Log\Writer    | ./acme-log-writer/lib/   | ./acme-log-writer/lib/File_Writer.php
 | \Aura\Web\Response\Status     | Aura\Web           | /path/to/aura-web/src/   | /path/to/aura-web/src/Response/Status.php
 | \Symfony\Core\Request         | Symfony\Core       | ./vendor/Symfony/Core/   | ./vendor/Symfony/Core/Request.php
 | \Zend\Acl                     | Zend               | /usr/includes/Zend/      | /usr/includes/Zend/Acl.php
 
-For example implementations of autoloaders conforming to the specification,
-please see the [examples file][]. Example implementations MUST NOT be regarded
-as part of the specification and MAY change at any time.
+[구현 예제][examples file] 페이지에서 사양에 맞는 자동 로더(autoloader)를 
+구현하는 예제를 볼 수 있습니다. 구현 예제는 사양의 일부로 보아서는 
+안되며(MUST NOT) 임의로 변경될 수(MAY) 있습니다.
 
 [autoloading]: http://php.net/autoload
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
