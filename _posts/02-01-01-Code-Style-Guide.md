@@ -9,7 +9,7 @@ PHP 커뮤니티는 매우 거대하고, 수많은 라이브러리와 프레임�
 가지를 골라 프로젝트에 적용하는 일은 PHP 개발자에게 일상적인 일입니다. 다양한 라이브러리를 조합하여 사용하는 일을
 수월하게 하려면, 가능한한 공통적인 코드 스타일을 적용하는 일은 매우 중요합니다.
 
-[프레임워크 운용 그룹(Framework Interop Group)][fig]에서는 [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2],
+[프레임워크 운용 그룹(Framework Interoperability Group)][fig]에서는 [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2],
 [PSR-4][psr4]라는 권장 스타일 가이드를 발표했습니다. 이들 가이드는 Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK,
 FuelPHP, Lithium 등의 프로젝트에서 적용하기 시작한 스타일 규칙입니다. 여러분의 프로젝트에서 이러한 스타일 가이드를
 사용할 수도있고, 혹은 여러분 자신만의 스타일을 그대로 사용할 수도 있습니다.
@@ -21,7 +21,7 @@ FuelPHP, Lithium 등의 프로젝트에서 적용하기 시작한 스타일 규�
 * [읽을거리: PSR-0][psr0]
 * [읽을거리: PSR-1][psr1]
 * [읽을거리: PSR-2][psr2]
-* [읽을거리: PSR-4][psr4]
+* [읽을거리: PSR-4][psr4] ([원문][psr4 original])
 * [읽을거리: PEAR 코딩 표준][pear-cs]
 * [읽을거리: Symfony 코딩 표준][symfony-cs]
 
@@ -47,7 +47,8 @@ FuelPHP, Lithium 등의 프로젝트에서 적용하기 시작한 스타일 규�
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[psr4]: https://github.com/ModernPUG/php-the-right-way/blob/gh-pages/more/Psr-4-Autoloader.md
+[psr4 original]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
