@@ -73,9 +73,10 @@
 ## 4. 저작권
 
 본 저작권 항목은 이 문서의 저작권을 명확히 나타내기 위해 번역자가 삽입하였습니다.
-이 문서는 PHP-FIG 의 저작물이며, [PHP-FIG의 저작권 정책][licensing] 에 따라 번역되었습니다.
+이 문서의 [원문][psr-4 original]은 PHP-FIG 의 저작물입니다. 이 문서는 [PHP-FIG의 저작권 정책][licensing] 에 따라 번역되었습니다.
 
 [autoloading]: http://php.net/autoload
 [PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [examples file]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md
+[psr-4 original]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 [licensing]: http://www.php-fig.org/bylaws/licensing-policies/
