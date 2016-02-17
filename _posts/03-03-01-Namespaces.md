@@ -30,10 +30,10 @@ PSR-0은 차즘 적게 사용되고 있습니다.
 
 * [읽을거리: Namespaces][namespaces]
 * [읽을거리: PSR-0][psr0]
-* [읽을거리: PSR-4][psr4 ko] ([원문][psr4 original])
+* [읽을거리: PSR-4][psr4] ([원문][psr4 original])
 
 
 [namespaces]: http://php.net/language.namespaces
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr4 ko]: https://github.com/ModernPUG/php-the-right-way/blob/gh-pages/more/Psr-4-Autoloader.md
+[psr4]: https://github.com/ModernPUG/php-the-right-way/blob/gh-pages/more/Psr-4-Autoloader.md
 [psr4 original]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
