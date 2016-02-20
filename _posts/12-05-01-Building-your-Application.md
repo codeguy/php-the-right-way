@@ -64,7 +64,7 @@ just deploy your app but can build your whole server environment or virtual boxe
 
 *-- Martin Fowler*
 
-There are different ways to implement continuous integration for PHP. Recently [Travis CI] has done a great job of
+There are different ways to implement continuous integration for PHP. [Travis CI] has done a great job of
 making continuous integration a reality even for small projects. Travis CI is a hosted continuous integration service
 for the open source community. It is integrated with GitHub and offers first class support for many languages including
 PHP.

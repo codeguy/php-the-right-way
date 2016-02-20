@@ -18,3 +18,5 @@ anchor:  php_paas_providers
 * [Google App Engine](https://developers.google.com/appengine/docs/php/gettingstarted/)
 * [Jelastic](http://jelastic.com/)
 * [Platform.sh](https://platform.sh/)
+
+To see which versions these PaaS hosts are running, head over to [PHP Versions](http://phpversions.info/paas-hosting/).
