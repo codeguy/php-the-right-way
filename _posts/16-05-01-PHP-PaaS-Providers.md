@@ -13,7 +13,6 @@ anchor:  php_paas_providers
 * [Red Hat OpenShift Platform](http://openshift.com)
 * [dotCloud](https://www.dotcloud.com/dev-center/platform-documentation)
 * [AWS Elastic Beanstalk](http://aws.amazon.com/elasticbeanstalk/)
-* [cloudControl](https://www.cloudcontrol.com/)
 * [Windows Azure](http://www.windowsazure.com/)
 * [Google App Engine](https://developers.google.com/appengine/docs/php/gettingstarted/)
 * [Jelastic](http://jelastic.com/)
