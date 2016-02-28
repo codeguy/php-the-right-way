@@ -121,8 +121,8 @@ given number falls (starting the count with 0). For example:
 - Brazilian Portuguese: `nplurals=2; plural=(n > 1);` - two rules, second if N is bigger than one, first otherwise
 
 Now that you understood the basis of how plural rules works - and if you didn't, please look at a deeper explanation
-on the [LingoHub tutorial](lingohub_plurals) -, you might want to copy the ones you need from a [list][plural] instead of
-writing them by hand.
+on the [LingoHub tutorial](lingohub_plurals) -, you might want to copy the ones you need from a [list][plural] instead
+of writing them by hand.
 
 When calling out Gettext to do localization on sentences with counters, you'll have to give him the
 related number as well. Gettext will work out what rule should be in effect and use the correct localized version.
@@ -170,9 +170,9 @@ translated `msgstr` lines.
 Talking about translation keys, there are two main "schools" here:
 
 1. _`msgid` as a real sentence_.  
-    The main advantage are: 
-    - if there's pieces of the software untranslated in any given language, the key displayed will still maintain some
-    meaning. Example: if you happen to translate by heart from English to Spanish but needs help to translate to French,
+    The main advantages are: 
+    - if there are pieces of the software untranslated in any given language, the key displayed will still maintain some
+    meaning. Example: if you happen to translate by heart from English to Spanish but need help to translate to French,
     you might publish the new page with missing French sentences, and parts of the website would be displayed in English
     instead;
     - it's much easier for the translator to understand what's going on and make a proper translation based on the
@@ -188,7 +188,7 @@ including the template or part where the string is located instead of its conten
     needed as a basis for other translations. Example: the developer would ideally have an `en.po` file, that
     translators would read to understand what to write in `fr.po` for instance.
     - missing translations would display meaningless keys on screen (`TOP_MENU_WELCOME` instead of `Hello there, User!`
-    on the said untranslated French page). That's good as would force translation to be complete before publishing -
+    on the said untranslated French page). That's good it as would force translation to be complete before publishing -
     but bad as translation issues would be really awful in the interface.
 
 The [Gettext manual][manual] favors the first approach, as in general it's easier for translators and users in
@@ -197,7 +197,7 @@ case of trouble. That's how we will be working here as well.
 ### Everyday usage
 In a common application, you would use some Gettext functions while writing static text in your pages. Those sentences
 would then appear in `.po` files, get translated, compiled into `.mo` files and then, used by Gettext when rendering
-the actual interface. Given that, let's tie together what we have discussed so far in a a step-by-step example:
+the actual interface. Given that, let's tie together what we have discussed so far in a step-by-step example:
 
 #### 1. A sample template file, including some different gettext calls
 {% highlight php %}
@@ -212,14 +212,14 @@ the actual interface. Given that, let's tie together what we have discussed so f
                      $unread),
             $unread)?>
         </h2>
-    <? endif ?>
+    <?php endif ?>
 </div>
 
 <h1><?=gettext('Introduction')?></h1>
 <p><?=gettext('We\'re now translating some strings')?></p>
 {% endhighlight %}
 
-- [`gettext()`][func] simply translates a `msgid` into it's corresponding `msgstr` for a given language. There's also
+- [`gettext()`][func] simply translates a `msgid` into its corresponding `msgstr` for a given language. There's also
 the shorthand function `_()` that works the same way;
 - [`ngettext()`][n_func] does the same but with plural rules;
 - there's also [`dgettext()`][d_func] and [`dngettext()`][dn_func], that allows you to override the domain for a single
@@ -248,7 +248,7 @@ if (isset($_GET['lang']) && valid($_GET['lang'])) {
     // if the cookie is present instead, let's just keep it
     $lang = $_COOKIE['lang']; //you should sanitize this!
 } elseif (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-    // default resort: look for the languages the browser says the user accepts
+    // default: look for the languages the browser says the user accepts
     $langs = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
     array_walk($langs, function (&$lang) { $lang = strtr(strtok($lang, ';'), ['-' => '_']); });
     foreach ($langs as $browser_lang) {
@@ -284,42 +284,78 @@ textdomain('main');
 {% endhighlight %}
 
 #### 3. Preparing translation for the first run
-To make matters easier - and one of the powerful advantages Gettext has over custom framework i18n packages - is it's custom file type. "Oh man, that's quite hard to understand and edit by hand, a simple array would be easier!" Make no mistake, applications like [Poedit] are here to help - _a lot_. You can get the program from [their website], it's free and available for all platforms. It's a pretty easy tool to get used to, and a very powerful one at the same time - using with responsability the powers Gettext gave it.
+To make matters easier - and one of the powerful advantages Gettext has over custom framework i18n packages - is its
+custom file type. "Oh man, that's quite hard to understand and edit by hand, a simple array would be easier!" Make no
+mistake, applications like [Poedit] are here to help - _a lot_. You can get the program from
+[their website](poedit_download), it's free and available for all platforms. It's a pretty easy tool to get used to,
+and a very powerful one at the same time - using all powerful features Gettext has available.
 
-In the first run, you should select "File > New Catalog" from the menu. There you'll have a small screen where we will set the terrain so everything else runs smoothly. You'll be able to find those settings later through "Catalog > Properties":
+In the first run, you should select "File > New Catalog" from the menu. There you'll have a small screen where we will
+set the terrain so everything else runs smoothly. You'll be able to find those settings later through
+"Catalog > Properties":
 
 - Project name and version, Translation Team and email address: useful information that goes in the `.po` file header;
 - Language: here you should use that format we mentioned before, such as `en_US` or `pt_BR`;
 - Charsets: UTF-8, preferably;
-- Source charset: set here the charset used by your PHP files - probably UTF-8 AS well, right?
+- Source charset: set here the charset used by your PHP files - probably UTF-8 as well, right?
 - plural forms: here goes those rules we mentioned before - there's a link in there with samples as well;
-- Source paths: here you must include all folders from the project where `gettext()` (and siblings) will happen - this is usually your templates folder(s)
-- Source keywords: this last part is filled by default, but you might need to alter it later - and is one of the powerful points of Gettext. The underlying software knows how the `gettext()` calls look like in several programming languages, but you might as well create your own translation forms. This will be discussed later in the "Tips" section.
+- Source paths: here you must include all folders from the project where `gettext()` (and siblings) will happen - this
+is usually your templates folder(s)
+- Source keywords: this last part is filled by default, but you might need to alter it later - and is one of the
+powerful points of Gettext. The underlying software knows how the `gettext()` calls look like in several programming
+languages, but you might as well create your own translation forms. This will be discussed later in the "Tips" section.
 
-After setting those points you'll be prompted to save the file - using that directory structure we mentioned as well, and then it will run a scan through your source files to find the localization calls. They'll be fed empty into the translation table, and you'll start typing in the localized versions of those strings. Save it and a `.mo` file will be (re)compiled into the same folder and ta-dah: your project is internationalized.
+After setting those points you'll be prompted to save the file - using that directory structure we mentioned as well,
+and then it will run a scan through your source files to find the localization calls. They'll be fed empty into the
+translation table, and you'll start typing in the localized versions of those strings. Save it and a `.mo` file will be
+(re)compiled into the same folder and ta-dah: your project is internationalized.
 
 #### 4. Translating strings
-As you may have noticed before, there are two main types of localized strings: simple ones and the ones with plural forms. The first ones have simply two boxes: source and localized string. The source string can't be modified as Gettext/Poedit do not include the powers to alter your source files - you should change the source itself and rescan the files. Tip: you may right-click a translation line and it will hint you with the source files and lines where that string is being.  
-On the other hand, plural form strings include two boxes to show the two source strings, and tabs so you can configure the different final forms.
+As you may have noticed before, there are two main types of localized strings: simple ones and the ones with plural
+forms. The first ones have simply two boxes: source and localized string. The source string can't be modified as
+Gettext/Poedit do not include the powers to alter your source files - you should change the source itself and rescan
+the files. Tip: you may right-click a translation line and it will hint you with the source files and lines where that
+string is being used.  
+On the other hand, plural form strings include two boxes to show the two source strings, and tabs so you can configure
+the different final forms.
 
-Whenever you change your sources and need to update the translations, just hit Refresh and Poedit will rescan the code, removing non-existent entries, merging the ones that changed and adding new ones. It may also try to guess some translations, based on other ones you did. Those guesses and the changed entries will receive a "Fuzzy" marker, indicating it needs review, being highlighted in the list. It's also useful if you have a translation team and someone tries to write something they're not sure about: just mark Fuzzy and someone else will review later.
+Whenever you change your sources and need to update the translations, just hit Refresh and Poedit will rescan the code,
+removing non-existent entries, merging the ones that changed and adding new ones. It may also try to guess some
+translations, based on other ones you did. Those guesses and the changed entries will receive a "Fuzzy" marker,
+indicating it needs review, being highlighted in the list. It's also useful if you have a translation team and someone
+tries to write something they're not sure about: just mark Fuzzy and someone else will review later.
 
-Finally, it's advised to leave "View > Untranslated entries first" marked, as it will help you _a lot_ to not forget any entry. From that menu you can also open parts of the UI that allow you to leave contextual information for translators, if needed.
+Finally, it's advised to leave "View > Untranslated entries first" marked, as it will help you _a lot_ to not forget
+any entry. From that menu you can also open parts of the UI that allow you to leave contextual information for
+translators, if needed.
 
 ### Tips & Tricks
 
 #### Possible caching issues
-If you're running PHP as a module on Apache (`mod_php`), you might face issues with the `.mo` file being cached. It happens the first time it's read, and then, to update it, you might need to restart the server. On Nginx and PHP5 it usually takes only a couple of page refreshes to refresh the translation cache, and on PHP7 it is rarely needed.
+If you're running PHP as a module on Apache (`mod_php`), you might face issues with the `.mo` file being cached. It
+happens the first time it's read, and then, to update it, you might need to restart the server. On Nginx and PHP5 it
+usually takes only a couple of page refreshes to refresh the translation cache, and on PHP7 it is rarely needed.
 
 #### Additional helper functions
-As preferred by many people, it's easier to use `_()` instead of `gettext()`. Many custom i18n libraries from frameworks use something similar to `t()` as well, to make translated code shorter. However, that's the only function that sports a shortcut. You might want to add in your project some others, such as `__()` or `_n()` for `ngettext()`, or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls.
+As preferred by many people, it's easier to use `_()` instead of `gettext()`. Many custom i18n libraries from
+frameworks use something similar to `t()` as well, to make translated code shorter. However, that's the only function
+that sports a shortcut. You might want to add in your project some others, such as `__()` or `_n()` for `ngettext()`,
+or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls.
 
-In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions. Don't be afraid, it's something very easy. It's just a field in the `.po` file, or a Settings screen on Poedit - remember when we mentioned it before? In the editor that option is inside "Catalog > Properties > Source keywords". You need to include there the specifications of those new functions, following [a specific format](func_format):
+In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
+Don't be afraid, it's very easy. It's just a field in the `.po` file, or a Settings screen on Poedit. In the editor
+that option is inside "Catalog > Properties > Source keywords". You need to include there the specifications of those
+new functions, following [a specific format](func_format):
 
-- if you create something like `t()` that simply returns the translation for a string, you can specify it as `t`. Gettext will know the only function argument is the string to be translated;
-- if the function has more than one argument, you can specify in which one the first string is - and if needed, the plural form as well. For instance, if we call our function like this: `__('one user', '%d users', $number)`, the specification would be `__:1,2`, meaning the first form is the first argument, and the second form is the second argument. If your number comes as first argument instead, the spec would be `__:2,3`, indicating the first form is the second argument, and so on.
+- if you create something like `t()` that simply returns the translation for a string, you can specify it as `t`.
+Gettext will know the only function argument is the string to be translated;
+- if the function has more than one argument, you can specify in which one the first string is - and if needed, the
+plural form as well. For instance, if we call our function like this: `__('one user', '%d users', $number)`, the
+specification would be `__:1,2`, meaning the first form is the first argument, and the second form is the second
+argument. If your number comes as first argument instead, the spec would be `__:2,3`, indicating the first form is the
+second argument, and so on.
 
-After including those new rules in the `.po` file, a new scan will bring your new strings just as easy as before.
+After including those new rules in the `.po` file, a new scan will bring in your new strings just as easy as before.
 
 ### References
 
