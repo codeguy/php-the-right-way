@@ -6,7 +6,7 @@ anchor:  mac_setup
 
 ## Mac 安装 {#mac_setup_title}
 
-OSX 系统会预装 PHP， 只是一般情况下版本会比最新稳定版低一些。目前 Lion 是  5.3.10，
+OS X 系统会预装 PHP， 只是一般情况下版本会比最新稳定版低一些。目前 Lion 是  5.3.10，
 Mavericks 是 5.4.17， Yosemite 则是 5.5.9， 但在 PHP 5.6 出来之后， 这些往往是不够的。
 
 这里有许多方式在 OS X 上安装 PHP 。
