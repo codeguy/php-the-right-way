@@ -72,6 +72,8 @@
     jekyll build [--watch]
     # ...or run a local server to easily develop:
     jekyll serve
+    # Run the local server
+    bundle execute jekyll s
     ```
 
 5. 논리적인 단위로 여러분의 수정 내용을 commit 합니다. [git commit
