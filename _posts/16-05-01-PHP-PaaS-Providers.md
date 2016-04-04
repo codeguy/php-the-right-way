@@ -20,4 +20,4 @@ anchor:  php_paas_providers
 * [Jelastic](http://jelastic.com/)
 * [Platform.sh](https://platform.sh/)
 
-To see which versions these PaaS hosts are running, head over to [PHP Versions](http://phpversions.info/paas-hosting/).
+위의 PaaS 제공자들이 어떤 버전을 사용하는지 확인하려면, [PHP Versions](http://phpversions.info/paas-hosting/)를 확인하세요.
