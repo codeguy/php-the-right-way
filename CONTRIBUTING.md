@@ -63,8 +63,17 @@
    ```
 
 4. 작업 환경에서 수정된 결과물을 미리보고 싶다면 
-   [Jekyll](https://github.com/mojombo/jekyll/) gem 을 설치합니다.
+   [Jekyll](https://github.com/mojombo/jekyll/) gem 과 의존 패키지들을 설치합니다.
 
+    ```bash
+    # Install the needed gems
+    gem install jekyll jekyll-sitemap pygments.rb
+    # Build and open _site/index.html in your browser...
+    jekyll build [--watch]
+    # ...or run a local server to easily develop:
+    jekyll serve
+    ```
+    
 5. 논리적인 단위로 여러분의 수정 내용을 commit 합니다. [git commit
    message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)에 따라 메시지를 적절히 작성합니다. 여러분의 커밋을 공개하기 전에, 
    git의 [interactive rebase](https://help.github.com/articles/interactive-rebase) 기능을 사용해서 커밋을 깔끔하게 정리합니다.
