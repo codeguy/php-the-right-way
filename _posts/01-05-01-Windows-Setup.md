@@ -19,11 +19,13 @@ anchor:  windows_setup
 포함되어 있어 단지 PHP를 핸들러로 설정해주기만 하면 됩니다. 자세한 정보는 [iis.net에 있는 PHP 전용 섹션][php-iis]에서
 볼 수 있습니다.
 
+일반적으로 개발 환경과 프로덕션 환경이 다르면 라이브 할 때 이상한 버그가 발생할 수 있습니다. 윈도우즈에서 개발하고 리눅스에 배포하고 있다면 [버추얼 머신](/#virtualization_title)을 사용하는 것이 좋습니다.
+ 
 Chris Tankersley 가 [윈도우즈를 이용한 PHP 개발시 그가 사용하는 도구에 대한 매우 도움이 되는 블로그 글][windows-tools]을 썻습니다.
 
+[easyphp]: http://www.easyphp.org/
 [phpmanager]: http://phpmanager.codeplex.com/
 [openserver]: http://open-server.ru/
-[easyphp]: http://www.easyphp.org/
 [wamp]: http://www.wampserver.com/en/
 [php-downloads]: http://windows.php.net/download/
 [php-iis]: http://php.iis.net//
