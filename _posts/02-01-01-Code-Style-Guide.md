@@ -15,7 +15,7 @@ recommendations are merely a set of rules that some projects like Drupal, Zend, 
 FuelPHP, Lithium, etc are starting to adopt. You can use them for your own projects, or continue to use your own
 personal style.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSR's, or one
+Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
 of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
 applications that implement the components can have consistency even when working with lots of third-party code.
 
@@ -29,8 +29,11 @@ applications that implement the components can have consistency even when workin
 You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
 editors like [Sublime Text 2][st-cs] to be given real time feedback.
 
-You can fix the code layout automatically by using one of the two following tools. One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase. 
-Another option is [php.tools][phptools], which is made popular by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in performance, meaning real-time editor fixing is more fluid.
+You can fix the code layout automatically by using one of the following tools:
+
+- One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase. 
+- Another option is [php.tools][phptools], which is made popular by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in performance, meaning real-time editor fixing is more fluid.
+- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
 
 And you can run phpcs manually from shell:
 
@@ -53,6 +56,7 @@ readable by all current and future parties who may be working on the codebase.
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
+[phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
 [phptools]: https://github.com/phpfmt/php.tools
