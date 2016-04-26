@@ -26,7 +26,7 @@ Deployment tools can be described as a collection of scripts that handle common 
 
 There are many open source tools available to help you with build automation and deployment, some are written in PHP others aren't. This shouldn't hold you back from using them, if they're better suited for the specific job. Here are a few examples:
 
-[Phing] is the easiest way to get started with automated deployment in the PHP world. With Phing you can control your packaging, deployment or testing process from within a simple XML build file. Phing (which is based on [Apache Ant]) provides a rich set of tasks usually needed to install or update a web app and can be extended with additional custom tasks, written in PHP.
+[Phing] can control your packaging, deployment or testing process from within an XML build file. Phing (which is based on [Apache Ant]) provides a rich set of tasks usually needed to install or update a web application and can be extended with additional custom tasks, written in PHP. It's a solid and robust tool and has been around for a long time, however the tool could be perceived as a bit old fashioned because of the way it deals with configuration (XML files).
 
 [Capistrano] is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way
 on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however people are **successfully deploying PHP systems** with it. Successful use of Capistrano depends on a working knowledge of Ruby and
