@@ -26,19 +26,17 @@ Deployment tools can be described as a collection of scripts that handle common 
 
 There are many open source tools available to help you with build automation and deployment, some are written in PHP others aren't. This shouldn't hold you back from using them, if they're better suited for the specific job. Here are a few examples:
 
-[Phing] can control your packaging, deployment or testing process from within an XML build file. Phing (which is based on [Apache Ant]) provides a rich set of tasks usually needed to install or update a web application and can be extended with additional custom tasks, written in PHP. It's a solid and robust tool and has been around for a long time, however the tool could be perceived as a bit old fashioned because of the way it deals with configuration (XML files).
+[Phing] can control your packaging, deployment or testing process from within a XML build file. Phing (which is based on [Apache Ant]) provides a rich set of tasks usually needed to install or update a web application and can be extended with additional custom tasks, written in PHP. It's a solid and robust tool and has been around for a long time, however the tool could be perceived as a bit old fashioned because of the way it deals with configuration (XML files).
 
-[Capistrano] is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way
-on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however people are **successfully deploying PHP systems** with it. Successful use of Capistrano depends on a working knowledge of Ruby and
-Rake.
+[Capistrano] is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however you can successfully deploying PHP systems with it. Successful use of Capistrano depends on a working knowledge of Ruby and Rake. Dave Gardner's blog post [PHP Deployment with Capistrano][phpdeploy_capistrano] is a good starting point for PHP developers interested in Capistrano.
 
-Dave Gardner's blog post [PHP Deployment with Capistrano][phpdeploy_capistrano] is a good starting point for PHP
-developers interested in Capistrano.
+[Rocketeer] gets its inspiration and philosophy from the Laravel framework. Its goal is to be fast, elegant and ease to use with smart defaults. It features multiple servers, multiple stages, atomic deploys and deployment can be performed in parallel. Everything in the tool can be hot swapped or extended, and everything is written in PHP.
 
-[Chef] is more than a deployment framework, it is a very powerful Ruby based system integration framework that doesn't
-just deploy your app but can build your whole server environment or virtual boxes.
+[Deployer] is a deployment tool written in PHP, it's simple and functional. Runs tasks in parallel, atomic deployment, keeps consistency between servers. Recipes of common tasks for Symfony, Laravel, Zend Framework and Yii. Younes Rafie's article  [Easy Deployment of PHP Applications with Deployer][phpdeploy_deployer] is a great tutorial for deploying your application with the tool.
 
-[Deployer] is a deployment tool written in PHP, it's simple and functional. Runs tasks in parallel, atomic deployment, keeps consistency between servers. Recipes of common tasks for Symfony, Laravel, Zend Framework and Yii.
+[Magallanes] another tool written in PHP with simple configuration done in YAML files. It has support for multiple servers and environments, atomic deployment, and have some built in tasks that you can leverage for common tools and frameworks.
+
+[Chef] is more than a deployment framework, it is a very powerful Ruby based system integration framework that doesn't just deploy your app but can build your whole server environment or virtual boxes.
 
 #### Chef resources for PHP developers:
 
@@ -49,6 +47,8 @@ just deploy your app but can build your whole server environment or virtual boxe
 #### Further reading:
 
 * [Automate your project with Apache Ant][apache_ant_tutorial]
+* [Expert PHP Deployments][expert_php_deployments] - free book on deployment with Capistrano, Phing and Vagrant.
+* [Deploying PHP Applications][deploying_php_applications] - paid book on best practices and tools for PHP deployment.
 
 ### Continuous Integration
 
@@ -76,6 +76,7 @@ PHP.
 [Apache Ant]: http://ant.apache.org/
 [Capistrano]: https://github.com/capistrano/capistrano/wiki
 [phpdeploy_capistrano]: http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/
+[phpdeploy_deployer]: http://www.sitepoint.com/deploying-php-applications-with-deployer/
 [Chef]: https://www.chef.io/
 [chef_vagrant_and_ec2]: http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/
 [Chef_cookbook]: https://github.com/chef-cookbooks/php
@@ -85,4 +86,8 @@ PHP.
 [Jenkins]: http://jenkins-ci.org/
 [PHPCI]: http://www.phptesting.org/
 [Teamcity]: http://www.jetbrains.com/teamcity/
-[Deployer]: https://github.com/deployphp/deployer
+[Deployer]: http://deployer.org/
+[Rocketeer]: http://rocketeer.autopergamene.eu/
+[Magallanes]: http://magephp.com/
+[expert_php_deployments]: http://viccherubini.com/assets/Expert-PHP-Deployments.pdf
+[deploying_php_applications]: http://www.deployingphpapplications.com
