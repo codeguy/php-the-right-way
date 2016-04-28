@@ -13,11 +13,13 @@ anchor:  templating_further_reading
 * [Roll Your Own Templating System in PHP](http://code.tutsplus.com/tutorials/roll-your-own-templating-system-in-php--net-16596)
 * [Master Pages](https://laracasts.com/series/laravel-from-scratch/episodes/7)
 * [Working With Templates in Symfony 2](http://code.tutsplus.com/tutorials/working-with-templates-in-symfony-2--cms-21172)
+* [Writing Safer Templates](https://github.com/box/brainy/wiki/Writing-Safe-Templates)
 
 ### Libraries
 
 * [Aura.View](https://github.com/auraphp/Aura.View) *(native)*
-* [Blade](http://laravel.com/docs/templates) *(compiled, framework specific)*
+* [Blade](http://laravel.com/docs/blade) *(compiled, framework specific)*
+* [Brainy](https://github.com/box/brainy) *(compiled)*
 * [Dwoo](http://dwoo.org/) *(compiled)*
 * [Latte](https://github.com/nette/latte) *(compiled)*
 * [Mustache](https://github.com/bobthecow/mustache.php) *(compiled)*

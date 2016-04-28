@@ -1,6 +1,7 @@
 ---
 layout: page
 title:  The Basics
+sitemap: true
 ---
 
 # The Basics
@@ -26,7 +27,7 @@ if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is i
     // code...
 }
 
-// vs
+// vs.
 
 if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
     // code...
@@ -35,6 +36,7 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 
 * [Comparison operators](http://php.net/language.operators.comparison)
 * [Comparison table](http://php.net/types.comparisons)
+* [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
 
 ## Conditional statements
 
@@ -55,7 +57,7 @@ function test($a)
     }
 }
 
-// vs
+// vs.
 
 function test($a)
 {
@@ -64,6 +66,14 @@ function test($a)
     }
     return false;    // else is not necessary
 }
+
+// or even shorter:
+
+function test($a)
+{
+    return (bool) $a;
+}
+
 {% endhighlight %}
 
 * [If statements](http://php.net/control-structures.if)
@@ -283,7 +293,7 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 * [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
-### Which is quicker? 
+### Which is quicker?
 
 There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
 fundamentally not true.
@@ -295,7 +305,7 @@ If you are concatenating multiple strings of any type, or interpolate values int
 results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
 values, interpolating is minutely faster.
 
-Regardless of what you are doing with strings, none of the types will ever have any noticable impact on your
+Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
 application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
 optimization unless you really understand the meaning and impact of the differences.
 
@@ -382,6 +392,9 @@ Another example is the snippet below which will return true if ($a != 3 AND $b !
 <?php
 return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
+
+Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
+Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
 
 * [Ternary operators](http://php.net/language.operators.comparison)
 

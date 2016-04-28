@@ -24,17 +24,22 @@ applications that implement the components can have consistency even when workin
 * [Read about PSR-2][psr2]
 * [Read about PSR-4][psr4]
 * [Read about PEAR Coding Standards][pear-cs]
-* [Read about Zend Coding Standards][zend-cs]
 * [Read about Symfony Coding Standards][symfony-cs]
 
 You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
 editors like [Sublime Text 2][st-cs] to be given real time feedback.
 
-You can fix the code layout automatically by using one of the two possible tools. One is Fabien Potencier's
-[PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase. It is bigger and slower, but very
-stable and used by some huge projects like Magento and Symfony. Another option is [php.tools][phptools], which is made
-popular by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in
-performance, meaning real-time editor fixing is more fluid.
+You can fix the code layout automatically by using one of the two following tools. One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase. 
+Another option is [php.tools][phptools], which is made popular by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in performance, meaning real-time editor fixing is more fluid.
+
+And you can run phpcs manually from shell:
+
+    phpcs -sw --standard=PSR2 file.php
+
+It will show errors and descriptions how to fix them.
+It can also be helpful to include this command in a git hook.
+That way branches which contain violations against the chosen standard cannot enter the repository
+until those violations have been fixed.
 
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
 readable by all current and future parties who may be working on the codebase.
@@ -46,10 +51,9 @@ readable by all current and future parties who may be working on the codebase.
 [psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
 [psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 [pear-cs]: http://pear.php.net/manual/en/standards.php
-[zend-cs]: http://framework.zend.com/wiki/display/ZFDEV2/Coding+Standards
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
-[phptools]: https://github.com/dericofilho/php.tools
-[sublime-phpfmt]: https://github.com/dericofilho/sublime-phpfmt
+[phptools]: https://github.com/phpfmt/php.tools
+[sublime-phpfmt]: https://github.com/phpfmt/sublime-phpfmt
