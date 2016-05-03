@@ -13,3 +13,7 @@ anchor:  use_the_current_stable_version
 가까운 기간 동안에는 대부분 PHP 5.x가 사용되는 것을 볼 수 있을텐데, 최신 5.x 버전은 5.6입니다. 이것도 나쁘지는 않지만,
 최신 안정버전으로 빨리 업그레이드하는 것이 좋습니다. [하위 호환성 문제][php70-bc]가 많지 않기때문에 업그레이드는 정말 간단합니다.
 어떤 버전에 함수나 기능이 추가되었는지 잘 모르겠다면 [php.net][php-docs] 웹사이트에서 PHP 문서를 확인할 수 있습니다.
+
+[php-release]: http://php.net/downloads.php
+[php-docs]: http://php.net/manual/
+[php70-bc]: http://php.net/manual/migration70.incompatible.php
