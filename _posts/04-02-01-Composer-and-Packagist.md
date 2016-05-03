@@ -22,11 +22,11 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
-<strong>참고:</strong> 권한때문에 실패한 경우 `mv` 명령어를 `sudo`를 붙여서 실행하세요.
+**참고:** 권한때문에 실패한 경우 `mv` 명령어를 `sudo`를 붙여서 실행하세요.
 
 이렇게 하면 `composer.phar`라는 PHP 바이너리 파일이 다운로드됩니다. `php`로 이 바이너리를 실행하여 프로젝트의 의존성을
 관리할 수 있습니다.
-<strong>반드시 참고할것!</strong> 여기서 하는 것처럼 웹에서 다운로드한 코드를 바로 PHP 인터프리터에 파이프로 전달하여
+**반드시 참고할것!** 여기서 하는 것처럼 웹에서 다운로드한 코드를 바로 PHP 인터프리터에 파이프로 전달하여
 실행하는 경우에는 실행하기 전에 먼저 코드 내용을 보고 안전한 코드인 것을 확인한 후에 실행하기 바랍니다.
 
 #### 윈도우에 Composer 설치
