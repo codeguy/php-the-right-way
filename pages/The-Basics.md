@@ -28,7 +28,7 @@ if (strpos('testing', 'test')) {    // 'test'가 인덱스 0에서 발견되어 
     // code...
 }
 
-// vs
+// vs.
 
 if (strpos('testing', 'test') !== false) {    // (0 !== false)의 비교 결과는 true 이다.
     // code...
@@ -57,7 +57,7 @@ function test($a)
     }
 }
 
-// vs
+// vs.
 
 function test($a)
 {
@@ -66,6 +66,14 @@ function test($a)
     }
     return false;    // else is not necessary
 }
+
+// or even shorter:
+
+function test($a)
+{
+    return (bool) $a;
+}
+
 {% endhighlight %}
 
 * [If 구문](http://php.net/control-structures.if)

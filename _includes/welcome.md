@@ -34,7 +34,7 @@ _PHP: The Right Way_ 는 다양한 언어로 변역되어 있습니다.
 * [태국어](https://apzentral.github.io/php-the-right-way/)
 * [터키어판](http://hkulekci.github.io/php-the-right-way/)
 * [페르시아어(이란어)](http://novid.github.io/php-the-right-way/)
-* [포르투갈어판](http://br.phptherightway.com/)
+* [포르투갈어(브라질)판](http://br.phptherightway.com/)
 * [폴란드어판](http://pl.phptherightway.com/)
 * [프랑스어](http://eilgin.github.io/php-the-right-way/)
 * [한국어판](http://modernpug.github.io/php-the-right-way/)
