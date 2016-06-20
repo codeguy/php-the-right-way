@@ -26,5 +26,5 @@ installed in any application you like:
 [4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
 [6]: https://github.com/auraphp/Aura.Sql
 [7]: http://propelorm.org/
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[psr0]: http://www.php-fig.org/psr/psr-0/
+[psr4]: http://www.php-fig.org/psr/psr-4/
