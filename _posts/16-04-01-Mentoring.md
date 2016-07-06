@@ -5,4 +5,4 @@ anchor:  mentoring
 
 ## Mentoring {#mentoring_title}
 
-* [phpmentoring.org](http://phpmentoring.org/) - Formal, peer to peer mentoring in the PHP community.
+* [php-mentoring.org](http://php-mentoring.org/) - Formal, peer to peer mentoring in the PHP community.
