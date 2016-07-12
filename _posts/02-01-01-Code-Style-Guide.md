@@ -30,7 +30,6 @@ You can use [PHP_CodeSniffer][phpcs] to check code against any one of these reco
 editors like [Sublime Text 2][st-cs] to be given real time feedback.
 
 You can fix the code layout automatically by using one of the two following tools. One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
-Another option is [php.tools][phptools], which is made popular by the [sublime-phpfmt][sublime-phpfmt] editor plugin. While being newer, it makes great improvements in performance, meaning real-time editor fixing is more fluid.
 
 And you can run phpcs manually from shell:
 
@@ -55,5 +54,3 @@ readable by all current and future parties who may be working on the codebase.
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
-[phptools]: https://github.com/phpfmt/php.tools
-[sublime-phpfmt]: https://github.com/phpfmt/sublime-phpfmt
