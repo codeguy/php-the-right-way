@@ -29,7 +29,7 @@ applications that implement the components can have consistency even when workin
 You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
 editors like [Sublime Text 2][st-cs] to be given real time feedback.
 
-You can fix the code layout automatically by using one of the two following tools. One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
+You can fix the code layout automatically by using the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
 
 And you can run phpcs manually from shell:
 
