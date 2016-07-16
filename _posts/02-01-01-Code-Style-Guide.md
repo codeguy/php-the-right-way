@@ -43,8 +43,8 @@ If you have PHP_CodeSniffer, then you can fix the code layout problems reported 
 
     phpcbf -w --standard=PSR2 file.php
 
-Another option is to use the [PHP Coding Standards Fixer][phpcsfixer], which has a very well tested codebase. It will
-show which kind of errors the code structure had before it fixed them.
+Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
+It will show which kind of errors the code structure had before it fixed them.
 
     php-cs-fixer fix -v --level=psr2 file.php
 
