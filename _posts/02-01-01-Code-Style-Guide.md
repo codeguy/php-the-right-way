@@ -27,18 +27,26 @@ applications that implement the components can have consistency even when workin
 * [Read about Symfony Coding Standards][symfony-cs]
 
 You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text 2][st-cs] to be given real time feedback.
+editors like [Sublime Text 2][st-cs] to be given real-time feedback.
 
-You can fix the code layout automatically by using one of the two following tools. One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
-
-And you can run phpcs manually from shell:
+You can run PHP_CodeSniffer manually from the shell:
 
     phpcs -sw --standard=PSR2 file.php
 
-It will show errors and descriptions how to fix them.
+It will show errors and describe how to fix them.
 It can also be helpful to include this command in a git hook.
-That way branches which contain violations against the chosen standard cannot enter the repository
-until those violations have been fixed.
+That way, branches which contain violations against the chosen standard cannot enter the repository until those
+violations have been fixed.
+
+If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
+[PHP Code Beautifier and Fixer][phpcbf].
+
+    phpcbf -w --standard=PSR2 file.php
+
+Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
+It will show which kind of errors the code structure had before it fixed them.
+
+    php-cs-fixer fix -v --level=psr2 file.php
 
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
 readable by all current and future parties who may be working on the codebase.
@@ -52,5 +60,6 @@ readable by all current and future parties who may be working on the codebase.
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
+[phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
