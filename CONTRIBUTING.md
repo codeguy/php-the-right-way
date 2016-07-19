@@ -68,7 +68,7 @@ included in the project:
     # Install the needed gems through Bundler
     bundle install
     # Run the local server
-    bundle execute jekyll s
+    bundle exec jekyll serve
     ```
 
 5. Commit your changes in logical chunks. Please adhere to these [git commit
