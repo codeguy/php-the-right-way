@@ -15,7 +15,7 @@ recommendations are merely a set of rules that some projects like Drupal, Zend, 
 FuelPHP, Lithium, etc are starting to adopt. You can use them for your own projects, or continue to use your own
 personal style.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSR's, or one
+Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
 of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
 applications that implement the components can have consistency even when working with lots of third-party code.
 
@@ -27,9 +27,14 @@ applications that implement the components can have consistency even when workin
 * [Read about Symfony Coding Standards][symfony-cs]
 
 You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text 2][st-cs] to be given real-time feedback.
+editors like [Sublime Text][st-cs] to be given real-time feedback.
 
-You can run PHP_CodeSniffer manually from the shell:
+You can fix the code layout automatically by using one of the following tools:
+
+- One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
+- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
+
+And you can run phpcs manually from shell:
 
     phpcs -sw --standard=PSR2 file.php
 
