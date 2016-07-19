@@ -9,7 +9,7 @@ You can download the binaries from [windows.php.net/download][php-downloads]. Af
 
 For learning and local development you can use the built in webserver with PHP 5.4+ so you don't need to worry about
 configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
-as the [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] will
+as the [Web Platform Installer][wpi], [XAMPP][xampp], [Laragon][laragon], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] will
 help get a Windows development environment up and running fast. That said, these tools will be a little different from
 production so be careful of environment differences if you are working on Windows and deploying to Linux.
 
@@ -33,3 +33,4 @@ Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP d
 [windows-tools]: http://ctankersley.com/2015/07/01/developing-on-windows/
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
 [xampp]: http://www.apachefriends.org/en/xampp.html
+[laragon]: https://laragon.org/
