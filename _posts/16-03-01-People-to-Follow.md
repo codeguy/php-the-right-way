@@ -5,12 +5,12 @@ anchor:  people_to_follow
 
 ## People to Follow {#people_to_follow_title}
 
-* [Rasmus Lerdorf](http://twitter.com/rasmus)
-* [Fabien Potencier](http://twitter.com/fabpot)
-* [Derick Rethans](http://twitter.com/derickr)
-* [Chris Shiflett](http://twitter.com/shiflett)
-* [Sebastian Bergmann](http://twitter.com/s_bergmann)
-* [Matthew Weier O'Phinney](http://twitter.com/mwop)
-* [Pádraic Brady](http://twitter.com/padraicb)
-* [Anthony Ferrara](http://twitter.com/ircmaxell)
-* [Nikita Popov](http://twitter.com/nikita_ppv)
+It's difficult to find interesting and knowledgeable PHP
+community members when you are first starting out. You can
+find a comprehensive list of PHP community members and their
+Twitter handles at:
+
+* [25 PHP Developers to Follow Online][php-developers-to-follow]
+
+
+[php-developers-to-follow]: https://blog.newrelic.com/2014/05/02/25-php-developers-follow-online/

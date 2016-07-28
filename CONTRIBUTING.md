@@ -1,6 +1,6 @@
 # Contributing to PHP The Right Way
 
-Enjoy [PHP The Right Way](http://phptherightway.com) and want to get 
+Enjoy [PHP The Right Way](http://phptherightway.com) and want to get
 involved? Great! There are plenty of ways you can help out.
 
 Please take a moment to review this document in order to make the contribution
@@ -15,8 +15,8 @@ patches and features.
 ## Using the issue tracker
 
 The [issue tracker](https://github.com/codeguy/php-the-right-way/issues) is
-the preferred channel for changes: spelling mistakes, wording changes, new 
-content and generally [submitting pull requests](#pull-requests), but please 
+the preferred channel for changes: spelling mistakes, wording changes, new
+content and generally [submitting pull requests](#pull-requests), but please
 respect the following restrictions:
 
 * Please **do not** use the issue tracker for personal support requests (use
@@ -29,8 +29,8 @@ respect the following restrictions:
 <a name="pull-requests"></a>
 ## Pull Requests
 
-Pull requests are a great way to add new content to PHP The Right Way, as well 
-as updating any browser issues or other style changes. Pretty much any sort of 
+Pull requests are a great way to add new content to PHP The Right Way, as well
+as updating any browser issues or other style changes. Pretty much any sort of
 change is accepted if seen as constructive.
 
 Adhering to the following this process is the best way to get your work
@@ -62,7 +62,14 @@ included in the project:
    git checkout -b <topic-branch-name>
    ```
 
-4. Install the [Jekyll](https://github.com/jekyll/jekyll/) gem to preview locally.
+4. Install the [Jekyll](https://github.com/jekyll/jekyll/) gem and dependencies to preview locally:
+
+    ```bash
+    # Install the needed gems through Bundler
+    bundle install
+    # Run the local server
+    bundle exec jekyll serve
+    ```
 
 5. Commit your changes in logical chunks. Please adhere to these [git commit
    message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
@@ -88,7 +95,7 @@ included in the project:
 
 ## Contribution Agreement and Usage
 
-By submitting a pull request to this repository, you agree to allow the project 
+By submitting a pull request to this repository, you agree to allow the project
 owners to license your work under the the terms of the [Creative Commons Attribution-NonCommercial-ShareAlike
 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
@@ -109,4 +116,4 @@ All content is completely free now, and always will be.
 3. Wrap all text to 120 characters
 4. Code samples should adhere to PSR-1 or higher
 5. Use [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) for all content
-6. Use language agnostic urls when refering to external websites such as the [php.net](http://php.net/urlhowto.php) manual
+6. Use language agnostic urls when referring to external websites such as the [php.net](http://php.net/urlhowto.php) manual

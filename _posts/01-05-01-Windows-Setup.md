@@ -9,7 +9,7 @@ You can download the binaries from [windows.php.net/download][php-downloads]. Af
 
 For learning and local development you can use the built in webserver with PHP 5.4+ so you don't need to worry about
 configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
-as the [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp] and [WAMP][wamp] will
+as the [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] will
 help get a Windows development environment up and running fast. That said, these tools will be a little different from
 production so be careful of environment differences if you are working on Windows and deploying to Linux.
 
@@ -18,12 +18,18 @@ can use [phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and
 FastCGI built in and ready to go, you just need to configure PHP as a handler. For support and additional resources
 there is a [dedicated area on iis.net][php-iis] for PHP.
 
+Generally running your application on different environment in development and production can lead to strange bugs popping up when you go
+live. If you are developing on Windows and deploying to Linux (or anything non-Windows) then you should consider using a [Virtual Machine](/#virtualization_title).
 
+Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP development using Windows][windows-tools].
+
+[easyphp]: http://www.easyphp.org/
+[phpmanager]: http://phpmanager.codeplex.com/
+[openserver]: http://open-server.ru/
+[wamp]: http://www.wampserver.com/en/
 [php-downloads]: http://windows.php.net/download/
+[php-iis]: http://php.iis.net/
 [windows-path]: http://www.windows-commandline.com/set-path-command-line/
+[windows-tools]: http://ctankersley.com/2015/07/01/developing-on-windows/
 [wpi]: http://www.microsoft.com/web/downloads/platform.aspx
 [xampp]: http://www.apachefriends.org/en/xampp.html
-[easyphp]: http://www.easyphp.org/
-[wamp]: http://www.wampserver.com/en/
-[phpmanager]: http://phpmanager.codeplex.com/
-[php-iis]: http://php.iis.net/

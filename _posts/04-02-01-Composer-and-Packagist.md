@@ -7,7 +7,7 @@ anchor:  composer_and_packagist
 
 Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and,
 with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for
-you.
+you. Composer is analogous to NPM in the node.js world, or Bundler in the Ruby world.
 
 There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These
 "packages" are listed on [Packagist], the official repository for Composer-compatible PHP libraries.
@@ -22,11 +22,12 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
-<strong>Note:</strong> If the above fails due to permissions, run the `mv` line again with `sudo`.
+**Note:** If the above fails due to permissions, run the `mv` line again with `sudo`.
 
 This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project
 dependencies.
-<strong>Please Note:</strong> If you pipe downloaded code directly into an interpreter, please read the
+
+**Please Note:** If you pipe downloaded code directly into an interpreter, please read the
 code online first to confirm it is safe.
 
 #### Installing on Windows
@@ -124,7 +125,7 @@ file and tell you if you need to update any of your dependencies.
 ### Handling global dependencies with Composer
 
 Composer can also handle global dependencies and their binaries. Usage is straight-forward, all you need
-to do is prefix your command with `global`. If per example you wanted to install PHPUnit and have it 
+to do is prefix your command with `global`. If for example you wanted to install PHPUnit and have it 
 available globally, you'd run the following command:
 
 {% highlight console %}
