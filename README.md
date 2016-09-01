@@ -1,88 +1,101 @@
 # PHP: The Right Way
 
-## Overview
+## Prehľad
 
-This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+Toto je GitHub repozitár pre projekt _PHP: The Right Way_ v slovenskom jazyku.
 
-* This website is a Jekyll project.
-* Each section and sub-section are a Markdown file in `_posts/`.
-* Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+* Táto stránka je Jekyll projekt.
+* Každá kapitola a odsek je súbor vo formáte Markdown v zložke `_posts/`.
+* Odsek je označený na začiatku súboru s parametrom `isChild: true`.
+* Navigácia a štrukúra stránky je generovaná automaticky.
 
-## Spread the Word!
+## Podelte sa o informácie
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
-developers know where to find good information!
+Projekt _PHP: The Right Way_ má k dispozícií bannery, ktoré môžete použiť
+na vašej webstránke. Ukážte svoju podporu a zdielajte s novými PHP programátormi
+miesto, kde môžu získať dôveryhodné informácie.
 
-[See Banner Images](http://www.phptherightway.com/banners.html)
+[Zobraz dostupné bannery](http://www.phptherightway.com/banners.html)
 
-## How to Contribute
+## Ako prispieť
 
-1. Fork and edit
-2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
-3. Submit pull request for consideration
+1. Naklonujte repozitár a upravte
+2. Voliteľne nainštalujte [Ruby](https://rvm.io/rvm/install/) a [Jekyll](https://github.com/mojombo/jekyll/) gem pre lokálny náhľad
+3. Spravte pull request pre zváženie vašich zmien
 
-### Contributor Style Guide
+### Sprievodca štýlom pre prispievanie
 
-1. Use American English spelling (*primary English repo only*)
-2. Use four (4) spaces to indent text; do not use tabs.
-3. Wrap all text to 120 characters.
-4. Code samples should adhere to PSR-1 or higher.
+1. Pre odsadenie textu používajte 4 medzery; nepoužívajte tabulátor.
+2. Dĺžku riadku limitujte na 120 znakov.
+3. Príklady kódu by mali dodržiavať štandard PSR-1, alebo vyšší.
 
-## Where
+## Kde
 
 <http://www.phptherightway.com>
 
-* [English](http://www.phptherightway.com)
-* [Bulgarian](http://bg.phptherightway.com)
-* [Chinese (Simplified)](http://laravel-china.github.io/php-the-right-way/)
-* [Chinese (Traditional)](http://laravel-taiwan.github.io/php-the-right-way)
-* [French](http://eilgin.github.io/php-the-right-way/)
-* [German](http://rwetzlmayr.github.io/php-the-right-way)
-* [Indonesian](http://id.phptherightway.com)
-* [Italian](http://it.phptherightway.com)
-* [Japanese](http://ja.phptherightway.com)
-* [Korean](http://modernpug.github.io/php-the-right-way)
-* [Persian](http://novid.github.io/php-the-right-way/)
-* [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
-* [Romanian](https://bgui.github.io/php-the-right-way/)
-* [Russian](http://getjump.github.io/ru-php-the-right-way)
-* [Serbian](http://phpsrbija.github.io/php-the-right-way/)
-* [Slovenian](http://sl.phptherightway.com)
-* [Spanish](http://phpdevenezuela.github.io/php-the-right-way)
-* [Thai](https://apzentral.github.io/php-the-right-way/)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
-* [Ukrainian](http://iflista.github.com/php-the-right-way)
+* [Anglicky](http://www.phptherightway.com)
+* [Bulharsky](http://bg.phptherightway.com)
+* [Čínsky (Zjednodušená)](http://laravel-china.github.io/php-the-right-way/)
+* [Čínsky (Tradičná)](http://laravel-taiwan.github.io/php-the-right-way)
+* [Francúzky](http://eilgin.github.io/php-the-right-way/)
+* [Nemecky](http://rwetzlmayr.github.io/php-the-right-way)
+* [Indonézsky](http://id.phptherightway.com)
+* [Taliansky](http://it.phptherightway.com)
+* [Japonsky](http://ja.phptherightway.com)
+* [Kórejsky](http://modernpug.github.io/php-the-right-way)
+* [Peržsky](http://novid.github.io/php-the-right-way/)
+* [Poľsky](http://pl.phptherightway.com)
+* [Portugalsky](http://br.phptherightway.com)
+* [Rumunsky](https://bgui.github.io/php-the-right-way/)
+* [Rusky](http://getjump.github.io/ru-php-the-right-way)
+* [Srbsky](http://phpsrbija.github.io/php-the-right-way/)
+* [Slovinsky](http://sl.phptherightway.com)
+* [Španielsky](http://phpdevenezuela.github.io/php-the-right-way)
+* [Thajsky](https://apzentral.github.io/php-the-right-way/)
+* [Turecky](http://hkulekci.github.io/php-the-right-way/)
+* [Ukrajinsky](http://iflista.github.com/php-the-right-way)
 
-### Translations
+### Preklady
 
-If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
+Ak máte záujem o preklade _PHP: The Right Way_, naklonujte tento repozitár na
+GitHub-e a publikujte vašu lokalizovanú kópiu na GitHub stránkach vo vašom účte.
+Preklad bude prepojený s odkazom na hlavnej stránke.
 
-To avoid fragmentation and reader confusion, please choose one of these options:
+Pre predchádzanie fragmentácie a zmätenia čitateľa použite jednu z nasledujúcich
+možností:
 
-1. We link to your GitHub Pages fork with `[username].github.io/php-the-right-way`
-2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
+1. Odkaz vo formáte `[username].github.io/php-the-right-way` smerujúci na
+lokalizovanú kópiu na vašich GitHub stránkach
+2. Subdoména (napríklad "ru.phptherightway.com") odkazujúca na
+lokalizovanú kópiu na vašich GitHub stránkach
 
-If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
+Ak použijete subdoménu, potom pridajte vašu subdoménu do súboru `CNAME`
+a požiadajte nás o nastavenie DNS záznamu. Ak nechcete použiť subdoménu,
+vymažte súbor `CNAME` kompletne inak vaša kópia nebude publikovaná.
 
-Add information about your translation in the [wiki page](https://github.com/codeguy/php-the-right-way/wiki/Translations).
+Pridajte informáciu o vašom preklade do
+[wiki stránky](https://github.com/codeguy/php-the-right-way/wiki/Translations).
 
-When your translation is ready, open an issue on the Issue Tracker to let us know.
+Ak je váš preklad hotový otvorte issue v Issue Tracker-i, aby ste nám dali
+vedieť.
 
-## Why
+## Prečo
 
-There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
+V poslednom čase sa mnoho diskutovalo o tom ako PHP komunita postráda dostatočné
+a dôveryhodné informácie pre programátorov začínajúcich s PHP. Tento repozitár
+kladie za svoj cieľ tento problém vyriešiť.
 
-## Who
+## Kto
 
-My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
+Moje meno je [Josh Lockhart](http://twitter.com/codeguy). Som autorom
+[Slim Framework-u](http://www.slimframework.com/), a pracujem pre
+[New Media Campaigns](http://www.newmediacampaigns.com/).
 
-### Collaborators
+### Prispievatelia
 
 * [Kris Jordan](http://krisjordan.com/)
 * [Phil Sturgeon](http://philsturgeon.co.uk/)
 
-## License
+## Licencia
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)
