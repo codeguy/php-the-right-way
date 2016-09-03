@@ -1,15 +1,19 @@
 ---
-title:   Use the Current Stable Version (7.0)
+title:   Aktuálna stabilná verzia (7.0)
 isChild: true
 anchor:  use_the_current_stable_version
 ---
 
-## Use the Current Stable Version (7.0) {#use_the_current_stable_version_title}
+## Aktuálna stabilná verzia (7.0) {#use_the_current_stable_version_title}
 
-If you are getting started with PHP, start with the current stable release of [PHP 7.0][php-release]. PHP 7.0 is very
-new, and adds many amazing [new features](#language_highlights) over the older 5.x versions. The engine has been largely re-written, and PHP is now even quicker than older versions.
+Ak začínate s PHP, začnite s aktuálnym vydaním stabilnej verzie [PHP 7.0][php-release]. Verzia PHP 7.0 je značne nová
+a oproti verii 5.x pridáva mnoho úžastných [nových funkcií](#language_highlights). Jadro novej verzie bolo značne
+prepísané, čo sa podpísalo na zvýšení rýchlosti oproti starším verziám.
 
-Most commonly in the near future you will find PHP 5.x being used, and the latest 5.x version is 5.6. This is not a bad option, but you should try to upgrade to the latest stable quickly. Upgrading is really quite easy, as there are not many [backwards compatibility breaks][php70-bc]. If you are not sure which version a function or feature is in, you can check the PHP documentation on the [php.net][php-docs] website.
+V blízkej budúcnosti sa ešte pravdepodobne často stretnete s verziou PHP 5.x. V tomto vydaní je poslednou verziou
+PHP 5.6. Na používaní tejto verzie nie je nič zlé, ale pokúste sa pokiaľ možno verziu aktualizovať na aktuálnu stabilnú
+verziu. Prechod na vyššiu verziu by nemal byť problém nakoľko nová verzia nemá mnoho rozdielov so [spätnou kompatibilitou][php70-bc]. Ak si nie ste istý aktuálnou verziou funkcie, alebo funkcionality, obrátte sa na dokumentáciu
+na stránke [php.net][php-docs].
 
 [php-release]: http://php.net/downloads.php
 [php-docs]: http://php.net/manual/
