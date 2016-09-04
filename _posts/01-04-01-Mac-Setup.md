@@ -1,65 +1,69 @@
 ---
+title:   Nastavenie pre Mac
 isChild: true
 anchor:  mac_setup
 ---
 
-## Mac Setup {#mac_setup_title}
+## Nastavenie pre Mac {#mac_setup_title}
 
-OS X comes prepackaged with PHP but it is normally a little behind the latest stable. Mavericks has 5.4.17,
-Yosemite has 5.5.9 and El Capitan has 5.5.29, but with PHP 7.0 out that is often not good enough.
+OS X už prichádza s prednastaveným PHP, ale obyčajne verzia trochu zaostáva za poslednou stabilnou verziou. Mavericks
+prichádza s verziou 5.4.17, Yosemite s verziou 5.5.9 a El Capitan s verziou 5.5.29. Od vydania PHP 7.0 je ale toto
+často nepostačujúce.
 
-There are multiple ways to install PHP on OS X.
+Je niekoľko spôsobou ako na OS X nainštalovať PHP.
 
-### Install PHP via Homebrew
+### Inštalácia PHP pomocou Homebrew
 
-[Homebrew] is a powerful package manager for OS X, which can help you install PHP and various extensions easily.
-[Homebrew PHP] is a repository that contains PHP-related "formulae" for Homebrew, and will let you install PHP.
+[Homebrew] je mocný správca balíkov pre OS X, ktorý vám môže zjednodušiť inštaláciou PHP a rôznych rozšírení.
+[Homebrew PHP] je repozitár, ktorý obsahuje "formulu" súvisiacu s PHP pre Homebrew a umožní vám inštaláciu PHP.
 
-At this point, you can install `php53`, `php54`, `php55`, `php56` or `php70` using the `brew install` command, and switch
-between them by modifying your `PATH` variable. Alternatively you can use [brew-php-switcher][brew-php-switcher] which will switch automatically for you.
+Momentálne máte možnosť pomocou príkazu `brew install` nainštalovať jednu z nasledujúcich verzií `php53`, `php54`,
+`php55`, `php56`, alebo `php70`. Medzi jednotlivými verziami PHP je možné prepínať zmenou premennej prostredia `PATH`.
+Na miesto manuálneho prepínania môžete použiť [brew-php-switcher][brew-php-switcher], ktorý sa postará o automatické
+prepínanie za vás.
 
-### Install PHP via Macports
+### Inštalácia PHP pomocou MacPorts
 
-The [MacPorts] Project is an open-source community initiative to design an
-easy-to-use system for compiling, installing, and upgrading either
-command-line, X11 or Aqua based open-source software on the OS X operating
-system.
+Projekt [MacPorts] je iniciatíva open-source komunity pre dizajn systému jednoduchého na použitie a umožňujúceho
+kompiláciu, inštaláciu a aktualizáciu open-source softvéru pre príkazový riadkok, X11, alebo Aqua (OS X GUI), operačného
+systému OS X.
 
-MacPorts supports pre-compiled binaries, so you don't need to recompile every
-dependencies from the source tarball files, it saves your life if you don't
-have any package installed on your system.
+MacPorts podporuje prekompilované binárne súbory, takže nie je nutné rekompilovať každú závislosť zo zdrojového tarball súboru. Toto vám ušetrí veľa času ak nemáte vo vašom systéme nainštalovaný žiaden balík.
 
-At this point, you can install `php54`, `php55`, `php56` or `php70` using the `port install` command, for example:
+Momentálne máte možnosť pomocou príkazu `port install` nainštalovať jednu z nasledujúcich verzií `php54`, `php55`,
+`php56`, alebo `php70`. Napríklad:
 
     sudo port install php56
     sudo port install php70
 
-And you can run `select` command to switch your active php:
+Vašu aktívnu verziu PHP môžete prepnúť pomocou príkazu `select`:
 
     sudo port select --set php php70
 
-### Install PHP via phpbrew
+### Inštalácia PHP pomocou phpbrew
 
-[phpbrew] is a tool for installing and managing multiple PHP versions. This can be really useful if two different
-applications/projects require different versions of PHP, and you are not using virtual machines.
+[phpbrew] je nástroj na inštaláciu a manažovanie viacerých verzií PHP. Toto môže byť veľmi užitočné ak dva rôzne
+projekty, alebo aplikácie požadujú rozdielne verzie PHP a vy nepoužívate virtuálny server.
 
-### Install PHP via Liip's binary installer
+### Inštalácia PHP pomocou binárneho inštalátora of firmy Liip
 
-Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 7.0.
-It doesn't overwrite the php binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
+Ďalšou populárnou možnosťou poskytujúcu lineárnu metódu inštalácie od verzie 5.3 až po 7.0 je [php-osx.liip.ch].
+Táto metóda neprepisuje predinštalované binárne súbory PHP, ale všetko inštaluje do oddelenej zložky
+(/usr/local/php5).
 
-### Compile from Source
+### Kompilácia zo zdrojového kódu
 
-Another option that gives you control over the version of PHP you install, is to [compile it yourself][mac-compile].
-In that case be sure to have installed either [Xcode][xcode-gcc-substitution] or Apple's substitute
-["Command Line Tools for XCode"] downloadable from Apple's Mac Developer Center.
+Ďalšou možnosťou, ktorá vám umožnuje kontrolu nad inštalovanou verziou PHP je
+[kompilácia zo zdrojového kódu][mac-compile].
+V tomto prípade sa uistite, či máte nainštalovaný [Xcode][xcode-gcc-substitution], alebo náhradu ["nástroje príkazového riadku pre XCode"][xcode-command-line-tools], ktorú si môžete stiahnuť z "appláckeho" centra pre vývojárov.
 
-### All-in-One Installers
+### Inštalačné programy všetko v jednom
 
-The solutions listed above mainly handle PHP itself, and do not supply things like Apache, Nginx or a SQL server.
-"All-in-one" solutions such as [MAMP][mamp-downloads] and [XAMPP][xampp] will install these other bits of software for
-you and tie them all together, but ease of setup comes with a trade-off of flexibility.
+Riešenia uvedené vyššie predovšetkým zaobchádzajú so samotným PHP a neposkytujú veci ako Apache, Nginx,
+alebo SQL server.
 
+Riešenia "všetko v jednom" ako napríklad [MAMP][mamp-downloads], alebo [XAMPP][xampp] toto nainštalujú a nastavia za
+vás. Jednoduchosť inštalácie ale prichádza s cenou menšej flexibility.
 
 [Homebrew]: http://brew.sh/
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
@@ -68,7 +72,7 @@ you and tie them all together, but ease of setup comes with a trade-off of flexi
 [php-osx.liip.ch]: http://php-osx.liip.ch/
 [mac-compile]: http://php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
-["Command Line Tools for XCode"]: https://developer.apple.com/downloads
+[xcode-command-line-tools]: https://developer.apple.com/downloads
 [mamp-downloads]: http://www.mamp.info/en/downloads/
 [xampp]: http://www.apachefriends.org/en/xampp.html
 [brew-php-switcher]: https://github.com/philcook/brew-php-switcher

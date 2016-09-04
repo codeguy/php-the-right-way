@@ -1,4 +1,5 @@
 ---
+title:  Prvé kroky
 anchor: getting_started
 ---
 
