@@ -79,7 +79,7 @@ as a dependency of your project.
 composer require twig/twig:~1.8
 {% endhighlight %}
 
-Alternatively the `composer init` command will guide you through creating a full `composer.json` file
+Alternatively, the `composer init` command will guide you through creating a full `composer.json` file
 for your project. Either way, once you've created your `composer.json` file you can tell Composer to
 download and install your dependencies into the `vendor/` directory. This also applies to projects 
 you've downloaded that already provide a `composer.json` file:
@@ -106,7 +106,7 @@ first ran `composer install`. If you share your project with other coders and th
 is part of your distribution, when they run `composer install` they'll get the same versions as you. 
 To update your dependencies, run `composer update`.
 
-This is most useful when you define your version requirements flexibly. For instance a version 
+This is most useful when you define your version requirements flexibly. For instance, a version
 requirement of `~1.8` means "anything newer than `1.8.0`, but less than `2.0.x-dev`". You can also use 
 the `*` wildcard as in `1.8.*`. Now Composer's `composer update` command will upgrade all your
 dependencies to the newest version that fits the restrictions you define.

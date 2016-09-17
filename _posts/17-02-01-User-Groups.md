@@ -7,7 +7,7 @@ anchor:  user_groups
 
 If you live in a larger city, odds are there's a PHP user group nearby. You can easily find your local PUG at
 the [usergroup-list at php.net][php-uglist] which is based upon [PHP.ug][php-ug]. Alternate sources might be
-[Meetup.com][meetup] or a search for ```php user group near me``` using your favourite search engine
+[Meetup.com][meetup] or a search for ```php user group near me``` using your favorite search engine
 (i.e. [Google][google]). If you live in a smaller town, there may not be a local PUG; if that's the case, start one!
 
 Special mention should be made of two global user groups: [NomadPHP] and [PHPWomen]. [NomadPHP] offers twice monthly

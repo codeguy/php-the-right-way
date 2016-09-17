@@ -24,7 +24,7 @@ In October 2014 the PHP-FIG deprecated the previous autoloading standard: [PSR-0
 many PHP 5.2-only projects currently implement PSR-0. Luckily those PHP 5.2-only projects are starting to up their
 version requirements, meaning PSR-0 is being used less and less.
 
-If you're going to use an autoloader standard for a new application or package then you almost certainly want
+If you're going to use an autoloader standard for a new application or package, then you almost certainly want
 to look into PSR-4.
 
 * [Read about Namespaces][namespaces]

@@ -14,4 +14,4 @@ via the file system.
 that, even if the script is accessed directly, it will not be output as plain text.
 - Information in configuration files should be protected accordingly, either through encryption or group/user file
 system permissions.
-- It is a good idea to ensure that you do not commit configuration files containing sensitive information eg passwords or API tokens to source control.
+- It is a good idea to ensure that you do not commit configuration files containing sensitive information e.g. passwords or API tokens to source control.
