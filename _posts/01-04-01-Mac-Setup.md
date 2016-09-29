@@ -6,7 +6,7 @@ anchor:  mac_setup
 ## Mac Setup {#mac_setup_title}
 
 OS X comes prepackaged with PHP but it is normally a little behind the latest stable. Mavericks has 5.4.17,
-Yosemite has 5.5.9 and El Capitan has 5.5.29, but with PHP 7.0 out that is often not good enough.
+Yosemite 5.5.9, El Capitan 5.5.29 and Sierra 5.6.24, but with PHP 7.0 out that is often not good enough.
 
 There are multiple ways to install PHP on OS X.
 
