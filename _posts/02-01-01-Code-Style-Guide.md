@@ -1,60 +1,61 @@
 ---
+title: دليل اسلوب كتابة الكود البرمجي
+isChild: false
 anchor: code_style_guide
 ---
 
-# Code Style Guide {#code_style_guide_title}
+# دليل اسلوب كتابة الكود البرمجي {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+مجتمع لغة PHP هو مجتمع ضخم و متنوع، يتألف من عدد لا يعد ولا يحصى من المكتبات، و أطر العمل، و مكونات وعناصر اخرى.
+فمن الطبيعي ان يختار المطورين عدة خيارات منها ودمج بعضها في داخل اطار مشروع واحد. فمن المهم ان ينظم للكود البرمجي للغة PHP
+(قدر الإمكان) باسلوب برمجي معين لكي يسهل على المطورين التعامل المشترك وفهم محتوى الكود البرمجي في مكتباتهم في مشاريعهم
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
-to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
-recommendations are merely a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK,
-FuelPHP, Lithium, etc are starting to adopt. You can use them for your own projects, or continue to use your own
-personal style.
+قامت [Framework Interop Group][fig] بتقديم واجازة سلسلة من الأساليب الموصى بها.
+ليس كل هذه التوصيات هي توصيات تتعلق باسلوب كتابة الكود البرمجي، ولكن تحديداً ما يتعلق باسلوب الكتابة هم:
+[PSR-0][psr0]، [PSR-1][psr1]، [PSR-2][psr2]، [PSR-4][psr4].
+هذه التوصيات هي عبارة عن مجموعة من القواعد التي تستعملها مشاريع وتطبيقات كبرى مثل Drupal، Zend، Symfony، CakePHP، phpBB، AWS SDK،
+FuelPHP، Lithium.. وغيرها.
+يمكنك استخدام هذه الأساليب والتوصيات في مشروعك الخاص أو الإستمرات في إستخدام اسلوبك الخاص في الكتابة.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
-applications that implement the components can have consistency even when working with lots of third-party code.
+من الأمثل ان تقوم بكتابة كود برمجي يتماشى مع مجموعة قواعد قياسية متعارف بها. ويتم تطبيق هذه القواعد عن طريق دمج اي من
+الأساليب السابق ذكرها PSR أو اخرى تم اعتمادها من قبل PEAR او Zend. هذا يعني انه يمكن لاي مطور اخر ان يقرأ ويفهم عملك 
+نظراً لأن محتواه يخضع لطريقة كتابة معتمدة ويستخدمها كثير من التطبيقات والتطبيقات الفرعية الإخرى التي قد تستخدمها مع مشروعك.
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [قراءة المزيد عن PSR-0][psr0]
+* [قراءة المزيد عن PSR-1][psr1]
+* [قراءة المزيد عن PSR-2][psr2]
+* [قراءة المزيد عن PSR-4][psr4]
+* [قراءة المزيد عن الاسلوب القياسي لـ PEAR][pear-cs]
+* [قراءة المزيد عن أسلوب كتابة الكود البرمجي في Symfony][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text][st-cs] to be given real-time feedback.
+يمكنك استخدام أدوات فحص الكود البرمجي ومعرفة ما اذا كان يخضع لاي من التوصيات مثل [PHP_CodeSniffer][phpcs]، وهنالك إضافات
+يمكن تنصيبها على محرر النصوص مثل [Sublime Text][st-cs] وتتميز هذه الإضافات بأنها تتفاعل معك في أثناء الكتابة مباشرة.
 
-You can fix the code layout automatically by using one of the following tools:
+يمكنك إصلاح الكود البرمجي واخضاعه لأحد الأساليب القياسية باستخدام اي من هذه الأدوات:
 
-- One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
-- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
+- الأول هو [PHP Coding Standards Fixer][phpcsfixer] وهو جيد جداً وتم تجربته ونتائجه ممتازة.
+- والآخر هو [PHP Code Beautifier and Fixer][phpcbf] وهي اداة مدمجة مع PHP_CodeSniffer ويمكن استخدامها لتصحيح اسلوب الكتابة من وقت لللآخر.
 
-And you can run phpcs manually from shell:
+ويمكنك أيضاً تشغيل `phpcs` يدوياً من سطر الأوامر:
 
     phpcs -sw --standard=PSR2 file.php
 
-It will show errors and describe how to fix them.
-It can also be helpful to include this command in a git hook.
-That way, branches which contain violations against the chosen standard cannot enter the repository until those
-violations have been fixed.
+بعد التنفيذ سوف تظهر أخطاء توصف كيفية إصلاحها.
+أيضاً يمكن الإستفادة من هذا الأمر عبر إضافته كـ git hook بحيث تتحقق من ان جميع الكود البرمج يتبع الأسلوب القياسي
+واصلاح الأخطاء حتى يكون بالإمكان الإعتماد في المستودع (Repository).
 
-If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
+إذا كنت تمتلك PHP_CodeSniffer عندها يمكنك تصحيح اسلوب الكود البرمج تلقائياً باستخدام 
 [PHP Code Beautifier and Fixer][phpcbf].
 
     phpcbf -w --standard=PSR2 file.php
 
-Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
-It will show which kind of errors the code structure had before it fixed them.
+أو عن طريق خيار اخر وهو استخدام [PHP Coding Standards Fixer][phpcsfixer].
+باستخدام هذا الأخير سوف يقوم باظهار نوع الأخطاء قبل إصلاحها.
 
     php-cs-fixer fix -v --level=psr2 file.php
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
-readable by all current and future parties who may be working on the codebase.
+اللغة الإنجليزية هي المفضلة لكل التسميات والرموز والعلامات وجميع بنية الكود.
+يمكن كتابة الملاحظات باي لغة يمكن قراءتها من قبل اي من المطورين الحاليين او المحتملين.
 
 
 [fig]: http://www.php-fig.org/
