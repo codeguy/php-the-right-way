@@ -1,4 +1,6 @@
 ---
+title: قم بالبدء
+isChild: false
 anchor: getting_started
 ---
 
