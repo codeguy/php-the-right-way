@@ -1,64 +1,63 @@
 ---
+title: التنصيب على نظام تشغيل Mac
 isChild: true
 anchor:  mac_setup
 ---
 
-## Mac Setup {#mac_setup_title}
+## التنصيب على نظام تشغيل Mac {#mac_setup_title}
 
-OS X comes prepackaged with PHP but it is normally a little behind the latest stable. Mavericks has 5.4.17,
-Yosemite has 5.5.9 and El Capitan has 5.5.29, but with PHP 7.0 out that is often not good enough.
+عادة ما يحتوي نظام التشغيل OS X على إصدارة PHP ولكنها عادة ما تكون غير حديثة.
+فالنسخة OS X Mavericks تحتوي على الإصدارة 5.4.17، والنسخة OS X Yosemite تحتوي على الإصدارة 5.5.9 ،
+والنسخة OS X El Capitan تحتوي على الإصدارة 5.5.29. لكن مع انطلاق اصدارة PHP 7.0 لم تعد هذه الإصدارات جيدة للإستخدام.
 
-There are multiple ways to install PHP on OS X.
+هنالك عدة طرق لتنصيب PHP على نظام تشغيل Mac OS X.
 
-### Install PHP via Homebrew
+### التصيب بواسطة Homebrew
 
-[Homebrew] is a powerful package manager for OS X, which can help you install PHP and various extensions easily.
-[Homebrew PHP] is a repository that contains PHP-related "formulae" for Homebrew, and will let you install PHP.
+[Homebrew] هو عبارة عن مدير تطبيقات لنظام تشغيل Mac OS x، يساعدك لتنصيب PHP وملحقاتها بكل سهولة.
+[Homebrew PHP] هو المستودع الذي يحتوي كل ما يتعلق بـ PHP لمدير التطبيقات Homebrew، وتمكنك من تنصيب PHP بكل سهولة.
 
-At this point, you can install `php53`, `php54`, `php55`, `php56` or `php70` using the `brew install` command, and switch
-between them by modifying your `PATH` variable. Alternatively you can use [brew-php-switcher][brew-php-switcher] which will switch automatically for you.
+حتى هذه اللحظة يمكنك تنصيب كل من `php53`، `php54`، `php55`، `php56` ،`php70` باستخدام الأمر `brew install`، ويمكنك التحويل
+فيما بينهم بتعديل متغير `PATH`. أو يمكنك استخدام [brew-php-switcher][brew-php-switcher] للتحويل التلقائي.
 
-### Install PHP via Macports
+### التصيب بواسطة Macports
 
-The [MacPorts] Project is an open-source community initiative to design an
-easy-to-use system for compiling, installing, and upgrading either
-command-line, X11 or Aqua based open-source software on the OS X operating
-system.
+مشروع [MacPorts] هو مشروع مفتوح المصدر يهدف لتصميم نظام سهل الإستخدام لتجميع وتنصيب وتحديث
+البرامج المفتوحة المصدر لكل من برامج سطور الأوامر X11، Aqua على نظام تشغيل Mac OS X.
 
-MacPorts supports pre-compiled binaries, so you don't need to recompile every
-dependencies from the source tarball files, it saves your life if you don't
-have any package installed on your system.
+يدعم MacPorts الملفات بلغة الآلة المبنية مسبقاً (Pre-Compiled Binaries) لكي تغني عن اعادة بناء كل حزمة من متطلبات
+النظام من ملفات المصدر (tarball files)، فهي توفر لك سهولة لتنصيب الحزم خصوصاً عندما لا يكون نظامك يحتوي على احداها.
 
-At this point, you can install `php54`, `php55`, `php56` or `php70` using the `port install` command, for example:
+حتى هذه اللحظة يمكنك تنصيب كل من `php54`، `php55`، `php56`، `php70` باستخدام الأمر `port install` مثلاً:
 
     sudo port install php56
     sudo port install php70
 
-And you can run `select` command to switch your active php:
+ويمكنك تشغيل الأمر `select` للتحويل ما بين الإصدارات المتوفرة.
 
     sudo port select --set php php70
 
-### Install PHP via phpbrew
+### التنصيب بواسطة phpbrew
 
-[phpbrew] is a tool for installing and managing multiple PHP versions. This can be really useful if two different
-applications/projects require different versions of PHP, and you are not using virtual machines.
+[phpbrew] هي اداة لتنصيب وإدارة أكثر من إصدارة PHP. فهي أداة مفيدة جداً عندما يكون مشروعين يتطلبان إصدارات مختلفة من PHP
+وتريد تشغيلهما بدون الحاجة لنظام تشغيل افتراضي.
 
-### Install PHP via Liip's binary installer
+### التنصيب بواسطة Liip's binary installer
 
-Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 7.0.
-It doesn't overwrite the php binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
+وسيلة اخرى متاحة وهي [php-osx.liip.ch] فهي توفر وسيلة تنصيب لنسخة واحدة لكل من الإصدارات ابتداء من 5.3 حتى 7.0.
+تتميز بأنها لا تستبدل ملفات حزمة PHP binaries المدمجة مع نظام Apple، ولكنها تعمل على التنصيب في مكان اخر (/usr/local/php5).
 
-### Compile from Source
+### البناء من المصدر Compile from Source
 
-Another option that gives you control over the version of PHP you install, is to [compile it yourself][mac-compile].
-In that case be sure to have installed either [Xcode][xcode-gcc-substitution] or Apple's substitute
-["Command Line Tools for XCode"] downloadable from Apple's Mac Developer Center.
+وسيلة اخرى تمكنك من التحكم بإصدارات PHP وتنصيبها، وذلك عن طريق [بنائها بنفسك][mac-compile].
+في هذه الحالة يجب التأكد من تنصيب اي من [Xcode][xcode-gcc-substitution]، أو["Command Line Tools for XCode"] التابعة
+ لـ Apple ويمكن تحميلها ["Command Line Tools for XCode"] من قسم Mac للمطورين (Mac Developer Center).
 
-### All-in-One Installers
+### تنصيب حلول متكاملة مجمعة "الكل في واحد"
 
-The solutions listed above mainly handle PHP itself, and do not supply things like Apache, Nginx or a SQL server.
-"All-in-one" solutions such as [MAMP][mamp-downloads] and [XAMPP][xampp] will install these other bits of software for
-you and tie them all together, but ease of setup comes with a trade-off of flexibility.
+كل الحلول السابق ذكرها تتلخص بأنك تطبق عملية تنصيب PHP بنفسك، وهي لا تشمل تنصيب برامج مثل Apache, Nginx او حتى مخدم SQL.
+"الكل في واحد" هي حلول متكاملة مثل [MAMP][mamp-downloads] و [XAMPP][xampp] فهي تقوم بتنصيب كل تلك البرامج وضبطهم معاً، ولكن بالرغم من سهولة التنصيب
+ألا ان مثل هذه الحلول تفتقر للمرونة.
 
 
 [Homebrew]: http://brew.sh/
