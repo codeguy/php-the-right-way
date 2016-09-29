@@ -1,6 +1,6 @@
 ---
 layout: default
-description: "An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web"
+description: "هو دليل سريع وسهل للطرق القياسية لبرمجة وتطوير PHP الأكثر شهرة، وروابط لدروس ودلائل موثوقة على شبكة الإنترنت وكل ما يعتبره المساهمون كمعايير قياسية حتى هذه اللحظة"
 sitemap: true
 ---
 
@@ -9,7 +9,7 @@ sitemap: true
     {{ welcome_content|markdownify }}
 </section>
 
-{% capture backtotop %}[Back to Top](#top){:.top}{% endcapture %}
+{% capture backtotop %}[للأعلى](#top){:.top}{% endcapture %}
 {% for post in site.posts reversed %}
 {% if post.isChild != true and loop.first != true %}<div class="back-to-top">{{ backtotop|markdownify }}</div>{% endif %}
 <section class="chapter" id="{{ post.anchor }}">
