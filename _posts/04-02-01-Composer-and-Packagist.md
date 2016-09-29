@@ -18,7 +18,7 @@ The safest way to download composer is by [following the official instructions](
 This will verify the installer is not corrupt or tampered with.  
 The installer installs Composer *locally*, in your current working directory.
 
-We recommend installing it *globally* (e.g. a single copy in /usr/local/bin) – to do so, run this afterwards:
+We recommend installing it *globally* (e.g. a single copy in /usr/local/bin) - to do so, run this afterwards:
 
 {% highlight console %}
 mv composer.phar /usr/local/bin/composer
@@ -26,7 +26,7 @@ mv composer.phar /usr/local/bin/composer
 
 **Note:** If the above fails due to permissions, prefix with `sudo`.
 
-`composer.phar` is a PHP [binary archive](http://php.net/manual/en/intro.phar.php). Like any PHP application, you can [run these](http://php.net/manual/en/phar.using.intro.php) with `php`.
+To run a locally installed Composer you'd use `php composer.phar`, globally it's simply `composer`.
 
 #### Installing on Windows
 
