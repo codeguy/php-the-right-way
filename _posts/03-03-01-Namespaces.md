@@ -6,7 +6,7 @@ anchor:  namespaces
 ## Namespaces {#namespaces_title}
 
 As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP
-code may use the same class name as another library. When both libraries are used in the same namespace, they collide
+code might use the same class name as another. When both libraries are used in the same namespace, they collide
 and cause trouble.
 
 _Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating
@@ -19,13 +19,9 @@ with other libraries.
 One recommended way to use namespaces is outlined in [PSR-4][psr4], which aims to provide a standard file, class and
 namespace convention to allow plug-and-play code.
 
-In October 2014 the PHP-FIG deprecated the previous autoloading standard: [PSR-0][psr0], which has been replaced with
-[PSR-4][psr4]. Currently both are still perfectly usable and PSR-0 is not going away. As PSR-4 requires PHP 5.3 and
-many PHP 5.2-only projects currently implement PSR-0. Luckily those PHP 5.2-only projects are starting to up their
-version requirements, meaning PSR-0 is being used less and less.
+In October 2014 the PHP-FIG deprecated the previous autoloading standard: [PSR-0][psr0]. Both PSR-0 and PSR-4 are still perfectly usable.  The latter requires PHP 5.3, so many PHP 5.2-only projects implement PSR-0. 
 
-If you're going to use an autoloader standard for a new application or package then you almost certainly want
-to look into PSR-4.
+If you're going to use an autoloader standard for a new application or package, look into PSR-4.
 
 * [Read about Namespaces][namespaces]
 * [Read about PSR-0][psr0]
