@@ -33,7 +33,6 @@ if ($argc !== 2) {
 }
 $name = $argv[1];
 echo "Hello, $name\n";
-?>
 {% endhighlight %}
 
 تقوم PHP بعمل متغيران خاصان بناء على القيم التي يعمل بها تطبيقك.
