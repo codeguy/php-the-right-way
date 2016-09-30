@@ -1,53 +1,53 @@
 ---
+title: النمذجة البرمجية
 isChild: true
 anchor:  programming_paradigms
 ---
 
-## Programming Paradigms {#programming_paradigms_title}
+## النمذجة البرمجية {#programming_paradigms_title}
 
-PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over
-the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in
-PHP 5.3 (2009), and traits in PHP 5.4 (2012).
+PHP هي لغة مرنة ومتغيرة حيث انها تدعم عدة أساليب برمجية. فقد تطورت بشكل ملحوظ عبر السنين الماضية واضافت البرمجة كائنية
+التوجه أو ما تعرف (Object Oriented) في إصدارة PHP 5.0 عام (2004) وأضافت الدوال غير المقرونة بإسم (anonymous functions)
+ونطاق التسمية (namespaces) في الإصدارة PHP 5.3 عام (2009) وأضافت السمات (traits) في إصدارة PHP 5.4 عام (2012).
 
-### Object-oriented Programming
+### البرمجة كائنية التوجه (الشيئية) OOP
 
-PHP has a very complete set of object-oriented programming features including support for classes, abstract classes,
-interfaces, inheritance, constructors, cloning, exceptions, and more.
+تحتوي PHP على خواص البرمجة الكائنية بشكل كامل وذلك يشمل الكائنات (class) والكائنات المجردة (abstract class) والمنافذ 
+(interface) والوراثة (inheritance) والبنائيات (constructor) والاستنساخ (clone) والإستثناء (exception) والمزيد...
 
-* [Read about Object-oriented PHP][oop]
-* [Read about Traits][traits]
+* [قراءة المزيد عن البرمجة الشيئية OOP PHP][oop]
+* [قراءة المزيد عن السمات Traits][traits]
 
-### Functional Programming
+### البرمجة الوظيفية
 
-PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and
-built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
-other functions (a feature called _Higher-order Functions_) and functions can return other functions.
+تدعم PHP دوال كائنات المستوى الأول، بمعنى انه يمكن لدالة ان تسند الى متغير. كل من دوال المستخدم والدوال المدمجة مع اللغة
+يمكن احالتها باستخدام متغيرات ومناداتها بصورة حيوية ومجهولة. يمكن تمرير الدوال كقيم الى دوال اخرى (خاصية تسمى _higher-order Functions_)
+والدوال نفسها بإمكانها إرجاع دوال اخرى!
 
-Recursion, a feature that allows a function to call itself, is supported by the language, but most PHP code
-is focused on iteration.
+الإستدعاء (recursion) الذاتي، وهي خاصية تتيح للدالة ان تنادي نفسها، وهي مدعومة من قبل اللغة ولكن معظم البرمجيات تعتمد على التكرارات.
 
-New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
+الدوال المجهولة أو اللا إسمية (anonymous functions) خاصية موجودة منذ الإصدارة PHP 5.3 (2009).
 
-PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
-can be used interchangeably with anonymous functions in almost all cases.
+أضافت PHP 5.4 إمكانية اسناد دوال وكائنات مغلقة او لا اسمية لنطاق الكائن وقد تم التطوير للإستدعاءات حتى يمكن استخدامها
+مع كل الدوال في اي حال.
 
-* Continue reading on [Functional Programming in PHP](/pages/Functional-Programming.html)
-* [Read about Anonymous Functions][anonymous-functions]
-* [Read about the Closure class][closure-class]
-* [More details in the Closures RFC][closures-rfc]
-* [Read about Callables][callables]
-* [Read about dynamically invoking functions with `call_user_func_array()`][call-user-func-array]
+* أكمل القراء عن [البرمجة الظيفية في PHP Functional Programming in PHP](/pages/Functional-Programming.html)
+* [قراءة المزيد عن الدوال اللا اسمية Anonymous Functions][anonymous-functions]
+* [قراءة المزيد عن الكائنات اللا اسمية Closure class][closure-class]
+* [قراءة المزيد عن الدوال والكائنات المغلقة أو الل اسمية Closures RFC][closures-rfc]
+* [قراءة المزيد عن الدوال القابلة للإستدعاء Callables][callables]
+* [قراءة المزيد عن استدعاء الدوال بصورة مجهولة باستخدام الدالة `call_user_func_array()`][call-user-func-array]
 
-### Meta Programming
+### البرمجة التحويلية
 
-PHP supports various forms of meta-programming through mechanisms like the Reflection API and Magic Methods. There are
-many Magic Methods available like `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. that allow
-developers to hook into class behavior. Ruby developers often say that PHP is lacking `method_missing`, but it is
-available as `__call()` and `__callStatic()`.
+تدعم PHP ايضاً عدة اشكال من اشكال البرمجة التحويلية Meta programming عبر عدة وسائل مثل واجهة برمجة تطبيقات الإنعكاس (reflection API)
+والدوال السحرية (Magic Methods). هنالك عدة دوال سحري مثل `__get()`، `__set()`، `__clone()`، `__toString()`، `__invoke()`
+وغيرها والتي تتيح للمطور ان يربطها بتصرفات الكائنات. يقول مطوري لغة Ruby ان لغة PHP تفتقر الى الدالة `method_missing`، ولكنها موجودة
+وتتمثل في كل من `__call()` و `__callStatic()`.
 
-* [Read about Magic Methods][magic-methods]
-* [Read about Reflection][reflection]
-* [Read about Overloading][overloading]
+* [قراءة المزيد عن الدوال السحرية Magic Methods][magic-methods]
+* [قراءة المزيد عن دوال الإنعكاس Reflection][reflection]
+* [قراءة المزيد عن التحميل الإضافي Overloading][overloading]
 
 
 [oop]: http://php.net/language.oop5
