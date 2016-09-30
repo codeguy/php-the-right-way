@@ -1,28 +1,29 @@
 ---
+title: واجهة سطور الأوامر
 isChild: true
 anchor:  command_line_interface
 ---
 
-## Command Line Interface {#command_line_interface_title}
+## واجهة سطور الأوامر {#command_line_interface_title}
 
-PHP was created to write web applications, but is also useful for scripting command line interface (CLI) programs.
-Command line PHP programs can help automate common tasks like testing, deployment, and application administration.
+صممت PHP لكتابة تطبيقات الويب، ولكن من المفيد ايضاً التعامل مع برامج واجهة سطور الأوامر (CLI).
+برامج PHP المبنية للعمل على سطور الأوامر تساعد على أداء مهام معتادة مثل تجربة ونشر وادارة البرامج بصورة تلقائية.
 
-CLI PHP programs are powerful because you can use your app's code directly without having to create and secure a web
-GUI for it. Just be sure **not** to put your CLI PHP scripts in your public web root!
+تطبيقات PHP التي تعمل على واجهة سطور الأوامر هي برامج قوية لانها تستخدم مصدر البرنامج مباشرة من دون الحاجة لعمل واجهة
+ويب مرئية وحماية للتعامل بها. ولكن تأكد بان **لا** تضع تطبيقك الذي يعمل بواجهة سطور الأوامر في مجلد موقعك!
 
-Try running PHP from your command line:
+جرب تشغيل أمر PHP هذا من واجهة سطور الأوامر:
 
 {% highlight console %}
 > php -i
 {% endhighlight %}
 
-The `-i` option will print your PHP configuration just like the [`phpinfo()`][phpinfo] function.
+يدل خيار `-i` على طباعة بيانات ضبط PHP كما تنفذه دالة [`phpinfo()`][phpinfo] تماماً.
 
-The `-a` option provides an interactive shell, similar to ruby's IRB or python's interactive shell. There are a number
-of other useful [command line options][cli-options], too.
+ايضاً خيار `-a` يوفر اوامر تفاعلية مماثلة لشبيهاتها عند ruby IRB و python interactive shell. هنالك عدد من الأوامر والخيارات المفيدة
+التي يمكنك الاطلاع عليها ايضاً [command line options][cli-options].
 
-Let's write a simple "Hello, $name" CLI program. To try it out, create a file named `hello.php`, as below.
+لنقم بتجربة كتابة برنامج ترحيبي بسيط بطريقة واجهة سطور الأوامر، قم بإنشاء ملف بإسم `hello.php` ثم قم بكتابة الاتي:
 
 {% highlight php %}
 <?php
@@ -32,16 +33,17 @@ if ($argc !== 2) {
 }
 $name = $argv[1];
 echo "Hello, $name\n";
+?>
 {% endhighlight %}
 
-PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer
-variable containing the argument *count* and [`$argv`][argv] is an array variable containing each argument's *value*.
-The first argument is always the name of your PHP script file, in this case `hello.php`.
+تقوم PHP بعمل متغيران خاصان بناء على القيم التي يعمل بها تطبيقك.
+[`$argc`][argc] وهو متغير رقمي يحتوي على *عدد* القيم.
+[`$argv`][argv] وهو متغير به مصفوفة تحوتي على *قيمة* كل من القيم.
+دائما ما يكون الخيار الأول من القيم هو اسم ملف PHP المراد تنفيذه وفي هذه الحالة هو الملف `hello.php`.
+تستخدم دالة `exit()` بدون قيمة صفرية لاعلام منفذ الأوامر بأن الأمر قد فشل!.
+يمكن الإطلاع على شفرات الخروج من [هنا][exit-codes].
 
-The `exit()` expression is used with a non-zero number to let the shell know that the command failed. Commonly used
-exit codes can be found [here][exit-codes].
-
-To run our script, above, from the command line:
+لتنفيذ الملف، قم بفتح نافذة تنفيذ سطور الأوامر ثم قم بكتابة الآتي:
 
 {% highlight console %}
 > php hello.php
@@ -51,8 +53,8 @@ Hello, world
 {% endhighlight %}
 
 
- * [Learn about running PHP from the command line][php-cli]
- * [Learn about setting up Windows to run PHP from the command line][php-cli-windows]
+ * [قم بمعرفة المزيد عن تشغيل PHP من واجهة سطور الأوامر][php-cli]
+ * [تعرف كيفية ضبط نظام التشغيل Windows لتشغيل PHP من نافذة سطور الأوامر][php-cli-windows]
 
 
 [phpinfo]: http://php.net/function.phpinfo
