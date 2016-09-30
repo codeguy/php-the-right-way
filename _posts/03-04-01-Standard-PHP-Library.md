@@ -1,17 +1,17 @@
 ---
-title:   Standard PHP Library
+title:   مكتبة PHP القياسية
 isChild: true
 anchor:  standard_php_library
 ---
 
-## Standard PHP Library {#standard_php_library_title}
+## مكتبة PHP القياسية {#standard_php_library_title}
 
-The Standard PHP Library (SPL) is packaged with PHP and provides a collection of classes and interfaces. It is made up
-primarily of commonly needed datastructure classes (stack, queue, heap, and so on), and iterators which can traverse
-over these datastructures or your own classes which implement SPL interfaces.
+مكتبة PHP القياسية (SPL) هي مكتبة مدمة مع PHP، توفر مجموعة من الكائنات (classes) و الواجهات (interfaces).
+صممت هذه المكتبة لتلبي الاحتياجات الأساسية من كائنات هيكلة البيانات (المكدسات، الصفوف، الأكوام وغيرها)، ودوال تكرار
+تختصر عمل هيكلة البيانات في كائناتك التي تطبق واجهات المكتبة القياسية.
 
-* [Read about the SPL][spl]
-* [SPL video course on Lynda.com(Paid)][spllynda]
+* [قراءة المزيد عن المكتبة SPL][spl]
+* [دروس فيديو عن مكتبة SPL Lynda.com(مدفوعة)][spllynda]
 
 
 [spl]: http://php.net/book.spl
