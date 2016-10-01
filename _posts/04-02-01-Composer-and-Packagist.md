@@ -1,142 +1,137 @@
 ---
+title: Composer و Packagist
+isChild: false
 isChild: true
 anchor:  composer_and_packagist
 ---
 
-## Composer and Packagist {#composer_and_packagist_title}
+## Composer و Packagist {#composer_and_packagist_title}
 
-Composer is a **brilliant** dependency manager for PHP. List your project's dependencies in a `composer.json` file and,
-with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for
-you. Composer is analogous to NPM in the node.js world, or Bundler in the Ruby world.
+يعتبر Composer أداة **ممتازة** لأدارة توابع PHP. كل ما عليك هو ان تضع قائمة بالتوابع في ملف `composer.json` وببضع أوامر
+بسيطة سوف يقوم Composer بإنزال كل توابع مشروعك بالإضافة لتنصيب وضبط ملف إدراج تلقائي autoload.
+يعتبر Composer مماثل لـ NPM المستخدم في node.js، أو Bundler المستخدم في Ruby.
 
-There are already a lot of PHP libraries that are compatible with Composer, ready to be used in your project. These
-"packages" are listed on [Packagist], the official repository for Composer-compatible PHP libraries.
+يوجد هنالك الكثير من مكتبات PHP متوافقة مع Composer وجاهزة لكي تستخدمها مع مشروعك. هذه المكتبات أو "الحزم" مدرجة
+في [Packagist]، المستودع الحصري لكل مكتبات PHP المتوافقة مع Composer.
 
-### How to Install Composer
+### كيفية تنصيب Composer
 
-You can install Composer locally (in your current working directory) or globally (e.g. /usr/local/bin, recommended).
-Let's assume you want to install Composer globally:
+يمكنك تنصيب Composer محلياً (في مجلدك الحالي) أو بشكل عام (مثلا /usr/local/bin وهو المحبذ).
+فلنفترض انك تريد تنصيب Composer بشكل عام:
 
 {% highlight console %}
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
-**Note:** If the above fails due to permissions, run the `mv` line again with `sudo`.
+**ملاحظة:** اذا فشل الأمر السابق بسبب صلاحيات قم بتشغيل الأمر `mv` مرة اخرى بكتابة الأمر `sudo` قبله.
 
-This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project
-dependencies.
+سوف يتم تحميل `composer.phar` (PHAR هو اختصار لـ PHP binary Archive وتعني ملف PHP مضغوط قابل للتنفيذ). يمكنك
+تشغيل هذا الملف باستخدام الأمر `php` لإدارة التوابع في مشروعك.
 
-**Please Note:** If you pipe downloaded code directly into an interpreter, please read the
-code online first to confirm it is safe.
+**ملاحظة:** إذا قمت باستخدام مخرجات تنفيذ عملية مباشرة للإستخدام مع مترجم PHP، الرجاء قراءة
+الكود البرمجي أولاً للتحقق من انه آمن.
 
-#### Installing on Windows
+#### التنصيب على نظام تشغيل Windows
 
-For Windows users the easiest way to get up and running is to use the [ComposerSetup] installer, which
-performs a global install and sets up your `$PATH` so that you can just call `composer` from any
-directory in your command line.
+لمستخدمي نظام التشغيل Windows، الطريقة الأسهل وهي استخدام ملف تنصيب [ComposerSetup]، حيث أنه يقوم
+بتنصيبه للتوفر بشكل عام على النظام ويقوم بضبط متغيرات `$PATH` حتى تتمكن من فقط استدعاء الأمر `composer`
+من شاشة سطور الأوامر من أي مجلد في النظام.
 
-### How to Install Composer (manually)
+### كيفية تنصيب Composer(يدوياً)
 
-Manually installing Composer is an advanced technique; however, there are various reasons why a 
-developer might prefer this method vs. using the interactive installation routine. The interactive
-installation checks your PHP installation to ensure that:
+تنصيب Composer يدوياً هو عملية متقدمة ولك هنالك العديد من الأسباب تجعل المطور يقوم باستخدام هذه الطريقة بدلاً
+من الطريقة التلقائية التقليدية. فالطريقة التقليدية التقائية تقوم بفحص إصدارة PHP الحالية لتقوم بالتأكد من الآتي:
 
-- a sufficient version of PHP is being used
-- `.phar` files can be executed correctly
-- certain directory permissions are sufficient
-- certain problematic extensions are not loaded
-- certain `php.ini` settings are set
+- توافق إصدارة PHP المنصبة حالياً.
+- هل يمكن تشغيل وتنفيذ ملفات `.phar` بصورة صحيحة.
+- التأكد من الصلاحيات على المجلدات.
+- التأكد من الملحقات اذا فشل إدراجها.
+- التأكد من ملف الضبط `php.ini`.
 
-Since a manual installation performs none of these checks, you have to decide whether the trade-off is 
-worth it for you. As such, below is how to obtain Composer manually:
+بالمقابل الطريقة التقليدية لا تقوم باي من العمليات المذكورة انفاً، يتوجب عليك ان تقوم ببعض او كل العمليات
+يدوياً، لتنصيب Composer يدويا قم بالآتي:
 
 {% highlight console %}
 curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
 chmod +x $HOME/local/bin/composer
 {% endhighlight %}
 
-The path `$HOME/local/bin` (or a directory of your choice) should be in your `$PATH` environment 
-variable. This will result in a `composer` command being available.
+المجلد `$HOME/local/bin` (أو المجلد الذي تختاره) يجب ان يكون مدرج في متغيرات `$PATH`. فذا يساعد على أن
+يكون الأمر `composer` متوافر من أي مكان.
 
-When you come across documentation that states to run Composer as `php composer.phar install`, you can
-substitute that with:
+ويجب الأخذ بالإعتبار بانه عند استخدام تلك الطريقة، سوف تتغير طريقة الإستخدام التي قد تجدها في بعض المراجع
+`php composer.phar install` ليكتب بدلاً منها الآتي:
 
 {% highlight console %}
 composer install
 {% endhighlight %}
 
-This section will assume you have installed composer globally.
+وهذا ينطبق فقط إذا قم بتنصيب Composer بشكل عام في النظام.
 
-### How to Define and Install Dependencies
+### كيفية تحديد وإدراج التوابع
 
-Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it
-by hand if you like, or use Composer itself. The `composer require` command adds a project dependency 
-and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig]
-as a dependency of your project.
+يقوم Composer بتتبع وادارة توابع مشروعك عن طريق ملف يسمى `composer.json`. يمكنك ادارة هذا الملف يدوياً
+باستخدام اي محرر نصوص، أو استخدام Composer لإنجاز هذه العملية. يقوم الأمر `composer require` بإضافة تابع
+الى مشروعك ، فإذا لم يكن ملف `composer.json` موجوداً سوف يقوم تلقائياً بإنشائه.
+مثال لإدراج مكتبة [Twig] كتابع لمشروعك.
 
 {% highlight console %}
 composer require twig/twig:~1.8
 {% endhighlight %}
 
-Alternatively the `composer init` command will guide you through creating a full `composer.json` file
-for your project. Either way, once you've created your `composer.json` file you can tell Composer to
-download and install your dependencies into the `vendor/` directory. This also applies to projects 
-you've downloaded that already provide a `composer.json` file:
+عوضاً عن ذلك يمكنك تنفيذ الأمر `composer init` وسوف يقوم بمساعدتك لإنشاء ملف `composer.json` بالكامل لكي
+يتناسب مع مشروعك. ويمكنك ايضاً بعد انشاء ملف `composer.json` ان تخبر Composer ان يقوم بتحميل وتنصيب التوابع
+في مجلد `vendor/`. وهذا ينطبق ايضاً على المشاريع والمكتبات التي تقوم بانزالها ويوجد معها الملف `composer.json`.
 
 {% highlight console %}
 composer install
 {% endhighlight %}
 
-Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's 
-autoloader for your project dependencies.
+بعدها، قم بإضافة هذا السطر الى ملف برنامجك الأساسي، حتى يتمكن من اعلام PHP لكي يستخدم المدرج التلقائي autoloader
+التابع لـ Composer لكي يدرج التوابع لمشروعك.
 
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 {% endhighlight %}
 
-Now you can use your project dependencies, and they'll be autoloaded on demand.
+يمكنك الآن استخدام توابع مشروعك وسيتم إدراجهم تلقائياً باستخدام autoloader.
 
-### Updating your dependencies
+### تحديث التوابع
 
-Composer creates a file called `composer.lock` which stores the exact version of each package it
-downloaded when you
-first ran `composer install`. If you share your project with other coders and the `composer.lock` file
-is part of your distribution, when they run `composer install` they'll get the same versions as you. 
-To update your dependencies, run `composer update`.
+يقوم Composer بإنشاء ملف بإسم `composer.lock` بحيث يقوم بحفظ ارقام إصدارات كل تابع يقوم بتحميله عن أول تنفيذ
+للأمر `composer install`. إذا كنت تشارك مشروعك مع مطورين آخرين وملف `composer.lock` هو جزء من ملفاتك، فعندما يقوم
+احدهم بتنفيذ الأمر `composer install` سوف يحصل على نفس الإصدارات الموجودة لديك.
+لتحديث التوابع قم بتنفيذ الأمر `composer update`.
 
-This is most useful when you define your version requirements flexibly. For instance a version 
-requirement of `~1.8` means "anything newer than `1.8.0`, but less than `2.0.x-dev`". You can also use 
-the `*` wildcard as in `1.8.*`. Now Composer's `composer update` command will upgrade all your
-dependencies to the newest version that fits the restrictions you define.
+تكون هذه العملية مفيدة عندما تكون متطلباتك من التوابع محددة بمرونة، فمثلا تتطلب لمشروعك تابع بالإصدار
+`~1.8` بمعنى "كل الإصدارات الأجدد من 1.8.0، والأقل من 2.0.x-dev". يمكنك ايضاً استخدام `*` `1.8.*` لتحديد الكل من خانة واحدة.
+فالآن عند تنفيذ الأمر `composer update` سوف يقوم Composer بتحديث كل توابعك الى النسخة الأحدث بناء على ما قد حددته سلفاً كمطلب.
 
-### Update Notifications
+### تنبيهات التحديثات
 
-To receive notifications about new version releases you can sign up for [VersionEye], a web service
-that can monitor your GitHub and BitBucket accounts for `composer.json` files and send emails with new
-package releases.
+لكي تصل لك تنبيهات عند صدور إصدارات جديدة من التوابع يمكنك التسجيل في [VersionEye]، وهي خدمة يمكنها متابعة حسابك في كل من
+GitHub و BitBucket بحثاً في داخل ملفات `composer.json`، وتقوم بإرسال بريد إلكتروني عند صدور تحديثات جديدة.
 
-### Checking your dependencies for security issues
+### فحص مشاكل الأمان في توابعك
 
-The [Security Advisories Checker] is a web service and a command-line tool, both will examine your `composer.lock`
-file and tell you if you need to update any of your dependencies.
+[Security Advisories Checker] هي خدمة و أداة تعمل على سطور الأوامر، بحيث تقوم باختبار ملف `composer.lock` وتقوم بإخبارك
+إذا ما كان هنالك حاجة لتحديث اي من التوابع.
 
-### Handling global dependencies with Composer
+### التحكم في التوابع العامة باستخدام Composer
 
-Composer can also handle global dependencies and their binaries. Usage is straight-forward, all you need
-to do is prefix your command with `global`. If for example you wanted to install PHPUnit and have it 
-available globally, you'd run the following command:
+يمكن ل Composer التحكم في التوابع وملفاتها التنفيذية ايضاً. طريقة الإستخدام واضحة جداً، كل ما عليك فعله هو ادراج كلمة `global`
+قبل تنفيذ الأمر. مثلا إذا كنت تريد تنصيب الأداة PHPUnit واستخدامها بشكل عام في نظامك قم بتنفيذ هذا الأمر:
 
 {% highlight console %}
 composer global require phpunit/phpunit
 {% endhighlight %}
 
-This will create a `~/.composer` folder where your global dependencies reside. To have the installed
-packages' binaries available everywhere, you'd then add the `~/.composer/vendor/bin` folder to your 
-`$PATH` variable.
+هذا الأمر سيقوم بإنشاء مجلد في `~/.composer` حيث يقوم بوضع كل التوابع العامة هناك. ولكي تقوم بتنفيذ أوامر وعمليات تلك التوابع
+من أي مكان، ببساطة قم بإدراج مسار المجلد `~/.composer/vendor/bin` الى متغير `$PATH` في النظام لديك.
 
-* [Learn about Composer]
+* [تعرف على المزيد في Composer]
 
 [Packagist]: http://packagist.org/
 [Twig]: http://twig.sensiolabs.org
