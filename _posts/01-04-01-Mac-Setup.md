@@ -14,10 +14,10 @@ Je niekoľko spôsobou ako na OS X nainštalovať PHP.
 
 ### Inštalácia PHP pomocou Homebrew
 
-[Homebrew] je mocný správca balíkov pre OS X, ktorý vám môže zjednodušiť inštaláciou PHP a rôznych rozšírení.
-[Homebrew PHP] je repozitár, ktorý obsahuje "formulu" súvisiacu s PHP pre Homebrew a umožní vám inštaláciu PHP.
+[Homebrew] je všestranný správca balíkov pre OS X, ktorý vám môže zjednodušiť inštaláciou PHP a rôznych rozšírení.
+Repozitár [Homebrew PHP] obsahuje "formulu" pre inštaláciu PHP pomocou Homebrew.
 
-Momentálne máte možnosť pomocou príkazu `brew install` nainštalovať jednu z nasledujúcich verzií `php53`, `php54`,
+Pomocou príkazu `brew install` máte momentálne možnosť nainštalovať jednu z nasledujúcich verzií `php53`, `php54`,
 `php55`, `php56`, alebo `php70`. Medzi jednotlivými verziami PHP je možné prepínať zmenou premennej prostredia `PATH`.
 Na miesto manuálneho prepínania môžete použiť [brew-php-switcher][brew-php-switcher], ktorý sa postará o automatické
 prepínanie za vás.
@@ -42,7 +42,7 @@ Vašu aktívnu verziu PHP môžete prepnúť pomocou príkazu `select`:
 
 ### Inštalácia PHP pomocou phpbrew
 
-[phpbrew] je nástroj na inštaláciu a manažovanie viacerých verzií PHP. Toto môže byť veľmi užitočné ak dva rôzne
+[phpbrew] je nástroj pre inštaláciu a manažovanie viacerých verzií PHP. Toto môže byť veľmi užitočné ak dva rôzne
 projekty, alebo aplikácie požadujú rozdielne verzie PHP a vy nepoužívate virtuálny server.
 
 ### Inštalácia PHP pomocou binárneho inštalátora of firmy Liip
@@ -55,7 +55,7 @@ Táto metóda neprepisuje predinštalované binárne súbory PHP, ale všetko in
 
 Ďalšou možnosťou, ktorá vám umožnuje kontrolu nad inštalovanou verziou PHP je
 [kompilácia zo zdrojového kódu][mac-compile].
-V tomto prípade sa uistite, či máte nainštalovaný [Xcode][xcode-gcc-substitution], alebo náhradu ["nástroje príkazového riadku pre XCode"][xcode-command-line-tools], ktorú si môžete stiahnuť z "appláckeho" centra pre vývojárov.
+V tomto prípade sa uistite, či máte nainštalovaný [Xcode][xcode-gcc-substitution], alebo náhradu ["nástroje príkazového riadku pre XCode"][xcode-command-line-tools], ktorú si môžete stiahnuť z Apple centra pre vývojárov.
 
 ### Inštalačné programy všetko v jednom
 
