@@ -111,7 +111,8 @@ $handle->execute();
 $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 
 header('Content-Type: text/html; charset=UTF-8');
-?><!doctype html>
+?>
+<!doctype html>
 <html>
     <head>
         <meta charset="UTF-8">
