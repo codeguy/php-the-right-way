@@ -1,6 +1,6 @@
 # Vitajte {#welcome}
 
-Na webe je množstvo zastaralých informácií propagujúcich zlé praktiky a často nebezpečnejší kód.
+Na webe je množstvo zastaralých informácií propagujúcich zlé praktiky a často nebezpečný kód.
 Pre nových používateľov PHP je často jednoduché sa v tomto záplave informácií stratiť.
 
  Stránka _PHP: The Right Way_ je jednoduchá na čítanie a slúži ako referencia pre populárne štandardy písania

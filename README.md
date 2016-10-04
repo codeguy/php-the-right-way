@@ -71,17 +71,16 @@ lokalizovanú kópiu na vašich GitHub stránkach
 
 Ak použijete subdoménu, potom pridajte vašu subdoménu do súboru `CNAME`
 a požiadajte nás o nastavenie DNS záznamu. Ak nechcete použiť subdoménu,
-vymažte súbor `CNAME` kompletne inak vaša kópia nebude publikovaná.
+vymažte súbor `CNAME` kompletne, inak vaša kópia nebude publikovaná.
 
 Pridajte informáciu o vašom preklade do
 [wiki stránky](https://github.com/codeguy/php-the-right-way/wiki/Translations).
 
-Ak je váš preklad hotový otvorte issue v Issue Tracker-i, aby ste nám dali
-vedieť.
+Ak je váš preklad hotový otvorte issue v Issue Tracker-i, aby ste nám o tom dali vedieť.
 
 ## Prečo
 
-V poslednom čase sa mnoho diskutovalo o tom ako PHP komunita postráda dostatočné
+V poslednom čase sa mnoho diskutovalo o tom, ako PHP komunita postráda dostatočné
 a dôveryhodné informácie pre programátorov začínajúcich s PHP. Tento repozitár
 kladie za svoj cieľ tento problém vyriešiť.
 
