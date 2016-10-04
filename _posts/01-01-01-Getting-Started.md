@@ -1,6 +1,6 @@
 ---
+title:  Prvé kroky
 anchor: getting_started
 ---
 
-# Getting Started {#getting_started_title}
-
+# Prvé kroky {#getting_started_title}

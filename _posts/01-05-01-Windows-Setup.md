@@ -1,27 +1,35 @@
 ---
+title: Nastavenie pre Windows
 isChild: true
-anchor:  windows_setup
+anchor: windows_setup
 ---
 
-## Windows Setup {#windows_setup_title}
+## Nastavenie pre Windows {#windows_setup_title}
 
-You can download the binaries from [windows.php.net/download][php-downloads]. After the extraction of PHP, it is recommended to set the [PATH][windows-path] to the root of your PHP folder (where php.exe is located) so you can execute PHP from anywhere.
+Binárne súbory pre systém Windows môžete stiahnúť zo stránky [windows.php.net/download][php-downloads]. Po rozbalení PHP
+je doporučené nasmerovať premennú [PATH][windows-path] do koreňovej zložky PHP (miesto, kde sa nachádza php.exe),
+čo umožní spustenie PHP z ľubovoľného miesta.
 
-For learning and local development you can use the built in webserver with PHP 5.4+ so you don't need to worry about
-configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
-as the [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] will
-help get a Windows development environment up and running fast. That said, these tools will be a little different from
-production so be careful of environment differences if you are working on Windows and deploying to Linux.
+Od verzie PHP 5.4 môžete pre učenie a vývoj na lokálnom systéme použiť vstavaný web server. Toto vás na začiatok odľahčí
+od konfigurácie iného web servera. Ak si prajete využiť riešenie “všetko v jednom” s plnehodnotným web serverom
+a databázou, potom môžete využiť jedno z nasledujúcich riešení [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver], alebo [WAMP][wamp]. Každé z týchto riešení vám umožní jednoduché a rýchle
+nastavenie vývojového rozhrania na systéme Windows. Pri použití týchto nástrojov môžu byť v prostredí oproti
+produkčnému serveru malé rozdiely, na čo si treba dávať pozor. Taktiež treba dávať pozor na rozdiely v prostredí ak
+vyvíjate na systéme Windows a softvér bude produkovaný na systéme Linux.
 
-If you need to run your production system on Windows then IIS7 will give you the most stable and best performance. You
-can use [phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and managing PHP simple. IIS7 comes with
-FastCGI built in and ready to go, you just need to configure PHP as a handler. For support and additional resources
-there is a [dedicated area on iis.net][php-iis] for PHP.
+Ak potrebujete, aby vaše produkčné prostredie bežalo na systéme Windows, potom IIS7 vám poskytne najstabilnejšie
+riešenie s najlepším výkonom. Pre jednoduché manažovanie a nastavenie PHP môžete použiť [phpmanager][phpmanager], čo je
+grafická nadstavba pre IIS7. IIS7 prichádza s FastCGI, ktoré je vbudované a pripravené na použitie. Je potrebné len
+nastaviť PHP ako obslužný program (handler). Podporu a dodatočné zdroje nájdete
+vo [vyhradenej oblasti na iis.net][php-iis] pre PHP.
 
-Generally running your application on different environment in development and production can lead to strange bugs popping up when you go
-live. If you are developing on Windows and deploying to Linux (or anything non-Windows) then you should consider using a [Virtual Machine](/#virtualization_title).
+Spúšťanie vašich aplikácií v rôznych prostrediach pre vývoj a produkciu vedie všeobecne k rôznym chybám, ktoré sa
+vyskytujú pri spustení aplikácie v produkčnom prostredí. Ak robíte vývoj na systéme Windows a softvér produkujete na
+systéme Linux (alebo všeobecne inom ako Windows), potom by ste mali zvážiť použitie
+[virtuálneho servera](/#virtualization_title).
 
-Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP development using Windows][windows-tools].
+Chris Tankersley má veľmi užitočný blog o tom, ako robiť vývoj na systéme Windows -
+[PHP development using Windows][windows-tools].
 
 [easyphp]: http://www.easyphp.org/
 [phpmanager]: http://phpmanager.codeplex.com/

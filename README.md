@@ -4,15 +4,15 @@
 
 Toto je GitHub repozitár pre projekt _PHP: The Right Way_ v slovenskom jazyku.
 
-* Táto stránka je Jekyll projekt.
+* Táto stránka používa štruktúru pre projekt Jekyll.
 * Každá kapitola a odsek je súbor vo formáte Markdown v zložke `_posts/`.
 * Odsek je označený na začiatku súboru s parametrom `isChild: true`.
 * Navigácia a štrukúra stránky je generovaná automaticky.
 
-## Podelte sa o informácie
+## Podeľte sa o informácie
 
 Projekt _PHP: The Right Way_ má k dispozícií bannery, ktoré môžete použiť
-na vašej webstránke. Ukážte svoju podporu a zdielajte s novými PHP programátormi
+na vašej webstránke. Ukážte vašu podporu a zdielajte s novými PHP programátormi
 miesto, kde môžu získať dôveryhodné informácie.
 
 [Zobraz dostupné bannery](http://www.phptherightway.com/banners.html)
