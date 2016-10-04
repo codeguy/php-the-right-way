@@ -1,5 +1,7 @@
 ---
+title: ممارسات برمجية
+isChild: false
 anchor: coding_practices
 ---
 
-# Coding Practices {#coding_practices_title}
+# ممارسات برمجية {#coding_practices_title}

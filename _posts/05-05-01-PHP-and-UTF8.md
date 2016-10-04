@@ -1,91 +1,90 @@
 ---
-title:   Working with UTF-8
+title:   العمل بترميز UTF-8
 isChild: true
 anchor:  php_and_utf8
 ---
 
-## Working with UTF-8 {#php_and_utf8_title}
+## العمل بترميز UTF-8 {#php_and_utf8_title}
 
-_This section was originally written by [Alex Cabal](https://alexcabal.com/) over at 
-[PHP Best Practices](https://phpbestpractices.org/#utf-8) and has been used as the basis for our own UTF-8 advice_.
+_هذا الفصل تم كتابته من قبل [أليكس كابال](https://alexcabal.com/) في 
+[أفضل ممارسات PHP](https://phpbestpractices.org/#utf-8) حيث تم إستخدامها كأساس لنصائحنا للمل بترميز UTF-8_.
 
-### There's no one-liner. Be careful, detailed, and consistent.
+### كن منتبهاً، دقيقاً ومهتماً بالتفاصيل. فليس هنالك طريق واحد.
 
-Right now PHP does not support Unicode at a low level. There are ways to ensure that UTF-8 strings are processed OK,
-but it's not easy, and it requires digging in to almost all levels of the web app, from HTML to SQL to PHP. We'll aim
-for a brief, practical summary.
+حتى الآن لم تقم PHP بدعم ترميز Unicode في مستوياتها الأساسية. هنالك طرق للتأكد من ان النصوص قد تمت معالجتها بالترميز UTF-8،
+ولكنها عملية ليست سهلة وتحتاج الكثير من البحث والتنقيب في كل مستويات تطبيق الويب، ابتداءً من HTML الى SQL وحتى PHP.
+سوف نقوم بإيجاز مبسط لتطبيقات عملية.
 
-### UTF-8 at the PHP level
+### UTF-8 على مستوى PHP
 
-The basic string operations, like concatenating two strings and assigning strings to variables, don't need anything
-special for UTF-8. However most string functions, like `strpos()` and `strlen()`, do need special consideration. These
-functions often have an `mb_*` counterpart: for example, `mb_strpos()` and `mb_strlen()`. These `mb_*` strings are made
-available to you via the [Multibyte String Extension], and are specifically designed to operate on Unicode strings.
+لا تحتاج عمليات النصوص كدمج النصوص و انساب قيم نصية الى متغيرات إلى اي شيء مخصص لكي تتبع ترميز UTF-8.
+لكن كثير من دوال النصوص مثل `strpos()` و `strlen()` تحتاج إلى أن تؤخذ بعين الإعتبار. 
+ولكن هنالك دوال عادة ما تكون باللاحقة `mb_*` مثلاً `mb_strpos()` و `mb_strlen()`.
+هذه الدوال تقوم بتوفير النصوص باستخدام إضافة [Multibyte String Extension] وهي مخصصة للتعامل مع النصوص بترميز Unicode.
 
-You must use the `mb_*` functions whenever you operate on a Unicode string. For example, if you use `substr()` on a
-UTF-8 string, there's a good chance the result will include some garbled half-characters. The correct function to use
-would be the multibyte counterpart, `mb_substr()`.
+يجب عليك ان تستخدم دوال `mb_*` كلما اردت ان تتعامل مع نص بترميز Unicode. مثلا اذا قم باستخدام `substr()` على نص بترميز
+UTF-8 هنالك إحتمال بأن النتيجة ستحتوي على رموز مشوهة. فالطريقة الصحيحة هي استخدام دالة تقوم بأخذ مفهوم النصوص
+متعددة البايت بالإعتبار (Multibyte) `mb_substr()`.
 
-The hard part is remembering to use the `mb_*` functions at all times. If you forget even just once, your Unicode
-string has a chance of being garbled during further processing.
+الجزء الصعب يكمن في تذكر استخدام دوال `mb_*` دائماً عوضاً عن الدوال الأصلية. إذا قمت بنسيان ذلك ذات مرة فأي نص بترميز
+Unicode يكون مهدد بالتشوه في أي عملية لاحقة قد تطرأ عليه، مما يعني نتائج غير محمودة!.
 
-Not all string functions have an `mb_*` counterpart. If there isn't one for what you want to do, then you might be out
-of luck.
+ليس كل دوال النصوص لديها معالجات في دوال `mb_*`. إذا لم يكن هنالك واحدة توفر لك الأستخدام المطلوب عندها أنت غير محظوظ!
 
-You should use the `mb_internal_encoding()` function at the top of every PHP script you write (or at the top of your
-global include script), and the `mb_http_output()` function right after it if your script is outputting to a browser.
-Explicitly defining the encoding of your strings in every script will save you a lot of headaches down the road.
+يجب إستخدام الدالة `mb_internal_encoding()` في بداية كل مصدر PHP تقوم بكتابته (كملف الإستدعاء الرئيسي لبقية الملفات مثلاً)،
+تليها دالة `mb_http_output()` إذا كنت ستقوم بإخراج مخرجات إلى المتصفح.
+تعيين الترميز بشكل صريح في كل نصوصك يقيك الكثير من ما لايحمد عقباه على مر عملية التطوير.
 
-Additionally, many PHP functions that operate on strings have an optional parameter letting you specify the character
-encoding. You should always explicitly indicate UTF-8 when given the option. For example, `htmlentities()` has an
-option for character encoding, and you should always specify UTF-8 if dealing with such strings. Note that as of PHP 5.4.0, UTF-8 is the default encoding for `htmlentities()` and `htmlspecialchars()`.
+إضافةً لذلك هنالك العديد من الدوال المدمجة تتيح إدارة النصوص عبر معطيات اختيارية لتحديد ترميز النصوص. عندها يجب عليك تحديد
+UTF-8 عندما يكون هذا الخيار متاحاً. مثلا دالة `htmlentities()` لديها معطى اختياري لتحديد الترميز، سيتوجب عليك دائما تحديد
+ترميز UTF-8 للتعامل مع النصوص.
+ملاحظة: `htmlentities()` و `htmlspecialchars()` تستخدمان الترميز UTF-8 كترميز نصوص إفتراضي منذ إصدارة PHP 5.4.0.
 
-Finally, If you are building a distributed application and cannot be certain that the `mbstring` extension will be
-enabled, then consider using the [patchwork/utf8] Composer package. This will use `mbstring` if it is available, and
-fall back to non UTF-8 functions if not.
+أخيراً، إذاذ كنت تقوم ببناء تطبيق تنوي نشره وكنت غير متأكد من أن إضافة `mbstring` ستكون متوفرة أم لا، عندها خذ بالإعتبار
+إستخدام حزمة Composer تسمى [patchwork/utf8]. ستقوم بإتاحة استخدام `mbstring` إذا كان متوفرة، أو تقوم بإستخدام الدوال
+الإفتراضية إذا لم تكن الأخرى متوفرة.
 
 [Multibyte String Extension]: http://php.net/book.mbstring
 [patchwork/utf8]: https://packagist.org/packages/patchwork/utf8
 
-### UTF-8 at the Database level
+### UTF-8 على مستوى قاعدة البيانات
 
-If your PHP script accesses MySQL, there's a chance your strings could be stored as non-UTF-8 strings in the database
-even if you follow all of the precautions above.
+إذا كان تطبيقك تقوم بالوصول لقاعدة البيانات MySQL عندها هنالك إحتمال أن النصوص تحفظ بترميز غير UTF-8 في قاعدة البيانات
+حتى ولو اتبعت كل التحذيرات أعلاه!
 
-To make sure your strings go from PHP to MySQL as UTF-8, make sure your database and tables are all set to the
-`utf8mb4` character set and collation, and that you use the `utf8mb4` character set in the PDO connection string. See
-example code below. This is _critically important_.
+لكي تكون متأكداً من أن النصوص تنتقل من PHP إلى MySQL بترميز UTF-8 قم بالتأكد من أن جميع الجداول في قاعدة البيانات قد تم
+ضبط ترميزها لتسخدم الترميز `utf8mb4` في كل من الترميز و الترتيب (Character set and Collation)، وأن تقوم باستخدام `utf8mb4`
+في الإتصال باستخدام PDO، قم بالإطلاع على المثال أدناه فهو _شديد الأهمية_.
 
-Note that you must use the `utf8mb4` character set for complete UTF-8 support, not the `utf8` character set! See
-Further Reading for why.
+ملاحظة: يجب استخدام ترميز `utf8mb4` للدعم الكامل للترميز UTF-8 وليس الترميز `utf8`! أكمل القراءة لمعرفة السبب.
 
-### UTF-8 at the browser level
+### UTF-8 على مستوى المتصفح
 
-Use the `mb_http_output()` function to ensure that your PHP script outputs UTF-8 strings to your browser.
+قم باستخدام الدالة `mb_http_output()` للتأكد من أن تطبيقك يقوم بإخراج نصوص بترميز UTF-8 إلى المتصفح.
 
-The browser will then need to be told by the HTTP response that this page should be considered as UTF-8. The historic
-approach to doing that was to include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in
-your page's `<head>` tag. This approach is perfectly valid, but setting the charset in the `Content-Type` header is
-actually [much faster](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly).
+سيلزم عندها ان تقوم بإخبار المتصفح باستخدام HTTP Response بأن هذه الصفحة يجب ان تعتبر مرمزة باستخدام UTF-8.
+سابقاً كان يتم إدراج هذا الإجرا عن طريق إدراج [charset في وسم `<meta>`](http://htmlpurifier.org/docs/enduser-utf8.html)
+بداخل وسم `<head>` في الصفحة. هذا الإجراء هو سليم تماماً ولكن إضافة `Content-Type` كترويسة header هو عملياً
+[أكثر سرعة](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly).
 
 {% highlight php %}
 <?php
-// Tell PHP that we're using UTF-8 strings until the end of the script
+// قم بإخبار PHP اننا نستخدم ترميز UTF-8 حتى النهاية
 mb_internal_encoding('UTF-8');
  
-// Tell PHP that we'll be outputting UTF-8 to the browser
+// قم بإخبار PHP اننا سنقوم بإخراج مخرجات بترميز UTF-8 إلى المتصفح
 mb_http_output('UTF-8');
  
-// Our UTF-8 test string
+// نص لتجربة عملية الترميز
 $string = 'Êl síla erin lû e-govaned vîn.';
  
-// Transform the string in some way with a multibyte function
-// Note how we cut the string at a non-Ascii character for demonstration purposes
+// قم بتحويل النص إلى شكل آخر باستخدام دالة البايت المتعدد Multibyte
+// نلاحظ انه يمكننا قطع نص من خارج جدول Ascii لأغراض الشرح فقط
 $string = mb_substr($string, 0, 15);
  
-// Connect to a database to store the transformed string
-// See the PDO example in this document for more information
-// Note the `charset=utf8mb4` in the Data Source Name (DSN)
+// نقوم بالإتصال بقاعدة البيانات ثم نقوم بتخزين النص الذي قمنا بتحويله
+// قم بالإطلاع على مثال PDP في هذا المستند لمزيد من المعلومات
+// قم بملاحظة اننا استخدمنا `charset=utf8mb4` في بيانات اسم مصدر البيانات (Data Source Name) (DSN)
 $link = new PDO(
     'mysql:host=your-hostname;dbname=your-db;charset=utf8mb4',
     'your-username',
@@ -96,19 +95,19 @@ $link = new PDO(
     )
 );
  
-// Store our transformed string as UTF-8 in our database
-// Your DB and tables are in the utf8mb4 character set and collation, right?
+// قم بتخزين النص المتحول بترميز UTF-8 في قاعدة البيانات
+// هل قاعدة البيانات والجداول تستخدم ترميز وترتيب `utf8mb4` Charset and collation؟
 $handle = $link->prepare('insert into ElvishSentences (Id, Body) values (?, ?)');
 $handle->bindValue(1, 1, PDO::PARAM_INT);
 $handle->bindValue(2, $string);
 $handle->execute();
  
-// Retrieve the string we just stored to prove it was stored correctly
+// قم باسترجاع النص الذي قمنا بتخزينه حتى يتم إثبات بأنه قد تم تخزينه بطريقة صحيحة
 $handle = $link->prepare('select * from ElvishSentences where Id = ?');
 $handle->bindValue(1, 1, PDO::PARAM_INT);
 $handle->execute();
  
-// Store the result into an object that we'll output later in our HTML
+// قم بتخزين النتيجة إلى كائن حتى نتمكن من طباعته لاحقاً في HTML
 $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 
 header('Content-Type: text/html; charset=UTF-8');
@@ -116,19 +115,19 @@ header('Content-Type: text/html; charset=UTF-8');
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>UTF-8 test page</title>
+        <title>UTF-8 صفحة تجريبية</title>
     </head>
     <body>
         <?php
         foreach($result as $row){
-            print($row->Body);  // This should correctly output our transformed UTF-8 string to the browser
+            print($row->Body);  // يجب ان يتم طباعة هذا النص المتحول بترميز UTF-8 بصور صحيحة في المتصفح
         }
         ?>
     </body>
 </html>
 {% endhighlight %}
 
-### Further reading
+### للمزيد من المصادر
 
 * [PHP Manual: String Operations](http://php.net/language.operators.string)
 * [PHP Manual: String Functions](http://php.net/ref.strings)

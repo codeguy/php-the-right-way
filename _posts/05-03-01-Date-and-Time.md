@@ -1,17 +1,18 @@
 ---
+title: الوقت والتاريخ
 isChild: true
 anchor:  date_and_time
 ---
 
-## Date and Time {#date_and_time_title}
+## الوقت والتاريخ {#date_and_time_title}
 
-PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There
-are many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to
-most common uses. It can handle time zones, but that is outside this short introduction.
+يوجد كائن (أو كلاس class) في PHP يسمى DateTime يساعد على عمليات قراءة وكتابة ومقارنة وحساب الوقت والتاريخ.
+هنالك العديد من الدوال المتعلقة بعمليات الوقت والتاريخ مضمنة في PHP ولكن DateTime توفرها بواجهة كائنية (أو شيئية Object-Oriented)
+للعديد من الإستخدامات. يمكن لهذا الكائن من التعامل مع النطاقات الزمنية، ولكن هذا غير مدرج في هذا الشرح التعريفي البسيط..
 
-To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
-or do `new DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
-output.
+لكي نبدأ باستخدام DateTime، قم بتحويل صيغة كاملة صحيحة لتاريخ وزمن بصيغة نصية إلى كائن باستخدام الدالة المصنِعة `createFromFormat()`
+أو يمكنك البدء بإنشاء كائن جديد باستخدام `new DateTime` وينتج من تنفيذ هذا الأخير الوقت والزمن الحاليين. يمكن إستخدام الدالة `format()`
+تحويل DateTime إلى صيغة نصية مرة أخرى للتمكن من طباعتها مثلا.
 
 {% highlight php %}
 <?php
@@ -21,47 +22,48 @@ $start = DateTime::createFromFormat('d. m. Y', $raw);
 echo 'Start date: ' . $start->format('Y-m-d') . "\n";
 {% endhighlight %}
 
-Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
-saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference
-use the `diff()` method. It will return new DateInterval, which is super easy to display.
+يمكن إجراء عمليات حسابية باستخدام DateTime وذلك باستخدام كلاس DateInterval.
+يحتوي كلاس DateTime على دوال مثل `add()` و `sub()` التي تستخدم مخرجات كلاس DateInterval كمعطيات.
+لاتقم مطلقاً بكتابة دوال للقيام بعملية حساب كم ثانية في اليوم أو حساب الفترة النهارية أو حتى حساب فرق التوقيت الزمن،
+ولا تقم بإستخدام بدائل اخرى بشكل عام. قم بإستخدام DateInterval عوضاً عن ذلك .
+للقيام بحساب فرق التاريخ بين تاريخين قم باستخدام الدالة `diff()` فهي تقوم بإرجاع DateInterval وعندها يمكن عرض وإستخدامه بسهولة.
 
 {% highlight php %}
 <?php
-// create a copy of $start and add one month and 6 days
+// نقوم بإنشاء نسخة من $start ثم نقوم بزيادة شهر و ستة أيام
 $end = clone $start;
 $end->add(new DateInterval('P1M6D'));
 
 $diff = $end->diff($start);
-echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
-// Difference: 1 month, 6 days (total: 37 days)
+echo 'الفرق هو: ' . $diff->format('%m شهر, %d يوم (المجموع: %a يوم)') . "\n";
+// الفرق هو: 1 شهر, 6 يوم (المجموع: 37 يوم)
 {% endhighlight %}
 
-On DateTime objects you can use standard comparison:
+يمكن لكائن DateTime ان يستخدم لإجراء عملية مقارنة بالطريقة التقليدية باستخدام
 
 {% highlight php %}
 <?php
 if ($start < $end) {
-    echo "Start is before end!\n";
+    echo "Start هو قبل end!\n";
 }
 {% endhighlight %}
 
-One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
-DateTime objects, start and end, and the interval for which it will return all events in between.
+المثال الأخير يقوم بشرح كلاس DatePeriod. يستخدم لعمليات التكرار للأحداث المتكررة. يمكنه أخذ كائني DateTime كمعطيات
+البداية والنهاية وكئان DateInterval لتحديد الحدث الزمني ليقوم بإرجاع كل الأحداث المتطابقة بين التاريخين!
 
 {% highlight php %}
 <?php
-// output all thursdays between $start and $end
+// إطبع جميع أيام الخميس بين $start و $end
 $periodInterval = DateInterval::createFromDateString('first thursday');
 $periodIterator = new DatePeriod($start, $periodInterval, $end, DatePeriod::EXCLUDE_START_DATE);
 foreach ($periodIterator as $date) {
-    // output each date in the period
+    // إطبع التاريخ لكل خميس
     echo $date->format('Y-m-d') . ' ';
 }
 {% endhighlight %}
 
-* [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (accepted date format string options)
+* [إقرأ المزيد عن DateTime][datetime]
+* [إقرأ المزيد عن تنسيق التاريخ][dateformat] (التنسيقات المعتمدة)
 
 [datetime]: http://php.net/book.datetime
 [dateformat]: http://php.net/function.date

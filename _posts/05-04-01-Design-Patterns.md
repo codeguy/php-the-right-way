@@ -1,17 +1,17 @@
 ---
+title: نماذج التصميم
 isChild: true
 anchor:  design_patterns
 ---
 
-## Design Patterns {#design_patterns_title}
+## نماذج التصميم {#design_patterns_title}
 
-When you are building your application it is helpful to use common patterns in your code and common patterns for the
-overall structure of your project. Using common patterns is helpful because it makes it much easier to manage your code
-and lets other developers quickly understand how everything fits together.
+عندما تقوم ببناء برنامج من المفيد ان تستخدم الممارسات البرمجية المعروفة أثناء الكتابة ، واتباع النماذج المعروفة
+للهيكلة العامة للمشروع. عندما تقوم باستخدام هذه النماذج يسهل عملية إدارة المصدر ويسهل للمبرمجين فهم كيفية عمل الأشياء سوياً.
 
-If you use a framework then most of the higher level code and project structure will be based on that framework, so a
-lot of the pattern decisions are made for you. But it is still up to you to pick out the best patterns to follow in the
-code you build on top of the framework. If, on the other hand, you are not using a framework to build your application
-then you have to find the patterns that best suit the type and size of application that you're building.
+إذا كنت تستخدم إطار عمل Framework  عندها سيكون هيكل مشروعك في إطاره. عندها الكثير من القرارات الهيكلية قد تم إتخاذها لك مسبقاً
+ولكن ما يزال عليك ان تختار النماذج المثلى لتتبعها في المصدر الذي تقوم بكتابته لبناء المشروع في هذا الإطار.
+إذا كنت لا تستخدم إطار عمل لبناء برنامج عندها يجب عليك ان تجد وتستخدم النماذج المثلى التي تنطبق على نوع وحجم البرنامج الذي
+تقوم ببنائه.
 
-* Continue reading on [Design Patterns](/pages/Design-Patterns.html)
+* إكمال القراءة عن [نماذج التصميم](/pages/Design-Patterns.html)

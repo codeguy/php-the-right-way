@@ -1,13 +1,14 @@
 ---
+title: الأساسيات
 isChild: true
 anchor:  the_basics
 ---
 
-## The Basics {#the_basics_title}
+## الأساسيات {#the_basics_title}
 
-PHP is a vast language that allows coders of all levels the ability to produce code not only quickly, but efficiently.
-However while advancing through the language, we often forget the basics that we first learnt (or overlooked) in favor
-of short cuts and/or bad habits. To help combat this common issue, this section is aimed at reminding coders of the
-basic coding practices within PHP.
+PHP هي لغة واسعة الطيف تتيح للمبرمجين بجميع المستويات إمكانية انتاج برمجيات، ليس بسرعة فقط، بل بكفاءة أيضاً!
+لكن كلما تعمقنا في اللغة نكتشف أننا قد نسينا الأساسيات التي تعلمناها منذ البداية(أو تغاضينا عنها) لكي نختصر الزمن
+أو نسلك طريقاً مختصراً لأداء المهام بممارسات سيئة وغير . هذا الفصل يهدف لتجنب هذا النوع من المشاكل المعتادة وتذكير المبرمجين
+بهذه الممارسات الأساسية في إطار لغة PHP.
 
-* Continue reading on [The Basics](/pages/The-Basics.html)
+* أكمل قراءة [الأساسيات](/pages/The-Basics.html)
