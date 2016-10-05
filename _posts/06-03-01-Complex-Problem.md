@@ -1,33 +1,32 @@
 ---
+title: مشكلة معقدة
 isChild: true
 anchor:  complex_problem
 ---
 
-## Complex Problem {#complex_problem_title}
+## مشكلة معقدة {#complex_problem_title}
 
-If you have ever read about Dependency Injection then you have probably seen the terms *"Inversion of Control"* or
-*"Dependency Inversion Principle"*. These are the complex problems that Dependency Injection solves.
+إذا كنت قرأت عن حقن التوابع سابقاً عندها قد لفت إنتباهك مصطلح *"Inversion of Control"* إنعكاس التحكم أو
+*"Dependency Inversion Principle"* مفهوم عكس تحكم التوابع.
+هذه المشاكل المعقدة التي يقوم حقن التوابع بحلها.
 
-### Inversion of Control
+### إنعكاس التحكم
 
-Inversion of Control is as it says, "inverting the control" of a system by keeping organisational control entirely
-separate from our objects. In terms of Dependency Injection, this means loosening our dependencies by controlling and
-instantiating them elsewhere in the system.
+إنعكاس التحكم للنظام بإبقاء التحكم التنظيمي بالكامل بمنئى عن العناصر أو الكائنات. في مصطلح حقن التوابع هذا يعني
+فك الإرتباط مع التوابع وعكس التحكم بهذه التوابع في مكان آخر في النظام.
 
-For years, PHP frameworks have been achieving Inversion of Control, however, the question became, which part of control
-are you inverting, and where to? For example, MVC frameworks would generally provide a super object or base controller
-that other controllers must extend to gain access to its dependencies. This **is** Inversion of Control, however,
-instead of loosening dependencies, this method simply moved them.
+لعدة سنين ، إطر النظام في PHP تستخدم عكس التحكم ولكن يبقى السؤال، أي جزء من التحكم هو الذي تقوم بعكسه؟ وإلى أين؟
+مثلا إطر العمل بنموذج MVC تقدم بشكل عام كائن أساسي أو متحكم أساسي يجب على المتحكمات الفرعية الأخرى ان تستمد منه لكي
+تحصل على وصول للتوابع. هذا **هو** عكس التحكم، لكن عوضاً عن فك إرتباط التوابع هذه الطريقة تقوم بترحيلهم.
 
-Dependency Injection allows us to more elegantly solve this problem by only injecting the dependencies we need, when we
-need them, without the need for any hard coded dependencies at all.
+حقن التوابع يتيح لنا بسلاسة حل هذه المشكلة، فقط عن طريق حقن التوابع التي نريد عندما نحتاجها بدون الحاجة لأي كتابة صريحة
+لأي تابع في المصدر على الإطلاق.
 
-### Dependency Inversion Principle
+### مفهوم عكس التحكم
 
-Dependency Inversion Principle is the "D" in the S.O.L.I.D set of object oriented design principles that states one
-should *"Depend on Abstractions. Do not depend on concretions."*. Put simply, this means our dependencies should be
-interfaces/contracts or abstract classes rather than concrete implementations. We can easily refactor the above example
-to follow this principle.
+مفهوم عكس التحكم هو حرف "D" في مجموعة مفاهيم البرمجة الشيئية S.O.L.I.D  والذي يوضح أنه يجب *"الإعتماد على التجريد، لا على
+التحجير أو الإنغلاق"*. ببساطة هذا يعني انه التوابع يجب ان تكون واجهات او مجردات عوضاً عن التطبيقات الجامدة او المحجرة. عندها
+يمكننا ببساطة إعادة صياغة وكتابة المفهوم أعلاه:
 
 {% highlight php %}
 <?php
@@ -48,14 +47,12 @@ interface AdapterInterface {}
 class MysqlAdapter implements AdapterInterface {}
 {% endhighlight %}
 
-There are several benefits to the `Database` class now depending on an interface rather than a concretion.
+هنالك عدة فوائد يستفيد منها كلاس `Database` الآن، فهوالآن يعتمد على واجهة بدلاً من كائن جامد.
 
-Consider that you are working in a team and the adapter is being worked on by a colleague. In our first example, we
-would have to wait for said colleague to finish the adapter before we could properly mock it for our unit tests. Now
-that the dependency is an interface/contract we can happily mock that interface knowing that our colleague will build
-the adapter based on that contract.
+ضع بالإعتبار أنك تعمل ضمن فريق وأن المحول يقوم بالعمل عليه أحد الزملاء. في المثال الأول يجب أن نقوم بإنتظار زميلنا حتى
+يخبرنا بأنه قد إنتهى من المحول حتى يتثنى لنا ان نعتمد عليه في إختبار الوحدة. الآن التابع هو عبارة عن واجهة يمكننا ان
+نعتمد عليها بإعتبار ان زميلنا يسقوم ببناء المحول وفق الواجهة المحددة.
 
-An even bigger benefit to this method is that our code is now much more scalable. If a year down the line we decide
-that we want to migrate to a different type of database, we can write an adapter that implements the original interface
-and inject that instead, no more refactoring would be required as we can ensure that the adapter follows the contract
-set by the interface.
+فائدة أكبر وهي ان هذه الطريقة تجعل المصدر قابل للتطوير. فمثلا بعد سنة قررنا أن نقوم بالترحيل إلى نوع آخر لقاعدة البيانات
+يمكن أن نقوم بكاتبة محول يتبع شروط الواجهة الأصلية ثم يحقن عوضاً. عندها لا يوجد تعديل أو إعادة صياغة ويمكن أن نجزم بأن ذلك
+المحول الجديد يتبع الشروط الموضوعة من قبل الواجهة.

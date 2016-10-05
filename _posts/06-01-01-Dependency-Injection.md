@@ -1,15 +1,14 @@
 ---
-title:  Dependency Injection
+title:  حقن التوابع Dependency Injection
 anchor: dependency_injection
 ---
 
-# Dependency Injection {#dependency_injection_title}
+# حقن التوابع Dependency Injection {#dependency_injection_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
+مقتبس من ويكيبيديا الإنجليزية [Wikipedia](http://en.wikipedia.org/wiki/Dependency_injection):
 
-> Dependency injection is a software design pattern that allows the removal of hard-coded dependencies and makes it 
-> possible to change them, whether at run-time or compile-time.
+>حقن التوابع هو تصميم نموذجي برمجي يتيح ازالة التوابع المكتوبة صراحةً ثم جعلها متوفرة للتغيير سواء كان في مرحلة
+>التشغيل ام في مرحلة البناء.
 
-This quote makes the concept sound much more complicated than it actually is. Dependency Injection is providing a
-component with its dependencies either through constructor injection, method calls or the setting of properties. It is
-that simple.
+هذا الإقتباس يجهل هذا المفهوم معقد أكثر مما هو عليه فعلا. عملية حقن تابع هو تجهيز محتوياته وتوابعه سواء باستخدام
+حقن عند الإنشاء أو تنفيذ الدوال او في الضبط.

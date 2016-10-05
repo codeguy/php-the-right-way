@@ -1,16 +1,15 @@
 ---
+title: الحاويات Containers
 isChild: true
 anchor:  containers
 ---
 
-## Containers {#containers_title}
+## الحاويات Containers {#containers_title}
 
-The first thing you should understand about Dependency Injection Containers is that they are not the same thing as
-Dependency Injection. A container is a convenience utility that helps us implement Dependency Injection, however, they
-can be and often are misused to implement an anti-pattern, Service Location. Injecting a DI container as a Service
-Locator in to your classes arguably creates a harder dependency on the container than the dependency you are replacing.
-It also makes your code much less transparent and ultimately harder to test.
+أول شئ يجب أن تفهمه عن حقن حاويات التوابع هو أنها تختلف عن عملية حقن التوابع. الحاوية هي أداة تسهيلية تساعدنا بأن نقوم
+ببناء حقن توابع، ولكن يمكن أن يساء استخدامها لكي يبنى (ضد النمذجة) كمحدد للخدمة. حقن تابع كمحدد خدمة في الكلاس يقوم بإنشاء
+إرتباط أقوى للتوابع في داخل الحاوية بدلاً من التابع الذي تستبدله.
+وتقوم بتعقيد المصدر وتجعل من عملية تجربته عملية صعبة.
 
-Most modern frameworks have their own Dependency Injection Container that allows you to wire your dependencies together
-through configuration. What this means in practice is that you can write application code that is as clean and de-
-coupled as the framework it is built on.
+معظم أطر العمل الحديثة تقوم باستخدام حاويات حقن التوابع بحيث تتيح لك كتابة توابعك سوياً عن طريق الضبط. بمعنى أن هذه الممارسة
+تمكنك من كتابة مصدر نظيف وغير مرتبط للبرنامج على إطار العمل الذي بني عليه.

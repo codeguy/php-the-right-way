@@ -1,15 +1,15 @@
 ---
+title: المفهوم الأساسي
 isChild: true
 anchor:  basic_concept
 ---
 
-## Basic Concept {#basic_concept_title}
+## المفهوم الأساسي {#basic_concept_title}
 
-We can demonstrate the concept with a simple, yet naive example.
+يمكن شرح هذا المفهوم باستخدام مثال سهل ومبسط.
 
-Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the adapter in the
-constructor and create a hard dependency. This makes testing difficult and means the `Database` class is very tightly
-coupled to the adapter.
+لدينا كلاس `Database` يعتمد على محول للتخاطب مع قاعدة البيانات. نقوم بانشاء المحول في دالة الإنشاء ثم نقوم بعمل حقن ثابت.
+هذا يجعل عملية التجربة والإختبار عملية صعبة وتعني ان الكلاس `Database` مرتبط بشدة مع المحول.
 
 {% highlight php %}
 <?php
@@ -28,7 +28,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-This code can be refactored to use Dependency Injection and therefore loosen the dependency.
+يمكن إعادة صياغة هذا المصدر لاستخدام حقن التوابع وفك الإرتباط من التوابع
 
 {% highlight php %}
 <?php
@@ -47,6 +47,5 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class its dependency rather than it creating it itself. We could even create a method
-that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we
-could set it directly.
+الآن يمكننا ان نعطي كلاس `Database` توابعه عن طريق انشائها بنفسه. ويمكن أيضاً انشاء دالة تستقبل التابع كقيمة ثم اسنادها مباشرة
+أو اذا كان المحول `$adapter` في وصف عام `public property` عندها يمكن إسناده مباشرةً.
