@@ -14,21 +14,19 @@ There are already a lot of PHP libraries that are compatible with Composer, read
 
 ### How to Install Composer
 
-You can install Composer locally (in your current working directory) or globally (e.g. /usr/local/bin, recommended).
-Let's assume you want to install Composer globally:
+The safest way to download composer is by [following the official instructions](https://getcomposer.org/download/).   
+This will verify the installer is not corrupt or tampered with.  
+The installer installs Composer *locally*, in your current working directory.
+
+We recommend installing it *globally* (e.g. a single copy in /usr/local/bin) - to do so, run this afterwards:
 
 {% highlight console %}
-curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
-**Note:** If the above fails due to permissions, run the `mv` line again with `sudo`.
+**Note:** If the above fails due to permissions, prefix with `sudo`.
 
-This will download `composer.phar` (a PHP binary archive). You can run this with `php` to manage your project
-dependencies.
-
-**Please Note:** If you pipe downloaded code directly into an interpreter, please read the
-code online first to confirm it is safe.
+To run a locally installed Composer you'd use `php composer.phar`, globally it's simply `composer`.
 
 #### Installing on Windows
 
