@@ -1,11 +1,12 @@
 ---
+title: المزيد من القراءة
 isChild: true
 anchor:  templating_further_reading
 ---
 
-## Further Reading {#templating_further_reading_title}
+## المزيد من القراءة {#templating_further_reading_title}
 
-### Articles & Tutorials
+### مقالات ودروس
 
 * [Templating Engines in PHP](http://fabien.potencier.org/article/34/templating-engines-in-php)
 * [An Introduction to Views & Templating in CodeIgniter](http://code.tutsplus.com/tutorials/an-introduction-to-views-templating-in-codeigniter--net-25648)
@@ -15,16 +16,16 @@ anchor:  templating_further_reading
 * [Working With Templates in Symfony 2](http://code.tutsplus.com/tutorials/working-with-templates-in-symfony-2--cms-21172)
 * [Writing Safer Templates](https://github.com/box/brainy/wiki/Writing-Safe-Templates)
 
-### Libraries
+### مكتبات
 
-* [Aura.View](https://github.com/auraphp/Aura.View) *(native)*
-* [Blade](http://laravel.com/docs/blade) *(compiled, framework specific)*
-* [Brainy](https://github.com/box/brainy) *(compiled)*
-* [Dwoo](http://dwoo.org/) *(compiled)*
-* [Latte](https://github.com/nette/latte) *(compiled)*
-* [Mustache](https://github.com/bobthecow/mustache.php) *(compiled)*
-* [PHPTAL](http://phptal.org/) *(compiled)*
-* [Plates](http://platesphp.com/) *(native)*
-* [Smarty](http://www.smarty.net/) *(compiled)*
-* [Twig](http://twig.sensiolabs.org/) *(compiled)*
-* [Zend\View](http://framework.zend.com/manual/2.3/en/modules/zend.view.quick-start.html) *(native, framework specific)*
+* [Aura.View](https://github.com/auraphp/Aura.View) *(مدمجة)*
+* [Blade](http://laravel.com/docs/blade) *(تجميعية، مخصصة لإطار عمل)*
+* [Brainy](https://github.com/box/brainy) *(تجميعية)*
+* [Dwoo](http://dwoo.org/) *(تجميعية)*
+* [Latte](https://github.com/nette/latte) *(تجميعية)*
+* [Mustache](https://github.com/bobthecow/mustache.php) *(تجميعية)*
+* [PHPTAL](http://phptal.org/) *(تجميعية)*
+* [Plates](http://platesphp.com/) *(مدمجة)*
+* [Smarty](http://www.smarty.net/) *(تجميعية)*
+* [Twig](http://twig.sensiolabs.org/) *(تجميعية)*
+* [Zend\View](http://framework.zend.com/manual/2.3/en/modules/zend.view.quick-start.html) *(مدمجة، مخصصة لإطار عمل)*
