@@ -1,13 +1,12 @@
 ---
+title:   التفاعل مع قواعد البيانات
 isChild: true
-title:   Interacting with Databases
 anchor:  databases_interacting
 ---
 
-## Interacting with Databases {#databases_interacting_title}
+## التفاعل مع قواعد البيانات {#databases_interacting_title}
 
-When developers first start to learn PHP, they often end up mixing their database interaction up with their
-presentation logic, using code that might look like this:
+عندما يبدأ المطورين بتعلم PHP للمرة الأولى، عادة ما يقومون بدمج عمليات قواعد البيانات مع الطرح المنطقي، بكتابة مصدر كهذا:
 
 {% highlight php %}
 <ul>
@@ -19,13 +18,13 @@ foreach ($db->query('SELECT * FROM table') as $row) {
 </ul>
 {% endhighlight %}
 
-This is bad practice for all sorts of reasons, mainly that its hard to debug, hard to test, hard to read and it is
-going to output a lot of fields if you don't put a limit on there.
+هذه ممارسة سيئة من كل النواحي، فهي صعبة الفحص وتصحيح الأخطاء، وصعبة التجربة، وصعبة القراءة وستقوم أيضاً بإخراج العديد
+من الحقول التي لم تقم بعمل حد لها.
 
-While there are many other solutions to doing this - depending on if you prefer [OOP](/#object-oriented-programming) or
-[functional programming](/#functional-programming) - there must be some element of separation.
+هنالك العديد من الحلول - سواء كنت تفضل استخدام البرمجة الشيئية [OOP](#object-oriented-programming) أو البرمجة الوظيفية [Functional Programming](#functional-programming)-
+ما يزال يتوجب عليك أن تقوم بالفصل.
 
-Consider the most basic step:
+مثال لطريقة بدائية:
 
 {% highlight php %}
 <?php
@@ -34,14 +33,14 @@ function getAllFoos($db) {
 }
 
 foreach (getAllFoos($db) as $row) {
-    echo "<li>".$row['field1']." - ".$row['field1']."</li>"; // BAD!!
+    echo "<li>".$row['field1']." - ".$row['field1']."</li>"; // خطأ!!
 }
 {% endhighlight %}
 
-That is a good start. Put those two items in two different files and you've got some clean separation.
+هذه بداية جيدة. قم بوضع كل منهما في ملفين مختلفيين عندها تحصل على عملية فصل نظيفة.
 
-Create a class to place that method in and you have a "Model". Create a simple `.php` file to put the presentation
-logic in and you have a "View", which is very nearly [MVC] - a common OOP architecture for most
+قم بإنشاء كلاس عوضاً عن تلك الطريقة عندها سيكون ليدك نموذج "Model". قم بإنشاء ملف بسيط `.php` ثم ضع فيه محتوى العرض المنطقي
+عندها سيكون لديك العرض "View"، ستلاحظ أنه قريب من نموذج [MVC] - طريقة معتادة في معمارية البرمجة الشيئية لأغلبية أطر العمل
 [frameworks](/#frameworks).
 
 **foo.php**
@@ -50,15 +49,15 @@ logic in and you have a "View", which is very nearly [MVC] - a common OOP archit
 <?php
 $db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
 
-// Make your model available
+// قم بإدراج النموذج Model
 include 'models/FooModel.php';
 
-// Create an instance
+// قم بإنشاء كائن
 $fooModel = new FooModel($db);
-// Get the list of Foos
+// إستخرج قائمة من Foos
 $fooList = $fooModel->getAllFoos();
 
-// Show the view
+// قم بإدراج العرض View
 include 'views/foo-list.php';
 {% endhighlight %}
 
@@ -90,12 +89,12 @@ class FooModel
 <?php endforeach ?>
 {% endhighlight %}
 
-This is essentially the same as what most modern frameworks are doing, albeit a little more manual. You might not
-need to do all of that every time, but mixing together too much presentation logic and database interaction can be a
-real problem if you ever want to [unit-test](/#unit-testing) your application.
+هذا التطبيق هو مماثل جداً لمعظم ما تقوم به أطر العمل الحديثة، ولو تشببها قليلأ.
+قد لا تحتاج أن تقوم بهذه الممارسة في كل مرة، ولكن خلط العرض المنطقي والنموذج التفاعلي لقاعدة البيانات من شأنه أن يكوِن
+مشكلة حقيقية إذا ما أردت أن تقوم بعمل إختبار وحدات [unit-test](#unit-testing) لتطبيقك.
 
-[PHPBridge] has a great resource called [Creating a Data Class] which covers a very similar topic, and is great for
-developers just getting used to the concept of interacting with databases.
+هنالك مصدر في موقع [PHPBridge] يسمى إنشاء كلاس بيانات [Creating a Data Class] يقوم بتغطية جميع المواضيع المشابهة،
+من الجيد للمطورين بأن يتعودوا على مفهوم التفاعل مع قواعد البيانات.
 
 
 [MVC]: http://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488

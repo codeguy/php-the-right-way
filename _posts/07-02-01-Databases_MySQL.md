@@ -1,28 +1,28 @@
 ---
+title:   لاحقة MySQL
 isChild: true
-title:   MySQL Extension
 anchor:  mysql_extension
 ---
 
-## MySQL Extension {#mysql_extension_title}
+## لاحقة MySQL {#mysql_extension_title}
 
-The [mysql] extension for PHP is incredibly old and has superseded by two other extensions: 
+لاحقة [mysql] هي لاحقة مدمجة في PHP وقد باتت قديمة وتم الإستغناء عنها وإستبدالها بلاحقتين أخرتين:
 
 - [mysqli]
 - [pdo]
 
-Not only did development stop long ago on [mysql], but it was [deprecated as of PHP 5.5.0]
-[mysql_deprecated], and **has been [officially removed in PHP 7.0][mysql_removed]**.
+لم يتوقف التطوير على اللاحقة [mysql] منذ زمن بعيد فحسب، بل وقد تم [إهمالها منذ إصدارة PHP 5.5.0][mysql_deprecated]
+ثم تم **إزالتها [حصرياً في أول إصدارة من PHP 7.0][mysql_removed]**
 
-To save digging into your `php.ini` settings to see which module you are using, one option is to search for `mysql_*` 
-in your editor of choice. If any functions such as `mysql_connect()` and `mysql_query()` show up, then `mysql` is 
-in use.
+لمعرفة ما إذا كان تطبيق ما يعمل بهذه اللاحقة يمكنك البحث باستخدام محرر النصوص لديك عن دوال مثل `mysql_connect()` و
+`mysql_query` فإذا ظهرت نتائج بحث إيجابية فهذا يعني أن هذه اللاحقة مستخدمة في التطبيق. وهذا عوضاً عن البحث في ملف 
+`php.ini` للتحقق من وجود اللاحقة.
 
-Even if you are not using PHP 7.0 yet, failing to consider this upgrade as soon as possible will lead to greater 
-hardship when the PHP 7.0 upgrade does come about. The best option is to replace mysql usage with [mysqli] or [PDO] in 
-your applications within your own development schedules so you won't be rushed later on.
+حتى وإن لم تكن تستخدم إصدارة PHP 7.0 بعد، عدم الإهتمام بالتحديث في أقرب فرصة يزيد صعوبة المهمة عندما تحدث الترقية.
+أفضل حل هو استبدال إستخدام mysql بأي من [mysqli] أو [PDO] في تطبيقاتك كممارسة أساسية في عملية التطوير حتى لا تضطر
+لتنفيذها على عجالة في وقت لاحق.
 
-**If you are upgrading from [mysql] to [mysqli], beware lazy upgrade guides that suggest you can simply find and replace `mysql_*` with `mysqli_*`. Not only is that a gross oversimplification, it misses out on the advantages that mysqli provides, such as parameter binding, which is also offered in [PDO][pdo].**
+**إذا كنت تنوي الترقية من [mysql] إلى [mysqli]، هنالك موجهات سهلة تقترح عليك بأن تقوم بالبحث عن `mysql_*` واستبدالها بـ `mysqli_*`. هذا المقترح مفرط السهولة، ولكنه يفقد العديد من فوائد وخواص تقدمها mysqli مثل ربط القيم، وهي متوفرة أيضاً في [PDO][pdo].**
 
 * [PHP: Choosing an API for MySQL][mysql_api]
 * [PDO Tutorial for MySQL Developers][pdo4mysql_devs]

@@ -1,19 +1,19 @@
 ---
+title:   طبقات التجريد
 isChild: true
-title:   Abstraction Layers
 anchor:  databases_abstraction_layers
 ---
 
-## Abstraction Layers {#databases_abstraction_layers_title}
+## طبقات التجريد {#databases_abstraction_layers_title}
 
-Many frameworks provide their own abstraction layer which may or may not sit on top of [PDO][1]. These will often
-emulate features for one database system that is missing from another by wrapping your queries in PHP methods, giving
-you actual database abstraction instead of just the connection abstraction that PDO provides. This will of course add a
-little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and SQLite
-then a little overhead will be worth it the sake of code cleanliness.
+العديد من أطر العمل Framework لديها طبقات التجريد الخاصة بها مما قد يجعلها أو لا يجعلها تكون فوق طبقة [PDO][1].
+غالباً ما يتم محاكاة خواص لنظام قاعدة بيانات مفقودة في الأخرى عن طريق ربط الإستغلامات في دوال PHP وتعطيك نفس التجريد
+لقاعدة البيانات عوضاً عن مجرد إتصال تجريدي كما تفعل PDO. بالطبع سوف تقوم هذه الممارسة القليل من الجهد ولكن اذا كنت
+تنوي بناء نظام متنقل يمكنه العمل على كل من MySQL و PostgreSQL و SQLite عندها القليل من الجهد يستحق التعب وكتابة بضع
+السطور البرمجية.
 
-Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4] namespace standards so can be
-installed in any application you like:
+بعض طبقات التجريد تم بنائها باستخدام التوصية [PSR-0][psr0] أو [PSR-4][psr4] بأسماء فضاء قياسية حتى تتمكن من
+تنصيب أي تطبيق تريد مثل:
 
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
