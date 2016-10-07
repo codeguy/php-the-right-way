@@ -34,7 +34,7 @@ $end->add(new DateInterval('P1M6D'));
 
 $diff = $end->diff($start);
 echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
-// Difference: 1 month, 6 days (total: 37 days)
+// Difference: 1 month, 6 days (total: 36 days)
 {% endhighlight %}
 
 On DateTime objects you can use standard comparison:
