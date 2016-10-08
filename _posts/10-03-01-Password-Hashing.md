@@ -14,7 +14,7 @@ reversed. This means you can compare a hash against another to determine if they
 but you cannot determine the original string. If passwords are not hashed and your database is accessed by an
 unauthorized third-party, all user accounts are now compromised. 
 
-Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of 'rainbow tables' (a reverse list of crytographic hashes for common passwords.)
+Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of "rainbow tables" (a reverse list of crytographic hashes for common passwords.)
 
 Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor. 
 
@@ -42,7 +42,7 @@ if (password_verify('bad-password', $passwordHash)) {
 }
 {% endhighlight %}  
 
-password_hash() takes care of password salting for you. The salt is stored, along with the algorithm and "cost", as part of the hash.  password_verify() extracts this to determine how to check the password, so you don't need a separate database field to store your salts. 
+`password_hash()` takes care of password salting for you. The salt is stored, along with the algorithm and "cost", as part of the hash.  `password_verify()` extracts this to determine how to check the password, so you don't need a separate database field to store your salts. 
 
 * [Learn about `password_hash()`] [1]
 * [`password_compat` for PHP >= 5.3.7 && < 5.5] [2]
