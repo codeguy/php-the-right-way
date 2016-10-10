@@ -1,65 +1,67 @@
 ---
+title: تصفية البيانات
 isChild: true
 anchor:  data_filtering
 ---
 
-## Data Filtering {#data_filtering_title}
+## تصفية البيانات {#data_filtering_title}
 
-Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate foreign input before
-using it in code. The `filter_var()` and `filter_input()` functions can sanitize text and validate text formats (e.g.
-email addresses).
+لا تقم (أبداً) بالوثوق بأي مدخلات إلى التطبيق أو المصدر. دائماً قم بتعقيم ومراجعة هذه المدخلات قبل استخدامها في المصدر.
+الدالتان `filter_var()` و `filter_input()` يمكنهما تعقيم ومراجعة صيغ النصوص ( كيغة البريد الإلكتروني مثلاً).
 
-Foreign input can be anything: `$_GET` and `$_POST` form input data, some values in the `$_SERVER` superglobal, and the
-HTTP request body via `fopen('php://input', 'r')`. Remember, foreign input is not limited to form data submitted by the
-user. Uploaded and downloaded files, session values, cookie data, and data from third-party web services are foreign
-input, too.
+المدخلات الأجنبية يمكن أن تكون أي شيء: `$_GET` و `$_POST` كمدخلات النماذج، بعض القيم من المتغيرات العامة `$_SERVER`،
+وأي محتوى طلب HTTP باستخدام `fopen('php://input', 'r')`. تذكر بأن المدخلات الأجنبية ليست محصورة على المدخلات من النماذج
+المرسلة من المستخدم. الملفات المرفوعة والمحملة وقيم المتغيرات وبيانات الكوكيز وبيانات تطبيقات وخدمات الويب
+هي مدخلات أجنبية أيضاً.
 
-While foreign data can be stored, combined, and accessed later, it is still foreign input. Every time you process,
-output, concatenate, or include data in your code, ask yourself if the data is filtered properly and can it be trusted.
+طالما يحتمل أن يتم حفظ البيانات والوصول إليها لاحقاً، فهي ما تزال مدخلات أجنبية. في كل مرة تقوم بمعالجة أو دمج أو أدراج
+بيانات في المصدر، تسأل ما إذا كانت البيانات تم تصفيها بطريقة صحيحة ويمكن الوثوق بها.
 
-Data may be _filtered_ differently based on its purpose. For example, when unfiltered foreign input is passed into HTML
-page output, it can execute HTML and JavaScript on your site! This is known as Cross-Site Scripting (XSS) and can be a
-very dangerous attack. One way to avoid XSS is to sanitize all user-generated data before outputting it to your page by
-removing HTML tags with the `strip_tags()` function or escaping characters with special meaning into their respective
-HTML entities with the `htmlentities()` or `htmlspecialchars()` functions.
+بشكل عام البيانات _تصفى_ بشكل مختلف بناءً على كيفيتها. مثلا، عند تمرير مدخلات أجنبية إلى مخرجات صفحة HTML عندها سيتم
+تنفيذ HTML و JavaScript في الموقع! هذا ما يسمى Cross-Site Scripting (XSS) ويمكن أن يكون هجوماً خطيراً جداً.
+طريقة لتفادي هذا الهجوم هو عن طريق تعقيم كل البيانات التي ستعرض للمسخدم قبل عرضها في الصفحة عن طريق حذف كل وسوم HTML
+باستخدام الدالة `strip_tags()` أو إسقاط الرموز والوسوم باستخدام دوال ذات معنى خاص بعناصر HTML `htmlentities()` أو 
+`htmlspecialchars()`.
 
-Another example is passing options to be executed on the command line. This can be extremely dangerous (and is usually
-a bad idea), but you can use the built-in `escapeshellarg()` function to sanitize the executed command's arguments.
+مثال آخر، تمرير قيم لكي يتم تنفيذها على شكل أمر. فهذا يعتبر من أخطر المهددات (وهي فكرة سيئة)، ولكن يمكن استخدام
+الدالة `escapeshellarg()` لتعقيم وتنفيذ قيم الأمر.
 
-One last example is accepting foreign input to determine a file to load from the filesystem. This can be exploited by
-changing the filename to a file path. You need to remove `"/"`, `"../"`, [null bytes][6], or other characters from the
-file path so it can't load hidden, non-public, or sensitive files.
+مثال أخير وهو قبوم مدخلات أجنبية لتحديد ملف ما لعرضه من الملفات. قد تكون هذه ثغرة عن طريق تغيير اسم الملف إلى مسار ملف
+ما. فستحتاج أن تقوم بإزالة كل من `"/"` و `"../"` وما يسمى [null bytes][6] وأي رموز من مسار الملف حتى لا يتم إدراج
+ملفات خاصة أو محمية من العرض أو ملفات حساسة.
 
-* [Learn about data filtering][1]
-* [Learn about `filter_var`][4]
-* [Learn about `filter_input`][5]
-* [Learn about handling null bytes][6]
+* [تعرف على المزيد عن data filtering][1]
+* [تعرف على المزيد عن `filter_var`][4]
+* [تعرف على المزيد عن `filter_input`][5]
+* [تعرف على المزيد عن إدارة null bytes][6]
 
-### Sanitization
+### التعقيم
 
-Sanitization removes (or escapes) illegal or unsafe characters from foreign input.
+التعقيم هو إزالة أو إسقاط أي رموز غير آمنة أو غير مصرح بها من المدخلات الأجنبية.
 
-For example, you should sanitize foreign input before including the input in HTML or inserting it into a raw SQL query.
-When you use bound parameters with [PDO](#databases), it will sanitize the input for you.
+مثلاً يجب أن تقوم بتعقيم المدخلات الأجنبية قبل إدراج المدخل في HTML أو قبل إدراجها في إستعلام SQL مباشرة.
+عندما تستخدم ربط القيم باستخدام [PDO](#databases) فستقوم PDO بتعقيم المدخلات تلقائياً.
 
-Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML page. This is very
-hard to do and many avoid it by using other more restricted formatting like Markdown or BBCode, although whitelisting
-libraries like [HTML Purifier][html-purifier] exists for this reason.
+بعض الأحيان قد تسمح ببعض وسوم HTML الآمن كمدخلات لتتضمن في محتوى صفحة HTML. تطبيق هذا صعب للغاية والبعض يقومون بتجنبه
+باستخدام صيغة أكثر إحكاماً مثل Markdown أو BBCode بالرغم بأن هنالك مكتبات مخصصة لهذا السبب [HTML Purifier][html-purifier].
 
-[See Sanitization Filters][2]
+[Sanitization Filters][2]
 
 ### Unserialization
 
-It is dangerous to `unserialize()` data from users or other untrusted sources.  Doing so can allow malicious users to instantiate objects (with user-defined properties) whose destructors will be executed, **even if the objects themselves aren't used**.  You should therefore avoid unserializing untrusted data.
+من الخطير تنفيذ عملية `unserialize()` من بيانات مدخلة من المستخدم أو من مصادر غير موثوقة. القيام بذلك يسمح للمستخدم أن يقوم بإنشاء
+كائنات (بمحتوى مسبق التعريف) فسيتم تنفيذها من قبل destructor **حتى ولو لم يتم استخدام هذه الكائنات**. عندها يجب أن لا يتم عمل
+unserialize لأي بيانات غير موثوقة.
 
-If you absolutely must unserialize data from untrusted sources, use PHP 7's [`allowed_classes`][unserialize] option to restrict which object types are allowed to be unserialized.
+إذا كان لابد أن تقوم بعمل unserialize لبيانات من مصادر غير موثوقة، عندها قم باستخدام خيار [`allowed_classes`][unserialize]
+لتحديد أي نوع من الكائنات يمكن أن يتم عمل unserialize عليه. متوفر في إصدارة PHP7 فقط
 
-### Validation
+### التحقق
 
-Validation ensures that foreign input is what you expect. For example, you may want to validate an email address, a
-phone number, or age when processing a registration submission.
+يتم التحقق من البيانات الأجنبية المدخلة كما تتوقع منها أن تكون. مثلا قد تريد ان تتحقق من بريد إلكتروني و رقم هاتف
+وعمر عندما تقوم بمعالجة طلب تسجيل.
 
-[See Validation Filters][3]
+[Validation Filters][3]
 
 
 [1]: http://php.net/book.filter

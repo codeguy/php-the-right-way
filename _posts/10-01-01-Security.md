@@ -1,5 +1,7 @@
 ---
+title: الحماية
+isChild: false
 anchor: security
 ---
 
-# Security {#security_title}
+# الحماية {#security_title}

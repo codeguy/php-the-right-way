@@ -1,28 +1,28 @@
 ---
+title: تشفير كلمات المرور
 isChild: true
 anchor:  password_hashing
 ---
 
-## Password Hashing {#password_hashing_title}
+## تشفير كلمات المرور {#password_hashing_title}
 
-Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a
-database and later used to authenticate users upon login.
+دائماً ما يتم بناء تطبيقات PHP تعتمد على تسجيل دخول مستخدمين. فإسم المستخدم وكلمة المرور يتم حفظهما في قاعدة البيانات
+حتى يتم استخدامهما للتحقق من هوية المستخدم عن تسجيل الدخول.
 
-It is important that you properly [_hash_][3] passwords before storing them. Password hashing is an irreversible, one
-way function performed against the user's password. This produces a fixed-length string that cannot be feasibly
-reversed. This means you can compare a hash against another to determine if they both came from the same source string,
-but you cannot determine the original string. If passwords are not hashed and your database is accessed by an
-unauthorized third-party, all user accounts are now compromised. Some users may (unfortunately) use the same password
-for other services. Therefore, it is important to take security seriously.
+من المهم أن تقوم [_بتشفير_][3] كلمات السر قبل حفظها. تشفير كلمة المرور هو عملية تشفير أحادية الإتجاه لا يمكن إسترجاعها
+وتنفذ على كلمة مرور المستخدم. يتم انشاء نص محدد المدى لا يمكن فكه. هذا يعني نه ستقوم بمقارنة المحتوى المشفر بمثله للتأكد
+من أنهما متطابقين، فسيكونا كذلك إذا كانا من نفس المصدر، ولكن لا يمكن معرفة المحتوى الأصلي. إذا لم يتم تشفير كلمات المرور
+وتم الوصول غير المصرح به لقاعدة البيانات، فسيكون كل حسابات المستخدمين قد تم السيطرة عليها. بعض المستخدمين (للأسف) يقومون
+باستخدام نفس كلمة المرور لخدمات أو مواقع أخرى. بالتالي فمن المهم الإهتمام بالحماية بشكل جاد.
 
-**Hashing passwords with `password_hash`**
+**تشفير كلمات المرور باستخدام `password_hash`**
 
-In PHP 5.5 `password_hash()` was introduced. At this time it is using BCrypt, the strongest algorithm currently
-supported by PHP. It will be updated in the future to support more algorithms as needed though. The `password_compat`
-library was created to provide forward compatibility for PHP >= 5.3.7.
+في إصدارة PHP 5.5 تم إضافة دالة `password_hash()`. حالياً تستخدم هذه الدالة لوغاريثمية BCrypt، وهي اللوغاريثمية الأقوى حتى
+الآن في PHP. ستيم مستقبلاً إضافة الدعم لعدة لوغاريثمات أخرى حسب الحاجة. تم إنشاء مكتبة `password_compat` لإتاحة توافقية
+لإصدارات PHP المتقدمة PHP >= 5.3.7.
 
-Below we hash a string, and then check the hash against a new string. Because our two source strings are different
-('secret-password' vs. 'bad-password') this login will fail.
+أدناه سنقوم بتشفير نص، ثم نقوم بمقارنته بنص آخر. بما أن كلا النصين مختلفين، (كلمة مرور صحيحة مقارنة بـ كلمة مرور خاطئة)
+ستفشل عملية تسجيل الدخول.
 
 {% highlight php %}
 <?php
@@ -38,8 +38,8 @@ if (password_verify('bad-password', $passwordHash)) {
 {% endhighlight %}  
 
 
-* [Learn about `password_hash()`] [1]
-* [`password_compat` for PHP >= 5.3.7 && < 5.5] [2]
+* [تعرف المزيد عن `password_hash()`] [1]
+* [`password_compat` PHP >= 5.3.7 && < 5.5] [2]
 * [Learn about hashing in regards to cryptography] [3]
 * [PHP `password_hash()` RFC] [4]
 

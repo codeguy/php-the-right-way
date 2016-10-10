@@ -1,16 +1,17 @@
 ---
+title: حماية تطبيق الويب
 isChild: true
 anchor:  web_application_security
 ---
 
-## Web Application Security {#web_application_security_title}
+## حماية تطبيق الويب {#web_application_security_title}
 
-There are bad people ready and willing to exploit your web application. It is important that you take necessary
-precautions to harden your web application's security. Luckily, the fine folks at
-[The Open Web Application Security Project][1] (OWASP) have compiled a comprehensive list of known security issues and
-methods to protect yourself against them. This is a must read for the security-conscious developer. [Survive The Deep End: PHP Security][3] by Padraic Brady is also another good web application security guide for PHP.
+هنالك العديد من الأناس السيئين متعدين لإستغلال تطبيقك. من المهم أن تتخذ التحوطات اللازمة لزيادة حماية التطبيق.
+لحسن الحظ الأناس الجيدين في [المشروع المفتوح لحماية تطبيقات الويب The Open Web Application Security Project OWASP][1]
+قاموا بتجميع قائمة شاملة لكل مشاكل الحماية، وطرق الحماية منها. الإطلاع على هذا المشروع هو مطلب لاي مطور مدرك لأهمية الحماية.
+الديل [Survive The Deep End: PHP Security][3] كتبت بواسطة باراديك برادي، وهو أحد الأدلة الجيدة لحماية تطبيقات PHP.
 
-* [Read the OWASP Security Guide][2]
+* [قراءة دليل OWASP][2]
 
 
 [1]: https://www.owasp.org/
