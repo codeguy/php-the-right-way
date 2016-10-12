@@ -1,61 +1,63 @@
 ---
+title: Sprievodca štýlom písania kódu
 anchor: code_style_guide
 ---
 
-# Code Style Guide {#code_style_guide_title}
+# Sprievodca štýlom písania kódu {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+PHP komunita je veľká a rozmanitá. Skladá sa z nespočetného množstva knižníc, frameworkov a komponentov.
+Pre PHP programátorov je ich bežné používať a kombinovať v rámci jedného projektu niekoľko naraz. Je dôležité, aby sa
+kód PHP pridržiaval, pokiaľ možno čo najbližšie, k všeobecne zaužívanému štýlu písania kódu. Toto programátorom uľahčuje
+v ich projektoch použiť rôzne knižnice bez nutnosti použitia rôznych štýlov písania kódu v rôznich častiach.
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
-to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
-recommendations are merely a set of rules that some projects like Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK,
-FuelPHP, Lithium, etc are starting to adopt. You can use them for your own projects, or continue to use your own
-personal style.
+Skupina [Framework Interop Group][fig] navrhla a odsúhlasila sériu doporučení písania kódu. Nie každé z týchto
+doporučení ale s týmto súvisí. Tie, ktoré sa tohoto týkajú sú [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2]
+a [PSR-4][psr4]. Tieto doporučenia sú viacmenej zoznamom pravidiel, ktoré projekty ako napríklad Drupal, Zend,
+Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, atď. začinajú zavádzať. Tieto doporučenia môžete používať taktiež
+pre vaše projekty. Môžete ale taktiež pokračovať v použivaní vášho osobného štýlu.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
-applications that implement the components can have consistency even when working with lots of third-party code.
+Kód PHP by ste ideálne mali písať tak, aby sa pridržiaval všeobecne známemu štandardu. Toto môže byť ľubovolná
+kombinácia doporúčení PSR, alebo jeden zo štandardov PEAR, alebo Zend. Toto zabezpečí čitateľnosť vášho kódu pre iných
+programátorov a konzistentnosť štýlu kódu v aplikáciach, ktoré môžu váš kód použivať.
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [Prečítajte si o PSR-0][psr0]
+* [Prečítajte si o PSR-1][psr1]
+* [Prečítajte si o PSR-2][psr2]
+* [Prečítajte si o PSR-4][psr4]
+* [Prečítajte si o štandarde písania kódu PEAR][pear-cs]
+* [Prečítajte si o štandarde písania kódu Symfony][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text][st-cs] to be given real-time feedback.
+Pre kontrolu, či váš kód dodržiava niektorého z týchto doporučení možete použiť nástroj [PHP_CodeSniffer][phpcs].
+PHP_CodeSniffer môže byť použitý pre kontrolu ľubovolného doporučenia a dostupné pluginy pre textové editory,
+ako napríklad [Sublime Text][st-cs], poskytujú spätnú väzbu v reálnom čase.
 
-You can fix the code layout automatically by using one of the following tools:
+Štýlovanie kódu môžete zmeniť automaticky pomocou jedného z nasledujúcich nástrojov:
 
-- One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
-- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
+- Jedním z nich je [PHP Coding Standards Fixer][phpcsfixer], ktorý má veľmi dobre testovanú kódovú základňu.
+- Ďalším je [PHP Code Beautifier and Fixer][phpcbf], nástroj, ktorý je súčasťou nástoja PHP_CodeSniffer.
 
-And you can run phpcs manually from shell:
+Nátroj PHP_CodeSniffer môžete spustiť manuálne z príkazového riadku pomocou nasledovného príkazu:
 
     phpcs -sw --standard=PSR2 file.php
 
-It will show errors and describe how to fix them.
-It can also be helpful to include this command in a git hook.
-That way, branches which contain violations against the chosen standard cannot enter the repository until those
-violations have been fixed.
+Výstup programu vám ukáže chyby v testovanom súbore spolu s popisom, ako tieto chyby odstrániť. Začlenenie tohoto
+programu v git hook môže byť taktiež užitočné. Vďaka tomuto nebude možné uložiť zmeny do repozitára z takých vetiev,
+ktorých súbory porušujú jeden z vybraných štandardov, pokiaľ tieto nebudú opravené.
 
-If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
+Pokiaľ používate PHP_CodeSniffer, potom môžete opraviť nezhody v layote automaticky pomocou nástroja
 [PHP Code Beautifier and Fixer][phpcbf].
 
     phpcbf -w --standard=PSR2 file.php
 
-Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
-It will show which kind of errors the code structure had before it fixed them.
+Ďalšiou možnoťou je použiť nástroj [PHP Coding Standards Fixer][phpcsfixer].
+
+Tento nástroj vám zobrazí druhy chýb v štruktúre kódu a následne tieto chyby opraví.
 
     php-cs-fixer fix -v --level=psr2 file.php
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
-readable by all current and future parties who may be working on the codebase.
-
+Preferovaným jazykom pre všetky názvy symbolov a infraštruktúru kódu je angličtina. Komentáre v kóde môžu byť písané
+v ľubovoľnom jazyku a mali by byť ľahko čitateľné pre každého, čo s daným kódom pracuje, alebo bude v budúcnosti
+pracovať.
 
 [fig]: http://www.php-fig.org/
 [psr0]: http://www.php-fig.org/psr/psr-0/
