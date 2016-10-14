@@ -12,7 +12,6 @@ anchor:  php_paas_providers
 * [fortrabbit](https://www.fortrabbit.com/)
 * [Engine Yard Cloud](https://www.engineyard.com/features)
 * [Red Hat OpenShift Platform](https://www.openshift.com/)
-* [dotCloud](https://www.dotcloud.com/dev-center/platform-documentation)
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 * [cloudControl](https://www.cloudcontrol.com/)
 * [Windows Azure](http://www.windowsazure.com/)
