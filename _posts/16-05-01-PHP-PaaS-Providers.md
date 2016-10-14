@@ -13,7 +13,6 @@ anchor:  php_paas_providers
 * [Engine Yard Cloud](https://www.engineyard.com/features)
 * [Red Hat OpenShift Platform](https://www.openshift.com/)
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
-* [cloudControl](https://www.cloudcontrol.com/)
 * [Windows Azure](http://www.windowsazure.com/)
 * [Google App Engine](https://cloud.google.com/appengine/docs/php/)
 * [Jelastic](http://jelastic.com/)
