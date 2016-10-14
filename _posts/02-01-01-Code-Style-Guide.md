@@ -6,19 +6,19 @@ anchor: code_style_guide
 # Sprievodca štýlom písania kódu {#code_style_guide_title}
 
 PHP komunita je veľká a rozmanitá. Skladá sa z nespočetného množstva knižníc, frameworkov a komponentov.
-Pre PHP programátorov je ich bežné používať a kombinovať v rámci jedného projektu niekoľko naraz. Je dôležité, aby sa
+Pre PHP programátorov je ich bežné používať a kombinovať v rámci jedného projektu aj niekoľko naraz. Je dôležité, aby sa
 kód PHP pridržiaval, pokiaľ možno čo najbližšie, k všeobecne zaužívanému štýlu písania kódu. Toto programátorom uľahčuje
-v ich projektoch použiť rôzne knižnice bez nutnosti použitia rôznych štýlov písania kódu v rôznich častiach.
+v ich projektoch použiť rôzne knižnice bez nutnosti použitia rôznych štýlov písania kódu v rôznych častiach.
 
-Skupina [Framework Interop Group][fig] navrhla a odsúhlasila sériu doporučení písania kódu. Nie každé z týchto
-doporučení ale s týmto súvisí. Tie, ktoré sa tohoto týkajú sú [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2]
+Skupina [Framework Interop Group][fig] navrhla a odsúhlasila sériu doporučení pre písanie kódu. Nie každé z týchto
+doporučení ale s týmto súvisí. Tie, ktoré sa tohto týkajú sú [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2]
 a [PSR-4][psr4]. Tieto doporučenia sú viacmenej zoznamom pravidiel, ktoré projekty ako napríklad Drupal, Zend,
-Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, atď. začinajú zavádzať. Tieto doporučenia môžete používať taktiež
-pre vaše projekty. Môžete ale taktiež pokračovať v použivaní vášho osobného štýlu.
+Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, atď. začinajú zavádzať. Tieto doporučenia môžete použiť taktiež
+vo vašich projektoch, alebo naďalej pokračujte v používaní vášho osobného štýlu.
 
-Kód PHP by ste ideálne mali písať tak, aby sa pridržiaval všeobecne známemu štandardu. Toto môže byť ľubovolná
+Kód PHP by ste mali ideálne písať tak, aby sa pridržiaval všeobecne známemu štandardu. Toto môže byť ľubovolná
 kombinácia doporúčení PSR, alebo jeden zo štandardov PEAR, alebo Zend. Toto zabezpečí čitateľnosť vášho kódu pre iných
-programátorov a konzistentnosť štýlu kódu v aplikáciach, ktoré môžu váš kód použivať.
+programátorov a konzistentnosť štýlu kódu v aplikáciach, ktoré môžu váš kód potencionálne použivať.
 
 * [Prečítajte si o PSR-0][psr0]
 * [Prečítajte si o PSR-1][psr1]
@@ -31,7 +31,7 @@ Pre kontrolu, či váš kód dodržiava niektorého z týchto doporučení može
 PHP_CodeSniffer môže byť použitý pre kontrolu ľubovolného doporučenia a dostupné pluginy pre textové editory,
 ako napríklad [Sublime Text][st-cs], poskytujú spätnú väzbu v reálnom čase.
 
-Štýlovanie kódu môžete zmeniť automaticky pomocou jedného z nasledujúcich nástrojov:
+Štýlovanie kódu môžete opraviť automaticky pomocou jedného z nasledujúcich nástrojov:
 
 - Jedním z nich je [PHP Coding Standards Fixer][phpcsfixer], ktorý má veľmi dobre testovanú kódovú základňu.
 - Ďalším je [PHP Code Beautifier and Fixer][phpcbf], nástroj, ktorý je súčasťou nástoja PHP_CodeSniffer.
@@ -40,11 +40,12 @@ Nátroj PHP_CodeSniffer môžete spustiť manuálne z príkazového riadku pomoc
 
     phpcs -sw --standard=PSR2 file.php
 
-Výstup programu vám ukáže chyby v testovanom súbore spolu s popisom, ako tieto chyby odstrániť. Začlenenie tohoto
-programu v git hook môže byť taktiež užitočné. Vďaka tomuto nebude možné uložiť zmeny do repozitára z takých vetiev,
-ktorých súbory porušujú jeden z vybraných štandardov, pokiaľ tieto nebudú opravené.
+Výstup programu vám ukáže chyby v testovanom súbore spolu s popisom, ako tieto chyby odstrániť. Začlenenie tohto
+programu v zásuvnom module Git ([Git Hook](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)) môže byť taktiež
+užitočné. Vďaka tomuto nebude možné uložiť zmeny do repozitára z takých vetiev, ktorých súbory porušujú jeden
+z vybraných štandardov, pokiaľ tieto nebudú opravené.
 
-Pokiaľ používate PHP_CodeSniffer, potom môžete opraviť nezhody v layote automaticky pomocou nástroja
+Pokiaľ používate PHP_CodeSniffer, potom môžete opraviť nezhody v štruktúre kódu automaticky pomocou nástroja
 [PHP Code Beautifier and Fixer][phpcbf].
 
     phpcbf -w --standard=PSR2 file.php
