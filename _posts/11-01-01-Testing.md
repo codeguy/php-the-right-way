@@ -1,13 +1,15 @@
 ---
+title: التجربة والإختبار
+isChild: false
 anchor: testing
 ---
 
-# Testing {#testing_title}
+# التجربة والإختبار {#testing_title}
 
-Writing automated tests for your PHP code is considered a best practice and can lead to well-built applications.
-Automated tests are a great tool for making sure your application does not break when you are making changes or adding
-new functionality and should not be ignored.
+يعتبر كتابة الإختبارات التلقائية لكود PHP هو من أفضل الممارسات التي تؤدي لتطبيقات مبنية بصور صحيحة.
+الإختبارات التلقائية هي أداة ممتازة للتأكد من أن تطبيقك لن يتوقف عندما تقوم بإدراج أو إضافة خواص وعمليات جديدة
+ويجب عدم إهمالها!
 
-There are several different types of testing tools (or frameworks) available for PHP, which use different approaches -
-all of which are trying to avoid manual testing and the need for large Quality Assurance teams, just to make sure
-recent changes didn't break existing functionality.
+هنالك أنواع معدودة لإدوات الإختبار (أو أطر عمل) متوفرة للغة PHP، وكل نوع يقوم باستخدام طريقة مختلفة كلها تقوم بتحقيق
+هدف تفادي القيام بعمليات الإختبار اليدوية وتلبية إحتياج فرق تأكيد الجودة، للتأكد من أن التغييرات الجديدة لم تقم بإيقاف
+عمل تلك الخواص الموجودة مسبقاً.

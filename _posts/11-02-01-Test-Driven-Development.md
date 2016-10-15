@@ -1,68 +1,66 @@
 ---
+title: التطوير الموجه بالاختبار
 isChild: true
 anchor:  test_driven_development
 ---
 
-## Test Driven Development {#test_driven_development_title}
+## التطوير الموجه بالاختبار TDD {#test_driven_development_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
+مقتبس من ويكيبيديا Test Driven Development
+[بالعربية](https://ar.wikipedia.org/wiki/%D8%AA%D8%B7%D9%88%D9%8A%D8%B1_%D9%85%D9%88%D8%AC%D9%87_%D8%A8%D8%A7%D9%84%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1):
+[بالإنجليزية](http://en.wikipedia.org/wiki/Test-driven_development):
 
-> Test-driven development (TDD) is a software development process that relies on the repetition of a very short
-> development cycle: first the developer writes a failing automated test case that defines a desired improvement or new
-> function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck,
-> who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple
-> designs and inspires confidence.
+> تطوير موجه بالاختبار (بالإنجليزية: Test-driven development (TTD))،
+> هو مصطلح يطلق على إحدى عمليات تطوير البرمجيات التي تعتمد على تكرار دورة تطوير قصيرة جداً:
+> بدايةً، يقوم المبرمج بكتابة حالة فحص أوتوماتيكية فاشلة ويجب على حالة الفحص هذه أن تعرّف تحسينا 
+> معينا أو وظيفة جديدة. ومن ثم يقوم بكتابة الشيفرة التي تجعل حالة الفحص ناجحة وأخيرا يقوم بإعادة 
+> تصنيع الشيفرة كي تتلاءم مع المعايير.
 
-There are several different types of testing that you can do for your application:
+هنالك بضع أنواع مختلفة من الإختبارات التي يمكن تنفيذها على تطبيقك:
 
-### Unit Testing
+### إختبار الوحدة
 
-Unit Testing is a programming approach to ensure functions, classes and methods are working as expected, from the point
-you build them all the way through the development cycle. By checking values going in and out of various functions and
-methods, you can make sure the internal logic is working correctly. By using Dependency Injection and building "mock"
-classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+Unit Testing هو طريقة برمجية للتأكد من أن الدوال والكلاسات والعمليات يعملون كما يجب، ابتداءً من نقطة بنائهم وطول فترة وجودهم
+في دائرة التطوير. وذلك عن طريق إختبار القيم المدخلة والمخرجة من دوال والعمليات لضمان أن المنطق الداخلي يعمل بصورة صحيحة.
+باستخدام حقن التوابع Dependency Injection وبناء بيانات افتراضية "mock" من كلاسات وصفات، تمكنك من التأكد بأن التوابع مستخدمة
+بطريقة مثلى في تغطية الإختبار.
 
-When you create a class or function you should create a unit test for each behavior it must have. At a very basic level
-you should make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments. This
-will help ensure that when you make changes to this class or function later on in the development cycle that the old
-functionality continues to work as expected. The only alternative to this would be `var_dump()` in a test.php, which is
-no way to build an application - large or small.
+عندما تقوم بإنشاء كلاس أو دالة يجب أن تقوم بعمل إختبار وحدة لكل وظيفة يجب أن يقوم بعملها. ابتداءً من انه يجب ان تتأكد من
+فشل الإختبار عندما تقوم باستخدام قيم خاطئة قم التأكد من نجاحه عند استخدام قيم صحيحة. فهذا سيساعد بانه عندما تقوم بعمل تغييرات
+أو تطويرات على هذه الكلاس أو الدالة لاحقاً في دورة التطوير بإن الوظائف القديمة لن تتوقف وستعمل معاً كما هو متوقع. البديل الوحيد
+قد يكون الدالة `var_dump()` في ملف test.php حيق لا يمكن بناء أي تطبيق صغير كان أو كبير.
 
-The other use for unit tests is contributing to open source. If you can write a test that shows broken functionality
-(i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If you run a project
-which accepts pull requests then you should suggest this as a requirement.
+الإستخدام الآخر لوحدات الإختبار هو المشاركة في مشاريع مفتوحة المصدر. إذا كان يمكنك كتابة إختبار يظهر فشل وظيفة معينة، عندها
+قم بإصلاح هذا الخطأ ثم اظهر نجاح الإختبار، فعندها التعديلات يتم قبولها بسرعة.
+إذا كان لديك مشروع يقبل طلبات الدمج pull requests عندها يجب اقتراح اختبار الوحداك كمطلب أساسي.
 
-[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP applications, but there
-are several alternatives
+[PHPUnit](http://phpunit.de) هو إطار عمل إختباري لكتابة الإختبارات لتطبيقات PHP ولكن هنالك بضع بدائل أخرى:
 
 * [atoum](https://github.com/atoum/atoum)
 * [Kahlan](https://github.com/crysalead/kahlan)
 * [Peridot](http://peridot-php.github.io/)
 * [SimpleTest](http://simpletest.org)
 
-### Integration Testing
+### الإختبارات المتكاملة
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
+[من ويكيبيديا بالإنجليزية](http://en.wikipedia.org/wiki/Integration_testing):
 
-> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in
-> which individual software modules are combined and tested as a group. It occurs after unit testing and before
-> validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger
-> aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the
-> integrated system ready for system testing.
+> الإختبارات المتكاملة (يطلق عليها التكامل والإختبار بعض الأحيان ويرمز لها بالإختصار "I&T") وهو في مرحلة إختبار البرنامج
+> بحيث يتم دمج دول البرنامج وإختبارها كمجموعة متكاملة. وتحدث بعد إختبار الوحدات وقبل إختبار التحقق. الإختبارات المتكاملة
+> تأخذ كمعطيات الدوال التي تم تطبيق إختبار وحدة عليها ثم جمعها معاً في تجميعه تتوائم مع خطة تجميع الوظائف سوياً ثم إخراج
+> مخرجات جاهزة لإختبار النظام.
 
-Many of the same tools that can be used for unit testing can be used for integration testing as many of the same
-principles are used.
+العديد من الأدوات التي تستخدم في اختبار الوحدات يمكن استخدامها في الإختبارات المتكاملة فهما يتشابهان في عديد من المفاهيم الأساسية.
 
-### Functional Testing
+### الإختبار الوظيفي
 
-Sometimes also known as acceptance testing, functional testing consists of using tools to create automated tests that
-actually use your application instead of just verifying that individual units of code are behaving correctly and that
-individual units can speak to each other correctly. These tools typically work using real data and simulating actual
-users of the application.
+يعرف أيضاً بإختبار القبول، يعتمد الإختبار الوظيفي على استخدام أدوات لإنشاء اختبارات تلقائية تقوم فعلياً باستخدام البرنامج
+بدلاً من التحقق من كل وحدة على حدة تقوم بالوظيفة الصحيحة، وأن هذه الوحدات تقوم بالتخاطب والعمل سوياً بشكل صحيح. هذه الأدوات
+تعمل باستخدام بيانات حقيقية وتقوم بمحاكاة مستخدمين حقيقيين للبرنامج.
 
-#### Functional Testing Tools
+#### أدوات الإختبار الوظيفي
 
 * [Selenium](http://seleniumhq.com)
 * [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
-* [Storyplayer](http://datasift.github.io/storyplayer) is a full-stack testing framework that includes support for creating and destroying test environments on demand
+* [Codeception](http://codeception.com) إطار عمل إختباري متكامل يحتوي على أدوات إختبار القبول.
+* [Storyplayer](http://datasift.github.io/storyplayer) إطار عمل إختباري متكامل يحتوي على دعم لإنشاء وهدم بيئات إختبار

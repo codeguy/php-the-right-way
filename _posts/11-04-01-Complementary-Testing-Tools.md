@@ -1,19 +1,18 @@
 ---
+title: أدوات الإختبار المتكاملة
 isChild: true
 anchor:  complementary_testing_tools
 ---
 
-## Complementary Testing Tools {#complementary_testing_tools_title}
+## أدوات الإختبار المتكاملة {#complementary_testing_tools_title}
 
-Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper
-libraries useful for any preferred approach taken.
+بجانب اطر العمل الإختبارية والسلوكية، هنالك عدد من الأطر العامة والمكتبات المساعدة المفيدة لأي وسيلة مفضلة.
 
-### Tool Links
+### روابط الأدوات
 
-* [Selenium] is a browser automation tool which can be [integrated with PHPUnit]
-* [Mockery] is a Mock Object Framework which can be integrated with [PHPUnit] or [PHPSpec]
-* [Prophecy] is a highly opinionated yet very powerful and flexible PHP object mocking framework. It's integrated with
-[PHPSpec] and can be used with [PHPUnit].
+* [Selenium] أداة متصفح تلقائية يمكنها [الدمج مع PHPUnit]
+* [Mockery] أطار عمل لعمل كائنات للإختبار يمكن دمجها مع [PHPUnit] أو [PHPSpec]
+* [Prophecy] من أعنف وأقوى أطر العمل لإنشاء كائنات اختبار وتدمج مع [PHPSpec] ويمكن استخدامها مع [PHPUnit] أيضاً.
 
 
 [Selenium]: http://seleniumhq.org/
