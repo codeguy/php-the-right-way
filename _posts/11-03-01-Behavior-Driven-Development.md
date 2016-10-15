@@ -21,9 +21,9 @@ StoryBDD: يركز على الخواص والتفاعلات الفعلية.
 
 ### روابط BDD
 
-* [Behat]: StoryBDD إطار عمل اختباري للغة PHP  مستوحى من مشروع [Cucumber] في لغة Ruby;
-* [PHPSpec]: SpecBDD إطار عمل إختباري للغة PHP مستوحى من مضروع [RSpec] في لغة Ruby;
-* [Codeception]: هو إطار إختباري يقوم باستخدام مفاهيم التطوير الموجه بالسلوك BDD.
+* [Behat] : StoryBDD إطار عمل اختباري للغة PHP  مستوحى من مشروع [Cucumber] في لغة Ruby;
+* [PHPSpec] : SpecBDD إطار عمل إختباري للغة PHP مستوحى من مضروع [RSpec] في لغة Ruby;
+* [Codeception] : هو إطار إختباري يقوم باستخدام مفاهيم التطوير الموجه بالسلوك BDD.
 
 
 [Behat]: http://behat.org/
