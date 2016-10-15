@@ -1,35 +1,38 @@
 ---
+title: Menné priestory
 isChild: true
 anchor:  namespaces
 ---
 
-## Namespaces {#namespaces_title}
+## Menné priestory {#namespaces_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP
-code may use the same class name as another library. When both libraries are used in the same namespace, they collide
-and cause trouble.
+PHP komunita má množstvo vývojárov vytvárajúcich množstvo kódu, ako už bolo spomenuté vyššie. Tento fakt môže spôsobiť
+to, že rôzne knižnice môžu používať rovnaké názvy tried. Ak sú dve takéto knižnice použité v rovnakom mennom priestore,
+potom medzi nimi nastane kolízia, čo spôsobuje problémy.
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating
-system directories that _namespace_ files; two files with the same name may co-exist in separate directories. Likewise,
-two PHP classes with the same name may co-exist in separate PHP namespaces. It's as simple as that.
+Riešením na tento problém sú _Menné priestory_. Ako je spomenuté v referenčnom manuáli PHP, menné priestory môžu byť
+prirovnané k adresárom v operačných systémoch, ktoré menná trieda uchováva; dva súbory s rovnakým menom môžu koexistovať
+v separátnych adresároch. Podobne, dve PHP triedy s rovnakým názvom môžu koexistovať v separátnych menných priestoroch.
 
-It is important for you to namespace your code so that it may be used by other developers without fear of colliding
-with other libraries.
+Je dôležité, aby váš kód bol v mennom priestore. V prípade použitia vášho kódu inými vývojármi toto zabezpečí,
+že nebude kolidovať s ostatnými knižnicami.
 
-One recommended way to use namespaces is outlined in [PSR-4][psr4], which aims to provide a standard file, class and
-namespace convention to allow plug-and-play code.
+Jeden z odporučených spôsobov použitia menných priestorov je naznačený v doporučení [PSR-4][psr4]. Toto doporučenie
+si kladie za cieľ poskytnúť konvencie pre štandardný súbor, triedu a menný priestor, čo umožňuje použitie kódu
+ako plug-and-play.
 
-In October 2014 the PHP-FIG deprecated the previous autoloading standard: [PSR-0][psr0], which has been replaced with
-[PSR-4][psr4]. Currently both are still perfectly usable and PSR-0 is not going away. As PSR-4 requires PHP 5.3 and
-many PHP 5.2-only projects currently implement PSR-0. Luckily those PHP 5.2-only projects are starting to up their
-version requirements, meaning PSR-0 is being used less and less.
+PHP-FIG v októbri 2014 označila predchádzajúce doporučenie pre samozavádzanie (autoloading), [PSR-0][psr0],
+ako zastaralé. Toto doporučenie bolo nahradené doporučením [PSR-4][psr4]. Obe doporučenia sú stále použitelné, a pretože
+PSR-4 požaduje minimálne verziu PHP 5.3, PSR-0 naďalej ostáva, kedže mnoho PHP 5.2 projektov toto doporučenie uplatňuje.
+Mnoho PHP 5.2 projektov je našťastie aktualizovaných na novšie verzie, takže je doporučenie PSR-0 používané stále menej
+a menej.
 
-If you're going to use an autoloader standard for a new application or package then you almost certainly want
-to look into PSR-4.
+Ak sa vo vašej novej aplikácií, alebo balíku chystáte použiť štandard pre samozavádzanie, potom doporučenie PSR-4 je
+tá správna voľba.
 
-* [Read about Namespaces][namespaces]
-* [Read about PSR-0][psr0]
-* [Read about PSR-4][psr4]
+* [Prečitajte si o menných priestoroch][namespaces]
+* [Prečitajte si o PSR-0][psr0]
+* [Prečitajte si o PSR-4][psr4]
 
 
 [namespaces]: http://php.net/language.namespaces
