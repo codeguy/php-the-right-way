@@ -6,13 +6,10 @@ anchor:  configuration_files
 
 ## ملفات الضبط {#configuration_files_title}
 
-When creating configuration files for your applications, best practices recommend that one of the following methods be
-followed:
+عندما تقوم بإنشاء ملف ضبط لتطبيقك، فهنالك أفضل الممارسات التي ينصح بتطبيق إحداها:
 
-- It is recommended that you store your configuration information where it cannot be accessed directly and pulled in
-via the file system.
-- If you must store your configuration files in the document root, name the files with a `.php` extension. This ensures
-that, even if the script is accessed directly, it will not be output as plain text.
-- Information in configuration files should be protected accordingly, either through encryption or group/user file
-system permissions.
-- It is a good idea to ensure that you do not commit configuration files containing sensitive information eg passwords or API tokens to source control.
+- من الأفضل أن تقوم بحفظ معلومات الضبط في مسار لا يمكن الوصول إليه مباشرة ويتم الوصول إليه عن طريق المسار الداخلي للنظام.
+- إذا كان لابد من حفظ ملف الضبط في المسار الرئيس للمشروع، قم بتسمية ملف الضبط بلاحقة `.php`. وهذا يضمن أنه حتى وإن تم الوصول
+للملف مباشرة، فلن يتم طباعة أي نص.
+- المعلومات التي في ملف الضبط يجب أن يتم حمايتها، إما عن طريق تشفيرها أو إعطائها صلاحيات على المستخدم/المجموعة في النظام.
+- من الجيد التأكد من عدم إعتماد ملفات الضبط التي تحتوي على بيانات حساس مثل كلمات المرور أو رموز API ونشرها في نظام التحكم في الكود المصدري (GIT).
