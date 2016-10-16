@@ -1,6 +1,7 @@
 ---
+title:  توثيق المصدر البرمجي
+isChild: false
 anchor: documenting
-title:  Documenting your Code
 ---
 
-# Documenting your Code {#documenting_title}
+# توثيق المصدر البرمجي {#documenting_title}
