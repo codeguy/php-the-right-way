@@ -1,81 +1,78 @@
 ---
+title: بناء ونشر التطبيقات
 isChild: true
 anchor:  building_and_deploying_your_application
 ---
 
-## Building and Deploying your Application {#building_and_deploying_your_application_title}
+## بناء ونشر التطبيقات {#building_and_deploying_your_application_title}
 
-If you find yourself doing manual database schema changes or running your tests manually before updating your files
-(manually), think twice! With every additional manual task needed to deploy a new version of your app, the chances for
-potentially fatal mistakes increase. Whether you're dealing with a simple update, a comprehensive build process or even
-a continuous integration strategy, [build automation][buildautomation] is your friend.
+إذا وجدت نفسك تقوم بتغيير مخططات قاعدة البيانات يدوياً أو تشغيل الإختبارات يدوياً قبل تحديث الملفات (يدوياً) فعليك التفكير مرة اخرى.
+في كل مرة تقوم فيها بتحديث تطبيقك إلى نسخة أحدث يدوياً، هنالك فرصة لحدوث خطأ. سواء كنت تتعامل مع وسيلة سهلة للتحديث و أو عملية
+بناء شاملة أو حتى خطة تكامل مستمرة Continues Integration. عندها [البناء التقائي][buildautomation] هو صديقك!
 
-Among the tasks you might want to automate are:
+من بين المهام التي قد تحتاج أن تكون بصورة تلقائية:
 
-* Dependency management
-* Compilation, minification of your assets
-* Running tests
-* Creation of documentation
-* Packaging
-* Deployment
+* إدارة التوابع
+* تجميع وتصغير ملفات الميديا "Assets" كالصور وملفات css و js مثلا.
+* تشغيل الإختبارات
+* إنشاء التوثيق
+* انشاء الحزم
+* النشر
 
 
-### Deployment Tools
+### أدوات النشر
 
-Deployment tools can be described as a collection of scripts that handle common tasks of software deployment. The deployment tool is not a part of your software, it acts on your software from 'outside'.
+يمكن وصف أدوات النشر بأنها مجموعة من الأوامر الكتابية تقوم بإدارة مهام نشر البرنامج. أدوات التطوير لا تعتبر جزء من البرنامج فهي تمثل البرنامج من الخارج فقط.
 
-There are many open source tools available to help you with build automation and deployment, some are written in PHP others aren't. This shouldn't hold you back from using them, if they're better suited for the specific job. Here are a few examples:
+هنالك العديد من الأدوات المتوفر ومفتوحة المصدر تساعدك للبناء والنشر التلقائي. بعضها كتب بلغة PHP وبعضها لا. وهذا ليس سبب يدعوك لعدم استخدامها، إذا كانت تناسب ما تقوم به. بعض الأمثلة:
 
-[Phing] can control your packaging, deployment or testing process from within a XML build file. Phing (which is based on [Apache Ant]) provides a rich set of tasks usually needed to install or update a web application and can be extended with additional custom tasks, written in PHP. It's a solid and robust tool and has been around for a long time, however the tool could be perceived as a bit old fashioned because of the way it deals with configuration (XML files).
+[Phing] تمكنك من التحكم في عملية تحزيم وإختبار ونشر تطبيقك في إطار استخدام ملف XML. Phing (وهو مبني على [Apache Ant]) يتيح مجموعة مهام عادة ما تستخدم لتنصيب أو تحديث تطبيقات الويب ويمكن تمديدها للمزيد من المهام. وتكتب بلغة PHP. فهي أداة فعالة وثابتة وموجودة منذ مدة طويلة، ولكن يمكن النظر لهذه الأداة بأنها قديمة بعض الشيء بسبب الطريقة التي تتعامل بها مع ملفات الضبط XML.
 
-[Capistrano] is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however you can successfully deploying PHP systems with it. Successful use of Capistrano depends on a working knowledge of Ruby and Rake. Dave Gardner's blog post [PHP Deployment with Capistrano][phpdeploy_capistrano] is a good starting point for PHP developers interested in Capistrano.
+[Capistrano] وهو نظام يخص *المطورين المتوسطين - المتقدمين* لتنفيذ أوامر في بنائية متكررة واحدة منها أو أكثر في أجهزة عن بعد. تم ضبطه لمشر تطبيقات Ruby on Rails، ولكن يمكن بنجاح نشر تطبيقات وأنظمة PHP باستخدامه. الإستخدام الناجح لـ Capistrano يعتمد على خلفية عمل باستخدام Ruby و Rake. نشر ديف جاردنرز مقالة بعنوان [PHP Deployment with Capistrano][phpdeploy_capistrano] فهي بداية جيدة لمطوري PHP المهتمين باستخدام Capistrano.
 
-[Rocketeer] gets its inspiration and philosophy from the Laravel framework. Its goal is to be fast, elegant and ease to use with smart defaults. It features multiple servers, multiple stages, atomic deploys and deployment can be performed in parallel. Everything in the tool can be hot swapped or extended, and everything is written in PHP.
+[Rocketeer] إستمدت فلسفتها من إطار عمل لارافيل Laravel. يهدف لأن يكون سريع وسهل الإستخدام مع إفتراضيات ذكية. يقوم بالعمل على عدة سيرفرات عدة منصات و نشر كلي وجزئي يمكن تنفيذهم على التوازي. كل شيء في هذه الأداة يمكن أن يتم تحويله أو تمديده وكل شيء مكتوب بلغة PHP.
 
-[Deployer] is a deployment tool written in PHP, it's simple and functional. Runs tasks in parallel, atomic deployment, keeps consistency between servers. Recipes of common tasks for Symfony, Laravel, Zend Framework and Yii. Younes Rafie's article  [Easy Deployment of PHP Applications with Deployer][phpdeploy_deployer] is a great tutorial for deploying your application with the tool.
+[Deployer] وهي أداة نشر كتبت بلغة PHP فهي بسيطة وعملية. تقوم بتنفيذ مهام على التوازي والنشر الجزئي مع التنسيق ما بين السيرفرات. وصفات لمهام مكررة لأطر عمل مثل Symfony و Laravel و Zend Framework و Yii. مقالة يونس رفيع [Easy Deployment of PHP Applications with Deployer][phpdeploy_deployer] تعتبر درس ممتاز لنشر التطبيقات باستخدام هذه الأداة.
 
-[Magallanes] another tool written in PHP with simple configuration done in YAML files. It has support for multiple servers and environments, atomic deployment, and have some built in tasks that you can leverage for common tools and frameworks.
+[Magallanes] وهي أداة أخرى مكتوبة بلغة PHP مع ضبط بسيط في ملفات YAML. تدعم بيئات وسيرفرات متعددة و النشر الجزئية ومدمج معها بعض المهام المضمنة والتي تتيح لك النفوذ مع أدوات وأطر عمل مشهورة.
 
-#### Further reading:
+#### المزيد من القراءة
 
 * [Automate your project with Apache Ant][apache_ant_tutorial]
-* [Expert PHP Deployments][expert_php_deployments] - free book on deployment with Capistrano, Phing and Vagrant.
-* [Deploying PHP Applications][deploying_php_applications] - paid book on best practices and tools for PHP deployment.
+* [Expert PHP Deployments][expert_php_deployments] - كتاب مجاني يشرح عملية النشر باستخدام Capistrano و Phing و Vagrant.
+* [Deploying PHP Applications][deploying_php_applications] - كتاب مدفوع من أفضل الممارسات والأدوات لنشر تطبيقات PHP.
 
-### Server Provisioning
+### تموين السيرفر
 
-Managing and configuring servers can be a daunting task when faced with many servers. There are tools for dealing with this so you can automate your infrastructure to make sure you have the right servers and that they're configured properly. They often integrate with the larger cloud hosting providers (Amazon Web Services, Heroku, DigitalOcean, etc) for managing instances, which makes scaling an application a lot easier.
+إدارة وضبط السيرفر هي مهمة شاقة خصوصاً عندما تكون موجهة على عدة سيرفرات. هنالك أدوات تتعامل مع هذا الوضع وأتمتتة البنية التحتية للتأكد من أنه لديك سيرفرات تم ضبطها بطريقة مثلى. عادة ما تتكامل مع استضافات سحابية مثل Amazon Web Service و Heroku و DigitalOcean وغيرها. لإدارة الوحدات التي تقوم بتنسيق التطبيق بشكل أبسط.
 
-[Ansible] is a tool that manages your infrastructure through YAML files. It's simple to get started with and can manage complex and large scale applications. There is an API for managing cloud instances and it can manage them through a dynamic inventory using certain tools.
+[Ansible] وهي أداة لإدارة البنية التحتية باستخدام ملفات YAML. من السهل البدء بالاستخدام وإدارة وتنسيق تطبيقات كبيرة ومعقدة. هنالك API لإدارة الوحدات السحابية باستخدام بضع أدوات.
 
-[Puppet] is a tool that has its own language and file types for managing servers and configurations. It can be used in a master/client setup or it can be used in a "master-less" mode. In the master/client mode the clients will poll the central master(s) for new configuration on set intervals and update itself if necessary. In the master-less mode you can push changes to your nodes. 
+[Puppet] وهي أداة تستخدم ملفات ولغة خاصة بها لإدارة وضبط السيرفرات. يمكن استخدامها في Master/Client وايضا يمكن استخدامها في طور "master-less". في طور master/client يقوم Client باقتراع الماستر المركزي لطلب ضبط جديد في وحدات زمنية متفرقة لتحديث نفسها إذا لزم الأمر. وفي طور master-less يتم إرسال التحديثات إلى النقاط. 
 
-[Chef] is a powerful Ruby based system integration framework that you can build your whole server environment or virtual boxes with. It integrates well with Amazon Web Services through their service called OpsWorks.
+[Chef] وهو إطار عمل قوي مبني على Ruby يمكن من بناء بيئة السيرفر بالكامل أو صناديق افتراضية وترتبط بشكل جيد باستخدام خدمة في Amazon Web Services تسمى OpsWorks.
 
-#### Further reading:
+#### المزيد من القراءة:
 
 * [An Ansible Tutorial][an_ansible_tutorial]
-* [Ansible for DevOps][ansible_for_devops] - paid book on everything Ansible
-* [Ansible for AWS][ansible_for_aws] - paid book on integrating Ansible and Amazon Web Services
+* [Ansible for DevOps][ansible_for_devops] - كتاب مدفوع لكل شيء باستخدام Ansible
+* [Ansible for AWS][ansible_for_aws] - كتاب مدفوع لربط Ansible مع Amazon Web Services
 * [Three part blog series about deploying a LAMP application with Chef, Vagrant, and EC2][chef_vagrant_and_ec2]
 * [Chef Cookbook which installs and configures PHP and the PEAR package management system][Chef_cookbook]
 * [Chef video tutorial series][Chef_tutorial]
 
-### Continuous Integration
+### الربط المستمر Continuous Integration
 
-> Continuous Integration is a software development practice where members of a team integrate their work frequently,
-> usually each person integrates at least daily — leading to multiple integrations per day. Many teams find that this
-> approach leads to significantly reduced integration problems and allows a team to develop cohesive software more
-> rapidly.
+> الربط المستمر هو ممارة في تطوير البرامج حين يكون هنالك أعضاء فريق يقومون بربط أعمالهم بشكل متواصل، عادة ما يكون كل
+> شخص بالربط على الأقل مرة في اليوم - مما يعني العديد من الربط في خلال اليوم الواحد. العديد من الفرق ترى أن استخدام هذه
+> الممارسة يؤدي إلى خفض فعلي لمشاكل الربط وتتيح للفرق أن تقوم بتطوير برامج متماسكة بسرعة.
 
-*-- Martin Fowler*
+*-- مارتين فولر*
 
-There are different ways to implement continuous integration for PHP. [Travis CI] has done a great job of
-making continuous integration a reality even for small projects. Travis CI is a hosted continuous integration service
-for the open source community. It is integrated with GitHub and offers first class support for many languages including
-PHP.
+هنالك طرق مختلفة لتطبيق الربط المستمر في PHP. يعد [Travis CI] من أفضلهم فهو يقوم بتحقيق الربط المتواصل بشكل حتى للمشاري الصغيرة.
+وهو عبارة عن خدمة مستضافة لمجتمع المصدر المفتوح. وترتبط مع GitHub وتوفر دعم من الدرجة الأولى للعديد من اللغات من ضمنها PHP.
 
-#### Further reading:
+#### المزيد من القراءة:
 
 * [Continuous Integration with Jenkins][Jenkins]
 * [Continuous Integration with PHPCI][PHPCI]

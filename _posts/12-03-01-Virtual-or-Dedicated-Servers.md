@@ -1,43 +1,42 @@
 ---
+title: السيرفرات المخصصة أو الإفتراضية
 isChild: true
 anchor:  virtual_or_dedicated_servers
 ---
 
-## Virtual or Dedicated Servers {#virtual_or_dedicated_servers_title}
+## السيرفرات المخصصة أو الإفتراضية {#virtual_or_dedicated_servers_title}
 
-If you are comfortable with systems administration, or are interested in learning it, virtual or dedicated servers give
-you complete control of your application's production environment.
+**Virtual or Dedicated Servers** 
+إذا كنت مرتاح بالعمل كمشرف نظام أو مهتم بتعلمه فالسيرفرات المخصصة والإفتراضية تتيح لك مطلق الحرية والتحكم في بيئة التطبيق النهائية.
 
-### nginx and PHP-FPM
+### nginx و PHP-FPM
 
-PHP, via PHP's built-in FastCGI Process Manager (FPM), pairs really nicely with [nginx], which is a lightweight,
-high-performance web server. It uses less memory than Apache and can better handle more concurrent requests. This is
-especially important on virtual servers that don't have much memory to spare.
+تقترن PHP مع [nginx] باستخدام البنية المدمجة FastCGI Process Manager (FPM) وهو سيرفر خفيف ذو كفاءة عالية.
+ويقوم باستخدام ذاكرة أقل من نظيره Apache ويقوم بإدارة عدد أكبر من الطلبات المتزامنة. وهو مناسب في السيرفرات الإفتراضية
+بحيث لا يوجد الكثير من الذاكرة لإهدارها.
 
-* [Read more on nginx][nginx]
-* [Read more on PHP-FPM][phpfpm]
-* [Read more on setting up nginx and PHP-FPM securely][secure-nginx-phpfpm]
+* [قراءة المزيد عن nginx][nginx]
+* [قراءة المزيد عن PHP-FPM][phpfpm]
+* [قراءة المزيد عن ضبط nginx مع PHP-FPM بصورة آمنة][secure-nginx-phpfpm]
 
-### Apache and PHP
+### Apache و PHP
 
-PHP and Apache have a long history together. Apache is wildly configurable and has many available 
-[modules][apache-modules] to extend functionality. It is a popular choice for shared servers and an easy setup for PHP
-frameworks and open source apps like WordPress. Unfortunately, Apache uses more resources than nginx by default and
-cannot handle as many visitors at the same time.
+تملك PHP و Apache تاريخاً طويلاً معاً. فـ Apache واسع الإنتشاء ولديه العديد من [الوحدات][apache-modules] لتمديد وظائفه.
+فهو خيار مشهور لكل السيرفرات المشتركة وطريقة سهلة لتشغيل إطر عمل PHP وتطبيقات المصدر المفتوح مثل WordPress.
+للأسف Apache يستخدم الكثير من المصادر بعكس Nginx ولا يقوم بإدراة العديد من الزوار في نفس الزمن.
 
-Apache has several possible configurations for running PHP. The most common and easiest to setup is the [prefork MPM]
-with mod_php5. While it isn't the most memory efficient, it is the simplest to get working and to use. This is probably
-the best choice if you don't want to dig too deeply into the server administration aspects. Note that if you use
-mod_php5 you MUST use the prefork MPM.
+يوجد عدة طرق لضبط PHP للعمل مع Apache. فالطريقة الأكثر شيوعاً وأسهلها هي تنصيب [prefork MPM] مع الوحدة mod_php5.
+بينما هو ليس بخيار جيد في استهلاك الذاكرة ولكنه الأبسط للإستخدام والتشغيل. ويعتبر أفضل خيار إذا كنت لا تنوي التعمق في
+إدارة السيرفرات. لاحظ أنه عند استخدام mod_php5 فإنه يجب عليك استخدام [prefork MPM].
 
-Alternatively, if you want to squeeze more performance and stability out of Apache then you can take advantage of the
-same FPM system as nginx and run the [worker MPM] or [event MPM] with mod_fastcgi or mod_fcgid. This configuration will
-be significantly more memory efficient and much faster but it is more work to set up.
+عوضاً عن ذلك، إذا كنت تريد أن تعتصر المزيد من كفاءة الأداء والإستقرار من Apache عندها يمكن الإستفادة من نفس نظام FPM مثل
+Nginx وتشغيل [worker MPM] أو [event MPM] مع الوحدة mod_fastcgi أو mod_fcgid.
+هذا الضبط سيكون ذا تأثير واضح وكبير على الذاكرة وسرعة ملحوظة ولكن هنالك جهد أكبر للتنصيب.
 
-* [Read more on Apache][apache]
-* [Read more on Multi-Processing Modules][apache-MPM]
-* [Read more on mod_fastcgi][mod_fastcgi]
-* [Read more on mod_fcgid][mod_fcgid]
+* [قراءة المزيد عن Apache][apache]
+* [قراءة المزيد عن دوال المعالجة المتعددة Multi-Processing Modules][apache-MPM]
+* [قراءة المزيد عن mod_fastcgi][mod_fastcgi]
+* [قراءة المزيد عن mod_fcgid][mod_fcgid]
 
 
 [nginx]: http://nginx.org/
