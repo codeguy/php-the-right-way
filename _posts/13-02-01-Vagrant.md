@@ -1,31 +1,32 @@
 ---
+title: Vagrant
 isChild: true
 anchor:  vagrant
 ---
 
 ## Vagrant {#vagrant_title}
 
-[Vagrant] helps you build your virtual boxes on top of the known virtual environments and will configure these
-environments based on a single configuration file. These boxes can be set up manually, or you can use "provisioning"
-software such as [Puppet] or [Chef] to do this for you. Provisioning the base box is a great way to ensure that
-multiple boxes are set up in an identical fashion and removes the need for you to maintain complicated "set up"
-command lists. You can also "destroy" your base box and recreate it without many manual steps, making it easy to create
-a "fresh" installation.
+يساعد [Vagrant] على بناء صناديق افتراضية فوق ما يعرف بالبيئة الإفتراضية Virtual Environment ويتم ضبط هذه البيئة بناءً
+على ملف ضبط واحد. هذه الصناديق يمكن تنصيبها بشكل يدوي أو باستخدام أدوات "التموين" مثل [Puppet] أو [Chef]. تموين الصناديق
+هو طريقة فعالة لضمان أن جميع الصناديق تعمل بشكل متساوي وتزيل كل التعقيدات لتنصيب الأوامر. ويمكن أيضاً تدمير الصناديق وإعادة
+إنشائها بدون أي خطوات يدوية مما يجعل من السهل انشاء نسخ جديدة.
 
-Vagrant creates folders for sharing your code between your host and your virtual machine, which means that you can
-create and edit your files on your host machine and then run the code inside your virtual machine.
+يقوم Vagrant بانشاء مجلدات لكي تقوم بمشاركة الكود مابين الجهاز الحلي والجهاز الإفتراضي مما يعني أنه يمكن إنشاء وتعديل ملفاتك
+وتنفيذها من الجهاز الحالي من دون الحاجة للدخول للجهاز الإفتراضي.
 
-### A little help
+### القليل من المساعدة
 
-If you need a little help to start using Vagrant there are some services that might be useful:
+إذا كنت تريد المساعدة للبدء في استخدام Vagrant هنالك بعض الخدام التي قد تكون مفيدة لك:
 
-- [Rove][Rove]: service that allows you to pre-generate typical Vagrant builds, PHP among the options. The provisioning is
-made with Chef.
-- [Puphpet][Puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides local VMs,
-it can be used to deploy to cloud services as well. The provisioning is made with Puppet.
-- [Protobox][Protobox]: is a layer on top of vagrant and a web GUI to setup virtual machines for web development. A single YAML
-document controls everything that is installed on the virtual machine.
-- [Phansible][Phansible]: provides an easy to use interface that helps you generate Ansible Playbooks for PHP based projects.
+- [Rove][Rove]: خدمة تتيح لك أن تقوم بتوليد بنائية Vagrant بشكل مسبق بناءً على خيارات ويتم التموين باستخدام Chef.
+
+- [Puphpet][Puphpet]: أداة سهلة تدار باستخدام واجهة رسومية لتنصيب أجهزة إفتراضية لتطوير PHP. **تركز فقط على PHP**. بجانب
+أجهزة افتراضية يمكن استخدامها للنشر على خدمات استضافة سحابية أيضاً. ويتم التموين باستخدام Puppet.
+
+- [Protobox][Protobox]: وهي طبقة فوق Vagrant وهو تطبيق ويب بواجهة استخدام لتنصيب أجهزة افتراضية لتطوير الويب. تستخدم ملف
+YAML واحد للتحكم بكل شيء يتم تنصيبه داخل الجهاز الإفتراضي.
+
+- [Phansible][Phansible]: يوفر طريقة سهلة لاستخدام واجهة تساعد في توليد خطط Ansible للمشاريع المبنية بلغة PHP.
 
 
 [Vagrant]: http://vagrantup.com/
