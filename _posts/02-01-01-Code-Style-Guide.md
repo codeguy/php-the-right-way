@@ -10,6 +10,11 @@ anchor: code_style_guide
 فمن الطبيعي ان يختار المطورين عدة خيارات منها ودمج بعضها في داخل اطار مشروع واحد. فمن المهم ان ينظم للكود البرمجي للغة PHP
 (قدر الإمكان) باسلوب برمجي معين لكي يسهل على المطورين التعامل المشترك وفهم محتوى الكود البرمجي في مكتباتهم في مشاريعهم
 
+The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
+to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
+recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
+FuelPHP, Lithium, etc are adopting. You can use them for your own projects, or continue to use your own
+personal style.
 قامت [Framework Interop Group][fig] بتقديم واجازة سلسلة من الأساليب الموصى بها.
 ليس كل هذه التوصيات هي توصيات تتعلق باسلوب كتابة الكود البرمجي، ولكن تحديداً ما يتعلق باسلوب الكتابة هم:
 [PSR-0][psr0]، [PSR-1][psr1]، [PSR-2][psr2]، [PSR-4][psr4].

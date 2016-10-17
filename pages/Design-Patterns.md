@@ -11,7 +11,7 @@ make your code easier to manage and easier for others to understand.
 
 * [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
-* [Collection of implementation examples](https://github.com/domnikl/DesignPatternsPHP)
+* [Collection of implementation examples](http://designpatternsphp.readthedocs.io/en/latest/)
 
 ## Factory
 

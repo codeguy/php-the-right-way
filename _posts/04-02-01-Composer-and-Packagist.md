@@ -16,16 +16,22 @@ anchor:  composer_and_packagist
 
 ### كيفية تنصيب Composer
 
+The safest way to download composer is by [following the official instructions](https://getcomposer.org/download/).   
+This will verify the installer is not corrupt or tampered with.  
+The installer installs Composer *locally*, in your current working directory.
+
+We recommend installing it *globally* (e.g. a single copy in /usr/local/bin) - to do so, run this afterwards:
 يمكنك تنصيب Composer محلياً (في مجلدك الحالي) أو بشكل عام (مثلا /usr/local/bin وهو المحبذ).
 فلنفترض انك تريد تنصيب Composer بشكل عام:
 
 {% highlight console %}
-curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
+**Note:** If the above fails due to permissions, prefix with `sudo`.
 **ملاحظة:** اذا فشل الأمر السابق بسبب صلاحيات قم بتشغيل الأمر `mv` مرة اخرى بكتابة الأمر `sudo` قبله.
 
+To run a locally installed Composer you'd use `php composer.phar`, globally it's simply `composer`.
 سوف يتم تحميل `composer.phar` (PHAR هو اختصار لـ PHP binary Archive وتعني ملف PHP مضغوط قابل للتنفيذ). يمكنك
 تشغيل هذا الملف باستخدام الأمر `php` لإدارة التوابع في مشروعك.
 

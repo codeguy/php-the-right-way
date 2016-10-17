@@ -62,6 +62,10 @@ foreach ($periodIterator as $date) {
 }
 {% endhighlight %}
 
+A popular PHP API extension is [Carbon](http://carbon.nesbot.com). It inherits everything in the DateTime class, so involves minimal code alterations, but extra features include Localization support, further ways to add, subtract and format a DateTime object, plus a means to test your code by simulating a date and time of your choosing.
+
+* [Read about DateTime][datetime]
+* [Read about date formatting][dateformat] (accepted date format string options)
 * [إقرأ المزيد عن DateTime][datetime]
 * [إقرأ المزيد عن تنسيق التاريخ][dateformat] (التنسيقات المعتمدة)
 

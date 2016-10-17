@@ -6,6 +6,8 @@ anchor:  mac_setup
 
 ## التنصيب على نظام تشغيل Mac {#mac_setup_title}
 
+OS X comes prepackaged with PHP but it is normally a little behind the latest stable. Mavericks has 5.4.17,
+Yosemite 5.5.9, El Capitan 5.5.29 and Sierra 5.6.24, but with PHP 7.0 out that is often not good enough.
 عادة ما يحتوي نظام التشغيل OS X على إصدارة PHP ولكنها عادة ما تكون غير حديثة.
 فالنسخة OS X Mavericks تحتوي على الإصدارة 5.4.17، والنسخة OS X Yosemite تحتوي على الإصدارة 5.5.9 ،
 والنسخة OS X El Capitan تحتوي على الإصدارة 5.5.29. لكن مع انطلاق اصدارة PHP 7.0 لم تعد هذه الإصدارات جيدة للإستخدام.
