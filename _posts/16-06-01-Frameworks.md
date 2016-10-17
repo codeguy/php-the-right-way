@@ -1,28 +1,27 @@
 ---
+title: أطر العمل
 isChild: true
 anchor:  frameworks
 ---
 
-## Frameworks {#frameworks_title}
+## أطر العمل {#frameworks_title}
 
-Rather than re-invent the wheel, many PHP developers use frameworks to build out web applications. Frameworks abstract
-away many of the low-level concerns and provide helpful, easy-to-use interfaces to complete common tasks.
+بدلاً من إعادة اختراع العجلة ، العديد من مطوري PHP يستخدمون إطر عمل لبنا تطبيقاتهم. أطر العمل تجرد العديد من المستويات الدنيا
+ومشاكلها وتعقيداتها وتقوم بتوفير واجهة مفيدة وسهلة الإستخدام لإنجاز المهام المعتادة.
 
-You do not need to use a framework for every project. Sometimes plain PHP is the right way to go, but if you do need a
-framework then there are three main types available:
+لا يتوجب عليك استخدام إطار عمل لكل مشروع. فبعض الأحيان تكون الطريقة التقليدية للكتابة هي الوسيلة المثلى للعمل، ولكن
+إذا كنت تريد إطار عمل، عندها هنالك ثلاث أنواع متوفرة:
 
-* Micro Frameworks
-* Full-Stack Frameworks
-* Component Frameworks
+* أطر العمل الصغيرة
+* أطر العمل الكاملة
+* أطر عمل مكونات
 
-Micro-frameworks are essentially a wrapper to route a HTTP request to a callback, controller, method, etc as quickly as
-possible, and sometimes come with a few extra libraries to assist development such as basic database wrappers and the
-like. They are prominently used to build remote HTTP services.
+فأطر العمل الصغير هي عبارة عن ربط لطلبات HTTP إلى متحكمات ودوال وغيرها وعادة ما تكون سهلة وسريعة جداً وبعض الأحيان تكون
+مع بضع مكتبات للمساعدة في التطوير كمساعدات للإتصال والعمل علىقاعدة البيانات وما شابهها. عادة ما تستخدم لبناء خدمات HTTP عن بعد.
 
-Many frameworks add a considerable number of features on top of what is available in a micro-framework and these are
-known Full-Stack Frameworks. These often come bundled with ORMs, Authentication packages, etc.
+العديد من أطر العمل تضيف عدد من المميزات على قالب أطر العمل الصغير وهذه الأطر هي أطر العمل الكاملة. وعادة ما يكون مدمجاً
+فيها حزم ORM و مصداقة وتحقق.
 
-Component-based frameworks are collections of specialized and single-purpose libraries. Disparate component-based
-frameworks can be used together to make a micro- or full-stack framework.
+أطر عمل المكونات عادة ما تكون تجميعة من مكتبات مخصصة لعمل وظيفة محددة. يمكن استخدام بضع منها سوياً لعمل أطار عمل صغير أو كامل.
 
 * [Popular PHP Frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)

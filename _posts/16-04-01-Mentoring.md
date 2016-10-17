@@ -1,8 +1,9 @@
 ---
+title: الإشراف والتوجيه
 isChild: true
 anchor:  mentoring
 ---
 
-## Mentoring {#mentoring_title}
+## الإشراف والتوجيه {#mentoring_title}
 
-* [php-mentoring.org](http://php-mentoring.org/) - Formal, peer to peer mentoring in the PHP community.
+* [php-mentoring.org](http://php-mentoring.org/) - إشراف واحد لواحد رسمي في مجتمع PHP.

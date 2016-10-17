@@ -1,9 +1,10 @@
 ---
+title: من المصادر الأصلية
 isChild: true
 anchor:  from_the_source
 ---
 
-## From the Source {#from_the_source_title}
+## من المصادر الأصلية {#from_the_source_title}
 
-* [PHP Website](http://php.net/)
-* [PHP Documentation](http://php.net/docs.php)
+* [موقع PHP](http://php.net/)
+* [دليل توثيق PHP](http://php.net/docs.php)

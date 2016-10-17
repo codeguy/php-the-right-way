@@ -1,5 +1,7 @@
 ---
+title: المصادر
+isChild: false
 anchor: resources
 ---
 
-# Resources {#resources_title}
+# المصادر {#resources_title}

@@ -1,23 +1,23 @@
 ---
+title: المكونات
 isChild: true
 anchor:  components
 ---
 
-## Components {#components_title}
+## المكونات {#components_title}
 
-As mentioned above "Components" are another approach to the common goal of creating, distributing and implementing
-shared code. Various component repositories exist, the main two of which are:
+كما هو مذكور أعلاه "المكونات" هي هدف معروف لإنشاء ونشر وزرع ومشاركة الكود. العديد من حاويات المكونات موجودة بالفعل
+اشهرها:
 
 * [Packagist]
 * [PEAR]
 
-Both of these repositories have command line tools associated with them to help the installation and upgrade processes,
-and have been explained in more detail in the [Dependency Management] section.
+كلاهما حاويات لديها أدوات سطور أوامر تساعدك لتنصيب وتحديث وترقية المكونات وقد تم شرحها في فصل [Dependency Management].
 
-There are also component-based frameworks and component-vendors that offer no framework at all. These projects provide
-another source of packages which ideally have little to no dependencies on other packages, or specific frameworks.
+هنالك أيضاً مكونات خاصة بأطر عمل ومزودين والتي لا تتيح أي أطار عمل على الإطلاق. هذه المشاريع توفع مصادر اخرى من الحزم
+المتطابقة مع القليل من الإعتمادية على حزم أخرى أو أطر عمل معينة.
 
-For example, you can use the [FuelPHP Validation package], without needing to use the FuelPHP framework itself.
+مثلاً يمك استخدام [FuelPHP Validation package] "حزمة للتحقق" من دون الحاجة لاستخدام أطار عمل FuelPHP.
 
 * [Aura]
 * [FuelPHP]
@@ -25,13 +25,13 @@ For example, you can use the [FuelPHP Validation package], without needing to us
 * [Orno]
 * [Symfony Components]
 * [The League of Extraordinary Packages]
-* Laravel's Illuminate Components
+* مكونات من Laravel Illuminate components:
     * [IoC Container]
     * [Eloquent ORM]
     * [Queue]
 
-_Laravel's [Illuminate components] will become better decoupled from the Laravel framework. For now, only the
-components best decoupled from the Laravel framework are listed above._
+_[Illuminate components] قريباً سيتم عزله من إطار عمل Laravel. حتى الآن أفضل المكونات المعزولة من إطار عمل Laravel
+قد تم سردها أعلاه._
 
 
 [Packagist]: /#composer_and_packagist

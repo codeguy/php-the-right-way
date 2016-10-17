@@ -1,10 +1,10 @@
 ---
-title: PHP PaaS Providers
+title: مزودي PHP PaaS
 isChild: true
 anchor:  php_paas_providers
 ---
 
-## PHP PaaS Providers {#php_paas_providers_title}
+## مزودي PHP PaaS {#php_paas_providers_title}
 
 * [PagodaBox](https://pagodabox.io/)
 * [AppFog](https://www.ctl.io/appfog/)
@@ -21,4 +21,4 @@ anchor:  php_paas_providers
 * [IBM Bluemix Cloud Foundry](https://console.ng.bluemix.net/)
 * [Pivotal Web Service Cloud Foundry](https://run.pivotal.io/)
 
-To see which versions these PaaS hosts are running, head over to [PHP Versions](http://phpversions.info/paas-hosting/).
+للإطلاع على أي نسخة تعمل هذه الخدمات قم بالذهاب الى هنا [PHP Versions](http://phpversions.info/paas-hosting/).
