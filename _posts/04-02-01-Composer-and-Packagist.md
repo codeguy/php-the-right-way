@@ -15,28 +15,20 @@ anchor:  composer_and_packagist
 في [Packagist]، المستودع الحصري لكل مكتبات PHP المتوافقة مع Composer.
 
 ### كيفية تنصيب Composer
+  
+الطريقة الآمنة لتحميل composer هي عن طريق [التعليمات الرسمية](https://getcomposer.org/download/).
+منها سيتم التحقق من ملفات التنصيب بأنها سليمة ولم يتم التلاعب بها.
+يقوم التنصيب بتنصيب Composer *محلياً* في مجلد العمل الحالي.
 
-The safest way to download composer is by [following the official instructions](https://getcomposer.org/download/).   
-This will verify the installer is not corrupt or tampered with.  
-The installer installs Composer *locally*, in your current working directory.
-
-We recommend installing it *globally* (e.g. a single copy in /usr/local/bin) - to do so, run this afterwards:
-يمكنك تنصيب Composer محلياً (في مجلدك الحالي) أو بشكل عام (مثلا /usr/local/bin وهو المحبذ).
-فلنفترض انك تريد تنصيب Composer بشكل عام:
+ننصح بتنصيبه *للإتاحة العامة* مثلا كنسخة واحدة في `/usr/local/bin` للقيام بهذا قم بتنفيذ:
 
 {% highlight console %}
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
-**Note:** If the above fails due to permissions, prefix with `sudo`.
 **ملاحظة:** اذا فشل الأمر السابق بسبب صلاحيات قم بتشغيل الأمر `mv` مرة اخرى بكتابة الأمر `sudo` قبله.
 
-To run a locally installed Composer you'd use `php composer.phar`, globally it's simply `composer`.
-سوف يتم تحميل `composer.phar` (PHAR هو اختصار لـ PHP binary Archive وتعني ملف PHP مضغوط قابل للتنفيذ). يمكنك
-تشغيل هذا الملف باستخدام الأمر `php` لإدارة التوابع في مشروعك.
-
-**ملاحظة:** إذا قمت باستخدام مخرجات تنفيذ عملية مباشرة للإستخدام مع مترجم PHP، الرجاء قراءة
-الكود البرمجي أولاً للتحقق من انه آمن.
+لتشغيل Composer المنصب محلياً قم باستخدام `php composer.phar` وعامةً قم باستخدام `composer` فقط.
 
 #### التنصيب على نظام تشغيل Windows
 
