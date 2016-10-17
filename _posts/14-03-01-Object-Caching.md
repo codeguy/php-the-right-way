@@ -1,51 +1,51 @@
 ---
+title: تخزين الكائنات
 isChild: true
 anchor:  object_caching
 ---
 
-## Object Caching {#object_caching_title}
+## تخزين الكائنات {#object_caching_title}
 
-There are times when it can be beneficial to cache individual objects in your code, such as with data that is expensive
-to get or database calls where the result is unlikely to change. You can use object caching software to hold these
-pieces of data in memory for extremely fast access later on. If you save these items to a data store after you retrieve
-them, then pull them directly from the cache for following requests, you can gain a significant improvement in
-performance as well as reduce the load on your database servers.
+هنالك العديد من الأحيان يكون فيها من المفيد القيام بتخزين كائنات بشكل مؤقت في مصدرك مثل البيانات التي من الصعب الحصول
+عليها أو إتصالات قاعدة البيانات عندما تكون النتائج من الإستعلامات نادراً ما تتغير. يمكن استخدام التخزين المؤقت للكائنات
+لمخزن بيانات بعد استرجاعها ثم وضعها مباشرة من المخزن المؤقت للإستعلامات القادمة يمكن الحصول عندها على تطور ملحوظ في الأداء
+بجانب تقليل الحمل على سيرفرات قاعدة البيانات.
 
-Many of the popular bytecode caching solutions let you cache custom data as well, so there's even more reason to take
-advantage of them. APCu, XCache, and WinCache all provide APIs to save data from your PHP code to their memory cache.
+العديد من حلول المخازن المؤقتة المشهورة من النوع bytecode تتيح إمكانية تخزين بيانات أخرى أيضاً مما يعني سبب آخر يجعلك
+تقوم بالإستفادة منها. يتيح كل من APCuو XCache و WinCache يقوموا بتوفير API لحفظ البيانات من كود PHP لمخازن بياناتهم
+على الذاكرة.
 
-The most commonly used memory object caching systems are APCu and memcached. APCu is an excellent choice for object
-caching, it includes a simple API for adding your own data to its memory cache and is very easy to setup and use. The
-one real limitation of APCu is that it is tied to the server it's installed on. Memcached on the other hand is
-installed as a separate service and can be accessed across the network, meaning that you can store objects in a
-hyper-fast data store in a central location and many different systems can pull from it.
+أشهر أنظمة تخزين الكائنات هما APCu و memcached. APCu هو خيار ممتاز لتخزين الكائنات وتضم واجهة API سهلة الإستخدام لإضافة
+بياناتك الخاصة إلى الذاكرة وسهل التنصيب والإستخدام. التقييد الوحيدهو أنه مقيد بالسيرفر المنصب عليه.
+Memcached يتم تنصيبه كخدمة منفصلة ويمكن أن يتم الوصول إليه عبر الشبكة، مما يعني أنه يمكن تخزين الكائنات في مخازن بيانات
+فائقة السرعة في أماكن مركزية والعديد من الأنظمة تتمكن من الإستخدام منها.
 
-Note that when running PHP as a (Fast-)CGI application inside your webserver, every PHP process will have its own cache,
-i.e. APCu data is not shared between your worker processes. In these cases, you might want to consider using memcached
-instead, as it's not tied to the PHP processes.
+لاحظ أنه عند تشغيل PHP في طور Fast-CGI داخل سيرفر الويب، عندها كل عمليات PHP سيكون لديها المخزن المؤقت الخاص بها، مثلاً
+بيانات APCu سيتكون منفصلة تماماً ولن يتم مشاركتها مع العمليات الأخرى. في هذه الحالات قد تضطر لإستخدام memcached عوضاً عن الأول.
+نظراً لانه غير مقترن بأي عملية PHP.
 
-In a networked configuration APCu will usually outperform memcached in terms of access speed, but memcached will be
-able to scale up faster and further. If you do not expect to have multiple servers running your application, or do not
-need the extra features that memcached offers then APCu is probably your best choice for object caching.
+في التواصل الشبكي يحصل APCu على أعلى أداء نظراً للطريقة التي تتيح سرعة الوصول، ولكن بالمقابل memcached قابلة للتطوير
+بشكل أسرع وأكبر. إذا كنت لا تتوقع انه سيكون لديك عدة سيرفرات تخدم تطبيقك عندها لن تستفيد من خواص memcached، إذاً APCu
+هو أفضل خيار لتخزين الكائنات.
 
-Example logic using APCu:
+أمثلة إستخدام منطقية لـ APCu:
 
 {% highlight php %}
 <?php
-// check if there is data saved as 'expensive_data' in cache
+// قم بالتأكد من أن هنالك بيانات مخزنة مؤقتاً باسم 'expensive_data'
 $data = apc_fetch('expensive_data');
 if ($data === false) {
-    // data is not in cache; save result of expensive call for later use
+    // البيانات غير موجودة في المخزن المؤقت، قم بحفظ النتائج المكلفة لإستخدام لاحق
     apc_add('expensive_data', $data = get_expensive_data());
 }
 
 print_r($data);
 {% endhighlight %}
 
-Note that prior to PHP 5.5, APC provides both an object cache and a bytecode cache. APCu is a project to bring APC's
-object cache to PHP 5.5+, since PHP now has a built-in bytecode cache (OPcache).
+لاحظ أنه قبل إصدارة PHP 5.5 تتيح APC كل من مخازن كائنات ومخازن bytecode. APCu هو مشروع لجلب مخازن الكائنات إلى PHP 5.5+
+لأنه الآن PHP لديها مخازن bytecode مدمج (OPcache).
 
-### Learn more about popular object caching systems:
+### تعرف المزيد عن أنظمة تخزين الكائنات المشهورة:
 
 * [APCu](https://github.com/krakjoe/apcu)
 * [APC Functions](http://php.net/ref.apc)

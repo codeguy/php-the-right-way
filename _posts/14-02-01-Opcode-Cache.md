@@ -1,24 +1,25 @@
 ---
+title: التخزين المؤقت لشفرة التشغيل
 isChild: true
 anchor:  opcode_cache
 ---
 
-## Opcode Cache {#opcode_cache_title}
+## التخزين المؤقت لشفرة التشغيل {#opcode_cache_title}
 
-When a PHP file is executed, it must first be compiled into [opcodes](http://php.net/manual/en/internals2.opcodes.php) (machine language instructions for the CPU). If the source code is unchanged, the opcodes will be the same, so this compilation step becomes a waste of CPU resources.
+عندما يتم تنفيذ ملف PHP يجب أن يتم تجميع الملف وتحويله [لشيفرة تشغير opcodes](http://php.net/manual/en/internals2.opcodes.php) (وهي لغة أوامر للمعالج). إذا لم يتغير المصدر البرمجي فإن الشيفرة المصدرية ستظل كما هي، إذاً هذه الخطوة التجميعية ستكون مضيعة لمصدر معالجة.
 
-An opcode cache prevents redundant compilation by storing opcodes in memory and reusing them on successive calls. It will typically check signature or modification time of the file first, in case there have been any changes.
+التخزين المؤقت للشيفرة التشغيلية تمنع تكرار التجميعات عبر حفظ الشيفرة في الذاكرة واستخدامها عند الإستدعاء. فهي فعلياً ستقوم بفحص التوقيع أو زمن التعديل للملف أولاً للتأكد من أي تعديلات قد طرأت عليه.
 
-It's likely an opcode cache will make a significant speed improvement to your application.  Since PHP 5.5 there is one built in - [Zend OPcache][opcache-book]. Depending on your PHP package/distribution, it's usually turned on by default - check [opcache.enable](http://php.net/manual/en/opcache.configuration.php#ini.opcache.enable) and the output of `phpinfo()` to make sure. For earlier versions there's a PECL extension.
+من الواضح أن تخزين شيفرة التشغيل سيؤثر بشكل ايجابي على سرعة التطبيق. منذ الإصدارة PHP 5.5 هنالك محرك مدمج واحد وهو [Zend OPcache][opcache-book]. باختلاف توزيعة PHP لديك عادة ما تكون هذه الخاصية مفعلة بشكل افتراضي - ابحث عن [opcache.enable](http://php.net/manual/en/opcache.configuration.php#ini.opcache.enable) في مخرجات الدالة `phpinfo()` للتأكد. للإصدارات القديمة هنالك لاحقة PECL يمكن استخدامها.
 
-Read more about opcode caches:
+إقرأ المزيد عن التخزين المؤقت للشيفرة البرمجية opcode caches:
 
-* [Zend OPcache][opcache-book] (bunded with PHP since 5.5)
-* Zend OPcache (formerly known as Zend Optimizer+) is now [open source][Zend Optimizer+]
-* [APC] - PHP 5.4 and earlier
+* [Zend OPcache][opcache-book] (مدمجة في PHP منذ الإصدارة 5.5)
+* Zend OPcache (رسمياً بالإسم Zend Optimizer+) صارت الآن [مفتوحة المصدر][Zend Optimizer+]
+* [APC] - PHP 5.4 والإصدارات الأقدم
 * [XCache]
-* [WinCache] (extension for MS Windows Server)
-* [list of PHP accelerators on Wikipedia][PHP_accelerators]
+* [WinCache] (لاحقة للإستخدام في MS Windows Server)
+* [قائمة بكل مسرعات PHP على ويكيبيديا][PHP_accelerators]
 
 
 [opcache-book]: http://php.net/book.opcache

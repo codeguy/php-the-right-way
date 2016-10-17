@@ -1,8 +1,10 @@
 ---
+title: التخزين المؤقت
+isChild: false
 anchor: caching
 ---
 
-# Caching {#caching_title}
+# التخزين المؤقت {#caching_title}
 
-PHP is pretty quick by itself, but bottlenecks can arise when you make remote connections, load files, etc. 
-Thankfully, there are various tools available to speed up certain parts of your application, or reduce the number of times these various time-consuming tasks need to run.
+تعتبر PHP سريعة في نفسها، ولكن بعض الإختناقات قد تحدث عندما تقوم بعمل إتصالات خارجية أو إدراج ملفات أو غيرها.
+لحسن الحظ هنالك عدة إدوات متوفرة لتقوم بتسريع أجزاء محددة في التطبيقات أو تقليل عدد مرات استهلاك تنفيذ هذه المهام في كل مرة.
