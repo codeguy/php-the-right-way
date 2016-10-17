@@ -1,22 +1,22 @@
 ---
+title: مجموعات مستخدمي PHP
 isChild: true
 anchor:  user_groups
 ---
 
-## PHP User Groups {#user_groups_title}
+## مجموعات مستخدمي PHP {#user_groups_title}
 
-If you live in a larger city, odds are there's a PHP user group nearby. You can easily find your local PUG at
-the [usergroup-list at php.net][php-uglist] which is based upon [PHP.ug][php-ug]. Alternate sources might be
-[Meetup.com][meetup] or a search for ```php user group near me``` using your favourite search engine
-(i.e. [Google][google]). If you live in a smaller town, there may not be a local PUG; if that's the case, start one!
+إذا كنت تعيش في مدينة كبيرة، هنالك العديد من مجموعات PHP حولك. يمكنك ببساطة إيجاد مجموعات محلية PUG في قائمة
+[usergroup-list at php.net][php-uglist] والتي بنيت على على [PHP.ug][php-ug]. مصدر بديل قد يكون [Meetup.com][meetup]
+أو قم بالبحث عن ```php user group near me``` باستخدام محرك البحث المفضل لديك، مثلا [Google][google]. إذا كنت تعيش في
+مدينة صغيرة قد لا يكون هنالك مجموعة محلية، فلم لا تقوم ببدء بواحدة!
 
-Special mention should be made of two global user groups: [NomadPHP] and [PHPWomen]. [NomadPHP] offers twice monthly
-online user group meetings with presentations by some of the top speakers in the PHP community.
-[PHPWomen] is a non-exclusive user group originally targeted towards the women in the PHP world. Membership is open to
-everyone who supports a more diverse community. PHPWomen provide a network for support, mentorship and education, and
-generally promote the creating of a "female friendly" and professional atmosphere.
+من الجدير بالذكر مجموعتين عالمية: [NomadPHP] و [PHPWomen]. [NomadPHP] تقوم بتوفير إجتماع مستخدمين أونلاين مرتين شهرياً
+يقوم بالتحدث فيها بضع مشاهير مجتمع PHP.
+[PHPWomen] هي مجموعة غير حصرية تستهدف النساء في عالم PHP. العضوية مفتوحة للجميع ولكل من يدعم المجتمع. وتوفر شبكة من الدعم
+والإرشاد والتعلم وبشكل عام يروجون لإنشاء بيئة "نسائية" إحترافية.
 
-[Read about User Groups on the PHP Wiki][php-wiki]
+[قراءة المزيد عن المجموعات في ويكي PHP][php-wiki]
 
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: http://www.meetup.com/find/

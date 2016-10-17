@@ -1,15 +1,15 @@
 ---
+title: مؤتمرات PHP
 isChild: true
 anchor:  conferences
 ---
 
-## PHP Conferences {#conferences_title}
+## مؤتمرات PHP {#conferences_title}
 
-The PHP community also hosts larger regional and national conferences in many countries around the world. Well-known
-members of the PHP community usually speak at these larger events, so it's a great opportunity to learn directly from
-industry leaders.
+مجتمع PHP يقوم باستضافة مؤتمرات عالمية ومحلية في العديد من المدن حول العالم. عادة ما يتحدث فيها اعضاء مجتمع PHP المعروفين
+وهي فرصة ممتازة للتعلم مباشرة من قائدي المنشأة.
 
-[Find a PHP Conference][php-conf]
+[قم بإيجاد مؤتمر PHP][php-conf]
 
 
 [php-conf]: http://php.net/conferences/index.php
