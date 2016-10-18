@@ -6,9 +6,6 @@ anchor:  namespaces
 
 ## فضاءات الأسماء Namespaces {#namespaces_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP
-code might use the same class name as another. When both libraries are used in the same namespace, they collide
-and cause trouble.
 كما قد سبق ذكره ان مجتمع PHP يحتوي على عدد كبير من الطورين وبدورهم يطورون أعداداً ضخمة من البرمجيات. وهذا يعني ا انه مكتبة واحدة
 من برمجية PHP قد تستخدم اسماء كائنات مسماة في مكتبة اخرى، اي قد يحدث تضارب في المسميات. فهذا يحدث عندما يستخدم كلا المكتبتين في نفس
 فضاء الاسم (namespace) مما تسبب مشاكل ناجمة من التضارب الإسمي.
@@ -23,13 +20,10 @@ and cause trouble.
 هنالك طريقة موصى بها لإستخدام فضاءات الأسماء وهي مدرجة [PSR-4][psr4]، وتهدف بتحديد نمط قياسي لكل ملف و كائن و فضاء اسم لسهولة الإستخدام وامكانية
 الإدراج والبدء بالاستخدام مباشرة لهذه المكتبات.
 
-In October 2014 the PHP-FIG deprecated the previous autoloading standard: [PSR-0][psr0]. Both PSR-0 and PSR-4 are still perfectly usable.  The latter requires PHP 5.3, so many PHP 5.2-only projects implement PSR-0. 
-في اكتوبر 20014 PHP-FIG قامت بإهمال وايقاف العمل بطريقة الإدراج التلقائي القياسية بالرمز [PSR-0][psr0]، حيث انها استبدلت
-بالتوصية القياسية بالرمز [PSR-4][psr4]. حالياً ما يزال هنالك امثلة وتطبيقة جيدة ومستقرة تستخدم التوصية القياسية القديمة PSR-0 فلذلك سوف تظل تلك
-الطريقة في الميدان. لحسن الحظ مثل هذه التطبيقات تعمل بإصدار PHP 5.2 القديمة قد بدأت بالترقية الى توافقية مع الإصدارات الجديدة مما يعني انكماش
-استخدام التوصية PSR-0 القديمة.
+في اكتوبر 20014 PHP-FIG قامت بإهمال وايقاف العمل بطريقة الإدراج التلقائي القياسية بالرمز [PSR-0][psr0]. كلا الإصدارين [PSR-0][psr0]
+و [PSR-4][psr4] ما يزالا صالحين للإستخدام.  ولكن الثاني يتطلب إصدارة PHP 5.3 لذا العديد من المشاريع المطبقة على إسدارة PHP 5.2 تقوم
+باستخدام PSR-0.
 
-If you're going to use an autoloader standard for a new application or package, look into PSR-4.
 إذا كنت تنوي استخدام الإستدعاء التلقائي القياسي في تطبيقك او حزمتك، حينها يجب ان تعير انتباهك بان تستخدم التوصية القياسية PSR-4.
 
 * [قراءة المزيد عن فضاءات الأسماء Namespaces][namespaces]
