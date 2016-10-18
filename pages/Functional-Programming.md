@@ -1,26 +1,25 @@
 ---
+title:  البرمجة الوظيفية في PHP
 layout: page
-title:  Functional Programming in PHP
 sitemap: true
 ---
 
-# Functional Programming in PHP
+# البرمجة الوظيفية في PHP
 
-PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and
-built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
-other functions and a function can return other functions (a feature called higher-order functions).
 
-Recursion, a feature that allows a function to call itself, is supported by the language, but most of the PHP code
-focus is on iteration.
+تقوم PHP بدعم دوال عالية مما يعني ان الدوال التي يمكن اسناده الى متغير. كل من الدوال المعرفة من قبل المستخدم والدوال
+المدمة يمكن ان يتم مرجعيتها باستخدام دوال وندائها بشكل تلقائي. الدوال يمكن تمريرها كقيم الى دولا والدوال يمكن ان ترجع
+دوال (خاصية تسمى دوال ذات ترتيب أعلى).
 
-Anonymous functions (with support for closures) have been present since PHP 5.3 (2009).
+العودية وهي خاصية تتيح للدالة نداء نفسها ، وهي مدعومة من اللغة ولكن الكثير من كود PHP يقوم بالتركيز على التكرارات.
 
-PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
-can be used interchangeably with anonymous functions in almost all cases.
+الدوال المجهولة (بالدعم بالأطار المغلق) تم عرضها منذ PHP 5.3 (2009).
 
-The most common usage of higher-order functions is when implementing a strategy pattern. The built-in `array_filter()`
-function asks both for the input array (data) and a function (a strategy or a callback) used as a filter function on
-each array item.
+في PHP 5.4 تم إدراج الإمكانية لإنساب وربط الأطر الى مدى العناصر وقد تم تطوير دعم الدوال القابلة للنداء حت تتمكن من استخدام
+بشكل معاكس مع الدوال المجهولة في أغلب الحالات.
+
+الإستخدام المشهور للدوال الأعلى ترتيب وهو تطبيقها في نموذج الإستراتيجي. الدالة المدمجة `array_filter()` تطلب كل من
+كمدخل مصفوفة بيانات ودالة (استراتيجية او دالة للنداء) تستخدم كدالة فلترة لكل عنصر على المصفوفة.
 
 {% highlight php %}
 <?php
@@ -42,12 +41,10 @@ $output = array_filter($input, function($item) {
 print_r($output);
 {% endhighlight %}
 
-A closure is an anonymous function that can access variables imported from the outside scope without using any global
-variables. Theoretically, a closure is a function with some arguments closed (e.g. fixed) by the environment when it is
-defined. Closures can work around variable scope restrictions in a clean way.
+الإطار المغلق هي دوال لا اسمية تقوم بالوصول للتمغيرات بادراجها من خارج المدى بدون استخدام اي متغيرات عامة. نظرياً
+الإطار المغلق هو دالة لديها مدخلات مغلقة او ثابتة بالبيئة التي هي فيها. يمكن أن يكون الاطار حول مدى متغير محكوم بطريقة محكمة.
 
-In the next example we use closures to define a function returning a single filter function for `array_filter()`, out
-of a family of filter functions.
+في المثال التالي سنقوم باستخدام الإطار المغلق بتعريف الدالة لإرجاع دالة فيلتر للدالة `array_filter()`:
 
 {% highlight php %}
 <?php
@@ -71,17 +68,17 @@ $output = array_filter($input, criteria_greater_than(3));
 print_r($output); // items > 3
 {% endhighlight %}
 
-Each filter function in the family accepts only elements greater than some minimum value. Single filter returned by
-`criteria_greater_than` is a closure with `$min` argument closed by the value in the scope (given as an argument when
-`criteria_greater_than` is called).
+كل دالة ترشيح من هذه العائلة تقوم باستقبال عناصر أكبر من أقل قيمة. الفلتر الواحد يقوم بارجاع 
+`criteria_greater_than` دالة لا اسمية `$min` قيمة مغلقة بالقيمة في المدى المعطى كقيمة عندما تم استدعاء
+`criteria_greater_than`.
 
-Early binding is used by default for importing `$min` variable into the created function. For true closures with late
-binding one should use a reference when importing. Imagine a templating or input validation library, where closure is
-defined to capture variables in scope and access them later when the anonymous function is evaluated.
+يتم استخدام الربط المسبق بصورة افتراضية تقوم بادراج `$min` المتغير في الدالة المنشئة. لإنشاء دوال لا اسمية بربط لاحق
+يجب استخدام المرجع عند الإدرج. تصور مكتبة ترشيح المدخلات او قوالب موجودن في دالة لا اسمية لقبض المتغيرات في مدى معين
+والوصل اليهم لاحقاً عن تنفيذ الدالة اللا اسمية.
 
-* [Read about Anonymous functions][anonymous-functions]
-* [More details in the Closures RFC][closures-rfc]
-* [Read about dynamically invoking functions with `call_user_func_array()`][call-user-func-array]
+* [قراءة المزيد عن الدوال المجهولة][anonymous-functions]
+* [المزيد من التفاصيل عن الدوال اللا أسمية][closures-rfc]
+* [قراءة المزيد عن الاستدعاء الدايناميكي للدوال باستخدام `call_user_func_array()`][call-user-func-array]
 
 
 [anonymous-functions]: http://php.net/functions.anonymous
