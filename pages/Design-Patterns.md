@@ -1,5 +1,5 @@
 ---
-title:  Design Patterns
+title:  نماذج التصميم
 layout: page
 sitemap: true
 ---
