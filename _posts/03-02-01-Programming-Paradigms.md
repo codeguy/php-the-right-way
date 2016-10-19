@@ -31,7 +31,7 @@ PHP هي لغة مرنة ومتغيرة حيث انها تدعم عدة أسال
 أضافت PHP 5.4 إمكانية اسناد دوال وكائنات مغلقة او لا اسمية لنطاق الكائن وقد تم التطوير للإستدعاءات حتى يمكن استخدامها
 مع كل الدوال في اي حال.
 
-* أكمل القراء عن [البرمجة الظيفية في PHP Functional Programming in PHP](/pages/Functional-Programming.html)
+* أكمل القراء عن [البرمجة الظيفية في PHP Functional Programming in PHP](pages/Functional-Programming.html)
 * [قراءة المزيد عن الدوال اللا اسمية Anonymous Functions][anonymous-functions]
 * [قراءة المزيد عن الكائنات اللا اسمية Closure class][closure-class]
 * [قراءة المزيد عن الدوال والكائنات المغلقة أو الل اسمية Closures RFC][closures-rfc]
