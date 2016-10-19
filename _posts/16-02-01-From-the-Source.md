@@ -1,4 +1,5 @@
 ---
+title:   From the Source
 isChild: true
 anchor:  from_the_source
 ---
