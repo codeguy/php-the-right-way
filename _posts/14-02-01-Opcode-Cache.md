@@ -13,7 +13,7 @@ It's likely an opcode cache will make a significant speed improvement to your ap
 
 Read more about opcode caches:
 
-* [Zend OPcache][opcache-book] (bunded with PHP since 5.5)
+* [Zend OPcache][opcache-book] (bundled with PHP since 5.5)
 * Zend OPcache (formerly known as Zend Optimizer+) is now [open source][Zend Optimizer+]
 * [APC] - PHP 5.4 and earlier
 * [XCache]
