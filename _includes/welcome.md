@@ -41,6 +41,7 @@ _PHP: The Right Way_ is translated into many different languages:
 * [Thai](https://apzentral.github.io/php-the-right-way/)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Ukrainian](http://iflista.github.com/php-the-right-way/)
+* [العربية](https://adaroobi.github.io/php-the-right-way/)
 
 ## How to Contribute
 
