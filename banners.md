@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Website Banners
+title: بانرات ويب
 description: "قم بالنشر على الويب باستخدام صور  _PHP: بالطريقة الصحيحة_! قم بإخبار المطورين الطامحين لإيجاد معلومات مفيدة."
 sitemap: true
 ---
