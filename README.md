@@ -45,7 +45,7 @@ developers know where to find good information!
 * [Korean](http://modernpug.github.io/php-the-right-way)
 * [Persian](http://novid.github.io/php-the-right-way/)
 * [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
+* [Portuguese (Brazil)](http://br.phptherightway.com/)
 * [Romanian](https://bgui.github.io/php-the-right-way/)
 * [Russian](http://getjump.github.io/ru-php-the-right-way)
 * [Serbian](http://phpsrbija.github.io/php-the-right-way/)
@@ -54,6 +54,7 @@ developers know where to find good information!
 * [Thai](https://apzentral.github.io/php-the-right-way/)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Ukrainian](http://iflista.github.com/php-the-right-way)
+* [العربية](https://adaroobi.github.io/php-the-right-way/)
 
 ### Translations
 
