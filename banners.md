@@ -11,7 +11,7 @@ sitemap: true
 
 ## ازرار 1 (120x90)
 
-<p><img src="/images/banners/btn1-120x90.png" alt="PHP: The Right Way"/></p>
+<p><img src=images/banners/btn1-120x90.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -21,7 +21,7 @@ sitemap: true
 
 ## ازرار 2 (120x60)
 
-<p><img src="/images/banners/btn2-120x60.png" alt="PHP: The Right Way"/></p>
+<p><img src=images/banners/btn2-120x60.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -31,7 +31,7 @@ sitemap: true
 
 ## متصدرة (728x90)
 
-<p><img src="/images/banners/leaderboard-728x90.png" alt="PHP: The Right Way"/></p>
+<p><img src=images/banners/leaderboard-728x90.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -41,7 +41,7 @@ sitemap: true
 
 ## مستطيل كبير (386x280)
 
-<p><img src="/images/banners/lg-rect-386x280.png" alt="PHP: The Right Way"/></p>
+<p><img src=images/banners/lg-rect-386x280.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -51,7 +51,7 @@ sitemap: true
 
 ## مستطيل متوسط (300x250)
 
-<p><img src="/images/banners/med-rect-300x250.png" alt="PHP: The Right Way"/></p>
+<p><img src=images/banners/med-rect-300x250.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -61,7 +61,7 @@ sitemap: true
 
 ## مستطيل (180x150)
 
-<p><img src="/images/banners/rect-180x150.png" alt="PHP: The Right Way"/></p>
+<p><img src=images/banners/rect-180x150.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -71,7 +71,7 @@ sitemap: true
 
 ## زر مربع (125x125)
 
-<p><img src="/images/banners/sq-btn-125x125.png" alt="PHP: The Right Way"/></p>
+<p><img src=images/banners/sq-btn-125x125.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
@@ -81,7 +81,7 @@ sitemap: true
 
 ## مستطيل طولي (240x400)
 
-<p><img src="/images/banners/vert-rect-240x400.png" alt="PHP: The Right Way"/></p>
+<p><img src=images/banners/vert-rect-240x400.png" alt="PHP: The Right Way"/></p>
 
 {% highlight html %}
 <a href="http://www.phptherightway.com">
