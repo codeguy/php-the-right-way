@@ -172,12 +172,12 @@ array of data:
 
 interface OutputInterface
 {
-    public function load();
+    public function load( array $arrayOfData );
 }
 
 class SerializedArrayOutput implements OutputInterface
 {
-    public function load()
+    public function load( array $arrayOfData )
     {
         return serialize($arrayOfData);
     }
@@ -185,7 +185,7 @@ class SerializedArrayOutput implements OutputInterface
 
 class JsonStringOutput implements OutputInterface
 {
-    public function load()
+    public function load( array $arrayOfData )
     {
         return json_encode($arrayOfData);
     }
@@ -193,7 +193,7 @@ class JsonStringOutput implements OutputInterface
 
 class ArrayOutput implements OutputInterface
 {
-    public function load()
+    public function load( array $arrayOfData )
     {
         return $arrayOfData;
     }
@@ -222,9 +222,9 @@ class SomeClient
         $this->output = $outputType;
     }
 
-    public function loadOutput()
+    public function loadOutput( array $arrayOfData )
     {
-        return $this->output->load();
+        return $this->output->load( array $arrayOfData );
     }
 }
 {% endhighlight %}
@@ -237,13 +237,15 @@ that has been set.
 <?php
 $client = new SomeClient();
 
+$arrayOfData = array('Hello', 'World!');
+
 // Want an array?
 $client->setOutput(new ArrayOutput());
-$data = $client->loadOutput();
+$data = $client->loadOutput( $arrayOfData );
 
 // Want some JSON?
 $client->setOutput(new JsonStringOutput());
-$data = $client->loadOutput();
+$data = $client->loadOutput( $arrayOfData );
 
 {% endhighlight %}
 
