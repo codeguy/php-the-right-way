@@ -1,15 +1,16 @@
 ---
 layout: page
-title:  The Basics
+title:  الأساسيات
 sitemap: true
 ---
 
-# The Basics
+# الأساسيات
 
-## Comparison operators
+## عوامل المقارنة
 
-Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
-problem stems from strict comparisons (the comparison of booleans as integers).
+عوامل المقارنة هي جانب متغاضى عنه في PHP، قد يؤدي إلى نتائج غير متوقعة. واحدة من هذه المشاكل تقع من المقارنات
+المحكمة (كالمقارنة ما بين بيانات من النوع رقمي ببيانات من النوع منطقي).
+
 
 {% highlight php %}
 <?php
@@ -29,19 +30,19 @@ if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is i
 if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
     // code...
 }
-{% endhighlight %}
+?>{% endhighlight %}
 
-* [Comparison operators](http://php.net/language.operators.comparison)
-* [Comparison table](http://php.net/types.comparisons)
-* [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
+* [عوامل المقارنة](http://php.net/language.operators.comparison)
+* [جدول المقارنات](http://php.net/types.comparisons)
+* [ورقة عن المقارنات](http://phpcheatsheets.com/index.php?page=compare)
 
-## Conditional statements
+## العبارات الشرطية
 
-### If statements
+### If الشرطية
 
-While using 'if/else' statements within a function or class method, there is a common misconception that 'else' must be used
-in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
-necessary as 'return' will end the function, causing 'else' to become moot.
+عند استخدام العبارة 'if/else' مع دالة أو عملية، هنالك العديد من المفاهيم المغلوطة كأنه يجب استخدام العبارة 'else' للتعبير
+عن الحالات المحتمل حدوثها. ولكن هذه الحالات قد تقوم بإرجاع قيمة، عندها 'else' ليست ضرورية كإرجاع القيمة 'return' يقوم بإنهاء
+تنفيذ الدالة مما يجعل العبارة 'else' عديمة الفائدة.
 
 {% highlight php %}
 <?php
@@ -71,18 +72,18 @@ function test($a)
     return (bool) $a;
 }
 
-{% endhighlight %}
+?>{% endhighlight %}
 
-* [If statements](http://php.net/control-structures.if)
+* [If الشرطية](http://php.net/control-structures.if)
 
-### Switch statements
+### Switch الشرطية
 
-Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
+عبارات switch هي طريقة ممتازة لتجنب كتابة عبارات لا نهائية من if و elseif ولكن هنالك بضع نقاط يجب الإنتباه لها:
 
-- Switch statements only compare values, and not the type (equivalent to '==')
-- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
-- Without a 'break', they will continue to implement each case until reaching a break/return
-- Within a function, using 'return' alleviates the need for 'break' as it ends the function
+- عبارة Switch تقوم فقط بمقارة القيم وليس النوع (مساوية للعامل '==')
+- تقوم بتكرار المرور على حالة تلو الأخرى حتى يتم العثور على تطابق. إذا لم يكن هنالك تطابق عندها يتم استخدام الحالة الإفتراضية default إذا تم تعريفها.
+- بدون العبارة 'break' سيتم المواصلة في تنفيذ كل الحالات التالية بدون توقف حتى الوصول إلى إحدى العبارتين break/return
+- بداخل الدالة، استخدام 'return' يغني عن الحاجة لإستخدام 'break' حيث أن الأولى تقوم بإيقاف تنفيذ الدالة
 
 {% highlight php %}
 <?php
@@ -104,15 +105,15 @@ function test($a)
             return $error;
     }
 }
-{% endhighlight %}
+?>{% endhighlight %}
 
-* [Switch statements](http://php.net/control-structures.switch)
+* [Switch الشرطية](http://php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
-## Global namespace
+## نطاق الأسماء العام
 
-When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this, refer to
-the global function by using a backslash before the function name.
+عند استخدام فضاءات الأسماء، قد تجد أن الدوال المدمجة تختفي بالدوال التي تقوم بكتابتها. لمعالجة هذه المشكلة قم بالإشارة
+إلى النطاق العامل للدالة باستخدام الرمز \ قبل اسم الدالة.
 
 {% highlight php %}
 <?php
@@ -129,18 +130,18 @@ function array()
     $iterator = new \ArrayIterator();    // ArrayIterator is an internal class. Using its name without a backslash
                                          // will attempt to resolve it within your namespace.
 }
-{% endhighlight %}
+?>{% endhighlight %}
 
 * [Global space](http://php.net/language.namespaces.global)
 * [Global rules](http://php.net/userlandnaming.rules)
 
-## Strings
+## النصوص
 
-### Concatenation
+### وصل النصوص
 
-- If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it is best to use concatenation operators over concatenating assignment operators
-- While within the original scope of the variable, indent when concatenation uses a new line
+- إذا كان السطر يمتد أكثر من الطول الموصى به (120 حرف) عندها قم بوصل السطر
+- لتسهيل عملية القراءة قم باستخدام عامل الوصل عبر الوصل باستخدام عامل الإقران والوصل '.='
+- في المدى الأصلي للمتغير قم بالمواساة عندما يكون الوصل متصل بسطر جديد
 
 
 {% highlight php %}
@@ -154,23 +155,21 @@ $a .= 'of what not to do';
 $a = 'Multi-line example'      // concatenation operator (.)
     . "\n"                     // indenting new lines
     . 'of what to do';
-{% endhighlight %}
+?>{% endhighlight %}
 
-* [String Operators](http://php.net/language.operators.string)
+* [عوامل النصوص](http://php.net/language.operators.string)
 
-### String types
+### أنواع النصوص
 
-Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
-strings and they offer slightly different syntax, with slightly different behaviors.
+النصوص هي عبارة عن سلسلة من الحروف. ولكن هنالك أنوع مختلفة من النصوص وتتيح هذه الأنواع اختلاف بسيطاً في الصيغة مع اختلاف طفيف في التصرف
 
-#### Single quotes
+#### علامة التنصيص الوحيدة
 
-Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
-variables.
+وتستخدم للتعريف بالنص "الصريح". ويعني أنه لا يتم المحاولة لعرض نصوص أو رموز خاصة أو حتى متغيرات.
 
-If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
-exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
-errors if no variable was found.
+إذا كنت تستخدم علامة التنصيص الوحيدة وتريد استخدام متغير داخل النص مثل: `'Hello $name'` عندها سترى أنه قد تم طباعة
+`Hello $name` كما هي. إما إذا كنت تستخدم علامة التنصيص المزدوجة عندها سيحاول عرض قيمة المتغير `$name` ثم إظهار خطأ إذا
+لم يجد هذا المتغير.
 
 
 {% highlight php %}
@@ -182,14 +181,14 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
  *
  * This is my string, look at how pretty it is.
  */
-{% endhighlight %}
+?>{% endhighlight %}
 
 * [Single quote](http://php.net/language.types.string#language.types.string.syntax.single)
 
-#### Double quotes
+#### علامة التنصيص المزدوجة
 
-Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
-of special characters, like `\n` for newline, `\t` for a tab, etc.
+علامة التنصيص المزدوجة لن تقوم فقط بمعالجة قيمة المتغير كما ذكر في المثال أعلاه، ولكن تقوم بمعالجة وعرض الرموز الخاصة مثل
+`\n` للسطر الجديد. و `\t` للمسافة. وغيرها..
 
 {% highlight php %}
 <?php
@@ -201,20 +200,19 @@ echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that
 
 echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
                                                                // enables us to use a parsable string
-{% endhighlight %}
+?>{% endhighlight %}
 
-Double quotes can contain variables; this is called "interpolation".
+يمكن لعلامة التنصيص المزدوجة أن تحتوي على متغيرات وهو ما يعرف بالإستيفاء "interpolation".
 
 {% highlight php %}
 <?php
 $juice = 'plum';
 echo "I like $juice juice";    // Output: I like plum juice
-{% endhighlight %}
+?>{% endhighlight %}
 
-When using interpolation, it is often the case that the variable will be touching another character. This will result
-in some confusion as to what is the name of the variable, and what is a literal character.
+عند استخدام الإستيفاء عادة ما يقوم المتغير بالإلتصاق مع حروف اخرى. مما يتج عن ذلك تضارب في ايهم اسم المتغير وايهم الحرف.
 
-To fix this problem, wrap the variable within a pair of curly brackets.
+لحل هذه المشكلة قم بإحاطة المتغير بأقواس المجموعة.
 
 {% highlight php %}
 <?php
@@ -232,14 +230,14 @@ echo "I drank some juice made of {$juice}s";    // $juice will be parsed
 
 $juice = array('apple', 'orange', 'plum');
 echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
-{% endhighlight %}
+?>{% endhighlight %}
 
 * [Double quotes](http://php.net/language.types.string#language.types.string.syntax.double)
 
-#### Nowdoc syntax
+#### Nowdoc
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
-use of multi-line strings without the need for concatenating.
+Nowdoc هي صيغة تم إدراجها في النسخة 5.3، بداخلها تقوم بنفس عمل التنصيص الوحيد إلا ان لديها القابلية للعمل مع عدة سطور
+من دون الحاجة لعمل سلاسل متصلة.
 
 {% highlight php %}
 <?php
@@ -258,14 +256,14 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  * using nowdoc syntax.
  * $a does not parse.
  */
-{% endhighlight %}
+?>{% endhighlight %}
 
 * [Nowdoc syntax](http://php.net/language.types.string#language.types.string.syntax.nowdoc)
 
-#### Heredoc syntax
+#### Heredoc
 
-Heredoc syntax internally behaves the same way as double quotes except it is suited toward the use of multi-line
-strings without the need for concatenating.
+Heredoc هي صيغة تقوم بداخلها بنفس عمل التصيص المزدوج إلا أن لديها القابلية للعمل مع عدة سطور من دون الحاجة لعمل
+سلاسل متصلة.
 
 {% highlight php %}
 <?php
@@ -286,48 +284,45 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  * using heredoc syntax.
  * Variables are parsed.
  */
-{% endhighlight %}
+?>{% endhighlight %}
 
 * [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
-### Which is quicker?
+### أيهما أسرع؟
 
-There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
-fundamentally not true.
+هنالك العديد من الخرافات تدور حول أن التنصيص الوحيد هو أسرع من التنصيص المزدوج. وهو شيء غير صحيح.
 
-If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
-or double quoted string will be entirely identical. Neither are quicker.
+إذا كنت تقوم بتعريف نص وحيد ولا تنوي القيام بوصل القيم أو أي شيء معقد عندها كلا العلامتين متساويتين في الأداء والسرعة.
 
-If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
-results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
-values, interpolating is minutely faster.
+إذا كنت تقوم بوصل عدد من النصوص أو أي نوع، أو استيفاء القيم بداخل تنصيص مزدوج عندها ستكون النتائج غير ثابتة.
+إذا كنت تعمل باستخدام قيم بأرقام صغيرة عندها الوصل يتم بسرعة.
 
-Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
-application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
-optimization unless you really understand the meaning and impact of the differences.
+بغض النظر عن ما تقوم بعمله باستخدام النصوص، لا يوجد نوع معين من التنصيص يجب أن تقوم بالتركيز عليه، ولا تأثير على كفاءة
+التطبيق. إن قيامك بإعادة صياغة باستخدام أنواع اخرى ظناً بأنه جيد للسرعة أو الكفاءة هو عملية مضيعة للوقت، فلا تقم بهذه
+العملية وإضاعة زمنك إلا إذا كنت تتفهم تماماً ماهية التأثير الناتج من الإختلاف.
 
-* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+* [إكتشاف خرافة التنصيص الوحيد في كفاءة الأداء](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 
-## Ternary operators
+## العوامل الثلاثية
 
-Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
-stacked/nested, it is advised to use one per line for readability.
+أو ما تسمى "Ternary Operators"، وهي طريقة ممتازة لضغط الكود البرمجي ولكن عادة ما يكثر من استخدامها. بما أنها تكون
+مكدسة ومتداخلة، فينصح عادة استخدام واحدة لكل سطر لتسهيل عملية القراءة.
 
 {% highlight php %}
 <?php
 $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
-{% endhighlight %}
+?>{% endhighlight %}
 
-In comparison, here is an example that sacrifices all forms of readability for the sake of reducing the line count.
+بالمقارنة هذا مثال يقوم بالتضحية بتسهيل القراءة من أجل التقليل من عدد السطور:
 
 {% highlight php %}
 <?php
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
-{% endhighlight %}
+?>{% endhighlight %}
 
-To 'return' a value with ternary operators use the correct syntax.
+لإرجاع قيمة باستخدام العامل الثلاثي قم باستخدام الصيغة الصحيحة.
 
 {% highlight php %}
 <?php
@@ -339,10 +334,9 @@ echo ($a == 5) ? return true : return false;    // this example will output an e
 $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 
-{% endhighlight %}
+?>{% endhighlight %}
 
-It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
-would be.
+جدير بالذكر أنه لا يتوجب عليك استخدام العامل الثلاثي لتقوم بإرجاع قيم من النوع المنطقي. كمثال:
 
 {% highlight php %}
 <?php
@@ -354,14 +348,14 @@ return ($a == 3) ? true : false; // Will return true or false if $a == 3
 $a = 3;
 return $a == 3; // Will return true or false if $a == 3
 
-{% endhighlight %}
+?>{% endhighlight %}
 
-This can also be said for all operations(===, !==, !=, == etc).
+ويمكن قول هذا لكل عوامل المقارنة الأخرى (===, !==, !=, == الخ).
 
-#### Utilising brackets with ternary operators for form and function
+#### استخدام الأقواس مع العوامل الثلاثية للصياغة والعملية
 
-When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
-within blocks of statements. An example of when there is no requirement to use bracketing is:
+عند استخدام العوامل الثلاثية فأن الأقواس تقوم بلعب دور في تحسين قراءة الكود وإضافة وصلات منطقية ما بين الأوامر.
+مثال يوضح متى لا تحتاج استخدام الأقواس:
 
 {% highlight php %}
 <?php
@@ -372,34 +366,34 @@ return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
 
 $a = 3;
 return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
-{% endhighlight %}
+?>{% endhighlight %}
 
-Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
-as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is
-also true.
+الأقواس تساهم في عمل وصلات ما بين جمل الأوامر حين يتم فحصها بأكملها. مثلا في المثال ستقوم بإرجاع القيمة "true" إذا كان
+كل من ($a == 3 و $b == 4) صائبين و $c == 5 صائبة أيضاً.
 
 {% highlight php %}
 <?php
 return ($a == 3 && $b == 4) && $c == 5;
-{% endhighlight %}
+?>{% endhighlight %}
 
-Another example is the snippet below which will return true if ($a != 3 AND $b != 4) OR $c == 5.
+مثال آخر في المثال ادناه يقوم بارجاع قيمة صائبة "true" إذا كان نات المنطق:
+($a != 3 AND $b != 4) OR $c == 5
 
 {% highlight php %}
 <?php
 return ($a != 3 && $b != 4) || $c == 5;
-{% endhighlight %}
+?>{% endhighlight %}
 
-Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
-Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
+منذ الإصدارة PHP 5.3 يمكن ترك الجزء الأوسط من العامل.
+مثلا: "expr1 ?: expr3" تقوم بإرجاع القيمة expr1 عندما تكون صائبة أو expr3 عدا ذلك.
 
-* [Ternary operators](http://php.net/language.operators.comparison)
+* [العامل الثلاثي Ternary operators](http://php.net/language.operators.comparison)
 
-## Variable declarations
+## تعريف المتغيرات
 
-At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let us say an example
-string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
+مع مرور الزمن يقوم المبرمجون بجعل برمجياتهم أنظف بالقيام بتعريف المتغيرات مسبقاً باستخدام أسماء مختلفة. ما يقوم به
+هذا الأسلوم هو مضاعفة المساحة المستهلكة من الذاكرة لمتغيرات سبق ذكرها وتعريفها. في المثال أدناه لنفترض أن المتغير يحتوي
+على نص بحجم 1MB من البيانات عند نسخه في متغير فأنت تقوم بمضاعفة الحجم إلى 2MB.
 
 {% highlight php %}
 <?php
@@ -409,6 +403,6 @@ echo $about;
 // vs
 
 echo 'A very long string of text';        // uses 1MB memory
-{% endhighlight %}
+?>{% endhighlight %}
 
-* [Performance tips](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
+* [نصائح لزيادة كفاءة الأداء](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
