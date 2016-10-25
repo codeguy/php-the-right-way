@@ -34,6 +34,7 @@ developers know where to find good information!
 <http://www.phptherightway.com>
 
 * [English](http://www.phptherightway.com)
+* [Arabic](https://adaroobi.github.io/php-the-right-way/)
 * [Bulgarian](http://bg.phptherightway.com)
 * [Chinese (Simplified)](http://laravel-china.github.io/php-the-right-way/)
 * [Chinese (Traditional)](http://laravel-taiwan.github.io/php-the-right-way)

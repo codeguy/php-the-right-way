@@ -21,6 +21,7 @@ and examples as they become available.
 _PHP: The Right Way_ is translated into many different languages:
 
 * [English](http://www.phptherightway.com)
+* [Arabic](https://adaroobi.github.io/php-the-right-way/)
 * [Bulgarian](http://bg.phptherightway.com/)
 * [Chinese (Simplified)](http://laravel-china.github.io/php-the-right-way/)
 * [Chinese (Traditional)](http://laravel-taiwan.github.io/php-the-right-way)
@@ -41,7 +42,6 @@ _PHP: The Right Way_ is translated into many different languages:
 * [Thai](https://apzentral.github.io/php-the-right-way/)
 * [Turkish](http://hkulekci.github.io/php-the-right-way/)
 * [Ukrainian](http://iflista.github.com/php-the-right-way/)
-* [العربية](https://adaroobi.github.io/php-the-right-way/)
 
 ## How to Contribute
 
