@@ -101,13 +101,8 @@ require 'vendor/autoload.php';
 يقوم Composer بإنشاء ملف بإسم `composer.lock` بحيث يقوم بحفظ ارقام إصدارات كل تابع يقوم بتحميله عن أول تنفيذ
 للأمر `composer install`. إذا كنت تشارك مشروعك مع مطورين آخرين وملف `composer.lock` هو جزء من ملفاتك، فعندما يقوم
 احدهم بتنفيذ الأمر `composer install` سوف يحصل على نفس الإصدارات الموجودة لديك.
-لتحديث التوابع قم بتنفيذ الأمر `composer update`.
-Composer creates a file called `composer.lock` which stores the exact version of each package it
-downloaded when you first ran `composer install`. If you share your project with others, 
-ensure the `composer.lock` file is included, so that when they run `composer install` they'll 
-get the same versions as you.  To update your dependencies, run `composer update`. Don't use 
-`composer update` when deploying, only `composer install`, otherwise you may end up with different 
-package versions on production.
+لتحديث التوابع قم بتنفيذ الأمر `composer update`. لا تقم بالتحديث عن التركيب على بيئة العمل النهائية، ولكن قم بالتنصيب
+باستخدام `composer install` وإلا سينتهي بك المطاف بانه سيكون هنالك اختلاف في إصدارات الحزم.
 
 تكون هذه العملية مفيدة عندما تكون متطلباتك من التوابع محددة بمرونة، فمثلا تتطلب لمشروعك تابع بالإصدار
 `~1.8` بمعنى "كل الإصدارات الأجدد من 1.8.0، والأقل من 2.0.x-dev". يمكنك ايضاً استخدام `*` `1.8.*` لتحديد الكل من خانة واحدة.
