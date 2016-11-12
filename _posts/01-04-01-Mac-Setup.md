@@ -26,7 +26,7 @@ command-line, X11 or Aqua based open-source software on the OS X operating
 system.
 
 MacPorts supports pre-compiled binaries, so you don't need to recompile every
-dependencies from the source tarball files, it saves your life if you don't
+dependency from the source tarball files, it saves your life if you don't
 have any package installed on your system.
 
 At this point, you can install `php54`, `php55`, `php56` or `php70` using the `port install` command, for example:
@@ -34,7 +34,7 @@ At this point, you can install `php54`, `php55`, `php56` or `php70` using the `p
     sudo port install php56
     sudo port install php70
 
-And you can run `select` command to switch your active php:
+And you can run `select` command to switch your active PHP:
 
     sudo port select --set php php70
 
@@ -46,7 +46,7 @@ applications/projects require different versions of PHP, and you are not using v
 ### Install PHP via Liip's binary installer
 
 Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 7.0.
-It doesn't overwrite the php binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
+It doesn't overwrite the PHP binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
 
 ### Compile from Source
 

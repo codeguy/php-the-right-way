@@ -18,7 +18,7 @@ for a brief, practical summary.
 ### UTF-8 at the PHP level
 
 The basic string operations, like concatenating two strings and assigning strings to variables, don't need anything
-special for UTF-8. However most string functions, like `strpos()` and `strlen()`, do need special consideration. These
+special for UTF-8. However, most string functions, like `strpos()` and `strlen()`, do need special consideration. These
 functions often have an `mb_*` counterpart: for example, `mb_strpos()` and `mb_strlen()`. These `mb_*` strings are made
 available to you via the [Multibyte String Extension], and are specifically designed to operate on Unicode strings.
 
