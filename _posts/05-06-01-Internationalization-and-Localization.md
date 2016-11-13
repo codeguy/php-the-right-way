@@ -29,17 +29,36 @@ The easiest way to internationalize PHP software is by using array files and usi
 some maintenance issues along the road - some might appear in the very beginning, such as pluralization. So, please,
 don't try this if your project will contain more than a couple of pages.
 
-Some frameworks will sport their own i18n packages. Those usually are a more powerful version of the above approach,
-but including features needed for real localization, such as plural forms and string replacement. You're free to use
-those if you feel like, but you might find bothering to edit array source files, having to deal with pure code issues
-(such as string scaping and so on). The main pro here is integration with the environment you're using - the framework
-is called _full-stack_ for a reason, right?
+The most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext]. It dates
+back to 1995 and is still a complete implementation for translating software. It is pretty easy to get running, while
+it still sports powerful supporting tools. It's about Gettext we will be talking here. Also, to help you not get messy
+over the command-line, we will be presenting a great GUI application that can be used to easily update your l10n source
+files.
 
-However, the most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext].
-It dates back to 1995 and is still the most complete implementation for translating software. It is pretty easy to get
-running, while it still sports powerful supporting tools. It's about Gettext we will be talking here. Also, to help you
-not get messy over the command-line, we will be presenting a great GUI application that can be used to easily update
-your l10n source files.
+### Other tools
+
+There are common libraries used that support Gettext, and other implementations of i18n. Some of the may seem easier to
+install, or sport additional features or i18n file formats. In this document we focus on the tools provided with the 
+PHP core, but here we list others for completion:
+
+- [oscarotero/Gettext][oscarotero]: Gettext support with an OO interface; includes improved helper functions, powerful
+extractors for several file formats (some of them not supported natively by the `gettext` command), and can also export
+to other formats besides `.mo/.po` files. Can be useful if you need to integrate your translation files into other parts
+of the system, like a JavaScript interface.
+- [symfony/translation][symfony]: supports a lot of different formats, but recommends using verbose XLIFF's. Doesn't
+include helper functions nor a built-in extractor, but supports placeholders using `strtr()` internally.
+- [zend/i18n][zend]: supports array and INI files, or Gettext formats. Implements a caching layer to save you from
+reading the filesystem every time. Also includes view helpers, and locale-aware input filters and validators. However,
+it has no message extractor.
+
+Other frameworks also include i18n modules, but those are not available outside of their codebases:
+- [Laravel] supports basic array files, has no automatic extractor but includes a `@lang` helper for template files.
+- [Yii] supports array, Gettext and database-based translation, and includes a messages extractor. It is backed by the
+[`Intl`][intl] extension, available since PHP 5.3, and based on the [ICU project]; this enables Yii to run powerful
+replacements, like spelling out numbers, formatting dates, times, intervals, currency and ordinals.
+
+If you decide to go for one of the libraries that provide no extractors, you may want to use the gettext formats, so
+you can use the original gettext toolchain (including Poedit) as described in the rest of the chapter.
 
 ## Gettext
 
@@ -66,7 +85,8 @@ You'll always have one pair of PO/MO files per language and region, but only one
 There are some cases, in big projects, where you might need to separate translations when the same words convey 
 different meaning given a context. In those cases you split them into different _domains_. They're basically named
 groups of POT/PO/MO files, where the filename is the said _translation domain_. Small and medium-sized projects usually,
-for simplicity, use only one domain; its name is arbitrary, but we will be using "main" for our code samples.
+for simplicity, use only one domain; its name is arbitrary, but we will be using "main" for our code samples.  
+In [Symfony] projects, for example, domains are used to separate the translation for validation messages.
 
 #### Locale code
 A locale is simple code that identifies a version of a language. It's defined following [ISO 639-1][639-1] and 
@@ -181,18 +201,21 @@ Talking about translation keys, there are two main "schools" here:
     - The only disadvantage: if you need to change the actual text, you would need to replace the same `msgid`
     across several language files.
 
-2. _`msgid` as a unique, structured key_. It would describe the sentence role in the application in a structured way,
-including the template or part where the string is located instead of its content.
+2. _`msgid` as a unique, structured key_.  
+It would describe the sentence role in the application in a structured way, including the template or part where the
+string is located instead of its content.
     - it's a great way to have the code organized, separating the text content from the template logic.
     - however, that could bring problems to the translator that would miss the context. A source language file would be
     needed as a basis for other translations. Example: the developer would ideally have an `en.po` file, that
     translators would read to understand what to write in `fr.po` for instance.
-    - missing translations would display meaningless keys on screen (`TOP_MENU_WELCOME` instead of `Hello there, User!`
+    - missing translations would display meaningless keys on screen (`top_menu.welcome` instead of `Hello there, User!`
     on the said untranslated French page). That's good it as would force translation to be complete before publishing -
-    but bad as translation issues would be really awful in the interface.
+    but bad as translation issues would be really awful in the interface. Some libraries, though, include an option to
+    specify a given language as "fallback", having a similar behavior as the other approach.
 
 The [Gettext manual][manual] favors the first approach, as in general it's easier for translators and users in
-case of trouble. That's how we will be working here as well.
+case of trouble. That's how we will be working here as well. However, the [Symfony documentation][symfony-keys] favors
+keyword-based translation, to allow for independent changes of all translations without affecting templates as well.
 
 ### Everyday usage
 In a common application, you would use some Gettext functions while writing static text in your pages. Those sentences
@@ -204,7 +227,7 @@ the actual interface. Given that, let's tie together what we have discussed so f
 <?php include 'i18n_setup.php' ?>
 <div id="header">
     <h1><?=sprintf(gettext('Welcome, %s!'), $name)?></h1>
-    <!-- code indented this way only for legibility here -->
+    <!-- code indented this way only for legibility -->
     <?php if ($unread): ?>
         <h2><?=sprintf(
             ngettext('Only one unread message',
@@ -340,7 +363,8 @@ usually takes only a couple of page refreshes to refresh the translation cache, 
 As preferred by many people, it's easier to use `_()` instead of `gettext()`. Many custom i18n libraries from
 frameworks use something similar to `t()` as well, to make translated code shorter. However, that's the only function
 that sports a shortcut. You might want to add in your project some others, such as `__()` or `_n()` for `ngettext()`,
-or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls.
+or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other libraries, such as
+[oscarotero's Gettext][oscarotero] also provide helper functions like these.
 
 In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
 Don't be afraid, it's very easy. It's just a field in the `.po` file, or a Settings screen on Poedit. In the editor
@@ -365,7 +389,7 @@ After including those new rules in the `.po` file, a new scan will bring in your
 * [PHP Manual: Gettext](http://php.net/manual/en/book.gettext.php)
 * [Gettext Manual][manual]
 
-[Poedit]: https://poedit.net/
+[Poedit]: https://poedit.net
 [poedit_download]: https://poedit.net/download
 [lingohub]: https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/
 [lingohub_plurals]: https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/#Plurals
@@ -376,6 +400,14 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [3166-1]: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 [rare]: http://www.gnu.org/software/gettext/manual/gettext.html#Rare-Language-Codes
 [func_format]: https://www.gnu.org/software/gettext/manual/gettext.html#Language-specific-options
+[oscarotero]: https://github.com/oscarotero/Gettext
+[symfony]: https://symfony.com/doc/current/components/translation.html
+[zend]: https://docs.zendframework.com/zend-i18n/translation
+[laravel]: https://laravel.com/docs/master/localization
+[yii]: http://www.yiiframework.com/doc-2.0/guide-tutorial-i18n.html
+[intl]: http://br2.php.net/manual/en/intro.intl.php
+[ICU project]: http://www.icu-project.org
+[symfony-keys]: https://symfony.com/doc/current/components/translation/usage.html#creating-translations
 
 [sprintf]: http://php.net/manual/en/function.sprintf.php
 [func]: http://php.net/manual/en/function.gettext.php
