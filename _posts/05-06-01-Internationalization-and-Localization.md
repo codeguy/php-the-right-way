@@ -12,16 +12,16 @@ words - in our case, internationalization becomes i18n and localization, l10n._
 First of all, we need to define those two similar concepts and other related things:
 
 - **Internationalization** is when you organize your code so it can be adapted to different languages or regions
-without refactors. This is usually done once - preferably, in the beginning of the project, or else you'll probably
+without refactorings. This is usually done once - preferably, in the beginning of the project, or else you'll probably
 need some huge changes in the source!
 - **Localization** happens when you adapt the interface (mainly) by translating contents, based on the i18n work done
-before. It usually is done every time a new language or region needs support, and is updated when new interface pieces
+before. It usually is done every time a new language or region needs support and is updated when new interface pieces
 are added, as they need to be available in all supported languages.
 - **Pluralization** defines the rules needed between different languages to interoperate strings containing numbers and 
 counters. For instance, in English when you have only one item, it's singular, and anything different from that is 
 called plural; plural in this language is indicated by adding an S after some words, and sometimes changes parts of it.
-In other languages such as Russian or Serbian there are two plural forms plus the singular one - you may even find
-languages with a total of four, five or six forms, such as Slovenian, Irish or Arabic.
+In other languages, such as Russian or Serbian, there are two plural forms in addition to the singular - you may even
+find languages with a total of four, five or six forms, such as Slovenian, Irish or Arabic.
 
 ## Common ways to implement
 The easiest way to internationalize PHP software is by using array files and using those strings in templates, such as
@@ -37,8 +37,8 @@ files.
 
 ### Other tools
 
-There are common libraries used that support Gettext, and other implementations of i18n. Some of the may seem easier to
-install, or sport additional features or i18n file formats. In this document we focus on the tools provided with the 
+There are common libraries used that support Gettext and other implementations of i18n. Some of them may seem easier to
+install or sport additional features or i18n file formats. In this document, we focus on the tools provided with the 
 PHP core, but here we list others for completion:
 
 - [oscarotero/Gettext][oscarotero]: Gettext support with an OO interface; includes improved helper functions, powerful
@@ -48,14 +48,14 @@ of the system, like a JavaScript interface.
 - [symfony/translation][symfony]: supports a lot of different formats, but recommends using verbose XLIFF's. Doesn't
 include helper functions nor a built-in extractor, but supports placeholders using `strtr()` internally.
 - [zend/i18n][zend]: supports array and INI files, or Gettext formats. Implements a caching layer to save you from
-reading the filesystem every time. Also includes view helpers, and locale-aware input filters and validators. However,
-it has no message extractor.
+reading the filesystem every time. It also includes view helpers, and locale-aware input filters and validators.
+However, it has no message extractor.
 
 Other frameworks also include i18n modules, but those are not available outside of their codebases:
 - [Laravel] supports basic array files, has no automatic extractor but includes a `@lang` helper for template files.
-- [Yii] supports array, Gettext and database-based translation, and includes a messages extractor. It is backed by the
+- [Yii] supports array, Gettext, and database-based translation, and includes a messages extractor. It is backed by the
 [`Intl`][intl] extension, available since PHP 5.3, and based on the [ICU project]; this enables Yii to run powerful
-replacements, like spelling out numbers, formatting dates, times, intervals, currency and ordinals.
+replacements, like spelling out numbers, formatting dates, times, intervals, currency, and ordinals.
 
 If you decide to go for one of the libraries that provide no extractors, you may want to use the gettext formats, so
 you can use the original gettext toolchain (including Poedit) as described in the rest of the chapter.
@@ -68,7 +68,7 @@ After installed, enable it by adding `extension=gettext.so` (Linux/Unix) or `ext
 your `php.ini`.
 
 Here we will also be using [Poedit] to create translation files. You will probably find it in your system's package
-manager; it's available for Unix, Mac and Windows, and can be [downloaded for free in their website][poedit_download]
+manager; it's available for Unix, Mac, and Windows, and can be [downloaded for free on their website][poedit_download]
 as well.
 
 ### Structure
@@ -83,23 +83,23 @@ You'll always have one pair of PO/MO files per language and region, but only one
 
 ### Domains
 There are some cases, in big projects, where you might need to separate translations when the same words convey 
-different meaning given a context. In those cases you split them into different _domains_. They're basically named
+different meaning given a context. In those cases, you split them into different _domains_. They're basically named
 groups of POT/PO/MO files, where the filename is the said _translation domain_. Small and medium-sized projects usually,
 for simplicity, use only one domain; its name is arbitrary, but we will be using "main" for our code samples.  
 In [Symfony] projects, for example, domains are used to separate the translation for validation messages.
 
 #### Locale code
-A locale is simple code that identifies a version of a language. It's defined following [ISO 639-1][639-1] and 
+A locale is simply a code that identifies one version of a language. It's defined following the [ISO 639-1][639-1] and 
 [ISO 3166-1 alpha-2][3166-1] specs: two lower-case letters for the language, optionally followed by an underline and two
 upper-case letters identifying the country or regional code. For [rare languages][rare], three letters are used.
 
-For some speakers, the country part may seem redundant; but in fact, some languages have dialects in different
+For some speakers, the country part may seem redundant. In fact, some languages have dialects in different
 countries, such as Austrian German (`de_AT`) or Brazilian Portuguese (`pt_BR`). The second part is used to distinguish
 between those dialects - when it's not present, it's taken as a "generic" or "hybrid" version of the language.
 
 ### Directory structure
 To use Gettext, we will need to adhere to a specific structure of folders. First, you'll need to select an arbitrary
-root for your l10n files in your source repository. Inside it you'll have a folder for each needed locale, and a fixed
+root for your l10n files in your source repository. Inside it, you'll have a folder for each needed locale, and a fixed
 `LC_MESSAGES` folder that will contain all your PO/MO pairs. Example:
 
 {% highlight console %}
@@ -171,7 +171,7 @@ msgstr[0] "Só uma mensagem não lida"
 msgstr[1] "%d mensagens não lidas"
 {% endhighlight %}
 
-The first section works like a header, having the `msgid` and `msgstr` specially empty. It describes the file encoding,
+The first section works like a header, having the `msgid` and `msgstr` especially empty. It describes the file encoding,
 plural forms and other things that are less relevant.
 The second section translates a simple string from English to
 Brazilian Portuguese, and the third does the same, but leveraging string replacement from [`sprintf`](sprintf) so the
@@ -180,11 +180,11 @@ The last section is a sample of pluralization forms, displaying
 the singular and plural version as `msgid` in English and their corresponding translations as `msgstr` 0 and 1
 (following the number given by the plural rule). There, string replacement is used as well so the number can be seen
 directly in the sentence, by using `%d`. The plural forms always have two `msgid` (singular and plural), so it's
-advised to not use a complex language as source of translation.
+advised to not use a complex language as the source of translation.
 
 ### Discussion on l10n keys
 As you might have noticed, we're using as source ID the actual sentence in English. That `msgid` is the same used
-throughout all your `.po` files, meaning other languages will have the same format and the same `msgid` fields, but
+throughout all your `.po` files, meaning other languages will have the same format and the same `msgid` fields but
 translated `msgstr` lines.
 
 Talking about translation keys, there are two main "schools" here:
@@ -213,7 +213,7 @@ string is located instead of its content.
     but bad as translation issues would be really awful in the interface. Some libraries, though, include an option to
     specify a given language as "fallback", having a similar behavior as the other approach.
 
-The [Gettext manual][manual] favors the first approach, as in general it's easier for translators and users in
+The [Gettext manual][manual] favors the first approach as, in general, it's easier for translators and users in
 case of trouble. That's how we will be working here as well. However, the [Symfony documentation][symfony-keys] favors
 keyword-based translation, to allow for independent changes of all translations without affecting templates as well.
 
@@ -321,7 +321,7 @@ set the terrain so everything else runs smoothly. You'll be able to find those s
 - Language: here you should use that format we mentioned before, such as `en_US` or `pt_BR`;
 - Charsets: UTF-8, preferably;
 - Source charset: set here the charset used by your PHP files - probably UTF-8 as well, right?
-- plural forms: here goes those rules we mentioned before - there's a link in there with samples as well;
+- plural forms: here go those rules we mentioned before - there's a link in there with samples as well;
 - Source paths: here you must include all folders from the project where `gettext()` (and siblings) will happen - this
 is usually your templates folder(s)
 - Source keywords: this last part is filled by default, but you might need to alter it later - and is one of the
@@ -349,8 +349,8 @@ indicating it needs review, being highlighted in the list. It's also useful if y
 tries to write something they're not sure about: just mark Fuzzy and someone else will review later.
 
 Finally, it's advised to leave "View > Untranslated entries first" marked, as it will help you _a lot_ to not forget
-any entry. From that menu you can also open parts of the UI that allow you to leave contextual information for
-translators, if needed.
+any entry. From that menu, you can also open parts of the UI that allow you to leave contextual information for
+translators if needed.
 
 ### Tips & Tricks
 
@@ -367,7 +367,7 @@ or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other
 [oscarotero's Gettext][oscarotero] also provide helper functions like these.
 
 In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
-Don't be afraid, it's very easy. It's just a field in the `.po` file, or a Settings screen on Poedit. In the editor
+Don't be afraid, it's very easy. It's just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
 that option is inside "Catalog > Properties > Source keywords". You need to include there the specifications of those
 new functions, following [a specific format](func_format):
 
@@ -376,8 +376,8 @@ Gettext will know the only function argument is the string to be translated;
 - if the function has more than one argument, you can specify in which one the first string is - and if needed, the
 plural form as well. For instance, if we call our function like this: `__('one user', '%d users', $number)`, the
 specification would be `__:1,2`, meaning the first form is the first argument, and the second form is the second
-argument. If your number comes as first argument instead, the spec would be `__:2,3`, indicating the first form is the
-second argument, and so on.
+argument. If your number comes as the first argument instead, the spec would be `__:2,3`, indicating the first form is
+the second argument, and so on.
 
 After including those new rules in the `.po` file, a new scan will bring in your new strings just as easy as before.
 
