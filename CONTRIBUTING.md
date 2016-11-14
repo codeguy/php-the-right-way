@@ -66,7 +66,7 @@ included in the project:
 
     ```bash
     # Install the needed gems through Bundler
-    bundle install
+    bundle install --path vendor/bundle
     # Run the local server
     bundle exec jekyll serve
     ```
