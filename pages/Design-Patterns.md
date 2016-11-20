@@ -68,7 +68,77 @@ yourself a lot of trouble down the road by using factories.
 When designing web applications, it often makes sense conceptually and architecturally to allow access to one and only
 one instance of a particular class. The singleton pattern enables us to do this.
 
-**TODO: NEED NEW SINGLETON CODE EXAMPLE**
+{% highlight php %}
+<?php
+class Singleton
+{
+    /**
+     * @var array An array of reference to *Singleton* instance of this class and child classes; indexed on class name
+     */
+    private static $instance_array = [ ];
+
+    /**
+     * Returns the *Singleton* instance of this class.
+     *
+     * @return Singleton The *Singleton* instance.
+     */
+    public static function getInstance()
+    {
+        /*
+         * When acessing the instance_array, we always use self:: instead of static. Since instance_array is private,
+         * a child would not know about it, and an attempt to access via static:: would fail.
+         *
+         * As an alternative, we could have made protected, then static:: accesses would have worked. However, also
+         * children would have been able to access sibling singletons.
+         */
+        if (!isset(self::$instance_array[static::class]) || null === self::$instance_array[static::class]) {
+            self::$instance_array[static::class] = new static();
+        }
+
+        return self::$instance_array[static::class];
+    }
+
+    /**
+     * Protected constructor to prevent creating a new instance of the
+     * *Singleton* via the `new` operator from outside of this class.
+     */
+    protected function __construct()
+    {
+    }
+
+    /**
+     * Private clone method to prevent cloning of the instance of the
+     * *Singleton* instance.
+     *
+     * @return void
+     */
+    private function __clone()
+    {
+    }
+
+    /**
+     * Private unserialize method to prevent unserializing of the *Singleton*
+     * instance.
+     *
+     * @return void
+     */
+    private function __wakeup()
+    {
+    }
+}
+
+class SingletonChild extends Singleton
+{
+}
+
+$obj = Singleton::getInstance();
+var_dump($obj === Singleton::getInstance());             // bool(true)
+
+$anotherObj = SingletonChild::getInstance();
+var_dump($anotherObj === Singleton::getInstance());      // bool(false)
+
+var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
+{% endhighlight %}
 
 The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
 Note the following:
