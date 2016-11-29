@@ -68,7 +68,30 @@ yourself a lot of trouble down the road by using factories.
 When designing web applications, it often makes sense conceptually and architecturally to allow access to one and only
 one instance of a particular class. The singleton pattern enables us to do this.
 
-**TODO: NEED NEW SINGLETON CODE EXAMPLE**
+{% highlight php %}
+<?php
+class Singleton
+{
+    protected static $instance = null;
+
+    public static function getInstance() : self
+    {
+        if (null === static::$instance) {
+            static::$instance = new static();
+        }
+
+        return static::$instance;
+    }
+
+    protected function __construct() : void
+    {
+        // ...
+    }
+
+    private function __clone() {}
+    private function __wakeup() {}
+}
+{% endhighlight %}
 
 The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
 Note the following:
