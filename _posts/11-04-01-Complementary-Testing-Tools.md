@@ -14,6 +14,8 @@ libraries useful for any preferred approach taken.
 * [Mockery] is a Mock Object Framework which can be integrated with [PHPUnit] or [PHPSpec]
 * [Prophecy] is a highly opinionated yet very powerful and flexible PHP object mocking framework. It's integrated with
 [PHPSpec] and can be used with [PHPUnit].
+* [php-mock]  is a library to help to mock PHP native functions.
+* [Humbug] is a PHP implementation of [Mutation Testing] to help to measure the effectiveness of your tests.
 
 
 [Selenium]: http://seleniumhq.org/
@@ -22,3 +24,6 @@ libraries useful for any preferred approach taken.
 [PHPUnit]: http://phpunit.de/
 [PHPSpec]: http://www.phpspec.net/
 [Prophecy]: https://github.com/phpspec/prophecy
+[php-mock]: https://github.com/php-mock/php-mock
+[Humbug]: https://github.com/padraic/humbug
+[Mutation Testing]: https://en.wikipedia.org/wiki/Mutation_testing
