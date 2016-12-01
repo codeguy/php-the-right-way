@@ -43,16 +43,21 @@ _PHP: The Right Way_ is translated into many different languages:
 * [Ukrainian](http://iflista.github.com/php-the-right-way/)
 * [العربية](https://adaroobi.github.io/php-the-right-way/)
 
+## Book
+
+The most recent version of _PHP: The Right Way_ is also available in PDF, EPUB and MOBI formats. [Go to Leanpub][1]
+
 ## How to Contribute
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][1]
+Help make this website the best resource for new PHP programmers! [Contribute on GitHub][2]
 
 ## Spread the Word!
 
 _PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP developers
 know where to find good information!
 
-[See Banner Images][2]
+[See Banner Images][3]
 
-[1]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[2]: /banners.html
+[1]: https://leanpub.com/phptherightway
+[2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
+[3]: /banners.html
