@@ -15,7 +15,7 @@ There are multiple ways to install PHP on OS X.
 [Homebrew] is a powerful package manager for OS X, which can help you install PHP and various extensions easily.
 [Homebrew PHP] is a repository that contains PHP-related "formulae" for Homebrew, and will let you install PHP.
 
-At this point, you can install `php53`, `php54`, `php55`, `php56` or `php70` using the `brew install` command, and switch
+At this point, you can install `php53`, `php54`, `php55`, `php56`, `php70` or `php71` using the `brew install` command, and switch
 between them by modifying your `PATH` variable. Alternatively you can use [brew-php-switcher][brew-php-switcher] which will switch automatically for you.
 
 ### Install PHP via Macports
