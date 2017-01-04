@@ -308,33 +308,40 @@ textdomain('main');
 {% endhighlight %}
 
 #### 3. Preparing translation for the first run
-One of the great advantages Gettext has over custom framework i18n packages is its extensive and powerful file format. "Oh man, that is quite hard to understand and edit by hand, a simple array would be easier!" Make no
-mistake, applications like [Poedit] are here to help - _a lot_. You can get the program from
-[their website][poedit_download], it's free and available for all platforms. It is a pretty easy tool to get used to,
-and a very powerful one at the same time - using all powerful features Gettext has available.
+One of the great advantages Gettext has over custom framework i18n packages is its extensive and powerful file format.
+“Oh man, that’s quite hard to understand and edit by hand, a simple array would be easier!” Make no mistake,
+applications like [Poedit] are here to help - _a lot_. You can get the program from their website, it’s free and
+available for all platforms. It’s a pretty easy tool to get used to, and a very powerful one at the same time -
+using all features Gettext has available. This small guide is based on PoEdit 1.8.
 
-In the first run, you should select "File > New Catalog" from the menu. There you will have a small screen where we will
-set the terrain so everything else runs smoothly. You will be able to find those settings later through
-"Catalog > Properties":
+In the first run, you should select “File > New...” from the menu. You’ll be asked straight ahead for the language:
+here you can select/filter the language you want to translate to, or use that format we mentioned before, such as
+`en_US` or `pt_BR`.
 
-- Project name and version, Translation Team and email address: useful information that goes in the `.po` file header;
-- Language: here you should use that format we mentioned before, such as `en_US` or `pt_BR`;
-- Charsets: UTF-8, preferably;
-- Source charset: set here the charset used by your PHP files - probably UTF-8 as well, right?
-- plural forms: here go those rules we mentioned before - there's a link in there with samples as well;
-- Source paths: here you must include all folders from the project where `gettext()` (and siblings) will happen - this
-is usually your templates folder(s)
-- Source keywords: this last part is filled by default, but you might need to alter it later - and is one of the
-powerful points of Gettext. The underlying software knows how the `gettext()` calls look like in several programming
-languages, but you might as well create your own translation forms. This will be discussed later in the "Tips" section.
+Now, save the file - using that directory structure we mentioned as well. Then you should click “Extract from sources”,
+and here you’ll configure various settings for the extraction and translation tasks. You’ll be able to find all those
+later through “Catalog > Properties”:
 
-After setting those points, you will be prompted to save the file - using that directory structure we mentioned as well,
-and then it will run a scan through your source files to find the localization calls. They will be fed empty into the
-translation table, and you will start typing in the localized versions of those strings. Save it and a `.mo` file will
-be (re)compiled into the same folder and ta-dah: your project is internationalized.
+- Source paths: here you must include all folders from the project where `gettext()` (and siblings) are called - this
+is usually your templates/views folder(s). This is the only mandatory setting;
+- Translation properties:
+    - Project name and version, Team and Team’s email address: useful information that goes in the .po file header;
+    - Plural forms: here go those rules we mentioned before - there’s a link in there with samples as well. You can
+    leave it with the default option most of the time, as PoEdit already includes a handy database of plural rules for
+    many languages.
+    - Charsets: UTF-8, preferably;
+    - Source code charset: set here the charset used by your codebase - probably UTF-8 as well, right?
+- Source keywords: The underlying software knows how `gettext()` and similar function calls look like in several
+programming languages, but you might as well create your own translation functions. It will be here you’ll add those
+other methods. This will be discussed later in the “Tips” section.
+
+After setting those points it will run a scan through your source files to find all the localization calls. After every
+scan PoEdit will display a summary of what was found and what was removed from the source files. New entries will fed
+empty into the translation table, and you’ll start typing in the localized versions of those strings. Save it and a .mo
+file will be (re)compiled into the same folder and ta-dah: your project is internationalized.
 
 #### 4. Translating strings
-As you may have noticed before, there are two main types of localized strings: simple ones and the ones with plural
+As you may have noticed before, there are two main types of localized strings: simple ones and those with plural
 forms. The first ones have simply two boxes: source and localized string. The source string cannot be modified as
 Gettext/Poedit do not include the powers to alter your source files - you should change the source itself and rescan
 the files. Tip: you may right-click a translation line, and it will hint you with the files and lines where that string
@@ -345,7 +352,7 @@ the different final forms.
 Whenever you change your sources and need to update the translations, just hit Refresh and Poedit will rescan the code,
 removing non-existent entries, merging the ones that changed and adding new ones. It may also try to guess some
 translations, based on other ones you did. Those guesses and the changed entries will receive a "Fuzzy" marker,
-indicating it needs review, being highlighted in the list. It is also useful if you have a translation team and someone
+indicating it needs review, appearing golden in the list. It is also useful if you have a translation team and someone
 tries to write something they are not sure about: just mark Fuzzy, and someone else will review later.
 
 Finally, it is advised to leave "View > Untranslated entries first" marked, as it will help you _a lot_ to not forget
@@ -368,7 +375,8 @@ or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other
 
 In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
 Don't be afraid; it is very easy. It is just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
-that option is inside "Catalog > Properties > Source keywords". You need to include there the specifications of those
+that option is inside "Catalog > Properties > Source keywords". Remember: Gettext already knows the default functions
+for many languages, so don’t be afraid if that list seems empty. You need to include there the specifications of those
 new functions, following [a specific format][func_format]:
 
 - if you create something like `t()` that simply returns the translation for a string, you can specify it as `t`.
