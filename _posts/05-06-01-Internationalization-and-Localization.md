@@ -308,10 +308,9 @@ textdomain('main');
 {% endhighlight %}
 
 #### 3. Preparing translation for the first run
-To make matters easier - and one of the powerful advantages Gettext has over custom framework i18n packages - is its
-custom file type. "Oh man, that is quite hard to understand and edit by hand, a simple array would be easier!" Make no
+One of the great advantages Gettext has over custom framework i18n packages is its extensive and powerful file format. "Oh man, that is quite hard to understand and edit by hand, a simple array would be easier!" Make no
 mistake, applications like [Poedit] are here to help - _a lot_. You can get the program from
-[their website](poedit_download), it's free and available for all platforms. It is a pretty easy tool to get used to,
+[their website][poedit_download], it's free and available for all platforms. It is a pretty easy tool to get used to,
 and a very powerful one at the same time - using all powerful features Gettext has available.
 
 In the first run, you should select "File > New Catalog" from the menu. There you will have a small screen where we will
