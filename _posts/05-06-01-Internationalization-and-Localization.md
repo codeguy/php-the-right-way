@@ -370,7 +370,7 @@ or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other
 In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
 Don't be afraid; it is very easy. It is just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
 that option is inside "Catalog > Properties > Source keywords". You need to include there the specifications of those
-new functions, following [a specific format](func_format):
+new functions, following [a specific format][func_format]:
 
 - if you create something like `t()` that simply returns the translation for a string, you can specify it as `t`.
 Gettext will know the only function argument is the string to be translated;
