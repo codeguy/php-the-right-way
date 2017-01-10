@@ -8,19 +8,25 @@ anchor:  password_hashing
 Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a
 database and later used to authenticate users upon login.
 
-It is important that you properly [_hash_][3] passwords before storing them. You should not _encrypt_ passwords.
-Password hashing is an irreversible, one-way function performed against the user's password. This produces a fixed-length
-string that cannot be feasibly reversed. This means you can compare a hash against another to determine if they both came
-from the same source string, but you cannot determine the original string. If passwords are not hashed and your database
-is accessed by an unauthorized third-party, all user accounts are now compromised. 
+It is important that you properly [_hash_][3] passwords before storing them. Hashing and encrypting are
+[two very different things][7] that often get confused.
+ 
+Hashing is an irreversible, one-way function. This produces a fixed-length string that cannot be feasibly reversed.
+This means you can compare a hash against another to determine if they both came from the same source string, but you
+cannot determine the original string. If passwords are not hashed and your database is accessed by an unauthorized
+third-party, all user accounts are now compromised.
+
+Unlike hashing, encryption is reversible (provided you have the key). Encryption is useful in other areas, but is a poor
+fit for securely storing passwords.
 
 Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This
 prevents dictionary attacks and the use of "rainbow tables" (a reverse list of crytographic hashes for common passwords.)
 
 Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor.
 
-Additionally, you should use [a _password hashing_ algoithm][6] rather than fast, general-purpose cryptographic hash
-function (e.g. SHA256). The short list of acceptable password hashing algorithms (as of January 2017) to use are:
+Additionally, you should use [a specialized _password hashing_ algoithm][6] rather than fast, general-purpose
+cryptographic hash function (e.g. SHA256). The short list of acceptable password hashing algorithms (as of January 2017)
+to use are:
 
 * Argon2
 * Scrypt
@@ -66,3 +72,4 @@ if (password_verify('bad-password', $passwordHash)) {
 [4]: https://wiki.php.net/rfc/password_hash
 [5]: https://en.wikipedia.org/wiki/Salt_(cryptography)
 [6]: https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016
+[7]: https://paragonie.com/blog/2015/08/you-wouldnt-base64-a-password-cryptography-decoded 
