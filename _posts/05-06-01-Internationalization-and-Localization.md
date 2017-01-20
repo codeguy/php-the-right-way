@@ -141,7 +141,7 @@ given number falls (starting the count with 0). For example:
 - Brazilian Portuguese: `nplurals=2; plural=(n > 1);` - two rules, second if N is bigger than one, first otherwise
 
 Now that you understood the basis of how plural rules works - and if you didn't, please look at a deeper explanation
-on the [LingoHub tutorial](lingohub_plurals) -, you might want to copy the ones you need from a [list][plural] instead
+on the [LingoHub tutorial][lingohub_plurals] -, you might want to copy the ones you need from a [list][plural] instead
 of writing them by hand.
 
 When calling out Gettext to do localization on sentences with counters, you'll have to give him the
@@ -174,7 +174,7 @@ msgstr[1] "%d mensagens não lidas"
 The first section works like a header, having the `msgid` and `msgstr` especially empty. It describes the file encoding,
 plural forms and other things that are less relevant.
 The second section translates a simple string from English to
-Brazilian Portuguese, and the third does the same, but leveraging string replacement from [`sprintf`](sprintf) so the
+Brazilian Portuguese, and the third does the same, but leveraging string replacement from [`sprintf`][sprintf] so the
 translation may contain the user name and visit date.  
 The last section is a sample of pluralization forms, displaying
 the singular and plural version as `msgid` in English and their corresponding translations as `msgstr` 0 and 1
@@ -310,7 +310,7 @@ textdomain('main');
 To make matters easier - and one of the powerful advantages Gettext has over custom framework i18n packages - is its
 custom file type. "Oh man, that's quite hard to understand and edit by hand, a simple array would be easier!" Make no
 mistake, applications like [Poedit] are here to help - _a lot_. You can get the program from
-[their website](poedit_download), it's free and available for all platforms. It's a pretty easy tool to get used to,
+[their website][poedit_download], it's free and available for all platforms. It's a pretty easy tool to get used to,
 and a very powerful one at the same time - using all powerful features Gettext has available.
 
 In the first run, you should select "File > New Catalog" from the menu. There you'll have a small screen where we will
@@ -369,7 +369,7 @@ or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other
 In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
 Don't be afraid, it's very easy. It's just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
 that option is inside "Catalog > Properties > Source keywords". You need to include there the specifications of those
-new functions, following [a specific format](func_format):
+new functions, following [a specific format][func_format]:
 
 - if you create something like `t()` that simply returns the translation for a string, you can specify it as `t`.
 Gettext will know the only function argument is the string to be translated;
@@ -385,7 +385,7 @@ After including those new rules in the `.po` file, a new scan will bring in your
 
 * [Wikipedia: i18n and l10n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
 * [Wikipedia: Gettext](https://en.wikipedia.org/wiki/Gettext)
-* [LingoHub: PHP internationalization with gettext tutorial](lingohub)
+* [LingoHub: PHP internationalization with gettext tutorial][lingohub]
 * [PHP Manual: Gettext](http://php.net/manual/en/book.gettext.php)
 * [Gettext Manual][manual]
 

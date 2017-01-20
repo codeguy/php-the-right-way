@@ -31,5 +31,5 @@ Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP d
 [php-iis]: http://php.iis.net/
 [windows-path]: http://www.windows-commandline.com/set-path-command-line/
 [windows-tools]: http://ctankersley.com/2016/11/13/developing-on-windows-2016/
-[wpi]: http://www.microsoft.com/web/downloads/platform.aspx
+[wpi]: https://www.microsoft.com/web/downloads/platform.aspx
 [xampp]: http://www.apachefriends.org/en/xampp.html
