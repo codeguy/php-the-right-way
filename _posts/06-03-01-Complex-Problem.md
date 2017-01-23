@@ -10,7 +10,7 @@ If you have ever read about Dependency Injection then you have probably seen the
 
 ### Inversion of Control
 
-Inversion of Control is as it says, "inverting the control" of a system by keeping organisational control entirely
+Inversion of Control is as it says, "inverting the control" of a system by keeping organizational control entirely
 separate from our objects. In terms of Dependency Injection, this means loosening our dependencies by controlling and
 instantiating them elsewhere in the system.
 

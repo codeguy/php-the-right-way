@@ -18,6 +18,8 @@ developers know where to find good information!
 
 ## How to Contribute
 
+You should read the `CONTRIBUTING.md` file for precise instructions and tips. But, if you prefer a TL;DR:
+
 1. Fork and edit
 2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
 3. Submit pull request for consideration

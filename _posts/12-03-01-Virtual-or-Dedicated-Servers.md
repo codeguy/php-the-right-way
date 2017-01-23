@@ -35,10 +35,14 @@ Alternatively, if you want to squeeze more performance and stability out of Apac
 same FPM system as nginx and run the [worker MPM] or [event MPM] with mod_fastcgi or mod_fcgid. This configuration will
 be significantly more memory efficient and much faster but it is more work to set up.
 
+If you are running Apache 2.4 or later, you can use [mod_proxy_fcgi] to get great performance that is easy to setup.
+
 * [Read more on Apache][apache]
 * [Read more on Multi-Processing Modules][apache-MPM]
 * [Read more on mod_fastcgi][mod_fastcgi]
 * [Read more on mod_fcgid][mod_fcgid]
+* [Read more on mod_proxy_fcgi][mod_proxy_fcgi]
+* [Read more on setting up Apache and PHP-FPM with mod_proxy_fcgi][tutorial-mod_proxy_fcgi]
 
 
 [nginx]: http://nginx.org/
@@ -50,5 +54,7 @@ be significantly more memory efficient and much faster but it is more work to se
 [event MPM]: http://httpd.apache.org/docs/2.4/mod/event.html
 [apache]: http://httpd.apache.org/
 [apache-MPM]: http://httpd.apache.org/docs/2.4/mod/mpm_common.html
-[mod_fastcgi]: http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html
+[mod_fastcgi]: https://blogs.oracle.com/opal/entry/php_fpm_fastcgi_process_manager
 [mod_fcgid]: http://httpd.apache.org/mod_fcgid/
+[mod_proxy_fcgi]: https://httpd.apache.org/docs/current/mod/mod_proxy_fcgi.html
+[tutorial-mod_proxy_fcgi]: https://serversforhackers.com/video/apache-and-php-fpm
