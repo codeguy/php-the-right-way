@@ -7,6 +7,7 @@ anchor:  php_paas_providers
 ## PHP PaaS Providers {#php_paas_providers_title}
 
 * [PagodaBox](https://pagodabox.io/)
+* [Nanobox](http://nanobox.io)
 * [AppFog](https://www.ctl.io/appfog/)
 * [Heroku](https://devcenter.heroku.com/categories/php)
 * [fortrabbit](https://www.fortrabbit.com/)
