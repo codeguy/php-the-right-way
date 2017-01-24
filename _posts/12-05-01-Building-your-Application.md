@@ -36,7 +36,7 @@ There are many open source tools available to help you with build automation and
 
 [Magallanes] is another tool written in PHP with simple configuration done in YAML files. It has support for multiple servers and environments, atomic deployment, and has some built in tasks that you can leverage for common tools and frameworks.
 
-[Nanobox] creates instant, isolated, development environments for each application via a simple YAML config file. Once and application is ready for production it can be simulated locally and then easily deployed to any hosting provider.
+[Nanobox] creates instant, isolated, development environments for each application via a simple YAML config file. Once an application is ready for production it can be simulated locally and then easily deployed to any hosting provider.
 
 #### Further reading:
 
@@ -54,7 +54,7 @@ Managing and configuring servers can be a daunting task when faced with many ser
 
 [Chef] is a powerful Ruby based system integration framework that you can build your whole server environment or virtual boxes with. It integrates well with Amazon Web Services through their service called OpsWorks.
 
-[Nanobox] creates instant, isolated, development environments for each application via a simple YAML config file. Once and application is ready for production it can be simulated locally and then easily deployed to any hosting provider.
+[Nanobox] creates instant, isolated, development environments for each application via a simple YAML config file. Once an application is ready for production it can be simulated locally and then easily deployed to any hosting provider.
 
 #### Further reading:
 
