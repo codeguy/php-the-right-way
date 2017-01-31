@@ -41,6 +41,9 @@ There are common libraries used that support Gettext and other implementations o
 install or sport additional features or i18n file formats. In this document, we focus on the tools provided with the 
 PHP core, but here we list others for completion:
 
+- [aura/intl][aura-intl]: Provides internationalization (I18N) tools, specifically package-oriented per-locale message
+translation. It uses array formats for message. Does not provide a message extractor, but does provide advanced
+message formatting via the `intl` extension (including pluralized messages).
 - [oscarotero/Gettext][oscarotero]: Gettext support with an OO interface; includes improved helper functions, powerful
 extractors for several file formats (some of them not supported natively by the `gettext` command), and can also export
 to other formats besides `.mo/.po` files. Can be useful if you need to integrate your translation files into other parts
@@ -400,6 +403,7 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [3166-1]: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 [rare]: http://www.gnu.org/software/gettext/manual/gettext.html#Rare-Language-Codes
 [func_format]: https://www.gnu.org/software/gettext/manual/gettext.html#Language-specific-options
+[aura-intl]: https://github.com/auraphp/Aura.Intl
 [oscarotero]: https://github.com/oscarotero/Gettext
 [symfony]: https://symfony.com/doc/current/components/translation.html
 [zend]: https://docs.zendframework.com/zend-i18n/translation
