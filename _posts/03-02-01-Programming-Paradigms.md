@@ -16,12 +16,12 @@ PHP obsahuje kompletnú sadu objektovo orientovaných vlastností vrátane podpo
 dedičnosti, konštruktorov, klonovania, výnimiek (exceptions) a ďalších.
 
 * [Prečítajte si o objektovo orientovanom PHP][oop]
-* [Prečitajte si o traits][traits]
+* [Prečítajte si o traits][traits]
 
 ### Funkcionálne programovanie
 
 PHP podporuje prvotriedne funkcie, čo znamená, že funkcie môžu byť priradené premennej. Oboje vstavané, ako aj
-užívateľsky definované funkcie môžu byť referencované pomocou premennej a vyvolané dynamicky. Funkcie môžu byt predané
+užívateľsky definované funkcie môžu mať referenciu na premennú a byť vyvolané dynamicky. Funkcie môžu byt predané
 ako argumenty iných funkcií (vlastnosť nazývaná _Funkcie vyššieho rádu_) a návratovou hodnotou funkcií môžu byť taktiež
 ďalšie funkcie.
 
@@ -33,10 +33,10 @@ Od verzie PHP 5.4 je pridaná schopnosť priradiť uzávery k rozsahu objektu (o
 pre volateľné funkcie (callables), takže môžu byť tieto zameniteľné za anonymné funkcie vo väčšine prípadov.
 
 * Pokračuje v čítaní o [funkcionálnom programované v PHP](/pages/Functional-Programming.html)
-* [Prečítajte si o anonymných funkciach][anonymous-functions]
+* [Prečítajte si o anonymných funkciách][anonymous-functions]
 * [Prečítajte si o uzáveroch][closure-class]
 * [Viac detailov o uzáveroch (RFC)][closures-rfc]
-* [Prečítajte si o volateľných funkciach][callables]
+* [Prečítajte si o volateľných funkciách][callables]
 * [Prečítajte si o dynamickom vyvolaní funkcie pomocou `call_user_func_array()`][call-user-func-array]
 
 ### Meta programovanie

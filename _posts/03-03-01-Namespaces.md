@@ -22,17 +22,17 @@ si kladie za cieľ poskytnúť konvencie pre štandardný súbor, triedu a menn�
 ako plug-and-play.
 
 PHP-FIG v októbri 2014 označila predchádzajúce doporučenie pre samozavádzanie (autoloading), [PSR-0][psr0],
-ako zastaralé. Toto doporučenie bolo nahradené doporučením [PSR-4][psr4]. Obe doporučenia sú stále použitelné, a pretože
-PSR-4 požaduje minimálne verziu PHP 5.3, PSR-0 naďalej ostáva, kedže mnoho PHP 5.2 projektov toto doporučenie uplatňuje.
+ako zastaralé. Toto doporučenie bolo nahradené doporučením [PSR-4][psr4]. Obe doporučenia sú stále použiteľné, a pretože
+PSR-4 požaduje minimálne verziu PHP 5.3, PSR-0 naďalej ostáva, keďže mnoho PHP 5.2 projektov toto doporučenie uplatňuje.
 Mnoho PHP 5.2 projektov je našťastie aktualizovaných na novšie verzie, takže je doporučenie PSR-0 používané stále menej
 a menej.
 
 Ak sa vo vašej novej aplikácií, alebo balíku chystáte použiť štandard pre samozavádzanie, potom doporučenie PSR-4 je
 tá správna voľba.
 
-* [Prečitajte si o menných priestoroch][namespaces]
-* [Prečitajte si o PSR-0][psr0]
-* [Prečitajte si o PSR-4][psr4]
+* [Prečítajte si o menných priestoroch][namespaces]
+* [Prečítajte si o PSR-0][psr0]
+* [Prečítajte si o PSR-4][psr4]
 
 
 [namespaces]: http://php.net/language.namespaces
