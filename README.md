@@ -33,8 +33,6 @@ _PHP: The Right Way_ 는 당신의 웹사이트에 사용할 수 있는 웹 배�
 
 <http://www.phptherightway.com>
 
-(역주 : 원래 영문순이라 한글 순으로 다시 정렬하였습니다. 이후 추가된 경우 순서가 다를 수 있으니 주의하시기 바랍니다.)
-
 * [English](http://www.phptherightway.com)
 * [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
 * [Español](http://phpdevenezuela.github.io/php-the-right-way)
