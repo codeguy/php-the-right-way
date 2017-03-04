@@ -52,3 +52,4 @@ Laravel 中文资料：
 - [Laravel 中文文档，涵盖 5.1, 5.2, 5.3 版本](https://laravel-china.org/docs/home )
 - [Laravel 招聘 ](https://laravel-china.org/categories/1)
 - [Laravel 中文社区](https://laravel-china.org/) 我们是现代化 PHP 的拥护者
+- [Laravel 速查表](https://cs.laravel-china.org/)
