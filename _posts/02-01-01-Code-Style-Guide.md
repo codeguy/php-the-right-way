@@ -45,11 +45,11 @@ It will show which kind of errors the code structure had before it fixed them.
 
 所有的变量名称以及代码结构建议用英文编写。注释可以使用任何语言，只要让现在以及未来的小伙伴能够容易阅读理解即可。
 
-[fig]: http://www.php-fig.org/
+[fig]: https://psr.phphub.org/
 [psr0]: http://www.php-fig.org/psr/psr-0/
-[psr1]: http://www.php-fig.org/psr/psr-1/
-[psr2]: http://www.php-fig.org/psr/psr-2/
-[psr4]: http://www.php-fig.org/psr/psr-4/
+[psr1]: https://laravel-china.org/topics/2078
+[psr2]: https://laravel-china.org/topics/2079
+[psr4]: https://laravel-china.org/topics/2081
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
