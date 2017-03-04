@@ -47,7 +47,7 @@ _Laravel 的 [Illuminate 组件] 和 Laravel 框架将变得更加解耦。 现�
 
 Laravel 中文资料：
 
-- [Laravel 中文书籍《Laravel 入门教程》 ])(https://laravel-china.org/topics/3383)
+- [Laravel 中文书籍《Laravel 入门教程》](https://laravel-china.org/topics/3383)
 - [下载量最高的 100 个 Laravel 扩展包推荐 ](https://laravel-china.org/topics/2530)
 - [Laravel 中文文档，涵盖 5.1, 5.2, 5.3 版本](https://laravel-china.org/docs/home )
 - [Laravel 招聘 ](https://laravel-china.org/categories/1)
