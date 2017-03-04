@@ -1,17 +1,14 @@
 ---
-isChild: true
 title: 值得关注的大牛
+isChild: true
 anchor:  people_to_follow
 ---
 
 ## 值得关注的大牛 {#people_to_follow_title}
 
-* [Rasmus Lerdorf](http://twitter.com/rasmus)
-* [Fabien Potencier](http://twitter.com/fabpot)
-* [Derick Rethans](http://twitter.com/derickr)
-* [Chris Shiflett](http://twitter.com/shiflett)
-* [Sebastian Bergmann](http://twitter.com/s_bergmann)
-* [Matthew Weier O'Phinney](http://twitter.com/mwop)
-* [Pádraic Brady](http://twitter.com/padraicb)
-* [Anthony Ferrara](http://twitter.com/ircmaxell)
-* [Nikita Popov](http://twitter.com/nikita_ppv)
+你可以在以下链接中找到 PHP 社区成员的 Twitter：
+
+* [25 PHP Developers to Follow Online][php-developers-to-follow]
+
+
+[php-developers-to-follow]: https://blog.newrelic.com/2014/05/02/25-php-developers-follow-online/

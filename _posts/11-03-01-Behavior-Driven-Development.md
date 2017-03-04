@@ -1,7 +1,7 @@
 ---
 isChild: true
-title: 行为驱动开发
 anchor:  behavior_driven_development
+title: 行为驱动开发
 ---
 
 ## 行为驱动开发 {#behavior_driven_development_title}

@@ -1,19 +1,18 @@
 ---
 layout: default
-description: "PHP 之道，收集 PHP 最佳实践、编码规范和权威学习指南，方便 PHP 开发者阅读和查找"
+description: "An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web"
 sitemap: true
 ---
 
 {% capture welcome_content %}{% include welcome.md %}{% endcapture %}
-{{ welcome_content|markdownify }}
+<section class="chapter" id="welcome">
+    {{ welcome_content|markdownify }}
+</section>
 
-{% capture backtotop %}[Back to Top](#top){:.top}{% endcapture %}
+{% capture backtotop %}[回到顶部](#top){:.top}{% endcapture %}
 {% for post in site.posts reversed %}
-    {% if post.isChild != true and loop.first != true %}
-    {{ backtotop|markdownify }}
-    {% endif %}
-    <div id="{{ post.anchor }}">
+{% if post.isChild != true and loop.first != true %}<div class="back-to-top">{{ backtotop|markdownify }}</div>{% endif %}
+<section class="chapter" id="{{ post.anchor }}">
     {{ post.content }}
-    </div>
+</section>
 {% endfor %}
-{{ backtotop|markdownify }}

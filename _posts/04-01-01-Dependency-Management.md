@@ -1,6 +1,6 @@
 ---
-title: 依赖管理
 anchor: dependency_management
+title: 依赖管理
 ---
 
 # 依赖管理 {#dependency_management_title}

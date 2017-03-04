@@ -1,7 +1,7 @@
 ---
 isChild: true
-title: 对象缓存
 anchor:  object_caching
+title: 对象缓存
 ---
 
 ## 对象缓存 {#object_caching_title}
@@ -17,6 +17,7 @@ anchor:  object_caching
 通常 APCu 在存取速度上比 Memcached 更快，但是 Memcached 在扩展上更有优势。如果你不希望应用程序涉及多个服务器，或者不需要 Memcached 提供的其他特性，那么 APCu 可能是最好的选择。
 
 使用 APCu 的例子：
+
 {% highlight php %}
 <?php
 // check if there is data saved as 'expensive_data' in cache
@@ -25,12 +26,13 @@ if ($data === false) {
     // data is not in cache; save result of expensive call for later use
     apc_add('expensive_data', $data = get_expensive_data());
 }
+
 print_r($data);
 {% endhighlight %}
 
 注意在 PHP 5.5 之前，APC 同时提供了对象缓存与字节码缓存。APCu 是为了将 APC 的对象缓存移植到 PHP 5.5+ 的一个项目，因为现在 PHP 有了内建的字节码缓存方案 (OPcache)。
 
-更多关于缓存系统的项目：
+### 更多关于缓存系统的项目：
 
 * [APCu](https://github.com/krakjoe/apcu)
 * [APC Functions](http://php.net/ref.apc)

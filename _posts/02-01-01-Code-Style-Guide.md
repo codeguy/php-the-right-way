@@ -1,6 +1,6 @@
 ---
-title: 代码风格指南
 anchor: code_style_guide
+title: 代码风格指南
 ---
 
 # 代码风格指南 {#code_style_guide_title}
@@ -20,28 +20,39 @@ PHP 社区百花齐放，拥有大量的函数库、框架和组件。PHP 开发
 
 你可以使用 [PHP_CodeSniffer][phpcs] 来检查代码是否符合这些准则，文本编辑器 [Sublime Text][st-cs] 的插件也可以提供实时检查。
 
-你可以通过以下两个工具来自动修正你的程序语法，让它符合标准。
-一个是 [PHP Coding Standards Fixer][phpcsfixer]，它具有良好的测试。
-另外一个工具是 [php.tools][phptools]， 它是 sublime text 的一个非常流行的插件[sublime-phpfmt][sublime-phpfmt]，虽然比较新，但是在性能上有了很大的提高，这意味着实时的修复语法会更加的流畅。
+你可以通过任意以下两个工具来自动修正你的程序语法，让它符合标准：
+
+- 一个是 [PHP Coding Standards Fixer][phpcsfixer]，它具有良好的测试。
+- 另一个是随 PHP_CodeSniffer 安装的 [PHP Code 美化修整器][phpcbf]。
 
 你也可以手动运行 phpcs 命令：
 
     phpcs -sw --standard=PSR2 file.php
 
-它会显示出相应的错误以及如何修正的方法。同样地，这条命令也可以用在 git hook 中，如果你的分支代码不符合选择的代码标准则无法提交。
+它会显示出相应的错误以及如何修正的方法。同时，这条命令你也可以用在 git hook 中，如果你的分支代码不符合选择的代码标准则无法提交。
+
+如果你已经安装了 PHP_CodeSniffer，你将可以使用
+[PHP Code 美化修整器][phpcbf] 来格式化代码：
+
+    phpcbf -w --standard=PSR2 file.php
+
+Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
+It will show which kind of errors the code structure had before it fixed them.
+
+另一个选项是使用 [PHP 编码标准修复器][phpcsfixer]，他可以让你预览编码不合格的部分：
+
+    php-cs-fixer fix -v --level=psr2 file.php
 
 所有的变量名称以及代码结构建议用英文编写。注释可以使用任何语言，只要让现在以及未来的小伙伴能够容易阅读理解即可。
 
-
 [fig]: http://www.php-fig.org/
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
-[psr2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[psr0]: http://www.php-fig.org/psr/psr-0/
+[psr1]: http://www.php-fig.org/psr/psr-1/
+[psr2]: http://www.php-fig.org/psr/psr-2/
+[psr4]: http://www.php-fig.org/psr/psr-4/
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
+[phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: http://cs.sensiolabs.org/
-[phptools]: https://github.com/dericofilho/php.tools
-[sublime-phpfmt]: https://github.com/dericofilho/sublime-phpfmt

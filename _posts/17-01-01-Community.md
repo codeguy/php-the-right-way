@@ -1,6 +1,6 @@
 ---
-title: 社区
 anchor: community
+title: 社区
 ---
 
 # 社区 {#community_title}

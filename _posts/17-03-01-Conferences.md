@@ -1,7 +1,7 @@
 ---
 isChild: true
-title: PHP 会议
 anchor:  conferences
+title: PHP 大会
 ---
 
 ## PHP 会议 {#conferences_title}

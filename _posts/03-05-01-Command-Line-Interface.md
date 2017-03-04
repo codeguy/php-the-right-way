@@ -1,14 +1,14 @@
 ---
 isChild: true
+anchor:  command_line_interface
 title: 命令行接口
-anchor: command_line_interface
 ---
 
 ## 命令行接口 {#command_line_interface_title}
 
 PHP 是为开发 Web 应用而创建，不过它的命令行脚本接口(CLI)也非常有用。PHP 命令行编程可以帮你完成自动化的任务，如测试，部署和应用管理。
 
-CLI PHP 编程非常强大，可以直接调用你自己的程序代码而无需创建 Web 图形界面，需要注意的是**不要**把 CLI PHP 脚本放在公开的 web 目录下！
+CLI PHP 编程非常强大，可以直接调用你自己的程序代码而无需创建 Web 图形界面，需要注意的是 **不要** 把 CLI PHP 脚本放在公开的 web 目录下！
 
 在命令行下运行 PHP :
 
@@ -45,7 +45,6 @@ Usage: php hello.php [name]
 > php hello.php world
 Hello, world
 {% endhighlight %}
-
 
  * [学习如何在命令行运行 PHP][php-cli]
  * [学习如何在 Windows 环境下运行 PHP 命令行程序][php-cli-windows]

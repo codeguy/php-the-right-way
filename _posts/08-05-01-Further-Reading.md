@@ -1,7 +1,7 @@
 ---
 isChild: true
-title: 延伸阅读
 anchor:  templating_further_reading
+title: 延伸阅读
 ---
 
 ## 延伸阅读 {#templating_further_reading_title}
@@ -19,7 +19,7 @@ anchor:  templating_further_reading
 ### 类库
 
 * [Aura.View](https://github.com/auraphp/Aura.View) *(native)*
-* [Blade](http://laravel.com/docs/templates) *(compiled, framework specific)*
+* [Blade](http://laravel.com/docs/blade) *(compiled, framework specific)*
 * [Brainy](https://github.com/box/brainy) *(compiled)*
 * [Dwoo](http://dwoo.org/) *(compiled)*
 * [Latte](https://github.com/nette/latte) *(compiled)*

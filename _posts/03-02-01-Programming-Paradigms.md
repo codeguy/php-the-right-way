@@ -1,7 +1,7 @@
 ---
 isChild: true
-title: 编程范式
 anchor:  programming_paradigms
+title: 编程范式
 ---
 
 ## 编程范式 {#programming_paradigms_title}
@@ -17,7 +17,7 @@ PHP 拥有完整的面向对象编程的特性，包括类，抽象类，接口�
 
 ### 函数式编程 Functional Programming
 
-PHP 支持函数是"第一等公民"，即函数可以被赋值给一个变量，包括用户自定义的或者是内置函数，然后动态调用它。函数可以作为参数传递给其他函数（称为高阶函数），也可以作为函数返回值返回。
+PHP 支持函数是「第一等公民」，即函数可以被赋值给一个变量，包括用户自定义的或者是内置函数，然后动态调用它。函数可以作为参数传递给其他函数（称为高阶函数），也可以作为函数返回值返回。
 
 PHP 支持递归，也就是函数自己调用自己，但多数 PHP 代码使用迭代。
 
@@ -40,7 +40,6 @@ PHP 通过反射 API 和魔术方法，可以实现多种方式的元编程。�
 * [阅读反射][reflection]
 * [阅读重载][overloading]
 
-
 [oop]: http://php.net/language.oop5
 [traits]: http://php.net/language.oop5.traits
 [anonymous-functions]: http://php.net/functions.anonymous
@@ -51,3 +50,4 @@ PHP 通过反射 API 和魔术方法，可以实现多种方式的元编程。�
 [magic-methods]: http://php.net/language.oop5.magic
 [reflection]: http://php.net/intro.reflection
 [overloading]: http://php.net/language.oop5.overloading
+
