@@ -12,8 +12,13 @@ PHP 어플리케이션을 만드는 모든 사람은 언제가 사용자 로그�
 패스워드는 저장하기 전에 적절하게 [_해시(hash)_][3] 해야 합니다. 패스워드는 원문을 복원할 수 없도록 단방향 함수로
 해시되어야 합니다. 이러한 해시 함수는, 원문을 알아내는데 적절한 정도로 어려운 고정적인 길이의 문자열을 생성합니다.
 만약 사용자의 패스워드를 해시하지 않고 데이터베이스에 저장한다면, 어떠한 경로를 통해서든 부적절하게 데이터베이스에 제
-3자가 접근했을 때 모든 사용자 계정이 탈취당하게 될 것입니다. 운나쁘게 어떤 사용자는 다른 서비스에도 동일한 패스워드를
-사용하고 있을 수도 있겠죠. 그러므로 패스워드 보안을 중요하게 생각해야 합니다.
+3자가 접근했을 때 모든 사용자 계정이 탈취당하게 될 것입니다.
+
+Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of "rainbow tables" (a reverse list of crytographic hashes for common passwords.)
+
+Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor. 
+
+Fortunately, nowadays PHP makes this easy. 
 
 **`password_hash`로 패스워드 해시하기**
 
@@ -37,10 +42,12 @@ if (password_verify('bad-password', $passwordHash)) {
 }
 {% endhighlight %}  
 
+`password_hash()` takes care of password salting for you. The salt is stored, along with the algorithm and "cost", as part of the hash.  `password_verify()` extracts this to determine how to check the password, so you don't need a separate database field to store your salts. 
 
 * [알아보기: `password_hash()`] [1]
 * [`password_compat` for PHP >= 5.3.7 && < 5.5] [2]
 * [알아보기: hashing in regards to cryptography] [3]
+* [알아보기: salts] [5]
 * [PHP `password_hash()` RFC] [4]
 
 
@@ -48,3 +55,4 @@ if (password_verify('bad-password', $passwordHash)) {
 [2]: https://github.com/ircmaxell/password_compat
 [3]: http://en.wikipedia.org/wiki/Cryptographic_hash_function
 [4]: https://wiki.php.net/rfc/password_hash
+[5]: https://en.wikipedia.org/wiki/Salt_(cryptography)

@@ -20,6 +20,7 @@ foreach ($db->query('SELECT * FROM table') as $row) {
 {% endhighlight %}
 
 이것은 어떤 측면으로 보아도 나쁜 코딩 습관입니다. 디버깅하기도 어렵고 테스트하기도 어렵고 읽기도 어렵습니다.
+그리고, limit을 추가하지 않으면 많은 양의 항목을 출력하게 됩니다.
 
 여러분이 [개체지향 프로그래밍](#object-oriented-programming)을 선호하는지, [함수형 프로그래밍](#functional-programming)
 을 선호하는지에 따라 여러가지 방법이 있을 수 있겠지만, 코드를 서로 분리하는 데에는 어떤 기본 요인이 있을 겁니다.
