@@ -2,6 +2,8 @@
 
 [在线地址](http://laravel-china.github.io/php-the-right-way/)
 
+> 此项目由 [Laravel China 社区](https://laravel-china.org/ ) 维护，请维护互联网开放精神，转载请保留出处。
+
 ## 概览
 
 这是 _PHP之道_ 项目的 GitHub Pages 仓库。

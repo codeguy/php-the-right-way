@@ -10,15 +10,13 @@ _前置声明：i18n 和 l10n 是使用数字简略拼写方式来实现缩写�
 
 首先，我们需要定义这两个相似的概念，还有相关的概念：
 
-- **Internationalization** 指的是一开始设计一个支持多语言的架构。很多时候这个事情只需要做一次，并且是在项目初始时，不然的话，你可能面临一个项目的重大修改。
-- **Localization** 指的是新语言的添加。基于 i18n 的架构设计，在每一次新支持一门语言时，我们都需要一点点的去增加翻译的语言。
-- **Pluralization** 复数形式。不同语言复数规则不一样，即使是相同语言里也会出现不同复数规则，例如大部分英文名词后面加 `s 为复数，有一些单词如 `knowledge` 就没有复数形式。俄语和塞尔威亚语有两种复数的形式，甚至有一些语言，如斯洛维尼亚语、爱尔兰语和阿拉伯语会存在 4、5 或者是 6 种复数形式。
+- **Internationalization** 国际化：指的是一开始设计一个支持多语言的架构。很多时候这个事情只需要做一次，并且是在项目初始时，不然的话，你可能面临一个项目的重大修改。
+- **Localization** 本地化：指的是新语言的添加。基于 i18n 的架构设计，在每一次新支持一门语言时，我们都需要一点点的去增加翻译的语言。
+- **Pluralization** 复数形式：不同语言复数规则不一样，即使是相同语言里也会出现不同复数规则，例如大部分英文名词后面加 `s 为复数，有一些单词如 `knowledge` 就没有复数形式。俄语和塞尔威亚语有两种复数的形式，甚至有一些语言，如斯洛维尼亚语、爱尔兰语和阿拉伯语会存在 4、5 或者是 6 种复数形式。
 
-## Common ways to implement
-The easiest way to internationalize PHP software is by using array files and using those strings in templates, such as
-`<h1><?=$TRANS['title_about_page']?></h1>`. This is, however, hardly a recommended way for serious projects, as it poses
-some maintenance issues along the road - some might appear in the very beginning, such as pluralization. So, please,
-don't try this if your project will contain more than a couple of pages.
+## 一般实现的方法
+
+最简便的方式是使用数组键值对应的方式如 `<h1><?=$TRANS['title_about_page']?></h1>`，不过在比较正经的项目中，不建议这么做。因为会随着项目代码慢慢变多，维护的难度将会增加，尤其会阻碍后续本地化实施。
 
 The most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext]. It dates
 back to 1995 and is still a complete implementation for translating software. It is pretty easy to get running, while
