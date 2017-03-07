@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8"/>
-        <title>{% if page.title %}{{ page.title }} - {% endif %}PHP: The Right Way</title>
+        <title>{% if page.title %}{{ page.title }} - {% endif %} PHP 之道 | PHP The Right Way 中文版</title>
         <meta name="description" content="{{ page.description }}"/>
         <meta name="robots" content="index,follow,archive"/>
         <meta property="og:image:url" content="http://www.phptherightway.com/images/og-image.png"/>
@@ -24,9 +24,11 @@
     <body>
         <header class="site-header">
             <h1><a href="/">PHP <em>The Right Way</em></a></h1>
-            <div class="build-date">Last Updated: {{ site.time }}</div>
+            <div class="build-date">最后更新于: {{ site.time }} 由 <a href="https://laravel-china.org/" target="_blank" >Laravel China 社区</a> 维护</div>
             <div class="share">
-                <a class="btn-share" href="https://twitter.com/intent/tweet?text=PHP+The+Right+Way&amp;url=http%3A%2F%2Fwww.phptherightway.com&amp;hashtags=PHP" target="_blank">Share on Twitter</a>
+                <a class="btn-share" href="http://service.weibo.com/share/share.php?url=http://0.0.0.0:4000/&title=PHP+The+Right+Way+PHP+之道" target="_blank">分享到微博</a>
+                <br>
+                 <a class="btn-share" href="https://laravel-china.org/" target="_blank" style="margin-top: 13px;">❤ Laravel China 社区 ❤</a> 
             </div>
             <a class="fork-me" href="https://github.com/codeguy/php-the-right-way" target="_blank"></a>
         </header>
