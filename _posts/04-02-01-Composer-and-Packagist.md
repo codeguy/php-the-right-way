@@ -66,7 +66,7 @@ Composer 会通过一个 `composer.json` 文件持续的追踪你的项目依赖
 composer require twig/twig:~1.8
 {% endhighlight %}
 
-另外 `composer init` 命令将会引导你创建一个完整的 `composer.json` 文件到你的项目之中。无论你使用哪种方式，一旦你创建了 `composer.json` 文件，你可以告诉 Composer 去下载及安装你的依赖到 `vendors/` 目录中。这命令也适用于你已经下载并已经提供了一个 `composer.json` 的项目：
+另外 `composer init` 命令将会引导你创建一个完整的 `composer.json` 文件到你的项目之中。无论你使用哪种方式，一旦你创建了 `composer.json` 文件，你可以告诉 Composer 去下载及安装你的依赖到 `vendor/` 目录中。这命令也适用于你已经下载并已经提供了一个 `composer.json` 的项目：
 
 {% highlight console %}
 composer install
