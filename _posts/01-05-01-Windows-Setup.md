@@ -20,7 +20,10 @@ anchor:  windows_setup
 볼 수 있습니다.
 
 일반적으로 개발 환경과 프로덕션 환경이 다르면 라이브 할 때 이상한 버그가 발생할 수 있습니다. 윈도우즈에서 개발하고 리눅스에 배포하고 있다면 [버추얼 머신](/#virtualization_title)을 사용하는 것이 좋습니다.
- 
+
+Generally running your application on different environment in development and production can lead to strange bugs popping up when you go
+live. If you are developing on Windows and deploying to Linux (or anything non-Windows) then you should consider using a [Virtual Machine](/#virtualization_title).
+
 Chris Tankersley 가 [윈도우즈를 이용한 PHP 개발시 그가 사용하는 도구에 대한 매우 도움이 되는 블로그 글][windows-tools]을 썻습니다.
 
 [easyphp]: http://www.easyphp.org/
@@ -28,8 +31,8 @@ Chris Tankersley 가 [윈도우즈를 이용한 PHP 개발시 그가 사용하�
 [openserver]: http://open-server.ru/
 [wamp]: http://www.wampserver.com/en/
 [php-downloads]: http://windows.php.net/download/
-[php-iis]: http://php.iis.net//
+[php-iis]: http://php.iis.net/
 [windows-path]: http://www.windows-commandline.com/set-path-command-line/
-[windows-tools]: http://ctankersley.com/2015/07/01/developing-on-windows/
-[wpi]: http://www.microsoft.com/web/downloads/platform.aspx
+[windows-tools]: http://ctankersley.com/2016/11/13/developing-on-windows-2016/
+[wpi]: https://www.microsoft.com/web/downloads/platform.aspx
 [xampp]: http://www.apachefriends.org/en/xampp.html

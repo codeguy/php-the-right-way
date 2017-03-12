@@ -14,20 +14,19 @@ Composer는 **훌륭한** PHP 의존성 관리자입니다. 프로젝트의 의�
 
 ### Composer 설치
 
-Composer를 로컬 디렉토리(current working directory)나 글로벌하게 설치(예를 들어 /usr/local/bin)할 수 있습니다.
-Composer를 글로벌하게 설치한다면 다음 명령어를 입력합니다.
+Composer를 다운로드 받는 가장 안전한 방법은 [공식 설명을 따르는 것](https://getcomposer.org/download/) 입니다.
+이 방법은 인스톨러가 손상되거나 부정하게 변경되지는 않았는지 확인합니다.
+인스톨러는 Composer를 현재 작업 디렉토리에 *로컬* 설치합니다.
+
+Composer를 (/usr/local/bin 등에) *글로벌* 설치하기 권장하는데, 그렇게 하기 위해서는 다음 명령어를 추가로 실행합니다.
 
 {% highlight console %}
-curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
-**참고:** 권한때문에 실패한 경우 `mv` 명령어를 `sudo`를 붙여서 실행하세요.
+**참고:** 권한때문에 실패한 경우 `sudo`를 붙여서 실행하세요.
 
-이렇게 하면 `composer.phar`라는 PHP 바이너리 파일이 다운로드됩니다. `php`로 이 바이너리를 실행하여 프로젝트의 의존성을
-관리할 수 있습니다.
-**반드시 참고할것!** 여기서 하는 것처럼 웹에서 다운로드한 코드를 바로 PHP 인터프리터에 파이프로 전달하여
-실행하는 경우에는 실행하기 전에 먼저 코드 내용을 보고 안전한 코드인 것을 확인한 후에 실행하기 바랍니다.
+To run a locally installed Composer you'd use `php composer.phar`, globally it's simply `composer`.
 
 #### 윈도우에 Composer 설치
 
@@ -80,6 +79,7 @@ composer require twig/twig:~1.8
 이렇게 하는 대신 `composer init` 명령어를 사용하면 여러분의 프로젝트를 위한 완전한 `composer.json` 파일을 만들 수 있게
 도와줍니다. 둘 중 어느 방법을 사용하든지, `composer.json` 파일을 만들고 나면 이제 Composer 를 이용하여 패키지를
 `vendors/` 디렉토리에 설치할 수 있습니다.
+이는 `composer.json` 파일이 제공되는 다운로드 받은 프로젝트에도 동일하게 적용됩니다.
 
 {% highlight console %}
 composer install
@@ -98,9 +98,11 @@ require 'vendor/autoload.php';
 ### 의존관계 정보 업데이트하기
 
 `composer install` 명령어를 처음 실행하면 Composer는 설치한 패키지들의 버전을 기록한 `composer.lock` 파일을 생성합니다.
-여러분의 프로젝트를 다른 개발자와 공유할 때 `composer.lock` 파일을 같이 포함시켜서 공유하면, 다른 개발자가 프로젝트를
-받아서 `composer install` 명령어를 실행했을 때 여러분이 사용한 것과 동일한 버전의 패키지를 받게 됩니다. 의존관계
+프로젝트를 공유할 때 `composer.lock` 파일을 같이 포함시켜서, 다른 사람이 `composer install` 명령어를 실행했을 때
+동일한 버전의 패키지를 받도록 하세요. 의존관계
 정보를 업데이트하고 싶으면 `composer update` 명령어를 실행하면 됩니다.
+배포할 때에는 `composer update`를 사용하지 말고 `composer install`를 사용하세요.
+그렇지 않으면 배포 환경에는 다른 버전의 패키지를 사용하게 될 수도 있습니다.
 
 이런 점은 여러분이 사용하는 패키지 버전을 유연하게 관리하려고 할 때 가장 유용할 것입니다. 예를 들어 `~1.8` 이라고
 버전을 지정한 것은 "`1.8.0` 보다는 높은 버전이지만 `2.0.x-dev` 버전보다는 낮은 버전"을 의미합니다. `*` 와일드카드

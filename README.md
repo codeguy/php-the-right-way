@@ -18,6 +18,8 @@ _PHP: The Right Way_ 는 당신의 웹사이트에 사용할 수 있는 웹 배�
 
 ## 공헌하는 방법
 
+정확한 설명과 팁들을 얻기 위해서는 `CONTRIBUTING.md` 파일을 읽으시는 것이 좋습니다. 하지만, 간단히 요약하면 아래 내용과 같습니다. 
+
 1. 포크하고 수정하세요
 2. 로컬에서 미리보기를 하고자 하면 [Ruby](https://rvm.io/rvm/install/) 와 [Jekyll](https://github.com/mojombo/jekyll/) gem 을 설치하세요
 3. 풀리퀘스트를 날려주세요

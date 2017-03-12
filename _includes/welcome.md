@@ -40,6 +40,10 @@ _PHP: The Right Way_ 는 다양한 언어로 변역되어 있습니다.
 * [简体中文](http://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
 
+## Book
+
+The most recent version of _PHP: The Right Way_ is also available in PDF, EPUB and MOBI formats. [Go to Leanpub][1]
+
 ## 프로젝트에 기여하기 {#how_to_contribute}
 
 여러분의 도움이 있으면 이 사이트를 PHP 프로그래밍을 새로 시작하는 사람들을 위한 최고의 문서로 만들 수 있습니다! [GitHub 저장소를 통해서 도와주세요.][1]
@@ -49,7 +53,8 @@ _PHP: The Right Way_ 는 다양한 언어로 변역되어 있습니다.
 여러분의 웹사이트에 걸어둘 수 있는 _PHP: The Right Way_ 배너 이미지들이 있습니다. 여러분이 _PHP: The Right Way_ 를
 성원하고 있다는 것을 보여주고, 또 새로운 PHP 개발자들이 어디에 가면 좋은 정보를 찾을 수 있는지 알 수 있게 해주세요.
 
-[배너 이미지 보기][2]
+[배너 이미지 보기][3]
 
-[1]: https://github.com/modernpug/php-the-right-way/tree/gh-pages
-[2]: /banners.html
+[1]: https://leanpub.com/phptherightway
+[2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
+[3]: /banners.html

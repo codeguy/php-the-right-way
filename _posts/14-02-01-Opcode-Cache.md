@@ -6,21 +6,19 @@ anchor:  opcode_cache
 
 ## Opcode 캐시 {#opcode_cache_title}
 
-PHP 파일을 실행했을 때 내부에서 처음으로 하는 일은 PHP 파일을 컴파일해서 opcode로 만들고, 이 opcode들이 실행됩니다.
-원본 PHP 파일이 수정되지 않으면 컴파일된 opcode는 항상 같습니다. 결국 컴파일 과정이 CPU 리소스를 낭비한다는 얘기가
-됩니다.
+PHP 파일을 실행하면 가장 먼저 이 파일은 컴파일해서 [opcode](http://php.net/manual/en/internals2.opcodes.php) (CPU를 위한 기계 언어 명령) 로 만들게 됩니다.
+원본 PHP 파일이 수정되지 않으면 컴파일된 opcode는 항상 같기때문에, 이러한 컴파일 과정은 CPU 리소스 낭비가 됩니다.
 
-그래서 opcode 캐시가 필요합니다. opcode를 메모리에 보관해서 불필요한 컴파일 과정이 일어나지 않게 합니다. opcode 캐시를
-설정하는 건 몇 분이면 할 수 있는 수준인데다가 어플리케이션의 성능이 즉시 향상되기 때문에 사용하지 않을 이유가 없습니다.
+opcode 캐시는 opcode를 메모리에 보관하고, 이후 호출 시에 재사용하여 불필요한 컴파일 과정이 일어나지 않게 합니다. 보통 시그니처나 파일의 수정 시각을 먼저 확인하여 변경이 있는지 검사합니다.
 
-PHP 5.5부터는 [OPcache][opcache-book]. 라는 opcode 캐시가 내장되어 있습니다. 이전버전의 PHP에서도 사용 가능합니다.
+opcode 캐시는 아마 여러분의 어플리케이션을 상당히 빠르게 개선할 것입니다. PHP 5.5 부터는 [Zend OPcache][opcache-book] 라는 opcode 캐시가 내장되어 있습니다. PHP 패키지/배포판에 따라서 기본으로 활성화 되어있습니다. [opcache.enable](http://php.net/manual/en/opcache.configuration.php#ini.opcache.enable) 에서 확인하고, `phpinfo()` 출력값으로 확인하세요. 이전 버전의 PHP를 위해서는 PECL 확장이 있습니다.
 
 아래는 인기있는 opcode 캐시들입니다.
 
-* [OPcache][opcache-book] (PHP 5.5 이후 내장)
-* [APC] (PHP 5.4 혹은 그 이전 버전)
+* [Zend OPcache][opcache-book] (PHP 5.5 이후 내장)
+* Zend OPcache (구 Zend Optimizer+) 는 이제 [오픈소스][Zend Optimizer+]가 되었습니다.
+* [APC] - PHP 5.4 혹은 그 이전 버전
 * [XCache]
-* [Zend Optimizer+] (Zend 서비스 패키지의 일부)
 * [WinCache] (MS Windows Server를 위한 익스텐션)
 * [위키백과: PHP 가속화도구(Acceleratior) 목록][PHP_accelerators]
 
@@ -28,6 +26,6 @@ PHP 5.5부터는 [OPcache][opcache-book]. 라는 opcode 캐시가 내장되어 �
 [opcache-book]: http://php.net/book.opcache
 [APC]: http://php.net/book.apc
 [XCache]: http://xcache.lighttpd.net/
-[Zend Optimizer+]: http://www.zend.com/en/products/zend_server
+[Zend Optimizer+]: https://github.com/zendtech/ZendOptimizerPlus
 [WinCache]: http://www.iis.net/download/wincacheforphp
 [PHP_accelerators]: http://en.wikipedia.org/wiki/List_of_PHP_accelerators

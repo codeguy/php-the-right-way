@@ -35,10 +35,14 @@ mod_php5 모듈을 사용한다면 prefork MPM도 반드시 사용해야 한다�
 [worker MPM]이나 [event MPM]을 mod_fastcgi나 mod_fcgid 모듈과 함께 사용하는 것입니다. 앞에서 얘기한 방식이 비하면
 메모리 측면에서도 현저하게 효율적이고 속도도 더 빠르긴 하지만 설정에는 손이 더 많이 갑니다.
 
+If you are running Apache 2.4 or later, you can use [mod_proxy_fcgi] to get great performance that is easy to setup.
+
 * [더 읽을거리: Apache][apache]
 * [더 읽을거리: Multi-Processing Modules][apache-MPM]
 * [더 읽을거리: mod_fastcgi][mod_fastcgi]
 * [더 읽을거리: mod_fcgid][mod_fcgid]
+* [Read more on mod_proxy_fcgi][mod_proxy_fcgi]
+* [Read more on setting up Apache and PHP-FPM with mod_proxy_fcgi][tutorial-mod_proxy_fcgi]
 
 
 [nginx]: http://nginx.org/
@@ -50,5 +54,7 @@ mod_php5 모듈을 사용한다면 prefork MPM도 반드시 사용해야 한다�
 [event MPM]: http://httpd.apache.org/docs/2.4/mod/event.html
 [apache]: http://httpd.apache.org/
 [apache-MPM]: http://httpd.apache.org/docs/2.4/mod/mpm_common.html
-[mod_fastcgi]: http://www.fastcgi.com/mod_fastcgi/docs/mod_fastcgi.html
+[mod_fastcgi]: https://blogs.oracle.com/opal/entry/php_fpm_fastcgi_process_manager
 [mod_fcgid]: http://httpd.apache.org/mod_fcgid/
+[mod_proxy_fcgi]: https://httpd.apache.org/docs/current/mod/mod_proxy_fcgi.html
+[tutorial-mod_proxy_fcgi]: https://serversforhackers.com/video/apache-and-php-fpm

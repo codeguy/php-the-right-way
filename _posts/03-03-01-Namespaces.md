@@ -21,10 +21,7 @@ _네임스페이스_ 기능은 이런 문제를 해결할 수 있습니다. PHP 
 클래스 이름, 네임스페이스 이름에 대한 표준화된 규칙을 제공하여, 명시적으로 일일이 파일을 불러오지(include) 않아도
 클래스를 자동으로 불러오는 등 플러그 앤 플레이 방식처럼 코드를 사용할 수 있게 하는데 목표를 두고 있습니다.
 
-2014년 10월에 PHP-FIG는 기존의 오토로드(autoloading) 표준인 [PSR-0][psr0]를 폐지(deprecate)하였고 [PSR-4][psr4]로
-대체하였습니다. 현재는 두 가지가 모두 사용가능한 상태인데, PSR-4는 PHP 5.3 이상에서만 적용이 되기 때문에 아직도 PHP
-5.2 호환 프로젝트들은 PSR-0를 구현해 둔 상태입니다. 다행스럽게도 PHP 5.2 호환 프로젝트들이 버전 요구사항을 높이기 시작했고,
-PSR-0은 차즘 적게 사용되고 있습니다.
+2014년 10월에 PHP-FIG는 기존의 오토로드(autoloading) 표준인 [PSR-0][psr0]를 폐지(deprecated)했습니다. PSR-0, PSR-4 두 가지 모두 사용가능한 상태인데, PSR-4는 PHP 5.3 이상에서만 적용이 되기 때문에 아직도 PHP 5.2 호환 프로젝트들은 PSR-0를 구현해 둔 상태입니다.
 
 새로운 어플리케이션이나 패키지를 만들면서 오토로더(autoloader) 표준을 따를 생각이라면, PSR-4를 사용하면 됩니다.
 
@@ -34,6 +31,5 @@ PSR-0은 차즘 적게 사용되고 있습니다.
 
 
 [namespaces]: http://php.net/language.namespaces
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr4]: https://github.com/ModernPUG/php-the-right-way/blob/gh-pages/more/Psr-4-Autoloader.md
-[psr4 original]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[psr0]: http://www.php-fig.org/psr/psr-0/
+[psr4]: http://www.php-fig.org/psr/psr-4/

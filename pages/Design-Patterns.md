@@ -12,7 +12,7 @@ sitemap: true
 
 * [위키백과: Architectural pattern](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [위키백과: Software design pattern](https://en.wikipedia.org/wiki/Software_design_pattern)
-* [Collection of implementation examples](https://github.com/domnikl/DesignPatternsPHP)
+* [Collection of implementation examples](http://designpatternsphp.readthedocs.io/en/latest/)
 
 ## 팩토리(Factory) {#factory}
 
@@ -69,69 +69,7 @@ print_r($veyron->getMakeAndModel()); // "Bugatti Veyron"을 출력
 웹 어플리케이션을 설계할 때 특정 클래스의 경우에는 오직 하나의 인스턴스만이 존재하여 모든 곳에서 그 인스턴스만을
 사용해야 한다는 결정이 의미있는 경우가 있습니다. 싱글턴 패턴(singleton pattern)을 사용하여 그런 클래스를 만들어 냅니다.
 
-{% highlight php %}
-<?php
-class Singleton
-{
-    /**
-     * @var Singleton 이 클래스의 *싱클턴* 인스턴스 레퍼런스
-     */
-    private static $instance;
-
-    /**
-     * 이 클래스의 *싱글턴* 인스턴스를 리턴한다.
-     *
-     * @return Singleton *싱글턴* 인스턴스.
-     */
-    public static function getInstance()
-    {
-        if (null === static::$instance) {
-            static::$instance = new static();
-        }
-
-        return static::$instance;
-    }
-
-    /**
-     * 이 클래스는 *싱글턴*으로 사용할 것이므로 이 클래스 외부에서
-     * 생성하는 것을 금지하기 위해 생성자를 protected 로 제한한다.
-     */
-    protected function __construct()
-    {
-    }
-
-    /**
-     * *싱글턴* 인스턴스를 복제할 수 없도록 복제 메소드를 private
-     * 으로 제한한다.
-     *
-     * @return void
-     */
-    private function __clone()
-    {
-    }
-
-    /**
-     * *싱글턴* 인스턴스를 unserialize 하지 못하게 private 으로 제한한다.
-     *
-     * @return void
-     */
-    private function __wakeup()
-    {
-    }
-}
-
-class SingletonChild extends Singleton
-{
-}
-
-$obj = Singleton::getInstance();
-var_dump($obj === Singleton::getInstance());             // bool(true)
-
-$anotherObj = SingletonChild::getInstance();
-var_dump($anotherObj === Singleton::getInstance());      // bool(false)
-
-var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
-{% endhighlight %}
+**TODO: NEED NEW SINGLETON CODE EXAMPLE**
 
 이 코드에서는 [*정적(static)* 변수](http://php.net/language.variables.scope#language.variables.scope.static)와 정적
 생성 메소드(`getInstance()`)를 사용한 싱글턴 구현을 보여주고 있습니다. 아래 내용을 유념하세요.

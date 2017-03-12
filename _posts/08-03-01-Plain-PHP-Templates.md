@@ -1,5 +1,5 @@
 ---
-title:   단순 PHP 템플릿
+title: 단순 PHP 템플릿
 isChild: true
 anchor:  plain_php_templates
 ---
