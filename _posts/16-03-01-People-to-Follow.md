@@ -6,10 +6,8 @@ anchor:  people_to_follow
 
 ## 유명개발자 {#people_to_follow_title}
 
-It's difficult to find interesting and knowledgeable PHP
-community members when you are first starting out. You can
-find a comprehensive list of PHP community members and their
-Twitter handles at:
+흥미롭고 유용한 PHP 커뮤니티 멤버들을 찾는 것을 처음 시작할 때는 어렵습니다.
+광범위한 PHP 커뮤니티 멤버들과 그들의 트위터를 아래에서 찾을 수 있습니다.
 
 * [25 PHP Developers to Follow Online][php-developers-to-follow]
 

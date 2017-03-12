@@ -14,11 +14,11 @@ PHP 어플리케이션을 만드는 모든 사람은 언제가 사용자 로그�
 만약 사용자의 패스워드를 해시하지 않고 데이터베이스에 저장한다면, 어떠한 경로를 통해서든 부적절하게 데이터베이스에 제
 3자가 접근했을 때 모든 사용자 계정이 탈취당하게 될 것입니다.
 
-Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of "rainbow tables" (a reverse list of crytographic hashes for common passwords.)
+패스워드는 해시하기 전에 각 패스워드 전에 임의의(random) 문자열을 추가하는 것으로 [_소금치기(솔팅,salting)_][5] 해야합니다. 이것은 사전 공격과 "레인보우 테이블"(일반적인 패스워드에 대한 암호 해시 목록)을 사용을 방어합니다.
 
-Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor. 
+사용자들이 흔히 복잡도가 낮은 동일한 패스워드를 여러 서비스에 사용하기 때문에 해싱과 솔팅은 필수적입니다.
 
-Fortunately, nowadays PHP makes this easy. 
+다행스럽게도, 최근에 PHP는 이것을 쉽게 할 수 있습니다.
 
 **`password_hash`로 패스워드 해시하기**
 
@@ -42,7 +42,7 @@ if (password_verify('bad-password', $passwordHash)) {
 }
 {% endhighlight %}  
 
-`password_hash()` takes care of password salting for you. The salt is stored, along with the algorithm and "cost", as part of the hash.  `password_verify()` extracts this to determine how to check the password, so you don't need a separate database field to store your salts. 
+`password_hash()` 는 패스워드 솔팅을 처리합니다. 솔트는 알고리즘과 "cost"와 함께 해시의 한 부분으로 저장됩니다. `password_verify()` 가 이것을 추출하여 패스워드를 어떻게 확인할지 결정하기 때문에 솔트를 저장하기 위한 별도의 데이타베이스 필드는 필요없습니다.
 
 * [알아보기: `password_hash()`] [1]
 * [`password_compat` for PHP >= 5.3.7 && < 5.5] [2]
