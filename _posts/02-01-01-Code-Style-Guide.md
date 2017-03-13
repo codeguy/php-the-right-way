@@ -41,13 +41,12 @@ FuelPHP, Lithium 등의 프로젝트에서 적용하기 시작한 스타일 규�
 이것을 git hook에 포함시키면 유용합니다.
 그렇게 해서 정한 기준을 위반한 것을 포함한 브랜치는 위반한 것들을 고치기 전까지는 저장소에 넣지 못하게 할 수 있습니다.
 
-If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
-[PHP Code Beautifier and Fixer][phpcbf].
+PHP_CodeSniffer 가 있다면, 확인된 코드 레이아웃 문제를 [PHP Code Beautifier and Fixer][phpcbf] 를 사용하여 자동으로 바로잡을 수 있습니다.
 
     phpcbf -w --standard=PSR2 file.php
 
-Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
-It will show which kind of errors the code structure had before it fixed them.
+다른 방법은 [PHP Coding Standards Fixer][phpcsfixer] 를 사용하는 것입니다.
+이것은 코드 구조에 어떤 종류의 에러들이 존재하는 지 바로잡기 전에 보여줍니다.
 
     php-cs-fixer fix -v --level=psr2 file.php
 

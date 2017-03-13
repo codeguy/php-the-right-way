@@ -31,33 +31,33 @@ anchor:  building_and_deploying_your_application
 
 [Capistrano]는 하나 혹은 다수의 리모트 컴퓨터에서 구조화되고 반복가능한 커맨드를 실행시키려고 하는 *중고급 프로그래머*를 위한 시스템입니다. 기본적으로는 Ruby on Rails 어플리케이션을 배포할 수 있도록 구성되어 있지만, PHP 어플리케이션도 성공적으로 배포하고 있습니다. Capistrano를 잘 사용하려면 Ruby와 Rake에 대해서도 잘 알아야 합니다. Capistrano에 관심이 있는 PHP 개발자에게는 Dave Gardner의 [PHP Deployment with Capistrano][phpdeploy_capistrano]라는 블로그 포스트가 좋은 출발점이 될 것입니다.
 
-[Rocketeer] gets its inspiration and philosophy from the Laravel framework. Its goal is to be fast, elegant and easy to use with smart defaults. It features multiple servers, multiple stages, atomic deploys and deployment can be performed in parallel. Everything in the tool can be hot swapped or extended, and everything is written in PHP.
+[Rocketeer]는 라라벨 프레임워크로부터 그 철학과 영감을 얻었습니다. 빠르고, 우아하며, 효과적인 기본값으로 쉽게 사용할 수 있는 것이 목표입니다. 여러 서버, 스테이지(stage), 원자적 배치와 배포를 병렬적으로 수행할 수 있습니다. 이 도구의 모든 것은 핫 스왑(hot swap)하거나 확장할 수 있으며, PHP로 작성되었습니다.
 
 [Deployer]는 PHP로 작성된 배포도구이며, 단순하고 함수형으로 작성되었습니다. 병렬적으로 태스크들을 실행하고, 원자적으로 배포하며, 서버간의 일관성을 유지하는 기능들을 포함하고 있습니다. Symfony, Laravel, Zend Framework, Yii를 위한 일반적인 레시피가 있습니다. Younes Rafie의 [Easy Deployment of PHP Applications with Deployer][phpdeploy_deployer]라는 글은 Deployer를 사용하여 어플리케이션을 배포하기 위한 좋은 튜토리얼입니다.
 
-[Magallanes] is another tool written in PHP with simple configuration done in YAML files. It has support for multiple servers and environments, atomic deployment, and has some built in tasks that you can leverage for common tools and frameworks.
+[Magallanes]는 YAML 파일로 간단하게 설정할 수 있는 PHP로 작성된 도구입니다. 여러 서버와 환경, 원자적 배포와 함께, 일반적인 도구와 프레임워크에 활용할 수 있는 몇몇 내장 태스크가 있습니다.
 
 #### 더 읽어볼 만한 것들
 
 * [Apache Ant를 이용한 프로젝트 자동화][apache_ant_tutorial]
-* [Expert PHP Deployments][expert_php_deployments] - free book on deployment with Capistrano, Phing and Vagrant.
-* [Deploying PHP Applications][deploying_php_applications] - paid book on best practices and tools for PHP deployment.
+* [Expert PHP Deployments][expert_php_deployments] - Capistrano, Phing, Vagrant로 배포하는 것에 관한 무료 도서
+* [Deploying PHP Applications][deploying_php_applications] - PHP 배포의 모범 사례와 도구에 관한 유료 도서
 
-### Server Provisioning
+### 서버 프로비저닝
 
-Managing and configuring servers can be a daunting task when faced with many servers. There are tools for dealing with this so you can automate your infrastructure to make sure you have the right servers and that they're configured properly. They often integrate with the larger cloud hosting providers (Amazon Web Services, Heroku, DigitalOcean, etc) for managing instances, which makes scaling an application a lot easier.
+많은 수의 서버를 맡게 되었을때 서버를 관리하고 구성하는 일은 곤란한 일이 될 수 있습니다. 알맞은 서버를 적절히 구성할 수 있도록 인프라를 자동화하여 이것을 해결할 도구들이 있습니다. 이 도구들은 보통 매우 쉽게 어플리케이션을 스캐일링하는 것과 같은 인스턴스 관리를 위해 대형 클라우드 호스팅 제공업체(아마존 웹 서비스, 헤로쿠, 디지털오션 등)와 연동됩니다.
 
-[Ansible] is a tool that manages your infrastructure through YAML files. It's simple to get started with and can manage complex and large scale applications. There is an API for managing cloud instances and it can manage them through a dynamic inventory using certain tools.
+[Ansible]은 YAML 파일로 인프라를 관리하는 도구입니다. 시작하기 쉬우며, 복잡하고 커다란 규묘의 어플리케이션도 관리할 수 있습니다. 클라우드 인스턴스를 관리하기 위한 API가 있고, 특정 도구들을 사용하는 다이나믹 인벤토리(dynamic inventory)를 통해 관리할 수 있습니다.
 
-[Puppet] is a tool that has its own language and file types for managing servers and configurations. It can be used in a master/client setup or it can be used in a "master-less" mode. In the master/client mode the clients will poll the central master(s) for new configuration on set intervals and update itself if necessary. In the master-less mode you can push changes to your nodes. 
+[Puppet]은 서버를 관리하고 구성하기 위한 자체 언어와 파일 형식을 가진 도구입니다. 마스터/클라이언트 혹은 "master-less" 모드로 설치하여 사용할 수 있습니다. 마스터/클라이언트 모드에서 클라이언트는 중앙 마스터에서 새로운 설정을 일정 주기로 가져오고 필요할 경우 자신을 업데이트 합니다. master-less 모드에서는 노드들에 변경사항을 직접 전달합니다.
 
-[Chef] is a powerful Ruby based system integration framework that you can build your whole server environment or virtual boxes with. It integrates well with Amazon Web Services through their service called OpsWorks.
+[Chef]는 전체 서버 환경이나 가상 머신을 만들 수 있는 루비 기반의 강력한 시스템 통합 프레임워크입니다. OpsWorks라고 불리는 아마존 웹 서비스 내의 서비스를 통해서 잘 연동됩니다.
 
 #### 더 읽어볼 만한 것들
 
 * [An Ansible Tutorial][an_ansible_tutorial]
-* [Ansible for DevOps][ansible_for_devops] - paid book on everything Ansible
-* [Ansible for AWS][ansible_for_aws] - paid book on integrating Ansible and Amazon Web Services
+* [Ansible for DevOps][ansible_for_devops] - Ansible의 모든 것에 대한 유료 도서
+* [Ansible for AWS][ansible_for_aws] - Ansible과 아마존 웹 서비스의 연동에 대한 유료 도서
 * [Chef, Vagrant, EC2를 이용한 LAMP 어플리케이션 배포를 다룬 블로그 시리즈][chef_vagrant_and_ec2]
 * [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system][Chef_cookbook]
 * [Chef 비디오 튜토리얼 시리즈][Chef_tutorial]
