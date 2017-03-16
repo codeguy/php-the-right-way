@@ -36,9 +36,6 @@ PHP 社区百花齐放，拥有大量的函数库、框架和组件。PHP 开发
 
     phpcbf -w --standard=PSR2 file.php
 
-Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
-It will show which kind of errors the code structure had before it fixed them.
-
 另一个选项是使用 [PHP 编码标准修复器][phpcsfixer]，他可以让你预览编码不合格的部分：
 
     php-cs-fixer fix -v --level=psr2 file.php
