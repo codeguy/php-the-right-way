@@ -21,43 +21,46 @@ anchor:  building_and_deploying_your_application
 * 패키지 만들기
 * 배포
 
+### 배포 도구
 
-### 빌드 자동화 도구
+배포 도구라는 건 소프트웨어 개발 과정에서 공통적으로 일어나는 작업을 다루는 스크립트들의 모음이라고 할 수 있습니다. 배포 도구는 여러분이 개발한 소프트웨어의 일부가 아니라 소프트웨어의 '밖에서' 필요한 동작을 수행해주는 녀석입니다.
 
-빌드 도구라는 건 소프트웨어 개발 과정에서 공통적으로 일어나는 작업을 다루는 스크립트들의 모음이라고 할 수 있습니다.
-빌드 도구는 여러분이 개발한 소프트웨어의 일부가 아니라 소프트웨어의 '밖에서' 필요한 동작을 수행해주는 녀석입니다.
+빌드 자동화와 배포를 도와주는 많은 오픈소스 도구들이 있습니다. PHP로 작성된 것도 있고 그렇지 않은 것도 있죠. PHP로 작성되지 않았다는 것보다는 필요한 작업을 잘 수행해주느냐 하는 것이 중요할 것입니다. 여기에서 몇가지를 소개합니다.
 
-빌드 자동화를 도와주는 많은 오픈소스 도구들이 있습니다. PHP로 작성된 것도 있고 그렇지 않은 것도 있죠. PHP로 작성되지
-않았다는 것보다는 필요한 작업을 잘 수행해주느냐 하는 것이 중요할 것입니다.
+[Phing]은 패키징, 배포, 테스팅 과정을 XML 빌드 파일 하나로 설정할 수 있습니다. [Apache Ant]를 기반으로 한 Phing은, 웹 어플리케이션을 설치하거나 업데이트할 때 필요한 PHP로 작성된 많은 종류의 작업을 기본적으로 지원하고 있고, 커스텀 작업을 추가하여 확장할 수도 있습니다. Phing은 오랜기간 유지된 단단하고 견고한 도구이지만, XML 파일로 설정을 다루는 방식때문에 약간 구식으로 보일 수도 있습니다. 
 
-[Phing]은 자동화된 배포를 처음으로 적용해보려고 할 때 PHP 세상에서 찾을 수 있는 가장 쉬운 방법이라고 할 수 있습니다.
-Phing을 사용하면 패키징, 배포, 테스팅 과정을 간단한 XML 빌드 파일을 사용하여 설정할 수 있습니다. Phing은 PHP로
-작성되어 있는데, [Apache Ant]에 기초를 두고 웹 어플리케이션을 설치하거나 업데이트할 때 필요한 많은 종류의 작업을
-기본적으로 지원하고 있고, 커스텀 작업을 추가하여 확장할 수도 있습니다(PHP로 작성해서요).
+[Capistrano]는 하나 혹은 다수의 리모트 컴퓨터에서 구조화되고 반복가능한 커맨드를 실행시키려고 하는 *중고급 프로그래머*를 위한 시스템입니다. 기본적으로는 Ruby on Rails 어플리케이션을 배포할 수 있도록 구성되어 있지만, PHP 어플리케이션도 성공적으로 배포하고 있습니다. Capistrano를 잘 사용하려면 Ruby와 Rake에 대해서도 잘 알아야 합니다. Capistrano에 관심이 있는 PHP 개발자에게는 Dave Gardner의 [PHP Deployment with Capistrano][phpdeploy_capistrano]라는 블로그 포스트가 좋은 출발점이 될 것입니다.
 
-[Capistrano]는 하나 혹은 다수의 리모트 컴퓨터에서 구조화되고 반복가능한 커맨드를 실행시키려고 하는 *중고급
-프로그래머*를 위한 시스템입니다. 기본적으로는 Ruby on Rails 어플리케이션을 배포할 수 있도록 구성되어 있지만, **PHP
-어플리케이션도** 성공적으로 배포하고 있습니다. Capistrano를 잘 사용하려면 Ruby와 Rake에 대해서도 잘 알아야 합니다.
+[Rocketeer]는 라라벨 프레임워크로부터 그 철학과 영감을 얻었습니다. 빠르고, 우아하며, 효과적인 기본값으로 쉽게 사용할 수 있는 것이 목표입니다. 여러 서버, 스테이지(stage), 원자적 배치와 배포를 병렬적으로 수행할 수 있습니다. 이 도구의 모든 것은 핫 스왑(hot swap)하거나 확장할 수 있으며, PHP로 작성되었습니다.
 
-Capistrano에 관심이 있는 PHP 개발자에게는 Dave Gardner의 [PHP Deployment with Capistrano][phpdeploy_capistrano]라는
-블로그 포스트가 좋은 출발점이 될 것입니다.
+[Deployer]는 PHP로 작성된 배포도구이며, 단순하고 함수형으로 작성되었습니다. 병렬적으로 태스크들을 실행하고, 원자적으로 배포하며, 서버간의 일관성을 유지하는 기능들을 포함하고 있습니다. Symfony, Laravel, Zend Framework, Yii를 위한 일반적인 레시피가 있습니다. Younes Rafie의 [Easy Deployment of PHP Applications with Deployer][phpdeploy_deployer]라는 글은 Deployer를 사용하여 어플리케이션을 배포하기 위한 좋은 튜토리얼입니다.
 
-[Chef]는 소프트웨어 배포 프레임워크라기 보다는 아주 강력한 시스템 통합 프레임워크라고 볼 수 있습니다. 어플리케이션을
-배포해주기만 하는게 아니라 서버나 가상 머신 환경 자체까지도 구성할 수 있습니다. Chef는 Ruby로 구현되어 있습니다.
-
-[Deployer]는 PHP로 작성된 배포도구이며, 이는 단순하고 함수형으로 작성되었습니다. [Deployer]는 작은 배포 환경에서
-서버간의 일관성을 유지하며 병렬적으로 태스크들을 실행합니다. Symfony, Laravel, Zend Framework, Yii를 위한 일반적인
-레시피입니다.
-
-#### PHP 개발자를 위한 Chef 참고 자료들입니다.
-
-* [Chef, Vagrant, EC2를 이용한 LAMP 어플리케이션 배포를 다룬 블로그 시리즈][chef_vagrant_and_ec2]
-* [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system][Chef_cookbook]
-* [Chef 비디오 튜토리얼 시리즈][Chef_tutorial]
+[Magallanes]는 YAML 파일로 간단하게 설정할 수 있는 PHP로 작성된 도구입니다. 여러 서버와 환경, 원자적 배포와 함께, 일반적인 도구와 프레임워크에 활용할 수 있는 몇몇 내장 태스크가 있습니다.
 
 #### 더 읽어볼 만한 것들
 
 * [Apache Ant를 이용한 프로젝트 자동화][apache_ant_tutorial]
+* [Expert PHP Deployments][expert_php_deployments] - Capistrano, Phing, Vagrant로 배포하는 것에 관한 무료 도서
+* [Deploying PHP Applications][deploying_php_applications] - PHP 배포의 모범 사례와 도구에 관한 유료 도서
+
+### 서버 프로비저닝
+
+많은 수의 서버를 맡게 되었을때 서버를 관리하고 구성하는 일은 곤란한 일이 될 수 있습니다. 알맞은 서버를 적절히 구성할 수 있도록 인프라를 자동화하여 이것을 해결할 도구들이 있습니다. 이 도구들은 보통 매우 쉽게 어플리케이션을 스캐일링하는 것과 같은 인스턴스 관리를 위해 대형 클라우드 호스팅 제공업체(아마존 웹 서비스, 헤로쿠, 디지털오션 등)와 연동됩니다.
+
+[Ansible]은 YAML 파일로 인프라를 관리하는 도구입니다. 시작하기 쉬우며, 복잡하고 커다란 규묘의 어플리케이션도 관리할 수 있습니다. 클라우드 인스턴스를 관리하기 위한 API가 있고, 특정 도구들을 사용하는 다이나믹 인벤토리(dynamic inventory)를 통해 관리할 수 있습니다.
+
+[Puppet]은 서버를 관리하고 구성하기 위한 자체 언어와 파일 형식을 가진 도구입니다. 마스터/클라이언트 혹은 "master-less" 모드로 설치하여 사용할 수 있습니다. 마스터/클라이언트 모드에서 클라이언트는 중앙 마스터에서 새로운 설정을 일정 주기로 가져오고 필요할 경우 자신을 업데이트 합니다. master-less 모드에서는 노드들에 변경사항을 직접 전달합니다.
+
+[Chef]는 전체 서버 환경이나 가상 머신을 만들 수 있는 루비 기반의 강력한 시스템 통합 프레임워크입니다. OpsWorks라고 불리는 아마존 웹 서비스 내의 서비스를 통해서 잘 연동됩니다.
+
+#### 더 읽어볼 만한 것들
+
+* [An Ansible Tutorial][an_ansible_tutorial]
+* [Ansible for DevOps][ansible_for_devops] - Ansible의 모든 것에 대한 유료 도서
+* [Ansible for AWS][ansible_for_aws] - Ansible과 아마존 웹 서비스의 연동에 대한 유료 도서
+* [Chef, Vagrant, EC2를 이용한 LAMP 어플리케이션 배포를 다룬 블로그 시리즈][chef_vagrant_and_ec2]
+* [Chef Cookbook which installs and configures PHP 5.3 and the PEAR package management system][Chef_cookbook]
+* [Chef 비디오 튜토리얼 시리즈][Chef_tutorial]
 
 ### 지속적인 통합
 
@@ -85,6 +88,7 @@ PHP 프로젝트에서 지속적인 통합 기법을 사용하는 방법에는 �
 [Apache Ant]: http://ant.apache.org/
 [Capistrano]: https://github.com/capistrano/capistrano/wiki
 [phpdeploy_capistrano]: http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/
+[phpdeploy_deployer]: http://www.sitepoint.com/deploying-php-applications-with-deployer/
 [Chef]: https://www.chef.io/
 [chef_vagrant_and_ec2]: http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/
 [Chef_cookbook]: https://github.com/chef-cookbooks/php
@@ -94,4 +98,13 @@ PHP 프로젝트에서 지속적인 통합 기법을 사용하는 방법에는 �
 [Jenkins]: http://jenkins-ci.org/
 [PHPCI]: http://www.phptesting.org/
 [Teamcity]: http://www.jetbrains.com/teamcity/
-[Deployer]: https://github.com/deployphp/deployer
+[Deployer]: http://deployer.org/
+[Rocketeer]: http://rocketeer.autopergamene.eu/
+[Magallanes]: http://magephp.com/
+[expert_php_deployments]: http://viccherubini.com/assets/Expert-PHP-Deployments.pdf
+[deploying_php_applications]: http://www.deployingphpapplications.com
+[Ansible]: https://www.ansible.com/
+[Puppet]: https://puppet.com/
+[ansible_for_devops]: https://leanpub.com/ansible-for-devops
+[ansible_for_aws]: https://leanpub.com/ansible-for-aws
+[an_ansible_tutorial]: https://serversforhackers.com/an-ansible-tutorial

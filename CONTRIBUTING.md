@@ -66,14 +66,10 @@
    [Jekyll](https://github.com/mojombo/jekyll/) gem 과 의존 패키지들을 설치합니다.
 
     ```bash
-    # Install the needed gems through Bundler
-    bundle install
-    # Build and open _site/index.html in your browser...
-    jekyll build [--watch]
-    # ...or run a local server to easily develop:
-    jekyll serve
-    # Run the local server
-    bundle execute jekyll s
+    # Bundler 로 필요한 gem 을 설치합니다.
+    bundle install --path vendor/bundle
+    # 로컬 서버를 실행합니다.
+    bundle exec jekyll serve
     ```
 
 5. 논리적인 단위로 여러분의 수정 내용을 commit 합니다. [git commit

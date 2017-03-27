@@ -6,10 +6,9 @@ anchor:  user_groups
 
 ## 사용자 그룹 {#user_groups_title}
 
-만약 당신이 대도시에 산다면, PHP 사용자 그룹이 주변에 있을 것입니다. 당신은 PUG를 [PHP.ug][php-ug]를 기반으로 하는
-[php.net의 PUG 리스트][php-uglist]를 통해 쉽게 찾을 수 있을것입니다. 또 다른 그룹은 [Meetup.com][meetup]또는 당신이
-가장 좋아하는 검색엔진으로 ```php user group near me``` 라는 키워드를 통해 찾을 수 있습니다. (i.e. [Google][google]).
-만약 당신이 소도시에 산다면, 그 지역에는 PUG 가 없을수 있습니다; 그런 경우, PUG를 만들어보세요!
+만약 당신이 큰 도시에 산다면, PHP 사용자 그룹이 주변에 있을 가능성이 높습니다. 당신은 PUG를 [PHP.ug][php-ug]를 기반으로 하는
+[php.net의 PUG 리스트][php-uglist]에서 쉽게 찾을 수 있습니다. 그리고 [Meetup.com][meetup] 이나 좋아하는 검색엔진에서 ```php user group near me``` 라는 키워드를 통해 찾을 수 있습니다. (예 [Google][google]).
+만약 당신이 작은 도시에 산다면, 그 지역에는 PUG 가 없을 수도 있습니다; 그런 경우, 새로 만들어보세요!
 
 2개의 세계적인 그룹을 특별히 언급하겠습니다. : [NomadPHP], [PHPWomen].
 [NomadPHP] 한달에 2번, PHP 커뮤니티 최고의 발표자 몇몇 분이 진행하는 프레젠테이션과 함께 온라인 그룹 회의를
@@ -32,4 +31,4 @@ anchor:  user_groups
 [PHPWomen]: http://phpwomen.org/
 [php-wiki]: https://wiki.php.net/usergroups
 [php-uglist]: http://php.net/ug.php
-[modernpug-ko]: http://www.facebook.com/groups/modernpug/
+[modernpug-ko]: http://www.modernpug.org
