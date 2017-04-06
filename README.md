@@ -1,6 +1,6 @@
 # PHP 之道
 
-[在线地址](http://laravel-china.github.io/php-the-right-way/)
+[在线地址](https://laravel-china.github.io/php-the-right-way/)
 
 > 此项目由 [Laravel China 社区](https://laravel-china.org/ ) 维护，请维护互联网开放精神，转载请保留出处。
 
@@ -17,7 +17,7 @@
 
 您可以在网站上放置 _PHP之道_ 的横幅来支持我们，让 PHP 的新人知道哪里可以获取到好的资料！
 
-[横幅图片](http://laravel-china.github.io/php-the-right-way/banners.html)
+[横幅图片](https://laravel-china.github.io/php-the-right-way/banners.html)
 
 ## 如何贡献
 
@@ -57,7 +57,7 @@
 * [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
 * [한국어판](http://modernpug.github.io/php-the-right-way)
 * [日本語](http://ja.phptherightway.com)
-* [简体中文](http://laravel-china.github.io/php-the-right-way/)
+* [简体中文](https://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
 
 ### 翻译
