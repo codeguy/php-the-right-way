@@ -10,6 +10,8 @@ Composer 是一个 **杰出** 的依赖管理器。在 `composer.json` 文件中
 
 现在已经有许多 PHP 第三方包已兼容 Composer，随时可以在你的项目中使用。这些「packages(包)」都已列在 [Packagist]，这是一个官方的 Composer 兼容包仓库。
 
+> 为了提高国内 Composer 的使用体验，Laravel China 社区维护了 [Composer 中文镜像 /Packagist 中国全量镜像](https://laravel-china.org/composer) ，此镜像使用了又拍云的 CDN 加速，将会极大加速 Composer 依赖的下载速度。
+
 ### 如何安装 Composer
 
 最安全的下载方法就是使用 [官方的教程](https://getcomposer.org/download/)。
