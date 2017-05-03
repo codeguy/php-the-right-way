@@ -43,7 +43,7 @@ On DateTime objects you can use standard comparison:
 {% highlight php %}
 <?php
 if ($start < $end) {
-    echo "Start is before end!\n";
+    echo "Start is before the end!\n";
 }
 {% endhighlight %}
 

@@ -15,7 +15,7 @@ recommendations are merely a set of rules that many projects like Drupal, Zend, 
 FuelPHP, Lithium, etc are adopting. You can use them for your own projects, or continue to use your own
 personal style.
 
-Ideally you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
+Ideally, you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
 of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
 applications that implement the components can have consistency even when working with lots of third-party code.
 
