@@ -57,5 +57,5 @@ the adapter based on that contract.
 
 An even bigger benefit to this method is that our code is now much more scalable. If a year down the line we decide
 that we want to migrate to a different type of database, we can write an adapter that implements the original interface
-and inject that instead, no more refactoring would be required as we can ensure that the adapter follows the contract
+and injects that instead, no more refactoring would be required as we can ensure that the adapter follows the contract
 set by the interface.
