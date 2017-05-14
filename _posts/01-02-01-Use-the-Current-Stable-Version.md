@@ -1,11 +1,16 @@
 ---
-title: Use the Current Stable Version (5.5)
+title:   Use the Current Stable Version (7.1)
 isChild: true
+anchor:  use_the_current_stable_version
 ---
 
-## Use the Current Stable Version (5.5) {#use_the_current_stable_version_55_title}
+## Use the Current Stable Version (7.1) {#use_the_current_stable_version_title}
 
-If you are just getting started with PHP make sure to start with the current stable release of [PHP 5.5][php-release]. PHP has made great strides adding powerful [new features](#language_highlights) over the last few years. Don't let the minor version number difference between 5.2 and 5.5 fool you, it represents _major_ improvements. If you are looking for a function or its usage, the documentation on the [php.net][php-docs] website will have the answer.
+If you are getting started with PHP, start with the current stable release of [PHP 7.1][php-release]. PHP 7.1 is very
+new, and adds many amazing [new features](#language_highlights) over the older 5.x versions. The engine has been largely re-written, and PHP is now even quicker than older versions.
 
-[php-release]: http://www.php.net/downloads.php
-[php-docs]: http://www.php.net/manual/en/
+Most commonly in the near future you will find PHP 5.x being used, and the latest 5.x version is 5.6. This is not a bad option, but you should try to upgrade to the latest stable quickly - PHP 5.6 [will not receive security updates beyond 2018](http://php.net/supported-versions.php).  Upgrading is really quite easy, as there are not many [backwards compatibility breaks][php71-bc]. If you are not sure which version a function or feature is in, you can check the PHP documentation on the [php.net][php-docs] website.
+
+[php-release]: http://php.net/downloads.php
+[php-docs]: http://php.net/manual/
+[php71-bc]: http://php.net/manual/migration71.incompatible.php

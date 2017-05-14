@@ -1,6 +1,7 @@
 ---
 layout: page
-title: The Basics
+title:  The Basics
+sitemap: true
 ---
 
 # The Basics
@@ -19,28 +20,26 @@ var_dump($a == '5');     // compare value (ignore type); return true
 var_dump($a === 5);      // compare type/value (integer vs. integer); return true
 var_dump($a === '5');    // compare type/value (integer vs. string); return false
 
-/**
- * Strict comparisons
- */
+//Equality comparisons
 if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is interpreted as the boolean 'false'
     // code...
 }
 
-vs.
-
+// vs. strict comparisons
 if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
     // code...
 }
 {% endhighlight %}
 
-* [Comparison operators](http://php.net/manual/en/language.operators.comparison.php)
-* [Comparison table](http://php.net/manual/en/types.comparisons.php)
+* [Comparison operators](http://php.net/language.operators.comparison)
+* [Comparison table](http://php.net/types.comparisons)
+* [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
 
 ## Conditional statements
 
 ### If statements
 
-While using 'if/else' statements within a function or class, there is a common misconception that 'else' must be used
+While using 'if/else' statements within a function or class method, there is a common misconception that 'else' must be used
 in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
 necessary as 'return' will end the function, causing 'else' to become moot.
 
@@ -55,7 +54,7 @@ function test($a)
     }
 }
 
-vs.
+// vs.
 
 function test($a)
 {
@@ -64,9 +63,17 @@ function test($a)
     }
     return false;    // else is not necessary
 }
+
+// or even shorter:
+
+function test($a)
+{
+    return (bool) $a;
+}
+
 {% endhighlight %}
 
-* [If statements](http://php.net/manual/en/control-structures.if.php)
+* [If statements](http://php.net/control-structures.if)
 
 ### Switch statements
 
@@ -99,13 +106,13 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch statements](http://php.net/manual/en/control-structures.switch.php)
+* [Switch statements](http://php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
 ## Global namespace
 
-When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this,
-refer to the global function by using a backslash before the function name.
+When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this, refer to
+the global function by using a backslash before the function name.
 
 {% highlight php %}
 <?php
@@ -124,15 +131,15 @@ function array()
 }
 {% endhighlight %}
 
-* [Global space](http://php.net/manual/en/language.namespaces.global.php)
-* [Global rules](http://php.net/manual/en/userlandnaming.rules.php)
+* [Global space](http://php.net/language.namespaces.global)
+* [Global rules](http://php.net/userlandnaming.rules)
 
 ## Strings
 
 ### Concatenation
 
 - If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it's best to use concatenation operators over concatenating assignment operators
+- For readability it is best to use concatenation operators over concatenating assignment operators
 - While within the original scope of the variable, indent when concatenation uses a new line
 
 
@@ -142,27 +149,29 @@ $a  = 'Multi-line example';    // concatenating assignment operator (.=)
 $a .= "\n";
 $a .= 'of what not to do';
 
-vs.
+// vs
 
 $a = 'Multi-line example'      // concatenation operator (.)
     . "\n"                     // indenting new lines
     . 'of what to do';
 {% endhighlight %}
 
-* [String Operators](http://php.net/manual/en/language.operators.string.php)
+* [String Operators](http://php.net/language.operators.string)
 
 ### String types
 
-String types are a constant feature within the PHP community, but hopefully this section will explain the
-differences between the string types and their benefits/uses.
+Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
+strings and they offer slightly different syntax, with slightly different behaviors.
 
 #### Single quotes
 
-Single quotes are the simplest way to define a string and are often the quickest. Their speed stems from PHP not
-parsing the string (doesn't parse for variables). They're best suited for:
+Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
+variables.
 
-- Strings that do not need to be parsed
-- Writing of a variable into plain text
+If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
+exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
+errors if no variable was found.
+
 
 {% highlight php %}
 <?php
@@ -175,16 +184,12 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
  */
 {% endhighlight %}
 
-* [Single quote](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.single)
+* [Single quote](http://php.net/language.types.string#language.types.string.syntax.single)
 
 #### Double quotes
 
-Double quotes are the Swiss army knife of strings, but are slower due to the string being parsed. They're best
-suited for:
-
-- Escaped strings
-- Strings with multiple variables and plain text
-- Condensing multi-line concatenation, and improving readability
+Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
+of special characters, like `\n` for newline, `\t` for a tab, etc.
 
 {% highlight php %}
 <?php
@@ -192,22 +197,31 @@ echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that
     . "\n"                                       // variables and escaped string
     . 'I love learning' . $code . '!';
 
-vs.
+// vs
 
 echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
                                                                // enables us to use a parsable string
 {% endhighlight %}
 
-While using double quotes that contain variables, it's often the case that the variable will be touching another
-character. This will result in PHP not parsing the variable due to the variable being camouflaged. To fix this problem,
-wrap the variable within a pair of curly brackets.
+Double quotes can contain variables; this is called "interpolation".
+
+{% highlight php %}
+<?php
+$juice = 'plum';
+echo "I like $juice juice";    // Output: I like plum juice
+{% endhighlight %}
+
+When using interpolation, it is often the case that the variable will be touching another character. This will result
+in some confusion as to what is the name of the variable, and what is a literal character.
+
+To fix this problem, wrap the variable within a pair of curly brackets.
 
 {% highlight php %}
 <?php
 $juice = 'plum';
 echo "I drank some juice made of $juices";    // $juice cannot be parsed
 
-vs.
+// vs
 
 $juice = 'plum';
 echo "I drank some juice made of {$juice}s";    // $juice will be parsed
@@ -220,11 +234,11 @@ $juice = array('apple', 'orange', 'plum');
 echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 {% endhighlight %}
 
-* [Double quotes](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.double)
+* [Double quotes](http://php.net/language.types.string#language.types.string.syntax.double)
 
 #### Nowdoc syntax
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it's suited toward the
+Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
 use of multi-line strings without the need for concatenating.
 
 {% highlight php %}
@@ -246,11 +260,11 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  */
 {% endhighlight %}
 
-* [Nowdoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.nowdoc)
+* [Nowdoc syntax](http://php.net/language.types.string#language.types.string.syntax.nowdoc)
 
 #### Heredoc syntax
 
-Heredoc syntax internally behaves the same way as double quotes except it's suited toward the use of multi-line
+Heredoc syntax internally behaves the same way as double quotes except it is suited toward the use of multi-line
 strings without the need for concatenating.
 
 {% highlight php %}
@@ -274,7 +288,26 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  */
 {% endhighlight %}
 
-* [Heredoc syntax](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc)
+* [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
+
+### Which is quicker?
+
+There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
+fundamentally not true.
+
+If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
+or double quoted string will be entirely identical. Neither are quicker.
+
+If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
+results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
+values, interpolating is minutely faster.
+
+Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
+application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
+optimization unless you really understand the meaning and impact of the differences.
+
+* [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+
 
 ## Ternary operators
 
@@ -285,11 +318,12 @@ stacked/nested, it is advised to use one per line for readability.
 <?php
 $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
+{% endhighlight %}
 
-vs.
+In comparison, here is an example that sacrifices all forms of readability for the sake of reducing the line count.
 
-// nested ternary
-$b = 10;
+{% highlight php %}
+<?php
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
 {% endhighlight %}
 
@@ -300,29 +334,81 @@ To 'return' a value with ternary operators use the correct syntax.
 $a = 5;
 echo ($a == 5) ? return true : return false;    // this example will output an error
 
-vs.
+// vs
 
 $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
+
 {% endhighlight %}
 
-* [Ternary operators](http://php.net/manual/en/language.operators.comparison.php)
+It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
+would be.
+
+{% highlight php %}
+<?php
+$a = 3;
+return ($a == 3) ? true : false; // Will return true or false if $a == 3
+
+// vs
+
+$a = 3;
+return $a == 3; // Will return true or false if $a == 3
+
+{% endhighlight %}
+
+This can also be said for all operations(===, !==, !=, == etc).
+
+#### Utilising brackets with ternary operators for form and function
+
+When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
+within blocks of statements. An example of when there is no requirement to use bracketing is:
+
+{% highlight php %}
+<?php
+$a = 3;
+return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
+
+// vs
+
+$a = 3;
+return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
+{% endhighlight %}
+
+Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
+as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is
+also true.
+
+{% highlight php %}
+<?php
+return ($a == 3 && $b == 4) && $c == 5;
+{% endhighlight %}
+
+Another example is the snippet below which will return true if ($a != 3 AND $b != 4) OR $c == 5.
+
+{% highlight php %}
+<?php
+return ($a != 3 && $b != 4) || $c == 5;
+{% endhighlight %}
+
+Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
+Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
+
+* [Ternary operators](http://php.net/language.operators.comparison)
 
 ## Variable declarations
 
 At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let's say
-an example string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to
-2MB.
+this does in reality is to double the memory consumption of said script. For the example below, let us say an example
+string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
 
 {% highlight php %}
 <?php
 $about = 'A very long string of text';    // uses 2MB memory
 echo $about;
 
-vs.
+// vs
 
 echo 'A very long string of text';        // uses 1MB memory
 {% endhighlight %}
 
-* [Performance tips](https://developers.google.com/speed/articles/optimizing-php)
+* [Performance tips](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)

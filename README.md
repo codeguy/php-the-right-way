@@ -18,6 +18,8 @@ developers know where to find good information!
 
 ## How to Contribute
 
+You should read the `CONTRIBUTING.md` file for precise instructions and tips. But, if you prefer a TL;DR:
+
 1. Fork and edit
 2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
 3. Submit pull request for consideration
@@ -34,19 +36,27 @@ developers know where to find good information!
 <http://www.phptherightway.com>
 
 * [English](http://www.phptherightway.com)
-* [Catalan] (http://ca.phptherightway.com)
-* [Chinese](http://wulijun.github.com/php-the-right-way)
-* [Japanese] (http://ja.phptherightway.com)
-* [Korean] (http://wafe.github.io/php-the-right-way)
-* [Italian] (http://it.phptherightway.com)
-* [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
-* [Russian] (http://getjump.github.io/ru-php-the-right-way)
-* [Spanish] (http://es.phptherightway.com)
-* [Ukrainian](http://iflista.github.com/php-the-right-way)
-* [Bulgarian](http://bg.phptherightway.com)
-* [German] (http://rwetzlmayr.github.io/php-the-right-way)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
+* [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
+* [Español](http://phpdevenezuela.github.io/php-the-right-way)
+* [Français](http://eilgin.github.io/php-the-right-way/)
+* [Indonesia](http://id.phptherightway.com)
+* [Italiano](http://it.phptherightway.com)
+* [Polski](http://pl.phptherightway.com)
+* [Português do Brasil](http://br.phptherightway.com)
+* [Română](https://bgui.github.io/php-the-right-way/)
+* [Slovenščina](http://sl.phptherightway.com)
+* [Srpski](http://phpsrbija.github.io/php-the-right-way/)
+* [Türkçe](http://hkulekci.github.io/php-the-right-way/)
+* [български](http://bg.phptherightway.com)
+* [Русский язык](http://getjump.github.io/ru-php-the-right-way)
+* [Українська](http://iflista.github.com/php-the-right-way)
+* [العربية](https://adaroobi.github.io/php-the-right-way/)
+* [فارسى](http://novid.github.io/php-the-right-way/)
+* [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
+* [한국어판](http://modernpug.github.io/php-the-right-way)
+* [日本語](http://ja.phptherightway.com)
+* [简体中文](http://laravel-china.github.io/php-the-right-way/)
+* [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
 
 ### Translations
 
@@ -54,10 +64,12 @@ If you are interested in translating _PHP: The Right Way_, fork this repo on Git
 
 To avoid fragmentation and reader confusion, please choose one of these options:
 
-1. We link to your GitHub Pages fork with `[username].github.com/php-the-right-way`
+1. We link to your GitHub Pages fork with `[username].github.io/php-the-right-way`
 2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
 
 If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
+
+Add information about your translation in the [wiki page](https://github.com/codeguy/php-the-right-way/wiki/Translations).
 
 When your translation is ready, open an issue on the Issue Tracker to let us know.
 
