@@ -68,7 +68,30 @@ yourself a lot of trouble down the road by using factories.
 When designing web applications, it often makes sense conceptually and architecturally to allow access to one and only
 one instance of a particular class. The singleton pattern enables us to do this.
 
-**TODO: NEED NEW SINGLETON CODE EXAMPLE**
+{% highlight php %}
+<?php
+// class by edersonlrf
+class Conection
+{
+    public static $instance;
+
+    public function __construct()
+    {
+        //
+    }
+
+    public static function getInstance()
+    {
+        if (!isset(self::$instance)) {
+            self::$instance = new PDO('mysql:host=localhost;dbname=mydatabase', 'root', '12345', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));            
+            self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            self::$instance->setAttribute(PDO::ATTR_ORACLE_NULLS, PDO::NULL_EMPTY_STRING);
+        }
+
+        return self::$instance;
+    }
+}
+{% endhighlight %}
 
 The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
 Note the following:
