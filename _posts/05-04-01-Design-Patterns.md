@@ -1,7 +1,7 @@
 ---
 isChild: true
-title: 设计模式
 anchor:  design_patterns
+title: 设计模式
 ---
 
 ## 设计模式 {#design_patterns_title}
@@ -10,4 +10,4 @@ anchor:  design_patterns
 
 当你使用框架进行开发时，绝大部分的上层代码以及项目结构都会基于所使用的框架，因此很多关于设计模式的决定已经由框架帮你做好了。当然，你还是可以挑选你最喜欢的模式并在你的代码中进行应用。但如果你并没有使用框架的话，你就需要自己去寻找适合你的应用的最佳模式了。
 
-* 学习更多[设计模式](pages/Design-Patterns.html)
+* 学习更多[设计模式](/php-the-right-way/pages/Design-Patterns.html)

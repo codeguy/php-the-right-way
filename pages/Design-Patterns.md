@@ -10,7 +10,7 @@ sitemap: true
 
 * [维基百科——架构模式](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [维基百科——软件设计模式](https://en.wikipedia.org/wiki/Software_design_pattern)
-* [一些设计模式的实现](https://github.com/domnikl/DesignPatternsPHP)
+* [一些设计模式的例子](http://designpatternsphp.readthedocs.io/en/latest/)
 
 ## 工厂模式
 
@@ -61,6 +61,8 @@ print_r($veyron->getMakeAndModel()); // outputs "Bugatti Veyron"
 ## 单例模式
 
 我们设计 web 应用时，我们经常需要取得某个类的唯一实例，单例模式就帮我们解决了这个问题。
+
+
 
 {% highlight php %}
 <?php
@@ -204,7 +206,7 @@ class SomeClient
 }
 {% endhighlight %}
 
-上面的 client 类有一个必须在运行时设置的私有属性，并且是“OutputInterface”类型的。
+上面的 `client`类有一个必须在运行时设置的私有属性，并且是“OutputInterface”类型的。
 一旦这个属性被设置为具体的实例（三个输出类中之一的实例），并且 `loadOutput` 方法被调用，那么它的 `load` 方法就会被调用，返回回序列化结果或 json 或数组。
 
 {% highlight php %}
@@ -244,5 +246,6 @@ MVC 是在各个[PHP 框架](https://github.com/codeguy/php-the-right-way/wiki/F
 * [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)
 * [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller)
 * [MVVM](https://en.wikipedia.org/wiki/Model_View_ViewModel)
+
 
 （译者注：MVC 属架构模式，和设计模式是不同层级的概念，请不要因为本文把它列在“设计模式”下而混淆。）

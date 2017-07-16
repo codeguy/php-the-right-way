@@ -1,23 +1,33 @@
 ---
-isChild: true
 title: Composer 与 Packagist
+isChild: true
 anchor:  composer_and_packagist
 ---
 
 ## Composer 与 Packagist {#composer_and_packagist_title}
 
-Composer 是一个**杰出** 的依赖管理器。在 `composer.json` 文件中列出你项目所需的依赖包，加上一点简单的命令，Composer 将会自动帮你下载并设置你的项目依赖。
+Composer 是一个 **杰出** 的依赖管理器。在 `composer.json` 文件中列出你项目所需的依赖包，加上一点简单的命令，Composer 将会自动帮你下载并设置你的项目依赖。Composer 有点类似于 Node.js 世界里的 NPM，或者 Ruby 世界里的 Bundler。
 
 现在已经有许多 PHP 第三方包已兼容 Composer，随时可以在你的项目中使用。这些「packages(包)」都已列在 [Packagist]，这是一个官方的 Composer 兼容包仓库。
 
+> 为了提高国内 Composer 的使用体验，Laravel China 社区维护了 [Composer 中文镜像 /Packagist 中国全量镜像](https://laravel-china.org/composer) ，此镜像使用了又拍云的 CDN 加速，将会极大加速 Composer 依赖的下载速度。
+
 ### 如何安装 Composer
 
-你可以安装 Composer 到局部 (在你当前工作目录;这里不是很推荐)或是全局(e.g. /usr/local/bin)。我们假设你想安装 Composer 到局部。在你的项目根目录输入:
+最安全的下载方法就是使用 [官方的教程](https://getcomposer.org/download/)。
+此方法会验证安装器是否安全，是否被修改。
 
-    curl -s https://getcomposer.org/installer | php
+安装器安装 Composer 的应用范围为 *本地*，也就是在你当前项目文件夹。
 
-这条命令将会下载 `composer.phar` (一个 PHP 二进制档)。你可以使用 `php` 执行这个文件用来管理你的项目依赖。
-**请注意：** 假如你是直接下载代码来编译，请先在线阅读代码确保它是安全的。
+我们推荐你 *全局* 安装，即把可执行文件复制到 `/usr/local/bin` 路径中：
+
+{% highlight console %}
+mv composer.phar /usr/local/bin/composer
+{% endhighlight %}
+
+**注意:** 以上命令如果失败，请尝试使用`sudo` 来增加权限。
+
+*本地* 使用 Composer 的话，你可以运行 `php composer.phar` ，全局的话是：`composer`。
 
 #### Windows环境下安装
 
@@ -25,7 +35,7 @@ Composer 是一个**杰出** 的依赖管理器。在 `composer.json` 文件中�
 
 ### 如何手动安装 Composer
 
-手动安装 Compose r是一个高端的技术;仅管如此还是有许多开发者有各种原因喜欢使用这种交互式的应用程序安装 Composer。在安装前请先确认你的PHP安装项目如下：
+手动安装 Composer 是一个高端的技术。仅管如此还是有许多开发者有各种原因喜欢使用这种交互式的应用程序安装 Composer。在安装前请先确认你的 PHP 安装项目如下：
 
 - 正在使用一个满足条件的 PHP 版本
 - `.phar` 文件可以正确的被执行
@@ -35,14 +45,18 @@ Composer 是一个**杰出** 的依赖管理器。在 `composer.json` 文件中�
 
 由于手动安装没有执行这些检查，你必须自已衡量决定是否值得做这些事，以下是如何手动安装 Composer ：
 
-    curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
-    chmod +x $HOME/local/bin/composer
+{% highlight console %}
+curl -s https://getcomposer.org/composer.phar -o $HOME/local/bin/composer
+chmod +x $HOME/local/bin/composer
+{% endhighlight %}
 
 路径 `$HOME/local/bin` (或是你选择的路径) 应该在你的 `$PATH` 环境变量中。这将会影响 `composer` 这个命令是否可用.
 
 当你遇到文档指出执行 Composer 的命令是 `php composer.phar install`时，你可以使用下面命令替代:
 
-    composer install
+{% highlight console %}
+composer install
+{% endhighlight %}
 
 本章节会假设你已经安装了全局的 Composer。
 
@@ -50,11 +64,15 @@ Composer 是一个**杰出** 的依赖管理器。在 `composer.json` 文件中�
 
 Composer 会通过一个 `composer.json` 文件持续的追踪你的项目依赖。 如果你喜欢，你可以手动管理这个文件，或是使用 Composer 自己管理。`composer require` 这个指令会增加一个项目依赖，如果你还没有 `composer.json` 文件, 将会创建一个。这里有个例子为你的项目加入 [Twig] 依赖。
 
-    composer require twig/twig:~1.8
+{% highlight console %}
+composer require twig/twig:~1.8
+{% endhighlight %}
 
-另外 `composer init` 命令将会引导你创建一个完整的 `composer.json` 文件到你的项目之中。无论你使用哪种方式，一旦你创建了 `composer.json` 文件，你可以告诉 Composer 去下载及安装你的依赖到 `vendors/` 目录中。这命令也适用于你已经下载并已经提供了一个 `composer.json` 的项目：
+另外 `composer init` 命令将会引导你创建一个完整的 `composer.json` 文件到你的项目之中。无论你使用哪种方式，一旦你创建了 `composer.json` 文件，你可以告诉 Composer 去下载及安装你的依赖到 `vendor/` 目录中。这命令也适用于你已经下载并已经提供了一个 `composer.json` 的项目：
 
-    composer install
+{% highlight console %}
+composer install
+{% endhighlight %}
 
 接下来，添加这一行到你应用的主要 PHP 文件中，这将会告诉 PHP 为你的项目依赖使用 Composer 的自动加载器。
 
@@ -67,7 +85,7 @@ require 'vendor/autoload.php';
 
 ### 更新你的依赖
 
-Composer 会建立一个 `composer.lock` 文件，在你第一次执行 `php composer.phar install` 时，存放下载的每个依赖包精确的版本编号。假如你要分享你的项目给其他开发者，并且 `composer.lock` 文件也在你分享的文件之中的话。 当他们执行 `php composer.phar install` 这个命令时，他们将会得到与你一样的依赖版本。 当你要更新你的依赖时请执行 `php composer.phar update`。
+Composer 会建立一个 `composer.lock` 文件，在你第一次执行 `php composer install` 时，存放下载的每个依赖包精确的版本编号。假如你要分享你的项目给其他开发者，并且 `composer.lock` 文件也在你分享的文件之中的话。 当他们执行 `php composer.phar install` 这个命令时，他们将会得到与你一样的依赖版本。 当你要更新你的依赖时请执行 `php composer update`。请不要在部署代码的时候使用 `composer update`，只能使用 `composer install` 命令，否则你会发现你在生产环境中用的是不同的扩展包依赖版本。
 
 当你需要灵活的定义你所需要的依赖版本时，这是最有用。 举例来说需要一个版本为 ~1.8 时，意味着 “任何大于 1.8.0 ，但小于 2.0.x-dev 的版本”。你也可以使用通配符 `*` 在 `1.8.*` 之中。现在Composer在`composer update` 时将升级你的所有依赖到你限制的最新版本。
 

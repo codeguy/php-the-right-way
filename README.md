@@ -1,6 +1,8 @@
 # PHP 之道
 
-[在线地址](http://laravel-china.github.io/php-the-right-way/)
+[在线地址](https://laravel-china.github.io/php-the-right-way/)
+
+> 此项目由 [Laravel China 社区](https://laravel-china.org/ ) 维护，请维护互联网开放精神，转载请保留出处。
 
 ## 概览
 
@@ -15,7 +17,7 @@
 
 您可以在网站上放置 _PHP之道_ 的横幅来支持我们，让 PHP 的新人知道哪里可以获取到好的资料！
 
-[横幅图片](http://laravel-china.github.io/php-the-right-way/banners.html)
+[横幅图片](https://laravel-china.github.io/php-the-right-way/banners.html)
 
 ## 如何贡献
 
@@ -36,26 +38,27 @@
 <http://www.phptherightway.com>
 
 * [English](http://www.phptherightway.com)
-* [Bulgarian](http://bg.phptherightway.com)
-* [Chinese (Simplified)](http://laravel-china.github.io/php-the-right-way/)
-* [Chinese (Traditional)](http://laravel-taiwan.github.io/php-the-right-way/)
-* [French](http://eilgin.github.io/php-the-right-way/)
-* [German](http://rwetzlmayr.github.io/php-the-right-way)
-* [Indonesian](http://id.phptherightway.com)
-* [Italian](http://it.phptherightway.com)
-* [Japanese](http://ja.phptherightway.com)
-* [Korean](http://modernpug.github.io/php-the-right-way)
-* [Persian](http://novid.github.io/php-the-right-way/)
-* [Polish](http://pl.phptherightway.com)
-* [Portuguese](http://br.phptherightway.com)
-* [Romanian](https://bgui.github.io/php-the-right-way/)
-* [Russian](http://getjump.github.io/ru-php-the-right-way)
-* [Serbian](http://smatejic.github.io/php-the-right-way/)
-* [Slovenian](http://sl.phptherightway.com)
-* [Spanish](http://phpdevenezuela.github.io/php-the-right-way)
-* [Thai](https://apzentral.github.io/php-the-right-way/)
-* [Turkish](http://hkulekci.github.io/php-the-right-way/)
-* [Ukrainian](http://iflista.github.com/php-the-right-way)
+* [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
+* [Español](http://phpdevenezuela.github.io/php-the-right-way)
+* [Français](http://eilgin.github.io/php-the-right-way/)
+* [Indonesia](http://id.phptherightway.com)
+* [Italiano](http://it.phptherightway.com)
+* [Polski](http://pl.phptherightway.com)
+* [Português do Brasil](http://br.phptherightway.com)
+* [Română](https://bgui.github.io/php-the-right-way/)
+* [Slovenščina](http://sl.phptherightway.com)
+* [Srpski](http://phpsrbija.github.io/php-the-right-way/)
+* [Türkçe](http://hkulekci.github.io/php-the-right-way/)
+* [български](http://bg.phptherightway.com)
+* [Русский язык](http://getjump.github.io/ru-php-the-right-way)
+* [Українська](http://iflista.github.com/php-the-right-way)
+* [العربية](https://adaroobi.github.io/php-the-right-way/)
+* [فارسى](http://novid.github.io/php-the-right-way/)
+* [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
+* [한국어판](http://modernpug.github.io/php-the-right-way)
+* [日本語](http://ja.phptherightway.com)
+* [简体中文](https://laravel-china.github.io/php-the-right-way/)
+* [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
 
 ### 翻译
 

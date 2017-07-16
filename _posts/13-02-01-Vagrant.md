@@ -1,6 +1,5 @@
 ---
 isChild: true
-title: Vagrant
 anchor:  vagrant
 ---
 
@@ -23,7 +22,7 @@ Vagrant 还可以在虚拟机和主机上分享文件夹, 意味着你可以在�
 
 [Vagrant]: http://vagrantup.com/
 [Puppet]: http://www.puppetlabs.com/
-[Chef]: http://www.opscode.com/
+[Chef]: https://www.chef.io/
 [Rove]: http://rove.io/
 [Puphpet]: https://puphpet.com/
 [Protobox]: http://getprotobox.com/

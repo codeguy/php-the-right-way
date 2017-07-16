@@ -1,7 +1,7 @@
 ---
 isChild: true
-title: 注册全局变量
 anchor:  register_globals
+title: 注册全局变量
 ---
 
 ## 注册全局变量 {#register_globals_title}

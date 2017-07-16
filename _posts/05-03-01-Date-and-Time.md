@@ -1,6 +1,6 @@
 ---
-isChild: true
 title: 日期和时间
+isChild: true
 anchor:  date_and_time
 ---
 
@@ -52,6 +52,8 @@ foreach ($periodIterator as $date) {
     echo $date->format('Y-m-d') . ' ';
 }
 {% endhighlight %}
+
+一个有名的 API 扩展是 [Carbon](http://carbon.nesbot.com)。Carbon 不仅继承了所有 DateTime 类提供的功能，还提供了更多的人性化功能，例如自然语言时间处理、国际化支持、对象之间执行增减算术。
 
 * [阅读 DateTime][datetime]
 * [阅读日期格式][dateformat] (支持的日期字符串格式)

@@ -1,14 +1,14 @@
 ---
 isChild: true
-title: 数据过滤
 anchor:  data_filtering
+title: 数据过滤
 ---
 
 ## 数据过滤 {#data_filtering_title}
 
 永远不要信任外部输入。请在使用外部输入前进行过滤和验证。`filter_var()` 和 `filter_input()` 函数可以过滤文本并对格式进行校验（例如 email 地址）。
 
-外部输入可以是任何东西：`$_GET` 和 `$_POST` 等表单输入数据，`$_SERVER` 超全局变量中的某些值，还有通过 `fopen('php://input', 'r')` 得到的 HTTP 请求体。记住，外部输入的定义并不局限于用户通过表单提交的数据。上传和下载的文档，session 值，cookie 数据，还有来自第三方 web 服务的数据，这些都是外服输入。
+外部输入可以是任何东西：`$_GET` 和 `$_POST` 等表单输入数据，`$_SERVER` 超全局变量中的某些值，还有通过 `fopen('php://input', 'r')` 得到的 HTTP 请求体。记住，外部输入的定义并不局限于用户通过表单提交的数据。上传和下载的文档，session 值，cookie 数据，还有来自第三方 web 服务的数据，这些都是外部输入。
 
 虽然外部输入可以被存储、组合并在以后继续使用，但它依旧是外部输入。每次你处理、输出、连结或在代码中包含时，请提醒自己检查数据是否已经安全地完成了过滤。
 
@@ -33,6 +33,12 @@ anchor:  data_filtering
 
 [查看 Sanitization Filters][2]
 
+### 反序列化 Unserialization
+
+使用 `unserialize()` 从用户或者其他不可信的渠道中提取数据是非常危险的事情。这样做会触发恶意实例化对象（包含用户定义的属性），即使对象没用被使用，也会触发运行对象的析构函数。所以你应该避免从不可信渠道反序列化数据。
+
+如果你必须这样做，请你使用 PHP 7 的 [`allowed_classes`][unserialize] 选项来限制反序列化的对象类型。
+
 ### 有效性验证
 
 验证是来确保外部输入的是你所想要的内容。比如，你也许需要在处理注册申请时验证 email 地址、手机号码或者年龄等信息的有效性。
@@ -47,3 +53,4 @@ anchor:  data_filtering
 [5]: http://php.net/function.filter-input
 [6]: http://php.net/security.filesystem.nullbytes
 [html-purifier]: http://htmlpurifier.org/
+[unserialize]: https://secure.php.net/manual/en/function.unserialize.php

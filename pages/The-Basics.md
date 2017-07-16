@@ -20,15 +20,12 @@ var_dump($a == '5');     // compare value (ignore type); return true
 var_dump($a === 5);      // compare type/value (integer vs. integer); return true
 var_dump($a === '5');    // compare type/value (integer vs. string); return false
 
-/**
- * Strict comparisons
- */
+//Equality comparisons
 if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is interpreted as the boolean 'false'
     // code...
 }
 
-// vs
-
+// vs. strict comparisons
 if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
     // code...
 }
@@ -42,7 +39,7 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 
 ### If statements
 
-While using 'if/else' statements within a function or class, there is a common misconception that 'else' must be used
+While using 'if/else' statements within a function or class method, there is a common misconception that 'else' must be used
 in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
 necessary as 'return' will end the function, causing 'else' to become moot.
 
@@ -57,7 +54,7 @@ function test($a)
     }
 }
 
-// vs
+// vs.
 
 function test($a)
 {
@@ -66,6 +63,14 @@ function test($a)
     }
     return false;    // else is not necessary
 }
+
+// or even shorter:
+
+function test($a)
+{
+    return (bool) $a;
+}
+
 {% endhighlight %}
 
 * [If statements](http://php.net/control-structures.if)
@@ -384,6 +389,9 @@ Another example is the snippet below which will return true if ($a != 3 AND $b !
 <?php
 return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
+
+Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
+Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
 
 * [Ternary operators](http://php.net/language.operators.comparison)
 

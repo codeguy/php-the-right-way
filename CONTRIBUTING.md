@@ -1,6 +1,6 @@
 # Contributing to PHP The Right Way
 
-Enjoy [PHP The Right Way](http://laravel-china.github.io/php-the-right-way/) and want to get
+Enjoy [PHP The Right Way](http://phptherightway.com) and want to get
 involved? Great! There are plenty of ways you can help out.
 
 Please take a moment to review this document in order to make the contribution
@@ -14,7 +14,7 @@ patches and features.
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/laravel-china/php-the-right-way/issues) is
+The [issue tracker](https://github.com/codeguy/php-the-right-way/issues) is
 the preferred channel for changes: spelling mistakes, wording changes, new
 content and generally [submitting pull requests](#pull-requests), but please
 respect the following restrictions:
@@ -45,7 +45,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd php-the-right-way
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/laravel-china/php-the-right-way.git
+   git remote add upstream https://github.com/codeguy/php-the-right-way.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
@@ -62,7 +62,14 @@ included in the project:
    git checkout -b <topic-branch-name>
    ```
 
-4. Install the [Jekyll](https://github.com/jekyll/jekyll/) gem to preview locally.
+4. Install the [Jekyll](https://github.com/jekyll/jekyll/) gem and dependencies to preview locally:
+
+    ```bash
+    # Install the needed gems through Bundler
+    bundle install --path vendor/bundle
+    # Run the local server
+    bundle exec jekyll serve
+    ```
 
 5. Commit your changes in logical chunks. Please adhere to these [git commit
    message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
@@ -109,4 +116,4 @@ All content is completely free now, and always will be.
 3. Wrap all text to 120 characters
 4. Code samples should adhere to PSR-1 or higher
 5. Use [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) for all content
-6. Use language agnostic urls when refering to external websites such as the [php.net](http://php.net/urlhowto.php) manual
+6. Use language agnostic urls when referring to external websites such as the [php.net](http://php.net/urlhowto.php) manual

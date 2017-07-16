@@ -1,6 +1,6 @@
 ---
-title: 缓存
 anchor: caching
+title: 缓存
 ---
 
 # 缓存 {#caching_title}

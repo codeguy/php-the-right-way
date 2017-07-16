@@ -1,7 +1,7 @@
 ---
 isChild: true
-title: 组件
 anchor:  components
+title: 组件
 ---
 
 ## 组件 {#components_title}
@@ -34,12 +34,23 @@ _Laravel 的 [Illuminate 组件] 和 Laravel 框架将变得更加解耦。 现�
 [PEAR]: /#pear
 [Dependency Management]: /#dependency_management
 [FuelPHP Validation package]: https://github.com/fuelphp/validation
-[Aura]: http://auraphp.com/packages/v2
+[Aura]: http://auraphp.com/framework/2.x/en/
 [FuelPHP]: https://github.com/fuelphp
 [Hoa Project]: https://github.com/hoaproject
 [Orno]: https://github.com/orno
 [Symfony Components]: http://symfony.com/doc/current/components/index.html
 [The League of Extraordinary Packages]: http://thephpleague.com/
+[IoC Container]: https://github.com/illuminate/container
 [Eloquent ORM]: https://github.com/illuminate/database
 [Queue]: https://github.com/illuminate/queue
 [Illuminate components]: https://github.com/illuminate
+
+Laravel 中文资料：
+
+- [Laravel 中文书籍《Laravel 入门教程》](https://laravel-china.org/topics/3383)
+- [下载量最高的 100 个 Laravel 扩展包推荐 ](https://laravel-china.org/topics/2530)
+- [Laravel 中文文档，涵盖 5.1, 5.2, 5.3 版本](https://laravel-china.org/docs/home )
+- [Laravel 招聘 ](https://laravel-china.org/categories/1)
+- [Laravel 远程工作](https://laravel-china.org/topics/3626)
+- [Laravel 中文社区](https://laravel-china.org/) 我们是现代化 PHP 的拥护者
+- [Laravel 速查表](https://cs.laravel-china.org/)
