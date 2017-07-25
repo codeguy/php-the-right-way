@@ -1,13 +1,13 @@
-# PHP: The Right Way
+# PHP: Como deve ser
 
-## Overview
+## Visão geral
 
-This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+Este é o repositório GitHub Pages para o projeto _PHP: Como Deve Ser_, tradução em português de Portugal do projeto _PHP: The Right Way_.
 
-* This website is a Jekyll project.
-* Each section and sub-section are a Markdown file in `_posts/`.
-* Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+* Este site é um projeto Jekyll.
+* Cada secção e subsecção são arquivos Markdown em `_posts /`.
+* Subsecções têm `isChild: true` no seu _front matter_.
+* A navegação e a estrutura das páginas são geradas automaticamente.
 
 ## Spread the Word!
 
