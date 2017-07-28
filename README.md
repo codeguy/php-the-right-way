@@ -9,12 +9,11 @@ Este é o repositório GitHub Pages para o projeto _PHP: Como Deve Ser_, traduç
 * Subsecções têm `isChild: true` no seu _front matter_.
 * A navegação e a estrutura das páginas são geradas automaticamente.
 
-## Spread the Word!
+## Espalhe a palavra!
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
-developers know where to find good information!
+O _PHP: Como Deve Ser_ possui _banners_ que pode usar no seu site. Mostre o seu apoio e deixe que novos programadores de PHP saibam onde encontrar boas informações!
 
-[See Banner Images](http://www.phptherightway.com/banners.html)
+[Ver Banners de Imagens](http://www.phptherightway.com/banners.html)
 
 ## How to Contribute
 
