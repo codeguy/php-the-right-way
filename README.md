@@ -15,13 +15,13 @@ O _PHP: Como Deve Ser_ possui _banners_ que pode usar no seu site. Mostre o seu 
 
 [Ver Banners de Imagens](http://www.phptherightway.com/banners.html)
 
-## How to Contribute
+## Como contribuir
 
-You should read the `CONTRIBUTING.md` file for precise instructions and tips. But, if you prefer a TL;DR:
+Deve ler o ficheiro `CONTRIBUTING.md` com as instruções, mas, se preferir, tem aqui um resumo:
 
-1. Fork and edit
-2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
-3. Submit pull request for consideration
+1. Fazer um _Fork_ e editar
+2. Opcionalmente, instale o [Ruby](https://rvm.io/rvm/install/) com o [Jekyll](https://github.com/mojombo/jekyll/) gem para pré-visualizar localmente
+3. Submeter um _pull request_ para apreciação
 
 ### Contributor Style Guide
 
