@@ -23,12 +23,12 @@ Deve ler o ficheiro `CONTRIBUTING.md` com as instruções, mas, se preferir, tem
 2. Opcionalmente, instale o [Ruby](https://rvm.io/rvm/install/) com o [Jekyll](https://github.com/mojombo/jekyll/) gem para pré-visualizar localmente
 3. Submeter um _pull request_ para apreciação
 
-### Contributor Style Guide
+### Guia de estilos do colaborador
 
-1. Use American English spelling (*primary English repo only*)
-2. Use four (4) spaces to indent text; do not use tabs.
-3. Wrap all text to 120 characters.
-4. Code samples should adhere to PSR-1 or higher.
+1. Use a ortografia do português de Portugal neste repositório
+2. Use quatro (4) espaços para indentar o texto; Não use TAB.
+3. Limite o texto em 120 caracteres.
+4. Os exemplos de código devem seguir a PSR-1 ou superior.
 
 ## Where
 
