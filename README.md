@@ -30,32 +30,33 @@ Deve ler o ficheiro `CONTRIBUTING.md` com as instruções, mas, se preferir, tem
 3. Limite o texto em 120 caracteres.
 4. Os exemplos de código devem seguir a PSR-1 ou superior.
 
-## Where
+## Onde
 
 <http://www.phptherightway.com>
 
-* [English](http://www.phptherightway.com)
-* [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
-* [Español](http://phpdevenezuela.github.io/php-the-right-way)
-* [Français](http://eilgin.github.io/php-the-right-way/)
-* [Indonesia](http://id.phptherightway.com)
+* [Inglês](http://www.phptherightway.com)
+* [Árabe](https://adaroobi.github.io/php-the-right-way/)
+* [Alemão](http://rwetzlmayr.github.io/php-the-right-way)
+* [Búlgaro](http://bg.phptherightway.com)
+* [Chinês (Simplificado)](http://laravel-china.github.io/php-the-right-way/)
+* [Chinês (Tradicional)](http://laravel-taiwan.github.io/php-the-right-way)
+* [Coreano](http://modernpug.github.io/php-the-right-way)
+* [Esloveno](http://sl.phptherightway.com)
+* [Espanhol](http://phpdevenezuela.github.io/php-the-right-way)
+* [Francês](http://eilgin.github.io/php-the-right-way/)
+* [Indonésio](http://id.phptherightway.com)
 * [Italiano](http://it.phptherightway.com)
-* [Polski](http://pl.phptherightway.com)
-* [Português do Brasil](http://br.phptherightway.com)
-* [Română](https://bgui.github.io/php-the-right-way/)
-* [Slovenščina](http://sl.phptherightway.com)
-* [Srpski](http://phpsrbija.github.io/php-the-right-way/)
-* [Türkçe](http://hkulekci.github.io/php-the-right-way/)
-* [български](http://bg.phptherightway.com)
-* [Русский язык](http://getjump.github.io/ru-php-the-right-way)
-* [Українська](http://iflista.github.com/php-the-right-way)
-* [العربية](https://adaroobi.github.io/php-the-right-way/)
-* [فارسى](http://novid.github.io/php-the-right-way/)
-* [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
-* [한국어판](http://modernpug.github.io/php-the-right-way)
-* [日本語](http://ja.phptherightway.com)
-* [简体中文](http://laravel-china.github.io/php-the-right-way/)
-* [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
+* [Japonês](http://ja.phptherightway.com)
+* [Persa](http://novid.github.io/php-the-right-way/)
+* [Polaco](http://pl.phptherightway.com)
+* [Português (Brasil)](http://br.phptherightway.com)
+* [Português (Portugal)](http://pt.phptherightway.com)
+* [Romeno](https://bgui.github.io/php-the-right-way/)
+* [Russo](http://getjump.github.io/ru-php-the-right-way)
+* [Sérvio](http://phpsrbija.github.io/php-the-right-way/)
+* [Tailandês](https://apzentral.github.io/php-the-right-way/)
+* [Turco](http://hkulekci.github.io/php-the-right-way/)
+* [Ucraniano](http://iflista.github.com/php-the-right-way)
 
 ### Translations
 
