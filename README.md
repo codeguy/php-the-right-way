@@ -58,20 +58,20 @@ Deve ler o ficheiro `CONTRIBUTING.md` com as instruções, mas, se preferir, tem
 * [Turco](http://hkulekci.github.io/php-the-right-way/)
 * [Ucraniano](http://iflista.github.com/php-the-right-way)
 
-### Translations
+### Traduções
 
-If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
+Se tem interesse em traduzir o _PHP: The Right Way_, faça um _fork_ ao repositório original (em inglês) no GitHub e publique o _fork_ traduzido na sua própria conta GitHub Pages. Ligaremos a sua tradução ao documento principal.
 
-To avoid fragmentation and reader confusion, please choose one of these options:
+Para evitar fragmentação e confusão para o leitor, escolha uma das seguintes opções:
 
-1. We link to your GitHub Pages fork with `[username].github.io/php-the-right-way`
-2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
+1. Fazemos a ligação ao seu _fork_ GitHub Pages com `[nome do utilizador].github.io/php-the-right-way`
+2. Fazemos a ligação ao seu _fork_ GitHub Pages com um subdomínio (por exemplo, "pt.phpightightway.com")
 
-If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
+Se usar um subdomínio, insira o subdomínio no arquivo `CNAME` e peça-nos para configurar o DNS. Se não usar um subdomínio, remova o arquivo `CNAME` completamente senão o seu _fork_ não será compilado quando for publicado.
 
-Add information about your translation in the [wiki page](https://github.com/codeguy/php-the-right-way/wiki/Translations).
+Adicione a informação sobre a sua tradução na [página wiki] (https://github.com/codeguy/php-the-right-way/wiki/Translations).
 
-When your translation is ready, open an issue on the Issue Tracker to let us know.
+Quando a sua tradução estiver terminada, abra uma _issue_ no Issue Tracker para nos informar.
 
 ## Why
 
