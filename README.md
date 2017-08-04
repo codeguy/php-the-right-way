@@ -67,9 +67,9 @@ Para evitar fragmentação e confusão para o leitor, escolha uma das seguintes 
 1. Fazemos a ligação ao seu _fork_ GitHub Pages com `[nome do utilizador].github.io/php-the-right-way`
 2. Fazemos a ligação ao seu _fork_ GitHub Pages com um subdomínio (por exemplo, "pt.phpightightway.com")
 
-Se usar um subdomínio, insira o subdomínio no arquivo `CNAME` e peça-nos para configurar o DNS. Se não usar um subdomínio, remova o arquivo `CNAME` completamente senão o seu _fork_ não será compilado quando for publicado.
+Se usar um subdomínio, insira o subdomínio no arquivo `CNAME` e peça-nos para configurar o DNS. Se não usar um subdomínio, remova o arquivo `CNAME` senão o seu _fork_ não será compilado quando for publicado.
 
-Adicione a informação sobre a sua tradução na [página wiki] (https://github.com/codeguy/php-the-right-way/wiki/Translations).
+Adicione a informação sobre a sua tradução na [página wiki](https://github.com/codeguy/php-the-right-way/wiki/Translations).
 
 Quando a sua tradução estiver terminada, abra uma _issue_ no Issue Tracker para nos informar.
 
