@@ -62,69 +62,7 @@ print_r($veyron->getMakeAndModel()); // outputs "Bugatti Veyron"
 
 我们设计 web 应用时，我们经常需要取得某个类的唯一实例，单例模式就帮我们解决了这个问题。
 
-
-
-{% highlight php %}
-<?php
-class Singleton
-{
-    /**
-     * @var 这个类的 *单例*
-     */
-    private static $instance;
-    
-    /**
-     * 返回这个类的 *单例*
-     *
-     * @return Singleton The *Singleton* instance.
-     */
-    public static function getInstance()
-    {
-        if (null === static::$instance) {
-            static::$instance = new static();
-        }
-        
-        return static::$instance;
-    }
-
-    /**
-     * 把构造函数声明为 protected，防止用 `new` 操作符在这个类之外创建新的实例
-     */
-    protected function __construct()
-    {
-    }
-
-    /**
-     * 把 clone 方法声明为 private，防止克隆单例
-     *
-     * @return void
-     */
-    private function __clone()
-    {
-    }
-
-    /**
-     * 把反序列化方法声明为 private，防止反序列化单例
-     *
-     * @return void
-     */
-    private function __wakeup()
-    {
-    }
-}
-
-class SingletonChild extends Singleton
-{
-}
-
-$obj = Singleton::getInstance();
-var_dump($obj === Singleton::getInstance());             // bool(true)
-
-$anotherObj = SingletonChild::getInstance();
-var_dump($anotherObj === Singleton::getInstance());      // bool(false)
-
-var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
-{% endhighlight %}
+**TODO: NEED NEW SINGLETON CODE EXAMPLE**
 
 上面的代码用[**静态**变量](http://php.net/language.variables.scope#language.variables.scope.static) 实现了单例模式和创建单例的静态方法 `getInstance()`.
 请注意以下几点：

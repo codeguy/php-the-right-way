@@ -25,6 +25,7 @@ title: 组件
 * [Symfony Components]
 * [The League of Extraordinary Packages]
 * Laravel's Illuminate Components
+    * [IoC Container]
     * [Eloquent ORM]
     * [Queue]
 

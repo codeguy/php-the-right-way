@@ -33,7 +33,7 @@ log_errors = On
 
 ### 生产环境
 
-为了在<strong>生产</strong>环境中隐藏错误显示，将你的 `php.ini` 进行如下配置：
+为了在 **生产** 环境中隐藏错误显示，将你的 `php.ini` 进行如下配置：
 
 {% highlight ini %}
 display_errors = Off

@@ -73,6 +73,7 @@
 
 在 [wiki 页面](https://github.com/codeguy/php-the-right-way/wiki/Translations) 增加你的翻译信息。
 
+在 [wiki](https://github.com/codeguy/php-the-right-way/wiki/Translations) 中添加您的翻译信息。
 当您的翻译完成后， 请在 Issue Tracker 中新建一个 issue 让我们知道。
 
 ## 为什么会有这个 repo
