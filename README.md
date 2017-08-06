@@ -73,9 +73,9 @@ Adicione a informação sobre a sua tradução na [página wiki](https://github.
 
 Quando a sua tradução estiver terminada, abra uma _issue_ no Issue Tracker para nos informar.
 
-## Why
+## Porquê
 
-There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
+Ultimamente tem havido muita discussão sobre como a comunidade PHP carece de informações suficientes e credíveis para os novos programadores de PHP. Este repositório visa resolver esse problema.
 
 ## Who
 
