@@ -77,15 +77,15 @@ Quando a sua tradução estiver terminada, abra uma _issue_ no Issue Tracker par
 
 Ultimamente tem havido muita discussão sobre como a comunidade PHP carece de informações suficientes e credíveis para os novos programadores de PHP. Este repositório visa resolver esse problema.
 
-## Who
+## Quem
 
-My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
+O meu nome é [Josh Lockhart](http://twitter.com/codeguy). Sou o autor do [Slim Framework](http://www.slimframework.com/) e trabalho para a [New Media Campaigns](http://www.newmediacampaigns.com/).
 
-### Collaborators
+### Colaboradores
 
 * [Kris Jordan](http://krisjordan.com/)
 * [Phil Sturgeon](http://philsturgeon.co.uk/)
 
-## License
+## Licença
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)
