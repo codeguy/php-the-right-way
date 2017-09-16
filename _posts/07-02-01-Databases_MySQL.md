@@ -12,7 +12,7 @@ anchor:  mysql_extension
 - [mysqli]
 - [pdo]
 
-PHP 中的 [mysql] 扩展已经不再进行新的开发了，[在 PHP 5.5.0 版本中正式标记为废弃][mysql_deprecated]，并在 [7.0 正式被移除][mysql_removed]。
+PHP 中的 [mysql] 扩展已经不再进行新的开发了，[在 PHP 5.5.0 版本中正式标记为废弃][mysql_deprecated]，并在 **[7.0 正式被移除][mysql_removed]** 。
 
 想要辨别 `mysql` 是否被使用，你不需要到 `php.ini` 去查看。只需要使用编辑器打开你的项目，然后全局搜索 `mysql_*`
 ，如果有类似 `mysql_connect()` 或者 `mysql_query()` 方法出现，那么你就使用了 `mysql`。

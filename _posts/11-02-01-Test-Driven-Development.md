@@ -21,10 +21,10 @@ anchor:  test_driven_development
 
 [PHPUnit](https://phpunit.de/) 是业界PHP应用开发单元测试框架的标准，但也有其他可选的框架：
 
-- [atoum](https://github.com/atoum/atoum)
-- [Enhance PHP](https://github.com/Enhance-PHP/Enhance-PHP)
-- [PUnit](http://punit.smf.me.uk/)
-- [SimpleTest](http://simpletest.org/)
+* [atoum](https://github.com/atoum/atoum)
+* [Kahlan](https://github.com/crysalead/kahlan)
+* [Peridot](http://peridot-php.github.io/)
+* [SimpleTest](http://simpletest.org)
 
 ### 集成测试
 

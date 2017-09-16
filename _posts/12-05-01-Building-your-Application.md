@@ -1,8 +1,9 @@
 ---
 isChild: true
 anchor:  building_and_deploying_your_application
-title: 构建及部署应用
 ---
+
+## 构建及部署应用 {#building_and_deploying_your_application_title}
 
 如果你在手动的进行数据库结构的修改或者在更新文件前手动运行测试，请三思而后行！因为随着每一个额外的手动任务的添加都需要去部署一个新的版本到应用程序，这些更改会增加程序潜在的致命错误。即使你是在处理一个简单的更新，全面的构建处理或者持续集成策略，[构建自动化][buildautomation]绝对是你的朋友。
 
@@ -50,7 +51,7 @@ title: 构建及部署应用
 
 [Chef] 不仅仅只是一个部署框架， 它是一个基于 Ruby 的强大的系统集成框架，除了部署你的应用之外，还可以构建整个服务环境或者虚拟机。AWS 提供一个服务叫 OpsWorks，其集成了 Chef。
 
-#### Further reading:
+#### 延伸阅读：
 
 * [An Ansible Tutorial][an_ansible_tutorial]
 * [Ansible for DevOps][ansible_for_devops] - paid book on everything Ansible
@@ -63,6 +64,7 @@ title: 构建及部署应用
 
 > 持续集成是一种软件开发实践，团队的成员经常用来集成他们的工作，
 > 通常每一个成员至少每天都会进行集成 — 因此每天都会有许多的集成。许多团队发现这种方式会显著地降低集成问题，
+> approach leads to significantly reduced integration problems and allows a team to develop cohesive software more
 > 并允许一个团队更快的开发软件。
 
 *-- Martin Fowler*
