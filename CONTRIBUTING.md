@@ -8,7 +8,7 @@ Seguir estas orientações significa que você respeita o tempo que os programad
 
 ## Usar o 'issue tracker'
 
-O [issue tracker] (https://github.com/codeguy/php-the-right-way/issues) é o canal preferido para alterações: erros ortográficos, alterações de texto, novos conteúdos e geralmente [submissão de pull requests] (#pull-requests), mas respeite as seguintes restrições:
+O [issue tracker](https://github.com/codeguy/php-the-right-way/issues) é o canal preferido para alterações: erros ortográficos, alterações de texto, novos conteúdos e geralmente [submissão de pull requests](#pull-requests), mas respeite as seguintes restrições:
 
 * Por favor **não** use o issue tracker para solicitações suporte (use o [Stack Overflow](http://stackoverflow.com/questions/tagged/php) ou o IRC).
 
