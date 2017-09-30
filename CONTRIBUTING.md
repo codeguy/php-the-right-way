@@ -6,18 +6,13 @@ Por favor, tire um momento para ler este documento, a fim de tornar o processo d
 
 Seguir estas orientações significa que você respeita o tempo que os programadores gastam em gerenciar e desenvolver este projeto de código aberto. Em troca, eles podem ajuda-lo a abordar situações ou avaliar correções e funcionalidades.
 
-## Using the issue tracker
+## Usar o 'issue tracker'
 
-The [issue tracker](https://github.com/codeguy/php-the-right-way/issues) is
-the preferred channel for changes: spelling mistakes, wording changes, new
-content and generally [submitting pull requests](#pull-requests), but please
-respect the following restrictions:
+O [issue tracker] (https://github.com/codeguy/php-the-right-way/issues) é o canal preferido para alterações: erros ortográficos, alterações de texto, novos conteúdos e geralmente [submissão de pull requests] (#pull-requests), mas respeite as seguintes restrições:
 
-* Please **do not** use the issue tracker for personal support requests (use
-  [Stack Overflow](http://stackoverflow.com/questions/tagged/php) or IRC).
+* Por favor **não** use o issue tracker para solicitações suporte (use o [Stack Overflow](http://stackoverflow.com/questions/tagged/php) ou o IRC).
 
-* Please **do not** derail or troll issues. Keep the discussion on topic and
-  respect the opinions of others.
+* Por favor, **não** se desvie da questão. Mantenha a discussão sobre o tema e respeite as opiniões dos outros.
 
 
 <a name="pull-requests"></a>
