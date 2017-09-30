@@ -1,16 +1,14 @@
-# Contributing to PHP The Right Way
+# Contribuir para o PHP The Right Way
 
-Enjoy [PHP The Right Way](http://phptherightway.com) and want to get
-involved? Great! There are plenty of ways you can help out.
+Gosta do [PHP The Right Way](http://phptherightway.com) e quer colaborar? Boa! Há muitas formas de ajudar.
 
-Please take a moment to review this document in order to make the contribution
-process easy and effective for everyone involved.
+Por favor, tire um momento para ler este documento, a fim de tornar o processo de contribuição fácil e eficaz para todos os envolvidos.
 
 Following these guidelines helps to communicate that you respect the time of
 the developers managing and developing this open source project. In return,
 they should reciprocate that respect in addressing your issue or assessing
 patches and features.
-
+Seguir estas orientações significa que você respeita o tempo que os programadores gastam em gerenciar e desenvolver este projeto de código aberto. Em troca, eles podem ajuda-lo a abordar situações ou avaliar correções e funcionalidades.
 
 ## Using the issue tracker
 
