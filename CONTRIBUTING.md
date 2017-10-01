@@ -20,22 +20,20 @@ O [issue tracker](https://github.com/codeguy/php-the-right-way/issues) é o cana
 
 Os *Pull Requests* são uma ótima forma de adicionar novos conteúdos ao *PHP The Right Way*, além de atualizar quaisquer problemas do navegador ou outras mudanças de estilo. Praticamente qualquer tipo de mudanças é aceite se for construtivo.
 
-Adhering to the following this process is the best way to get your work
-included in the project:
+O seguinte processo contém a melhor maneira de incluir o seu trabalho neste projeto:
 
-1. [Fork](http://help.github.com/fork-a-repo/) the project, clone your fork,
-   and configure the remotes:
+1. Fazer [Fork](http://help.github.com/fork-a-repo/) ao projeto, fazer um *clone* do *fork*, e configurar os *remotes*:
 
    ```bash
-   # Clone your fork of the repo into the current directory
+   # Fazer *clone* do *fork* do repositório no diretório atual
    git clone https://github.com/<your-username>/php-the-right-way.git
-   # Navigate to the newly cloned directory
+   # Navegue até ao diretório que acabou de criar
    cd php-the-right-way
-   # Assign the original repo to a remote called "upstream"
+   # Ligue o repositório original ao "upstream" remoto
    git remote add upstream https://github.com/codeguy/php-the-right-way.git
    ```
 
-2. If you cloned a while ago, get the latest changes from upstream:
+2. Se você fez *clone* há algum tempo, obtenha as últimas alterações do *upstream*:
 
    ```bash
    git checkout gh-pages
