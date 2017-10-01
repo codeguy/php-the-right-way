@@ -68,7 +68,39 @@ yourself a lot of trouble down the road by using factories.
 When designing web applications, it often makes sense conceptually and architecturally to allow access to one and only
 one instance of a particular class. The singleton pattern enables us to do this.
 
-**TODO: NEED NEW SINGLETON CODE EXAMPLE**
+{% highlight php %}
+<?php
+
+abstract class Singleton
+{
+
+    protected static $instances = [];
+
+    public static function getInstance(...$originalArguments): self
+    {
+        if (!isset(static::$instances[ static::class ])) {
+            static::$instances[ static::class ] = new static(...$originalArguments);
+        }
+
+        return static::$instances[ static::class ];
+    }
+
+    protected function __construct()
+    {
+        // Can be left empty
+    }
+
+    private function __clone()
+    {
+        // NOP
+    }
+
+    private function __wakeup()
+    {
+        // NOP
+    }
+}
+{% endhighlight %}
 
 The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
 Note the following:
@@ -82,7 +114,13 @@ unserializing of an instance of the class via the global function [`unserialize(
 .
 * A new instance is created via [late static binding](http://php.net/language.oop5.late-static-bindings) in the static
 creation method `getInstance()` with the keyword `static`. This allows the subclassing of the class `Singleton` in the
-example.
+example. The [`::class`](http://php.net/manual/en/language.oop5.constants.php#example-184) constant is used to resolve
+the fully qualified name of the subclass.
+* The `Singleton` class is defined as [abstract](http://php.net/manual/en/language.oop5.abstract.php) so that only its
+subclasses can be instantiated.
+* The `Singleton::getInstance` method is [variadic](http://php.net/manual/en/functions.arguments.php#functions.variable-arg-list).
+The `...` token is used again to unpack the `$originalArguments` array into the argument list for the static constructor
+call.
 
 The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire
 request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration
