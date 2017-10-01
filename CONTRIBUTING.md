@@ -18,9 +18,7 @@ O [issue tracker](https://github.com/codeguy/php-the-right-way/issues) é o cana
 <a name="pull-requests"></a>
 ## Pull Requests
 
-Pull requests are a great way to add new content to PHP The Right Way, as well
-as updating any browser issues or other style changes. Pretty much any sort of
-change is accepted if seen as constructive.
+Os -Pull Requests- são uma ótima forma de adicionar novos conteúdos ao -PHP The Right Way-, além de atualizar quaisquer problemas do navegador ou outras mudanças de estilo. Praticamente qualquer tipo de mudanças é aceite se for construtivo.
 
 Adhering to the following this process is the best way to get your work
 included in the project:
