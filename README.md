@@ -1,37 +1,39 @@
-# PHP: The Right Way
+# PHP 之道
 
-## Overview
+[在线地址](https://laravel-china.github.io/php-the-right-way/)
 
-This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+> 此项目由 [Laravel China 社区](https://laravel-china.org/ ) 维护，请维护互联网开放精神，转载请保留出处。
 
-* This website is a Jekyll project.
-* Each section and sub-section are a Markdown file in `_posts/`.
-* Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+## 概览
 
-## Spread the Word!
+这是 _PHP之道_ 项目的 GitHub Pages 仓库。
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
-developers know where to find good information!
+* 这个网站是由 Jekyll 构建的。
+* 每个区块以及子区块都是位于 `_posts/` 目录下的 markdown 文件。
+* 子区块可以在配置中设定 `isChild: true` 。
+* 导航以及页面结构都是自动生成的。
 
-[See Banner Images](http://www.phptherightway.com/banners.html)
+## 推广
 
-## How to Contribute
+您可以在网站上放置 _PHP之道_ 的横幅来支持我们，让 PHP 的新人知道哪里可以获取到好的资料！
 
-You should read the `CONTRIBUTING.md` file for precise instructions and tips. But, if you prefer a TL;DR:
+[横幅图片](https://laravel-china.github.io/php-the-right-way/banners.html)
 
-1. Fork and edit
-2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
-3. Submit pull request for consideration
+## 如何贡献
 
-### Contributor Style Guide
+1. Fork 然后编辑
+2. 安装 [Ruby](https://rvm.io/rvm/install/) 和 [Jekyll](https://github.com/mojombo/jekyll/) 在本地预览
+3. 提交一个 pull request
 
-1. Use American English spelling (*primary English repo only*)
-2. Use four (4) spaces to indent text; do not use tabs.
-3. Wrap all text to 120 characters.
-4. Code samples should adhere to PSR-1 or higher.
+### 贡献者样式规范
 
-## Where
+1. 使用美式英语拼写 (*仅适用于英语的 repo*)
+2. 使用 4 个空格来缩进，不要使用 tabs。
+3. 每隔 120 个字符换行。
+4. 示例代码应该遵循 PSR-1 以上的规范。
+5. 简体中文翻译请先参照 [Chi-78nese Copywriting Guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines)
+
+## 其他语言版本
 
 <http://www.phptherightway.com>
 
@@ -55,33 +57,34 @@ You should read the `CONTRIBUTING.md` file for precise instructions and tips. Bu
 * [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
 * [한국어판](http://modernpug.github.io/php-the-right-way)
 * [日本語](http://ja.phptherightway.com)
-* [简体中文](http://laravel-china.github.io/php-the-right-way/)
+* [简体中文](https://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
 
-### Translations
+### 翻译
 
-If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
+如果你有兴趣协助翻译 _PHP: The Right Way_, 请在 GitHub 上 fork 这个 repo 并发布您的本地化版本在您的 GitHub Pages 账号上。我们将在主文档中加上您的链接翻译地址。
 
-To avoid fragmentation and reader confusion, please choose one of these options:
+为了避免文件的散乱以及读者混乱，请选择下面的一种方式：
 
-1. We link to your GitHub Pages fork with `[username].github.io/php-the-right-way`
-2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
+1. 我们用 `[username].github.io/php-the-right-way` 的方式链接您的 GitHub Pages。
+2. 我们用子域名(如： "ru.phptherightway.com") 的方式链接您的 GitHub Pages。
 
-If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
+如果您使用的是子域名，请在 `CNAME` 文件中输入您的子域名，并且通知我们设定对应的DNS。如果您不想使用子域名，请移除 `CNAME` 文件，那么在推送的过程中将不会被建立。
 
-Add information about your translation in the [wiki page](https://github.com/codeguy/php-the-right-way/wiki/Translations).
+在 [wiki 页面](https://github.com/codeguy/php-the-right-way/wiki/Translations) 增加你的翻译信息。
 
-When your translation is ready, open an issue on the Issue Tracker to let us know.
+在 [wiki](https://github.com/codeguy/php-the-right-way/wiki/Translations) 中添加您的翻译信息。
+当您的翻译完成后， 请在 Issue Tracker 中新建一个 issue 让我们知道。
 
-## Why
+## 为什么会有这个 repo
 
-There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
+最近在 PHP 社区中有大量的讨论， 对于 PHP 的新手来说，缺乏足够并且可靠的学习资源。这个 repo 就是为了解决这个问题。
 
-## Who
+## 作者
 
-My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
+我的名字是 [Josh Lockhart](http://twitter.com/codeguy)。我是 [Slim Framework](http://www.slimframework.com/) 的作者并且在 [New Media Campaigns](http://www.newmediacampaigns.com/) 工作。
 
-### Collaborators
+### 合作伙伴
 
 * [Kris Jordan](http://krisjordan.com/)
 * [Phil Sturgeon](http://philsturgeon.co.uk/)

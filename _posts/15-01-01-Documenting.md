@@ -1,6 +1,6 @@
 ---
 anchor: documenting
-title:  Documenting your Code
+title:  代码注释
 ---
 
-# Documenting your Code {#documenting_title}
+# 代码注释 {#documenting_title}

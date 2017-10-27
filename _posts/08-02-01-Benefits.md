@@ -1,21 +1,13 @@
 ---
 isChild: true
+title: 好处
 anchor:  templating_benefits
 ---
 
-## Benefits {#templating_benefits_title}
+## 好处 {#templating_benefits_title}
 
-The main benefit to using templates is the clear separation they create between the presentation logic and the rest of
-your application. Templates have the sole responsibility of displaying formatted content. They are not responsible for
-data lookup, persistence or other more complex tasks. This leads to cleaner, more readable code which is especially
-helpful in a team environment where developers work on the server-side code (controllers, models) and designers work on
-the client-side code (markup).
+使用模板的主要好处是可以将呈现逻辑与应用程序的其他部分进行分离。模板的单一职责就是呈现格式化后的内容。它不负责数据的查询，保存或是其他复杂的任务。进一步促成了更干净、更具可读性的代码，在团队协作开发中尤其有用，开发者可以专注服务端的代码（控制器、模型），而设计师负责客户端代码 (网页) 。
 
-Templates also improve the organization of presentation code. Templates are typically placed in a "views" folder, each
-defined within a single file. This approach encourages code reuse where larger blocks of code are broken into smaller,
-reusable pieces, often called partials. For example, your site header and footer can each be defined as templates,
-which are then included before and after each page template.
+模板同时也改善了前端代码的组织架构。一般来说，模板放置在「视图」文件夹中，每一个模板都放在独立的一个文件中。这种方式鼓励代码重用，它将大块的代码拆成较小的、可重用的片段，通常称为局部模板。举例来说，网站的头、尾区块可以各自定义为一个模板，之后将它们放在每一个页面模板的上、下位置。
 
-Finally, depending on the library you use, templates can offer more security by automatically escaping user-generated
-content. Some libraries even offer sand-boxing, where template designers are only given access to white-listed
-variables and functions.
+最后，根据你选择的类库，模板可以通过自动转义用户的内容，从而带来更多的安全性。有些类库甚至提供沙箱机制，模板设计者只能使用在白名单中的变量和函数。

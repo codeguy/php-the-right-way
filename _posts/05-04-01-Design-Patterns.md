@@ -1,17 +1,13 @@
 ---
 isChild: true
 anchor:  design_patterns
+title: 设计模式
 ---
 
-## Design Patterns {#design_patterns_title}
+## 设计模式 {#design_patterns_title}
 
-When you are building your application it is helpful to use common patterns in your code and common patterns for the
-overall structure of your project. Using common patterns is helpful because it makes it much easier to manage your code
-and lets other developers quickly understand how everything fits together.
+当你在编写自己的应用程序时，最好在项目的代码和整体架构中使用通用的设计模式，这将帮助你更轻松地对程序进行维护，也能够让其他的开发者更快地理解你的代码。
 
-If you use a framework then most of the higher level code and project structure will be based on that framework, so a
-lot of the pattern decisions are made for you. But it is still up to you to pick out the best patterns to follow in the
-code you build on top of the framework. If, on the other hand, you are not using a framework to build your application
-then you have to find the patterns that best suit the type and size of application that you're building.
+当你使用框架进行开发时，绝大部分的上层代码以及项目结构都会基于所使用的框架，因此很多关于设计模式的决定已经由框架帮你做好了。当然，你还是可以挑选你最喜欢的模式并在你的代码中进行应用。但如果你并没有使用框架的话，你就需要自己去寻找适合你的应用的最佳模式了。
 
-* Continue reading on [Design Patterns](/pages/Design-Patterns.html)
+* 学习更多[设计模式](/php-the-right-way/pages/Design-Patterns.html)

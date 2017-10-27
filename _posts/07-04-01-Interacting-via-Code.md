@@ -1,13 +1,12 @@
 ---
 isChild: true
-title:   Interacting with Databases
+title:   数据库交互
 anchor:  databases_interacting
 ---
 
-## Interacting with Databases {#databases_interacting_title}
+## 数据库交互 {#databases_interacting_title}
 
-When developers first start to learn PHP, they often end up mixing their database interaction up with their
-presentation logic, using code that might look like this:
+当开发者第一次接触 PHP 时，通常会使用类似下面的代码来将数据库的交互与表示层逻辑混在一起：
 
 {% highlight php %}
 <ul>
@@ -19,13 +18,11 @@ foreach ($db->query('SELECT * FROM table') as $row) {
 </ul>
 {% endhighlight %}
 
-This is bad practice for all sorts of reasons, mainly that it's hard to debug, hard to test, hard to read and it is
-going to output a lot of fields if you don't put a limit on there.
+这从很多方面来看都是错误的做法，主要是由于它不易阅读又难以测试和调试。而且如果你不加以限制的话，它会输出非常多的字段。
 
-While there are many other solutions to doing this - depending on if you prefer [OOP](/#object-oriented-programming) or
-[functional programming](/#functional-programming) - there must be some element of separation.
+其实还有许多不同的解决方案来完成这项工作 — 取决于你倾向于 [面向对象编程（OOP）](/#object-oriented-programming)还是[函数式编程](/#functional-programming) — 但必须有一些分离的元素。
 
-Consider the most basic step:
+来看一下最基本的做法：
 
 {% highlight php %}
 <?php
@@ -38,11 +35,9 @@ foreach (getAllFoos($db) as $row) {
 }
 {% endhighlight %}
 
-That is a good start. Put those two items in two different files and you've got some clean separation.
+这是一个不错的开头。将这两个元素放入了两个不同的文件于是你得到了一些干净的分离。
 
-Create a class to place that method in and you have a "Model". Create a simple `.php` file to put the presentation
-logic in and you have a "View", which is very nearly [MVC] - a common OOP architecture for most
-[frameworks](/#frameworks).
+创建一个类来放置上面的函数，你就得到了一个「Model」。创建一个简单的`.php`文件来存放表示逻辑，你就得到了一个「View」。这已经很接近 [MVC] — 一个大多数[框架](/#frameworks)常用的面向对象的架构。
 
 **foo.php**
 
@@ -90,14 +85,11 @@ class FooModel
 <?php endforeach ?>
 {% endhighlight %}
 
-This is essentially the same as what most modern frameworks are doing, albeit a little more manual. You might not
-need to do all of that every time, but mixing together too much presentation logic and database interaction can be a
-real problem if you ever want to [unit-test](/#unit-testing) your application.
+向大多数现代框架的做法学习是很有必要的，尽管多了一些手动的工作。你可以并不需要每一次都完全这么做，但将太多的表示逻辑层代码和数据库交互掺杂在一些将会为你在想要对程序进行[单元测试](/#unit-testing)时带来真正的麻烦。
 
-[PHPBridge] has a great resource called [Creating a Data Class] which covers a very similar topic, and is great for
-developers just getting used to the concept of interacting with databases.
+[PHPBridge] 具有一项非常棒的资源叫做[创建一个数据类]。它包含了非常相似的逻辑而且非常适合刚刚习惯数据库交互概念的开发者使用。
 
 
 [MVC]: http://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
 [PHPBridge]: http://phpbridge.org/
-[Creating a Data Class]: http://phpbridge.org/intro-to-php/creating_a_data_class
+[创建一个数据类]: http://phpbridge.org/intro-to-php/creating_a_data_class

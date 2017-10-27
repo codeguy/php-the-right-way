@@ -3,56 +3,55 @@ isChild: true
 anchor:  building_and_deploying_your_application
 ---
 
-## Building and Deploying your Application {#building_and_deploying_your_application_title}
+## 构建及部署应用 {#building_and_deploying_your_application_title}
 
-If you find yourself doing manual database schema changes or running your tests manually before updating your files
-(manually), think twice! With every additional manual task needed to deploy a new version of your app, the chances for
-potentially fatal mistakes increase. Whether you're dealing with a simple update, a comprehensive build process or even
-a continuous integration strategy, [build automation][buildautomation] is your friend.
+如果你在手动的进行数据库结构的修改或者在更新文件前手动运行测试，请三思而后行！因为随着每一个额外的手动任务的添加都需要去部署一个新的版本到应用程序，这些更改会增加程序潜在的致命错误。即使你是在处理一个简单的更新，全面的构建处理或者持续集成策略，[构建自动化][buildautomation]绝对是你的朋友。
 
-Among the tasks you might want to automate are:
+你可能想要自动化的任务有：
 
-* Dependency management
-* Compilation, minification of your assets
-* Running tests
-* Creation of documentation
-* Packaging
-* Deployment
+* 依赖管理
+* 静态资源编译、压缩
+* 执行测试
+* 文档生成
+* 打包
+* 部署
 
 
-### Deployment Tools
+### 构建自动化工具
 
-Deployment tools can be described as a collection of scripts that handle common tasks of software deployment. The deployment tool is not a part of your software, it acts on your software from 'outside'.
+构建工具可以认为是一系列的脚本来完成应用部署的通用任务。构建工具并不属于应用的一部分，它独立于应用层 '之外'。
 
-There are many open source tools available to help you with build automation and deployment, some are written in PHP others aren't. This shouldn't hold you back from using them, if they're better suited for the specific job. Here are a few examples:
+现在已有很多开源的工具来帮助你完成构建自动化，一些是用 PHP 编写，有一些不是。应该根据你的实际项目来选择最适合的工具，不要让语言阻碍了你使用这些工具，如下有一些例子：
 
-[Phing] can control your packaging, deployment or testing process from within a XML build file. Phing (which is based on [Apache Ant]) provides a rich set of tasks usually needed to install or update a web application and can be extended with additional custom tasks, written in PHP. It's a solid and robust tool and has been around for a long time, however the tool could be perceived as a bit old fashioned because of the way it deals with configuration (XML files).
+[Phing] 是一种在 PHP 领域中最简单的开始自动化部署的方式。通过 Phing 你可以控制打包，部署或者测试，只需要一个简单的 XML 构建文件。Phing (基于[Apache Ant]) 提供了在安装或者升级 web 应用时的一套丰富的任务脚本，并且可以通过 PHP 编写额外的任务脚本来扩展。
 
-[Capistrano] is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however you can successfully deploy PHP systems with it. Successful use of Capistrano depends on a working knowledge of Ruby and Rake. Dave Gardner's blog post [PHP Deployment with Capistrano][phpdeploy_capistrano] is a good starting point for PHP developers interested in Capistrano.
+[Capistrano] 是一个为 *中高级程序员* 准备的系统，以一种结构化、可复用的方式在一台或多台远程机器上执行命令。对于部署 Ruby on Rails 的应用，它提供了预定义的配置，不过也可以用它来 **部署 PHP 应用** 。如果要成功的使用 Capistrano ，需要一定的 Ruby 和 Rake 的知识。
 
-[Rocketeer] gets its inspiration and philosophy from the Laravel framework. Its goal is to be fast, elegant and easy to use with smart defaults. It features multiple servers, multiple stages, atomic deploys and deployment can be performed in parallel. Everything in the tool can be hot swapped or extended, and everything is written in PHP.
+对 Capistrano 感兴趣的 PHP 开发者可以阅读 Dave Gardner 的博文 [PHP Deployment with Capistrano][phpdeploy_capistrano] ，来作为一个很好的开始。
 
-[Deployer] is a deployment tool written in PHP. It's simple and functional. Features include running tasks in parallel, atomic deployment and keeping consistency between servers. Recipes of common tasks for Symfony, Laravel, Zend Framework and Yii are available. Younes Rafie's article  [Easy Deployment of PHP Applications with Deployer][phpdeploy_deployer] is a great tutorial for deploying your application with the tool.
+[Rocketeer] 从 Laravel 框架中得到了很多灵感。 目标是默认智能化配置、高速、优雅的自动化部署工具。他支持多服务器，多阶段，并行部署等功能。工具的扩展性极强，并且是由 PHP 编写。
 
-[Magallanes] is another tool written in PHP with simple configuration done in YAML files. It has support for multiple servers and environments, atomic deployment, and has some built in tasks that you can leverage for common tools and frameworks.
+[Deployer] 是一个用 PHP 编写的部署工具，它很简单且实用。并行执行任务，原子化部署，在多台服务器之间保持一致性。为 Symfony、Laravel、Zend Framework 和 Yii 提供了通用的任务脚本。推荐阅读 Younes Rafie 的博文 [快速使用 Deployer 部署 PHP 应用][phpdeploy_deployer]。
 
-#### Further reading:
+[Magallanes] 是另一个由 PHP 编写的自动化部署工具。使用 YAML 作为配置信息，支持多服务器和多环境，自动化部署。并且自带了许多通用的任务。
+
+#### 延伸阅读：
 
 * [Automate your project with Apache Ant][apache_ant_tutorial]
 * [Expert PHP Deployments][expert_php_deployments] - free book on deployment with Capistrano, Phing and Vagrant.
 * [Deploying PHP Applications][deploying_php_applications] - paid book on best practices and tools for PHP deployment.
 
-### Server Provisioning
+### 服务器布置 Server Provisioning
 
-Managing and configuring servers can be a daunting task when faced with many servers. There are tools for dealing with this so you can automate your infrastructure to make sure you have the right servers and that they're configured properly. They often integrate with the larger cloud hosting providers (Amazon Web Services, Heroku, DigitalOcean, etc) for managing instances, which makes scaling an application a lot easier.
+在多台服务器的场景下，管理服务器系统配置信息将会是一个令人棘手的事情。接下来介绍几种工具来让你自动化这些工作。一般情况下，一些大型的云托管商（如：Amazon Web Services, Heroku, DigitalOcean 等）会集成自动化管理工具。
 
-[Ansible] is a tool that manages your infrastructure through YAML files. It's simple to get started with and can manage complex and large scale applications. There is an API for managing cloud instances and it can manage them through a dynamic inventory using certain tools.
+[Ansible] 让你使用 YAML 配置文件来管理你的服务器基础设施。简单上手，功能强大，能支持复杂和大型应用场景。甚至支持 API 来动态管理云主机实例。
 
-[Puppet] is a tool that has its own language and file types for managing servers and configurations. It can be used in a master/client setup or it can be used in a "master-less" mode. In the master/client mode the clients will poll the central master(s) for new configuration on set intervals and update itself if necessary. In the master-less mode you can push changes to your nodes. 
+[Puppet] 拥有自定义语言和文件类型来管理服务和配置信息。支持 主从结构或者是 `无主结构`。在主从结构中，从属机器会在设定周期内更新主机上的配置信息。在无主架构中，你需要 `push` 推送修改到各个节点。
 
-[Chef] is a powerful Ruby based system integration framework that you can build your whole server environment or virtual boxes with. It integrates well with Amazon Web Services through their service called OpsWorks.
+[Chef] 不仅仅只是一个部署框架， 它是一个基于 Ruby 的强大的系统集成框架，除了部署你的应用之外，还可以构建整个服务环境或者虚拟机。AWS 提供一个服务叫 OpsWorks，其集成了 Chef。
 
-#### Further reading:
+#### 延伸阅读：
 
 * [An Ansible Tutorial][an_ansible_tutorial]
 * [Ansible for DevOps][ansible_for_devops] - paid book on everything Ansible
@@ -61,26 +60,22 @@ Managing and configuring servers can be a daunting task when faced with many ser
 * [Chef Cookbook which installs and configures PHP and the PEAR package management system][Chef_cookbook]
 * [Chef video tutorial series][Chef_tutorial]
 
-### Continuous Integration
+### 持续集成
 
-> Continuous Integration is a software development practice where members of a team integrate their work frequently,
-> usually each person integrates at least daily — leading to multiple integrations per day. Many teams find that this
+> 持续集成是一种软件开发实践，团队的成员经常用来集成他们的工作，
+> 通常每一个成员至少每天都会进行集成 — 因此每天都会有许多的集成。许多团队发现这种方式会显著地降低集成问题，
 > approach leads to significantly reduced integration problems and allows a team to develop cohesive software more
-> rapidly.
+> 并允许一个团队更快的开发软件。
 
 *-- Martin Fowler*
 
-There are different ways to implement continuous integration for PHP. [Travis CI] has done a great job of
-making continuous integration a reality even for small projects. Travis CI is a hosted continuous integration service
-for the open source community. It is integrated with GitHub and offers first class support for many languages including
-PHP.
+对于 PHP 来说，有许多的方式来实现持续集成。近来 [Travis CI] 在持续集成上做的很棒，对于小项目来说也可以很好的使用。Travis CI 是一个托管的持续集成服务用于开源社区。它可以和 Github 很好的集成，并且提供了很多语言的支持包括 PHP 。
 
-#### Further reading:
+#### 延伸阅读：
 
-* [Continuous Integration with Jenkins][Jenkins]
-* [Continuous Integration with PHPCI][PHPCI]
-* [Continuous Integration with Teamcity][Teamcity]
-
+* [使用 Jenkins 进行持续集成][Jenkins]
+* [使用 PHPCI 进行持续集成][PHPCI]
+* [使用 Teamcity 进行持续集成][Teamcity]
 
 [buildautomation]: http://en.wikipedia.org/wiki/Build_automation
 [Phing]: http://www.phing.info/
