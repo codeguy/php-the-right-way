@@ -24,6 +24,7 @@ your applications within your own development schedules so you won't be rushed l
 
 **If you are upgrading from [mysql] to [mysqli], beware lazy upgrade guides that suggest you can simply find and replace `mysql_*` with `mysqli_*`. Not only is that a gross oversimplification, it misses out on the advantages that mysqli provides, such as parameter binding, which is also offered in [PDO][pdo].**
 
+* [MySQLi Prepared Statements][mysqli_prepared_statements]
 * [PHP: Choosing an API for MySQL][mysql_api]
 * [PDO Tutorial for MySQL Developers][pdo4mysql_devs]
 
@@ -34,3 +35,4 @@ your applications within your own development schedules so you won't be rushed l
 [pdo]: http://php.net/pdo
 [mysql_api]: http://php.net/mysqlinfo.api.choosing
 [pdo4mysql_devs]: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers
+[mysqli_prepared_statements]: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection
