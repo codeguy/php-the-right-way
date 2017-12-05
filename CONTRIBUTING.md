@@ -1,54 +1,39 @@
-# Contributing to PHP The Right Way
+# Contribuir para o PHP The Right Way
 
-Enjoy [PHP The Right Way](http://phptherightway.com) and want to get
-involved? Great! There are plenty of ways you can help out.
+Gosta do [PHP The Right Way](http://phptherightway.com) e quer colaborar? Boa! Há muitas formas de ajudar.
 
-Please take a moment to review this document in order to make the contribution
-process easy and effective for everyone involved.
+Por favor, tire um momento para ler este documento, a fim de tornar o processo de contribuição fácil e eficaz para todos os envolvidos.
 
-Following these guidelines helps to communicate that you respect the time of
-the developers managing and developing this open source project. In return,
-they should reciprocate that respect in addressing your issue or assessing
-patches and features.
+Seguir estas orientações significa que você respeita o tempo que os programadores gastam em gerenciar e desenvolver este projeto de código aberto. Em troca, eles podem ajuda-lo a abordar situações ou avaliar correções e funcionalidades.
 
+## Usar o 'issue tracker'
 
-## Using the issue tracker
+O [issue tracker](https://github.com/codeguy/php-the-right-way/issues) é o canal preferido para alterações: erros ortográficos, alterações de texto, novos conteúdos e geralmente [submissão de pull requests](#pull-requests), mas respeite as seguintes restrições:
 
-The [issue tracker](https://github.com/codeguy/php-the-right-way/issues) is
-the preferred channel for changes: spelling mistakes, wording changes, new
-content and generally [submitting pull requests](#pull-requests), but please
-respect the following restrictions:
+* Por favor **não** use o issue tracker para solicitações suporte (use o [Stack Overflow](http://stackoverflow.com/questions/tagged/php) ou o IRC).
 
-* Please **do not** use the issue tracker for personal support requests (use
-  [Stack Overflow](http://stackoverflow.com/questions/tagged/php) or IRC).
-
-* Please **do not** derail or troll issues. Keep the discussion on topic and
-  respect the opinions of others.
+* Por favor, **não** se desvie da questão. Mantenha a discussão sobre o tema e respeite as opiniões dos outros.
 
 
 <a name="pull-requests"></a>
 ## Pull Requests
 
-Pull requests are a great way to add new content to PHP The Right Way, as well
-as updating any browser issues or other style changes. Pretty much any sort of
-change is accepted if seen as constructive.
+Os *Pull Requests* são uma ótima forma de adicionar novos conteúdos ao *PHP The Right Way*, além de atualizar quaisquer problemas do navegador ou outras mudanças de estilo. Praticamente qualquer tipo de mudanças é aceite se for construtivo.
 
-Adhering to the following this process is the best way to get your work
-included in the project:
+O seguinte processo contém a melhor maneira de incluir o seu trabalho neste projeto:
 
-1. [Fork](http://help.github.com/fork-a-repo/) the project, clone your fork,
-   and configure the remotes:
+1. Fazer [Fork](http://help.github.com/fork-a-repo/) ao projeto, fazer um *clone* do *fork*, e configurar os *remotes*:
 
    ```bash
-   # Clone your fork of the repo into the current directory
+   # Fazer *clone* do *fork* do repositório no diretório atual
    git clone https://github.com/<your-username>/php-the-right-way.git
-   # Navigate to the newly cloned directory
+   # Navegue até ao diretório que acabou de criar
    cd php-the-right-way
-   # Assign the original repo to a remote called "upstream"
+   # Ligue o repositório original ao "upstream" remoto
    git remote add upstream https://github.com/codeguy/php-the-right-way.git
    ```
 
-2. If you cloned a while ago, get the latest changes from upstream:
+2. Se você fez *clone* há algum tempo, obtenha as últimas alterações do *upstream*:
 
    ```bash
    git checkout gh-pages
