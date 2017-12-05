@@ -36,6 +36,8 @@ There are many open source tools available to help you with build automation and
 
 [Magallanes] is another tool written in PHP with simple configuration done in YAML files. It has support for multiple servers and environments, atomic deployment, and has some built in tasks that you can leverage for common tools and frameworks.
 
+[Nanobox] creates instant, isolated, development environments for each application via a simple YAML config file. Once an application is ready for production it can be simulated locally and then easily deployed to any hosting provider.
+
 #### Further reading:
 
 * [Automate your project with Apache Ant][apache_ant_tutorial]
@@ -48,9 +50,11 @@ Managing and configuring servers can be a daunting task when faced with many ser
 
 [Ansible] is a tool that manages your infrastructure through YAML files. It's simple to get started with and can manage complex and large scale applications. There is an API for managing cloud instances and it can manage them through a dynamic inventory using certain tools.
 
-[Puppet] is a tool that has its own language and file types for managing servers and configurations. It can be used in a master/client setup or it can be used in a "master-less" mode. In the master/client mode the clients will poll the central master(s) for new configuration on set intervals and update itself if necessary. In the master-less mode you can push changes to your nodes. 
+[Puppet] is a tool that has its own language and file types for managing servers and configurations. It can be used in a master/client setup or it can be used in a "master-less" mode. In the master/client mode the clients will poll the central master(s) for new configuration on set intervals and update itself if necessary. In the master-less mode you can push changes to your nodes.
 
 [Chef] is a powerful Ruby based system integration framework that you can build your whole server environment or virtual boxes with. It integrates well with Amazon Web Services through their service called OpsWorks.
+
+[Nanobox] creates instant, isolated, development environments for each application via a simple YAML config file. Once an application is ready for production it can be simulated locally and then easily deployed to any hosting provider.
 
 #### Further reading:
 
@@ -86,6 +90,7 @@ PHP.
 [Phing]: http://www.phing.info/
 [Apache Ant]: http://ant.apache.org/
 [Capistrano]: https://github.com/capistrano/capistrano/wiki
+[Nanobox]: http://nanobox.io
 [phpdeploy_capistrano]: http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/
 [phpdeploy_deployer]: http://www.sitepoint.com/deploying-php-applications-with-deployer/
 [Chef]: https://www.chef.io/
