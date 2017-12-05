@@ -369,7 +369,7 @@ pre{
  *****************************************************************************/
 
 .site-content{
-    h1{
+    h1 {
         padding-top: 40px;
         position: relative;
 
@@ -383,6 +383,18 @@ pre{
             left: 0;
             top: 0;
             width: 100%;
+        }
+    }
+
+    h1, h2, h3, h4 {
+        & .subhead-link {
+            margin-left: -15px;
+            visibility: hidden;
+            text-decoration: none;
+        }
+
+        &:hover .subhead-link {
+            visibility: visible;
         }
     }
 
