@@ -6,7 +6,7 @@ anchor: databases
 # Databases {#databases_title}
 
 Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysqli], [pgsql],
+with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysql], [pgsql],
 [mssql], etc.
 
 Native drivers are great if you are only using _one_ database in your application, but if, for example, you are using
