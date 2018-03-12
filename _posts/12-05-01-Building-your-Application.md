@@ -100,7 +100,7 @@ PHP.
 [Deployer]: http://deployer.org/
 [Rocketeer]: http://rocketeer.autopergamene.eu/
 [Magallanes]: http://magephp.com/
-[expert_php_deployments]: http://viccherubini.com/assets/Expert-PHP-Deployments.pdf
+[expert_php_deployments]: http://web.archive.org/web/20150706110149/https://leftnode.org/assets/expert-php-deployments.pdf
 [deploying_php_applications]: http://www.deployingphpapplications.com
 [Ansible]: https://www.ansible.com/
 [Puppet]: https://puppet.com/
