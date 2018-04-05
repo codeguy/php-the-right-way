@@ -1,67 +1,52 @@
 ---
 anchor: code_style_guide
+title: 代码风格指南
 ---
 
-# Code Style Guide {#code_style_guide_title}
+# 代码风格指南 {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+PHP 社区百花齐放，拥有大量的函数库、框架和组件。PHP 开发者通常会在自己的项目中使用若干个外部库，因此 PHP 代码遵循（尽可能接近）同一个代码风格就非常重要，这让开发者可以轻松地将多个代码库整合到自己的项目中。
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
-to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
-recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
-FuelPHP, Lithium, etc are adopting. You can use them for your own projects, or continue to use your own
-personal style.
+[PHP标准组][fig] 提出并发布了一系列的风格建议。其中有部分是关于代码风格的，即 [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] 和 [PSR-4][psr4]。这些推荐只是一些被其他项目所遵循的规则，如 Drupal, Zend, Symfony, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium 等。你可以把这些规则用在自己的项目中，或者继续使用自己的风格。
 
-Ideally, you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
-applications that implement the components can have consistency even when working with lots of third-party code.
+通常情况下，你应该遵循一个已知的标准来编写 PHP 代码。可能是 PSR 的组合或者是 PEAR 或 Zend 编码准则中的一个。这代表其他开发者能够方便的阅读和使用你的代码，并且使用这些组件的应用程序可以和其他第三方的组件保持一致。
 
-* [Read about PSR-0][psr0]
-* [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [阅读 PSR-0][psr0]
+* [阅读 PSR-1][psr1]
+* [阅读 PSR-2][psr2]
+* [阅读 PSR-4][psr4]
+* [阅读 PEAR 编码准则][pear-cs]
+* [阅读 Symfony 编码准则][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text][st-cs] to be given real-time feedback.
+你可以使用 [PHP_CodeSniffer][phpcs] 来检查代码是否符合这些准则，文本编辑器 [Sublime Text][st-cs] 的插件也可以提供实时检查。
 
-You can fix the code layout automatically by using one of the following tools:
+你可以通过任意以下两个工具来自动修正你的程序语法，让它符合标准：
 
-- One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
-- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
+- 一个是 [PHP Coding Standards Fixer][phpcsfixer]，它具有良好的测试。
+- 另一个是随 PHP_CodeSniffer 安装的 [PHP Code 美化修整器][phpcbf]。
 
-And you can run phpcs manually from shell:
+你也可以手动运行 phpcs 命令：
 
     phpcs -sw --standard=PSR2 file.php
 
-It will show errors and describe how to fix them.
-It can also be helpful to include this command in a git hook.
-That way, branches which contain violations against the chosen standard cannot enter the repository until those
-violations have been fixed.
+它会显示出相应的错误以及如何修正的方法。同时，这条命令你也可以用在 git hook 中，如果你的分支代码不符合选择的代码标准则无法提交。
 
-If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
-[PHP Code Beautifier and Fixer][phpcbf].
+如果你已经安装了 PHP_CodeSniffer，你将可以使用
+[PHP Code 美化修整器][phpcbf] 来格式化代码：
 
     phpcbf -w --standard=PSR2 file.php
 
-Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
-It will show which kind of errors the code structure had before it fixed them.
+另一个选项是使用 [PHP 编码标准修复器][phpcsfixer]，他可以让你预览编码不合格的部分：
 
     php-cs-fixer fix -v --level=psr2 file.php
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
-readable by all current and future parties who may be working on the codebase.
+所有的变量名称以及代码结构建议用英文编写。注释可以使用任何语言，只要让现在以及未来的小伙伴能够容易阅读理解即可。
 
-
-[fig]: http://www.php-fig.org/
+[fig]: https://psr.phphub.org/
 [psr0]: http://www.php-fig.org/psr/psr-0/
-[psr1]: http://www.php-fig.org/psr/psr-1/
-[psr2]: http://www.php-fig.org/psr/psr-2/
-[psr4]: http://www.php-fig.org/psr/psr-4/
+[psr1]: https://laravel-china.org/topics/2078
+[psr2]: https://laravel-china.org/topics/2079
+[psr4]: https://laravel-china.org/topics/2081
 [pear-cs]: http://pear.php.net/manual/en/standards.php
 [symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: http://pear.php.net/package/PHP_CodeSniffer/

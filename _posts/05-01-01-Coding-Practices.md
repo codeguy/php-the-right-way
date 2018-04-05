@@ -1,5 +1,6 @@
 ---
 anchor: coding_practices
+title: 开发实践
 ---
 
-# Coding Practices {#coding_practices_title}
+# 开发实践 {#coding_practices_title}

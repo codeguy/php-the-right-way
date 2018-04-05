@@ -1,23 +1,22 @@
 ---
 isChild: true
 anchor:  components
+title: 组件
 ---
 
-## Components {#components_title}
+## 组件 {#components_title}
 
-As mentioned above "Components" are another approach to the common goal of creating, distributing and implementing
-shared code. Various component repositories exist, the main two of which are:
+
+正如标题提到的，「组件」是另一种建立，发布及推动开源的方式。现在存在的各种的组件库，其中最主要的两个为：
 
 * [Packagist]
 * [PEAR]
 
-Both of these repositories have command line tools associated with them to help the installation and upgrade processes,
-and have been explained in more detail in the [Dependency Management] section.
+这两个组件库都有用來安装及升级的命令行工具，这部分已经在這部分已經在[依赖管理]中解释过。
 
-There are also component-based frameworks and component-vendors that offer no framework at all. These projects provide
-another source of packages which ideally have little to no dependencies on other packages, or specific frameworks.
+此外，还有基于组件的构成的框架的提供商提供不包含框架的组件。这些项目通常和其他的组件或者特定的框架没有依赖关系。
 
-For example, you can use the [FuelPHP Validation package], without needing to use the FuelPHP framework itself.
+例如，你可以使用 [FuelPHP 验证类库]，而不使用 FuelPHP 整个框架。
 
 * [Aura]
 * [FuelPHP]
@@ -30,9 +29,7 @@ For example, you can use the [FuelPHP Validation package], without needing to us
     * [Eloquent ORM]
     * [Queue]
 
-_Laravel's [Illuminate components] will become better decoupled from the Laravel framework. For now, only the
-components best decoupled from the Laravel framework are listed above._
-
+_Laravel 的 [Illuminate 组件] 和 Laravel 框架将变得更加解耦。 现在我们只列出和 Laravel 框架最没有依赖关系的组件。_
 
 [Packagist]: /#composer_and_packagist
 [PEAR]: /#pear
@@ -48,3 +45,13 @@ components best decoupled from the Laravel framework are listed above._
 [Eloquent ORM]: https://github.com/illuminate/database
 [Queue]: https://github.com/illuminate/queue
 [Illuminate components]: https://github.com/illuminate
+
+Laravel 中文资料：
+
+- [Laravel 中文书籍《Laravel 入门教程》](https://laravel-china.org/topics/3383)
+- [下载量最高的 100 个 Laravel 扩展包推荐 ](https://laravel-china.org/topics/2530)
+- [Laravel 中文文档，涵盖 5.1, 5.2, 5.3 版本](https://laravel-china.org/docs/home )
+- [Laravel 招聘 ](https://laravel-china.org/categories/1)
+- [Laravel 远程工作](https://laravel-china.org/topics/3626)
+- [Laravel 中文社区](https://laravel-china.org/) 我们是现代化 PHP 的拥护者
+- [Laravel 速查表](https://cs.laravel-china.org/)

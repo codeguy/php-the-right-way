@@ -1,33 +1,22 @@
 ---
-title:   Internationalization and Localization
+title:   国际化和本地化
 isChild: true
 anchor:  i18n_l10n
 ---
 
-## Internationalization (i18n) and Localization (l10n) {#i18n_l10n_title}
+## 国际化（i18n）和本地化（l10n） {#i18n_l10n_title}
 
-_Disclaimer for newcomers: i18n and l10n are numeronyms, a kind of abbreviation where numbers are used to shorten
-words - in our case, internationalization becomes i18n and localization, l10n._
+_前置声明：i18n 和 l10n 是使用数字简略拼写方式来实现缩写，在我们的例子里：internationalization 是 i18n，而 localization 简写为 l10n。
 
-First of all, we need to define those two similar concepts and other related things:
+首先，我们需要定义这两个相似的概念，还有相关的概念：
 
-- **Internationalization** is when you organize your code so it can be adapted to different languages or regions
-without refactorings. This is usually done once - preferably, in the beginning of the project, or else you'll probably
-need some huge changes in the source!
-- **Localization** happens when you adapt the interface (mainly) by translating contents, based on the i18n work done
-before. It usually is done every time a new language or region needs support and is updated when new interface pieces
-are added, as they need to be available in all supported languages.
-- **Pluralization** defines the rules needed between different languages to interoperate strings containing numbers and 
-counters. For instance, in English when you have only one item, it's singular, and anything different from that is 
-called plural; plural in this language is indicated by adding an S after some words, and sometimes changes parts of it.
-In other languages, such as Russian or Serbian, there are two plural forms in addition to the singular - you may even
-find languages with a total of four, five or six forms, such as Slovenian, Irish or Arabic.
+- **Internationalization** 国际化：指的是一开始设计一个支持多语言的架构。很多时候这个事情只需要做一次，并且是在项目初始时，不然的话，你可能面临一个项目的重大修改。
+- **Localization** 本地化：指的是新语言的添加。基于 i18n 的架构设计，在每一次新支持一门语言时，我们都需要一点点的去增加翻译的语言。
+- **Pluralization** 复数形式：不同语言复数规则不一样，即使是相同语言里也会出现不同复数规则，例如大部分英文名词后面加 `s 为复数，有一些单词如 `knowledge` 就没有复数形式。俄语和塞尔威亚语有两种复数的形式，甚至有一些语言，如斯洛维尼亚语、爱尔兰语和阿拉伯语会存在 4、5 或者是 6 种复数形式。
 
-## Common ways to implement
-The easiest way to internationalize PHP software is by using array files and using those strings in templates, such as
-`<h1><?=$TRANS['title_about_page']?></h1>`. This is, however, hardly a recommended way for serious projects, as it poses
-some maintenance issues along the road - some might appear in the very beginning, such as pluralization. So, please,
-don't try this if your project will contain more than a couple of pages.
+## 一般实现的方法
+
+最简便的方式是使用数组键值对应的方式如 `<h1><?=$TRANS['title_about_page']?></h1>`，不过在比较正经的项目中，不建议这么做。因为会随着项目代码慢慢变多，维护的难度将会增加，尤其会阻碍后续本地化实施。
 
 The most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext]. It dates
 back to 1995 and is still a complete implementation for translating software. It is pretty easy to get running, while
@@ -257,7 +246,7 @@ call. More on domain configuration in the next example.
  * @return bool
  */
 function valid($locale) {
-   return in_array($locale, ['en_US', 'en', 'pt_BR', 'pt', 'es_ES', 'es']);
+   return in_array($locale, ['en_US', 'en', 'pt_BR', 'pt', 'es_ES', 'es');
 }
 
 //setting the source/default locale, for informational purposes

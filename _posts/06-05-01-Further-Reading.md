@@ -1,9 +1,10 @@
 ---
 isChild: true
 anchor:  further_reading
+title: 延伸阅读
 ---
 
-## Further Reading {#further_reading_title}
+## 延伸阅读 {#further_reading_title}
 
 * [Learning about Dependency Injection and PHP](http://ralphschindler.com/2011/05/18/learning-about-dependency-injection-and-php)
 * [What is Dependency Injection?](http://fabien.potencier.org/article/11/what-is-dependency-injection)

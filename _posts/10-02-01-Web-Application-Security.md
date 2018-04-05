@@ -1,16 +1,16 @@
 ---
 isChild: true
 anchor:  web_application_security
+title: Web 应用程序安全
 ---
 
-## Web Application Security {#web_application_security_title}
 
-There are bad people ready and willing to exploit your web application. It is important that you take necessary
-precautions to harden your web application's security. Luckily, the fine folks at
-[The Open Web Application Security Project][1] (OWASP) have compiled a comprehensive list of known security issues and
-methods to protect yourself against them. This is a must read for the security-conscious developer. [Survive The Deep End: PHP Security][3] by Padraic Brady is also another good web application security guide for PHP.
+## Web 应用程序安全 {#web_application_security_title}
 
-* [Read the OWASP Security Guide][2]
+攻击者无时无刻不在准备对你的 Web 应用程序进行攻击，因此提高你的 Web 应用程序的安全性是非常有必要的。幸运的是，来自[开放式 Web 应用程序安全项目][1] (OWASP) 的有心人已经整理了一份包含了已知安全问题和防御方式的全面的清单。这份清单对于具有安全意识的开发者来说是必读的。由 Padraic Brady 著作的 [生存手册：PHP 安全][3] 也是一份很不错的 PHP 安全阅读资料。
+
+
+* [阅读 OWASP 安全指南][2]
 
 
 [1]: https://www.owasp.org/

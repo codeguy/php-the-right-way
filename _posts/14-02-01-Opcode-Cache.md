@@ -1,17 +1,19 @@
 ---
 isChild: true
 anchor:  opcode_cache
+title: Opcode 缓存
 ---
 
-## Opcode Cache {#opcode_cache_title}
+## Opcode 缓存 {#opcode_cache_title}
 
-When a PHP file is executed, it must first be compiled into [opcodes](http://php.net/manual/en/internals2.opcodes.php) (machine language instructions for the CPU). If the source code is unchanged, the opcodes will be the same, so this compilation step becomes a waste of CPU resources.
+当一个 PHP 文件被解释执行的时候，首先是被编译成名为 [opcodes](http://php.net/manual/en/internals2.opcodes.php) 的中间代码，然后才被底层的虚拟机执行。
+如果PHP文件没有被修改过，opcode 始终是一样的。这就意味着编译步骤白白浪费了 CPU 的资源。
 
-An opcode cache prevents redundant compilation by storing opcodes in memory and reusing them on successive calls. It will typically check signature or modification time of the file first, in case there have been any changes.
+此时 opcode 缓存就派上用场了。通过将 opcode 缓存在内存中，它能防止冗余的编译步骤，并且在下次调用执行时得到重用。设置 opcode 缓存只需要几分钟的时间，你的应用程序便会因此大大加速，实在没有理由不用它。
 
-It's likely an opcode cache will make a significant speed improvement to your application.  Since PHP 5.5 there is one built in - [Zend OPcache][opcache-book]. Depending on your PHP package/distribution, it's usually turned on by default - check [opcache.enable](http://php.net/manual/en/opcache.configuration.php#ini.opcache.enable) and the output of `phpinfo()` to make sure. For earlier versions there's a PECL extension.
+PHP 5.5 中自带了 opcode 缓存工具，叫做[Zend OPcache][opcache-book]，默认一般是开启的，请在 `phpinfo()` 输出中检查 [opcache.enable](http://php.net/manual/en/opcache.configuration.php#ini.opcache.enable) 关键词是否出现来确定是否开启。早期的版本也能通过 PECL 扩展来安装。
 
-Read more about opcode caches:
+更多关于 opcode 缓存的资料：
 
 * [Zend OPcache][opcache-book] (bundled with PHP since 5.5)
 * Zend OPcache (formerly known as Zend Optimizer+) is now [open source][Zend Optimizer+]
@@ -19,7 +21,6 @@ Read more about opcode caches:
 * [XCache]
 * [WinCache] (extension for MS Windows Server)
 * [list of PHP accelerators on Wikipedia][PHP_accelerators]
-
 
 [opcache-book]: http://php.net/book.opcache
 [APC]: http://php.net/book.apc
