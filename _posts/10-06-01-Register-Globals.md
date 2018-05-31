@@ -15,4 +15,4 @@ issues as your application cannot effectively tell where the data is coming from
 For example: `$_GET['foo']` would be available via `$foo`, which can override variables that have not been declared.
 If you are using PHP < 5.4.0 __make sure__ that `register_globals` is __off__.
 
-* [Register_globals in the PHP manual](http://php.net/security.globals)
+* [Register_globals in the PHP manual](https://secure.php.net/security.globals)
