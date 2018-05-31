@@ -51,8 +51,8 @@ if (password_verify('bad-password', $passwordHash)) {
 * [PHP `password_hash()` RFC] [4]
 
 
-[1]: http://php.net/function.password-hash
+[1]: https://secure.php.net/function.password-hash
 [2]: https://github.com/ircmaxell/password_compat
-[3]: http://en.wikipedia.org/wiki/Cryptographic_hash_function
+[3]: https://en.wikipedia.org/wiki/Cryptographic_hash_function
 [4]: https://wiki.php.net/rfc/password_hash
 [5]: https://en.wikipedia.org/wiki/Salt_(cryptography)
