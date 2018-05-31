@@ -66,5 +66,5 @@ A popular PHP API extension is [Carbon](http://carbon.nesbot.com). It inherits e
 * [Read about DateTime][datetime]
 * [Read about date formatting][dateformat] (accepted date format string options)
 
-[datetime]: http://php.net/book.datetime
-[dateformat]: http://php.net/function.date
+[datetime]: https://secure.php.net/book.datetime
+[dateformat]: https://secure.php.net/function.date
