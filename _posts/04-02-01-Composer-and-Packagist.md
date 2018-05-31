@@ -138,9 +138,9 @@ packages' binaries available everywhere, you'd then add the `~/.composer/vendor/
 
 * [Learn about Composer]
 
-[Packagist]: http://packagist.org/
-[Twig]: http://twig.sensiolabs.org
+[Packagist]: https://packagist.org/
+[Twig]: https://twig.sensiolabs.org
 [VersionEye]: https://www.versioneye.com/
 [Security Advisories Checker]: https://security.sensiolabs.org/
-[Learn about Composer]: http://getcomposer.org/doc/00-intro.md
+[Learn about Composer]: https://getcomposer.org/doc/00-intro.md
 [ComposerSetup]: https://getcomposer.org/Composer-Setup.exe
