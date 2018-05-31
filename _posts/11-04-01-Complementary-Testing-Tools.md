@@ -16,9 +16,9 @@ libraries useful for any preferred approach taken.
 [PHPSpec] and can be used with [PHPUnit].
 
 
-[Selenium]: http://seleniumhq.org/
+[Selenium]: https://www.seleniumhq.org/
 [integrated with PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
 [Mockery]: https://github.com/padraic/mockery
-[PHPUnit]: http://phpunit.de/
-[PHPSpec]: http://www.phpspec.net/
+[PHPUnit]: https://phpunit.de/
+[PHPSpec]: https://www.phpspec.net/en/stable/
 [Prophecy]: https://github.com/phpspec/prophecy
