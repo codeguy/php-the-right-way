@@ -65,10 +65,10 @@ you and tie them all together, but ease of setup comes with a trade-off of flexi
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
 [MacPorts]: https://www.macports.org/install.php
 [phpbrew]: https://github.com/phpbrew/phpbrew
-[php-osx.liip.ch]: http://php-osx.liip.ch/
-[mac-compile]: http://php.net/install.macosx.compile
+[php-osx.liip.ch]: https://php-osx.liip.ch/
+[mac-compile]: https://secure.php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
 ["Command Line Tools for XCode"]: https://developer.apple.com/downloads
-[mamp-downloads]: http://www.mamp.info/en/downloads/
-[xampp]: http://www.apachefriends.org/en/xampp.html
+[mamp-downloads]: https://www.mamp.info/en/downloads/
+[xampp]: https://www.apachefriends.org/index.html
 [brew-php-switcher]: https://github.com/philcook/brew-php-switcher

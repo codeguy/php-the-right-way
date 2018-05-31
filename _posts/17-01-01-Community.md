@@ -14,8 +14,8 @@ friends! Other community resources include the Google+ PHP [Programmer community
 [Read the Official PHP Events Calendar][php-calendar]
 
 
-[php-irc]: http://webchat.freenode.net/?channels=phpc
+[php-irc]: https://webchat.freenode.net/?channels=phpc
 [phpc-twitter]: https://twitter.com/phpc
 [php-programmers-gplus]: https://plus.google.com/u/0/communities/104245651975268426012
-[php-so]: http://stackoverflow.com/questions/tagged/php
-[php-calendar]: http://php.net/cal.php
+[php-so]: https://stackoverflow.com/questions/tagged/php
+[php-calendar]: https://secure.php.net/cal.php

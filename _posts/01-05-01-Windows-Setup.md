@@ -24,12 +24,12 @@ live. If you are developing on Windows and deploying to Linux (or anything non-W
 Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP development using Windows][windows-tools].
 
 [easyphp]: http://www.easyphp.org/
-[phpmanager]: http://phpmanager.codeplex.com/
-[openserver]: http://open-server.ru/
+[phpmanager]: https://archive.codeplex.com/?p=phpmanager
+[openserver]: https://ospanel.io/
 [wamp]: http://www.wampserver.com/en/
-[php-downloads]: http://windows.php.net/download/
-[php-iis]: http://php.iis.net/
-[windows-path]: http://www.windows-commandline.com/set-path-command-line/
+[php-downloads]: https://windows.php.net/download/
+[php-iis]: https://php.iis.net/
+[windows-path]: https://www.windows-commandline.com/set-path-command-line/
 [windows-tools]: http://ctankersley.com/2016/11/13/developing-on-windows-2016/
 [wpi]: https://www.microsoft.com/web/downloads/platform.aspx
-[xampp]: http://www.apachefriends.org/en/xampp.html
+[xampp]: https://www.apachefriends.org/index.html
