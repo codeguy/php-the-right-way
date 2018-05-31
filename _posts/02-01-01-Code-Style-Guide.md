@@ -57,14 +57,14 @@ English is preferred for all symbol names and code infrastructure. Comments may 
 readable by all current and future parties who may be working on the codebase.
 
 
-[fig]: http://www.php-fig.org/
-[psr0]: http://www.php-fig.org/psr/psr-0/
-[psr1]: http://www.php-fig.org/psr/psr-1/
-[psr2]: http://www.php-fig.org/psr/psr-2/
-[psr4]: http://www.php-fig.org/psr/psr-4/
-[pear-cs]: http://pear.php.net/manual/en/standards.php
-[symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
-[phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
+[fig]: https://www.php-fig.org/
+[psr0]: https://www.php-fig.org/psr/psr-0/
+[psr1]: https://www.php-fig.org/psr/psr-1/
+[psr2]: https://www.php-fig.org/psr/psr-2/
+[psr4]: https://www.php-fig.org/psr/psr-4/
+[pear-cs]: https://pear.php.net/manual/en/standards.php
+[symfony-cs]: https://symfony.com/doc/current/contributing/code/standards.html
+[phpcs]: https://pear.php.net/package/PHP_CodeSniffer/
 [phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
-[phpcsfixer]: http://cs.sensiolabs.org/
+[phpcsfixer]: https://cs.sensiolabs.org/
