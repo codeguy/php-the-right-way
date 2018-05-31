@@ -48,8 +48,8 @@ object cache to PHP 5.5+, since PHP now has a built-in bytecode cache (OPcache).
 ### Learn more about popular object caching systems:
 
 * [APCu](https://github.com/krakjoe/apcu)
-* [APC Functions](http://php.net/ref.apc)
-* [Memcached](http://memcached.org/)
-* [Redis](http://redis.io/)
-* [XCache APIs](http://xcache.lighttpd.net/wiki/XcacheApi)
-* [WinCache Functions](http://php.net/ref.wincache)
+* [APC Functions](https://secure.php.net/ref.apc)
+* [Memcached](https://memcached.org/)
+* [Redis](https://redis.io/)
+* [XCache APIs](https://xcache.lighttpd.net/wiki/XcacheApi)
+* [WinCache Functions](https://secure.php.net/ref.wincache)
