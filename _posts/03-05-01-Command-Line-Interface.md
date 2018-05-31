@@ -55,10 +55,10 @@ Hello, world
  * [Learn about setting up Windows to run PHP from the command line][php-cli-windows]
 
 
-[phpinfo]: http://php.net/function.phpinfo
-[cli-options]: http://php.net/features.commandline.options
-[argc]: http://php.net/reserved.variables.argc
-[argv]: http://php.net/reserved.variables.argv
-[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&amp;topic=sysexits
-[php-cli]: http://php.net/features.commandline
-[php-cli-windows]: http://php.net/install.windows.commandline
+[phpinfo]: https://secure.php.net/function.phpinfo
+[cli-options]: https://secure.php.net/features.commandline.options
+[argc]: https://secure.php.net/reserved.variables.argc
+[argv]: https://secure.php.net/reserved.variables.argv
+[exit-codes]: https://www.gsp.com/cgi-bin/man.cgi?section=3&amp;topic=sysexits
+[php-cli]: https://secure.php.net/features.commandline
+[php-cli-windows]: https://secure.php.net/install.windows.commandline
