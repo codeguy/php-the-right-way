@@ -28,7 +28,7 @@ There are many open source tools available to help you with build automation and
 
 [Phing] can control your packaging, deployment or testing process from within a XML build file. Phing (which is based on [Apache Ant]) provides a rich set of tasks usually needed to install or update a web application and can be extended with additional custom tasks, written in PHP. It's a solid and robust tool and has been around for a long time, however the tool could be perceived as a bit old fashioned because of the way it deals with configuration (XML files).
 
-[Capistrano] is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however you can successfully deploy PHP systems with it. Successful use of Capistrano depends on a working knowledge of Ruby and Rake. Dave Gardner's blog post [PHP Deployment with Capistrano][phpdeploy_capistrano] is a good starting point for PHP developers interested in Capistrano.
+[Capistrano] is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way on one or more remote machines. It is pre-configured for deploying Ruby on Rails applications, however you can successfully deploy PHP systems with it. Successful use of Capistrano depends on a working knowledge of Ruby and Rake.
 
 [Rocketeer] gets its inspiration and philosophy from the Laravel framework. Its goal is to be fast, elegant and easy to use with smart defaults. It features multiple servers, multiple stages, atomic deploys and deployment can be performed in parallel. Everything in the tool can be hot swapped or extended, and everything is written in PHP.
 
@@ -39,7 +39,6 @@ There are many open source tools available to help you with build automation and
 #### Further reading:
 
 * [Automate your project with Apache Ant][apache_ant_tutorial]
-* [Expert PHP Deployments][expert_php_deployments] - free book on deployment with Capistrano, Phing and Vagrant.
 * [Deploying PHP Applications][deploying_php_applications] - paid book on best practices and tools for PHP deployment.
 
 ### Server Provisioning
@@ -48,7 +47,7 @@ Managing and configuring servers can be a daunting task when faced with many ser
 
 [Ansible] is a tool that manages your infrastructure through YAML files. It's simple to get started with and can manage complex and large scale applications. There is an API for managing cloud instances and it can manage them through a dynamic inventory using certain tools.
 
-[Puppet] is a tool that has its own language and file types for managing servers and configurations. It can be used in a master/client setup or it can be used in a "master-less" mode. In the master/client mode the clients will poll the central master(s) for new configuration on set intervals and update itself if necessary. In the master-less mode you can push changes to your nodes. 
+[Puppet] is a tool that has its own language and file types for managing servers and configurations. It can be used in a master/client setup or it can be used in a "master-less" mode. In the master/client mode the clients will poll the central master(s) for new configuration on set intervals and update itself if necessary. In the master-less mode you can push changes to your nodes.
 
 [Chef] is a powerful Ruby based system integration framework that you can build your whole server environment or virtual boxes with. It integrates well with Amazon Web Services through their service called OpsWorks.
 
@@ -82,26 +81,24 @@ PHP.
 * [Continuous Integration with Teamcity][Teamcity]
 
 
-[buildautomation]: http://en.wikipedia.org/wiki/Build_automation
-[Phing]: http://www.phing.info/
-[Apache Ant]: http://ant.apache.org/
-[Capistrano]: https://github.com/capistrano/capistrano/wiki
-[phpdeploy_capistrano]: http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/
-[phpdeploy_deployer]: http://www.sitepoint.com/deploying-php-applications-with-deployer/
+[buildautomation]: https://wikipedia.org/wiki/Build_automation
+[Phing]: https://www.phing.info/
+[Apache Ant]: https://ant.apache.org/
+[Capistrano]: http://capistranorb.com/
+[phpdeploy_deployer]: https://www.sitepoint.com/deploying-php-applications-with-deployer/
 [Chef]: https://www.chef.io/
 [chef_vagrant_and_ec2]: http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/
 [Chef_cookbook]: https://github.com/chef-cookbooks/php
 [Chef_tutorial]: https://www.youtube.com/playlist?list=PL11cZfNdwNyPnZA9D1MbVqldGuOWqbumZ
-[apache_ant_tutorial]: http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/
+[apache_ant_tutorial]: https://code.tutsplus.com/tutorials/automate-your-projects-with-apache-ant--net-18595
 [Travis CI]: https://travis-ci.org/
-[Jenkins]: http://jenkins-ci.org/
-[PHPCI]: http://www.phptesting.org/
-[Teamcity]: http://www.jetbrains.com/teamcity/
-[Deployer]: http://deployer.org/
+[Jenkins]: https://jenkins.io/
+[PHPCI]: https://www.phptesting.org/
+[Teamcity]: https://www.jetbrains.com/teamcity/
+[Deployer]: https://deployer.org/
 [Rocketeer]: http://rocketeer.autopergamene.eu/
-[Magallanes]: http://magephp.com/
-[expert_php_deployments]: http://viccherubini.com/assets/Expert-PHP-Deployments.pdf
-[deploying_php_applications]: http://www.deployingphpapplications.com
+[Magallanes]: https://www.magephp.com/
+[deploying_php_applications]: https://deployingphpapplications.com/
 [Ansible]: https://www.ansible.com/
 [Puppet]: https://puppet.com/
 [ansible_for_devops]: https://leanpub.com/ansible-for-devops
