@@ -15,4 +15,4 @@ methods to protect yourself against them. This is a must read for the security-c
 
 [1]: https://www.owasp.org/
 [2]: https://www.owasp.org/index.php/Guide_Table_of_Contents
-[3]: http://phpsecurity.readthedocs.org/en/latest/index.html
+[3]: https://phpsecurity.readthedocs.io/en/latest/index.html
