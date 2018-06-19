@@ -17,8 +17,8 @@ need some huge changes in the source!
 - **Localization** happens when you adapt the interface (mainly) by translating contents, based on the i18n work done
 before. It usually is done every time a new language or region needs support and is updated when new interface pieces
 are added, as they need to be available in all supported languages.
-- **Pluralization** defines the rules needed between different languages to interoperate strings containing numbers and 
-counters. For instance, in English when you have only one item, it's singular, and anything different from that is 
+- **Pluralization** defines the rules needed between different languages to interoperate strings containing numbers and
+counters. For instance, in English when you have only one item, it's singular, and anything different from that is
 called plural; plural in this language is indicated by adding an S after some words, and sometimes changes parts of it.
 In other languages, such as Russian or Serbian, there are two plural forms in addition to the singular - you may even
 find languages with a total of four, five or six forms, such as Slovenian, Irish or Arabic.
@@ -38,7 +38,7 @@ files.
 ### Other tools
 
 There are common libraries used that support Gettext and other implementations of i18n. Some of them may seem easier to
-install or sport additional features or i18n file formats. In this document, we focus on the tools provided with the 
+install or sport additional features or i18n file formats. In this document, we focus on the tools provided with the
 PHP core, but here we list others for completion:
 
 - [oscarotero/Gettext][oscarotero]: Gettext support with an OO interface; includes improved helper functions, powerful
@@ -82,14 +82,14 @@ files are not mandatory: depending on the tool you're using to do l10n, you can 
 You'll always have one pair of PO/MO files per language and region, but only one POT per domain.
 
 ### Domains
-There are some cases, in big projects, where you might need to separate translations when the same words convey 
+There are some cases, in big projects, where you might need to separate translations when the same words convey
 different meaning given a context. In those cases, you split them into different _domains_. They're basically named
 groups of POT/PO/MO files, where the filename is the said _translation domain_. Small and medium-sized projects usually,
-for simplicity, use only one domain; its name is arbitrary, but we will be using "main" for our code samples.  
+for simplicity, use only one domain; its name is arbitrary, but we will be using "main" for our code samples.
 In [Symfony] projects, for example, domains are used to separate the translation for validation messages.
 
 #### Locale code
-A locale is simply a code that identifies one version of a language. It's defined following the [ISO 639-1][639-1] and 
+A locale is simply a code that identifies one version of a language. It's defined following the [ISO 639-1][639-1] and
 [ISO 3166-1 alpha-2][3166-1] specs: two lower-case letters for the language, optionally followed by an underline and two
 upper-case letters identifying the country or regional code. For [rare languages][rare], three letters are used.
 
@@ -175,7 +175,7 @@ The first section works like a header, having the `msgid` and `msgstr` especiall
 plural forms and other things that are less relevant.
 The second section translates a simple string from English to
 Brazilian Portuguese, and the third does the same, but leveraging string replacement from [`sprintf`][sprintf] so the
-translation may contain the user name and visit date.  
+translation may contain the user name and visit date.
 The last section is a sample of pluralization forms, displaying
 the singular and plural version as `msgid` in English and their corresponding translations as `msgstr` 0 and 1
 (following the number given by the plural rule). There, string replacement is used as well so the number can be seen
@@ -189,8 +189,8 @@ translated `msgstr` lines.
 
 Talking about translation keys, there are two main "schools" here:
 
-1. _`msgid` as a real sentence_.  
-    The main advantages are: 
+1. _`msgid` as a real sentence_.
+    The main advantages are:
     - if there are pieces of the software untranslated in any given language, the key displayed will still maintain some
     meaning. Example: if you happen to translate by heart from English to Spanish but need help to translate to French,
     you might publish the new page with missing French sentences, and parts of the website would be displayed in English
@@ -201,7 +201,7 @@ Talking about translation keys, there are two main "schools" here:
     - The only disadvantage: if you need to change the actual text, you would need to replace the same `msgid`
     across several language files.
 
-2. _`msgid` as a unique, structured key_.  
+2. _`msgid` as a unique, structured key_.
 It would describe the sentence role in the application in a structured way, including the template or part where the
 string is located instead of its content.
     - it's a great way to have the code organized, separating the text content from the template logic.
@@ -338,7 +338,7 @@ As you may have noticed before, there are two main types of localized strings: s
 forms. The first ones have simply two boxes: source and localized string. The source string can't be modified as
 Gettext/Poedit do not include the powers to alter your source files - you should change the source itself and rescan
 the files. Tip: you may right-click a translation line and it will hint you with the source files and lines where that
-string is being used.  
+string is being used.
 On the other hand, plural form strings include two boxes to show the two source strings, and tabs so you can configure
 the different final forms.
 
@@ -386,7 +386,7 @@ After including those new rules in the `.po` file, a new scan will bring in your
 * [Wikipedia: i18n and l10n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
 * [Wikipedia: Gettext](https://en.wikipedia.org/wiki/Gettext)
 * [LingoHub: PHP internationalization with gettext tutorial][lingohub]
-* [PHP Manual: Gettext](http://php.net/manual/en/book.gettext.php)
+* [PHP Manual: Gettext](https://secure.php.net/manual/book.gettext.php)
 * [Gettext Manual][manual]
 
 [Poedit]: https://poedit.net
@@ -395,22 +395,22 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [lingohub_plurals]: https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/#Plurals
 [plural]: http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html
 [gettext]: https://en.wikipedia.org/wiki/Gettext
-[manual]: http://www.gnu.org/software/gettext/manual/gettext.html
+[manual]: https://www.gnu.org/software/gettext/manual/gettext.html
 [639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-[3166-1]: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-[rare]: http://www.gnu.org/software/gettext/manual/gettext.html#Rare-Language-Codes
+[3166-1]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+[rare]: https://www.gnu.org/software/gettext/manual/gettext.html#Rare-Language-Codes
 [func_format]: https://www.gnu.org/software/gettext/manual/gettext.html#Language-specific-options
 [oscarotero]: https://github.com/oscarotero/Gettext
 [symfony]: https://symfony.com/doc/current/components/translation.html
 [zend]: https://docs.zendframework.com/zend-i18n/translation
 [laravel]: https://laravel.com/docs/master/localization
-[yii]: http://www.yiiframework.com/doc-2.0/guide-tutorial-i18n.html
-[intl]: http://br2.php.net/manual/en/intro.intl.php
+[yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
+[intl]: https://secure.php.net/manual/intro.intl.php
 [ICU project]: http://www.icu-project.org
 [symfony-keys]: https://symfony.com/doc/current/components/translation/usage.html#creating-translations
 
-[sprintf]: http://php.net/manual/en/function.sprintf.php
-[func]: http://php.net/manual/en/function.gettext.php
-[n_func]: http://php.net/manual/en/function.ngettext.php
-[d_func]: http://php.net/manual/en/function.dgettext.php
-[dn_func]: http://php.net/manual/en/function.dngettext.php
+[sprintf]: https://secure.php.net/manual/function.sprintf.php
+[func]: https://secure.php.net/manual/function.gettext.php
+[n_func]: https://secure.php.net/manual/function.ngettext.php
+[d_func]: https://secure.php.net/manual/function.dgettext.php
+[dn_func]: https://secure.php.net/manual/function.dngettext.php
