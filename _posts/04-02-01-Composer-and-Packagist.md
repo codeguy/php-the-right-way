@@ -43,7 +43,7 @@ and if you don't have a `composer.json` file, one will be created. Here's an exa
 as a dependency of your project.
 
 {% highlight console %}
-composer require twig/twig:~1.8
+composer require twig/twig:^2.0
 {% endhighlight %}
 
 Alternatively, the `composer init` command will guide you through creating a full `composer.json` file
