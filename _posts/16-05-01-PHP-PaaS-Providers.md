@@ -6,19 +6,19 @@ anchor:  php_paas_providers
 
 ## PHP PaaS Providers {#php_paas_providers_title}
 
-* [PagodaBox](https://pagodabox.io/)
 * [AppFog](https://www.ctl.io/appfog/)
-* [Heroku](https://devcenter.heroku.com/categories/php)
-* [fortrabbit](https://www.fortrabbit.com/)
-* [Engine Yard Cloud](https://www.engineyard.com/features)
-* [Red Hat OpenShift Platform](https://www.openshift.com/)
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
-* [Windows Azure](http://www.windowsazure.com/)
+* [Cloudways](https://www.cloudways.com/)
+* [Engine Yard Cloud](https://www.engineyard.com/features)
+* [fortrabbit](https://www.fortrabbit.com/)
 * [Google App Engine](https://cloud.google.com/appengine/docs/php/)
-* [Jelastic](http://jelastic.com/)
+* [Heroku](https://devcenter.heroku.com/categories/php-support)
+* [IBM Cloud](https://console.bluemix.net/docs/runtimes/php/getting-started.html#getting_started)
+* [Jelastic](https://jelastic.com/)
+* [Microsoft Azure](https://azure.microsoft.com/)
+* [Nanobox](https://nanobox.io/)
+* [Pivotal Web Services](https://run.pivotal.io/)
 * [Platform.sh](https://platform.sh/)
-* [Cloudways](https://www.cloudways.com/en/)
-* [IBM Bluemix Cloud Foundry](https://console.ng.bluemix.net/)
-* [Pivotal Web Service Cloud Foundry](https://run.pivotal.io/)
+* [Red Hat OpenShift](https://www.openshift.com/)
 
 To see which versions these PaaS hosts are running, head over to [PHP Versions](http://phpversions.info/paas-hosting/).
