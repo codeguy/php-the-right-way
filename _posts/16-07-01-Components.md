@@ -22,7 +22,6 @@ For example, you can use the [FuelPHP Validation package], without needing to us
 * [Aura]
 * [FuelPHP]
 * [Hoa Project]
-* [Orno]
 * [Symfony Components]
 * [The League of Extraordinary Packages]
 * Laravel's Illuminate Components
