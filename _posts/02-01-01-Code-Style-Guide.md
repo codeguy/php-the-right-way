@@ -10,7 +10,7 @@ PHP developers to choose several of these and combine them into a single project
 their projects.
 
 The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
-to code-style, but those that do are [PSR-0][psr0], [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
+to code-style, but those that do are [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
 recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
 FuelPHP, Lithium, etc are adopting. You can use them for your own projects, or continue to use your own
 personal style.
@@ -19,7 +19,6 @@ Ideally, you should write PHP code that adheres to a known standard. This could 
 of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
 applications that implement the components can have consistency even when working with lots of third-party code.
 
-* [Read about PSR-0][psr0]
 * [Read about PSR-1][psr1]
 * [Read about PSR-2][psr2]
 * [Read about PSR-4][psr4]
@@ -57,14 +56,13 @@ English is preferred for all symbol names and code infrastructure. Comments may 
 readable by all current and future parties who may be working on the codebase.
 
 
-[fig]: http://www.php-fig.org/
-[psr0]: http://www.php-fig.org/psr/psr-0/
-[psr1]: http://www.php-fig.org/psr/psr-1/
-[psr2]: http://www.php-fig.org/psr/psr-2/
-[psr4]: http://www.php-fig.org/psr/psr-4/
-[pear-cs]: http://pear.php.net/manual/en/standards.php
-[symfony-cs]: http://symfony.com/doc/current/contributing/code/standards.html
-[phpcs]: http://pear.php.net/package/PHP_CodeSniffer/
+[fig]: https://www.php-fig.org/
+[psr1]: https://www.php-fig.org/psr/psr-1/
+[psr2]: https://www.php-fig.org/psr/psr-2/
+[psr4]: https://www.php-fig.org/psr/psr-4/
+[pear-cs]: https://pear.php.net/manual/en/standards.php
+[symfony-cs]: https://symfony.com/doc/current/contributing/code/standards.html
+[phpcs]: https://pear.php.net/package/PHP_CodeSniffer/
 [phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
-[phpcsfixer]: http://cs.sensiolabs.org/
+[phpcsfixer]: https://cs.sensiolabs.org/
