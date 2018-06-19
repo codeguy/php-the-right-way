@@ -28,10 +28,10 @@ document controls everything that is installed on the virtual machine.
 - [Phansible][Phansible]: provides an easy to use interface that helps you generate Ansible Playbooks for PHP based projects.
 
 
-[Vagrant]: http://vagrantup.com/
-[Puppet]: http://www.puppetlabs.com/
+[Vagrant]: https://www.vagrantup.com/
+[Puppet]: https://puppet.com/
 [Chef]: https://www.chef.io/
 [Rove]: http://rove.io/
 [Puphpet]: https://puphpet.com/
-[Protobox]: http://getprotobox.com/
+[Protobox]: https://www.getprotobox.com/
 [Phansible]: http://phansible.com/
