@@ -48,7 +48,7 @@ logic in and you have a "View", which is very nearly [MVC] - a common OOP archit
 
 {% highlight php %}
 <?php
-$db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
+$db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8mb4', 'username', 'password');
 
 // Make your model available
 include 'models/FooModel.php';
@@ -98,6 +98,6 @@ real problem if you ever want to [unit-test](/#unit-testing) your application.
 developers just getting used to the concept of interacting with databases.
 
 
-[MVC]: http://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
-[PHPBridge]: http://phpbridge.org/
-[Creating a Data Class]: http://phpbridge.org/intro-to-php/creating_a_data_class
+[MVC]: https://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
+[PHPBridge]: https://phpbridge.org/docs/
+[Creating a Data Class]: https://phpbridge.org/intro-to-php/creating_a_data_class

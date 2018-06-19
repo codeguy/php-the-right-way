@@ -27,10 +27,10 @@ your applications within your own development schedules so you won't be rushed l
 * [PHP: Choosing an API for MySQL][mysql_api]
 * [PDO Tutorial for MySQL Developers][pdo4mysql_devs]
 
-[mysql]: http://php.net/mysql
-[mysql_deprecated]: http://php.net/migration55.deprecated
-[mysql_removed]: http://php.net/manual/en/migration70.removed-exts-sapis.php
-[mysqli]: http://php.net/mysqli
-[pdo]: http://php.net/pdo
-[mysql_api]: http://php.net/mysqlinfo.api.choosing
+[mysql]: https://secure.php.net/mysqli
+[mysql_deprecated]: https://secure.php.net/migration55.deprecated
+[mysql_removed]: https://secure.php.net/manual/migration70.removed-exts-sapis.php
+[mysqli]: https://secure.php.net/mysqli
+[pdo]: https://secure.php.net/pdo
+[mysql_api]: https://secure.php.net/mysqlinfo.api.choosing
 [pdo4mysql_devs]: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers
