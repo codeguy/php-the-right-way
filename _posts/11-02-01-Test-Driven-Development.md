@@ -5,7 +5,7 @@ anchor:  test_driven_development
 
 ## Test Driven Development {#test_driven_development_title}
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Test-driven_development):
+From [Wikipedia](https://wikipedia.org/wiki/Test-driven_development):
 
 > Test-driven development (TDD) is a software development process that relies on the repetition of a very short
 > development cycle: first the developer writes a failing automated test case that defines a desired improvement or new
@@ -32,17 +32,17 @@ The other use for unit tests is contributing to open source. If you can write a 
 (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If you run a project
 which accepts pull requests then you should suggest this as a requirement.
 
-[PHPUnit](http://phpunit.de) is the de-facto testing framework for writing unit tests for PHP applications, but there
+[PHPUnit](https://phpunit.de/) is the de-facto testing framework for writing unit tests for PHP applications, but there
 are several alternatives
 
 * [atoum](https://github.com/atoum/atoum)
 * [Kahlan](https://github.com/crysalead/kahlan)
-* [Peridot](http://peridot-php.github.io/)
+* [Peridot](https://peridot-php.github.io/)
 * [SimpleTest](http://simpletest.org)
 
 ### Integration Testing
 
-From [Wikipedia](http://en.wikipedia.org/wiki/Integration_testing):
+From [Wikipedia](https://wikipedia.org/wiki/Integration_testing):
 
 > Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in
 > which individual software modules are combined and tested as a group. It occurs after unit testing and before
@@ -62,7 +62,7 @@ users of the application.
 
 #### Functional Testing Tools
 
-* [Selenium](http://seleniumhq.com)
-* [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com) is a full-stack testing framework that includes acceptance testing tools
-* [Storyplayer](http://datasift.github.io/storyplayer) is a full-stack testing framework that includes support for creating and destroying test environments on demand
+* [Selenium](https://docs.seleniumhq.org/)
+* [Mink](http://mink.behat.org/)
+* [Codeception](https://codeception.com/) is a full-stack testing framework that includes acceptance testing tools
+* [Storyplayer](https://datasift.github.io/storyplayer/) is a full-stack testing framework that includes support for creating and destroying test environments on demand

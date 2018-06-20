@@ -31,16 +31,18 @@ don't try this if your project will contain more than a couple of pages.
 
 The most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext]. It dates
 back to 1995 and is still a complete implementation for translating software. It is easy enough to get running, while
-it still sports powerful supporting tools. It is about Gettext we will be talking here. Also, to help you not get messy
-over the command-line, we will be presenting a great GUI application that can be used easily update your l10n source
-files.
+still sporting powerful supporting tools. It is about Gettext we will be talking here. Also, to help you not get messy
+over the command-line, we will be presenting a great GUI application that can be used to easily update your l10n source
 
 ### Other tools
 
 There are common libraries used that support Gettext and other implementations of i18n. Some of them may seem easier to
-install or sport additional features or i18n file formats. In this document, we focus on the tools provided with the 
+install or sport additional features or i18n file formats. In this document, we focus on the tools provided with the
 PHP core, but here we list others for completion:
 
+- [aura/intl][aura-intl]: Provides internationalization (I18N) tools, specifically package-oriented per-locale message
+translation. It uses array formats for message. Does not provide a message extractor, but does provide advanced
+message formatting via the `intl` extension (including pluralized messages).
 - [oscarotero/Gettext][oscarotero]: Gettext support with an OO interface; includes improved helper functions, powerful
 extractors for several file formats (some of them not supported natively by the `gettext` command), and can also export
 to other formats besides `.mo/.po` files. Can be useful if you need to integrate your translation files into other
@@ -86,7 +88,7 @@ You will always have one pair of PO/MO files per language and region, but only o
 There are some cases, in big projects, where you might need to separate translations when the same words convey 
 different meaning given a context. In those cases, you split them into different _domains_. They are, basically, named
 groups of POT/PO/MO files, where the filename is the said _translation domain_. Small and medium-sized projects usually,
-for simplicity, use only one domain; its name is arbitrary, but we will be using "main" for our code samples.  
+for simplicity, use only one domain; its name is arbitrary, but we will be using "main" for our code samples.
 In [Symfony] projects, for example, domains are used to separate the translation for validation messages.
 
 #### Locale code
@@ -142,7 +144,7 @@ given number falls (starting the count with 0). For example:
 - Brazilian Portuguese: `nplurals=2; plural=(n > 1);` - two rules, second if N is bigger than one, first otherwise
 
 Now that you understood the basis of how plural rules works - and if you didn't, please look at a deeper explanation
-on the [LingoHub tutorial](lingohub_plurals) -, you might want to copy the ones you need from a [list][plural] instead
+on the [LingoHub tutorial][lingohub_plurals] -, you might want to copy the ones you need from a [list][plural] instead
 of writing them by hand.
 
 When calling out Gettext to do localization on sentences with counters, you will have to give him the
@@ -175,8 +177,8 @@ msgstr[1] "%d mensagens não lidas"
 The first section works like a header, having the `msgid` and `msgstr` especially empty. It describes the file encoding,
 plural forms and other things that are less relevant.
 The second section translates a simple string from English to
-Brazilian Portuguese, and the third does the same, but leveraging string replacement from [`sprintf`](sprintf) so the
-translation may contain the user name and visit date.  
+Brazilian Portuguese, and the third does the same, but leveraging string replacement from [`sprintf`][sprintf] so the
+translation may contain the user name and visit date.
 The last section is a sample of pluralization forms, displaying
 the singular and plural version as `msgid` in English and their corresponding translations as `msgstr` 0 and 1
 (following the number given by the plural rule). There, string replacement is used as well so the number can be seen
@@ -190,8 +192,8 @@ translated `msgstr` lines.
 
 Talking about translation keys, there are two main "schools" here:
 
-1. _`msgid` as a real sentence_.  
-    The main advantages are: 
+1. _`msgid` as a real sentence_.
+    The main advantages are:
     - if there are pieces of the software untranslated in any given language, the key displayed will still maintain some
     meaning. Example: if you happen to translate by heart from English to Spanish but need help to translate to French,
     you might publish the new page with missing French sentences, and parts of the website would be displayed in English
@@ -202,7 +204,7 @@ Talking about translation keys, there are two main "schools" here:
     - The only disadvantage: if you need to change the actual text, you would need to replace the same `msgid`
     across several language files.
 
-2. _`msgid` as a unique, structured key_.  
+2. _`msgid` as a unique, structured key_.
 It would describe the sentence role in the application in a structured way, including the template or part where the
 string is located instead of its content.
     - it is a great way to have the code organized, separating the text content from the template logic.
@@ -258,7 +260,7 @@ call. More on domain configuration in the next example.
  * @return bool
  */
 function valid($locale) {
-   return in_array($locale, ['en_US', 'en', 'pt_BR', 'pt', 'es_ES', 'es');
+   return in_array($locale, ['en_US', 'en', 'pt_BR', 'pt', 'es_ES', 'es']);
 }
 
 //setting the source/default locale, for informational purposes
@@ -309,10 +311,10 @@ textdomain('main');
 
 #### 3. Preparing translation for the first run
 One of the great advantages Gettext has over custom framework i18n packages is its extensive and powerful file format.
-“Oh man, that’s quite hard to understand and edit by hand, a simple array would be easier!” Make no mistake,
-applications like [Poedit] are here to help - _a lot_. You can get the program from their website, it’s free and
-available for all platforms. It’s a pretty easy tool to get used to, and a very powerful one at the same time -
-using all features Gettext has available. This small guide is based on PoEdit 1.8.
+"Oh man, that’s quite hard to understand and edit by hand, a simple array would be easier!" Make no mistake,
+applications like [Poedit] are here to help - _a lot_. You can get the program from [their website][poedit_download],
+it’s free and available for all platforms. It’s a pretty easy tool to get used to, and a very powerful one at the same
+time - using all features Gettext has available. This guide is based on PoEdit 1.8.
 
 In the first run, you should select “File > New...” from the menu. You’ll be asked straight ahead for the language:
 here you can select/filter the language you want to translate to, or use that format we mentioned before, such as
@@ -344,8 +346,8 @@ file will be (re)compiled into the same folder and ta-dah: your project is inter
 As you may have noticed before, there are two main types of localized strings: simple ones and those with plural
 forms. The first ones have simply two boxes: source and localized string. The source string cannot be modified as
 Gettext/Poedit do not include the powers to alter your source files - you should change the source itself and rescan
-the files. Tip: you may right-click a translation line, and it will hint you with the files and lines where that string
-is being used.  
+the files. Tip: you may right-click a translation line and it will hint you with the source files and lines where that
+string is being used.
 On the other hand, plural form strings include two boxes to show the two source strings, and tabs so you can configure
 the different final forms.
 
@@ -393,8 +395,8 @@ After including those new rules in the `.po` file, a new scan will bring in your
 
 * [Wikipedia: i18n and l10n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
 * [Wikipedia: Gettext](https://en.wikipedia.org/wiki/Gettext)
-* [LingoHub: PHP internationalization with gettext tutorial](lingohub)
-* [PHP Manual: Gettext](http://php.net/manual/en/book.gettext.php)
+* [LingoHub: PHP internationalization with gettext tutorial][lingohub]
+* [PHP Manual: Gettext](https://secure.php.net/manual/book.gettext.php)
 * [Gettext Manual][manual]
 
 [Poedit]: https://poedit.net
@@ -403,22 +405,23 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [lingohub_plurals]: https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/#Plurals
 [plural]: http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html
 [gettext]: https://en.wikipedia.org/wiki/Gettext
-[manual]: http://www.gnu.org/software/gettext/manual/gettext.html
+[manual]: https://www.gnu.org/software/gettext/manual/gettext.html
 [639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
-[3166-1]: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-[rare]: http://www.gnu.org/software/gettext/manual/gettext.html#Rare-Language-Codes
+[3166-1]: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+[rare]: https://www.gnu.org/software/gettext/manual/gettext.html#Rare-Language-Codes
 [func_format]: https://www.gnu.org/software/gettext/manual/gettext.html#Language-specific-options
+[aura-intl]: https://github.com/auraphp/Aura.Intl
 [oscarotero]: https://github.com/oscarotero/Gettext
 [symfony]: https://symfony.com/doc/current/components/translation.html
 [zend]: https://docs.zendframework.com/zend-i18n/translation
 [laravel]: https://laravel.com/docs/master/localization
-[yii]: http://www.yiiframework.com/doc-2.0/guide-tutorial-i18n.html
-[intl]: http://br2.php.net/manual/en/intro.intl.php
+[yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
+[intl]: https://secure.php.net/manual/intro.intl.php
 [ICU project]: http://www.icu-project.org
 [symfony-keys]: https://symfony.com/doc/current/components/translation/usage.html#creating-translations
 
-[sprintf]: http://php.net/manual/en/function.sprintf.php
-[func]: http://php.net/manual/en/function.gettext.php
-[n_func]: http://php.net/manual/en/function.ngettext.php
-[d_func]: http://php.net/manual/en/function.dgettext.php
-[dn_func]: http://php.net/manual/en/function.dngettext.php
+[sprintf]: https://secure.php.net/manual/function.sprintf.php
+[func]: https://secure.php.net/manual/function.gettext.php
+[n_func]: https://secure.php.net/manual/function.ngettext.php
+[d_func]: https://secure.php.net/manual/function.dgettext.php
+[dn_func]: https://secure.php.net/manual/function.dngettext.php

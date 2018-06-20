@@ -11,7 +11,7 @@ make your code easier to manage and easier for others to understand.
 
 * [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
-* [Collection of implementation examples](https://github.com/domnikl/DesignPatternsPHP)
+* [Collection of implementation examples](http://designpatternsphp.readthedocs.io/en/latest/)
 
 ## Factory
 
@@ -68,70 +68,7 @@ yourself a lot of trouble down the road by using factories.
 When designing web applications, it often makes sense conceptually and architecturally to allow access to one and only
 one instance of a particular class. The singleton pattern enables us to do this.
 
-{% highlight php %}
-<?php
-class Singleton
-{
-    /**
-     * @var Singleton The reference to *Singleton* instance of this class
-     */
-    private static $instance;
-    
-    /**
-     * Returns the *Singleton* instance of this class.
-     *
-     * @return Singleton The *Singleton* instance.
-     */
-    public static function getInstance()
-    {
-        if (null === static::$instance) {
-            static::$instance = new static();
-        }
-        
-        return static::$instance;
-    }
-
-    /**
-     * Protected constructor to prevent creating a new instance of the
-     * *Singleton* via the `new` operator from outside of this class.
-     */
-    protected function __construct()
-    {
-    }
-
-    /**
-     * Private clone method to prevent cloning of the instance of the
-     * *Singleton* instance.
-     *
-     * @return void
-     */
-    private function __clone()
-    {
-    }
-
-    /**
-     * Private unserialize method to prevent unserializing of the *Singleton*
-     * instance.
-     *
-     * @return void
-     */
-    private function __wakeup()
-    {
-    }
-}
-
-class SingletonChild extends Singleton
-{
-}
-
-$obj = Singleton::getInstance();
-var_dump($obj === Singleton::getInstance());             // bool(true)
-
-$anotherObj = SingletonChild::getInstance();
-var_dump($anotherObj === Singleton::getInstance());      // bool(false)
-
-var_dump($anotherObj === SingletonChild::getInstance()); // bool(true)
-{% endhighlight %}
+**TODO: NEED NEW SINGLETON CODE EXAMPLE**
 
 The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
 Note the following:

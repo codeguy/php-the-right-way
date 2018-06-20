@@ -18,13 +18,13 @@ installed in any application you like:
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
 * [Propel][7]
-* [ZF2 Db][4]
+* [Zend-db][4]
 
 
-[1]: http://php.net/book.pdo
-[2]: http://www.doctrine-project.org/projects/dbal.html
-[4]: http://packages.zendframework.com/docs/latest/manual/en/index.html#zend-db
+[1]: https://secure.php.net/book.pdo
+[2]: https://www.doctrine-project.org/projects/dbal.html
+[4]: https://packages.zendframework.com/docs/latest/manual/en/index.html#zendframework/zend-db
 [6]: https://github.com/auraphp/Aura.Sql
 [7]: http://propelorm.org/
-[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
-[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+[psr0]: https://www.php-fig.org/psr/psr-0/
+[psr4]: https://www.php-fig.org/psr/psr-4/

@@ -5,30 +5,25 @@ anchor:  opcode_cache
 
 ## Opcode Cache {#opcode_cache_title}
 
-When a PHP file is executed, under the hood it is first compiled to opcodes and, only then, the opcodes are executed.
-If a PHP file is not modified, the opcodes will always be the same. This means that the compilation step is a waste of
-CPU resources.
+When a PHP file is executed, it must first be compiled into [opcodes](https://secure.php.net/manual/internals2.opcodes.php) (machine language instructions for the CPU). If the source code is unchanged, the opcodes will be the same, so this compilation step becomes a waste of CPU resources.
 
-This is where opcode caches come in. They prevent redundant compilation by storing opcodes in memory and reusing it on
-successive calls. Setting up an opcode cache takes a matter of minutes, and your application will speed up
-significantly. There's really no reason not to use it.
+An opcode cache prevents redundant compilation by storing opcodes in memory and reusing them on successive calls. It will typically check signature or modification time of the file first, in case there have been any changes.
 
-As of PHP 5.5, there is a built-in opcode cache called [OPcache][opcache-book]. It is also available for earlier
-versions.
+It's likely an opcode cache will make a significant speed improvement to your application.  Since PHP 5.5 there is one built in - [Zend OPcache][opcache-book]. Depending on your PHP package/distribution, it's usually turned on by default - check [opcache.enable](https://secure.php.net/manual/opcache.configuration.php#ini.opcache.enable) and the output of `phpinfo()` to make sure. For earlier versions there's a PECL extension.
 
 Read more about opcode caches:
 
-* [OPcache][opcache-book] (built-in since PHP 5.5)
-* [APC] (PHP 5.4 and earlier)
+* [Zend OPcache][opcache-book] (bundled with PHP since 5.5)
+* Zend OPcache (formerly known as Zend Optimizer+) is now [open source][Zend Optimizer+]
+* [APC] - PHP 5.4 and earlier
 * [XCache]
-* [Zend Optimizer+] (part of Zend Server package)
 * [WinCache] (extension for MS Windows Server)
 * [list of PHP accelerators on Wikipedia][PHP_accelerators]
 
 
-[opcache-book]: http://php.net/book.opcache
-[APC]: http://php.net/book.apc
-[XCache]: http://xcache.lighttpd.net/
-[Zend Optimizer+]: http://www.zend.com/en/products/zend_server
-[WinCache]: http://www.iis.net/download/wincacheforphp
-[PHP_accelerators]: http://en.wikipedia.org/wiki/List_of_PHP_accelerators
+[opcache-book]: https://secure.php.net/book.opcache
+[APC]: https://secure.php.net/book.apc
+[XCache]: https://xcache.lighttpd.net/
+[Zend Optimizer+]: https://github.com/zendtech/ZendOptimizerPlus
+[WinCache]: https://www.iis.net/downloads/microsoft/wincache-extension
+[PHP_accelerators]: https://wikipedia.org/wiki/List_of_PHP_accelerators
