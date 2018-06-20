@@ -25,7 +25,7 @@ class Database
     }
 }
 
-class MysqlAdapter {}
+class MySqlAdapter {}
 {% endhighlight %}
 
 This code can be refactored to use Dependency Injection and therefore loosen the dependency.
@@ -44,7 +44,7 @@ class Database
     }
 }
 
-class MysqlAdapter {}
+class MySqlAdapter {}
 {% endhighlight %}
 
 Now we are giving the `Database` class its dependency rather than creating it itself. We could even create a method
