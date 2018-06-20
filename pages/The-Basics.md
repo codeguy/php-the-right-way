@@ -290,6 +290,26 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
 
 * [Heredoc syntax](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
+> It should be noted that multiline strings can also be formed by continuing them across multilines in a statement. _e.g._
+
+{% highlight php %}
+$str = "
+Example of string
+spanning multiple lines
+using statement syntax.
+$a are parsed.
+";
+
+/**
+ * Output:
+ *
+ * Example of string
+ * spanning multiple lines
+ * using statement syntax.
+ * Variables are parsed.
+ */
+{% endhighlight %}
+
 ### Which is quicker?
 
 There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
