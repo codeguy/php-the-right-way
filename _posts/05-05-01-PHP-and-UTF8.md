@@ -63,10 +63,14 @@ Further Reading for why.
 
 Use the `mb_http_output()` function to ensure that your PHP script outputs UTF-8 strings to your browser.
 
-The browser will then need to be told by the HTTP response that this page should be considered as UTF-8. The historic
-approach to doing that was to include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in
-your page's `<head>` tag. This approach is perfectly valid, but setting the charset in the `Content-Type` header is
-actually [much faster](https://developers.google.com/speed/docs/best-practices/rendering#SpecifyCharsetEarly).
+The browser will then need to be told by the HTTP response that this page should be considered as UTF-8. Today, it is common to set the character set in the HTTP response header like this:
+
+{% highlight php %}
+<?php
+header('Content-Type: text/html; charset=UTF-8')
+{% endhighlight %}
+
+The historic approach to doing that was to include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in your page's `<head>` tag.
 
 {% highlight php %}
 <?php
