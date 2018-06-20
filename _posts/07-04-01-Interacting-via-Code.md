@@ -33,7 +33,8 @@ function getAllFoos($db) {
     return $db->query('SELECT * FROM table');
 }
 
-foreach (getAllFoos($db) as $row) {
+$results = getAllFoos($db);
+foreach ($resultss as $row) {
     echo "<li>".$row['field1']." - ".$row['field1']."</li>"; // BAD!!
 }
 {% endhighlight %}
