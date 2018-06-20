@@ -55,6 +55,7 @@ It will show which kind of errors the code structure had before it fixed them.
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
 readable by all current and future parties who may be working on the codebase.
 
+Finally, a good supplementary resource for writing clean PHP code is [Clean Code PHP][cleancode].
 
 [fig]: https://www.php-fig.org/
 [psr1]: https://www.php-fig.org/psr/psr-1/
@@ -66,3 +67,4 @@ readable by all current and future parties who may be working on the codebase.
 [phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: https://cs.sensiolabs.org/
+[cleancode]: https://github.com/jupeter/clean-code-php
