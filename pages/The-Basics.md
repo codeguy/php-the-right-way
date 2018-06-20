@@ -375,19 +375,11 @@ return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
 {% endhighlight %}
 
 Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
-as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is
-also true.
+as a whole. Such as this example below which will return true if ($a != 3 OR $b != 4) AND $c == 5.
 
 {% highlight php %}
 <?php
-return ($a == 3 && $b == 4) && $c == 5;
-{% endhighlight %}
-
-Another example is the snippet below which will return true if ($a != 3 AND $b != 4) OR $c == 5.
-
-{% highlight php %}
-<?php
-return ($a != 3 && $b != 4) || $c == 5;
+return ($a != 3 || $b != 4) && $c == 5;
 {% endhighlight %}
 
 Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
