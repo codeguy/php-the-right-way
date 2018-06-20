@@ -4,7 +4,7 @@ title:  Design Patterns
 sitemap: true
 ---
 
-# Design Patterns
+# [#](#design-patterns){:.subhead-link} Design Patterns {#design-patterns}
 
 There are numerous ways to structure the code and project for your web application, and you can put as much or as little thought as you like into architecting. But it is usually a good idea to follow common patterns because it will
 make your code easier to manage and easier for others to understand.
@@ -13,7 +13,7 @@ make your code easier to manage and easier for others to understand.
 * [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
 * [Collection of implementation examples](http://designpatternsphp.readthedocs.io/en/latest/)
 
-## Factory
+## [#](#factory){:.subhead-link} Factory {#factory}
 
 One of the most commonly used design patterns is the factory pattern. In this pattern, a class simply creates the
 object you want to use. Consider the following example of the factory pattern:
@@ -63,7 +63,7 @@ yourself a lot of trouble down the road by using factories.
 
 * [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
-## Singleton
+## [#](#singleton){:.subhead-link} Singleton {#singleton}
 
 When designing web applications, it often makes sense conceptually and architecturally to allow access to one and only
 one instance of a particular class. The singleton pattern enables us to do this.
@@ -95,7 +95,7 @@ application, as the object using the shared or global resource requires no knowl
 
 * [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
 
-## Strategy
+## [#](#strategy){:.subhead-link} Strategy {#strategy}
 
 With the strategy pattern you encapsulate specific families of algorithms allowing the client class responsible for
 instantiating a particular algorithm to have no knowledge of the actual implementation. There are several variations on
@@ -186,7 +186,7 @@ $data = $client->loadOutput();
 
 * [Strategy pattern on Wikipedia](http://en.wikipedia.org/wiki/Strategy_pattern)
 
-## Front Controller
+## [#](#front-controller){:.subhead-link} Front Controller {#front-controller}
 
 The front controller pattern is where you have a single entrance point for your web application (e.g. index.php) that
 handles all of the requests. This code is responsible for loading all of the dependencies, processing the request and
@@ -195,7 +195,7 @@ and gives you a central place to hook in code that should be run for every reque
 
 * [Front Controller pattern on Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
 
-## Model-View-Controller
+## [#](#model-view-controller){:.subhead-link}Model-View-Controller {#model-view-controller}
 
 The model-view-controller (MVC) pattern and its relatives HMVC and MVVM lets you break up code into logical objects
 that serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats
