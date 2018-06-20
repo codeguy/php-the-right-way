@@ -20,6 +20,13 @@ another source of packages which ideally have little to no dependencies on other
 For example, you can use the [FuelPHP Validation package], without needing to use the FuelPHP framework itself.
 
 * [Aura]
+* CakePHP Components
+    * [Collection]
+    * [Database]
+    * [Datasource]
+    * [Event]
+    * [I18n]
+    * [ORM]   
 * [FuelPHP]
 * [Hoa Project]
 * [Symfony Components]
@@ -46,3 +53,9 @@ components best decoupled from the Laravel framework are listed above._
 [Eloquent ORM]: https://github.com/illuminate/database
 [Queue]: https://github.com/illuminate/queue
 [Illuminate components]: https://github.com/illuminate
+[Collection]: https://github.com/cakephp/collection
+[Database]: https://github.com/cakephp/database
+[Datasource]: https://github.com/cakephp/datasource
+[Event]: https://github.com/cakephp/event
+[I18n]: https://github.com/cakephp/i18n
+[ORM]: https://github.com/cakephp/orm

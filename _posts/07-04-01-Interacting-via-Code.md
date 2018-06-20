@@ -87,7 +87,7 @@ class FooModel
 
 {% highlight php %}
 <?php foreach ($fooList as $row): ?>
-    <?= $row['field1'] ?> - <?= $row['field1'] ?>
+    <li><?= $row['field1'] ?> - <?= $row['field1'] ?></li>
 <?php endforeach ?>
 {% endhighlight %}
 
