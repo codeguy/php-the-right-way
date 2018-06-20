@@ -8,7 +8,7 @@ sitemap: true
 
 PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and
 built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
-other functions and a function can return other functions (a feature called higher-order functions).
+other functions and a function can return other functions (a feature called higher-order functions).
 
 Recursion, a feature that allows a function to call itself, is supported by the language, but most of the PHP code
 focus is on iteration.
@@ -71,12 +71,12 @@ $output = array_filter($input, criteria_greater_than(3));
 print_r($output); // items > 3
 {% endhighlight %}
 
-Each filter function in the family accepts only elements greater than some minimum value. Single filter returned by
+Each filter function in the family accepts only elements greater than some minimum value. The single filter returned by
 `criteria_greater_than` is a closure with `$min` argument closed by the value in the scope (given as an argument when
 `criteria_greater_than` is called).
 
 Early binding is used by default for importing `$min` variable into the created function. For true closures with late
-binding one should use a reference when importing. Imagine a templating or input validation library, where closure is
+binding one should use a reference when importing. Imagine a templating or input validation library, where a closure is
 defined to capture variables in scope and access them later when the anonymous function is evaluated.
 
 * [Read about Anonymous functions][anonymous-functions]
