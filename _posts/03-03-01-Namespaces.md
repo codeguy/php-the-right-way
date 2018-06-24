@@ -28,6 +28,6 @@ If you're going to use an autoloader standard for a new application or package, 
 * [Read about PSR-4][psr4]
 
 
-[namespaces]: http://php.net/language.namespaces
-[psr0]: http://www.php-fig.org/psr/psr-0/
-[psr4]: http://www.php-fig.org/psr/psr-4/
+[namespaces]: https://secure.php.net/language.namespaces
+[psr0]: https://www.php-fig.org/psr/psr-0/
+[psr4]: https://www.php-fig.org/psr/psr-4/

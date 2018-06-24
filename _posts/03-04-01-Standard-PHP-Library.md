@@ -14,5 +14,5 @@ over these datastructures or your own classes which implement SPL interfaces.
 * [SPL video course on Lynda.com(Paid)][spllynda]
 
 
-[spl]: http://php.net/book.spl
-[spllynda]: http://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html
+[spl]: https://secure.php.net/book.spl
+[spllynda]: https://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html
