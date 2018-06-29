@@ -124,7 +124,7 @@ class SingletonChild extends Singleton {}
 $firstObj = SingletonChild::getInstance();
 var_dump($firstObj === SingletonChild::getInstance()); // bool (true)
 
-$secondObj = SingletonChiled::getInstance();
+$secondObj = SingletonChild::getInstance();
 var_dump($secondObj === SingletonChild::getInstance()); // bool (true)
 {% endhighlight %}
 
@@ -148,7 +148,9 @@ request lifecycle in a web application. This typically occurs when we have globa
 class) or a shared resource (such as an event queue).
 
 You should be wary when using the singleton pattern, as by its very nature it introduces global state into your
-application, reducing testability. In most cases, dependency injection can (and should) be used in place of a singleton
+application, reducing testability. 
+
+In most cases, dependency injection can (and should) be used in place of a singleton
 class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
 application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
 
