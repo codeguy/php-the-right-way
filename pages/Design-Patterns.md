@@ -68,21 +68,80 @@ yourself a lot of trouble down the road by using factories.
 When designing web applications, it often makes sense conceptually and architecturally to allow access to one and only
 one instance of a particular class. The singleton pattern enables us to do this.
 
-**TODO: NEED NEW SINGLETON CODE EXAMPLE**
+{% highlight php %}
+<?php
+
+abstract class Singleton {
+
+    /**
+     * @var array The references to the *Singletons* instances of this abstract class
+     */
+    private static $instances = [];
+    
+    /**
+     * Protected constructor to prevent creating a new instance of the
+     * *Singleton* via the `new` operator from outside of this class.
+     */
+    protected function __construct() {}
+
+    /**
+     * Returns the *Singleton* instance of this class.
+     *
+     * @return Singleton The *Singleton* instance.
+     */
+    public static function getInstance()
+    {
+        $class = static::class; // PHP7
+        if (!isset(self::$instances[$class])) {
+            self::$instances[$class] = new static();
+        }
+        return self::$instances[$class];
+    }
+    
+    /**
+     * Private clone method to prevent cloning of the instance of the
+     * *Singleton* instance.
+     *
+     * @return void
+     */
+    private function __clone() {}
+        
+    /**
+     * Public unserialize method to throw an Exception when unserializing 
+     * the *Singleton* instance.
+     *
+     * @return void
+     */
+    public function __wakeup()
+    {
+        throw new Exception("Cannot unserialize singleton");
+    }
+} 
+
+
+class SingletonChild extends Singleton {}
+
+$firstObj = SingletonChild::getInstance();
+var_dump($firstObj === SingletonChild::getInstance()); // bool (true)
+
+$secondObj = SingletonChiled::getInstance();
+var_dump($secondObj === SingletonChild::getInstance()); // bool (true)
+{% endhighlight %}
 
 The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
 Note the following:
 
+* The declaration [`abstract`](http://php.net/manual/en/language.oop5.abstract.php) ensures the Singleton class never
+instantiates by itself.
 * The constructor [`__construct()`](http://php.net/language.oop5.decon#object.construct) is declared as protected to
 prevent creating a new instance outside of the class via the `new` operator.
-* The magic method [`__clone()`](http://php.net/language.oop5.cloning#object.clone) is declared as private to prevent
-cloning of an instance of the class via the [`clone`](http://php.net/language.oop5.cloning) operator.
-* The magic method [`__wakeup()`](http://php.net/language.oop5.magic#object.wakeup) is declared as private to prevent
-unserializing of an instance of the class via the global function [`unserialize()`](http://php.net/function.unserialize)
-.
 * A new instance is created via [late static binding](http://php.net/language.oop5.late-static-bindings) in the static
 creation method `getInstance()` with the keyword `static`. This allows the subclassing of the class `Singleton` in the
 example.
+* The magic method [`__clone()`](http://php.net/language.oop5.cloning#object.clone) is declared as private to prevent
+cloning of an instance of the class via the [`clone`](http://php.net/language.oop5.cloning) operator.
+* The magic method [`__wakeup()`](http://php.net/language.oop5.magic#object.wakeup) is declared as public to throw an 
+Exception when unserializing the instance of the class via the global function [`unserialize()`](http://php.net/function.unserialize).
 
 The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire
 request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration
