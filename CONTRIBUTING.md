@@ -74,7 +74,7 @@ included in the project:
 5. Commit your changes in logical chunks. Please adhere to these [git commit
    message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
    or your content is unlikely be merged into the main project. Use Git's
-   [interactive rebase](https://help.github.com/articles/interactive-rebase)
+   [interactive rebase](https://help.github.com/articles/about-git-rebase/)
    feature to tidy up your commits before making them public.
 
 6. Locally merge (or rebase) the upstream development branch into your topic branch:
@@ -115,5 +115,5 @@ All content is completely free now, and always will be.
 2. Use four (4) spaces to indent text; do not use tabs
 3. Wrap all text to 120 characters
 4. Code samples should adhere to PSR-1 or higher
-5. Use [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/) for all content
+5. Use [GitHub Flavored Markdown](https://github.github.com/gfm/) for all content
 6. Use language agnostic urls when referring to external websites such as the [php.net](http://php.net/urlhowto.php) manual
