@@ -39,27 +39,24 @@ class Automobile
 
 class AutomobileFactory
 {
-    public static function create($make, $model)
+    public function create($make, $model)
     {
         return new Automobile($make, $model);
     }
 }
 
+// create a factory for automobiles
+$factory = new AutomobileFactory();
+
 // have the factory create the Automobile object
-$veyron = AutomobileFactory::create('Bugatti', 'Veyron');
+$veyron = $factory->create('Bugatti', 'Veyron');
 
 print_r($veyron->getMakeAndModel()); // outputs "Bugatti Veyron"
 {% endhighlight %}
 
-This code uses a factory to create the Automobile object. There are two possible benefits to building your code this
-way; the first is that if you need to change, rename, or replace the Automobile class later on you can do so and you
-will only have to modify the code in the factory, instead of every place in your project that uses the Automobile class.
-The second possible benefit is that if creating the object is a complicated job you can do all of the work in the
-factory, instead of repeating it every time you want to create a new instance.
+This code uses a factory to create the Automobile object. You mostly benefit from a factory when used in combination with dependency injection. Using a factory allows you to change how an Automobile is created by modifying the code in the factory, instead of every place in your project that uses the Automobile class. Use a factory also makes testing easier, as a mock AutomobileFactory can create Automobile objects.
 
-Using the factory pattern isn't always necessary (or wise). The example code used here is so simple that a factory
-would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
-yourself a lot of trouble down the road by using factories.
+There is a similar pattern were `create()` is a static method, called a static factory. In situation where there is no possibility for dependency injection, the factory must be globally available. The static factory allows you to modify how an Automobile is created across the whole project.
 
 * [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
