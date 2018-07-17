@@ -110,6 +110,7 @@ abstract class Singleton {
      * Public unserialize method to throw an Exception when unserializing 
      * the *Singleton* instance.
      *
+     * @throws Exception
      * @return void
      */
     public function __wakeup()
