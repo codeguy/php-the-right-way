@@ -6,7 +6,7 @@ anchor:  mysql_extension
 
 ## MySQL Extension {#mysql_extension_title}
 
-The [mysql] extension for PHP is incredibly old and has superseded by two other extensions:
+The [mysql] extension for PHP is incredibly old and has been superseded by two other extensions:
 
 - [mysqli]
 - [pdo]
