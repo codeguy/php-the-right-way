@@ -44,7 +44,7 @@ applications/projects require different versions of PHP, and you are not using v
 
 ### Install PHP via Liip's binary installer
 
-Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 7.1.
+Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 7.3.
 It doesn't overwrite the PHP binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
 
 ### Compile from Source
