@@ -1,4 +1,3 @@
-baseurl: /
 highlighter: rouge
 markdown: kramdown
 permalink: date
