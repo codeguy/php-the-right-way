@@ -367,12 +367,12 @@ would be.
 {% highlight php %}
 <?php
 $a = 3;
-return ($a == 3) ? true : false; // Will return true or false if $a == 3
+return ($a == 3) ? true : false; // Will return true if $a == 3 or false
 
 // vs
 
 $a = 3;
-return $a == 3; // Will return true or false if $a == 3
+return $a == 3; // Will return true if $a == 3 or false
 
 {% endhighlight %}
 
@@ -386,12 +386,12 @@ within blocks of statements. An example of when there is no requirement to use b
 {% highlight php %}
 <?php
 $a = 3;
-return ($a == 3) ? "yay" : "nope"; // return yay or nope if $a == 3
+return ($a == 3) ? "yay" : "nope"; // return yay if $a == 3 or nope
 
 // vs
 
 $a = 3;
-return $a == 3 ? "yay" : "nope"; // return yay or nope if $a == 3
+return $a == 3 ? "yay" : "nope"; // return yay if $a == 3 or nope
 {% endhighlight %}
 
 Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
