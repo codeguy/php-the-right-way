@@ -31,9 +31,10 @@ anchor:  building_and_deploying_your_application
 
 [Capistrano]는 하나 혹은 다수의 리모트 컴퓨터에서 구조화되고 반복가능한 커맨드를 실행시키려고 하는 *중고급 프로그래머*를 위한 시스템입니다. 기본적으로는 Ruby on Rails 어플리케이션을 배포할 수 있도록 구성되어 있지만, PHP 어플리케이션도 성공적으로 배포하고 있습니다. Capistrano를 잘 사용하려면 Ruby와 Rake에 대해서도 잘 알아야 합니다. Capistrano에 관심이 있는 PHP 개발자에게는 Dave Gardner의 [PHP Deployment with Capistrano][phpdeploy_capistrano]라는 블로그 포스트가 좋은 출발점이 될 것입니다.
 
-[Ansistrano] is a couple of Ansible roles to easily manage the deployment process (deploy and rollback) for scripting applications such as PHP, Python and Ruby. It's an Ansible port for [Capistrano]. It's been used by quite a lot of PHP companies already.
+[Ansistrano]는 PHP, Python 및 Ruby와 같은 스크립팅 응용 프로그램의 배포 프로세스(배포 및 롤백)를 쉽게 관리할 수 있는 Ansible과 같은 역할을 합니다. [Capistrano]를 위한 Ansible 포트입니다. 이미 많은 PHP 회사에서 사용되고 있습니다.
 
 [Rocketeer]는 라라벨 프레임워크로부터 그 철학과 영감을 얻었습니다. 빠르고, 우아하며, 효과적인 기본값으로 쉽게 사용할 수 있는 것이 목표입니다. 여러 서버, 스테이지(stage), 원자적 배치와 배포를 병렬적으로 수행할 수 있습니다. 이 도구의 모든 것은 핫 스왑(hot swap)하거나 확장할 수 있으며, PHP로 작성되었습니다.
+
 [Deployer]는 PHP로 작성된 배포도구이며, 단순하고 함수형으로 작성되었습니다. 병렬적으로 태스크들을 실행하고, 원자적으로 배포하며, 서버간의 일관성을 유지하는 기능들을 포함하고 있습니다. Symfony, Laravel, Zend Framework, Yii를 위한 일반적인 레시피가 있습니다. Younes Rafie의 [Easy Deployment of PHP Applications with Deployer][phpdeploy_deployer]라는 글은 Deployer를 사용하여 어플리케이션을 배포하기 위한 좋은 튜토리얼입니다.
 
 [Magallanes]는 YAML 파일로 간단하게 설정할 수 있는 PHP로 작성된 도구입니다. 여러 서버와 환경, 원자적 배포와 함께, 일반적인 도구와 프레임워크에 활용할 수 있는 몇몇 내장 태스크가 있습니다.

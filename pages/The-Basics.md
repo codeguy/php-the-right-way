@@ -287,6 +287,7 @@ EOD;                        // 끝을 나타내는 'EOD'는 반드시 줄의 가
 * [Heredoc 문법](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
 > It should be noted that multiline strings can also be formed by continuing them across multilines in a statement. _e.g._
+> 여러 줄에 걸쳐 계속 입력하는 방식으로 여러 줄을 작성할 수도 있다는 것에도 주목할 필요가 있습니다. _예를 들어_
 
 {% highlight php %}
 $str = "

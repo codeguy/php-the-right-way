@@ -26,66 +26,58 @@ anchor:  complex_problem
 
 ### S.O.L.I.D.
 
-#### Single Responsibility Principle
+#### 단일 책임 원칙 (SRP)
 
-The Single Responsibility Principle is about actors and high-level architecture. It states that “A class should have
-only one reason to change.” This means that every class should _only_ have responsibility over a single part of the
-functionality provided by the software. The largest benefit of this approach is that it enables improved code
-_reusability_. By designing our class to do just one thing, we can use (or re-use) it in any other program without
-changing it.
+단일 책임 원칙은 액터와 고급 아키텍처에 관한 원칙입니다. "클래스는 한가지 이유로만 변경되어야 한다."라는 내용입니다. 
+이는 모든 클래스가 소프트웨어가 제공하는 기능의 _오직_ 한가지에 대해서만 책임을 져야 함을 의미합니다. 이 접근법의 가장 
+큰 이점은 코드 _재사용성_을 향상시킬 수 있다는 것입니다. 클래스를 한가지만 하도록 설계함으로써, 우리는 다른 어떤 
+프로그램에서도 이 클래스를 사용할 수 있습니다(또는 재사용 할 수 있습니다).
 
-#### Open/Closed Principle
+#### 개방/폐쇄(Open/Closed)의 원칙 (OCP)
 
-The Open/Closed Principle is about class design and feature extensions. It states that “Software entities (classes,
-modules, functions, etc.) should be open for extension, but closed for modification.” This means that we should design
-our modules, classes and functions in a way that when a new functionality is needed, we should not modify our existing
-code but rather write new code that will be used by existing code. Practically speaking, this means that we should write
-classes that implement and adhere to _interfaces_, then type-hint against those interfaces instead of specific classes.
+개방/폐쇄 원칙은 클래스 디자인 및 기능 확장에 대한 것입니다. "소프트웨어 개체(클래스, 모듈, 함수 등)는 확장을 위해 열려 
+있어야 하지만 수정을 위해 닫혀 있어야 합니다.". 즉, 새로운 기능이 필요할 때는 기존 코드를 수정하기 보다 기존 코드를 활용
+하는 새로운 코드를 작성하는 방식으로 모듈, 클래스 및 함수를 설계해야 합니다. 실용적 측면에서 보면, 이것은 _인터페이스_를
+구현하고 준수하는 클래스를 작성한 다음 특정 클래스 대신 해당 인터페이스에 대해 타입 힌트를 작성해야 함을 의미합니다.
 
-The largest benefit of this approach is that we can very easily extend our code with support for something new without
-having to modify existing code, meaning that we can reduce QA time, and the risk for negative impact to the application
-is substantially reduced. We can deploy new code, faster, and with more confidence.
+이 접근법의 가장 큰 이점은 기존 코드를 수정하지 않고도 새로운 무언가를 지원함으로써 코드를 매우 쉽게 확장 할 수 있다는 
+것입니다. 즉, QA 시간을 줄일 수 있고 응용 프로그램에 부정적인 영향을 미치는 위험이 크게 줄어 듭니다. 우리는 새로운 코드
+를 빠르고, 더 확신을 갖고 배포 할 수 있습니다.
 
-#### Liskov Substitution Principle
+#### 리스코브(Liskov) 치환의 원칙 (LSP)
 
-The Liskov Substitution Principle is about subtyping and inheritance. It states that “Child classes should never break
-the parent class’ type definitions.” Or, in Robert C. Martin’s words, “Subtypes must be substitutable for their base
-types.”
+Liskov 치환 원칙은 하위 유형 지정과 상속에 관한 것입니다. "자식 클래스는 절대로 부모 클래스의 타입 정의를 깨뜨리
+면 안됩니다". 로버트 C. 마틴(Robert C. Martin)의 말에 따르면, "서브 타입은 부모 타입을 대체 할 수 있어야 합니다".
 
-For example, if we have a `FileInterface` interface which defines an `embed()` method, and we have `Audio` and `Video`
-classes which both implement the `embed()` method, then we can expect that the usage of the `embed()` method will always
-do the thing that we intend. If we later create a `PDF` class or a `Gist` class which implement the `FileInterface`
-interface, we will already know and understand what the `embed()` method will do. The largest benefit of this approach
-is that we have the ability to build flexible and easily-configurable programs, because when we change one object of a
-type (e.g., `FileInterface`) to another we don't need to change anything else in our program.
+예를 들어 `embed()` 메서드를 정의한 `FileInterface` 인터페이스가 있고, 각각 `embed()` 메소드를 구현한 `Audio`와 `Video`
+클래스가 있다면, 우리는 `embed()` 메소드의 사용은 항상 우리가 의도한 대로 동작할 것이라고 기대할 수 있습니다. 나중에 우
+리가 `FileInterface` 인터페이스를 구현하는 `PDF` 클래스나 `Gist` 클래스를 만든다면, 우리는 이미`embed()` 메소드가 무엇을
+하는지 알고 있습니다. 이 접근법의 가장 큰 장점은 유연하고 쉽게 구성 가능한 프로그램을 만들 수 있다는 것입니다. 어떤 타입
+(예 : 'FileInterface')에 해당하는 하나의 객체를 다른 객체로 변경할 때 우리 프로그램 안의 다른 부분은 변경할 필요가 없기 
+때문입니다.
 
-#### Interface Segregation Principle
+#### 인터페이스 분리의 원칙 (ISP)
 
-The Interface Segregation Principle (ISP) is about _business-logic-to-clients_ communication. It states that “No client
-should be forced to depend on methods it does not use.” This means that instead of having a single monolithic interface
-that all conforming classes need to implement, we should instead provide a set of smaller, concept-specific interfaces
-that a conforming class implements one or more of.
+인터페이스 분리 원칙은 _비즈니스 로직과 클라이언트 간_ 의 통신에 관한 것입니다. 
+"클라이언트는 사용하지 않는 메소드에 의존하면 안됩니다.". 즉, 모든 클래스가 따라야 하는 하나의 단일 인터페이스 대신, 클
+래스가 하나 혹은 그 이상을 구현할 수 있는 더 작고 개념에 기반한 인터페이스 세트를 제공해야만 합니다.
 
-For example, a `Car` or `Bus` class would be interested in a `steeringWheel()` method, but a `Motorcycle` or `Tricycle`
-class would not. Conversely, a `Motorcycle` or `Tricycle` class would be interested in a `handlebars()` method, but a
-`Car` or `Bus` class would not. There is no need to have all of these types of vehicles implement support for both
-`steeringWheel()` as well as `handlebars()`, so we should break-apart the source interface.
+예를 들어, `Car` 또는 `Bus` 클래스는 `steeringWheel()` 메소드에 관심이 있지만 `Motorcycle` 이나 `Tricycle` 클래스는 그렇
+지 않습니다. 반대로 `Motorcycle` 또는 `Tricycle` 클래스는 `handlebars()` 메소드에 관심이 있지만 `Car` 또는 `Bus` 클래스
+는 그렇지 않습니다. 이러한 유형의 모든 차량에 `steeringWheel()`과 `handlebars()`를 모두 지원할 필요가 없으므로 소스 인터
+페이스를 분리해야합니다.
 
-#### Dependency Inversion Principle
+#### 의존성 역전의 원칙 (DIP)
 
 The Dependency Inversion Principle is about removing hard-links between discrete classes so that new functionality can
 be leveraged by passing a different class. It states that one should *"Depend on Abstractions. Do not depend on
 concretions."*. Put simply, this means our dependencies should be interfaces/contracts or abstract classes rather than
 concrete implementations. We can easily refactor the above example to follow this principle.
 
-### 의존 관계 역전의 원칙
-
-[WIP] 위 Dependency Inversion Principle에 해당하는 번역이었으나, 아래를 참고하여 다시 번역할 필요가 있음.
-
-의존 관계 역전의 원칙(Dependency Inversion Principle)은 흔히 S.O.L.I.D 라고 부르는 개체지향 설계 원칙 중 D에
-해당합니다. *"추상화된 것에 의존하고, 구체화된 것에 의존하지 마라"* 라는 원칙입니다. 좀더 풀어서 설명하면 우리가
-구현하는 클래스는 다른 구체화된 클래스 구현에 의존하지 말고 인터페이스나 추상 클래스에 의존하도록 만들어야 한다는
-이야기입니다. 앞에서 본 예제 코드가 이런 원칙을 따르도록 리팩토링하는 것은 어렵지 않습니다.
+의존성 역전의 원칙은 개별 클래스 간의 하드 링크를 제거하여 다른 클래스를 전달하는 방식으로 새로운 기능을 활용할 수 있도
+록하는 것입니다. *"추상화에 의존해야 하고, 구현에 의존하지 말아야 합니다."*. 간단히 말해서, 이는 우리의 의존성이 구체적
+인 구현이 아닌 인터페이스/계약(contract) 또는 추상 클래스여야 함을 의미합니다. 우리는 위의 예를 이 원리에 따라 쉽게 리펙
+토링 할 수 있습니다.
 
 {% highlight php %}
 <?php

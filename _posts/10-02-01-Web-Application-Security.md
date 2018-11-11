@@ -6,21 +6,20 @@ anchor:  web_application_security
 
 ## 웹 어플리케이션 보안 {#web_application_security_title}
 
-It is very important for every PHP developer to learn [the basics of web application security][4], which can be broken
-down into a handful of broad topics:
+모든 PHP 개발자가 [웹 응용 프로그램 보안의 기초][4]를 배우는 것은 매우 중요합니다. 광범위한 주제를 몇 가지로 추려보면:
 
-1. Code-data separation.
-   * When data is executed as code, you get SQL Injection, Cross-Site Scripting, Local/Remote File Inclusion, etc.
-   * When code is printed as data, you get information leaks (source code disclosure or, in the case of C programs,
-     enough information to bypass [ASLR][5]).
-2. Application logic.
-   * Missing authentication or authorization controls.
-   * Input validation.
-3. Operating environment.
-   * PHP versions.
-   * Third party libraries.
-   * The operating system.
-4. Cryptography weaknesses.
+1. 코드와 데이터 분리.
+   * 데이터가 코드처럼 실행된다면, SQL Injection, Cross-Site Scripting, Local/Remote File Inclusion 등을 당할 것입니다.
+   * 코드가 데이터처럼 노출된다면, you get information leaks (source code disclosure or, in the case of C programs,
+     enough information to bypass [ASLR][5]). 정보 유출(소스 코드 노출 혹은 C 프로그램의 경우, [ASLR] [5]을 우회하기에 충분한 정보)이 발생할 것입니다.
+2. 어플리케이션 로직.
+   * 인증 또는 인가를 빠뜨리는 것.
+   * 입력값 검증.
+3. 운영 환경.
+   * PHP 버전.
+   * Third party 라이브러리.
+   * 운영체제.
+4. 약한 암호화.
    * [Weak random numbers][6].
    * [Chosen-ciphertext attacks][7].
    * [Side-channel information leaks][8].

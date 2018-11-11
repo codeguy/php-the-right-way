@@ -1,4 +1,5 @@
 ---
+title:   맥(Mac)에서 사용하기
 isChild: true
 anchor:  mac_setup
 ---

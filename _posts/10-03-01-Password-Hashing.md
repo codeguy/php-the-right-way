@@ -9,28 +9,26 @@ anchor:  password_hashing
 PHP 어플리케이션을 만드는 모든 사람은 언제가 사용자 로그인 기능을 구현하게 될 것입니다. 사용자명과 패스워드를
 데이터베이스에 저장해서 다음번 로그인할 때 사용자를 인증하는데 사용해야 합니다.
 
-It is important that you properly [_hash_][3] passwords before storing them. Hashing and encrypting are [two very different things][7]
-that often get confused.
+패스워드를 [_해시_][3]로 만들어 저장하는 것은 중요합니다. 해싱과 암호화라는 [전혀 다른 둘][7]은 종종 혼동됩니다.
 
-Hashing is an irreversible, one-way function. This produces a fixed-length string that cannot be feasibly reversed.
-This means you can compare a hash against another to determine if they both came from the same source string, but you
-cannot determine the original string. If passwords are not hashed and your database is accessed by an unauthorized
-third-party, all user accounts are now compromised.
+해싱은 되돌릴 수없는 단방향 함수입니다. 이렇게하면 사실상 길이를 바꿀 수없는 고정 길이 문자열이 생성됩니다.
+즉, 해시를 다른 해시와 비교하여 둘 다 동일한 소스 문자열에서 왔는지 확인할 수 있음을 의미합니다.
+하지만 원래 문자열을 판별 할 수 없습니다. 패스워드가 해시되지 않고 권한이없는 제 3자가 데이터베이스에 액세스하는 경우, 모든 사용자 계정이 위험에 처하게 됩니다.
 
-Unlike hashing, encryption is reversible (provided you have the key). Encryption is useful in other areas, but is a poor
-strategy for securely storing passwords.
+해싱과 달리 암호화는 되돌릴 수 있습니다(키가있는 경우). 암호화는 다른 영역에서 유용하지만 패스워드를 안전하게 저장하기 위해서라면 좋은 전략이 아닙니다.
 
 패스워드는 해시하기 전에 각 패스워드 전에 임의의(random) 문자열을 추가하는 것으로 [_소금치기(솔팅,salting)_][5] 해야합니다. 이것은 사전 공격과 "레인보우 테이블"(일반적인 패스워드에 대한 암호 해시 목록)을 사용을 방어합니다.
 
 사용자들이 흔히 복잡도가 낮은 동일한 패스워드를 여러 서비스에 사용하기 때문에 해싱과 솔팅은 필수적입니다.
 
-Additionally, you should use [a specialized _password hashing_ algoithm][6] rather than fast, general-purpose
-cryptographic hash function (e.g. SHA256). The short list of acceptable password hashing algorithms (as of June 2018)
-to use are:
+또한 고속, 범용이 아닌 [전문화 된 _password 해싱_ 알고리즘][6]을 사용해야합니다
+. 수용 가능한 암호 해싱 알고리즘의 짧은 목록 (2018 년 6 월 기준)
 
-* Argon2 (available in PHP 7.2 and newer)
+또한 고속의 범용 암호화 해시 함수(예 : SHA256)보다는 [전문화 된 _패스워드 해싱_ 알고리즘][6]을 사용해야합니다. 수용할 만한 암호 해싱 알고리즘의 몇가지는 (2018년 6월 기준) 아래와 같습니다:
+
+* Argon2 (PHP 7.2 이상 사용 가능)
 * Scrypt
-* **Bcrypt** (PHP provides this one for you; see below)
+* **Bcrypt** (PHP에서 제공. 아래에서 확인하세요.)
 * PBKDF2 with HMAC-SHA256 or HMAC-SHA512
 
 다행스럽게도, 최근에 PHP는 이것을 쉽게 할 수 있습니다.
