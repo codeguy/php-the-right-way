@@ -24,7 +24,63 @@ anchor:  complex_problem
 의존성 주입을 사용하게 되면 이런 문제를 유연하게 풀 수 있게 됩니다. 우리가 원하는 의존 관계를 우리가 필요할 때에만,
 의존 관계를 전혀 하드코딩하지 않고서도, 의존성을 주입시킴으로써 말이죠.
 
+### S.O.L.I.D.
+
+#### Single Responsibility Principle
+
+The Single Responsibility Principle is about actors and high-level architecture. It states that “A class should have
+only one reason to change.” This means that every class should _only_ have responsibility over a single part of the
+functionality provided by the software. The largest benefit of this approach is that it enables improved code
+_reusability_. By designing our class to do just one thing, we can use (or re-use) it in any other program without
+changing it.
+
+#### Open/Closed Principle
+
+The Open/Closed Principle is about class design and feature extensions. It states that “Software entities (classes,
+modules, functions, etc.) should be open for extension, but closed for modification.” This means that we should design
+our modules, classes and functions in a way that when a new functionality is needed, we should not modify our existing
+code but rather write new code that will be used by existing code. Practically speaking, this means that we should write
+classes that implement and adhere to _interfaces_, then type-hint against those interfaces instead of specific classes.
+
+The largest benefit of this approach is that we can very easily extend our code with support for something new without
+having to modify existing code, meaning that we can reduce QA time, and the risk for negative impact to the application
+is substantially reduced. We can deploy new code, faster, and with more confidence.
+
+#### Liskov Substitution Principle
+
+The Liskov Substitution Principle is about subtyping and inheritance. It states that “Child classes should never break
+the parent class’ type definitions.” Or, in Robert C. Martin’s words, “Subtypes must be substitutable for their base
+types.”
+
+For example, if we have a `FileInterface` interface which defines an `embed()` method, and we have `Audio` and `Video`
+classes which both implement the `embed()` method, then we can expect that the usage of the `embed()` method will always
+do the thing that we intend. If we later create a `PDF` class or a `Gist` class which implement the `FileInterface`
+interface, we will already know and understand what the `embed()` method will do. The largest benefit of this approach
+is that we have the ability to build flexible and easily-configurable programs, because when we change one object of a
+type (e.g., `FileInterface`) to another we don't need to change anything else in our program.
+
+#### Interface Segregation Principle
+
+The Interface Segregation Principle (ISP) is about _business-logic-to-clients_ communication. It states that “No client
+should be forced to depend on methods it does not use.” This means that instead of having a single monolithic interface
+that all conforming classes need to implement, we should instead provide a set of smaller, concept-specific interfaces
+that a conforming class implements one or more of.
+
+For example, a `Car` or `Bus` class would be interested in a `steeringWheel()` method, but a `Motorcycle` or `Tricycle`
+class would not. Conversely, a `Motorcycle` or `Tricycle` class would be interested in a `handlebars()` method, but a
+`Car` or `Bus` class would not. There is no need to have all of these types of vehicles implement support for both
+`steeringWheel()` as well as `handlebars()`, so we should break-apart the source interface.
+
+#### Dependency Inversion Principle
+
+The Dependency Inversion Principle is about removing hard-links between discrete classes so that new functionality can
+be leveraged by passing a different class. It states that one should *"Depend on Abstractions. Do not depend on
+concretions."*. Put simply, this means our dependencies should be interfaces/contracts or abstract classes rather than
+concrete implementations. We can easily refactor the above example to follow this principle.
+
 ### 의존 관계 역전의 원칙
+
+[WIP] 위 Dependency Inversion Principle에 해당하는 번역이었으나, 아래를 참고하여 다시 번역할 필요가 있음.
 
 의존 관계 역전의 원칙(Dependency Inversion Principle)은 흔히 S.O.L.I.D 라고 부르는 개체지향 설계 원칙 중 D에
 해당합니다. *"추상화된 것에 의존하고, 구체화된 것에 의존하지 마라"* 라는 원칙입니다. 좀더 풀어서 설명하면 우리가

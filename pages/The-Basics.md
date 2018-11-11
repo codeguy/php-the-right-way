@@ -286,6 +286,26 @@ EOD;                        // 끝을 나타내는 'EOD'는 반드시 줄의 가
 
 * [Heredoc 문법](http://php.net/language.types.string#language.types.string.syntax.heredoc)
 
+> It should be noted that multiline strings can also be formed by continuing them across multilines in a statement. _e.g._
+
+{% highlight php %}
+$str = "
+Example of string
+spanning multiple lines
+using statement syntax.
+$a are parsed.
+";
+
+/**
+ * Output:
+ *
+ * Example of string
+ * spanning multiple lines
+ * using statement syntax.
+ * Variables are parsed.
+ */
+{% endhighlight %}
+
 ### 무엇이 더 빠를까? {#which-is-quicker}
 
 작은따옴표는 보통 큰따옴표보다 빠르다는 속설이 있습니다. 하지만 사실이 아닙니다.

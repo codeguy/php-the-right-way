@@ -33,7 +33,8 @@ function getAllFoos($db) {
     return $db->query('SELECT * FROM table');
 }
 
-foreach (getAllFoos($db) as $row) {
+$results = getAllFoos($db);
+foreach ($results as $row) {
     echo "<li>".$row['field1']." - ".$row['field1']."</li>"; // BAD!!
 }
 {% endhighlight %}
@@ -50,7 +51,7 @@ foreach (getAllFoos($db) as $row) {
 
 {% highlight php %}
 <?php
-$db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8', 'username', 'password');
+$db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8mb4', 'username', 'password');
 
 // 모델 클래스를 사용할 수 있게 포함시킨다.
 include 'models/FooModel.php';
@@ -88,7 +89,7 @@ class FooModel
 
 {% highlight php %}
 <?php foreach ($fooList as $row): ?>
-    <?= $row['field1'] ?> - <?= $row['field1'] ?>
+    <li><?= $row['field1'] ?> - <?= $row['field1'] ?></li>
 <?php endforeach ?>
 {% endhighlight %}
 
@@ -99,6 +100,6 @@ class FooModel
 [PHPBridge]에는 비슷한 주제를 다룬 [Creating a Data Class]라는 훌륭한 자료가 있습니다. 이제 막 데이터베이스를 사용하는
 개발을 하기 시작한 개발자들에게는 반드시 도움이 될 좋은 자료 입니다.
 
-[MVC]: http://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
-[PHPBridge]: http://phpbridge.org/
-[Creating a Data Class]: http://phpbridge.org/intro-to-php/creating_a_data_class
+[MVC]: https://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
+[PHPBridge]: https://phpbridge.org/docs/
+[Creating a Data Class]: https://phpbridge.org/intro-to-php/creating_a_data_class

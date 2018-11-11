@@ -24,9 +24,15 @@ anchor:  components
 있습니다.
 
 * [Aura]
+* CakePHP Components
+    * [Collection]
+    * [Database]
+    * [Datasource]
+    * [Event]
+    * [I18n]
+    * [ORM]   
 * [FuelPHP]
 * [Hoa Project]
-* [Orno]
 * [Symfony Components]
 * [The League of Extraordinary Packages]
 * Laravel's Illuminate Components
@@ -41,13 +47,18 @@ _Laravel의 [Illuminate 컴포넌트][Illuminate components]는 Laravel 프레�
 [PEAR]: /#pear
 [Dependency Management]: /#dependency_management
 [FuelPHP Validation package]: https://github.com/fuelphp/validation
-[Aura]: http://auraphp.com/framework/2.x/en/
+[Aura]: http://auraphp.com/framework/
 [FuelPHP]: https://github.com/fuelphp
 [Hoa Project]: https://github.com/hoaproject
-[Orno]: https://github.com/orno
-[Symfony Components]: http://symfony.com/doc/current/components/index.html
-[The League of Extraordinary Packages]: http://thephpleague.com/
+[Symfony Components]: https://symfony.com/doc/current/components/index.html
+[The League of Extraordinary Packages]: https://thephpleague.com/
 [IoC Container]: https://github.com/illuminate/container
 [Eloquent ORM]: https://github.com/illuminate/database
 [Queue]: https://github.com/illuminate/queue
 [Illuminate components]: https://github.com/illuminate
+[Collection]: https://github.com/cakephp/collection
+[Database]: https://github.com/cakephp/database
+[Datasource]: https://github.com/cakephp/datasource
+[Event]: https://github.com/cakephp/event
+[I18n]: https://github.com/cakephp/i18n
+[ORM]: https://github.com/cakephp/orm

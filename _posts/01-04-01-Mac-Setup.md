@@ -1,25 +1,23 @@
 ---
-title:   맥(Mac)에서 사용하기
 isChild: true
 anchor:  mac_setup
 ---
 
 ## 맥(Mac)에서 사용하기 {#mac_setup_title}
 
-OS X 에는 기본적으로 PHP 가 포함되어 있지만, 최신의 안정된 버전이 포함되어 있지는 않습니다. Mavericks 에는 PHP
-5.4.17 버전이 포함되어 있고, Yosemite 에는 5.5.9, El Capitan 에는 5.5.29, Sierra에는 5.6.24 버전이 포함되어 있습니다.
-그러나 PHP 7.1이 나왔기 때문에 이러한 기본 버전으로는 충분치 않습니다.
-
-OS X에 PHP를 설치하기 위해선 여러가지 방법이 있습니다.
+macOS에는 기본적으로 PHP 가 포함되어 있지만, 최신의 안정된 버전이 포함되어 있지는 않습니다. OS X에 PHP를 설치하기 위해선 여러가지 방법이 있습니다.
 
 ### Homebrew를 사용하여 설치하기
 
-[Homebrew]는 OSX에서 PHP와 다양한 익스텐션을 쉽게 설치할 수 있도록 도와주는 패키지 관리자 도구입니다.
-[Homebrew PHP]는 Homebrew에서 사용되는 PHP와 관련된 다양한 "formulae"를 포함하고 있는 저장소입니다. 그리고 이는 PHP를
-설치할 수 있도록 해줍니다.
+[Homebrew]는 macOS에서 PHP와 다양한 익스텐션을 쉽게 설치할 수 있도록 도와주는 패키지 관리자 도구입니다.
+Homebrew core 저장소는 PHP 5.6, 7.0, 7.1, 7.2를 위한 "formulae"를 포함하고 있습니다. 아래 커맨드로 최신 버전을 설치하세요.
 
-`brew install`이라는 커맨드를 이용하여 `php53`, `php54`, `php55`, `php56`, `php70`, `php71` 을 설치할 수 있습니다. 그리고 `PATH`
-변수를 수정하여 설치되어있는 다양한 버전의 PHP를 변경할 수 있습니다. 이러한 과정이 번거롭다면,
+```
+brew install php@7.2
+```
+
+`PATH`
+변수를 수정하면 Homebrew로 설치된 PHP 버전 간 전환을 할 수 있습니다. 이러한 과정이 번거롭다면,
 [brew-php-switcher][brew-php-switcher]를 사용하여 자동으로 버전을 변경할 수 있습니다.
 
 ### Macports를 사용하여 설치하기
@@ -45,7 +43,7 @@ MacPorts는 미리 컴파일된 바이너리를 지원하여 의존성 패키지
 PHP를 요구하지만, 가상 머신은 사용하고 있지 않을때 매우 유용합니다.
 
 ### Liip's binary installer를 사용하여 PHP 설치하기
-다른 유명한 방법은 5.3에서 7.1 버전까지 한줄로 설치할 수 있는 방법인 [php-osx.liip.ch]가 있습니다.
+다른 유명한 방법은 5.3에서 7.3 버전까지 한줄로 설치할 수 있는 방법인 [php-osx.liip.ch]가 있습니다.
 이 방법은 Apple에서 설치한 PHP를 덮어쓰지 않고 별도의 위치(/usr/local/php5)에 설치합니다.
 
 ### 소스 컴파일하기
@@ -60,15 +58,14 @@ PHP를 요구하지만, 가상 머신은 사용하고 있지 않을때 매우 �
 [MAMP][mamp-downloads]나 [XAMPP][xampp]와 같은 통합 솔루션은 이러한 소프트웨어들을 함께 사용하기 쉽게 한번에
 설치됩니다. 그러나 쉽게 설치할 수 있는 만큼 유연하지 못한 단점이 존재합니다.
 
-
-[Homebrew]: http://brew.sh/
+[Homebrew]: https://brew.sh/
 [Homebrew PHP]: https://github.com/Homebrew/homebrew-php#installation
 [MacPorts]: https://www.macports.org/install.php
 [phpbrew]: https://github.com/phpbrew/phpbrew
-[php-osx.liip.ch]: http://php-osx.liip.ch/
-[mac-compile]: http://php.net/install.macosx.compile
+[php-osx.liip.ch]: https://php-osx.liip.ch/
+[mac-compile]: https://secure.php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
 ["Command Line Tools for XCode"]: https://developer.apple.com/downloads
-[mamp-downloads]: http://www.mamp.info/en/downloads/
-[xampp]: http://www.apachefriends.org/en/xampp.html
+[mamp-downloads]: https://www.mamp.info/en/downloads/
+[xampp]: https://www.apachefriends.org/index.html
 [brew-php-switcher]: https://github.com/philcook/brew-php-switcher

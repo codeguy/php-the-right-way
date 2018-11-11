@@ -45,16 +45,16 @@ If you are running Apache 2.4 or later, you can use [mod_proxy_fcgi] to get grea
 * [Read more on setting up Apache and PHP-FPM with mod_proxy_fcgi][tutorial-mod_proxy_fcgi]
 
 
-[nginx]: http://nginx.org/
-[phpfpm]: http://php.net/install.fpm
+[nginx]: https://nginx.org/
+[phpfpm]: https://secure.php.net/install.fpm
 [secure-nginx-phpfpm]: https://nealpoole.com/blog/2011/04/setting-up-php-fastcgi-and-nginx-dont-trust-the-tutorials-check-your-configuration/
-[apache-modules]: http://httpd.apache.org/docs/2.4/mod/
-[prefork MPM]: http://httpd.apache.org/docs/2.4/mod/prefork.html
-[worker MPM]: http://httpd.apache.org/docs/2.4/mod/worker.html
-[event MPM]: http://httpd.apache.org/docs/2.4/mod/event.html
-[apache]: http://httpd.apache.org/
-[apache-MPM]: http://httpd.apache.org/docs/2.4/mod/mpm_common.html
+[apache-modules]: https://httpd.apache.org/docs/2.4/mod/
+[prefork MPM]: https://httpd.apache.org/docs/2.4/mod/prefork.html
+[worker MPM]: https://httpd.apache.org/docs/2.4/mod/worker.html
+[event MPM]: https://httpd.apache.org/docs/2.4/mod/event.html
+[apache]: https://httpd.apache.org/
+[apache-MPM]: https://httpd.apache.org/docs/2.4/mod/mpm_common.html
 [mod_fastcgi]: https://blogs.oracle.com/opal/entry/php_fpm_fastcgi_process_manager
-[mod_fcgid]: http://httpd.apache.org/mod_fcgid/
+[mod_fcgid]: hhttps://httpd.apache.org/mod_fcgid/
 [mod_proxy_fcgi]: https://httpd.apache.org/docs/current/mod/mod_proxy_fcgi.html
 [tutorial-mod_proxy_fcgi]: https://serversforhackers.com/video/apache-and-php-fpm

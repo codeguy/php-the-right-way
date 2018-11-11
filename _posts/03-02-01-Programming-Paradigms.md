@@ -51,14 +51,14 @@ PHP는 Reflection API와 특수 매서드(Magic Method)같은 메커니즘을 �
 * [읽을거리: Overloading][overloading]
 
 
-[oop]: http://php.net/language.oop5
-[traits]: http://php.net/language.oop5.traits
-[anonymous-functions]: http://php.net/functions.anonymous
-[closure-class]: http://php.net/class.closure
+[oop]: https://secure.php.net/language.oop5
+[traits]: https://secure.php.net/language.oop5.traits
+[anonymous-functions]: https://secure.php.net/functions.anonymous
+[closure-class]: https://secure.php.net/class.closure
 [closures-rfc]: https://wiki.php.net/rfc/closures
-[callables]: http://php.net/language.types.callable
-[call-user-func-array]: http://php.net/function.call-user-func-array
-[magic-methods]: http://php.net/language.oop5.magic
-[reflection]: http://php.net/intro.reflection
-[overloading]: http://php.net/language.oop5.overloading
+[callables]: https://secure.php.net/language.types.callable
+[call-user-func-array]: https://secure.php.net/function.call-user-func-array
+[magic-methods]: https://secure.php.net/language.oop5.magic
+[reflection]: https://secure.php.net/intro.reflection
+[overloading]: https://secure.php.net/language.oop5.overloading
 

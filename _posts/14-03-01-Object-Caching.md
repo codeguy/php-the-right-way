@@ -49,8 +49,8 @@ PHP 5.5보다 낮은 버전에서는 APC가 개체 캐시와 바이트코드 캐
 ### 인기있는 개체 캐시 도구들에 대해서 더 알아보기
 
 * [APCu](https://github.com/krakjoe/apcu)
-* [APC Functions](http://php.net/ref.apc)
-* [Memcached](http://memcached.org/)
-* [Redis](http://redis.io/)
-* [XCache APIs](http://xcache.lighttpd.net/wiki/XcacheApi)
-* [WinCache Functions](http://php.net/ref.wincache)
+* [APC Functions](https://secure.php.net/ref.apc)
+* [Memcached](https://memcached.org/)
+* [Redis](https://redis.io/)
+* [XCache APIs](https://xcache.lighttpd.net/wiki/XcacheApi)
+* [WinCache Functions](https://secure.php.net/ref.wincache)
