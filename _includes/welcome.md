@@ -48,13 +48,5 @@ The most recent version of _PHP: The Right Way_ is also available in PDF, EPUB a
 
 여러분의 도움이 있으면 이 사이트를 PHP 프로그래밍을 새로 시작하는 사람들을 위한 최고의 문서로 만들 수 있습니다! [GitHub 저장소를 통해서 도와주세요.][1]
 
-## 널리 알려주세요! {#spread_the_word}
-
-여러분의 웹사이트에 걸어둘 수 있는 _PHP: The Right Way_ 배너 이미지들이 있습니다. 여러분이 _PHP: The Right Way_ 를
-성원하고 있다는 것을 보여주고, 또 새로운 PHP 개발자들이 어디에 가면 좋은 정보를 찾을 수 있는지 알 수 있게 해주세요.
-
-[배너 이미지 보기][3]
-
 [1]: https://leanpub.com/phptherightway
 [2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[3]: /banners.html

@@ -15,4 +15,6 @@ anchor:  design_patterns
 혹은 프레임워크에 의존하지 않고 어플리케이션을 제작하기로 결정했다면 제작하려는 어플리케이션의 형태와 규모에 가장 잘
 맞는 패턴을 여러분이 직접 찾아야 할 것입니다.
 
-* [디자인 패턴](/php-the-right-way/pages/Design-Patterns.html)에 대해 PHP: The Right Way 에서 정리한 내용 더 읽기
+* 아래 링크에서 PHP 디자인 패턴에 대해 더 배우고 동작하는 예제를 확인하실 수 있습니다.
+
+<https://designpatternsphp.readthedocs.io/>

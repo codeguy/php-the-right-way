@@ -28,7 +28,7 @@ SpecBDD 기법을 사용한다면 여러분의 코드가 어떻게 행위할 것
 
 
 [Behat]: http://behat.org/
-[Cucumber]: http://cukes.info/
-[PHPSpec]: http://www.phpspec.net/
-[RSpec]: http://rspec.info/
-[Codeception]: http://codeception.com/
+[Cucumber]: https://cucumber.io/
+[PHPSpec]: https://www.phpspec.net/
+[RSpec]: https://rspec.info/
+[Codeception]: https://codeception.com/

@@ -53,13 +53,10 @@ Hello, world
 
 
  * [알아보기: 커맨드라인 PHP 실행하기][php-cli]
- * [알아보기: Windows 환경에서 커맨드라인 PHP 프로그램을 실행하기 위한 설정][php-cli-windows]
 
-
-[phpinfo]: http://php.net/function.phpinfo
-[cli-options]: http://php.net/features.commandline.options
-[argc]: http://php.net/reserved.variables.argc
-[argv]: http://php.net/reserved.variables.argv
-[exit-codes]: http://www.gsp.com/cgi-bin/man.cgi?section=3&amp;topic=sysexits
-[php-cli]: http://php.net/features.commandline
-[php-cli-windows]: http://php.net/install.windows.commandline
+[phpinfo]: https://secure.php.net/function.phpinfo
+[cli-options]: https://secure.php.net/features.commandline.options
+[argc]: https://secure.php.net/reserved.variables.argc
+[argv]: https://secure.php.net/reserved.variables.argv
+[exit-codes]: https://www.gsp.com/cgi-bin/man.cgi?section=3&amp;topic=sysexits
+[php-cli]: https://secure.php.net/features.commandline.options

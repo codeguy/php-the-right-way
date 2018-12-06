@@ -26,5 +26,3 @@ anchor:  frameworks
 
 컴포넌트 기반의 프레임워크는 한 가지 목적에 특화된 라이브러리들의 모음입니다. 마이크로 프레임워크나 풀스택
 프레임워크를 만들어내기 위해서 서로 다른 컴포넌트 기반의 프레임워크를 사용할 수 있습니다.
-
-* [인기있는 PHP 프레임워크들](https://github.com/codeguy/php-the-right-way/wiki/Frameworks)

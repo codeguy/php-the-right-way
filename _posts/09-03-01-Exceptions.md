@@ -71,8 +71,9 @@ Exception을 던지거나 Exception 클래스를 상속받은 예외 클래스�
 * [PHP에서 Nesting Exceptions][nesting-exceptions-in-php]
 * [Exception Best Practices in PHP 5.3][exception-best-practices53]
 
-[splext]: #standard_php_library
-[exceptions]: http://php.net/manual/en/language.exceptions.php
-[splexe]: http://php.net/manual/en/spl.exceptions.php
-[nesting-exceptions-in-php]: http://www.brandonsavage.net/exceptional-php-nesting-exceptions-in-php/
+
+[splext]: /#standard_php_library
+[exceptions]: https://secure.php.net/language.exceptions
+[splexe]: https://secure.php.net/spl.exceptions
+[nesting-exceptions-in-php]: https://www.brandonsavage.net/exceptional-php-nesting-exceptions-in-php/
 [exception-best-practices53]: http://ralphschindler.com/2010/09/15/exception-best-practices-in-php-5-3

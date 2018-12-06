@@ -5,7 +5,7 @@ anchor: dependency_injection
 
 # 의존성 주입 {#dependency_injection_title}
 
-[위키백과에서 인용](http://ko.wikipedia.org/wiki/%EC%9D%98%EC%A1%B4%EC%84%B1_%EC%A3%BC%EC%9E%85):
+[위키백과에서 인용](https://ko.wikipedia.org/wiki/%EC%9D%98%EC%A1%B4%EC%84%B1_%EC%A3%BC%EC%9E%85):
 
 > 의존성 주입(Dependency Injection, DI)은 프로그래밍에서 구성요소간의 종속성을 소스코드에서 설정하지 않고 외부의
 > 설정파일 등을 통해 컴파일 시점이나 실행 시점에 주입하도록 하는 디자인 패턴 중의 하나이다.
