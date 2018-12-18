@@ -80,6 +80,7 @@ PHP.
 
 * [Continuous Integration with Jenkins][Jenkins]
 * [Continuous Integration with PHPCI][PHPCI]
+* [Continuous Integration with PHP Censor][PHP Censor]
 * [Continuous Integration with Teamcity][Teamcity]
 
 [buildautomation]: https://wikipedia.org/wiki/Build_automation
@@ -96,6 +97,7 @@ PHP.
 [Travis CI]: https://travis-ci.org/
 [Jenkins]: https://jenkins.io/
 [PHPCI]: https://www.phptesting.org/
+[PHP Censor]: http://php-censor.info/
 [Teamcity]: https://www.jetbrains.com/teamcity/
 [Deployer]: https://deployer.org/
 [Rocketeer]: http://rocketeer.autopergamene.eu/
