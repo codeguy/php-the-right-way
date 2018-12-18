@@ -81,9 +81,8 @@ dependencies to the newest version that fits the restrictions you define.
 
 ### Update Notifications
 
-To receive notifications about new version releases you can sign up for [VersionEye], a web service
-that can monitor your GitHub and BitBucket accounts for `composer.json` files and send emails with new
-package releases.
+To receive notifications about new version releases you can sign up for [libraries.io], a web service
+that can monitor dependencies and send you alerts on updates.
 
 ### Checking your dependencies for security issues
 
@@ -108,7 +107,7 @@ packages' binaries available everywhere, you'd then add the `~/.composer/vendor/
 
 [Packagist]: https://packagist.org/
 [Twig]: https://twig.symfony.com/
-[VersionEye]: https://www.versioneye.com/
+[libraries.io]: https://libraries.io/
 [Security Advisories Checker]: https://security.sensiolabs.org/
 [Learn about Composer]: https://getcomposer.org/doc/00-intro.md
 [ComposerSetup]: https://getcomposer.org/Composer-Setup.exe
