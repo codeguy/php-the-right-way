@@ -27,4 +27,4 @@ anchor:  templating_further_reading
 * [Plates](http://platesphp.com/) *(native)*
 * [Smarty](https://www.smarty.net/) *(compiled)*
 * [Twig](https://twig.symfony.com/) *(compiled)*
-* [Zend\View](https://framework.zend.com/manual/2.3/en/modules/zend.view.quick-start.html) *(native, framework specific)*
+* [Zend\View](https://docs.zendframework.com/zend-view/quick-start/) *(native, framework specific)*
