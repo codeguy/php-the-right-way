@@ -12,7 +12,9 @@ over these datastructures or your own classes which implement SPL interfaces.
 
 * [Read about the SPL][spl]
 * [SPL video course on Lynda.com(Paid)][spllynda]
+* [SPL video course on LinkedIn(Trial \| Paid)][spllinkedin]
 
 
 [spl]: https://secure.php.net/book.spl
 [spllynda]: https://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html
+[spllinkedin]: https://www.linkedin.com/learning/learning-the-standard-php-library
