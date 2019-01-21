@@ -26,7 +26,7 @@ applications that implement the components can have consistency even when workin
 * [Read about Symfony Coding Standards][symfony-cs]
 
 You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text][st-cs] to be given real-time feedback.
+editors like [Sublime Text][st-cs] or [Visual Studio Code][vs-cs] to be given real-time feedback.
 
 You can fix the code layout automatically by using one of the following tools:
 
@@ -66,5 +66,6 @@ Finally, a good supplementary resource for writing clean PHP code is [Clean Code
 [phpcs]: https://pear.php.net/package/PHP_CodeSniffer/
 [phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
+[vs-cs]: https://github.com/ikappas/vscode-phpcs
 [phpcsfixer]: https://cs.sensiolabs.org/
 [cleancode]: https://github.com/jupeter/clean-code-php
