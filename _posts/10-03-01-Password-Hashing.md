@@ -23,7 +23,7 @@ Passwords should also be individually [_salted_][5] by adding a random string to
 
 Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor.
 
-Additionally, you should use [a specialized _password hashing_ algoithm][6] rather than fast, general-purpose
+Additionally, you should use [a specialized _password hashing_ algorithm][6] rather than fast, general-purpose
 cryptographic hash function (e.g. SHA256). The short list of acceptable password hashing algorithms (as of June 2018)
 to use are:
 
