@@ -27,7 +27,7 @@ Let's write a simple "Hello, $name" CLI program. To try it out, create a file na
 {% highlight php %}
 <?php
 if ($argc !== 2) {
-    echo "Usage: php hello.php [name].\n";
+    echo "Usage: php hello.php <name>.\n";
     exit(1);
 }
 $name = $argv[1];
@@ -45,7 +45,7 @@ To run our script, above, from the command line:
 
 {% highlight console %}
 > php hello.php
-Usage: php hello.php [name]
+Usage: php hello.php <name>
 > php hello.php world
 Hello, world
 {% endhighlight %}
