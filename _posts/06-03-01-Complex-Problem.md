@@ -51,7 +51,7 @@ the parent class’ type definitions.” Or, in Robert C. Martin’s words, “S
 types.”
 
 For example, if we have a `FileInterface` interface which defines an `embed()` method, and we have `Audio` and `Video`
-classes which both implement the `embed()` method, then we can expect that the usage of the `embed()` method will always
+classes which both implement the `FileInterface` interface, then we can expect that the usage of the `embed()` method will always
 do the thing that we intend. If we later create a `PDF` class or a `Gist` class which implement the `FileInterface`
 interface, we will already know and understand what the `embed()` method will do. The largest benefit of this approach
 is that we have the ability to build flexible and easily-configurable programs, because when we change one object of a
