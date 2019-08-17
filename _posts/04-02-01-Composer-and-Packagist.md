@@ -108,6 +108,6 @@ packages' binaries available everywhere, you'd then add the `~/.composer/vendor/
 [Packagist]: https://packagist.org/
 [Twig]: https://twig.symfony.com/
 [libraries.io]: https://libraries.io/
-[Security Advisories Checker]: https://security.sensiolabs.org/
+[Security Advisories Checker]: https://security.symfony.com/
 [Learn about Composer]: https://getcomposer.org/doc/00-intro.md
 [ComposerSetup]: https://getcomposer.org/Composer-Setup.exe
