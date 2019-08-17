@@ -50,7 +50,7 @@ If you have PHP_CodeSniffer, then you can fix the code layout problems reported 
 Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
 It will show which kind of errors the code structure had before it fixed them.
 
-    php-cs-fixer fix -v --level=psr2 file.php
+    php-cs-fixer fix -v --rules=@PSR2 file.php
 
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
 readable by all current and future parties who may be working on the codebase.
