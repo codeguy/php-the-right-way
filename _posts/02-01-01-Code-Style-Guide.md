@@ -10,7 +10,7 @@ PHP developers to choose several of these and combine them into a single project
 their projects.
 
 The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
-to code-style, but those that do are [PSR-1][psr1], [PSR-2][psr2] and [PSR-4][psr4]. These
+to code-style, but those that do are [PSR-1][psr1], [PSR-12][psr12] and [PSR-4][psr4]. These
 recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
 FuelPHP, Lithium, etc are adopting. You can use them for your own projects, or continue to use your own
 personal style.
@@ -20,7 +20,7 @@ of the coding standards made by PEAR or Zend. This means other developers can ea
 applications that implement the components can have consistency even when working with lots of third-party code.
 
 * [Read about PSR-1][psr1]
-* [Read about PSR-2][psr2]
+* [Read about PSR-12][psr12]
 * [Read about PSR-4][psr4]
 * [Read about PEAR Coding Standards][pear-cs]
 * [Read about Symfony Coding Standards][symfony-cs]
@@ -35,7 +35,7 @@ You can fix the code layout automatically by using one of the following tools:
 
 And you can run phpcs manually from shell:
 
-    phpcs -sw --standard=PSR2 file.php
+    phpcs -sw --standard=PSR1 file.php
 
 It will show errors and describe how to fix them.
 It can also be helpful to include this command in a git hook.
@@ -45,12 +45,12 @@ violations have been fixed.
 If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
 [PHP Code Beautifier and Fixer][phpcbf].
 
-    phpcbf -w --standard=PSR2 file.php
+    phpcbf -w --standard=PSR1 file.php
 
 Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
 It will show which kind of errors the code structure had before it fixed them.
 
-    php-cs-fixer fix -v --rules=@PSR2 file.php
+    php-cs-fixer fix -v --rules=@PSR1 file.php
 
 English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
 readable by all current and future parties who may be working on the codebase.
@@ -59,7 +59,7 @@ Finally, a good supplementary resource for writing clean PHP code is [Clean Code
 
 [fig]: https://www.php-fig.org/
 [psr1]: https://www.php-fig.org/psr/psr-1/
-[psr2]: https://www.php-fig.org/psr/psr-2/
+[psr12]: https://www.php-fig.org/psr/psr-12/
 [psr4]: https://www.php-fig.org/psr/psr-4/
 [pear-cs]: https://pear.php.net/manual/en/standards.php
 [symfony-cs]: https://symfony.com/doc/current/contributing/code/standards.html
