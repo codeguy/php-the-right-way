@@ -55,7 +55,7 @@ PHP를 요구하지만, 가상 머신은 사용하고 있지 않을때 매우 �
 
 ### 통합(All-in-One) 솔루션
 
-위에 설명된 방법은 PHP 그 자체만을 다루며, Apache, Nginx 혹은 SQL 서버 등은 제공하지 않습니다.
+위에 설명된 방법은 PHP 그 자체만을 다루며, [Apache][apache], [Nginx][nginx] 혹은 SQL 서버 등은 제공하지 않습니다.
 [MAMP][mamp-downloads]나 [XAMPP][xampp]와 같은 통합 솔루션은 이러한 소프트웨어들을 함께 사용하기 쉽게 한번에
 설치됩니다. 그러나 쉽게 설치할 수 있는 만큼 유연하지 못한 단점이 존재합니다.
 
@@ -67,6 +67,8 @@ PHP를 요구하지만, 가상 머신은 사용하고 있지 않을때 매우 �
 [mac-compile]: https://secure.php.net/install.macosx.compile
 [xcode-gcc-substitution]: https://github.com/kennethreitz/osx-gcc-installer
 ["Command Line Tools for XCode"]: https://developer.apple.com/downloads
+[apache]: https://httpd.apache.org/
+[nginx]: https://www.nginx.com/
 [mamp-downloads]: https://www.mamp.info/en/downloads/
 [xampp]: https://www.apachefriends.org/index.html
 [brew-php-switcher]: https://github.com/philcook/brew-php-switcher

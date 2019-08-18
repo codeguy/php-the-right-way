@@ -28,7 +28,7 @@ PHP는 웹어플리케이션 작성을 주요 목적으로 삼고 있지만, 커
 {% highlight php %}
 <?php
 if ($argc !== 2) {
-    echo "Usage: php hello.php [name].\n";
+    echo "Usage: php hello.php <name>.\n";
     exit(1);
 }
 $name = $argv[1];
@@ -46,7 +46,7 @@ PHP는 스크립트가 실행될 때 주어진 인자를 가지고 특별한 변
 
 {% highlight console %}
 > php hello.php
-Usage: php hello.php [name]
+Usage: php hello.php <name>
 > php hello.php world
 Hello, world
 {% endhighlight %}

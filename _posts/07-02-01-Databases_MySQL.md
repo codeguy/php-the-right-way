@@ -22,6 +22,7 @@ PHP 7.x을 아직 사용하지 않더라도 가능한 빨리 익스텐션 업그
 **[mysql]에서 [mysqli]로 업그레이드할때에는 단순히 `mysql_*`을 찾아서 `mysqli_*`로 치환하는 게으른 업그레이드 가이드를 조심하세요.
 이것은 지나치게 단순화한 조잡한 방법일 뿐만 아니라, 파라미터 바인딩같은 mysqli가 제공하는([PDO][pdo]도 제공하는) 혜택을 놓치게 됩니다.**
 
+* [MySQLi Prepared Statements][mysqli_prepared_statements]
 * [PHP: MySQL을 위한 API 선택][mysql_api]
 * [MySQL 개발자를 위한 PDO 튜토리얼][pdo4mysql_devs]
 
@@ -32,3 +33,4 @@ PHP 7.x을 아직 사용하지 않더라도 가능한 빨리 익스텐션 업그
 [pdo]: https://secure.php.net/pdo
 [mysql_api]: https://secure.php.net/mysqlinfo.api.choosing
 [pdo4mysql_devs]: http://wiki.hashphp.org/PDO_Tutorial_for_MySQL_Developers
+[mysqli_prepared_statements]: MySQLi Prepared Statements
