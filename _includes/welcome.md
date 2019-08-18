@@ -18,7 +18,6 @@ PHP를 사용하는 사람들이 그동안 생각해보지 않았을지도 모�
 _PHP: The Right Way_ 는 다양한 언어로 변역되어 있습니다.
 
 * [English](http://www.phptherightway.com)
-* [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
 * [Español](http://phpdevenezuela.github.io/php-the-right-way)
 * [Français](http://eilgin.github.io/php-the-right-way/)
 * [Indonesia](http://id.phptherightway.com)
@@ -46,7 +45,7 @@ The most recent version of _PHP: The Right Way_ is also available in PDF, EPUB a
 
 ## 프로젝트에 기여하기 {#how_to_contribute}
 
-여러분의 도움이 있으면 이 사이트를 PHP 프로그래밍을 새로 시작하는 사람들을 위한 최고의 문서로 만들 수 있습니다! [GitHub 저장소를 통해서 도와주세요.][1]
+여러분의 도움이 있으면 이 사이트를 PHP 프로그래밍을 새로 시작하는 사람들을 위한 최고의 문서로 만들 수 있습니다! [GitHub 저장소를 통해서 도와주세요.][2]
 
 [1]: https://leanpub.com/phptherightway
-[2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
+[2]: https://github.com/ModernPUG/php-the-right-way/tree/gh-pages

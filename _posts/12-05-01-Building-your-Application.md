@@ -27,7 +27,7 @@ anchor:  building_and_deploying_your_application
 
 빌드 자동화와 배포를 도와주는 많은 오픈소스 도구들이 있습니다. PHP로 작성된 것도 있고 그렇지 않은 것도 있죠. PHP로 작성되지 않았다는 것보다는 필요한 작업을 잘 수행해주느냐 하는 것이 중요할 것입니다. 여기에서 몇가지를 소개합니다.
 
-[Phing]은 패키징, 배포, 테스팅 과정을 XML 빌드 파일 하나로 설정할 수 있습니다. [Apache Ant]를 기반으로 한 Phing은, 웹 어플리케이션을 설치하거나 업데이트할 때 필요한 PHP로 작성된 많은 종류의 작업을 기본적으로 지원하고 있고, 커스텀 작업을 추가하여 확장할 수도 있습니다. Phing은 오랜기간 유지된 단단하고 견고한 도구이지만, XML 파일로 설정을 다루는 방식때문에 약간 구식으로 보일 수도 있습니다. 
+[Phing]은 패키징, 배포, 테스팅 과정을 XML 빌드 파일 하나로 설정할 수 있습니다. [Apache Ant]를 기반으로 한 Phing은, 웹 어플리케이션을 설치하거나 업데이트할 때 필요한 PHP로 작성된 많은 종류의 작업을 기본적으로 지원하고 있고, 커스텀 작업을 추가하여 확장할 수도 있습니다. Phing은 오랜기간 유지된 단단하고 견고한 도구이지만, XML 파일로 설정을 다루는 방식때문에 약간 구식으로 보일 수도 있습니다.
 
 [Capistrano]는 하나 혹은 다수의 리모트 컴퓨터에서 구조화되고 반복가능한 커맨드를 실행시키려고 하는 *중고급 프로그래머*를 위한 시스템입니다. 기본적으로는 Ruby on Rails 어플리케이션을 배포할 수 있도록 구성되어 있지만, PHP 어플리케이션도 성공적으로 배포하고 있습니다. Capistrano를 잘 사용하려면 Ruby와 Rake에 대해서도 잘 알아야 합니다. Capistrano에 관심이 있는 PHP 개발자에게는 Dave Gardner의 [PHP Deployment with Capistrano][phpdeploy_capistrano]라는 블로그 포스트가 좋은 출발점이 될 것입니다.
 
@@ -81,6 +81,7 @@ PHP 프로젝트에서 지속적인 통합 기법을 사용하는 방법에는 �
 
 * [Jenkins를 이용한 지속적인 통합][Jenkins]
 * [PHPCI를 이용한 지속적인 통합][PHPCI]
+* [PHP Censor를 이용한 지속적인 통합][PHP Censor]
 * [Teamcity를 이용한 지속적인 통합][Teamcity]
 
 [buildautomation]: https://wikipedia.org/wiki/Build_automation
@@ -97,6 +98,7 @@ PHP 프로젝트에서 지속적인 통합 기법을 사용하는 방법에는 �
 [Travis CI]: https://travis-ci.org/
 [Jenkins]: https://jenkins.io/
 [PHPCI]: https://www.phptesting.org/
+[PHP Censor]: http://php-censor.info/
 [Teamcity]: https://www.jetbrains.com/teamcity/
 [Deployer]: https://deployer.org/
 [Rocketeer]: http://rocketeer.autopergamene.eu/

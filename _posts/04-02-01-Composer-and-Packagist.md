@@ -80,8 +80,7 @@ require 'vendor/autoload.php';
 
 ### 업데이트 알림 받기
 
-[VersionEye]라는 웹 서비스에 가입하여 새 버전 알림을 받을 수 있습니다. 여러분의 GitHub나 BitBucket 계정의 저장소에서
-`composer.json` 파일을 모니터링하다가 새로운 패키지 업데이트가 나오면 메일로 알려주는 기능을 하는 서비스입니다.
+[libraries.io]라는 웹 서비스에 가입하여 새 버전 알림을 받을 수 있습니다. 이 웹 서비스는 당신에게 의존성을 모니터링 하고 업데이트 내용을 알려줄 수 있습니다.
 
 ### 의존 패키지들의 보안 이슈 확인하기
 
@@ -110,8 +109,8 @@ composer global require phpunit/phpunit
 
 [Packagist]: https://packagist.org/
 [Twig]: https://twig.symfony.com/
-[VersionEye]: https://www.versioneye.com/
-[Security Advisories Checker]: https://security.sensiolabs.org/
+[libraries.io]: https://libraries.io/
+[Security Advisories Checker]: https://security.symfony.com/
 [Learn about Composer]: https://getcomposer.org/doc/00-intro.md
 [ComposerSetup]: https://getcomposer.org/Composer-Setup.exe
 [Composer Korean]: http://xpressengine.github.io/Composer-korean-docs/

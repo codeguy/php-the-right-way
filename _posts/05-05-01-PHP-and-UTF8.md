@@ -55,7 +55,7 @@ HTML 코드, SQL 쿼리, PHP 코드 등 웹 어플리케이션의 모든 레벨�
 ### 데이터베이스 수준에서의 UTF-8
 
 MySQL을 사용하는 PHP 스크립트가 있다면, 앞에서 이야기한 내용을 충실히 따르더라도 데이터베이스에 저장되는 문자열은
-UTF-8이 아닌 다른 인코딩으로 저장될 가능성이 있습니다. 
+UTF-8이 아닌 다른 인코딩으로 저장될 가능성이 있습니다.
 
 PHP에서 MySQL로 전달되는 문자열이 UTF-8로 확실히 전달되게 하려면, 사용하는 데이터베이스와 테이블이 모두 `utf8mb4`
 캐릭터 셋과 콜레이션(collation)을 사용하게 해야합니다. 그리고 PDO 연결문자열에도 `utf8mb4` 캐릭터 셋을 사용한다고
@@ -68,7 +68,7 @@ UTF-8 문자열을 제대로 사용하려면 반드시 `utf8mb4` 캐릭터 셋�
 
 PHP 스크립트가 UTF-8 문자열을 브라우저에 제대로 전송하게 하려면 `mb_http_output()` 함수를 사용하세요.
 
-그리고 HTTP 응답이 UTF-8로 되어 있다는 것을 브라우저도 알 수 있게 해줘야 되겠지요. 오늘날엔 HTTP 응답 헤더에 이렇게 charset을 설정해주는 것이 보편적입니다. 
+그리고 HTTP 응답이 UTF-8로 되어 있다는 것을 브라우저도 알 수 있게 해줘야 되겠지요. 오늘날엔 HTTP 응답 헤더에 이렇게 charset을 설정해주는 것이 보편적입니다.
 
 {% highlight php %}
 <?php
@@ -81,6 +81,10 @@ HTML 응답 내용의 `<head>` 태그에 [charset `<meta>` 태그](http://htmlpu
 <?php
 // 이 스크립트 파일의 끝까지 UTF-8 문자열을 사용할 것임을 PHP에게 알려줍니다.
 mb_internal_encoding('UTF-8');
+$utf_set = ini_set('default_charset', 'utf-8');
+if (!$utf_set) {
+    throw new Exception('could not set default_charset to utf-8, please ensure it\'s set on your system!');
+}
 
 // UTF-8 문자열을 브라우저에 전송하려고 한다고 PHP에게 알려줍니다.
 mb_http_output('UTF-8');
@@ -106,20 +110,27 @@ $link = new PDO(
 
 // 데이터베이스에 문자열을 저장합니다.
 // DB와 테이블을 utf8mb4 캐릭터 셋과 콜레이션을 사용하도록 만들어 둔 상태인지 다시 한 번 확인하세요.
-$handle = $link->prepare('insert into ElvishSentences (Id, Body) values (?, ?)');
-$handle->bindValue(1, 1, PDO::PARAM_INT);
-$handle->bindValue(2, $string);
+$handle = $link->prepare('insert into ElvishSentences (Id, Body, Priority) values (default, :body, :priority)');
+$handle->bindParam(':body', $string, PDO::PARAM_STR);
+$priority = 45;
+$handle->bindParam(':priority', $priority, PDO::PARAM_INT); // 명시적으로 PDO 에게 int 를 기대하도록 지시합니다.
 $handle->execute();
 
 // 제대로 저장되었는지 검증하기 위해서 방금 저장한 문자열을 다시 읽어옵니다.
-$handle = $link->prepare('select * from ElvishSentences where Id = ?');
-$handle->bindValue(1, 1, PDO::PARAM_INT);
+$handle = $link->prepare('select * from ElvishSentences where Id = :id');
+$id = 7;
+$handle->bindParam(':id', $id, PDO::PARAM_INT);
 $handle->execute();
 
 // HTML에 출력하기 위해서 변수에 결과값을 저장해둡니다.
 $result = $handle->fetchAll(\PDO::FETCH_OBJ);
 
-header('Content-Type: text/html; charset=UTF-8');
+// 이 예제는 문자열을 html 로 escape 처리 해 줍니다.
+function escape_to_html($dirty){
+    echo htmlspecialchars($dirty, ENT_QUOTES, 'UTF-8');
+}
+
+header('Content-Type: text/html; charset=UTF-8'); // 만일 기본 문자셋을 utf-8 로 했을때에는 불 필요합니다.
 ?><!doctype html>
 <html>
     <head>
@@ -129,7 +140,7 @@ header('Content-Type: text/html; charset=UTF-8');
     <body>
         <?php
         foreach($result as $row){
-            print($row->Body);  // 자르기 한 문자열을 정확하게 표시해주기를 기대해 봅니다.
+            escape_to_html($row->Body);  // 이 것은 브라우저에게 제대로 변경된 utf-8 문자열 출력을 하게 합니다.
         }
         ?>
     </body>

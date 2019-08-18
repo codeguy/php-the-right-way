@@ -108,7 +108,7 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch 구문](http://php.net/control-structures.switch))
+* [Switch 구문](http://php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
 ## 전역 네임스페이스 {#global-namespace}
