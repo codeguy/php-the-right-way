@@ -22,7 +22,7 @@ foreach ($db->query('SELECT * FROM table') as $row) {
 이것은 어떤 측면으로 보아도 나쁜 코딩 습관입니다. 디버깅하기도 어렵고 테스트하기도 어렵고 읽기도 어렵습니다.
 그리고, limit을 추가하지 않으면 많은 양의 항목을 출력하게 됩니다.
 
-여러분이 [개체지향 프로그래밍](#object-oriented-programming)을 선호하는지, [함수형 프로그래밍](#functional-programming)
+여러분이 [객체지향 프로그래밍](#object-oriented-programming)을 선호하는지, [함수형 프로그래밍](#functional-programming)
 을 선호하는지에 따라 여러가지 방법이 있을 수 있겠지만, 코드를 서로 분리하는 데에는 어떤 기본 요인이 있을 겁니다.
 
 가장 기본적인 단계를 살펴봅시다.
@@ -44,7 +44,7 @@ foreach ($results as $row) {
 
 데이터베이스에 접근하는 함수를 넣을 클래스를 하나 만들어서 함수를 메소드로 바꿔주면 이제 우리는 "모델(Model)"을 갖게
 된 겁니다. 단순히 `.php` 파일 하나를 만들어서 프리젠테이션 로직을 넣으면 우리는 이제 "뷰(View)"를 갖게 됩니다. 거의
-[MVC] 패턴 비슷하게 된거죠. [MVC]는 대부분의 [프레임워크들](#frameworks_title)에서 사용되고 있는 개체지향적 아키텍처
+[MVC] 패턴 비슷하게 된거죠. [MVC]는 대부분의 [프레임워크들](#frameworks_title)에서 사용되고 있는 객체지향적 아키텍처
 패턴입니다.
 
 **foo.php**
