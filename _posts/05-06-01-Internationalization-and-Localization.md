@@ -147,7 +147,7 @@ Now that you understood the basis of how plural rules works - and if you didn't,
 on the [LingoHub tutorial][lingohub_plurals] -, you might want to copy the ones you need from a [list][plural] instead
 of writing them by hand.
 
-When calling out Gettext to do localization on sentences with counters, you will have to give him the
+When calling out Gettext to do localization on sentences with counters, you will have to provide it the
 related number as well. Gettext will work out what rule should be in effect and use the correct localized version.
 You will need to include in the `.po` file a different sentence for each plural rule defined.
 
