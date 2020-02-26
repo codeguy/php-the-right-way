@@ -10,7 +10,7 @@ Many frameworks provide their own abstraction layer which may or may not sit on 
 emulate features for one database system that is missing from another by wrapping your queries in PHP methods, giving
 you actual database abstraction instead of just the connection abstraction that PDO provides. This will of course add a
 little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and SQLite
-then a little overhead will be worth it the sake of code cleanliness.
+then a little overhead will be worth it for the sake of code cleanliness.
 
 Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4] namespace standards so can be
 installed in any application you like:
