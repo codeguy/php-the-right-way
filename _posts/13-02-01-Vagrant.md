@@ -19,8 +19,6 @@ create and edit your files on your host machine and then run the code inside you
 
 If you need a little help to start using Vagrant there are some services that might be useful:
 
-- [Rove][Rove]: service that allows you to pre-generate typical Vagrant builds, PHP among the options. The provisioning is
-made with Chef.
 - [Puphpet][Puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides local VMs,
 it can be used to deploy to cloud services as well. The provisioning is made with Puppet.
 - [Protobox][Protobox]: is a layer on top of vagrant and a web GUI to setup virtual machines for web development. A single YAML
