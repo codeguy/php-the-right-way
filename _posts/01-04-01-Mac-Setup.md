@@ -11,10 +11,10 @@ macOS에는 기본적으로 PHP 가 포함되어 있지만, 최신의 안정된 
 ### Homebrew를 사용하여 설치하기
 
 [Homebrew]는 macOS에서 PHP와 다양한 익스텐션을 쉽게 설치할 수 있도록 도와주는 패키지 관리자 도구입니다.
-Homebrew core 저장소는 PHP 5.6, 7.0, 7.1, 7.2를 위한 "formulae"를 포함하고 있습니다. 아래 커맨드로 최신 버전을 설치하세요.
+Homebrew core 저장소는 PHP 5.6, 7.0, 7.1, 7.2, 7.3, 7.4를 위한 "formulae"를 포함하고 있습니다. 아래 커맨드로 최신 버전을 설치하세요.
 
 ```
-brew install php@7.2
+brew install php@7.4
 ```
 
 `PATH`
@@ -29,14 +29,14 @@ brew install php@7.2
 MacPorts는 미리 컴파일된 바이너리를 지원하여 의존성 패키지들을 설치할 때마다 매번 재컴파일하지 않아도 됩니다. 그래서
 시스템에 어떠한 패키지도 갖고 있지 않다면 굉장한 시간을 절약할 수 있습니다.
 
-`port install`이라는 커맨드를 이용하여 `php53`, `php54`, `php55`, `php56`, `php70`, `php71` 을 설치할 수 있습니다. 예를 들면:
+`port install`이라는 커맨드를 이용하여 `php54`, `php55`, `php56`, `php70`, `php71`, `php72`, `php73`, `php74` 을 설치할 수 있습니다. 예를 들면:
 
     sudo port install php56
-    sudo port install php71
+    sudo port install php74
 
 그리고 `select` 커맨드를 이용하여 활성화된 PHP 버전을 변경할 수 있습니다.
 
-    sudo port select --set php php71
+    sudo port select --set php php74
 
 ### phpbrew를 사용하여 설치하기
 
