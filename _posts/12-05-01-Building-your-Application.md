@@ -97,8 +97,8 @@ PHP 프로젝트에서 지속적인 통합 기법을 사용하는 방법에는 �
 [apache_ant_tutorial]: https://code.tutsplus.com/tutorials/automate-your-projects-with-apache-ant--net-18595
 [Travis CI]: https://travis-ci.org/
 [Jenkins]: https://jenkins.io/
-[PHPCI]: https://www.phptesting.org/
-[PHP Censor]: http://php-censor.info/
+[PHPCI]: https://github.com/dancryer/phpci
+[PHP Censor]: https://github.com/php-censor/php-censor
 [Teamcity]: https://www.jetbrains.com/teamcity/
 [Deployer]: https://deployer.org/
 [Rocketeer]: http://rocketeer.autopergamene.eu/
