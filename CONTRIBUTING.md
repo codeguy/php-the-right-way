@@ -33,7 +33,7 @@ Pull requests are a great way to add new content to PHP The Right Way, as well
 as updating any browser issues or other style changes. Pretty much any sort of
 change is accepted if seen as constructive.
 
-Adhering to the following this process is the best way to get your work
+Adhering to the following process is the best way to get your work
 included in the project:
 
 1. [Fork](http://help.github.com/fork-a-repo/) the project, clone your fork,
