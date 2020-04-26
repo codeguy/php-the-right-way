@@ -14,6 +14,6 @@ For each team, CMS, or framework one works in, a standard directory structure is
 
 [Paul M. Jones] has done some fantastic research into common practices of tens of thousands of github projects in the realm of PHP. He has compiled a standard file and directory structure, the [Standard PHP Package Skeleton], based on this research. In this directory structure, `DocumentRoot` should point to `public/`, unit tests should be in the `tests/` directory, and third party libraries, as installed by [composer], belong in the `vendor/` directory. For other files and directories, abiding by the [Standard PHP Package Skeleton] will make the most sense to contributors of a project.
 
-[Paul M. Jones]: https://twitter.com/pmjones
+[Paul M. Jones]: http://paul-m-jones.com/
 [Standard PHP Package Skeleton]: https://github.com/php-pds/skeleton
 [Composer]: /#composer_and_packagist
