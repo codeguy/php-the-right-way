@@ -12,7 +12,7 @@ anchor:  register_globals
 등록해줍니다. 이 기능을 사용하면, 데이터가 어디에서 온 것인지 쉽게 파악할 수가 없기 때문에 쉽게 보안 이슈에 노출될 수
 있습니다. 
 
-예를 들어 `$_GET['foo']` 는 `$foo`라는 변수로 접근할 수 있게 됩니다. 아직 선언되지 않은 변수를 오버라이드하게 될 수도
+예를 들어 `$_GET['foo']` 는 `$foo`라는 변수로 접근할 수 있게 됩니다. 이미 선언된 변수를 오버라이드하게 될 수도
 있습니다. 만약 PHP 5.4.0 이전 버전을 사용한다면 `register_globals` 설정을 __반드시__ __off__ 로 설정하시기 바랍니다.
 
-* [PHP 매뉴얼의 register_globals 항목 보기](http://php.net/security.globals)
+* [PHP 매뉴얼의 register_globals 항목 보기](https://secure.php.net/security.globals)

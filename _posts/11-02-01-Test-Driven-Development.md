@@ -6,7 +6,7 @@ anchor:  test_driven_development
 
 ## 테스트 주도 개발 (TDD) {#test_driven_development_title}
 
-[위키백과에서 인용](http://ko.wikipedia.org/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8_%EC%A3%BC%EB%8F%84_%EA%B0%9C%EB%B0%9C):
+[위키백과에서 인용](https://ko.wikipedia.org/wiki/%ED%85%8C%EC%8A%A4%ED%8A%B8_%EC%A3%BC%EB%8F%84_%EA%B0%9C%EB%B0%9C):
 
 > 테스트 주도 개발(test-driven development, TDD)은 매우 짧은 개발 사이클을 반복하는 소프트웨어 개발 프로세스 중
 > 하나이다. 우선 개발자는 바라는 향상 또는 새로운 함수를 정의하는 (초기적 결함을 점검하는) 자동화된 테스트
@@ -22,7 +22,7 @@ anchor:  test_driven_development
 유닛 테스트(Unit Testing)는 함수, 클래스, 메소드가 기대한 대로 동작하는지를 검증하는 프래그래밍 측면의 접근
 방법으로서, 개발을 시작하는 시점부터 계속해서 유닛 테스트를 만들어 나가게 됩니다. 함수나 메소드의 입출력을
 검사함으로써 내부 로직이 올바르게 동작하는지를 테스트하는 방식입니다. 의존성 주입(Dependency Injection) 기법을
-활용하면서 "모의(mock)" 개체와 스텁(stub)들을 사용하여 서로 의존 관계에 있는 클래스들이 올바르게 연동되어 있는지
+활용하면서 "모의(mock)" 객체와 스텁(stub)들을 사용하여 서로 의존 관계에 있는 클래스들이 올바르게 연동되어 있는지
 테스트함으로써 테스트 커버리지를 더 높일 수 있습니다.
 
 클래스나 함수를 만들 때, 그 클래스나 함수의 동작을 검증하는 유닛 테스트도 항상 같이 만들어야 합니다. 아주 기초적인
@@ -37,17 +37,17 @@ anchor:  test_driven_development
 관리하고 있고 다른 사람들의 pull request 를 받을 생각이라면, pull request 를 보내는 사람들에게 기본적으로 이러한 유닛
 테스트를 포함시켜 보내라고 가이드하는 것이 좋습니다.
 
-[PHPUnit](http://phpunit.de)이라는 테스트 프레임워크가 PHP 에서는 거의 업계 표준적인 위치에 있지만 다른 유닛 테스트
+[PHPUnit](https://phpunit.de/)이라는 테스트 프레임워크가 PHP 에서는 거의 업계 표준적인 위치에 있지만 다른 유닛 테스트
 프레임워크들도 상당수 존재합니다.
 
 * [atoum](https://github.com/atoum/atoum)
 * [Kahlan](https://github.com/crysalead/kahlan)
-* [Peridot](http://peridot-php.github.io/)
+* [Peridot](https://peridot-php.github.io/)
 * [SimpleTest](http://simpletest.org)
 
 ### 통합 테스트
 
-[위키백과에서 인용](http://en.wikipedia.org/wiki/Integration_testing):
+[위키백과에서 인용](https://wikipedia.org/wiki/Integration_testing):
 
 > 통합 테스트(Integration testing, 때로는 통합과 테스트(Integration and Testing)이라고 하며 줄여서 I&T)는 개별적인
 > 소프트웨어 모듈을 결합시켜 테스트하는 단계이다. 통합 테스트는 유닛 테스트 이후와 검증 테스트(validation testing)
@@ -66,7 +66,7 @@ anchor:  test_driven_development
 
 #### 기능 테스트를 위한 도구
 
-* [Selenium](http://seleniumhq.com)
-* [Mink](http://mink.behat.org)
-* [Codeception](http://codeception.com)은 인수 테스트 도구를 포함하는 풀스택(full-stack) 테스트 프레임워크입니다.
-* [Storyplayer](http://datasift.github.io/storyplayer)는 테스트 환경을 필요에 따라 생성하거나 파괴할 수 있는 기능을 포함하는 풀스택(full-stack) 테스트 프레임워크입니다.
+* [Selenium](https://docs.seleniumhq.org/)
+* [Mink](http://mink.behat.org/)
+* [Codeception](https://codeception.com/)은 인수 테스트 도구를 포함하는 풀스택(full-stack) 테스트 프레임워크입니다.
+* [Storyplayer](https://datasift.github.io/storyplayer/)는 테스트 환경을 필요에 따라 생성하거나 파괴할 수 있는 기능을 포함하는 풀스택(full-stack) 테스트 프레임워크입니다.

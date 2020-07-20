@@ -20,8 +20,6 @@ Vagrant는 여러분의 호스트 컴퓨터와 가상 머신 사이에 공유 �
 
 Vargrant 사용을 시작하는데 약간의 도움이 필요하신 분은 아래 서비스들이 유용할 것 같습니다.
 
-- [Rove][Rove]: 흔히 사용되는 Vagrant 빌드를 미리 만들어 둘 수 있게 도와주는 서비스입니다. PHP도 고려되어 있습니다.
-프로비저닝은 Chef로 하게 되어 있습니다.
 - [Puphpet][Puphpet]: PHP 개발에 사용할 가상 머신을 설정할 수 있는 단순한 GUI를 제공합니다. **매우 PHP에 특화되어
 있습니다**. 로컬 가상 머신외에도 클라우드 서비스에 배포하는데에도 사용할 수 있습니다. 프로비저닝은 Puppet으로 하게
 되어 있습니다.
@@ -31,10 +29,10 @@ Vargrant 사용을 시작하는데 약간의 도움이 필요하신 분은 아�
 인터페이스를 제공합니다.
 
 
-[Vagrant]: http://vagrantup.com/
-[Puppet]: http://www.puppetlabs.com/
+[Vagrant]: https://www.vagrantup.com/
+[Puppet]: https://puppet.com/
 [Chef]: https://www.chef.io/
 [Rove]: http://rove.io/
 [Puphpet]: https://puphpet.com/
-[Protobox]: http://getprotobox.com/
+[Protobox]: https://www.getprotobox.com/
 [Phansible]: http://phansible.com/

@@ -7,15 +7,15 @@ anchor:  programming_paradigms
 ## 프로그래밍 패러다임 {#programming_paradigms_title}
 
 PHP는 다양한 프로그래밍 테크닉을 지원하는 유연하고 동적인 언어입니다. PHP는 해가 지날수록 크게 진화해왔습니다. PHP
-5.0(2004)에서 개체지향 프로그래밍(Object-oriented Programming) 개념이 추가되었고 PHP 5.3(2009)에서는 익명 함수와
+5.0(2004)에서 객체지향 프로그래밍(Object-oriented Programming) 개념이 추가되었고 PHP 5.3(2009)에서는 익명 함수와
 네임스페이스가, PHP 5.4(2012)에서는 트레이트(trait) 개념이 추가되었습니다.
 
-### 개체지향 프로그래밍 {#object-oriented-programming}
+### 객체지향 프로그래밍 {#object-oriented-programming}
 
-PHP는 클래스, 추상 클래스, 인터페이스, 상속, 생성자, 복제(cloning), 예외 등 완전한 개체지향 프로그래밍 개념을 가지고
+PHP는 클래스, 추상 클래스, 인터페이스, 상속, 생성자, 복제(cloning), 예외 등 완전한 객체지향 프로그래밍 개념을 가지고
 있습니다.
 
-* [읽을거리: 개체지향 PHP(Object-oriented PHP)][oop]
+* [읽을거리: 객체지향 PHP(Object-oriented PHP)][oop]
 * [읽을거리: 트레이트(Traits)][traits]
 
 ### 함수형 프로그래밍 {#functional-programming}
@@ -29,7 +29,7 @@ PHP는 일급 함수(first-class function)를 지원합니다. 이는 함수가 
 
 익명 함수(와 클로저)는 2009년에 발표된 PHP 5.3부터 지원됩니다.
 
-PHP 5.4에서는 클로저를 특정 개체의 영역에 바인딩하는 기능이 추가되었습니다. 또한 대부분의 경우 익명 함수와 동일하게
+PHP 5.4에서는 클로저를 특정 객체의 영역에 바인딩하는 기능이 추가되었습니다. 또한 대부분의 경우 익명 함수와 동일하게
 사용할 수 있는 호출가능한 타입(callable) 지원이 강화되었습니다.
 
 * [PHP에서의 함수형 프로그래밍](/php-the-right-way/pages/Functional-Programming.html)에 대해 PHP: The Right Way 에서 정리한 내용 더 읽기
@@ -51,14 +51,14 @@ PHP는 Reflection API와 특수 매서드(Magic Method)같은 메커니즘을 �
 * [읽을거리: Overloading][overloading]
 
 
-[oop]: http://php.net/language.oop5
-[traits]: http://php.net/language.oop5.traits
-[anonymous-functions]: http://php.net/functions.anonymous
-[closure-class]: http://php.net/class.closure
+[oop]: https://secure.php.net/language.oop5
+[traits]: https://secure.php.net/language.oop5.traits
+[anonymous-functions]: https://secure.php.net/functions.anonymous
+[closure-class]: https://secure.php.net/class.closure
 [closures-rfc]: https://wiki.php.net/rfc/closures
-[callables]: http://php.net/language.types.callable
-[call-user-func-array]: http://php.net/function.call-user-func-array
-[magic-methods]: http://php.net/language.oop5.magic
-[reflection]: http://php.net/intro.reflection
-[overloading]: http://php.net/language.oop5.overloading
+[callables]: https://secure.php.net/language.types.callable
+[call-user-func-array]: https://secure.php.net/function.call-user-func-array
+[magic-methods]: https://secure.php.net/language.oop5.magic
+[reflection]: https://secure.php.net/intro.reflection
+[overloading]: https://secure.php.net/language.oop5.overloading
 

@@ -14,5 +14,5 @@ anchor:  standard_php_library
 * [SPL 영상강의 (Lynda.com 제공)(유료)][spllynda]
 
 
-[spl]: http://php.net/book.spl
-[spllynda]: http://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html
+[spl]: https://secure.php.net/book.spl
+[spllynda]: https://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html

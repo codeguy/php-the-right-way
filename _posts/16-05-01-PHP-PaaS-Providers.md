@@ -6,19 +6,20 @@ anchor:  php_paas_providers
 
 ## PHP PaaS 제공자 {#php_paas_providers_title}
 
-* [PagodaBox](https://pagodabox.io/)
 * [AppFog](https://www.ctl.io/appfog/)
-* [Heroku](https://devcenter.heroku.com/categories/php)
-* [fortrabbit](https://www.fortrabbit.com/)
-* [Engine Yard Cloud](https://www.engineyard.com/features)
-* [Red Hat OpenShift Platform](https://www.openshift.com/)
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
-* [Windows Azure](http://www.windowsazure.com/)
+* [Cloudways](https://www.cloudways.com/)
+* [Divio](https://www.divio.com/php/)
+* [Engine Yard Cloud](https://www.engineyard.com/features)
+* [fortrabbit](https://www.fortrabbit.com/)
 * [Google App Engine](https://cloud.google.com/appengine/docs/php/)
-* [Jelastic](http://jelastic.com/)
+* [Heroku](https://devcenter.heroku.com/categories/php-support)
+* [IBM Cloud](https://console.bluemix.net/docs/runtimes/php/getting-started.html#getting_started)
+* [Jelastic](https://jelastic.com/)
+* [Microsoft Azure](https://azure.microsoft.com/)
+* [Nanobox](https://nanobox.io/)
+* [Pivotal Web Services](https://run.pivotal.io/)
 * [Platform.sh](https://platform.sh/)
-* [Cloudways](https://www.cloudways.com/en/)
-* [IBM Bluemix Cloud Foundry](https://console.ng.bluemix.net/)
-* [Pivotal Web Service Cloud Foundry](https://run.pivotal.io/)
+* [Red Hat OpenShift](https://www.openshift.com/)
 
 위의 PaaS 제공자들이 어떤 버전을 사용하는지 확인하려면, [PHP Versions](http://phpversions.info/paas-hosting/)를 확인하세요.

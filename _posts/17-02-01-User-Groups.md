@@ -26,7 +26,7 @@ anchor:  user_groups
 
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: http://www.meetup.com/find/
-[php-ug]: http://php.ug/
+[php-ug]: https://php.ug/
 [NomadPHP]: https://nomadphp.com/
 [PHPWomen]: http://phpwomen.org/
 [php-wiki]: https://wiki.php.net/usergroups

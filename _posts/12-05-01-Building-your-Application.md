@@ -27,9 +27,11 @@ anchor:  building_and_deploying_your_application
 
 빌드 자동화와 배포를 도와주는 많은 오픈소스 도구들이 있습니다. PHP로 작성된 것도 있고 그렇지 않은 것도 있죠. PHP로 작성되지 않았다는 것보다는 필요한 작업을 잘 수행해주느냐 하는 것이 중요할 것입니다. 여기에서 몇가지를 소개합니다.
 
-[Phing]은 패키징, 배포, 테스팅 과정을 XML 빌드 파일 하나로 설정할 수 있습니다. [Apache Ant]를 기반으로 한 Phing은, 웹 어플리케이션을 설치하거나 업데이트할 때 필요한 PHP로 작성된 많은 종류의 작업을 기본적으로 지원하고 있고, 커스텀 작업을 추가하여 확장할 수도 있습니다. Phing은 오랜기간 유지된 단단하고 견고한 도구이지만, XML 파일로 설정을 다루는 방식때문에 약간 구식으로 보일 수도 있습니다. 
+[Phing]은 패키징, 배포, 테스팅 과정을 XML 빌드 파일 하나로 설정할 수 있습니다. [Apache Ant]를 기반으로 한 Phing은, 웹 어플리케이션을 설치하거나 업데이트할 때 필요한 PHP로 작성된 많은 종류의 작업을 기본적으로 지원하고 있고, 커스텀 작업을 추가하여 확장할 수도 있습니다. Phing은 오랜기간 유지된 단단하고 견고한 도구이지만, XML 파일로 설정을 다루는 방식때문에 약간 구식으로 보일 수도 있습니다.
 
 [Capistrano]는 하나 혹은 다수의 리모트 컴퓨터에서 구조화되고 반복가능한 커맨드를 실행시키려고 하는 *중고급 프로그래머*를 위한 시스템입니다. 기본적으로는 Ruby on Rails 어플리케이션을 배포할 수 있도록 구성되어 있지만, PHP 어플리케이션도 성공적으로 배포하고 있습니다. Capistrano를 잘 사용하려면 Ruby와 Rake에 대해서도 잘 알아야 합니다. Capistrano에 관심이 있는 PHP 개발자에게는 Dave Gardner의 [PHP Deployment with Capistrano][phpdeploy_capistrano]라는 블로그 포스트가 좋은 출발점이 될 것입니다.
+
+[Ansistrano]는 PHP, Python 및 Ruby와 같은 스크립팅 응용 프로그램의 배포 프로세스(배포 및 롤백)를 쉽게 관리할 수 있는 Ansible과 같은 역할을 합니다. [Capistrano]를 위한 Ansible 포트입니다. 이미 많은 PHP 회사에서 사용되고 있습니다.
 
 [Rocketeer]는 라라벨 프레임워크로부터 그 철학과 영감을 얻었습니다. 빠르고, 우아하며, 효과적인 기본값으로 쉽게 사용할 수 있는 것이 목표입니다. 여러 서버, 스테이지(stage), 원자적 배치와 배포를 병렬적으로 수행할 수 있습니다. 이 도구의 모든 것은 핫 스왑(hot swap)하거나 확장할 수 있으며, PHP로 작성되었습니다.
 
@@ -40,7 +42,6 @@ anchor:  building_and_deploying_your_application
 #### 더 읽어볼 만한 것들
 
 * [Apache Ant를 이용한 프로젝트 자동화][apache_ant_tutorial]
-* [Expert PHP Deployments][expert_php_deployments] - Capistrano, Phing, Vagrant로 배포하는 것에 관한 무료 도서
 * [Deploying PHP Applications][deploying_php_applications] - PHP 배포의 모범 사례와 도구에 관한 유료 도서
 
 ### 서버 프로비저닝
@@ -80,29 +81,29 @@ PHP 프로젝트에서 지속적인 통합 기법을 사용하는 방법에는 �
 
 * [Jenkins를 이용한 지속적인 통합][Jenkins]
 * [PHPCI를 이용한 지속적인 통합][PHPCI]
+* [PHP Censor를 이용한 지속적인 통합][PHP Censor]
 * [Teamcity를 이용한 지속적인 통합][Teamcity]
 
-
-[buildautomation]: http://en.wikipedia.org/wiki/Build_automation
-[Phing]: http://www.phing.info/
-[Apache Ant]: http://ant.apache.org/
-[Capistrano]: https://github.com/capistrano/capistrano/wiki
-[phpdeploy_capistrano]: http://www.davegardner.me.uk/blog/2012/02/13/php-deployment-with-capistrano/
-[phpdeploy_deployer]: http://www.sitepoint.com/deploying-php-applications-with-deployer/
+[buildautomation]: https://wikipedia.org/wiki/Build_automation
+[Phing]: https://www.phing.info/
+[Apache Ant]: https://ant.apache.org/
+[Capistrano]: http://capistranorb.com/
+[Ansistrano]: https://ansistrano.com
+[phpdeploy_deployer]: https://www.sitepoint.com/deploying-php-applications-with-deployer/
 [Chef]: https://www.chef.io/
 [chef_vagrant_and_ec2]: http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/
 [Chef_cookbook]: https://github.com/chef-cookbooks/php
 [Chef_tutorial]: https://www.youtube.com/playlist?list=PL11cZfNdwNyPnZA9D1MbVqldGuOWqbumZ
-[apache_ant_tutorial]: http://net.tutsplus.com/tutorials/other/automate-your-projects-with-apache-ant/
+[apache_ant_tutorial]: https://code.tutsplus.com/tutorials/automate-your-projects-with-apache-ant--net-18595
 [Travis CI]: https://travis-ci.org/
-[Jenkins]: http://jenkins-ci.org/
-[PHPCI]: http://www.phptesting.org/
-[Teamcity]: http://www.jetbrains.com/teamcity/
-[Deployer]: http://deployer.org/
+[Jenkins]: https://jenkins.io/
+[PHPCI]: https://github.com/dancryer/phpci
+[PHP Censor]: https://github.com/php-censor/php-censor
+[Teamcity]: https://www.jetbrains.com/teamcity/
+[Deployer]: https://deployer.org/
 [Rocketeer]: http://rocketeer.autopergamene.eu/
-[Magallanes]: http://magephp.com/
-[expert_php_deployments]: http://viccherubini.com/assets/Expert-PHP-Deployments.pdf
-[deploying_php_applications]: http://www.deployingphpapplications.com
+[Magallanes]: https://www.magephp.com/
+[deploying_php_applications]: https://deployingphpapplications.com/
 [Ansible]: https://www.ansible.com/
 [Puppet]: https://puppet.com/
 [ansible_for_devops]: https://leanpub.com/ansible-for-devops

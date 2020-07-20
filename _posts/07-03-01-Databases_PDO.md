@@ -63,14 +63,14 @@ $stmt->execute();
 * [알아보기: PDO][Learn about PDO]
 
 데이터베이스 연결을 사용할 때에는 데이터베이스 연결을 잘 닫는데 신경쓰지 않았을 경우에 한 번 열어 둔 데이터베이스
-연결이 닫히지 않아서 더이상 새로운 연결을 할 수 없는 경우가 발생하기도 합니다. PDO를 사용하면 PDO 개체가 파괴될 때
+연결이 닫히지 않아서 더이상 새로운 연결을 할 수 없는 경우가 발생하기도 합니다. PDO를 사용하면 PDO 객체가 파괴될 때
 암시적으로 데이터베이스 연결을 닫아 줍니다. 여러분이 영구적인 데이터베이스 연결을 사용하도록 설정해서 어플리케이션을
 돌리고 있는게 아니라면 스크립트의 실행히 종료될 때 PHP가 자동으로 데이터베이스 연결을 닫아줄 것입니다.
 
 * [알아보기: PDO 연결][Learn about PDO connections]
 
 
-[pdo]: http://php.net/pdo
+[pdo]: https://secure.php.net/pdo
 [SQL Injection]: http://wiki.hashphp.org/Validation
-[Learn about PDO]: http://php.net/book.pdo
-[Learn about PDO connections]: http://php.net/pdo.connections
+[Learn about PDO]: https://secure.php.net/book.pdo
+[Learn about PDO connections]: https://secure.php.net/pdo.connections

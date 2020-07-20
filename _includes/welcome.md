@@ -18,7 +18,6 @@ PHP를 사용하는 사람들이 그동안 생각해보지 않았을지도 모�
 _PHP: The Right Way_ 는 다양한 언어로 변역되어 있습니다.
 
 * [English](http://www.phptherightway.com)
-* [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
 * [Español](http://phpdevenezuela.github.io/php-the-right-way)
 * [Français](http://eilgin.github.io/php-the-right-way/)
 * [Indonesia](http://id.phptherightway.com)
@@ -37,8 +36,8 @@ _PHP: The Right Way_ 는 다양한 언어로 변역되어 있습니다.
 * [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
 * [한국어판](http://modernpug.github.io/php-the-right-way)
 * [日本語](http://ja.phptherightway.com)
-* [简体中文](http://laravel-china.github.io/php-the-right-way/)
-* [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
+* [简体中文](https://laravel-china.github.io/php-the-right-way/)
+* [繁體中文](https://laravel-taiwan.github.io/php-the-right-way)
 
 ## Book
 
@@ -46,15 +45,7 @@ The most recent version of _PHP: The Right Way_ is also available in PDF, EPUB a
 
 ## 프로젝트에 기여하기 {#how_to_contribute}
 
-여러분의 도움이 있으면 이 사이트를 PHP 프로그래밍을 새로 시작하는 사람들을 위한 최고의 문서로 만들 수 있습니다! [GitHub 저장소를 통해서 도와주세요.][1]
-
-## 널리 알려주세요! {#spread_the_word}
-
-여러분의 웹사이트에 걸어둘 수 있는 _PHP: The Right Way_ 배너 이미지들이 있습니다. 여러분이 _PHP: The Right Way_ 를
-성원하고 있다는 것을 보여주고, 또 새로운 PHP 개발자들이 어디에 가면 좋은 정보를 찾을 수 있는지 알 수 있게 해주세요.
-
-[배너 이미지 보기][3]
+여러분의 도움이 있으면 이 사이트를 PHP 프로그래밍을 새로 시작하는 사람들을 위한 최고의 문서로 만들 수 있습니다! [GitHub 저장소를 통해서 도와주세요.][2]
 
 [1]: https://leanpub.com/phptherightway
-[2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
-[3]: /banners.html
+[2]: https://github.com/ModernPUG/php-the-right-way/tree/gh-pages

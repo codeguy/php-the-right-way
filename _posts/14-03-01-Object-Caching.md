@@ -1,13 +1,13 @@
 ---
-title:   개체 캐시 
+title:   객체 캐시 
 isChild: true
 anchor:  object_caching
 ---
 
-## 개체 캐시 {#object_caching_title}
+## 객체 캐시 {#object_caching_title}
 
-개체(object) 인스턴스 중에 어떤 것을 캐시하는 게 성능 향상에 도움을 줄 때가 있습니다. 불러오는 비용이 큰 데이터나 한
-번 데이터를 불러오면 그 뒤로는 별로 바뀔 일이 없는 데이터베이스 호출 같은 것들 말입니다. 개체 캐시 소프트웨어를
+객체(object) 인스턴스 중에 어떤 것을 캐시하는 게 성능 향상에 도움을 줄 때가 있습니다. 불러오는 비용이 큰 데이터나 한
+번 데이터를 불러오면 그 뒤로는 별로 바뀔 일이 없는 데이터베이스 호출 같은 것들 말입니다. 객체 캐시 소프트웨어를
 사용해서 이런 데이터를 메모리에 보관해두면 다음부터는 아주 빠르게 접근할 수 있습니다. 그래서 상당한 성능 향상을 얻을
 수 있고 데이터베이스 접속 횟수가 줄어 데이터베이스 서버의 부담도 줄어듭니다.
 
@@ -15,7 +15,7 @@ anchor:  object_caching
 도구를 사용할만한 이유가 또 있었네요. APCu, XCache, WinCache 모두 메모리 캐시에 여러분의 데이터를 보관할 수 있는 API를
 제공합니다.
 
-가장 널리 사용되고 있는 메모리 개체 캐시 도구는 APCu와 memcached입니다. APCu는 개체 캐싱을 위한 훌륭한 선택지입니다.
+가장 널리 사용되고 있는 메모리 객체 캐시 도구는 APCu와 memcached입니다. APCu는 객체 캐싱을 위한 훌륭한 선택지입니다.
 여러분의 데이터를 캐시할 수 있는 간단한 API를 제공하는데다 설치와 설정도 쉽습니다. 딱하나 단점이라면 설치된 서버로만
 범위가 한정된다는 것입니다. 반면에 memcached는 별도의 서버에 설치해서 네트워크로 접근할 수도 있습니다. 그래서 아주
 빠른 데이터 저장소를 중앙에 두고 여러 시스템에서 데이터를 가져다 쓰는 구조를 만들 수도 있습니다.
@@ -42,15 +42,15 @@ if ($data === false) {
 print_r($data);
 {% endhighlight %}
 
-PHP 5.5보다 낮은 버전에서는 APC가 개체 캐시와 바이트코드 캐시 기능을 모두 제공했습니다. 하지만 PHP 5.5부터는 
-내장된 바이트코드 캐시(OPcache)가 있으므로, APC 프로젝트는 APC의 개체 캐시 기능만을 분리하여 제공하는 APCu라는
+PHP 5.5보다 낮은 버전에서는 APC가 객체 캐시와 바이트코드 캐시 기능을 모두 제공했습니다. 하지만 PHP 5.5부터는 
+내장된 바이트코드 캐시(OPcache)가 있으므로, APC 프로젝트는 APC의 객체 캐시 기능만을 분리하여 제공하는 APCu라는
 프로젝트로 변화하였습니다.
 
-### 인기있는 개체 캐시 도구들에 대해서 더 알아보기
+### 인기있는 객체 캐시 도구들에 대해서 더 알아보기
 
 * [APCu](https://github.com/krakjoe/apcu)
-* [APC Functions](http://php.net/ref.apc)
-* [Memcached](http://memcached.org/)
-* [Redis](http://redis.io/)
-* [XCache APIs](http://xcache.lighttpd.net/wiki/XcacheApi)
-* [WinCache Functions](http://php.net/ref.wincache)
+* [APC Functions](https://secure.php.net/ref.apc)
+* [Memcached](https://memcached.org/)
+* [Redis](https://redis.io/)
+* [XCache APIs](https://xcache.lighttpd.net/wiki/XcacheApi)
+* [WinCache Functions](https://secure.php.net/ref.wincache)
