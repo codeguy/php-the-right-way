@@ -14,6 +14,6 @@ anchor:  common_directory_structure
 
 [Paul M. Jones]는 PHP 영역에서 수만 가지 github 프로젝트의 일반적인 관행에 대한 환상적인 연구를 수행했습니다. 그는 이 연구를 기반으로 표준 파일 및 디렉토리 구조 인 [Standard PHP Package Skeleton]을 컴파일했습니다. 이 디렉토리 구조에서 `DocumentRoot`는 `public/`을 가리키고, 단위 테스트는 `tests/` 디렉토리에 있어야하고, [composer]가 설치 한 타사 라이브러리는 `vendor/` 디렉토리에 있어야합니다. 다른 파일과 디렉토리의 경우 [표준 PHP 패키지 스켈레톤]을 준수하는 것이 프로젝트의 기여자들에게도 도움 될 것입니다.
 
-[Paul M. Jones]: https://twitter.com/pmjones
+[Paul M. Jones]: http://paul-m-jones.com/
 [Standard PHP Package Skeleton]: https://github.com/php-pds/skeleton
 [Composer]: /#composer_and_packagist
