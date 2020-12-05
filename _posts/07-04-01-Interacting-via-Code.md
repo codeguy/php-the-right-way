@@ -77,7 +77,8 @@ class FooModel
         $this->db = $db;
     }
 
-    public function getAllFoos() {
+    public function getAllFoos()
+    {
         return $this->db->query('SELECT * FROM table');
     }
 }
