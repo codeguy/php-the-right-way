@@ -29,7 +29,5 @@ document controls everything that is installed on the virtual machine.
 [Vagrant]: https://www.vagrantup.com/
 [Puppet]: https://puppet.com/
 [Chef]: https://www.chef.io/
-[Rove]: http://rove.io/
-[Puphpet]: https://puphpet.com/
-[Protobox]: https://www.getprotobox.com/
+[Puphpet]: https://github.com/puphpet/puphpet
 [Phansible]: http://phansible.com/
