@@ -8,7 +8,7 @@ anchor:  date_and_time
 
 PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There
 are many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to
-most common uses. It can handle time zones, but that is outside this short introduction.
+most common uses. DateTime can handle time zones, but that is outside the scope of this short introduction.
 
 To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
 or do `new DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
@@ -23,8 +23,8 @@ echo 'Start date: ' . $start->format('Y-m-d') . "\n";
 {% endhighlight %}
 
 Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expect same number of seconds in every day, both daylight
-saving and timezone alterations will break that assumption. Use date intervals instead. To calculate date difference
+take a DateInterval as an argument. Do not write code that expects the same number of seconds in every day. Both daylight
+saving and time zone alterations will break that assumption. Use date intervals instead. To calculate date difference
 use the `diff()` method. It will return new DateInterval, which is super easy to display.
 
 {% highlight php %}
@@ -38,7 +38,7 @@ echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n"
 // Difference: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
-On DateTime objects you can use standard comparison:
+You can use standard comparisons on DateTime objects:
 
 {% highlight php %}
 <?php
