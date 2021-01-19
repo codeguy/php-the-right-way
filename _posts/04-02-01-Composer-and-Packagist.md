@@ -86,7 +86,7 @@ that can monitor dependencies and send you alerts on updates.
 
 ### Checking your dependencies for security issues
 
-The [Security Advisories Checker] is a web service and a command-line tool, both will examine your `composer.lock`
+The [Local PHP Security Checker] is a command-line tool, which will examine your `composer.lock`
 file and tell you if you need to update any of your dependencies.
 
 ### Handling global dependencies with Composer
@@ -108,6 +108,6 @@ packages' binaries available everywhere, you'd then add the `~/.composer/vendor/
 [Packagist]: https://packagist.org/
 [Twig]: https://twig.symfony.com/
 [libraries.io]: https://libraries.io/
-[Security Advisories Checker]: https://security.symfony.com/
+[Local PHP Security Checker]: https://github.com/fabpot/local-php-security-checker
 [Learn about Composer]: https://getcomposer.org/doc/00-intro.md
 [ComposerSetup]: https://getcomposer.org/Composer-Setup.exe
