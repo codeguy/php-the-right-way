@@ -8,7 +8,7 @@ anchor:  mac_setup
 
 ম্যাক ওএস এ পিএইচপি নিয়ে প্রিপেকেজড আসে তবে এটি সর্বশেষতম স্থিতিশীল রিলিজের পিছনে সাধারণত কিছুটা পিছনে থাকে। ম্যাক ওএস এ সর্বশেষতম পিএইচপি সংস্করণ ইনস্টল করার একাধিক উপায় রয়েছে। 
 
-### Install PHP via Homebrew
+### হোমব্রিউয়ের মাধ্যমে পিএইচপি ইনস্টল করুন
 
 [Homebrew] is a package manager for macOS that helps you easily install PHP and various extensions. The Homebrew core repository provides "formulae" for PHP 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, and PHP 8.0. Install the latest version with this command:
 
