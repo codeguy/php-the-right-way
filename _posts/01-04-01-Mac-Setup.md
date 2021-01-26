@@ -1,11 +1,12 @@
 ---
+title: ম্যাক ইনস্টল
 isChild: true
 anchor:  mac_setup
 ---
 
-## Mac Setup {#mac_setup_title}
+## ম্যাক ইনস্টল {#mac_setup_title}
 
-macOS comes prepackaged with PHP but it is normally a little behind the latest stable release. There are multiple ways to install the latest PHP version on macOS.
+ম্যাক ওএস এ পিএইচপি নিয়ে প্রিপেকেজড আসে তবে এটি সর্বশেষতম স্থিতিশীল রিলিজের পিছনে সাধারণত কিছুটা পিছনে থাকে। ম্যাক ওএস এ সর্বশেষতম পিএইচপি সংস্করণ ইনস্টল করার একাধিক উপায় রয়েছে। 
 
 ### Install PHP via Homebrew
 
