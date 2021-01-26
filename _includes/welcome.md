@@ -1,22 +1,4 @@
-# Welcome
-
-There's a lot of outdated information on the Web that leads new PHP users astray,
-propagating bad practices and insecure code. _PHP: The Right Way_ is an easy-to-read,
-quick reference for PHP popular coding standards, links to authoritative tutorials
-around the Web and what the contributors consider to be best practices at the present
-time.
-
-_There is no canonical way to use PHP_. This website aims to introduce new PHP
-developers to some topics which they may not discover until it is too late, and aims
-to give seasoned pros some fresh ideas on those topics they've been doing for years
-without ever reconsidering. This website will also not tell you which tools to use, but
-instead offer suggestions for multiple options, when possible explaining the differences
-in approach and use-case.
-
-This is a living document and will continue to be updated with more helpful information
-and examples as they become available.
-
-স্বাগতম
+# স্বাগতম
 
 ওয়েবে প্রচুর পুরানো তথ্য রয়েছে যা নতুন পিএইচপি ব্যবহারকারীদের ভুল পথে চালিত করে, খারাপ অনুশীলন এবং অসুরক্ষিত কোড প্রচার করে। _PHP: The Right Way_ হচ্ছে সহজেই পঠনযোগ্য, পিএইচপি জনপ্রিয় কোডিং স্ট্যান্ডার্ডগুলির দ্রুত রেফারেন্স, ওয়েবে কর্তৃত্বমূলক টিউটোরিয়ালের লিঙ্ক এবং যা অবদানকারীরা বর্তমান সময়ে সেরা অনুশীলন হিসাবে বিবেচনা করে।
 
@@ -50,13 +32,13 @@ _PHP: The Right Way_ বিভিন্ন ভাষায় অনূদিত �
 * [简体中文](https://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](https://laravel-taiwan.github.io/php-the-right-way)
 
-## Book
+## বই
 
-The most recent version of _PHP: The Right Way_ is also available in PDF, EPUB and MOBI formats. [Go to Leanpub][1]
+অতি সাম্প্রতিক সংস্করণ _PHP: The Right Way_ পিডিএফ, ইপিইউবি এবং এমওবিআই ফর্ম্যাটেও পাওয়া যাবে [লিনপাব এ যাওয়ার জন্য][1]
 
-## How to Contribute
+## কীভাবে অবদান রাখবেন
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][2]
+এই ওয়েবসাইটটিকে নতুন পিএইচপি প্রোগ্রামারদের সেরা উৎস্য হিসাবে গড়ে তুলতে সহায়তা করুন! [গিটহাবে অবদান রাখুন][2] 
 
 [1]: https://leanpub.com/phptherightway
 [2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
