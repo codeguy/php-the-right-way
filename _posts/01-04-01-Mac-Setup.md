@@ -20,6 +20,8 @@ brew install php@8.0
 
 You can switch between Homebrew PHP versions by modifying your `PATH` variable. Alternatively, you can use [brew-php-switcher][brew-php-switcher] to switch PHP versions automatically.
 
+আপনি আপনার PATH সংশোধন করে হোমব্রিউ পিএইচপি সংস্করণগুলির মধ্যে স্যুইচ করতে পারেন। বিকল্পভাবে, পিএইচপি সংস্করণগুলি স্বয়ংক্রিয়ভাবে স্যুইচ করার জন্য আপনি [ব্রিউ-পিএইচপি-স্যুইচার][brew-php-switcher] ব্যবহার করতে পারেন।
+
 ### Install PHP via Macports
 
 The [MacPorts] Project is an open-source community initiative to design an
