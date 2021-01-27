@@ -33,7 +33,7 @@ MacPorts supports pre-compiled binaries, so you don't need to recompile every
 dependency from the source tarball files, it saves your life if you don't
 have any package installed on your system.
 
-[ম্যাকপোর্টস][MacPorts] প্রকল্পটি একটি ডিজাইন করার জন্য একটি মুক্ত উত্স সম্প্রদায় উদ্যোগ
+[ম্যাকপোর্টস][MacPorts] প্রজেক্ট একটি ডিজাইন করার জন্য একটি ওপেন সোর্স সম্প্রদায় উদ্যোগ
 কোনওটি সংকলন, ইনস্টল এবং আপগ্রেড করার জন্য সহজেই ব্যবহারযোগ্য সিস্টেম
 ওএস এক্স অপারেটিং-এ কমান্ড-লাইন, এক্স 11 বা অ্যাকোয়া ভিত্তিক ওপেন-সোর্স সফ্টওয়্যার
 পদ্ধতি.
