@@ -20,9 +20,9 @@ brew install php@8.0
 
 You can switch between Homebrew PHP versions by modifying your `PATH` variable. Alternatively, you can use [brew-php-switcher][brew-php-switcher] to switch PHP versions automatically.
 
-আপনি আপনার PATH সংশোধন করে হোমব্রিউ পিএইচপি সংস্করণগুলির মধ্যে স্যুইচ করতে পারেন। বিকল্পভাবে, পিএইচপি সংস্করণগুলি স্বয়ংক্রিয়ভাবে স্যুইচ করার জন্য আপনি [ব্রিউ-পিএইচপি-স্যুইচার][brew-php-switcher] ব্যবহার করতে পারেন।
+আপনি আপনার `PATH` ভ্যারিয়েবল সংশোধন করে হোমব্রিউ পিএইচপি সংস্করণগুলির মধ্যে স্যুইচ করতে পারেন। বিকল্পভাবে, পিএইচপি সংস্করণগুলি স্বয়ংক্রিয়ভাবে স্যুইচ করার জন্য আপনি [ব্রিউ-পিএইচপি-স্যুইচার][brew-php-switcher] ব্যবহার করতে পারেন।
 
-### Install PHP via Macports
+## ম্যাকপোর্টস এর মাধ্যমে পিএইচপি ইনস্টল
 
 The [MacPorts] Project is an open-source community initiative to design an
 easy-to-use system for compiling, installing, and upgrading either
@@ -32,6 +32,15 @@ system.
 MacPorts supports pre-compiled binaries, so you don't need to recompile every
 dependency from the source tarball files, it saves your life if you don't
 have any package installed on your system.
+
+[ম্যাকপোর্টস][MacPorts] প্রকল্পটি একটি ডিজাইন করার জন্য একটি মুক্ত উত্স সম্প্রদায় উদ্যোগ
+কোনওটি সংকলন, ইনস্টল এবং আপগ্রেড করার জন্য সহজেই ব্যবহারযোগ্য সিস্টেম
+ওএস এক্স অপারেটিং-এ কমান্ড-লাইন, এক্স 11 বা অ্যাকোয়া ভিত্তিক ওপেন-সোর্স সফ্টওয়্যার
+পদ্ধতি.
+
+ম্যাকপোর্টস প্রাক-সংকলিত বাইনারিগুলিকে সমর্থন করে, তাই আপনাকে প্রত্যেকটি পুনরায় সংকলনের প্রয়োজন হবে না
+উত্স টার্বল ফাইলগুলি থেকে নির্ভরতা, যদি আপনি না করেন তবে এটি আপনার জীবন বাঁচায়
+আপনার সিস্টেমে কোনও প্যাকেজ ইনস্টল করা আছে।
 
 At this point, you can install `php54`, `php55`, `php56`, `php70`, `php71`, `php72`, `php73`, `php74` or `php80` using the `port install` command, for example:
 
