@@ -3,15 +3,7 @@ isChild: true
 anchor:  basic_concept
 ---
 
-## Basic Concept {#basic_concept_title}
-
-We can demonstrate the concept with a simple, yet naive example.
-
-Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the adapter in the
-constructor and create a hard dependency. This makes testing difficult and means the `Database` class is very tightly
-coupled to the adapter.
-
-## বেসিক ধারণা {# বেসিক_কেন্সিটি_ শিরোনাম}
+## বেসিক ধারণা  {#basic_concept_title}
 
 আমরা একটি সাধারণ, তবুও নিরীহ উদাহরণ দিয়ে ধারণাটি প্রদর্শন করতে পারি।
 
