@@ -55,9 +55,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class its dependency rather than creating it itself. We could even create a method
-that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we
-could set it directly.
+
 
 এখন আমরা `ডেটাবেস` ক্লাসটি তৈরি করার পরিবর্তে এর নির্ভরতা দিচ্ছি। আমরা এমনকি একটি পদ্ধতি তৈরি করতে পারে
 এটি নির্ভরতার একটি যুক্তি গ্রহণ করবে এবং সেভাবে সেট করবে, বা যদি $ $ অ্যাডাপ্টারের সম্পত্তিটি আমরা জনসাধারণের ছিলাম
