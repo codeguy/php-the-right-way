@@ -4,11 +4,6 @@ anchor: virtualization
 
 # Virtualization {#virtualization_title}
 
-Running your application on different environments in development and production can lead to strange bugs popping up
-when you go live. It's also tricky to keep different development environments up to date with the same version for all
-libraries used when working with a team of developers.
+বিকাশ এবং উত্পাদনের বিভিন্ন পরিবেশে আপনার অ্যাপ্লিকেশনটি চালানো আপনার লাইভে যাওয়ার সময় অদ্ভুত বাগগুলি পপ আপ করতে পারে। বিকাশকারীদের একটি দলের সাথে কাজ করার সময় ব্যবহৃত সমস্ত লাইব্রেরির জন্য একই সংস্করণ সহ বিভিন্ন বিকাশ পরিবেশকে যুগোপযোগী রাখাও মুশকিল।
 
-If you are developing on Windows and deploying to Linux (or anything non-Windows) or are developing in a team, you
-should consider using a virtual machine. This sounds tricky, but besides the widely known virtualization environments
-like VMware or VirtualBox, there are additional tools that may help you setting up a virtual environment in a few easy
-steps.
+আপনি যদি উইন্ডোজে বিকাশ করছেন এবং লিনাক্সে (বা উইন্ডোজবিহীন কিছু) স্থাপন করছেন বা কোনও দলে বিকাশ করছেন, আপনার ভার্চুয়াল মেশিন ব্যবহার করা উচিত। এটি জটিল বলে মনে হচ্ছে তবে ভিএমওয়্যার বা ভার্চুয়ালবক্সের মতো বহুল পরিচিতিযুক্ত ভার্চুয়ালাইজেশন পরিবেশের পাশাপাশি আরও কয়েকটি সরঞ্জাম রয়েছে যা আপনাকে কয়েকটি সহজ পদক্ষেপে ভার্চুয়াল পরিবেশ স্থাপনে সহায়তা করতে পারে। 
