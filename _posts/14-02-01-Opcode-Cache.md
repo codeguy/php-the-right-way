@@ -19,6 +19,7 @@ Read more about opcode caches:
 * [XCache]
 * [WinCache] (extension for MS Windows Server)
 * [list of PHP accelerators on Wikipedia][PHP_accelerators]
+* [PHP Preloading] - PHP >= 7.4
 
 
 [opcache-book]: https://secure.php.net/book.opcache
@@ -27,3 +28,4 @@ Read more about opcode caches:
 [Zend Optimizer+]: https://github.com/zendtech/ZendOptimizerPlus
 [WinCache]: https://www.iis.net/downloads/microsoft/wincache-extension
 [PHP_accelerators]: https://wikipedia.org/wiki/List_of_PHP_accelerators
+[PHP Preloading]: https://www.php.net/manual/fr/opcache.preloading.php
