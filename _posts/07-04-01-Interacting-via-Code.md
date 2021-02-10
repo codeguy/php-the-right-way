@@ -97,4 +97,3 @@ real problem if you ever want to [unit-test](/#unit-testing) your application.
 
 
 [MVC]: https://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
-[Creating a Data Class]: https://phpbridge.org/intro-to-php/creating_a_data_class
