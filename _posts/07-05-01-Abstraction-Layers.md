@@ -15,6 +15,7 @@ then a little overhead will be worth it for the sake of code cleanliness.
 Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4] namespace standards so can be
 installed in any application you like:
 
+* [Atlas][5]
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
 * [Propel][7]
@@ -24,6 +25,7 @@ installed in any application you like:
 [1]: https://secure.php.net/book.pdo
 [2]: https://www.doctrine-project.org/projects/dbal.html
 [4]: https://packages.zendframework.com/docs/latest/manual/en/index.html#zendframework/zend-db
+[5]: https://atlasphp.io
 [6]: https://github.com/auraphp/Aura.Sql
 [7]: http://propelorm.org/
 [psr0]: https://www.php-fig.org/psr/psr-0/
