@@ -414,21 +414,3 @@ Since PHP 5.3, it is possible to leave out the middle part of the ternary operat
 Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
 
 * [Ternary operators](http://php.net/language.operators.comparison)
-
-## Variable declarations
-
-At times, coders attempt to make their code "cleaner" by declaring predefined variables with a different name. What
-this does in reality is to double the memory consumption of said script. For the example below, let us say an example
-string of text contains 1MB worth of data, by copying the variable you've increased the scripts execution to 2MB.
-
-{% highlight php %}
-<?php
-$about = 'A very long string of text';    // uses 2MB memory
-echo $about;
-
-// vs
-
-echo 'A very long string of text';        // uses 1MB memory
-{% endhighlight %}
-
-* [Performance tips](http://web.archive.org/web/20140625191431/https://developers.google.com/speed/articles/optimizing-php)
