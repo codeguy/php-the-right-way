@@ -19,6 +19,23 @@ defaults:
       values:
           sitemap: false
 
-exclude: ['CNAME', 'CONTRIBUTING.md', 'LICENSE', 'README.md', 'pages/example.md', 'vendor']
+# Excludes should be appended to the default
+# https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml#L37-L55
+exclude:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+   - CNAME
+   - CONTRIBUTING.md
+   - LICENSE
+   - README.md
+   - pages/example.md
 
 future: true
