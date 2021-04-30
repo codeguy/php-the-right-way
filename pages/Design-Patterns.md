@@ -54,8 +54,8 @@ print_r($veyron->getMakeAndModel()); // outputs "Bugatti Veyron"
 This code uses a factory to create the Automobile object. There are two possible benefits to building your code this
 way; the first is that if you need to change, rename, or replace the Automobile class later on you can do so and you
 will only have to modify the code in the factory, instead of every place in your project that uses the Automobile class.
-The second possible benefit is that if creating the object is a complicated job you can do all of the work in the
-factory, instead of repeating it every time you want to create a new instance.
+The second possible benefit is that, if creating the object is a complicated job, you can do all of the work in the
+factory instead of repeating it every time you want to create a new instance.
 
 Using the factory pattern isn't always necessary (or wise). The example code used here is so simple that a factory
 would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
