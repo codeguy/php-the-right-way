@@ -27,11 +27,11 @@ Let's write a simple "Hello, $name" CLI program. To try it out, create a file na
 {% highlight php %}
 <?php
 if ($argc !== 2) {
-    echo "Usage: php hello.php <name>.\n";
+    echo "Usage: php hello.php <name>" . PHP_EOL;
     exit(1);
 }
 $name = $argv[1];
-echo "Hello, $name\n";
+echo "Hello, $name" . PHP_EOL;
 {% endhighlight %}
 
 PHP sets up two special variables based on the arguments your script is run with. [`$argc`][argc] is an integer
