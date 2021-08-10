@@ -22,5 +22,5 @@ generally promote the creating of a "female friendly" and professional atmospher
 [meetup]: http://www.meetup.com/find/
 [php-ug]: https://php.ug/
 [NomadPHP]: https://nomadphp.com/
-[PHPWomen]: http://phpwomen.org/
+[PHPWomen]: https://twitter.com/PHPWomen
 [php-wiki]: https://wiki.php.net/usergroups
