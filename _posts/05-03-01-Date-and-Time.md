@@ -19,7 +19,7 @@ output.
 $raw = '22. 11. 1968';
 $start = DateTime::createFromFormat('d. m. Y', $raw);
 
-echo 'Start date: ' . $start->format('Y-m-d') . "\n";
+echo 'Start date: ' . $start->format('Y-m-d') . PHP_EOL;
 {% endhighlight %}
 
 Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
@@ -34,7 +34,7 @@ $end = clone $start;
 $end->add(new DateInterval('P1M6D'));
 
 $diff = $end->diff($start);
-echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . "\n";
+echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . PHP_EOL;
 // Difference: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
@@ -43,8 +43,7 @@ You can use standard comparisons on DateTime objects:
 {% highlight php %}
 <?php
 if ($start < $end) {
-    echo "Start is before the end!\n";
-}
+    echo "Start is before the end!" . PHP_EOL;}
 {% endhighlight %}
 
 One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
