@@ -49,7 +49,7 @@ You should read the `CONTRIBUTING.md` file for precise instructions and tips. Bu
 * [Türkçe](http://hkulekci.github.io/php-the-right-way/)
 * [български](http://bg.phptherightway.com)
 * [Русский язык](http://getjump.github.io/ru-php-the-right-way)
-* [Українська](http://iflista.github.com/php-the-right-way)
+* [Українська](http://iflista.github.io/php-the-right-way/)
 * [العربية](https://adaroobi.github.io/php-the-right-way/)
 * [فارسى](http://novid.github.io/php-the-right-way/)
 * [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
