@@ -19,8 +19,8 @@ generally promote the creating of a "female friendly" and professional atmospher
 [Read about User Groups on the PHP Wiki][php-wiki]
 
 [google]: https://www.google.com/search?q=php+user+group+near+me
-[meetup]: http://www.meetup.com/find/
+[meetup]: https://www.meetup.com/find/
 [php-ug]: https://php.ug/
 [NomadPHP]: https://nomadphp.com/
-[PHPWomen]: http://phpwomen.org/
+[PHPWomen]: https://twitter.com/PHPWomen
 [php-wiki]: https://wiki.php.net/usergroups
