@@ -14,7 +14,7 @@ This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 _PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
 developers know where to find good information!
 
-[See Banner Images](http://www.phptherightway.com/banners.html)
+[See Banner Images](https://www.phptherightway.com/banners.html)
 
 ## How to Contribute
 
@@ -33,30 +33,30 @@ You should read the `CONTRIBUTING.md` file for precise instructions and tips. Bu
 
 ## Where
 
-<http://www.phptherightway.com>
+<https://www.phptherightway.com>
 
-* [English](http://www.phptherightway.com)
-* [Deutsch](http://rwetzlmayr.github.io/php-the-right-way)
-* [Español](http://phpdevenezuela.github.io/php-the-right-way)
-* [Français](http://eilgin.github.io/php-the-right-way/)
-* [Indonesia](http://id.phptherightway.com)
-* [Italiano](http://it.phptherightway.com)
-* [Polski](http://pl.phptherightway.com)
-* [Português do Brasil](http://br.phptherightway.com)
+* [English](https://www.phptherightway.com)
+* [Deutsch](https://rwetzlmayr.github.io/php-the-right-way)
+* [Español](https://phpdevenezuela.github.io/php-the-right-way)
+* [Français](https://eilgin.github.io/php-the-right-way/)
+* [Indonesia](https://id.phptherightway.com)
+* [Italiano](https://it.phptherightway.com)
+* [Polski](https://pl.phptherightway.com)
+* [Português do Brasil](https://br.phptherightway.com)
 * [Română](https://bgui.github.io/php-the-right-way/)
-* [Slovenščina](http://sl.phptherightway.com)
-* [Srpski](http://phpsrbija.github.io/php-the-right-way/)
-* [Türkçe](http://hkulekci.github.io/php-the-right-way/)
-* [български](http://bg.phptherightway.com)
-* [Русский язык](http://getjump.github.io/ru-php-the-right-way)
-* [Українська](http://iflista.github.io/php-the-right-way/)
+* [Slovenščina](https://sl.phptherightway.com)
+* [Srpski](https://phpsrbija.github.io/php-the-right-way/)
+* [Türkçe](https://hkulekci.github.io/php-the-right-way/)
+* [български](https://bg.phptherightway.com)
+* [Русский язык](https://getjump.github.io/ru-php-the-right-way)
+* [Українська](https://iflista.github.io/php-the-right-way/)
 * [العربية](https://adaroobi.github.io/php-the-right-way/)
-* [فارسى](http://novid.github.io/php-the-right-way/)
+* [فارسى](https://novid.github.io/php-the-right-way/)
 * [ภาษาไทย](https://apzentral.github.io/php-the-right-way/)
-* [한국어판](http://modernpug.github.io/php-the-right-way)
-* [日本語](http://ja.phptherightway.com)
-* [简体中文](http://laravel-china.github.io/php-the-right-way/)
-* [繁體中文](http://laravel-taiwan.github.io/php-the-right-way)
+* [한국어판](https://modernpug.github.io/php-the-right-way)
+* [日本語](https://ja.phptherightway.com)
+* [简体中文](https://laravel-china.github.io/php-the-right-way/)
+* [繁體中文](https://laravel-taiwan.github.io/php-the-right-way)
 
 ### Translations
 
@@ -79,13 +79,13 @@ There's been a lot of discussion lately about how the PHP community lacks suffic
 
 ## Who
 
-My name is [Josh Lockhart](http://twitter.com/codeguy). I'm the author of the [Slim Framework](http://www.slimframework.com/), and I work for [New Media Campaigns](http://www.newmediacampaigns.com/).
+My name is [Josh Lockhart](https://twitter.com/codeguy). I'm the author of the [Slim Framework](https://www.slimframework.com/), and I work for [New Media Campaigns](https://www.newmediacampaigns.com/).
 
 ### Collaborators
 
-* [Kris Jordan](http://krisjordan.com/)
-* [Phil Sturgeon](http://philsturgeon.co.uk/)
+* [Kris Jordan](https://krisjordan.com/)
+* [Phil Sturgeon](https://phil.tech/)
 
 ## License
 
-[Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+[Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-nc-sa/3.0/)
