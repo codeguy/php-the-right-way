@@ -49,7 +49,7 @@ to other formats besides `.mo/.po` files. Can be useful if you need to integrate
 parts of the system, like a JavaScript interface.
 - [symfony/translation][symfony]: supports a lot of different formats, but recommends using verbose XLIFF's. Doesn't
 include helper functions nor a built-in extractor, but supports placeholders using `strtr()` internally.
-- [zend/i18n][zend]: supports array and INI files, or Gettext formats. Implements a caching layer to save you from
+- [laminas/laminas-i18n][laminas]: supports array and INI files, or Gettext formats. Implements a caching layer to save you from
 reading the filesystem every time. It also includes view helpers, and locale-aware input filters and validators.
 However, it has no message extractor.
 
@@ -413,7 +413,7 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [aura-intl]: https://github.com/auraphp/Aura.Intl
 [oscarotero]: https://github.com/oscarotero/Gettext
 [symfony]: https://symfony.com/doc/current/components/translation.html
-[zend]: https://docs.zendframework.com/zend-i18n/translation
+[laminas]: https://docs.laminas.dev/laminas-i18n/
 [laravel]: https://laravel.com/docs/master/localization
 [yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
 [intl]: https://secure.php.net/manual/intro.intl.php
