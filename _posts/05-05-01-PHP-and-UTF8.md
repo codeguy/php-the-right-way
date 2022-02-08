@@ -41,11 +41,11 @@ encoding. You should always explicitly indicate UTF-8 when given the option. For
 option for character encoding, and you should always specify UTF-8 if dealing with such strings. Note that as of PHP 5.4.0, UTF-8 is the default encoding for `htmlentities()` and `htmlspecialchars()`.
 
 Finally, If you are building a distributed application and cannot be certain that the `mbstring` extension will be
-enabled, then consider using the [patchwork/utf8] Composer package. This will use `mbstring` if it is available, and
+enabled, then consider using the [symfony/polyfill-mbstring] Composer package. This will use `mbstring` if it is available, and
 fall back to non UTF-8 functions if not.
 
 [Multibyte String Extension]: https://secure.php.net/book.mbstring
-[patchwork/utf8]: https://packagist.org/packages/patchwork/utf8
+[symfony/polyfill-mbstring]: https://packagist.org/packages/symfony/polyfill-mbstring
 
 ### UTF-8 at the Database level
 
