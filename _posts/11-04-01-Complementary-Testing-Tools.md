@@ -16,6 +16,7 @@ libraries useful for any preferred approach taken.
 [PHPSpec] and can be used with [PHPUnit].
 * [php-mock]  is a library to help to mock PHP native functions.
 * [Infection] is a PHP implementation of [Mutation Testing] to help to measure the effectiveness of your tests.
+* [PHPUnit Polyfills] is a library that allows for creating PHPUnit cross-version compatible tests when a test suite needs to run against a range of PHPUnit versions.
 
 
 [Selenium]: https://www.seleniumhq.org/
@@ -27,3 +28,4 @@ libraries useful for any preferred approach taken.
 [php-mock]: https://github.com/php-mock/php-mock
 [Infection]: https://github.com/infection/infection
 [Mutation Testing]: https://en.wikipedia.org/wiki/Mutation_testing
+[PHPUnit Polyfills]: https://github.com/Yoast/PHPUnit-Polyfills
