@@ -5,7 +5,7 @@ anchor:  opcode_cache
 
 ## Opcode Cache {#opcode_cache_title}
 
-When a PHP file is executed, it must first be compiled into [opcodes](https://secure.php.net/manual/internals2.opcodes.php) (machine language instructions for the CPU). If the source code is unchanged, the opcodes will be the same, so this compilation step becomes a waste of CPU resources.
+When a PHP file is executed, it must first be compiled into [opcodes](https://php-legacy-docs.zend.com/manual/php4/en/internals2.opcodes) (machine language instructions for the CPU). If the source code is unchanged, the opcodes will be the same, so this compilation step becomes a waste of CPU resources.
 
 An opcode cache prevents redundant compilation by storing opcodes in memory and reusing them on successive calls. It will typically check signature or modification time of the file first, in case there have been any changes.
 
