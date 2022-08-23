@@ -80,7 +80,7 @@ function test($a)
 Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
 
 - Switch statements only compare values, and not the type (equivalent to '==')
-- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
+- They iterate case by case until a match is found. If no match is found, then the default is used (if defined)
 - Without a 'break', they will continue to implement each case until reaching a break/return
 - Within a function, using 'return' alleviates the need for 'break' as it ends the function
 
