@@ -248,7 +248,7 @@ Example of string
 spanning multiple lines
 using nowdoc syntax.
 $a does not parse.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+EOD;                        // closing 'EOD' must be on its own line, and to the left most point
 
 /**
  * Output:
@@ -276,7 +276,7 @@ Example of string
 spanning multiple lines
 using heredoc syntax.
 $a are parsed.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+EOD;                        // closing 'EOD' must be on its own line, and to the left most point
 
 /**
  * Output:
