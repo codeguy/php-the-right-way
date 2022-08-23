@@ -166,8 +166,8 @@ class SomeClient
 }
 {% endhighlight %}
 
-The calling client class above has a private property which must be set at runtime and be of type 'OutputInterface'
-once this property is set a call to loadOutput() will call the load() method in the concrete class of the output type
+The calling client class above has a private property which must be set at runtime and be of type 'OutputInterface'.
+Once this property is set a call to loadOutput() will call the load() method in the concrete class of the output type
 that has been set.
 
 {% highlight php %}
