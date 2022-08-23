@@ -41,7 +41,7 @@ install or sport additional features or i18n file formats. In this document, we 
 PHP core, but here we list others for completion:
 
 - [aura/intl][aura-intl]: Provides internationalization (I18N) tools, specifically package-oriented per-locale message
-translation. It uses array formats for message. Does not provide a message extractor, but does provide advanced
+translation. It uses array formats for messages. Does not provide a message extractor, but does provide advanced
 message formatting via the `intl` extension (including pluralized messages).
 - [oscarotero/Gettext][oscarotero]: Gettext support with an OO interface; includes improved helper functions, powerful
 extractors for several file formats (some of them not supported natively by the `gettext` command), and can also export
@@ -248,7 +248,7 @@ the actual interface. Given that, let's tie together what we have discussed so f
 - [`gettext()`][func] simply translates a `msgid` into its corresponding `msgstr` for a given language. There's also
 the shorthand function `_()` that works the same way;
 - [`ngettext()`][n_func] does the same but with plural rules;
-- there's also [`dgettext()`][d_func] and [`dngettext()`][dn_func], that allows you to override the domain for a single
+- There are also [`dgettext()`][d_func] and [`dngettext()`][dn_func], that allow you to override the domain for a single
 call. More on domain configuration in the next example.
 
 #### 2. A sample setup file (`i18n_setup.php` as used above), selecting the correct locale and configuring Gettext
