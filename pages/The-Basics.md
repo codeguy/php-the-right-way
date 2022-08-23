@@ -362,7 +362,7 @@ return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 {% endhighlight %}
 
 It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
-would be.
+would be:
 
 {% highlight php %}
 <?php

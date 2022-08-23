@@ -33,7 +33,7 @@ The other use for unit tests is contributing to open source. If you can write a 
 which accepts pull requests then you should suggest this as a requirement.
 
 [PHPUnit](https://phpunit.de/) is the de-facto testing framework for writing unit tests for PHP applications, but there
-are several alternatives
+are several alternatives:
 
 * [atoum](https://github.com/atoum/atoum)
 * [Kahlan](https://github.com/crysalead/kahlan)

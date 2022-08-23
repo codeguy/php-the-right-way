@@ -32,7 +32,7 @@ don't try this if your project will contain more than a couple of pages.
 The most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext]. It dates
 back to 1995 and is still a complete implementation for translating software. It is easy enough to get running, while
 still sporting powerful supporting tools. It is about Gettext we will be talking here. Also, to help you not get messy
-over the command-line, we will be presenting a great GUI application that can be used to easily update your l10n source
+over the command-line, we will be presenting a great GUI application that can be used to easily update your l10n source.
 
 ### Other tools
 
