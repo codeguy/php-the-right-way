@@ -20,7 +20,6 @@ anchor:  templating_further_reading
 * [Aura.View](https://github.com/auraphp/Aura.View) *(native)*
 * [Blade](https://laravel.com/docs/blade) *(compiled, framework specific)*
 * [Brainy](https://github.com/box/brainy) *(compiled)*
-* [Dwoo](http://dwoo.org/) *(compiled)*
 * [Latte](https://github.com/nette/latte) *(compiled)*
 * [Mustache](https://github.com/bobthecow/mustache.php) *(compiled)*
 * [PHPTAL](https://phptal.org/) *(compiled)*
