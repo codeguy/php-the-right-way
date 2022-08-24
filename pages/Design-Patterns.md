@@ -142,8 +142,8 @@ add new output types without affecting the client code.
 
 You will see how each concrete 'output' class implements an OutputInterface - this serves two purposes, primarily it
 provides a simple contract which must be obeyed by any new concrete implementations. Secondly by implementing a common
-interface you will see in the next section that you can now utilise [Type Hinting](http://php.net/language.oop5.typehinting) to ensure that the client which is utilising these behaviours is of the correct type in
-this case 'OutputInterface'.
+interface you will see in the next section that you can now utilise [Type Hinting](http://php.net/language.oop5.typehinting) to ensure that the client which is utilising these behaviours is of the correct type,
+in this case 'OutputInterface'.
 
 The next snippet of code outlines how a calling client class might use one of these algorithms and even better set the
 behaviour required at runtime:
@@ -166,8 +166,8 @@ class SomeClient
 }
 {% endhighlight %}
 
-The calling client class above has a private property which must be set at runtime and be of type 'OutputInterface'
-once this property is set a call to loadOutput() will call the load() method in the concrete class of the output type
+The calling client class above has a private property which must be set at runtime and be of type 'OutputInterface'.
+Once this property is set a call to loadOutput() will call the load() method in the concrete class of the output type
 that has been set.
 
 {% highlight php %}
@@ -197,7 +197,7 @@ and gives you a central place to hook in code that should be run for every reque
 
 ## Model-View-Controller
 
-The model-view-controller (MVC) pattern and its relatives HMVC and MVVM lets you break up code into logical objects
+The model-view-controller (MVC) pattern and its relatives HMVC and MVVM let you break up code into logical objects
 that serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats
 usable throughout your application. Controllers handle the request, process the data returned from models and load
 views to send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the

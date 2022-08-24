@@ -26,7 +26,7 @@ You should read the `CONTRIBUTING.md` file for precise instructions and tips. Bu
 
 ### Contributor Style Guide
 
-1. Use American English spelling (*primary English repo only*)
+1. Use American English spelling (*primary English repo only*).
 2. Use four (4) spaces to indent text; do not use tabs.
 3. Wrap all text to 120 characters.
 4. Code samples should adhere to PSR-1 or higher.

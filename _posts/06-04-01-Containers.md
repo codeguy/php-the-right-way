@@ -12,5 +12,5 @@ Locator in to your classes arguably creates a harder dependency on the container
 It also makes your code much less transparent and ultimately harder to test.
 
 Most modern frameworks have their own Dependency Injection Container that allows you to wire your dependencies together
-through configuration. What this means in practice is that you can write application code that is as clean and de-
-coupled as the framework it is built on.
+through configuration. What this means in practice is that you can write application code that is as clean and
+de-coupled as the framework it is built on.

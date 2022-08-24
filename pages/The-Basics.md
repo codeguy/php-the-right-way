@@ -80,7 +80,7 @@ function test($a)
 Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
 
 - Switch statements only compare values, and not the type (equivalent to '==')
-- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
+- They iterate case by case until a match is found. If no match is found, then the default is used (if defined)
 - Without a 'break', they will continue to implement each case until reaching a break/return
 - Within a function, using 'return' alleviates the need for 'break' as it ends the function
 
@@ -248,7 +248,7 @@ Example of string
 spanning multiple lines
 using nowdoc syntax.
 $a does not parse.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+EOD;                        // closing 'EOD' must be on its own line, and to the left most point
 
 /**
  * Output:
@@ -276,7 +276,7 @@ Example of string
 spanning multiple lines
 using heredoc syntax.
 $a are parsed.
-EOD;                        // closing 'EOD' must be on it's own line, and to the left most point
+EOD;                        // closing 'EOD' must be on its own line, and to the left most point
 
 /**
  * Output:
@@ -323,8 +323,8 @@ results can vary. If you are working with a small number of values, concatenatio
 values, interpolating is minutely faster.
 
 Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
-application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
-optimization unless you really understand the meaning and impact of the differences.
+application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this
+micro-optimization unless you really understand the meaning and impact of the differences.
 
 * [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
@@ -362,7 +362,7 @@ return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 {% endhighlight %}
 
 It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
-would be.
+would be:
 
 {% highlight php %}
 <?php
