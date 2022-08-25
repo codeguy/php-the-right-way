@@ -19,7 +19,7 @@ libraries useful for any preferred approach taken.
 * [PHPUnit Polyfills] is a library that allows for creating PHPUnit cross-version compatible tests when a test suite needs to run against a range of PHPUnit versions.
 
 
-[Selenium]: https://www.seleniumhq.org/
+[Selenium]: https://www.selenium.dev/
 [integrated with PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
 [Mockery]: https://github.com/padraic/mockery
 [PHPUnit]: https://phpunit.de/

@@ -94,7 +94,7 @@ PHP.
 [Chef_cookbook]: https://github.com/chef-cookbooks/php
 [Chef_tutorial]: https://www.youtube.com/playlist?list=PL11cZfNdwNyPnZA9D1MbVqldGuOWqbumZ
 [apache_ant_tutorial]: https://code.tutsplus.com/tutorials/automate-your-projects-with-apache-ant--net-18595
-[Travis CI]: https://travis-ci.org/
+[Travis CI]: https://www.travis-ci.com/
 [Jenkins]: https://jenkins.io/
 [PHPCI]: https://github.com/dancryer/phpci
 [PHP Censor]: https://github.com/php-censor/php-censor

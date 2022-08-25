@@ -417,7 +417,7 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [laravel]: https://laravel.com/docs/master/localization
 [yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
 [intl]: https://secure.php.net/manual/intro.intl.php
-[ICU project]: http://www.icu-project.org
+[ICU project]: https://icu.unicode.org/
 [symfony-keys]: https://symfony.com/doc/current/components/translation/usage.html#creating-translations
 
 [sprintf]: https://secure.php.net/manual/function.sprintf.php
