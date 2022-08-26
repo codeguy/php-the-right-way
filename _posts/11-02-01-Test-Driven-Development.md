@@ -36,7 +36,7 @@ which accepts pull requests then you should suggest this as a requirement.
 are several alternatives:
 
 * [atoum](https://github.com/atoum/atoum)
-* [Kahlan](https://github.com/crysalead/kahlan)
+* [Kahlan](https://github.com/kahlan/kahlan)
 * [Peridot](https://peridot-php.github.io/)
 * [SimpleTest](https://github.com/simpletest/simpletest)
 
