@@ -24,7 +24,7 @@ Read more about opcode caches:
 
 [opcache-book]: https://secure.php.net/book.opcache
 [APC]: https://www.php.net/book.apcu
-[XCache]: https://xcache.lighttpd.net/
+[XCache]: https://github.com/lighttpd/xcache
 [Zend Optimizer+]: https://github.com/zendtech/ZendOptimizerPlus
 [WinCache]: https://www.iis.net/downloads/microsoft/wincache-extension
 [PHP_accelerators]: https://wikipedia.org/wiki/List_of_PHP_accelerators
