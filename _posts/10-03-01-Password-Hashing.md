@@ -19,7 +19,7 @@ third-party, all user accounts are now compromised.
 Unlike hashing, encryption is reversible (provided you have the key). Encryption is useful in other areas, but is a poor
 strategy for securely storing passwords.
 
-Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of "rainbow tables" (a reverse list of crytographic hashes for common passwords.)
+Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of "rainbow tables" (a reverse list of cryptographic hashes for common passwords.)
 
 Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor.
 
