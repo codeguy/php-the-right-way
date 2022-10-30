@@ -24,7 +24,7 @@ purpose. This framework is inspired by the [RSpec project][Rspec] for Ruby.
 * [Codeception] is a full-stack testing framework that uses BDD principles.
 
 
-[Behat]: http://behat.org/
+[Behat]: https://behat.org/
 [Cucumber]: https://cucumber.io/
 [PHPSpec]: https://www.phpspec.net/
 [RSpec]: https://rspec.info/

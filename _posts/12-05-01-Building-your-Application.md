@@ -86,7 +86,7 @@ PHP.
 [buildautomation]: https://wikipedia.org/wiki/Build_automation
 [Phing]: https://www.phing.info/
 [Apache Ant]: https://ant.apache.org/
-[Capistrano]: http://capistranorb.com/
+[Capistrano]: https://capistranorb.com/
 [Ansistrano]: https://ansistrano.com
 [phpdeploy_deployer]: https://www.sitepoint.com/deploying-php-applications-with-deployer/
 [Chef]: https://www.chef.io/
@@ -94,7 +94,7 @@ PHP.
 [Chef_cookbook]: https://github.com/chef-cookbooks/php
 [Chef_tutorial]: https://www.youtube.com/playlist?list=PL11cZfNdwNyPnZA9D1MbVqldGuOWqbumZ
 [apache_ant_tutorial]: https://code.tutsplus.com/tutorials/automate-your-projects-with-apache-ant--net-18595
-[Travis CI]: https://travis-ci.org/
+[Travis CI]: https://www.travis-ci.com/
 [Jenkins]: https://jenkins.io/
 [PHPCI]: https://github.com/dancryer/phpci
 [PHP Censor]: https://github.com/php-censor/php-censor

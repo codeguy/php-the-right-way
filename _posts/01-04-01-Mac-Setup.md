@@ -82,5 +82,5 @@ you and tie them all together, but ease of setup comes with a trade-off of flexi
 [apache]: https://httpd.apache.org/
 [nginx]: https://www.nginx.com/
 [mamp-downloads]: https://www.mamp.info/en/downloads/
-[xampp]: https://www.apachefriends.org/index.html
+[xampp]: https://www.apachefriends.org/
 [brew-php-switcher]: https://github.com/philcook/brew-php-switcher

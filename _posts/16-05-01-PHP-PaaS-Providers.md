@@ -11,7 +11,7 @@ anchor:  php_paas_providers
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 * [Cloudways](https://www.cloudways.com/)
 * [Divio](https://www.divio.com/php/)
-* [Engine Yard Cloud](https://www.engineyard.com/features)
+* [Engine Yard Cloud](https://www.engineyard.com/)
 * [fortrabbit](https://www.fortrabbit.com/)
 * [Google App Engine](https://cloud.google.com/appengine/docs/php/)
 * [Heroku](https://devcenter.heroku.com/categories/php-support)

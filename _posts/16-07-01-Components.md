@@ -47,7 +47,7 @@ components best decoupled from the Laravel framework are listed above._
 [Aura]: http://auraphp.com/framework/
 [FuelPHP]: https://github.com/fuelphp
 [Hoa Project]: https://github.com/hoaproject
-[Symfony Components]: https://symfony.com/doc/current/components/index.html
+[Symfony Components]: https://symfony.com/components
 [The League of Extraordinary Packages]: https://thephpleague.com/
 [IoC Container]: https://github.com/illuminate/container
 [Eloquent ORM]: https://github.com/illuminate/database

@@ -412,13 +412,13 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [func_format]: https://www.gnu.org/software/gettext/manual/gettext.html#Language-specific-options
 [aura-intl]: https://github.com/auraphp/Aura.Intl
 [oscarotero]: https://github.com/oscarotero/Gettext
-[symfony]: https://symfony.com/doc/current/components/translation.html
+[symfony]: https://symfony.com/components/Translation
 [laminas]: https://docs.laminas.dev/laminas-i18n/
 [laravel]: https://laravel.com/docs/master/localization
 [yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
 [intl]: https://secure.php.net/manual/intro.intl.php
-[ICU project]: http://www.icu-project.org
-[symfony-keys]: https://symfony.com/doc/current/components/translation/usage.html#creating-translations
+[ICU project]: https://icu.unicode.org/
+[symfony-keys]: https://symfony.com/doc/current/translation.html#using-real-or-keyword-messages
 
 [sprintf]: https://secure.php.net/manual/function.sprintf.php
 [func]: https://secure.php.net/manual/function.gettext.php
