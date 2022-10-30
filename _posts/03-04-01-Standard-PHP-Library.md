@@ -11,8 +11,8 @@ primarily of commonly needed datastructure classes (stack, queue, heap, and so o
 over these datastructures or your own classes which implement SPL interfaces.
 
 * [Read about the SPL][spl]
-* [SPL video course on Lynda.com (paid)][spllynda]
+* [SPL video course on LinkedIn.com (paid)][linkedin]
 
 
 [spl]: https://secure.php.net/book.spl
-[spllynda]: https://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html
+[linkedin]: https://www.linkedin.com/learning/learning-the-standard-php-library?trk=lynda_redirect_learning
