@@ -5,14 +5,14 @@ anchor: code_style_guide
 # Code Style Guide {#code_style_guide_title}
 
 The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
+PHP developers to choose several of these and combine them into a single project. It is important that PHP code adheres
 (as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
 their projects.
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
+The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them relate
 to code-style, but those that do are [PSR-1][psr1], [PSR-12][psr12] and [PSR-4][psr4]. These
 recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
-FuelPHP, Lithium, etc are adopting. You can use them for your own projects, or continue to use your own
+FuelPHP, Lithium, etc. are adopting. You can use them for your own projects, or continue to use your own
 personal style.
 
 Ideally, you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
@@ -48,7 +48,7 @@ If you have PHP_CodeSniffer, then you can fix the code layout problems reported 
     phpcbf -w --standard=PSR1 file.php
 
 Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
-It will show which kind of errors the code structure had before it fixed them.
+It will show what kind of errors the code structure had before it fixed them.
 
     php-cs-fixer fix -v --rules=@PSR1 file.php
 
