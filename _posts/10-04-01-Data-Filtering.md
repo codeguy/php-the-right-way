@@ -44,7 +44,7 @@ When you use bound parameters with [PDO](#databases), it will sanitize the input
 
 Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML page. This is very
 hard to do and many avoid it by using other more restricted formatting like Markdown or BBCode, although whitelisting
-libraries like [HTML Purifier][html-purifier] exists for this reason.
+libraries like [HTML Purifier][html-purifier] exist for this reason.
 
 [See Sanitization Filters][2]
 
