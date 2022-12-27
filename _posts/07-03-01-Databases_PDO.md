@@ -72,6 +72,6 @@ unless of course you are using persistent connections.
 
 
 [pdo]: https://secure.php.net/pdo
-[SQL Injection]: http://wiki.hashphp.org/Validation
+[SQL Injection]: https://web.archive.org/web/20210413233627/http://wiki.hashphp.org/Validation
 [Learn about PDO]: https://secure.php.net/book.pdo
 [Learn about PDO connections]: https://secure.php.net/pdo.connections
