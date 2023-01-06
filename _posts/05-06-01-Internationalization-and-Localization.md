@@ -43,7 +43,7 @@ PHP core, but here we list others for completion:
 - [aura/intl][aura-intl]: Provides internationalization (I18N) tools, specifically package-oriented per-locale message
 translation. It uses array formats for messages. Does not provide a message extractor, but does provide advanced
 message formatting via the `intl` extension (including pluralized messages).
-- [oscarotero/Gettext][oscarotero]: Gettext support with an OO interface; includes improved helper functions, powerful
+- [php-gettext/Gettext][php-gettext]: Gettext support with an OO interface; includes improved helper functions, powerful
 extractors for several file formats (some of them not supported natively by the `gettext` command), and can also export
 to other formats besides `.mo/.po` files. Can be useful if you need to integrate your translation files into other
 parts of the system, like a JavaScript interface.
@@ -373,7 +373,7 @@ As preferred by many people, it is easier to use `_()` instead of `gettext()`. M
 frameworks use something similar to `t()` as well, to make translated code shorter. However, that is the only function
 that sports a shortcut. You might want to add in your project some others, such as `__()` or `_n()` for `ngettext()`,
 or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other libraries, such as
-[oscarotero's Gettext][oscarotero] also provide helper functions like these.
+[php-gettext's Gettext][php-gettext] also provide helper functions like these.
 
 In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
 Don't be afraid; it is very easy. It is just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
@@ -411,7 +411,7 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [rare]: https://www.gnu.org/software/gettext/manual/gettext.html#Rare-Language-Codes
 [func_format]: https://www.gnu.org/software/gettext/manual/gettext.html#Language-specific-options
 [aura-intl]: https://github.com/auraphp/Aura.Intl
-[oscarotero]: https://github.com/oscarotero/Gettext
+[php-gettext]: https://github.com/php-gettext/Gettext
 [symfony]: https://symfony.com/components/Translation
 [laminas]: https://docs.laminas.dev/laminas-i18n/
 [laravel]: https://laravel.com/docs/master/localization
