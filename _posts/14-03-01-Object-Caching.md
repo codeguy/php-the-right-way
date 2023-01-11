@@ -12,7 +12,7 @@ them, then pull them directly from the cache for following requests, you can gai
 performance as well as reduce the load on your database servers.
 
 Many of the popular bytecode caching solutions let you cache custom data as well, so there's even more reason to take
-advantage of them. APCu, XCache, and WinCache all provide APIs to save data from your PHP code to their memory cache.
+advantage of them. APCu and WinCache both provide APIs to save data from your PHP code to their memory cache.
 
 The most commonly used memory object caching systems are APCu and memcached. APCu is an excellent choice for object
 caching, it includes a simple API for adding your own data to its memory cache and is very easy to setup and use. The
@@ -51,5 +51,4 @@ object cache to PHP 5.5+, since PHP now has a built-in bytecode cache (OPcache).
 * [APC Functions](https://secure.php.net/ref.apc)
 * [Memcached](https://memcached.org/)
 * [Redis](https://redis.io/)
-* [XCache APIs](https://xcache.lighttpd.net/wiki/XcacheApi)
 * [WinCache Functions](https://secure.php.net/ref.wincache)
