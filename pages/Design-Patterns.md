@@ -11,7 +11,7 @@ make your code easier to manage and easier for others to understand.
 
 * [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
-* [Collection of implementation examples](http://designpatternsphp.readthedocs.io/en/latest/)
+* [Collection of implementation examples](https://designpatternsphp.readthedocs.io/en/latest/)
 
 ## Factory
 
@@ -70,17 +70,17 @@ one instance of a particular class. The singleton pattern enables us to do this.
 
 **TODO: NEED NEW SINGLETON CODE EXAMPLE**
 
-The code above implements the singleton pattern using a [*static* variable](http://php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
+The code above implements the singleton pattern using a [*static* variable](https://www.php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
 Note the following:
 
-* The constructor [`__construct()`](http://php.net/language.oop5.decon#object.construct) is declared as protected to
+* The constructor [`__construct()`](https://www.php.net/language.oop5.decon#object.construct) is declared as protected to
 prevent creating a new instance outside of the class via the `new` operator.
-* The magic method [`__clone()`](http://php.net/language.oop5.cloning#object.clone) is declared as private to prevent
-cloning of an instance of the class via the [`clone`](http://php.net/language.oop5.cloning) operator.
-* The magic method [`__wakeup()`](http://php.net/language.oop5.magic#object.wakeup) is declared as private to prevent
-unserializing of an instance of the class via the global function [`unserialize()`](http://php.net/function.unserialize)
+* The magic method [`__clone()`](https://www.php.net/language.oop5.cloning#object.clone) is declared as private to prevent
+cloning of an instance of the class via the [`clone`](https://www.php.net/language.oop5.cloning) operator.
+* The magic method [`__wakeup()`](https://www.php.net/language.oop5.magic#object.wakeup) is declared as private to prevent
+unserializing of an instance of the class via the global function [`unserialize()`](https://www.php.net/function.unserialize)
 .
-* A new instance is created via [late static binding](http://php.net/language.oop5.late-static-bindings) in the static
+* A new instance is created via [late static binding](https://www.php.net/language.oop5.late-static-bindings) in the static
 creation method `getInstance()` with the keyword `static`. This allows the subclassing of the class `Singleton` in the
 example.
 
@@ -142,7 +142,7 @@ add new output types without affecting the client code.
 
 You will see how each concrete 'output' class implements an OutputInterface - this serves two purposes, primarily it
 provides a simple contract which must be obeyed by any new concrete implementations. Secondly by implementing a common
-interface you will see in the next section that you can now utilise [Type Hinting](http://php.net/language.oop5.typehinting) to ensure that the client which is utilising these behaviours is of the correct type,
+interface you will see in the next section that you can now utilise [Type Hinting](https://www.php.net/language.oop5.typehinting) to ensure that the client which is utilising these behaviours is of the correct type,
 in this case 'OutputInterface'.
 
 The next snippet of code outlines how a calling client class might use one of these algorithms and even better set the
@@ -184,7 +184,7 @@ $data = $client->loadOutput();
 
 {% endhighlight %}
 
-* [Strategy pattern on Wikipedia](http://en.wikipedia.org/wiki/Strategy_pattern)
+* [Strategy pattern on Wikipedia](https://en.wikipedia.org/wiki/Strategy_pattern)
 
 ## Front Controller
 
