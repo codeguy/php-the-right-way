@@ -16,5 +16,5 @@ then you have to find the patterns that best suit the type and size of applicati
 
 You can learn more about PHP design patterns and see working examples at:
 
-<https://refactoring.guru/design-patterns/php>
-[https://designpatternsphp.readthedocs.io/](https://web.archive.org/web/20221007015016/https://designpatternsphp.readthedocs.io/en/latest/README.html) (archived, [PDF download](https://www.computer-pdf.com/web-programming/php/924-tutorial-designpatternsphp-documentation.html))
+* <https://refactoring.guru/design-patterns/php>
+* [https://designpatternsphp.readthedocs.io/](https://designpatternsphp.readthedocs.io/en/latest/) ([PDF download](https://www.computer-pdf.com/web-programming/php/924-tutorial-designpatternsphp-documentation.html))
