@@ -14,5 +14,5 @@ over these datastructures or your own classes which implement SPL interfaces.
 * [SPL video course on LinkedIn.com (paid)][linkedin]
 
 
-[spl]: https://secure.php.net/book.spl
+[spl]: https://www.php.net/book.spl
 [linkedin]: https://www.linkedin.com/learning/learning-the-standard-php-library?trk=lynda_redirect_learning

@@ -396,7 +396,7 @@ After including those new rules in the `.po` file, a new scan will bring in your
 * [Wikipedia: i18n and l10n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
 * [Wikipedia: Gettext](https://en.wikipedia.org/wiki/Gettext)
 * [LingoHub: PHP internationalization with gettext tutorial][lingohub]
-* [PHP Manual: Gettext](https://secure.php.net/manual/book.gettext.php)
+* [PHP Manual: Gettext](https://www.php.net/manual/book.gettext.php)
 * [Gettext Manual][manual]
 
 [Poedit]: https://poedit.net
@@ -416,12 +416,12 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [laminas]: https://docs.laminas.dev/laminas-i18n/
 [laravel]: https://laravel.com/docs/master/localization
 [yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
-[intl]: https://secure.php.net/manual/intro.intl.php
+[intl]: https://www.php.net/manual/intro.intl.php
 [ICU project]: https://icu.unicode.org/
 [symfony-keys]: https://symfony.com/doc/current/translation.html#using-real-or-keyword-messages
 
-[sprintf]: https://secure.php.net/manual/function.sprintf.php
-[func]: https://secure.php.net/manual/function.gettext.php
-[n_func]: https://secure.php.net/manual/function.ngettext.php
-[d_func]: https://secure.php.net/manual/function.dgettext.php
-[dn_func]: https://secure.php.net/manual/function.dngettext.php
+[sprintf]: https://www.php.net/manual/function.sprintf.php
+[func]: https://www.php.net/manual/function.gettext.php
+[n_func]: https://www.php.net/manual/function.ngettext.php
+[d_func]: https://www.php.net/manual/function.dgettext.php
+[dn_func]: https://www.php.net/manual/function.dngettext.php

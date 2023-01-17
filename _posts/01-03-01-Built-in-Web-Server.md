@@ -16,4 +16,4 @@ To start the server, run the following command from your terminal in your projec
 * [Learn about the built-in, command line web server][cli-server]
 
 
-[cli-server]: http://php.net/features.commandline.webserver
+[cli-server]: https://www.php.net/features.commandline.webserver

@@ -9,7 +9,7 @@ When a PHP file is executed, it must first be compiled into [opcodes](https://ph
 
 An opcode cache prevents redundant compilation by storing opcodes in memory and reusing them on successive calls. It will typically check signature or modification time of the file first, in case there have been any changes.
 
-It's likely an opcode cache will make a significant speed improvement to your application.  Since PHP 5.5 there is one built in - [Zend OPcache][opcache-book]. Depending on your PHP package/distribution, it's usually turned on by default - check [opcache.enable](https://secure.php.net/manual/opcache.configuration.php#ini.opcache.enable) and the output of `phpinfo()` to make sure. For earlier versions there's a PECL extension.
+It's likely an opcode cache will make a significant speed improvement to your application.  Since PHP 5.5 there is one built in - [Zend OPcache][opcache-book]. Depending on your PHP package/distribution, it's usually turned on by default - check [opcache.enable](https://www.php.net/manual/opcache.configuration.php#ini.opcache.enable) and the output of `phpinfo()` to make sure. For earlier versions there's a PECL extension.
 
 Read more about opcode caches:
 
@@ -20,7 +20,7 @@ Read more about opcode caches:
 * [PHP Preloading] - PHP >= 7.4
 
 
-[opcache-book]: https://secure.php.net/book.opcache
+[opcache-book]: https://www.php.net/book.opcache
 [Zend Optimizer+]: https://github.com/zendtech/ZendOptimizerPlus
 [WinCache]: https://www.iis.net/downloads/microsoft/wincache-extension
 [PHP_accelerators]: https://wikipedia.org/wiki/List_of_PHP_accelerators
