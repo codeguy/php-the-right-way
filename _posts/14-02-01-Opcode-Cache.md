@@ -15,14 +15,12 @@ Read more about opcode caches:
 
 * [Zend OPcache][opcache-book] (bundled with PHP since 5.5)
 * Zend OPcache (formerly known as Zend Optimizer+) is now [open source][Zend Optimizer+]
-* [APC] - PHP 5.4 and earlier
 * [WinCache] (extension for MS Windows Server)
 * [list of PHP accelerators on Wikipedia][PHP_accelerators]
 * [PHP Preloading] - PHP >= 7.4
 
 
 [opcache-book]: https://secure.php.net/book.opcache
-[APC]: https://www.php.net/book.apcu
 [Zend Optimizer+]: https://github.com/zendtech/ZendOptimizerPlus
 [WinCache]: https://www.iis.net/downloads/microsoft/wincache-extension
 [PHP_accelerators]: https://wikipedia.org/wiki/List_of_PHP_accelerators
