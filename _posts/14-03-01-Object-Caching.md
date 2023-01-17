@@ -42,7 +42,7 @@ if ($data === false) {
 print_r($data);
 {% endhighlight %}
 
-Note that prior to PHP 5.5, there was APC extension which provided both an object cache and a bytecode cache. The new APCu is a project to bring APC's
+Note that prior to PHP 5.5, there was the APC extension which provided both an object cache and a bytecode cache. The new APCu is a project to bring APC's
 object cache to PHP 5.5+, since PHP now has a built-in bytecode cache (OPcache).
 
 ### Learn more about popular object caching systems:
