@@ -403,7 +403,7 @@ After including those new rules in the `.po` file, a new scan will bring in your
 [poedit_download]: https://poedit.net/download
 [lingohub]: https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/
 [lingohub_plurals]: https://lingohub.com/blog/2013/07/php-internationalization-with-gettext-tutorial/#Plurals
-[plural]: http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html
+[plural]: https://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html
 [gettext]: https://en.wikipedia.org/wiki/Gettext
 [manual]: https://www.gnu.org/software/gettext/manual/gettext.html
 [639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
