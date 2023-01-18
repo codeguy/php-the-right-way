@@ -60,7 +60,7 @@ introduced to the database preventing potential SQL injection attacks.
 
 For writes, such as INSERT or UPDATE, it's especially critical to still [filter your data](#data_filtering) first and sanitize it for other things (removal of HTML tags, JavaScript, etc).  PDO will only sanitize it for SQL, not for your application.
 
-* [Learn about PDO]
+* [Learn about PDO][pdo]
 
 You should also be aware that database connections use up resources and it was not unheard-of to have resources
 exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you can
@@ -71,7 +71,6 @@ unless of course you are using persistent connections.
 * [Learn about PDO connections]
 
 
-[pdo]: https://secure.php.net/pdo
+[pdo]: https://www.php.net/pdo
 [SQL Injection]: https://web.archive.org/web/20210413233627/http://wiki.hashphp.org/Validation
-[Learn about PDO]: https://secure.php.net/book.pdo
-[Learn about PDO connections]: https://secure.php.net/pdo.connections
+[Learn about PDO connections]: https://www.php.net/pdo.connections

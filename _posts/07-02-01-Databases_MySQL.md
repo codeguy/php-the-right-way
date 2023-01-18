@@ -27,10 +27,10 @@ your applications within your own development schedules so you won't be rushed l
 * [MySQLi Prepared Statements][mysqli_prepared_statements]
 * [PHP: Choosing an API for MySQL][mysql_api]
 
-[mysql]: https://secure.php.net/mysqli
-[mysql_deprecated]: https://secure.php.net/migration55.deprecated
-[mysql_removed]: https://secure.php.net/manual/migration70.removed-exts-sapis.php
-[mysqli]: https://secure.php.net/mysqli
-[pdo]: https://secure.php.net/pdo
-[mysql_api]: https://secure.php.net/mysqlinfo.api.choosing
+[mysql]: https://www.php.net/mysqli
+[mysql_deprecated]: https://www.php.net/migration55.deprecated
+[mysql_removed]: https://www.php.net/manual/migration70.removed-exts-sapis.php
+[mysqli]: https://www.php.net/mysqli
+[pdo]: https://www.php.net/pdo
+[mysql_api]: https://www.php.net/mysqlinfo.api.choosing
 [mysqli_prepared_statements]: https://websitebeaver.com/prepared-statements-in-php-mysqli-to-prevent-sql-injection

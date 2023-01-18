@@ -62,11 +62,11 @@ phone number, or age when processing a registration submission.
 [See Validation Filters][3]
 
 
-[1]: https://secure.php.net/book.filter
-[2]: https://secure.php.net/filter.filters.sanitize
-[3]: https://secure.php.net/filter.filters.validate
-[4]: https://secure.php.net/function.filter-var
-[5]: https://secure.php.net/function.filter-input
-[6]: https://secure.php.net/security.filesystem.nullbytes
+[1]: https://www.php.net/book.filter
+[2]: https://www.php.net/filter.filters.sanitize
+[3]: https://www.php.net/filter.filters.validate
+[4]: https://www.php.net/function.filter-var
+[5]: https://www.php.net/function.filter-input
+[6]: https://www.php.net/security.filesystem.nullbytes
 [html-purifier]: http://htmlpurifier.org/
-[unserialize]: https://secure.php.net/manual/function.unserialize.php
+[unserialize]: https://www.php.net/manual/function.unserialize.php

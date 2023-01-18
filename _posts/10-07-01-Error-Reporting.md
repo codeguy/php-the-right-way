@@ -23,7 +23,7 @@ log_errors = On
 
 > Passing in the value `-1` will show every possible error, even when new levels and constants are added in future PHP
 > versions. The `E_ALL` constant also behaves this way as of PHP 5.4. -
-> [php.net](https://secure.php.net/function.error-reporting)
+> [php.net](https://www.php.net/function.error-reporting)
 
 The `E_STRICT` error level constant was introduced in 5.3.0 and is not part of `E_ALL`, however it became part of
 `E_ALL` in 5.4.0. What does this mean? In terms of reporting every possible error in version 5.3 it means you must
@@ -49,7 +49,7 @@ log_errors = On
 With these settings in production, errors will still be logged to the error logs for the web server, but will not be
 shown to the user. For more information on these settings, see the PHP manual:
 
-* [error_reporting](https://secure.php.net/errorfunc.configuration#ini.error-reporting)
-* [display_errors](https://secure.php.net/errorfunc.configuration#ini.display-errors)
-* [display_startup_errors](https://secure.php.net/errorfunc.configuration#ini.display-startup-errors)
-* [log_errors](https://secure.php.net/errorfunc.configuration#ini.log-errors)
+* [error_reporting](https://www.php.net/errorfunc.configuration#ini.error-reporting)
+* [display_errors](https://www.php.net/errorfunc.configuration#ini.display-errors)
+* [display_startup_errors](https://www.php.net/errorfunc.configuration#ini.display-startup-errors)
+* [log_errors](https://www.php.net/errorfunc.configuration#ini.log-errors)

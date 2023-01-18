@@ -10,6 +10,6 @@ anchor:  elephpants
 [Interview with Vincent Pontier][vincent-pontier-interview]
 
 
-[elephpant]: https://secure.php.net/elephpant.php
+[elephpant]: https://www.php.net/elephpant.php
 [vincent-pontier-interview]: https://7php.com/elephpant/
 [vincent-pontier]: http://www.elroubio.net/

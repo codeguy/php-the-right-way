@@ -116,4 +116,4 @@ All content is completely free now, and always will be.
 3. Wrap all text to 120 characters
 4. Code samples should adhere to PSR-1 or higher
 5. Use [GitHub Flavored Markdown](https://github.github.com/gfm/) for all content
-6. Use language agnostic urls when referring to external websites such as the [php.net](http://php.net/urlhowto.php) manual
+6. Use language agnostic urls when referring to external websites such as the [php.net](https://www.php.net/urlhowto.php) manual
