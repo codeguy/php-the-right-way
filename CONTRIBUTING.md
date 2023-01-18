@@ -1,6 +1,6 @@
 # Contributing to PHP The Right Way
 
-Enjoy [PHP The Right Way](http://phptherightway.com) and want to get
+Enjoy [PHP The Right Way](https://phptherightway.com) and want to get
 involved? Great! There are plenty of ways you can help out.
 
 Please take a moment to review this document in order to make the contribution
@@ -20,7 +20,7 @@ content and generally [submitting pull requests](#pull-requests), but please
 respect the following restrictions:
 
 * Please **do not** use the issue tracker for personal support requests (use
-  [Stack Overflow](http://stackoverflow.com/questions/tagged/php) or IRC).
+  [Stack Overflow](https://stackoverflow.com/questions/tagged/php) or IRC).
 
 * Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
@@ -36,8 +36,8 @@ change is accepted if seen as constructive.
 Adhering to the following process is the best way to get your work
 included in the project:
 
-1. [Fork](http://help.github.com/fork-a-repo/) the project, clone your fork,
-   and configure the remotes:
+1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the
+   project, clone your fork, and configure the remotes:
 
    ```bash
    # Clone your fork of the repo into the current directory
@@ -72,9 +72,9 @@ included in the project:
     ```
 
 5. Commit your changes in logical chunks. Please adhere to these [git commit
-   message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+   message guidelines](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
    or your content is unlikely be merged into the main project. Use Git's
-   [interactive rebase](https://help.github.com/articles/about-git-rebase/)
+   [interactive rebase](https://docs.github.com/en/get-started/using-git/about-git-rebase)
    feature to tidy up your commits before making them public.
 
 6. Locally merge (or rebase) the upstream development branch into your topic branch:
@@ -89,7 +89,7 @@ included in the project:
    git push origin <topic-branch-name>
    ```
 
-8. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
+8. [Open a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
     with a clear title and description.
 
 
@@ -97,12 +97,12 @@ included in the project:
 
 By submitting a pull request to this repository, you agree to allow the project
 owners to license your work under the the terms of the [Creative Commons Attribution-NonCommercial-ShareAlike
-3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+3.0 Unported License](https://creativecommons.org/licenses/by-nc-sa/3.0/).
 
 The same content and license will be used for all PHP The Right Way publications,
 including - but not limited to:
 
-* [phptherightway.com](http://phptherightway.com)
+* [phptherightway.com](https://phptherightway.com)
 * Translations of phptherightway.com
 * [LeanPub: PHP The Right Way](https://leanpub.com/phptherightway/)
 * Translations of "LeanPub: PHP The Right Way"
