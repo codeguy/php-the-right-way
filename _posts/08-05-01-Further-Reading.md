@@ -23,7 +23,7 @@ anchor:  templating_further_reading
 * [Latte](https://github.com/nette/latte) *(compiled)*
 * [Mustache](https://github.com/bobthecow/mustache.php) *(compiled)*
 * [PHPTAL](https://phptal.org/) *(compiled)*
-* [Plates](http://platesphp.com/) *(native)*
+* [Plates](https://platesphp.com/) *(native)*
 * [Smarty](https://www.smarty.net/) *(compiled)*
 * [Twig](https://twig.symfony.com/) *(compiled)*
 * [Zend-View](https://docs.zendframework.com/zend-view/) *(native, framework specific)*

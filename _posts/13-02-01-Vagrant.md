@@ -28,4 +28,4 @@ it can be used to deploy to cloud services as well. The provisioning is made wit
 [Puppet]: https://puppet.com/
 [Chef]: https://www.chef.io/
 [Puphpet]: https://github.com/puphpet/puphpet
-[Phansible]: http://phansible.com/
+[Phansible]: https://phansible.com/

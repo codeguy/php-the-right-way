@@ -44,7 +44,7 @@ components best decoupled from the Laravel framework are listed above._
 [PEAR]: /#pear
 [Dependency Management]: /#dependency_management
 [FuelPHP Validation package]: https://github.com/fuelphp/validation
-[Aura]: http://auraphp.com/framework/
+[Aura]: https://auraphp.com/framework/
 [FuelPHP]: https://github.com/fuelphp
 [Hoa Project]: https://github.com/hoaproject
 [Symfony Components]: https://symfony.com/components

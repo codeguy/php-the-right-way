@@ -28,7 +28,7 @@ installed in any application you like:
 [4]: https://packages.zendframework.com/docs/latest/manual/en/index.html#zendframework/zend-db
 [5]: https://atlasphp.io
 [6]: https://github.com/auraphp/Aura.Sql
-[7]: http://propelorm.org/
+[7]: https://propelorm.org/
 [8]: https://medoo.in/
 [psr0]: https://www.php-fig.org/psr/psr-0/
 [psr4]: https://www.php-fig.org/psr/psr-4/

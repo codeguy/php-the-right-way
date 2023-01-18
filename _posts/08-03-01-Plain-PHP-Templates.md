@@ -62,5 +62,5 @@ Using the [Plates][plates] library.
 {% endhighlight %}
 
 
-[plates]: http://platesphp.com/
+[plates]: https://platesphp.com/
 [aura]: https://github.com/auraphp/Aura.View
