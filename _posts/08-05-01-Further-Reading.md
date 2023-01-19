@@ -26,4 +26,4 @@ anchor:  templating_further_reading
 * [Plates](https://platesphp.com/) *(native)*
 * [Smarty](https://www.smarty.net/) *(compiled)*
 * [Twig](https://twig.symfony.com/) *(compiled)*
-* [Zend-View](https://docs.zendframework.com/zend-view/) *(native, framework specific)*
+* [laminas-view](https://docs.laminas.dev/laminas-view/) *(native, framework specific)*
