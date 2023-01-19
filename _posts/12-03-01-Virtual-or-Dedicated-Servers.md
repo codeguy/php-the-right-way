@@ -27,9 +27,9 @@ frameworks and open source apps like WordPress. Unfortunately, Apache uses more 
 cannot handle as many visitors at the same time.
 
 Apache has several possible configurations for running PHP. The most common and easiest to setup is the [prefork MPM]
-with mod_php5. While it isn't the most memory efficient, it is the simplest to get working and to use. This is probably
+with `mod_php`. While it isn't the most memory efficient, it is the simplest to get working and to use. This is probably
 the best choice if you don't want to dig too deeply into the server administration aspects. Note that if you use
-mod_php5 you MUST use the prefork MPM.
+`mod_php` you MUST use the prefork MPM.
 
 Alternatively, if you want to squeeze more performance and stability out of Apache then you can take advantage of the
 same FPM system as nginx and run the [worker MPM] or [event MPM] with mod_fastcgi or mod_fcgid. This configuration will
