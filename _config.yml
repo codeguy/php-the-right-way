@@ -18,6 +18,11 @@ defaults:
           path: ""
       values:
           sitemap: false
+          image:
+            path: /images/og-image.png
+            width: 1024
+            height: 640
+            alt: "PHP: The Right Way"
 
 # Excludes should be appended to the default
 # https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml#L37-L55
@@ -27,7 +32,9 @@ exclude:
    - gemfiles/
    - Gemfile
    - Gemfile.lock
+   - Gruntfile.js
    - node_modules/
+   - package.json
    - vendor/bundle/
    - vendor/cache/
    - vendor/gems/
@@ -39,3 +46,8 @@ exclude:
    - pages/example.md
 
 future: true
+
+title: "PHP: The Right Way"
+tagline: Reference for PHP best practices
+description: An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web
+logo: /images/og-image.png
