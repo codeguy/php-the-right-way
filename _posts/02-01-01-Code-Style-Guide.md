@@ -63,7 +63,7 @@ Finally, a good supplementary resource for writing clean PHP code is [Clean Code
 [psr4]: https://www.php-fig.org/psr/psr-4/
 [pear-cs]: https://pear.php.net/manual/en/standards.php
 [symfony-cs]: https://symfony.com/doc/current/contributing/code/standards.html
-[phpcs]: https://pear.php.net/package/PHP_CodeSniffer/
+[phpcs]: https://github.com/squizlabs/PHP_CodeSniffer
 [phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: https://cs.symfony.com/
