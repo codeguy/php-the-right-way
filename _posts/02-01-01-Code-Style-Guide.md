@@ -10,7 +10,7 @@ PHP developers to choose several of these and combine them into a single project
 their projects.
 
 The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them relate
-to code-style, but those that do are [PSR-1][psr1], [PSR-12][psr12] and [PSR-4][psr4]. These
+to code-style, but those that do are [PSR-1][psr1], [PSR-12][psr12], [PSR-4][psr4] and [PER Coding Style][per-cs]. These
 recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
 FuelPHP, Lithium, etc. are adopting. You can use them for your own projects, or continue to use your own
 personal style.
@@ -22,6 +22,7 @@ applications that implement the components can have consistency even when workin
 * [Read about PSR-1][psr1]
 * [Read about PSR-12][psr12]
 * [Read about PSR-4][psr4]
+* [Read about PER Coding Style][per-cs]
 * [Read about PEAR Coding Standards][pear-cs]
 * [Read about Symfony Coding Standards][symfony-cs]
 
@@ -61,6 +62,7 @@ Finally, a good supplementary resource for writing clean PHP code is [Clean Code
 [psr1]: https://www.php-fig.org/psr/psr-1/
 [psr12]: https://www.php-fig.org/psr/psr-12/
 [psr4]: https://www.php-fig.org/psr/psr-4/
+[per-cs]: https://www.php-fig.org/per/coding-style/
 [pear-cs]: https://pear.php.net/manual/en/standards.php
 [symfony-cs]: https://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: https://github.com/squizlabs/PHP_CodeSniffer
