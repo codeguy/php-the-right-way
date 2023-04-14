@@ -70,4 +70,4 @@ phone number, or age when processing a registration submission.
 [6]: https://www.php.net/security.filesystem.nullbytes
 [html-purifier]: http://htmlpurifier.org/
 [json_decode]: https://www.php.net/manual/function.json-decode.php
-[json_encode]: https://www.php.net/manual/en/function.json-encode.php
+[json_encode]: https://www.php.net/manual/function.json-encode.php
