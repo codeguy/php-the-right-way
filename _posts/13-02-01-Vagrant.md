@@ -15,17 +15,7 @@ a "fresh" installation.
 Vagrant creates folders for sharing your code between your host and your virtual machine, which means that you can
 create and edit your files on your host machine and then run the code inside your virtual machine.
 
-### A little help
-
-If you need a little help to start using Vagrant there are some services that might be useful:
-
-- [Puphpet][Puphpet]: simple GUI to set up virtual machines for PHP development. **Heavily focused in PHP**. Besides local VMs,
-it can be used to deploy to cloud services as well. The provisioning is made with Puppet.
-- [Phansible][Phansible]: provides an easy to use interface that helps you generate Ansible Playbooks for PHP based projects.
-
 
 [Vagrant]: https://www.vagrantup.com/
 [Puppet]: https://puppet.com/
 [Chef]: https://www.chef.io/
-[Puphpet]: https://github.com/puphpet/puphpet
-[Phansible]: https://phansible.com/
