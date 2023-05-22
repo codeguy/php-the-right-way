@@ -3,7 +3,7 @@ isChild: true
 anchor:  mac_setup
 ---
 
-## Mac Setup {#mac_setup_title}
+## macOS Setup {#mac_setup_title}
 
 macOS comes prepackaged with PHP but it is normally a little behind the latest stable release. There are multiple ways to install the latest PHP version on macOS.
 
@@ -33,7 +33,7 @@ brew link --overwrite php@8.2
 
 The [MacPorts] Project is an open-source community initiative to design an
 easy-to-use system for compiling, installing, and upgrading either
-command-line, X11 or Aqua based open-source software on the OS X operating
+command-line, X11 or Aqua based open-source software on the macOS operating
 system.
 
 MacPorts supports pre-compiled binaries, so you don't need to recompile every
@@ -63,7 +63,7 @@ It doesn't overwrite the PHP binaries installed by Apple, but installs everythin
 
 Another option that gives you control over the version of PHP you install, is to [compile it yourself][mac-compile].
 In that case be sure to have installed either [Xcode][xcode-gcc-substitution] or Apple's substitute
-["Command Line Tools for XCode"] downloadable from Apple's Mac Developer Center.
+["Command Line Tools for XCode"] downloadable from Apple's Developer Center.
 
 ### All-in-One Installers
 
