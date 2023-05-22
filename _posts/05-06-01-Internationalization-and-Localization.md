@@ -71,7 +71,7 @@ After installed, enable it by adding `extension=gettext.so` (Linux/Unix) or `ext
 your `php.ini`.
 
 Here we will also be using [Poedit] to create translation files. You will probably find it in your system's package
-manager; it is available for Unix, Mac, and Windows, and can be [downloaded for free on their website][poedit_download]
+manager; it is available for Unix, macOS, and Windows, and can be [downloaded for free on their website][poedit_download]
 as well.
 
 ### Structure
