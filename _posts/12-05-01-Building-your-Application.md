@@ -70,9 +70,9 @@ Managing and configuring servers can be a daunting task when faced with many ser
 *-- Martin Fowler*
 
 There are different ways to implement continuous integration for PHP. [Travis CI] has done a great job of
-making continuous integration a reality even for small projects. Travis CI is a hosted continuous integration service
-for the open source community. It is integrated with GitHub and offers first class support for many languages including
-PHP.
+making continuous integration a reality even for small projects. Travis CI is a hosted continuous integration service.
+It can be integrated with GitHub and offers support for many languages including PHP.
+GitHub has continuous integration workflows with [GitHub Actions][github_actions].
 
 #### Further reading:
 
@@ -105,3 +105,4 @@ PHP.
 [ansible_for_devops]: https://leanpub.com/ansible-for-devops
 [ansible_for_aws]: https://leanpub.com/ansible-for-aws
 [an_ansible_tutorial]: https://serversforhackers.com/an-ansible-tutorial
+[github_actions]: https://docs.github.com/en/actions
