@@ -70,11 +70,8 @@ include 'views/foo-list.php';
 <?php
 class FooModel
 {
-    protected $db;
-
-    public function __construct(PDO $db)
+    public function __construct(protected PDO $db)
     {
-        $this->db = $db;
     }
 
     public function getAllFoos() {
