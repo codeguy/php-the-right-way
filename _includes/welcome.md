@@ -1,9 +1,12 @@
-# Welcome
+# স্বাগতম
 
 There's a lot of outdated information on the Web that leads new PHP users astray,
 propagating bad practices and insecure code. _PHP: The Right Way_ is an easy-to-read,
 quick reference for PHP popular coding standards, links to authoritative tutorials
 around the Web, and what the contributors consider to be best practices at present.
+
+ওয়েবে অনেক পুরাতন তথ্য আছে যেগুলি নতুন পিএইচপি ইউজারদেরকে ভুল দিকনিরদেশনা দেয়, খারাপ অনুশিলন এবং অসুরক্ষিত কোড প্রচার করে। _PHP:The Right Way_ একটি সহজবোধ্য, দ্রুত উল্লেখযোগ্য (রেফারেন্স) বই, স্বীকৃতপূর্ণ অনলাইন টিউটোরিয়ালগুলির সার্বক্ষণিক
+লিঙ্ক এবং অবদানকারীগণ সরবপেক্ষীক উত্তম মনে করেন।
 
 _There is no canonical way to use PHP_. This website aims to introduce new PHP
 developers to some topics which they may not discover until it is too late, and aims
