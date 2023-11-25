@@ -57,6 +57,8 @@ You should read the `CONTRIBUTING.md` file for precise instructions and tips. Bu
 * [日本語](https://ja.phptherightway.com)
 * [简体中文](https://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](https://laravel-taiwan.github.io/php-the-right-way)
+* [Қазақ тілі](https://tartary-team.github.io/PHP-The-Right-Way/welcome.html)
+
 
 ### Translations
 
