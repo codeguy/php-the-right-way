@@ -39,8 +39,8 @@ And you can run phpcs manually from shell:
     phpcs -sw --standard=PSR1 file.php
 
 It will show errors and describe how to fix them.
-It can also be helpful to include this command in a git hook.
-That way, branches which contain violations against the chosen standard cannot enter the repository until those
+It can also be helpful to include the `phpcs` command in a git pre-commit hook with the `--filter=GitStaged` CLI argument.
+That way, code which contain violations against the chosen standard cannot enter the repository until those
 violations have been fixed.
 
 If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
@@ -65,8 +65,8 @@ Finally, a good supplementary resource for writing clean PHP code is [Clean Code
 [per-cs]: https://www.php-fig.org/per/coding-style/
 [pear-cs]: https://pear.php.net/manual/en/standards.php
 [symfony-cs]: https://symfony.com/doc/current/contributing/code/standards.html
-[phpcs]: https://github.com/squizlabs/PHP_CodeSniffer
-[phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
+[phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
+[phpcbf]: https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: https://cs.symfony.com/
 [cleancode]: https://github.com/jupeter/clean-code-php
