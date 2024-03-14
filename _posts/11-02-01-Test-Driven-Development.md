@@ -66,4 +66,4 @@ users of the application.
 * [Selenium](https://www.selenium.dev/)
 * [Mink](https://mink.behat.org/)
 * [Codeception](https://codeception.com/) is a full-stack testing framework that includes acceptance testing tools
-* [Storyplayer](https://datasift.github.io/storyplayer/) is a full-stack testing framework that includes support for creating and destroying test environments on demand
+* [Storyplayer](https://github.com/MeltwaterArchive/storyplayer) is a full-stack testing framework that includes support for creating and destroying test environments on demand
