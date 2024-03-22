@@ -12,7 +12,7 @@ anchor:  templating_further_reading
 * [Getting Started With PHP Templating](https://www.smashingmagazine.com/2011/10/getting-started-with-php-templating/)
 * [Roll Your Own Templating System in PHP](https://code.tutsplus.com/tutorials/roll-your-own-templating-system-in-php--net-16596)
 * [Master Pages](https://laracasts.com/series/laravel-from-scratch/episodes/7)
-* [Working With Templates in Symfony 2](https://code.tutsplus.com/tutorials/working-with-templates-in-symfony-2--cms-21172)
+* [Twig: The Basics](https://symfonycasts.com/screencast/twig/basics)
 * [Writing Safer Templates](https://github.com/box/brainy/wiki/Writing-Safe-Templates)
 
 ### Libraries
