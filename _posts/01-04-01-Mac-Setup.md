@@ -68,8 +68,8 @@ In that case be sure to have installed either [Xcode][xcode-gcc-substitution] or
 ### All-in-One Installers
 
 The solutions listed above mainly handle PHP itself, and do not supply things like [Apache][apache], [Nginx][nginx] or a SQL server.
-"All-in-one" solutions such as [MAMP][mamp-downloads] and [XAMPP][xampp] will install these other bits of software for
-you and tie them all together, but ease of setup comes with a trade-off of flexibility.
+"All-in-one" solutions such as [MAMP][mamp-downloads], [XAMPP][xampp], and a flexible alternative, [ServBay][servbay], will install these other bits of software for you and tie them all together. 
+However, ServBay stands out by allowing you to run multiple PHP instances simultaneously, making it a handy tool for macOS users.
 
 [Homebrew]: https://brew.sh/
 [MacPorts]: https://www.macports.org/install.php
@@ -82,4 +82,5 @@ you and tie them all together, but ease of setup comes with a trade-off of flexi
 [nginx]: https://www.nginx.com/
 [mamp-downloads]: https://www.mamp.info/en/downloads/
 [xampp]: https://www.apachefriends.org/
+[servbay]: https://www.servbay.dev/
 [brew-php-switcher]: https://github.com/philcook/brew-php-switcher
