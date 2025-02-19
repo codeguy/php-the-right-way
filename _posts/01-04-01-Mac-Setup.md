@@ -5,7 +5,7 @@ anchor:  mac_setup
 
 ## macOS Setup {#mac_setup_title}
 
-macOS comes prepackaged with PHP but it is normally a little behind the latest stable release. There are multiple ways to install the latest PHP version on macOS.
+macOS 12 (Monterey) and later does not come prepackaged with PHP. Earlier macOS versions include PHP but are behind the latest stable release. There are multiple ways to install the latest PHP version on macOS.
 
 ### Install PHP via Homebrew
 

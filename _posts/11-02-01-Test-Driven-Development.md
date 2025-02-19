@@ -63,7 +63,8 @@ users of the application.
 
 #### Functional Testing Tools
 
-* [Selenium](https://www.selenium.dev/)
-* [Mink](https://mink.behat.org/)
 * [Codeception](https://codeception.com/) is a full-stack testing framework that includes acceptance testing tools
+* [Cyress](https://www.cypress.io/)
+* [Mink](https://mink.behat.org/)
+* [Selenium](https://www.selenium.dev/)
 * [Storyplayer](https://github.com/MeltwaterArchive/storyplayer) is a full-stack testing framework that includes support for creating and destroying test environments on demand

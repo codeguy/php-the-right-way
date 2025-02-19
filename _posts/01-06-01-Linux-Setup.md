@@ -5,7 +5,7 @@ anchor:  linux_setup
 
 ## Linux Setup {#linux_setup_title}
 
-Most GNU/Linux distributions come with PHP available from the official repositories, but those packages usually are a little behind the current stable version. There are multiple ways to get newer PHP versions on such distributions. On Ubuntu and Debian-based GNU/Linux distributions, for instance, the best alternatives for native packages are provided and maintened by [Ondřej Surý][Ondrej Sury Blog], through his Personal Package Archive (PPA) on Ubuntu and DPA/bikeshed on Debian. Find instructions for each of these below. All that said, you can always use containers, compile the PHP Source code, etc.
+Most GNU/Linux distributions come with PHP available from the official repositories, but those packages usually are a little behind the current stable version. There are multiple ways to get newer PHP versions on such distributions. On Ubuntu and Debian-based GNU/Linux distributions, for instance, the best alternatives for native packages are provided and maintained by [Ondřej Surý][Ondrej Sury Blog], through his Personal Package Archive (PPA) on Ubuntu and DPA/bikeshed on Debian. Find instructions for each of these below. All that said, you can always use containers, compile the PHP Source code, etc.
 
 ### Ubuntu-based distributions
 

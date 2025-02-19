@@ -78,7 +78,7 @@ There's been a lot of discussion lately about how the PHP community lacks suffic
 
 ## Who
 
-My name is [Josh Lockhart](https://twitter.com/codeguy). I'm the author of the [Slim Framework](https://www.slimframework.com/), and I work for [New Media Campaigns](https://www.newmediacampaigns.com/).
+My name is [Josh Lockhart](https://x.com/codeguy). I'm the author of the [Slim Framework](https://www.slimframework.com/), and I work for [New Media Campaigns](https://www.newmediacampaigns.com/).
 
 ### Collaborators
 

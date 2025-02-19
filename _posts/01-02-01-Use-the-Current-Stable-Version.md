@@ -1,14 +1,14 @@
 ---
-title:   Use the Current Stable Version (8.3)
+title:   Use the Current Stable Version (8.4)
 isChild: true
 anchor:  use_the_current_stable_version
 ---
 
-## Use the Current Stable Version (8.3) {#use_the_current_stable_version_title}
+## Use the Current Stable Version (8.4) {#use_the_current_stable_version_title}
 
-If you are getting started with PHP, start with the current stable release of [PHP 8.3][php-release]. PHP 8.x adds many [new features](#language_highlights) over the older 7.x and 5.x versions. The engine has been largely re-written, and PHP is now even quicker than older versions. PHP 8 is a major update of the language and contains many new features and optimizations.
+If you are getting started with PHP, start with the current stable release of [PHP 8.4][php-release]. PHP 8.x adds many [new features](#language_highlights) over the older 7.x and 5.x versions. The engine has been largely re-written, and PHP is now even quicker than older versions. PHP 8 is a major update of the language and contains many new features and optimizations.
 
-You should try to upgrade to the latest stable version quickly - PHP 7.4 [is already End of Life][php-supported]. Upgrading is easy, as there are not many backwards compatibility breaks [PHP 8.0][php-bc-80], [PHP 8.1][php-bc-81], [PHP 8.2][php-bc-82], [PHP 8.3][php-bc-83]. If you are not sure which version a function or feature is in, you can check the PHP documentation on the [php.net][php-docs] website.
+You should try to upgrade to the latest stable version quickly - PHP 7.4 [is already End of Life][php-supported]. Upgrading is easy, as there are not many backwards compatibility breaks [PHP 8.0][php-bc-80], [PHP 8.1][php-bc-81], [PHP 8.2][php-bc-82], [PHP 8.3][php-bc-83], [PHP 8.4][php-bc-84]. If you are not sure which version a function or feature is in, you can check the PHP documentation on the [php.net][php-docs] website.
 
 [php-release]: https://www.php.net/downloads.php
 [php-supported]: https://www.php.net/supported-versions.php
@@ -17,3 +17,4 @@ You should try to upgrade to the latest stable version quickly - PHP 7.4 [is alr
 [php-bc-81]: https://www.php.net/manual/migration81.incompatible.php
 [php-bc-82]: https://www.php.net/manual/migration82.incompatible.php
 [php-bc-83]: https://www.php.net/manual/migration83.incompatible.php
+[php-bc-84]: https://www.php.net/manual/migration84.incompatible.php
