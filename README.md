@@ -63,9 +63,9 @@ Wenn Sie _PHP - aber richtig_ übersetzen möchten, forken Sie das original-Repo
 Um Fragmentierung und Leserverwirrung zu vermeiden, wählen Sie bitte eine dieser Optionen:
 
 1. Wir verlinken Ihren GitHub Pages-Fork mit `[username].github.io/php-the-right-way`.
-2. Wir verlinken Ihren GitHub Pages-Fork mit einer Subdomain (z. B. „de.phptherightway.com“).
+2. Wir verlinken Ihren GitHub Pages-Fork mit einer Subdomain (z. B. "de.phptherightway.com“).
 
-Wenn Sie eine Subdomain verwenden, tragen Sie diese in die CNAME-Datei ein und bitten Sie uns, einen DNS für Sie einzurichten. Wenn Sie keine Subdomain verwenden, entfernen Sie die CNAME-Datei vollständig, da Ihr Fork sonst beim Pushen nicht erstellt wird.
+Wenn Sie eine Subdomain verwenden, tragen Sie diese in die `CNAME`-Datei ein und bitten Sie uns, einen DNS für Sie einzurichten. Wenn Sie keine Subdomain verwenden, entfernen Sie die `CNAME`-Datei vollständig, da Ihr Fork sonst beim Pushen nicht erstellt wird.
 
 Fügen Sie Informationen zu Ihrer Übersetzung auf der [Wiki-Seite](https://github.com/codeguy/php-the-right-way/wiki/Translations) hinzu.
 
