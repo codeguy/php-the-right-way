@@ -85,6 +85,10 @@ Mein Name ist [Josh Lockhart](https://x.com/codeguy). Ich bin der Autor vom [Sli
 * [Kris Jordan](https://krisjordan.com/)
 * [Phil Sturgeon](https://phil.tech/)
 
+### Übersetzung ins Deutsche
+
+* [Henrik Pantle](https://github.com/skipper-henrik)
+
 ## Lizenz
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-nc-sa/3.0/)
