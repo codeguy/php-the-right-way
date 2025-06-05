@@ -1,6 +1,6 @@
 # PHP: The Right Way
 
-## Overview
+## Überblick
 
 This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 
