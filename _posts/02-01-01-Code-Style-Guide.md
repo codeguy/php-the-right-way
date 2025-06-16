@@ -4,59 +4,50 @@ anchor: code_style_guide
 
 # Code Style Guide {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adheres
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+Die PHP-Community ist groß und vielfältig und besteht aus unzähligen Bibliotheken, Frameworks und Komponenten. PHP-Entwickler wählen häufig mehrere davon aus und kombinieren sie in einem Projekt.
+Es ist wichtig, dass der PHP-Code (so nah wie möglich) einem gemeinsamen Codestil folgt, damit Entwickler verschiedene Bibliotheken für ihre Projekte problemlos kombinieren können.
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them relate
-to code-style, but those that do are [PSR-1][psr1], [PSR-12][psr12], [PSR-4][psr4] and [PER Coding Style][per-cs]. These
-recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
-FuelPHP, Lithium, etc. are adopting. You can use them for your own projects, or continue to use your own
-personal style.
+Die [Framework Interop Group][fig] hat eine Reihe von Stilempfehlungen vorgeschlagen und verabschiedet. Nicht alle beziehen sich auf den Codestil, aber [PSR-1][psr1], [PSR-12][psr12], [PSR-4][psr4] and [PER Coding Style][per-cs] machen es.
+Diese Empfehlungen stellen lediglich eine Reihe von Regeln dar, die von vielen Projekten wie Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium usw. übernommen werden.
+Sie können diese Empfehlungen für Ihre eigenen Projekte verwenden oder Ihren persönlichen Stil beibehalten.
 
-Ideally, you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
-applications that implement the components can have consistency even when working with lots of third-party code.
+Idealerweise schreiben Sie PHP-Code, der einem bekannten Standard entspricht. Dies kann eine beliebige Kombination von PSRs oder einer der Codierungsstandards von PEAR oder Zend sein.
+So können andere Entwickler Ihren Code problemlos lesen und bearbeiten, und Anwendungen, die die Komponenten implementieren, gewährleisten Konsistenz auch bei der Verwendung von viel Drittanbieter-Code.
 
-* [Read about PSR-1][psr1]
-* [Read about PSR-12][psr12]
-* [Read about PSR-4][psr4]
-* [Read about PER Coding Style][per-cs]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [lies über PSR-1][psr1]
+* [lies  über  PSR-12][psr12]
+* [lies über  PSR-4][psr4]
+* [lies über  PER Coding Style][per-cs]
+* [lies über  PEAR Coding Standards][pear-cs]
+* [lies über  Symfony Coding Standards][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text][st-cs] to be given real-time feedback.
+Du kannst [PHP_CodeSniffer][phpcs] verwenden, um Code anhand einer dieser Empfehlungen zu überprüfen, und Plugins für Texteditoren wie Sublime Text, um Feedback in Echtzeit zu erhalten.
 
-You can fix the code layout automatically by using one of the following tools:
+Du kannst das Code-Layout automatisch korrigieren, indem Du eines der folgenden Tools verwendest:
 
-- One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
-- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
-
-And you can run phpcs manually from shell:
+- Einer davon ist der  [PHP Coding Standards Fixer][phpcsfixer], der über eine sehr gut getestete Codebasis verfügt.
+- Außerdem können Sie Ihren Code mit dem in PHP_CodeSniffer enthaltenen Tool [PHP Code Beautifier and Fixer][phpcbf] entsprechend anpassen.
+- 
+Und Du kannst `phpcs` manuell von der Shell aus ausführen:
 
     phpcs -sw --standard=PSR1 file.php
 
-It will show errors and describe how to fix them.
-It can also be helpful to include the `phpcs` command in a git pre-commit hook with the `--filter=GitStaged` CLI argument.
-That way, code which contain violations against the chosen standard cannot enter the repository until those
-violations have been fixed.
+Es werden Fehler angezeigt und deren Behebung beschrieben.
+Es kann auch hilfreich sein, den `phpcs` Befehl in einen Git-Pre-Commit-Hook mit dem `--filter=GitStaged` CLI-Argument einzubinden.
+So kann Code, der gegen den gewählten Standard verstößt, erst dann in das Repository gelangen, wenn diese Verstöße behoben wurden.
 
-If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
-[PHP Code Beautifier and Fixer][phpcbf].
+Wenn Du über PHP_CodeSniffer verfügst, kannst Du die von ihm gemeldeten Code-Layoutprobleme automatisch mit dem [PHP Code Beautifier and Fixer][phpcbf] beheben.
 
     phpcbf -w --standard=PSR1 file.php
 
-Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
-It will show what kind of errors the code structure had before it fixed them.
+Alternativ können Sie den [PHP Coding Standards Fixer][phpcsfixer] verwenden.
+Dieser zeigt Dir, welche Fehler die Codestruktur vor der Behebung aufwies.
 
     php-cs-fixer fix -v --rules=@PSR1 file.php
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
-readable by all current and future parties who may be working on the codebase.
+Für alle Symbolnamen und die Code-Infrastruktur wird Englisch bevorzugt. Kommentare können in jeder Sprache verfasst werden, die für alle aktuellen und zukünftigen Beteiligten, die an der Codebasis arbeiten, leicht verständlich ist.
 
-Finally, a good supplementary resource for writing clean PHP code is [Clean Code PHP][cleancode].
+Eine gute ergänzende Ressource zum Schreiben von sauberem PHP-Code ist [Clean Code PHP][cleancode].
 
 [fig]: https://www.php-fig.org/
 [psr1]: https://www.php-fig.org/psr/psr-1/
