@@ -39,7 +39,7 @@ PHP unterstützt verschiedene Formen der Metaprogrammierung durch Mechanismen wi
 
 * [mehr zu Magic Methods][magic-methods]
 * [mehr zu Reflection][reflection]
-* [mehr zu t Overloading][overloading]
+* [mehr zu Overloading][overloading]
 
 
 [oop]: https://www.php.net/language.oop5
