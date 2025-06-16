@@ -39,31 +39,26 @@ An diesem Punkt kannst Du `php54`, `php55`, `php56`, `php70`, `php71`, `php72`, 
     sudo port install php74
     sudo port install php83
 
-And you can run `select` command to switch your active PHP:
+Und Du kannst den `select` Befehl ausführen, um Dein aktives PHP zu wechseln:
 
     sudo port select --set php php83
 
-### Install PHP via phpbrew
+### Installier PHP mit phpbrew
 
-[phpbrew] is a tool for installing and managing multiple PHP versions. This can be really useful if two different
-applications/projects require different versions of PHP, and you are not using virtual machines.
+[phpbrew] ist ein Tool zur Installation und Verwaltung mehrerer PHP-Versionen. Dies ist besonders nützlich, wenn zwei verschiedene Anwendungen/Projekte unterschiedliche PHP-Versionen erfordern und Sie keine virtuellen Maschinen verwenden.
 
-### Install PHP via Liip's binary installer
+### Installiere PHP mit Liip's binary installer
 
-Another popular option is [php-osx.liip.ch] which provides one liner installation methods for versions 5.3 through 7.3.
-It doesn't overwrite the PHP binaries installed by Apple, but installs everything in a separate location (/usr/local/php5).
+Eine weitere beliebte Option ist [php-osx.liip.ch], das einfache Installationsmethoden für die Versionen 5.3 bis 7.3 bietet. Die von Apple installierten PHP-Binärdateien werden dabei nicht überschrieben, sondern alles an einem separaten Ort (/usr/local/php5) installiert.
 
-### Compile from Source
+### Aus Quell-Code compilieren
 
-Another option that gives you control over the version of PHP you install, is to [compile it yourself][mac-compile].
-In that case be sure to have installed either [Xcode][xcode-gcc-substitution] or Apple's substitute
-["Command Line Tools for XCode"] downloadable from Apple's Developer Center.
+Eine weitere Möglichkeit, die installierte PHP-Version zu kontrollieren, besteht darin, sie [selbst zu kompilieren][mac-compile]. Stelle in diesem Fall sicher, dass Du entweder [Xcode][xcode-gcc-substitution] oder Apples Ersatz ["Command Line Tools for XCode"] installiert hast, der im Apple Developer Center heruntergeladen werden kann.
 
-### All-in-One Installers
+### All-in-One Installation
 
-The solutions listed above mainly handle PHP itself, and do not supply things like [Apache][apache], [Nginx][nginx] or a SQL server.
-"All-in-one" solutions such as [MAMP][mamp-downloads] and [XAMPP][xampp] will install these other bits of software for
-you and tie them all together, but ease of setup comes with a trade-off of flexibility.
+Die oben aufgeführten Lösungen verarbeiten hauptsächlich PHP selbst und bieten keine Sachen wie [Apache][apache], [Nginx][nginx] oder einen SQL-Server.
+All-in-One-Lösungen wie [MAMP][mamp-downloads] und [XAMPP][xampp] installieren diese Softwarekomponenten für Dich und verknüpfen sie miteinander. Die einfache Einrichtung geht jedoch auf Kosten der Flexibilität.
 
 [Homebrew]: https://brew.sh/
 [MacPorts]: https://www.macports.org/install.php
