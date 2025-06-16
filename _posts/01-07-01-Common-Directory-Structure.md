@@ -4,7 +4,7 @@ isChild: true
 anchor:  common_directory_structure
 ---
 
-##  übliche Datei- und Verzeichnisstruktur {#common_directory_structure_title}
+##  Gemeinsame Datei- und Verzeichnisstruktur {#common_directory_structure_title}
 
 Eine häufige Frage von Webentwicklern lautet: “Wo speichere ich meine Zeug?“ Über die Jahre lautete die Antwort immer wieder: „Dort wo das `DocumentRoot` ist.“ Obwohl diese Antwort nicht vollständig ist, bietet sie einen guten Ausgangspunkt.
 
