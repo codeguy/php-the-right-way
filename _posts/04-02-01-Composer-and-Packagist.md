@@ -4,104 +4,81 @@ isChild: true
 anchor:  composer_and_packagist
 ---
 
-## Composer and Packagist {#composer_and_packagist_title}
+## Composer und Packagist {#composer_and_packagist_title}
 
-Composer is the recommended dependency manager for PHP. List your project's dependencies in a `composer.json` file and,
-with a few simple commands, Composer will automatically download your project's dependencies and setup autoloading for
-you. Composer is analogous to NPM in the node.js world, or Bundler in the Ruby world.
+Composer ist der empfohlene Abhängigkeitsmanager für PHP. Listen Sie die Abhängigkeiten Ihres Projekts in einer `composer.json` Datei auf. Mit wenigen einfachen Befehlen lädt Composer die Abhängigkeiten Deines Projekts  herunter und richtet das autoloading für Dich ein. Composer entspricht NPM in der Node.js-Welt oder Bundler in der Ruby-Welt.
 
-There is a plethora of PHP libraries that are compatible with Composer and ready to be used in your project. These
-"packages" are listed on [Packagist], the official repository for Composer-compatible PHP libraries.
+Es gibt eine Vielzahl von PHP-Bibliotheken, die mit Composer kompatibel sind und in Ihrem Projekt eingesetzt werden können. Diese "packages" finden Sie auf [Packagist], dem offiziellen Repository für Composer-kompatible PHP-Bibliotheken.
 
-### How to Install Composer
+### So installierst Du Composer
 
-The safest way to download composer is by [following the official instructions](https://getcomposer.org/download/).
-This will verify the installer is not corrupt or tampered with.
-The installer installs a `composer.phar` binary in your _current working directory_.
+Der sicherste Weg, Composer herunterzuladen, ist [den offiziellen Anweisungen zu folgen](https://getcomposer.org/download/).
+Dadurch wird sichergestellt, dass das Installationsprogramm nicht beschädigt oder manipuliert ist. Das Installationsprogramm installiert eine  `composer.phar` Binärdatei in Deinem aktuellen _Arbeitsverzeichnis_.
 
-We recommend installing Composer *globally* (e.g. a single copy in `/usr/local/bin`). To do so, run this command next:
+Wir empfehlen, Composer *global* zu installieren (z. B. eine einzelne Kopie in `/usr/local/bin`). Führe dazu als Nächstes diesen Befehl aus:
 
 {% highlight console %}
 mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
-**Note:** If the above fails due to permissions, prefix with `sudo`.
+**Hinweis:** Wenn das oben genannte Verfahren aufgrund von Berechtigungen fehlschlägt, verwende das `sudo` Präfix
 
-To run a locally installed Composer you'd use `php composer.phar`, globally it's simply `composer`.
+Um einen lokal installierten Composer auszuführen, verwende `php composer.phar`, global ist es einfach `composer`.
 
-#### Installing on Windows
+#### Installation unter Windows
 
-For Windows users the easiest way to get up and running is to use the [ComposerSetup] installer, which
-performs a global install and sets up your `$PATH` so that you can just call `composer` from any
-directory in your command line.
+Für Windows-Benutzer ist die einfachste Möglichkeit um los zu legen die Verwendung des [ComposerSetup] -Installationsprogramms, das eine globale Installation durchführt und Dein `$PATH` so einrichtet, dass Du einfach  `composer` aus jedem Verzeichnis in Ihrer Befehlszeile aufrufen kannst.
 
-### How to Define and Install Dependencies
+### So definieren und installieren Sie Abhängigkeiten
 
-Composer keeps track of your project's dependencies in a file called `composer.json`. You can manage it
-by hand if you like, or use Composer itself. The `composer require` command adds a project dependency
-and if you don't have a `composer.json` file, one will be created. Here's an example that adds [Twig]
-as a dependency of your project.
+Composer speichert die Abhängigkeiten Ihres Projekts in einer Datei namens `composer.json`. Du kannst diese manuell verwalten oder Composer selbst verwenden. Der `composer require` Befehl fügt eine Projektabhängigkeit hinzu und falls Du keine `composer.json` Datei hast, wird eine erstellt. Hier ist ein Beispiel, das [Twig] als Dependency Deines Projekts hinzufügt.
 
 {% highlight console %}
 composer require twig/twig:^2.0
 {% endhighlight %}
 
-Alternatively, the `composer init` command will guide you through creating a full `composer.json` file
-for your project. Either way, once you've created your `composer.json` file you can tell Composer to
-download and install your dependencies into the `vendor/` directory. This also applies to projects
-you've downloaded that already provide a `composer.json` file:
+Alternativ führt Sie der `composer init` Befehl durch die Erstellung einer vollständigen `composer.json` Datei für Dein Projekt. Sobald Du Deine `composer.json`Datei erstellt hast, kannst Du Composer anweisen, Deine Dependencies herunterzuladen und im `vendor/` Verzeichnis zu installieren. Dies gilt auch für heruntergeladene Projekte, die bereits eine `composer.json` Datei bereitstellen:
 
 {% highlight console %}
 composer install
 {% endhighlight %}
 
-Next, add this line to your application's primary PHP file; this will tell PHP to use Composer's
-autoloader for your project dependencies.
+Fügen Sie als Nächstes diese Zeile zur primären PHP-Datei Ihrer Anwendung hinzu. Dadurch wird PHP angewiesen, den Autoloader von Composer für Ihre Projektabhängigkeiten zu verwenden.
 
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 {% endhighlight %}
 
-Now you can use your project dependencies, and they'll be autoloaded on demand.
+Jetzt können Sie Ihre Dependencies verwenden, diese werden bei Bedarf automatisch geladen.
 
-### Updating your dependencies
+### Aktualisieren Ihrer Dependencies (Abhängigkeiten)
 
-Composer creates a file called `composer.lock` which stores the exact version of each package it
-downloaded when you first ran `composer install`. If you share your project with others,
-ensure the `composer.lock` file is included, so that when they run `composer install` they'll
-get the same versions as you.  To update your dependencies, run `composer update`. Don't use
-`composer update` when deploying, only `composer install`, otherwise you may end up with different
-package versions on production.
+Composer erstellt eine Datei namens `composer.lock`, in der die genaue Version jedes heruntergeladenen Pakets gespeichert ist, als Du  zum ersten Mal `composer install` ausgeführt hattest. Wenn Du Dein Projekt mit anderen teilst, stelle sicher, dass die `composer.lock` Datei enthalten ist, damit dein Kollege beim Ausführen von `composer install` die gleichen Versionen erhält wie Du. Um Ihre Abhängigkeiten zu aktualisieren, führe `composer update` aus. Verwende `composer update` nicht beim Deployen, sondern nur `composer install`. Sonst bekommst Du in der Produktion womöglich unterschiedliche Paketversionen.
 
-This is most useful when you define your version requirements flexibly. For instance, a version
-requirement of `~1.8` means "anything newer than `1.8.0`, but less than `2.0.x-dev`". You can also use
-the `*` wildcard as in `1.8.*`. Now Composer's `composer update` command will upgrade all your
-dependencies to the newest version that fits the restrictions you define.
+Dies ist besonders nützlich, wenn Du Deine Versionsanforderungen flexibel definierst. Beispielsweise hat die Versionsanforderung von `~1.8` die Bedeutung "alles, was neuer als `1.8.0`, aber kleiner als `2.0.x-dev` ist". Du kannst auch das Platzhalterzeichen `*` wie in  `1.8.*` verwenden .
+Der `composer update` Befehl aktualisiert nun alle Deine Abhängigkeiten auf die neueste Version, die den von Deinen definierten Einschränkungen entspricht.
 
-### Update Notifications
+### Update-Benachrichtigungen
 
-To receive notifications about new version releases you can sign up for [libraries.io], a web service
-that can monitor dependencies and send you alerts on updates.
+Um Benachrichtigungen über neue Versions-Veröffentlichungen zu erhalten, kannst Du Dich bei [libraries.io] anmelden, einem Webdienst, der Abhängigkeiten überwachen und Dir Benachrichtigungen zu Aktualisierungen senden kann.
 
-### Checking your dependencies for security issues
+### Überprüfen Deiner Abhängigkeiten auf Sicherheitsprobleme
+
+Der [Local PHP Security Checker]  ist ein Befehlszeilentool, das Deine `composer.lock` Datei untersucht und Dir mitteilt, ob Du eine Deiner Abhängigkeiten aktualisieren musst.
 
 The [Local PHP Security Checker] is a command-line tool, which will examine your `composer.lock`
 file and tell you if you need to update any of your dependencies.
 
-### Handling global dependencies with Composer
+### Handling globaler Abhängigkeiten mit Composer
 
-Composer can also handle global dependencies and their binaries. Usage is straight-forward, all you need
-to do is prefix your command with `global`. If for example you wanted to install PHPUnit and have it
-available globally, you'd run the following command:
+Composer kann auch globale Abhängigkeiten und deren Binärdateien verarbeiten. Die Bedienung ist unkompliziert: Du musst Deinem Befehl lediglich das Präfix `global` voranstellen. Wenn Du beispielsweise PHPUnit installieren und global verfügbar machen möchtest, führe den folgenden Befehl aus:
 
 {% highlight console %}
 composer global require phpunit/phpunit
 {% endhighlight %}
 
-This will create a `~/.composer` folder where your global dependencies reside. To have the installed
-packages' binaries available everywhere, you'd then add the `~/.composer/vendor/bin` folder to your
-`$PATH` variable.
+Dadurch wird ein `~/.composer` Ordner erstellt, in dem Deine globalen Abhängigkeiten gespeichert sind. Um die Binärdateien der installierten Pakete überall verfügbar zu haben, füge den `~/.composer/vendor/bin` Ordner anschließend Deiner `$PATH` Variable hinzu.
 
 * [Learn about Composer]
 
