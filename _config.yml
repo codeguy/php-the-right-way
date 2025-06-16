@@ -22,7 +22,7 @@ defaults:
             path: /images/og-image.png
             width: 1024
             height: 640
-            alt: "PHP: The Right Way"
+            alt: "PHP - aber richtig."
 
 # Excludes should be appended to the default
 # https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml#L37-L55
@@ -47,7 +47,7 @@ exclude:
 
 future: true
 
-title: "PHP: The Right Way"
-tagline: Reference for PHP best practices
-description: An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web
+title: "PHP - aber richtig."
+tagline: Referenz für PHP best Practices
+description: Eine leicht verständliche Kurzreferenz für bewährte PHP-Herangehensweisen, anerkannte Coding-Standards und Links zu maßgeblichen Tutorials im Internet.
 logo: /images/og-image.png
