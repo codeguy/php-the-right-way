@@ -1,7 +1,7 @@
 ---
 title:   Verwende die aktuelle stabile Version (8.4)
 isChild: true
-anchor:  use_the_current_stable_version
+anchor:  php-aber-richtig/use_the_current_stable_version
 ---
 
 ## Verwende die aktuelle stabile Version (8.4) {#use_the_current_stable_version_title}
