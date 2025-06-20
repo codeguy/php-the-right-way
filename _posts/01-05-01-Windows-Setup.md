@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor:  windows_setup
+anchor:  php-aber-richtig/windows_setup
 ---
 
 ## Windows Setup {#windows_setup_title}
