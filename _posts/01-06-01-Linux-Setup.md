@@ -1,6 +1,6 @@
 ---
 isChild: true
-anchor:  linux_setup
+anchor:  php-aber-richtig/linux_setup
 ---
 
 ## Linux Setup {#linux_setup_title}
