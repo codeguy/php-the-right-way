@@ -6,42 +6,39 @@ sitemap: true
 
 # The Basics
 
-## Comparison operators
+## Vergleichsoperatoren
 
-Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
-problem stems from strict comparisons (the comparison of booleans as integers).
+Vergleichsoperatoren sind ein oft übersehener Aspekt von PHP, der zu vielen unerwarteten Ergebnissen führen kann. Ein solches Problem entsteht durch strikte Vergleiche (den Vergleich von Booleschen Werten mit Ganzzahlen).
 
 {% highlight php %}
 <?php
 $a = 5;   // 5 as an integer
 
-var_dump($a == 5);       // compare value; return true
-var_dump($a == '5');     // compare value (ignore type); return true
-var_dump($a === 5);      // compare type/value (integer vs. integer); return true
-var_dump($a === '5');    // compare type/value (integer vs. string); return false
+var_dump($a == 5);       // vergleiche Wert; return true
+var_dump($a == '5');     // vergleiche Wert (ignoriere Datentyp); return true
+var_dump($a === 5);      // vergleiche Typ/Wert (integer vs. integer); return true
+var_dump($a === '5');    // vergleiche Typ/Wert (integer vs. string); return false
 
-//Equality comparisons
-if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is interpreted as the boolean 'false'
+//Vergleich auf gleiche Werte
+if (strpos('testing', 'test')) {    // 'test' wird an position 0 gefunden, was als bool'sches 'false' interpretiert wird
     // code...
 }
 
-// vs. strict comparisons
-if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
+// vs. strikte Vergleiche
+if (strpos('testing', 'test') !== false) {    // true, augrund strikten Vergleiches (0 !== false)
     // code...
 }
 {% endhighlight %}
 
-* [Comparison operators](https://www.php.net/language.operators.comparison)
-* [Comparison table](https://www.php.net/types.comparisons)
+* [Vergleichspoteratoren](https://www.php.net/language.operators.comparison)
+* [Tabelle zu Typenvergleichen in PHP](https://www.php.net/types.comparisons)
 * [Comparison cheatsheet](https://phpcheatsheets.com/index.php?page=compare)
 
-## Conditional statements
+## Bedingte Anweisungen
 
-### If statements
+### If-Anweisungen
 
-While using 'if/else' statements within a function or class method, there is a common misconception that 'else' must be used
-in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
-necessary as 'return' will end the function, causing 'else' to become moot.
+Bei der Verwendung von 'if/else'-Anweisungen innerhalb einer Funktion oder Methode besteht häufig der Irrtum, dass 'else' in Verbindung mit möglichen Ergebnissen verwendet werden muss. Soll das Ergebnis jedoch den Rückgabewert definieren, ist 'else' nicht erforderlich, da 'return' die Funktion beendet und 'else' damit hinfällig wird.
 
 {% highlight php %}
 <?php
@@ -61,10 +58,10 @@ function test($a)
     if ($a) {
         return true;
     }
-    return false;    // else is not necessary
+    return false;    // else ist hier nicht nötig
 }
 
-// or even shorter:
+// oder noch kürzer:
 
 function test($a)
 {
@@ -73,32 +70,32 @@ function test($a)
 
 {% endhighlight %}
 
-* [If statements](https://www.php.net/control-structures.if)
+* [if-Anewisung](https://www.php.net/control-structures.if)
 
-### Switch statements
+### Switch-Anweisungen
 
-Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
+Switch-Anweisungen sind eine gute Möglichkeit, das Eintippen endloser if- und elseif-Anweisungen zu vermeiden. Dabei solltest Du jedoch einige Dinge beachten:
 
-- Switch statements only compare values, and not the type (equivalent to '==')
-- They iterate case by case until a match is found. If no match is found, then the default is used (if defined)
-- Without a 'break', they will continue to implement each case until reaching a break/return
-- Within a function, using 'return' alleviates the need for 'break' as it ends the function
+- Switch-Anweisungen vergleichen nur Werte und nicht den Typ (entspricht '==')
+- Sie iterieren 'case' für 'case', bis eine Übereinstimmung gefunden wird. Wenn keine Übereinstimmung gefunden wird, wird der Standardwert 'default' verwendet (sofern definiert).
+- Ohne ein 'break' werden werden alle 'case'-Anweisungen ausgeführt, so lange bis ein 'break'/'return' erreicht wird.
+- Innerhalb einer Funktion verringert die Verwendung von 'return' die Notwendigkeit von 'break', da es die Funktion beendet
 
 {% highlight php %}
 <?php
-$answer = test(2);    // the code from both 'case 2' and 'case 3' will be implemented
+$answer = test(2);    // sowohl der code von 'case 2' als auch 'case 3' wird ausgeführt
 
 function test($a)
 {
     switch ($a) {
         case 1:
             // code...
-            break;             // break is used to end the switch statement
+            break;             // break beendet das switch-Statement
         case 2:
-            // code...         // with no break, comparison will continue to 'case 3'
+            // code...         // ohne break wird der Vegrleich bei 'case 3' fortgeführt
         case 3:
             // code...
-            return $result;    // within a function, 'return' will end the function
+            return $result;    // innherhalb einer Funktion, beendet 'return' diese Funktion
         default:
             // code...
             return $error;
@@ -106,57 +103,55 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch statements](https://www.php.net/control-structures.switch)
+* [switch-Anweisung](https://www.php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
-## Global namespace
+## Globaler namespace
 
-When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this, refer to
-the global function by using a backslash before the function name.
+Bei der Verwendung von Namespaces kann es vorkommen, dass interne Funktionen durch von Ihnen geschriebene Funktionen verdeckt werden. Um dies zu beheben, verweisen Sie mit einem Backslash vor dem Funktionsnamen auf die globale Funktion.
 
 {% highlight php %}
 <?php
-namespace phptherightway;
+namespace phpAberRichtig;
 
 function fopen()
 {
-    $file = \fopen();    // Our function name is the same as an internal function.
-                         // Execute the function from the global space by adding '\'.
+    $file = \fopen();    // Unser Funktions-Name ist der selbe, wie der einer internen Funktion.
+                         // Führe die Funktion vom globalen Namensraum aus durch voranstellen von '\'.
 }
 
 function array()
 {
-    $iterator = new \ArrayIterator();    // ArrayIterator is an internal class. Using its name without a backslash
-                                         // will attempt to resolve it within your namespace.
+    $iterator = new \ArrayIterator();    // ArrayIterator ist eine interne Klasse. Wenn Sie den Namen ohne backslash
+                                         //  verwenden, wird versucht, ihn innerhalb Ihres Namespace aufzulösen.
 }
 {% endhighlight %}
 
-* [Global space](https://www.php.net/language.namespaces.global)
-* [Global rules](https://www.php.net/userlandnaming.rules)
+* [Globaler Namensraum ](https://www.php.net/language.namespaces.global)
+* [Globale Namensregeln](https://www.php.net/userlandnaming.rules)
 
 ## Strings
 
-### Concatenation
+### Verkettung
 
-- If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it is best to use concatenation operators over concatenating assignment operators
-- While within the original scope of the variable, indent when concatenation uses a new line
-
+- Wenn Ihre Zeile die empfohlene Zeilenlänge (120 Zeichen) überschreitet, ziehen Sie in Erwägung, Ihre Zeile zu verketten
+- Aus Gründen der Lesbarkeit ist es besser, Verkettungs-Operatoren anstelle von Verkettungs-Zuweisungs-Operatoren zu verwenden.
+- Im ursprünglichen Gültigkeitsbereich der Variable einrücken, wenn die Verkettung eine neue Zeile nutzt
 
 {% highlight php %}
 <?php
-$a  = 'Multi-line example';    // concatenating assignment operator (.=)
+$a  = 'Mehrzeiliges Beispiel';    // Verkettung mit Zuweisungs-Operator (.=)
 $a .= "\n";
-$a .= 'of what not to do';
+$a .= 'wie man es nicht macht.';
 
-// vs
+// vs.
 
-$a = 'Multi-line example'      // concatenation operator (.)
-    . "\n"                     // indenting new lines
-    . 'of what to do';
+$a = 'Mehrzeiliges Beispiel'      // Verkettungs-Operator (.)
+    . "\n"                        // Neue Zeilen sind eingerückt
+    . 'ganz beispielhaft';
 {% endhighlight %}
 
-* [String Operators](https://www.php.net/language.operators.string)
+* [Zeichenketten-Operatoren](https://www.php.net/language.operators.string)
 
 ### String types
 
