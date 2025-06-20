@@ -4,7 +4,7 @@ title:  The Basics
 sitemap: true
 ---
 
-# The Basics
+# Die Basics
 
 ## Vergleichsoperatoren
 
@@ -130,7 +130,7 @@ function array()
 * [Globaler Namensraum ](https://www.php.net/language.namespaces.global)
 * [Globale Namensregeln](https://www.php.net/userlandnaming.rules)
 
-## Strings
+## Strings (Zeichenketten)
 
 ### Verkettung
 
@@ -153,20 +153,15 @@ $a = 'Mehrzeiliges Beispiel'      // Verkettungs-Operator (.)
 
 * [Zeichenketten-Operatoren](https://www.php.net/language.operators.string)
 
-### String types
+### String Typen
 
-Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
-strings and they offer slightly different syntax, with slightly different behaviors.
+Strings sind eine Anreihung von Zeichen, was recht einfach klingt. Es gibt jedoch verschiedene String-Typen mit leicht unterschiedlicher Syntax und leicht unterschiedlichem Verhalten.
 
-#### Single quotes
+#### Einfache Anführungszeichen
 
-Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
-variables.
+Einfache Anführungszeichen kennzeichnen einen "literalen string". Literale Strings versuchen nicht, Sonderzeichen oder Variablen zu analysieren.
 
-If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
-exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
-errors if no variable was found.
-
+Wenn Du einfache Anführungszeichen verwendest, kannst Du einen Variablennamen in eine Zeichenkette wie folgt eingeben: `'some $thing'`, und Sie erhalten die genaue Ausgabe `some $thing`. Wenn Sie doppelte Anführungszeichen verwenden, wird versucht, den Variablennamen `$thing` auszuwerten und ein Fehler erzeugt, wenn die Variable nicht gefunden wird.
 
 {% highlight php %}
 <?php
@@ -179,26 +174,25 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
  */
 {% endhighlight %}
 
-* [Single quote](https://www.php.net/language.types.string#language.types.string.syntax.single)
+* [Einfache Anführungszeichen](https://www.php.net/language.types.string#language.types.string.syntax.single)
 
-#### Double quotes
+#### Doppelte Anführungszeichen
 
-Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
-of special characters, like `\n` for newline, `\t` for a tab, etc.
+Doppelte Anführungszeichen sind das Schweizer Taschenmesser unter den Zeichenfolgen. Sie parsen nicht nur Variablen wie oben erwähnt, sondern alle Arten von Sonderzeichen, z. B. `\n` für Zeilenumbrüche, `\t` Tabulatoren usw.
 
 {% highlight php %}
 <?php
-echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that uses multiple concatenating for
-    . "\n"                                       // variables and escaped string
+echo 'phpAberRichtig is ' . $adjective . '.'     // Beispiel mit einfachen Anführungszeichen, das mehrere Verkettungen
+    . "\n"                                       // für Variablen und Escape-Zeichenfolgen verwendet
     . 'I love learning' . $code . '!';
 
-// vs
+// vs.
 
-echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
-                                                               // enables us to use a parsable string
+echo "phpAberRichtig is $adjective.\n I love learning $code!"  // Anstelle mehrerer Verkettungen ermöglichen doppelte Anführungszeichen
+                                                               // die Verwendung einer zu parsender Zeichenfolge.                                                               
 {% endhighlight %}
 
-Double quotes can contain variables; this is called "interpolation".
+Doppelte Anführungszeichen können Variablen enthalten; dies wird als "Interpolation“ bezeichnet.
 
 {% highlight php %}
 <?php
@@ -206,10 +200,9 @@ $juice = 'plum';
 echo "I like $juice juice";    // Output: I like plum juice
 {% endhighlight %}
 
-When using interpolation, it is often the case that the variable will be touching another character. This will result
-in some confusion as to what is the name of the variable, and what is a literal character.
+Bei der Interpolation kommt es häufig vor, dass die Variable ein anderes Zeichen berührt. Dies führt zu Verwirrung hinsichtlich des Namens der Variable und des Literalzeichens.
 
-To fix this problem, wrap the variable within a pair of curly brackets.
+Um dieses Problem zu beheben, schließen Sie die Variable in geschweifte Klammern ein.
 
 {% highlight php %}
 <?php
@@ -229,12 +222,11 @@ $juice = array('apple', 'orange', 'plum');
 echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
 {% endhighlight %}
 
-* [Double quotes](https://www.php.net/language.types.string#language.types.string.syntax.double)
+* [Doppelte Anführungszeichen](https://www.php.net/language.types.string#language.types.string.syntax.double)
 
-#### Nowdoc syntax
+#### Die Nowdoc-Syntax
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
-use of multi-line strings without the need for concatenating.
+Die Nowdoc-Syntax wurde in Version 5.3 eingeführt und verhält sich intern genauso wie einfache Anführungszeichen, zusätzlich ist sie für die Verwendung mehrzeiliger Zeichenfolgen ohne Verkettung geeignet.
 
 {% highlight php %}
 <?php
@@ -255,12 +247,11 @@ EOD;                        // closing 'EOD' must be on its own line, and to the
  */
 {% endhighlight %}
 
-* [Nowdoc syntax](https://www.php.net/language.types.string#language.types.string.syntax.nowdoc)
+* [Nowdoc-Syntax](https://www.php.net/language.types.string#language.types.string.syntax.nowdoc)
 
-#### Heredoc syntax
+#### Heredoc-Hyntax
 
-Heredoc syntax internally behaves the same way as double quotes except it is suited toward the use of multi-line
-strings without the need for concatenating.
+Die Heredoc-Syntax verhält sich intern genauso wie doppelte Anführungszeichen, ist jedoch darüber hinaus für die Verwendung mehrzeiliger Zeichenfolgen geeignet, ohne dasss Verkettung notwendig wäre.
 
 {% highlight php %}
 <?php
@@ -283,9 +274,9 @@ EOD;                        // closing 'EOD' must be on its own line, and to the
  */
 {% endhighlight %}
 
-* [Heredoc syntax](https://www.php.net/language.types.string#language.types.string.syntax.heredoc)
+* [Heredoc-Syntax](https://www.php.net/language.types.string#language.types.string.syntax.heredoc)
 
-> It should be noted that multiline strings can also be formed by continuing them across multilines in a statement. _e.g._
+> Es ist zu beachten, dass mehrzeilige Zeichenfolgen auch dadurch gebildet werden können, dass sie in einer Anweisung über mehrere Zeilen hinweg fortgesetzt werden. _z.B._
 
 {% highlight php %}
 $str = "
@@ -305,29 +296,24 @@ $a are parsed.
  */
 {% endhighlight %}
 
-### Which is quicker?
+### Was ist schneller?
 
-There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
-fundamentally not true.
+Es gibt den Mythos, dass Zeichenfolgen mit einfachen Anführungszeichen geringfügig schneller sind als Zeichenfolgen mit doppelten Anführungszeichen. Das ist grundsätzlich falsch.
 
-If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
-or double quoted string will be entirely identical. Neither are quicker.
+Wenn Sie eine einzelne Zeichenfolge definieren und nicht versuchen, Werte zu verketten oder etwas Kompliziertes zu verwenden, ist eine Zeichenfolge in einfachen oder doppelten Anführungszeichen völlig identisch. Beides ist nicht schneller.
 
-If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
-results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
-values, interpolating is minutely faster.
+Wenn Sie mehrere Zeichenfolgen beliebigen Typs verketten oder Werte in eine Zeichenfolge in Anführungszeichen interpolieren, können die Ergebnisse variieren. Bei wenigen Werten ist die Verkettung geringfügig schneller.
+Bei vielen Werten ist die Interpolation geringfügig schneller.
 
-Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
-application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this
-micro-optimization unless you really understand the meaning and impact of the differences.
+Unabhängig davon, was Sie mit Zeichenfolgen tun, hat keiner der Typen jemals spürbare Auswirkungen auf Ihre Anwendung. Der Versuch, Code umzuschreiben, um den einen oder anderen Typ zu verwenden, ist immer sinnlos.
+Vermeiden Sie daher diese Mikrooptimierung, es sei denn, Sie verstehen die Bedeutung und die Auswirkungen der Unterschiede wirklich.
 
 * [Disproving the Single Quotes Performance Myth](https://www.npopov.com/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
 
-## Ternary operators
+## Der ternäre Operator
 
-Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
-stacked/nested, it is advised to use one per line for readability.
+Der ternäre Operator eignet sich hervorragend um Code zu verdichten, wird aber oft übermäßig verwendet. Ternäre Operatoren können zwar gestapelt/verschachtelt werden, aus Gründen der Lesbarkeit wird jedoch empfohlen, einen Operator pro Zeile zu verwenden.
 
 {% highlight php %}
 <?php
@@ -335,48 +321,47 @@ $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
 {% endhighlight %}
 
-In comparison, here is an example that sacrifices all forms of readability for the sake of reducing the line count.
+Im Vergleich dazu hier ein Beispiel, bei dem jegliche Lesbarkeit zugunsten der Reduzierung der Zeilenanzahl geopfert wird.
 
 {% highlight php %}
 <?php
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
 {% endhighlight %}
 
-To 'return' a value with ternary operators use the correct syntax.
+Verwende die richtige Syntax, um einen Wert mit ternären Operatoren „zurückzugeben“.
 
 {% highlight php %}
 <?php
 $a = 5;
 echo ($a == 5) ? return true : return false;    // this example will output an error
 
-// vs
+// vs.
 
 $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 
 {% endhighlight %}
 
-It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
-would be:
+Beachte, dass Du für die Rückgabe eines booleschen Wertes keinen ternären Operator brauchst. Ein Beispiel hierfür wäre:
 
 {% highlight php %}
 <?php
 $a = 3;
-return ($a == 3) ? true : false; // Will return true if $a == 3 or false
+return ($a == 3) ? true : false; // Will return true if $a == 3, false otherwise
 
 // vs
 
 $a = 3;
-return $a == 3; // Will return true if $a == 3 or false
+return $a == 3; // Will return true if $a == 3, false otherwise
 
 {% endhighlight %}
 
-This can also be said for all operations(===, !==, !=, == etc).
+Dies gilt für alle Vergleichs-Operatoren (`===`, `!==`, `!=`, `>=` etc).
 
-#### Utilising brackets with ternary operators for form and function
+#### Verwendung von Klammern mit ternären Operatoren für Form und Funktion
 
-When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
-within blocks of statements. An example of when there is no requirement to use bracketing is:
+Bei der Verwendung eines ternären Operators können Klammern dazu beitragen, die Lesbarkeit des Codes zu verbessern und Unions in Anweisungsblöcke einzuschließen.
+Ein Beispiel dafür, wann Klammern nicht erforderlich sind, ist:
 
 {% highlight php %}
 <?php
@@ -389,23 +374,20 @@ $a = 3;
 return $a == 3 ? "yay" : "nope"; // return yay if $a == 3 or nope
 {% endhighlight %}
 
-Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
-as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is
-also true.
+Durch Klammern können wir auch Unions innerhalb eines Anweisungsblocks erstellen, wobei der Block als Ganzes geprüft wird. Wie im folgenden Beispiel, das true zurückgibt, wenn sowohl `($a == 3 und $b == 4)` als auch `$c == 5` wahr sind.
 
 {% highlight php %}
 <?php
 return ($a == 3 && $b == 4) && $c == 5;
 {% endhighlight %}
 
-Another example is the snippet below which will return true if ($a != 3 AND $b != 4) OR $c == 5.
+Another example is the snippet below which will return true if `($a != 3 AND $b != 4) OR $c == 5`.
 
 {% highlight php %}
 <?php
 return ($a != 3 && $b != 4) || $c == 5;
 {% endhighlight %}
 
-Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
-Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
+Seit PHP 5.3 ist es möglich, den mittleren Teil des ternären Operators wegzulassen. Der Ausdruck "expr1 ?: expr3" gibt expr1 zurück, wenn expr1 TRUE ergibt, andernfalls expr3.
 
-* [Ternary operators](https://www.php.net/language.operators.comparison)
+* [Ternärer Operator](https://www.php.net/language.operators.comparison)
