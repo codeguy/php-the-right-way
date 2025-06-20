@@ -4,73 +4,61 @@ isChild: true
 anchor:  php_and_utf8
 ---
 
-## Working with UTF-8 {#php_and_utf8_title}
+## Arbeiten mit UTF-8 {#php_and_utf8_title}
 
-_This section was originally written by [Alex Cabal](https://alexcabal.com/) over at
-[PHP Best Practices](https://phpbestpractices.org/#utf-8) and has been used as the basis for our own UTF-8 advice_.
+_Dieser Abschnitt wurde ursprünglich von [Alex Cabal](https://alexcabal.com/) für [PHP Best Practices](https://phpbestpractices.org/#utf-8) geschrieben und diente als Grundlage für unsere eigenen UTF-8-Empfehlungen_.
 
-### There's no one-liner. Be careful, detailed, and consistent.
+### Es gibt keinen Einzeiler. Seien Sie sorgfältig, detailliert und konsistent.
 
-Right now PHP does not support Unicode at a low level. There are ways to ensure that UTF-8 strings are processed OK,
-but it's not easy, and it requires digging in to almost all levels of the web app, from HTML to SQL to PHP. We'll aim
-for a brief, practical summary.
+PHP unterstützt Unicode derzeit nicht auf niedriger Ebene. Es gibt Möglichkeiten, die korrekte Verarbeitung von UTF-8-Strings sicherzustellen,
+aber das ist nicht einfach und erfordert die Auseinandersetzung mit fast allen Ebenen der Webanwendung, von HTML über SQL bis hin zu PHP.
+Wir geben hier eine kurze, praktische Zusammenfassung.
 
-### UTF-8 at the PHP level
+### UTF-8 auf PHP-Ebene
 
-The basic string operations, like concatenating two strings and assigning strings to variables, don't need anything
-special for UTF-8. However, most string functions, like `strpos()` and `strlen()`, do need special consideration. These
-functions often have an `mb_*` counterpart: for example, `mb_strpos()` and `mb_strlen()`. These `mb_*` strings are made
-available to you via the [Multibyte String Extension], and are specifically designed to operate on Unicode strings.
+Die grundlegenden String-Operationen, wie das Verketten zweier Strings und das Zuweisen von Strings zu Variablen, erfordern für UTF-8 keine besonderen Anforderungen.
+Die meisten String-Funktionen, wie `strpos()` und `strlen()`, erfordern jedoch besondere Aufmerksamkeit. Diese Funktionen haben oft ein `mb_*` Gegenstück, beispielsweise `mb_strpos()` and `mb_strlen()`. Diese`mb_*`-Strings werden Dir über die [Multibyte String Extension] zur Verfügung gestellt und sind speziell für die Verarbeitung von Unicode-Strings konzipiert.
 
-You must use the `mb_*` functions whenever you operate on a Unicode string. For example, if you use `substr()` on a
-UTF-8 string, there's a good chance the result will include some garbled half-characters. The correct function to use
-would be the multibyte counterpart, `mb_substr()`.
+Du musst die `mb_*`-Funktionen immer dann verwenden, wenn Du mit einer Unicode-Zeichenfolge arbeitest. Wenn Du `substr()` auf eine UTF-8-Zeichenfolge anwendet,
+besteht eine grosse Möglichkeit, dass das Ergebnis einige unleserliche Halbzeichen enthält. Die korrekte Funktion wäre das Multibyte-Gegenstück `mb_substr()`.
 
-The hard part is remembering to use the `mb_*` functions at all times. If you forget even just once, your Unicode
-string has a chance of being garbled during further processing.
+Das Schwierige ist, immer daran zu denken, die `mb_*`-Funktionen zu verwenden. Wenn Du es auch nur einmal vergisst, besteht die Gefahr, dass Deine Unicode-Zeichenfolge bei der weiteren Verarbeitung verstümmelt wird.
 
-Not all string functions have an `mb_*` counterpart. If there isn't one for what you want to do, then you might be out
-of luck.
+Nicht alle String-Funktionen haben ein `mb_*`-Gegenstück. Wenn es für Ihre Aufgabe keins gibt, haben Sie möglicherweise Pech gehabt.
 
-You should use the `mb_internal_encoding()` function at the top of every PHP script you write (or at the top of your
-global include script), and the `mb_http_output()` function right after it if your script is outputting to a browser.
-Explicitly defining the encoding of your strings in every script will save you a lot of headaches down the road.
+Du solltest die`mb_internal_encoding()`-Funktion am Anfang jedes PHP-Skripts (oder am Anfang Ihres globalen Include-Skripts) verwenden und die `mb_http_output()`-Funktion direkt dahinter,
+wenn Dein Skript an einen Browser ausgegeben wird. Die explizite Definition der Zeichenkettenkodierung in jedem Skript erspart Dir später viel Ärger.
 
-Additionally, many PHP functions that operate on strings have an optional parameter letting you specify the character
-encoding. You should always explicitly indicate UTF-8 when given the option. For example, `htmlentities()` has an
-option for character encoding, and you should always specify UTF-8 if dealing with such strings. Note that as of PHP 5.4.0, UTF-8 is the default encoding for `htmlentities()` and `htmlspecialchars()`.
+Darüber hinaus verfügen viele PHP-Funktionen, die mit Zeichenfolgen arbeiten, über einen optionalen Parameter, mit dem Sie die Zeichenkodierung festlegen können.
+Geben Sie bei dieser Option immer explizit UTF-8 an.
+Beispielsweise bietet `htmlentities()` eine Option für die Zeichenkodierung, und Du solltest bei der Verarbeitung solcher Zeichenfolgen immer UTF-8 angeben. Beachte, dass ab PHP 5.4.0 UTF-8 die Standardkodierung für `htmlentities()` und `htmlspecialchars()`ist.
 
-Finally, If you are building a distributed application and cannot be certain that the `mbstring` extension will be
-enabled, then consider using the [symfony/polyfill-mbstring] Composer package. This will use `mbstring` if it is available, and
-fall back to non UTF-8 functions if not.
+Abschießend, wenn Du eine verteilte Anwendung erstellst und nicht sicher bist, ob die `mbstring`-Erweiterung verwendbar ist, solltest Du das Composer-Paket [symfony/polyfill-mbstring] verwenden.
+Dieses wird `mbstring` bei Verfügbarkeit verwenden und greift andernfalls auf Nicht-UTF-8-Funktionen zurück.
 
 [Multibyte String Extension]: https://www.php.net/book.mbstring
 [symfony/polyfill-mbstring]: https://packagist.org/packages/symfony/polyfill-mbstring
 
-### UTF-8 at the Database level
+### UTF-8 auf Datenbankebene
 
-If your PHP script accesses MySQL, there's a chance your strings could be stored as non-UTF-8 strings in the database
-even if you follow all of the precautions above.
+Wenn Dein PHP-Skript auf MySQL zugreift, besteht die Möglichkeit, dass Deine Strings als Nicht-UTF-8-Strings in der Datenbank gespeichert werden, selbst wenn Sie alle oben genannten Vorsichtsmaßnahmen befolgen.
 
-To make sure your strings go from PHP to MySQL as UTF-8, make sure your database and tables are all set to the
-`utf8mb4` character set and collation, and that you use the `utf8mb4` character set in the PDO connection string. See
-example code below. This is _critically important_.
+Um sicherzustellen, dass Dein Strings von PHP in UTF-8 an MySQL übertragen werden, stelle sicher, dass Ihre Datenbank und Tabellen auf den `utf8mb4` entsprechenden Zeichensatz und die entsprechende Sortierung eingestellt sind und dass Sie den `utf8mb4` Zeichensatz im PDO-Connection-String verwendest. Siehe untensthender Beispielcode. Das ist _äußerst wichtig_.
 
-Note that you must use the `utf8mb4` character set for complete UTF-8 support, not the `utf8` character set! See
-Further Reading for why.
+Beachte, dass Du für die vollständige UTF-8-Unterstützung den `utf8mb4`-Zeichensatz verwenden musst, nicht den `utf8`-Zeichensatz! Weitere Informationen findest Du im Abschnitt „Weitere Informationen“.
 
-### UTF-8 at the browser level
+### UTF-8 auf Browserebene
 
-Use the `mb_http_output()` function to ensure that your PHP script outputs UTF-8 strings to your browser.
+Verwende die `mb_http_output()`-Funktion, um sicherzustellen, dass Dein PHP-Skript wirklich UTF-8-Zeichenfolgen an Deinen Browser ausgibt.
 
-The browser will then need to be told by the HTTP response that this page should be considered as UTF-8. Today, it is common to set the character set in the HTTP response header like this:
+Der Browser muss dann durch die HTTP-Response informiert werden, dass diese Seite als UTF-8 betrachtet werden soll. Heutzutage ist es üblich, den Zeichensatz im HTTP-Response-Header wie folgt festzulegen:
 
 {% highlight php %}
 <?php
 header('Content-Type: text/html; charset=UTF-8')
 {% endhighlight %}
 
-The historic approach to doing that was to include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in your page's `<head>` tag.
+Der bisherige Ansatz hierfür bestand darin, das [charset `<meta>`-Tag](http://htmlpurifier.org/docs/enduser-utf8.html) in das `<head>`-Tag Ihrer Seite aufzunehmen.
 
 {% highlight php %}
 <?php
@@ -144,7 +132,7 @@ header('Content-Type: text/html; charset=UTF-8'); // Unnecessary if your default
 </html>
 {% endhighlight %}
 
-### Further reading
+### Weiterführende Literatur
 
 * [PHP Manual: String Operations](https://www.php.net/language.operators.string)
 * [PHP Manual: String Functions](https://www.php.net/ref.strings)
