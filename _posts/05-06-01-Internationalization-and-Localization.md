@@ -4,61 +4,56 @@ isChild: true
 anchor:  i18n_l10n
 ---
 
-## Internationalization (i18n) and Localization (l10n) {#i18n_l10n_title}
+## Internationalization (i18n) und Localization (l10n) {#i18n_l10n_title}
 
-_Disclaimer for newcomers: i18n and l10n are numeronyms, a kind of abbreviation where numbers are used to shorten
-words - in our case, internationalization becomes i18n and localization, l10n._
+_Disclaimer für Neulinge: i18n und l10n sind Numeronyme, eine Art Abkürzung, bei der Zahlen zum Verkürzen von Wörtern verwendet werden – in unserem Fall wird Internationalisierung zu i18n und Lokalisierung zu l10n._
 
-First of all, we need to define those two similar concepts and other related things:
+Zunächst müssen wir diese beiden ähnlichen Konzepte und andere damit zusammenhängende Dinge definieren:
 
-- **Internationalization** is when you organize your code so it can be adapted to different languages or regions
-without refactorings. This action is usually done once - preferably, at the beginning of the project, or else you will
-probably need some huge changes in the source!
-- **Localization** happens when you adapt the interface (mainly) by translating contents, based on the i18n work done
-before. It usually is done every time a new language or region needs support and is updated when new interface pieces
-are added, as they need to be available in all supported languages.
-- **Pluralization** defines the rules required between distinct languages to interoperate strings containing numbers and 
-counters. For instance, in English when you have only one item, it is singular, and anything different from that is 
-called plural; plural in this language is indicated by adding an S after some words, and sometimes changes parts of it.
-In other languages, such as Russian or Serbian, there are two plural forms in addition to the singular - you may even
-find languages with a total of four, five or six forms, such as Slovenian, Irish or Arabic.
+- **Internationalisierun**g bedeutet, dass Du Deinen Code so organisierst, dass er ohne Refactoring (Überarbeitung, Neustrukturierung) an verschiedene Sprachen oder Regionen angepasst werden kann.
+Diese Aktion wird in der Regel einmalig durchgeführt – vorzugsweise zu Beginn des Projekts, da sonst wahrscheinlich umfangreiche Änderungen im Quellcode erforderlich sind!
+- **Lokalisierung** erfolgt, wenn Du die Benutzeroberfläche (hauptsächlich) durch die Übersetzung von Inhalten anpasst, basierend auf den zuvor durchgeführten i18n-Arbeiten.
+- Sie wird üblicherweise jedes Mal durchgeführt, wenn eine neue Sprache oder Region unterstützt werden muss, und wird aktualisiert, wenn neue Benutzeroberflächenelemente hinzugefügt werden, da diese in allen unterstützten Sprachen verfügbar sein müssen.
+- **Pluralbildung** definiert die Regeln, die zwischen verschiedenen Sprachen für die Interoperabilität von Zeichenfolgen mit Zahlen und Zählern gelten.
+Im Englischen steht z.B ein einzelnes Element im Singular, alles andere wird als Plural bezeichnet.
+Der Plural wird in dieser Sprache durch das Anhängen eines „S“ an einige Wörter angezeigt und verändert manchmal Teile davon.
+In anderen Sprachen, wie Russisch oder Serbisch, gibt es neben dem Singular zwei Pluralformen – es gibt sogar Sprachen mit insgesamt vier, fünf oder sechs Formen, wie Slowenisch, Irisch oder Arabisch.
 
-## Common ways to implement
-The easiest way to internationalize PHP software is by using array files and using those strings in templates, such as
-`<h1><?=$TRANS['title_about_page']?></h1>`. This way is, however, hardly recommended for serious projects, as it poses
-some maintenance issues along the road - some might appear in the very beginning, such as pluralization. So, please,
-don't try this if your project will contain more than a couple of pages.
+## Gängige Implementierungsmethoden
 
-The most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext]. It dates
-back to 1995 and is still a complete implementation for translating software. It is easy enough to get running, while
-still sporting powerful supporting tools. It is about Gettext we will be talking here. Also, to help you not get messy
-over the command-line, we will be presenting a great GUI application that can be used to easily update your l10n source.
+Der einfachste Weg, PHP-Software zu internationalisieren, ist die Verwendung von Array-Dateien und deren Strings in Vorlagen wie z.B. `<h1><?=$TRANS['title_about_page']?></h1>`.
+Dieser Weg ist jedoch für ernsthafte Projekte kaum zu empfehlen, da er im Laufe der Zeit einige Wartungsprobleme mit sich bringt – einige davon können bereits zu Beginn auftreten, wie z. B. die Pluralisierung.
+Versuchen Sie diesen Weg daher bitte nicht, wenn Ihr Projekt mehr als ein paar Seiten umfasst.
 
-### Other tools
+Der klassischste Weg und oft als Referenz für i18n und l10n verwendet, ist ein [Unix-Tool namens `gettext`][gettext].
+Es stammt aus dem Jahr 1995 und ist noch immer eine vollständige Implementierung für die Übersetzung von Software. Es ist einfach zu bedienen und bietet leistungsstarke Tools.
+Wir werden hier Gettext besprechen. Damit Sie sich nicht mit der Kommandozeile herumschlagen müssen, stellen wir Ihnen eine praktische GUI-Anwendung vor, mit der Sie Ihren l10n-Quellcode einfach aktualisieren können.
 
-There are common libraries used that support Gettext and other implementations of i18n. Some of them may seem easier to
-install or sport additional features or i18n file formats. In this document, we focus on the tools provided with the
-PHP core, but here we list others for completion:
+### Andere Werkzeuge
 
-- [aura/intl][aura-intl]: Provides internationalization (I18N) tools, specifically package-oriented per-locale message
-translation. It uses array formats for messages. Does not provide a message extractor, but does provide advanced
-message formatting via the `intl` extension (including pluralized messages).
-- [php-gettext/Gettext][php-gettext]: Gettext support with an OO interface; includes improved helper functions, powerful
-extractors for several file formats (some of them not supported natively by the `gettext` command), and can also export
-to other formats besides `.mo/.po` files. Can be useful if you need to integrate your translation files into other
-parts of the system, like a JavaScript interface.
-- [symfony/translation][symfony]: supports a lot of different formats, but recommends using verbose XLIFF's. Doesn't
-include helper functions nor a built-in extractor, but supports placeholders using `strtr()` internally.
-- [laminas/laminas-i18n][laminas]: supports array and INI files, or Gettext formats. Implements a caching layer to save you from
-reading the filesystem every time. It also includes view helpers, and locale-aware input filters and validators.
-However, it has no message extractor.
+Es gibt gängige Bibliotheken, die Gettext und andere i18n-Implementierungen unterstützen.
+Einige davon sind möglicherweise einfacher zu installieren oder bieten zusätzliche Funktionen oder i18n-Dateiformate.
+In diesem Dokument konzentrieren wir uns auf die Tools, die im PHP-Kern enthalten sind. Zur Vervollständigung listen wir hier weitere auf:
 
-Other frameworks also include i18n modules, but those are not available outside of their codebases:
 
-- [Laravel] supports basic array files, has no automatic extractor but includes a `@lang` helper for template files.
+- [aura/intl][aura-intl]: Bietet Internationalisierungstools (I18N), insbesondere paketorientierte Nachrichtenübersetzung pro Gebietsschema.
+Es verwendet Array-Formate für Messages. Es bietet keinen Message-Extraktor, ermöglicht aber erweiterte Nachrichtenformatierung über die intlErweiterung (einschließlich pluralisierter Nachrichten).
+- [php-gettext/Gettext][php-gettext]: Gettext-Unterstützung mit OO-Schnittstelle; enthält verbesserte Hilfsfunktionen, leistungsstarke Extraktoren für verschiedene Dateiformate (einige davon werden vom `gettext`-Befehl nicht nativ unterstützt) und kann auch in andere Formate als `.mo/.po`-Dateien exportieren. Dies ist nützlich,
+wenn Sie Ihre Übersetzungsdateien in andere Systemkomponenten, beispielsweise eine JavaScript-Schnittstelle, integrieren müssen.
+- [symfony/translation][symfony]: Unterstützt viele verschiedene Formate, empfiehlt aber die Verwendung ausführlicher XLIFF-Dateien. Enthält weder Hilfsfunktionen noch einen integrierten Extraktor, unterstützt aber die Verwendung von Platzhaltern mit interner `strtr()`-Nutzung.
+- [laminas/laminas-i18n][laminas]: : Unterstützt Array- und INI-Dateien sowie Gettext-Formate.
+Implementiert eine Caching-Ebene, damit Du das Dateisystem nicht jedes Mal neu einlesen must. Es enthält außerdem View-Helper sowie lokal angepasste Eingabefilter und Validatoren. Es gibt jedoch keinen Message-Extraktor.
+
+Andere Frameworks enthalten auch i18n-Module, diese sind jedoch außerhalb ihrer Codebasen nicht verfügbar:
+
+- [Laravel] unterstützt grundlegende Array-Dateien, hat keinen automatischen Extractor, enthält aber einen `@lang` Helper für Vorlagendateien.
 - [Yii] supports array, Gettext, and database-based translation, and includes a messages extractor. It is backed by the
-[`Intl`][intl] extension, available since PHP 5.3, and based on the [ICU project]; this enables Yii to run powerful
-replacements, like spelling out numbers, formatting dates, times, intervals, currency, and ordinals.
+[`Intl`][intl] unterstützt Array-, Gettext- und datenbankbasierte Übersetzungen und enthält einen Nachrichtenextractor.
+Die [Intl-Erweiterung][Intl] ist seit PHP 5.3 verfügbar und basiert auf dem [ICU-Projekt][ICU project].
+Dadurch kann Yii leistungsstarke Ersetzungen ausführen, beispielsweise Zahlen ausschreiben und Datum, Zeit, Intervalle, Währungsen und Ordinalzahlen formatieren.
+
+Wenn Du Dich für eine der Bibliotheken entscheidest, die keine Extractors bereitstellen,möchtst Du möglicherweise die Gettext-Formate verwenden,
+sodass Du die ursprüngliche Gettext-Toolchain (einschließlich Poedit) verwenden kannst, wie im Rest des Kapitels beschrieben.
 
 If you decide to go for one of the libraries that provide no extractors, you may want to use the gettext formats, so
 you can use the original gettext toolchain (including Poedit) as described in the rest of the chapter.
