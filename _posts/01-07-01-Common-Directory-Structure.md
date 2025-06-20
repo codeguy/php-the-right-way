@@ -1,7 +1,7 @@
 ---
 title:   übliche Datei- und Verzeichnisstruktur
 isChild: true
-anchor:  common_directory_structure
+anchor:  php-aber-richtig/common_directory_structure
 ---
 
 ##  Gemeinsame Datei- und Verzeichnisstruktur {#common_directory_structure_title}
