@@ -4,15 +4,12 @@ isChild: true
 anchor:  date_and_time
 ---
 
-## Date and Time {#date_and_time_title}
+## Date and Time (Datum und Uhrzeit) {#date_and_time_title}
 
-PHP has a class named DateTime to help you when reading, writing, comparing or calculating with date and time. There
-are many date and time related functions in PHP besides DateTime, but it provides nice object-oriented interface to
-most common uses. DateTime can handle time zones, but that is outside the scope of this short introduction.
+PHP verfügt über die Klasse DateTime, die Sie beim Lesen, Schreiben, Vergleichen oder Berechnen von Datum und Uhrzeit unterstützt. Neben DateTime bietet PHP viele weitere Funktionen für Datum und Uhrzeit.
+Für die meisten gängigen Anwendungen bietet DateTime eine praktische objektorientierte Schnittstelle. DateTime kann Zeitzonen verarbeiten, dies geht jedoch über den Rahmen dieser kurzen Einführung hinaus.
 
-To start working with DateTime, convert raw date and time string to an object with `createFromFormat()` factory method
-or do `new DateTime` to get the current date and time. Use `format()` method to convert DateTime back to a string for
-output.
+Um mit DateTime zu arbeiten, konvertiere das Rohdaten und -zeiten mit der `createFromFormat()` Factory-Methode in ein Objekt oder rufe mit `new DateTime` das aktuelle Datum und die aktuelle Uhrzeit ab. Verwende die `format()`-Methode, um DateTime für die Ausgabe wieder in einen String umzuwandeln.
 
 {% highlight php %}
 <?php
@@ -22,10 +19,8 @@ $start = DateTime::createFromFormat('d. m. Y', $raw);
 echo 'Start date: ' . $start->format('Y-m-d') . PHP_EOL;
 {% endhighlight %}
 
-Calculating with DateTime is possible with the DateInterval class. DateTime has methods like `add()` and `sub()` that
-take a DateInterval as an argument. Do not write code that expects the same number of seconds in every day. Both daylight
-saving and time zone alterations will break that assumption. Use date intervals instead. To calculate date difference
-use the `diff()` method. It will return new DateInterval, which is super easy to display.
+Berechnungen mit DateTime sind mit der Klasse DateInterval möglich. DateTime verfügt über Methoden wie `add()` und `sub()`, die ein DateInterval als Argument akzeptieren.
+Schreibe keinen Code, der jeden Tag die gleiche Anzahl von Sekunden erwartet. Sowohl Sommerzeit- als auch Zeitzonenänderungen würden diese Annahme widerlegen. Verwende stattdessen Datumsintervalle. Um die Datumsdifferenz zu berechnen, verwenden Sie die `diff()`-Methode. Sie gibt ein neues DateInterval zurück, das sehr einfach darzustellen ist.
 
 {% highlight php %}
 <?php
@@ -38,7 +33,7 @@ echo 'Difference: ' . $diff->format('%m month, %d days (total: %a days)') . PHP_
 // Difference: 1 month, 6 days (total: 37 days)
 {% endhighlight %}
 
-You can use standard comparisons on DateTime objects:
+Sie können Standardvergleiche für DateTime-Objekte verwenden:
 
 {% highlight php %}
 <?php
@@ -46,8 +41,7 @@ if ($start < $end) {
     echo "Start is before the end!" . PHP_EOL;}
 {% endhighlight %}
 
-One last example to demonstrate the DatePeriod class. It is used to iterate over recurring events. It can take two
-DateTime objects, start and end, and the interval for which it will return all events in between.
+Ein letztes Beispiel zur Veranschaulichung der DatePeriod-Klasse. Sie wird verwendet, um wiederkehrende Ereignisse zu durchlaufen. Sie kann zwei DateTime-Objekte (Start und End) sowie das Intervall annehmen, für das alle dazwischenliegenden Ereignisse zurückgegeben werden.
 
 {% highlight php %}
 <?php
@@ -60,10 +54,10 @@ foreach ($periodIterator as $date) {
 }
 {% endhighlight %}
 
-A popular PHP API extension is [Carbon](https://carbon.nesbot.com/). It inherits everything in the DateTime class, so involves minimal code alterations, but extra features include Localization support, further ways to add, subtract and format a DateTime object, plus a means to test your code by simulating a date and time of your choosing.
+Eine beliebte PHP-API-Erweiterung ist [Carbon](https://carbon.nesbot.com/). Sie übernimmt alle Funktionen der DateTime-Klasse und erfordert daher nur minimale Codeänderungen. Zu den zusätzlichen Funktionen gehören Lokalisierungsunterstützung, weitere Möglichkeiten zum Addieren, Subtrahieren und Formatieren eines DateTime-Objekts sowie die Möglichkeit, Ihren Code durch die Simulation eines Datums und einer Uhrzeit Ihrer Wahl zu testen.
 
-* [Read about DateTime][datetime]
-* [Read about date formatting][dateformat] (accepted date format string options)
+* [Mehr zu DateTime][datetime]
+* [Mehr über date formatting][dateformat] (akzeptierte Optionen für Datumsformat-Zeichenfolgen)
 
 [datetime]: https://www.php.net/book.datetime
 [dateformat]: https://www.php.net/function.date
