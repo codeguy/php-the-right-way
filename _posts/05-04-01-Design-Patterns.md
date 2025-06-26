@@ -1,4 +1,5 @@
 ---
+title:   Design Patterns (Entwurfsmuster)
 isChild: true
 anchor:  design_patterns
 ---
