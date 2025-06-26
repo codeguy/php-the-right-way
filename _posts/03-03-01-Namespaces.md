@@ -1,9 +1,10 @@
 ---
+title:   Namespaces (Namensräume)
 isChild: true
 anchor:  namespaces
 ---
 
-## Namespaces / Namensräume{#namespaces_title}
+## Namespaces (Namensräume){#namespaces_title}
 
 Wie bereits erwähnt, gibt es in der PHP-Community viele Entwickler, die viel Code erstellen. Das bedeutet, dass der PHP-Code einer Bibliothek möglicherweise denselben Klassennamen wie eine andere verwendet. Wenn beide Bibliotheken im selben Namespace verwendet werden, kollidieren sie und verursachen Probleme.
 
