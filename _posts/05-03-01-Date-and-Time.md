@@ -1,5 +1,5 @@
 ---
-title:   Date and Time
+title:   Date and Time (Datum und Uhrzeit)
 isChild: true
 anchor:  date_and_time
 ---
