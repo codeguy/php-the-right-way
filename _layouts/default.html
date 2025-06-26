@@ -16,7 +16,7 @@
     </head>
     <body>
         <header class="site-header">
-            <h1><a href="/">PHP <em>- aber richtig!</em></a></h1>
+            <h1><a href="/">PHP <em>aber richtig!</em></a></h1>
             <div class="build-date">Last Updated: {{ site.time }}</div>
             <div class="share">
                 <a class="btn-share" href="https://x.com/intent/tweet?text=PHP+The+Right+Way&amp;url=https%3A%2F%2Fwww.phptherightway.com&amp;hashtags=PHP" target="_blank">Share on X</a>
@@ -28,10 +28,10 @@
             <input type="checkbox" id="toggle"/>
             <label for="toggle">Table of Contents</label>
             <ul>
-                <li><a href="/#welcome">Welcome</a>
+                <li><a href="/php-aber-richtig/#welcome">Welcome</a>
                     <ul>
-                        <li><a href="/#translations">Translations</a></li>
-                        <li><a href="/#how-to-contribute">How to Contribute</a></li>
+                        <li><a href="/php-aber-richtig/#translations">Translations</a></li>
+                        <li><a href="/php-aber-richtig/#how-to-contribute">How to Contribute</a></li>
                     </ul>
                 </li>
                 {% assign lastIsChild = false %}
@@ -43,7 +43,7 @@
                             {% assign insideSection = false %}
                         {% endif %}
                     {% endif %}
-                    <li><a href="/#{{ post.anchor }}">{{ post.title }}</a>
+                    <li><a href="/php-aber-richtig/#{{ post.anchor }}">{{ post.title }}</a>
                     {% if post.isChild %}
                         </li>
                     {% else %}
@@ -54,7 +54,7 @@
                 {% endfor %}
                     </ul>
                 </li>
-                <li><a href="/#credits">Credits</a></li>
+                <li><a href="/php-aber-richtig/#credits">Credits</a></li>
             </ul>
         </nav>
 
