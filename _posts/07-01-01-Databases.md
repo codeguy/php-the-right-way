@@ -1,5 +1,5 @@
 ---
-title:  Databases
+title:  Datenbanken
 anchor: databases
 ---
 
