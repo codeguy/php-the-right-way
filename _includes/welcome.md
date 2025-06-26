@@ -17,6 +17,11 @@ für verschiedene Optionen und erläutert nach Möglichkeit die Unterschiede in 
 
 Dieses Dokument wird fortlaufend aktualisiert und mit hilfreichen Informationen und Beispielen ergänzt, sobald diese verfügbar sind.
 
+---
+title:   Übersetzungen
+isChild: true
+anchor:  Willkommen
+---
 ## Übersetzungen
 
 _PHP - aber richtig_ wurde in viele Sprachen übersetzt:
@@ -47,6 +52,11 @@ _PHP - aber richtig_ wurde in viele Sprachen übersetzt:
 
 Die neueste Version von _PHP - aber richtig_ ist in der englischen Originalversion als _PHP: The Right Way_ auch in den Formaten PDF, EPUB und MOBI verfügbar. [Zu Leanpub][1]
 
+---
+title:   Wie beitragen?
+isChild: true
+anchor:  Willkommen
+---
 ## Wie beitragen?
 
 Hilf mit, diese Website zur besten Ressource für neue PHP-Programmierer zu machen! [Contribute on GitHub][2]
