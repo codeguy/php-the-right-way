@@ -1,6 +1,6 @@
 ---
-layout: page
-title:  The Basics
+layout:  page
+title:   Die Basics
 sitemap: true
 ---
 
