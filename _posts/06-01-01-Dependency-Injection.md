@@ -1,5 +1,5 @@
 ---
-title:  Dependency Injection
+title:  Dependency Injection (Abhängigkeiten-Injektion)
 anchor: dependency_injection
 ---
 
