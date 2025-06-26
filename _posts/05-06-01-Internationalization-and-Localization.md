@@ -4,7 +4,7 @@ isChild: true
 anchor:  i18n_l10n
 ---
 
-## Internationalization (i18n) und Localization (l10n) {#i18n_l10n_title}
+## Internationalisierung (i18n) und Lokalisierung (l10n) {#i18n_l10n_title}
 
 _Disclaimer für Neulinge: i18n und l10n sind Numeronyme, eine Art Abkürzung, bei der Zahlen zum Verkürzen von Wörtern verwendet werden – in unserem Fall wird Internationalisierung zu i18n und Lokalisierung zu l10n._
 
@@ -52,53 +52,42 @@ Andere Frameworks enthalten auch i18n-Module, diese sind jedoch außerhalb ihrer
 Die [Intl-Erweiterung][Intl] ist seit PHP 5.3 verfügbar und basiert auf dem [ICU-Projekt][ICU project].
 Dadurch kann Yii leistungsstarke Ersetzungen ausführen, beispielsweise Zahlen ausschreiben und Datum, Zeit, Intervalle, Währungsen und Ordinalzahlen formatieren.
 
-Wenn Du Dich für eine der Bibliotheken entscheidest, die keine Extractors bereitstellen,möchtst Du möglicherweise die Gettext-Formate verwenden,
+Wenn Du Dich für eine der Bibliotheken entscheidest, die keine Extractors bereitstellen, möchtst Du möglicherweise die Gettext-Formate verwenden,
 sodass Du die ursprüngliche Gettext-Toolchain (einschließlich Poedit) verwenden kannst, wie im Rest des Kapitels beschrieben.
-
-If you decide to go for one of the libraries that provide no extractors, you may want to use the gettext formats, so
-you can use the original gettext toolchain (including Poedit) as described in the rest of the chapter.
 
 ## Gettext
 
 ### Installation
-You might need to install Gettext and the related PHP library by using your package manager, like `apt-get` or `yum`.
-After installed, enable it by adding `extension=gettext.so` (Linux/Unix) or `extension=php_gettext.dll` (Windows) to
-your `php.ini`.
 
-Here we will also be using [Poedit] to create translation files. You will probably find it in your system's package
-manager; it is available for Unix, macOS, and Windows, and can be [downloaded for free on their website][poedit_download]
-as well.
+Möglicherweise musst Du Gettext und die zugehörige PHP-Bibliothek mithilfe Deines Paketmanagers (z. B.  `apt-get` or `yum` ) installieren.
+Aktiviere die Funktion nach der Installation, indem Du `extension=gettext.so` (Linux/Unix) oder `extension=php_gettext.dll` (Windows) zu Deiner `php.ini` hinzufügst.
 
-### Structure
+Auch hier verwenden wir [Poedit] zum Erstellen von Übersetzungsdateien. Du wirst es wahrscheinlich im Paketmanager Deines Systems finden; es ist für Unix, macOS und Windows verfügbar und kann auch [kostenlos auf deren Website heruntergeladen][poedit_download] werden.
+
+### Struktur
 
 #### Types of files
-There are three files you usually deal with while working with gettext. The main ones are PO (Portable Object) and
-MO (Machine Object) files, the first being a list of readable "translated objects" and the second, the corresponding
-binary to be interpreted by gettext when doing localization. There's also a POT (Template) file, which simply contains
-all existing keys from your source files, and can be used as a guide to generate and update all PO files. Those template
-files are not mandatory: depending on the tool you are using to do l10n, you can go just fine with only PO/MO files.
-You will always have one pair of PO/MO files per language and region, but only one POT per domain.
+Bei der Arbeit mit gettext arbeitest Du üblicherweise mit drei Dateien. Die wichtigsten sind PO- (Portable Object) und MO- (Machine Object) Dateien. Erstere ist eine Liste lesbarer "übersetzter Objekte" und letztere die entsprechende Binärdatei, die gettext bei der Lokalisierung interpretiert.
+Es gibt außerdem eine POT-Datei (Template), die alle vorhandenen Schlüssel aus Deinen Quelldateien enthält und als Leitfaden zum Generieren und Aktualisieren aller PO-Dateien dient. Diese Template-Dateien sind nicht zwingend erforderlich: Je nach verwendetem l10n-Tool reichen PO/MO-Dateien aus. Du benötigst immer ein Paar PO/MO-Dateien pro Sprache und Region, aber nur eine POT-Datei pro Domänen.
 
-### Domains
-There are some cases, in big projects, where you might need to separate translations when the same words convey 
-different meaning given a context. In those cases, you split them into different _domains_. They are, basically, named
-groups of POT/PO/MO files, where the filename is the said _translation domain_. Small and medium-sized projects usually,
-for simplicity, use only one domain; its name is arbitrary, but we will be using "main" for our code samples.
-In [Symfony] projects, for example, domains are used to separate the translation for validation messages.
+### Domänen
+In großen Projekten kann es vorkommen, dass Übersetzungen getrennt werden müssen, wenn dieselben Wörter in einem bestimmten Kontext unterschiedliche Bedeutungen haben. In diesen Fällen werden sie in verschiedene _Domänen_ aufgeteilt.
+Dabei handelt es sich im Wesentlichen um benannte Gruppen von POT-/PO-/MO-Dateien, wobei der Dateiname die jeweilige _Übersetzungsdomäne_ ist.
+Kleine und mittelgroße Projekte verwenden der Einfachheit halber meist nur eine Domäne; ihr Name ist beliebig, wir verwenden für unsere Codebeispiele jedoch "main".
+In [Symfony]-Projekten werden Domänen beispielsweise verwendet, um die Übersetzungen für Validierungsmeldungen zu trennen.
 
-#### Locale code
-A locale is simply a code that identifies one version of a language. It is defined following the [ISO 639-1][639-1] and 
-[ISO 3166-1 alpha-2][3166-1] specs: two lower-case letters for the language, optionally followed by an underline and two
-upper-case letters identifying the country or regional code. For [rare languages][rare], three letters are used.
+#### Gebietsschemacode
+Ein Gebietsschema ist einfach ein Code, der eine Version einer Sprache identifiziert.
+Es wird gemäß den Spezifikationen [ISO 639-1][639-1] und 
+[ISO 3166-1 alpha-2][3166-1] definiert: Zwei Kleinbuchstaben für die Sprache, optional gefolgt von einem Unterstrich und zwei Großbuchstaben, die den Länder- oder Regionalcode kennzeichnen.
+Für [seltene Sprachen][rare] werden drei Buchstaben verwendet.
 
-For some speakers, the country part may seem redundant. In fact, some languages have dialects in different
-countries, such as Austrian German (`de_AT`) or Brazilian Portuguese (`pt_BR`). The second part is used to distinguish
-between those dialects - when it is not present, it is taken as a "generic" or "hybrid" version of the language.
+Für manche Sprechende mag der Länderteil überflüssig erscheinen. Tatsächlich haben einige Sprachen in verschiedenen Ländern Dialekte, wie zum Beispiel Österreichisches Deutsch (`de_AT`) oder brasilianisches Portugiesisch (`pt_BR`).
+Der zweite Teil dient der Unterscheidung zwischen diesen Dialekten – fehlt er, wird er als "generische" oder "hybride" Version der Sprache angesehen.
 
-### Directory structure
-To use Gettext, we will need to adhere to a specific structure of folders. First, you will need to select an arbitrary
-root for your l10n files in your source repository. Inside it, you will have a folder for each needed locale, and a
-fixed `LC_MESSAGES` folder that will contain all your PO/MO pairs. Example:
+### Verzeichnisstruktur
+Um Gettext verwenden zu können, benötigen wir eine bestimmte Ordnerstruktur. Wähle zunächst ein beliebiges Stammverzeichnis für Deine l10n-Dateien in Deinem Quell-Repository.
+Darin findest Du einen Ordner für jedes benötigte Gebietsschema und einen festen `LC_MESSAGES` Ordner für alle PO/MO-Paare. Beispiel:
 
 {% highlight console %}
 <project root>
@@ -124,31 +113,24 @@ fixed `LC_MESSAGES` folder that will contain all your PO/MO pairs. Example:
        └─ ...
 {% endhighlight %}
 
-### Plural forms
-As we said in the introduction, different languages might sport different plural rules. However, gettext saves us from
-this trouble once again. When creating a new `.po` file, you will have to declare the [plural rules][plural] for that
-language, and translated pieces that are plural-sensitive will have a different form for each of those rules. When
-calling Gettext in code, you will have to specify the number related to the sentence, and it will work out the correct
-form to use - even using string substitution if needed.
+### Pluralformen
+Wie bereits in der Einleitung erwähnt, können verschiedene Sprachen unterschiedliche Pluralregeln haben.
+Gettext erspart uns jedoch auch dieses Problem. Beim Erstellen einer neuen `.po`-Datei musst Du die [Pluralregeln][plural] für die jeweilige Sprache angeben, und übersetzte Teile, die pluralsensitiv sind haben für jede dieser Regeln eine andere Form.
+Beim Aufruf von Gettext im Code musst Du die Nummer des Satzes angeben, und Gettext ermittelt die korrekte Form – bei Bedarf sogar mithilfe von String-Ersetzungen.
 
-Plural rules include the number of plurals available and a boolean test with `n` that would define in which rule the
-given number falls (starting the count with 0). For example:
+Pluralregeln enthalten die Anzahl der verfügbaren Pluralformen und einen Boole'schen Test auf `n`, der definiert, in welche Regel die angegebene Zahl fällt (beginnend mit 0). Beispiel:
 
-- Japanese: `nplurals=1; plural=0` - only one rule
-- English: `nplurals=2; plural=(n != 1);` - two rules, first if N is one, second rule otherwise
-- Brazilian Portuguese: `nplurals=2; plural=(n > 1);` - two rules, second if N is bigger than one, first otherwise
+- Japanisch: `nplurals=1; plural=0` - nur eine Regel
+- Englisch: `nplurals=2; plural=(n != 1);` - zwei Regeln: Erste wenn N eins ist, andernfalls die zweite Regel 
+- Brazilian Portuguese: `nplurals=2; plural=(n > 1);` -  zwei Regeln: Zweite, wenn N größer als eins ist, andernfalls erste Regel
 
-Now that you understood the basis of how plural rules works - and if you didn't, please look at a deeper explanation
-on the [LingoHub tutorial][lingohub_plurals] -, you might want to copy the ones you need from a [list][plural] instead
-of writing them by hand.
+Nachdem Du nun die Grundlagen der Pluralregeln verstanden hast (und falls nicht, sieh Dir bitte eine ausführlichere Erklärung im [LingoHub-Tutorial][lingohub_plurals] an), möchtst Du vielleicht die benötigten Regeln aus einer [Liste][plural] kopieren, anstatt sie von Hand zu schreiben.
 
-When calling out Gettext to do localization on sentences with counters, you will have to provide it the
-related number as well. Gettext will work out what rule should be in effect and use the correct localized version.
-You will need to include in the `.po` file a different sentence for each plural rule defined.
+Wenn Du Gettext aufrufst, um Sätze mit Zählern zu lokalisieren, musst Du auch die zugehörige Nummer angeben. Gettext ermittelt die anzuwendende Regel und verwendet die korrekte lokalisierte Version.
+Für jede definierte Pluralregel musst Du einen anderen Satz in die `.po`-Datei aufnehmen.
 
-### Sample implementation
-After all that theory, let's get a little practical. Here's an excerpt of a `.po` file - don't mind with its format,
-but with the overall content instead; you will learn how to edit it easily later:
+### Beispielimplementierung
+Nach all der Theorie kommen wir nun zur Praxis. Hier ist ein Ausschnitt einer `.po`-Datei – achte nicht auf das Format, sondern auf den Gesamtinhalt. Wie Du ihn einfach bearbeiten kannst, erfährst Du später:
 
 {% highlight po %}
 msgid ""
@@ -169,16 +151,11 @@ msgstr[0] "Só uma mensagem não lida"
 msgstr[1] "%d mensagens não lidas"
 {% endhighlight %}
 
-The first section works like a header, having the `msgid` and `msgstr` especially empty. It describes the file encoding,
-plural forms and other things that are less relevant.
-The second section translates a simple string from English to
-Brazilian Portuguese, and the third does the same, but leveraging string replacement from [`sprintf`][sprintf] so the
-translation may contain the user name and visit date.
-The last section is a sample of pluralization forms, displaying
-the singular and plural version as `msgid` in English and their corresponding translations as `msgstr` 0 and 1
-(following the number given by the plural rule). There, string replacement is used as well so the number can be seen
-directly in the sentence, by using `%d`. The plural forms always have two `msgid` (singular and plural), so it is
-advised not to use a complex language as the source of translation.
+Der erste Abschnitt funktioniert wie eine Kopfzeile, wobei insbesondere `msgid` und `msgstr` leer sind. Er beschreibt die Dateikodierung, Pluralformen und andere weniger relevante Dinge.
+Der zweite Abschnitt übersetzt eine einfache Zeichenfolge vom Englischen in brasilianisches Portugiesisch und der dritte macht dasselbe, nutzt jedoch die Zeichenfolgenersetzung aus [`sprintf`][sprintf], sodass die Übersetzung den Benutzernamen und das Besuchsdatum enthalten kann.
+Der letzte Abschnitt ist ein Beispiel für Pluralformen, wobei die Singular- und Pluralversion im Englischen als `msgid` und die entsprechenden Übersetzungen als `msgstr` 0 und 1 angezeigt werden (entsprechend der durch die Pluralregel vorgegebenen Zahl).
+Auch hier wird die Zeichenfolgenersetzung verwendet, sodass die Zahl mithilfe `%d` direkt im Satz angezeigt wird.
+Die Pluralformen bestehen immer aus zwei `msgid` (Singular und Plural). Es wird daher empfohlen, keine komplexe Sprache als Übersetzungsquelle zu verwenden.
 
 ### Discussion on l10n keys
 As you might have noticed, we are using as source ID the actual sentence in English. That `msgid` is the same used
