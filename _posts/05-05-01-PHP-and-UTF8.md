@@ -1,5 +1,5 @@
 ---
-title:   Working with UTF-8
+title:   Arbeiten mit UTF-8
 isChild: true
 anchor:  php_and_utf8
 ---
