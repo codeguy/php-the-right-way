@@ -1,4 +1,5 @@
 ---
+title:   Die Basics
 isChild: true
 anchor:  the_basics
 ---
