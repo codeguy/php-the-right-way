@@ -1,5 +1,5 @@
 ---
-title:   Standard PHP Library
+title:   Standard-PHP-Library
 isChild: true
 anchor:  standard_php_library
 ---
