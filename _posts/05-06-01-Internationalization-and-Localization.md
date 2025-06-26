@@ -1,5 +1,5 @@
 ---
-title:   Internationalization and Localization
+title:   Internationalisierung und Lokalisierung
 isChild: true
 anchor:  i18n_l10n
 ---
