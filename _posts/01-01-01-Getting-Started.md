@@ -2,5 +2,5 @@
 anchor: getting_started
 ---
 
-# Erste Schritee {#getting_started_title}
+# Erste Schritte {#getting_started_title}
 
