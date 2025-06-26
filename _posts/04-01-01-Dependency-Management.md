@@ -1,4 +1,5 @@
 ---
+title:  Dependency Management (Abhängigkeiten-Verwaltung)
 anchor: dependency_management
 ---
 
