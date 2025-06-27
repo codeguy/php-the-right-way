@@ -15,7 +15,7 @@ Dieses Dokument wird fortlaufend aktualisiert und mit hilfreichen Informationen 
 
 ## Übersetzungen
 
-_PHP - aber richtig_ wurde in viele Sprachen übersetzt:
+Das Original, _PHP the right way_ wurde in viele Sprachen übersetzt:
 
 * [English](https://www.phptherightway.com)
 * [Español](https://phpdevenezuela.github.io/php-the-right-way)
@@ -38,6 +38,8 @@ _PHP - aber richtig_ wurde in viele Sprachen übersetzt:
 * [日本語](https://ja.phptherightway.com)
 * [简体中文](https://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](https://laravel-taiwan.github.io/php-the-right-way)
+
+Diese Übersetzung ins Deutsche wird von [Henrik Pantle](http://henrik-pantle.de) bereit gestellt.
 
 ## Buch
 
