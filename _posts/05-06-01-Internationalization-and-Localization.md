@@ -158,46 +158,40 @@ Auch hier wird die Zeichenfolgenersetzung verwendet, sodass die Zahl mithilfe `%
 Die Pluralformen bestehen immer aus zwei `msgid` (Singular und Plural). Es wird daher empfohlen, keine komplexe Sprache als Übersetzungsquelle zu verwenden.
 
 ### Discussion on l10n keys
-As you might have noticed, we are using as source ID the actual sentence in English. That `msgid` is the same used
-throughout all your `.po` files, meaning other languages will have the same format and the same `msgid` fields but
-translated `msgstr` lines.
+Wie Du vielleicht bemerkt hast, verwenden wir als Quell-ID den englischen Originalsatz. Diese `msgid` wird in allen Deinen`.po`-Dateien verwendet. Das bedeutet, dass andere Sprachen dasselbe Format und dieselben `msgid`-Felder, aber übersetzte `msgstr`-Zeilen haben.
 
-Talking about translation keys, there are two main "schools" here:
+Wenn wir über Übersetzungsschlüssel sprechen, gibt es zwei verschiedene "Schulen":
 
-1. _`msgid` as a real sentence_.
-    The main advantages are:
-    - if there are pieces of the software untranslated in any given language, the key displayed will still maintain some
-    meaning. Example: if you happen to translate by heart from English to Spanish but need help to translate to French,
-    you might publish the new page with missing French sentences, and parts of the website would be displayed in English
-    instead;
-    - it is much easier for the translator to understand what's going on and do a proper translation based on the
-    `msgid`;
-    - it gives you "free" l10n for one language - the source one;
-    - The only disadvantage: if you need to change the actual text, you would need to replace the same `msgid`
-    across several language files.
+msgidals echter Satz . 
+Auch wenn Teile der Software in einer bestimmten Sprache nicht übersetzt sind, behält der angezeigte Schlüssel eine gewisse Bedeutung. Beispiel: Wenn Du selbtst vom Englischen ins Spanische übersetzst, aber Hilfe beim Übersetzen ins Französische brauchst, veröffentlichst Du die neue Seite eben mit fehlenden französischen Sätzen, und Teile der Website werden stattdessen auf Englisch angezeigt.
+es ist für den Übersetzer viel einfacher zu verstehen, was vor sich geht, und auf der Grundlage des eine richtige Übersetzung anzufertigen msgid;
 
-2. _`msgid` as a unique, structured key_.
-It would describe the sentence role in the application in a structured way, including the template or part where the
-string is located instead of its content.
-    - it is a great way to have the code organized, separating the text content from the template logic.
-    - however, that could bring problems to the translator that would miss the context. A source language file would be
-    needed as a basis for other translations. Example: the developer would ideally have an `en.po` file, that
-    translators would read to understand what to write in `fr.po` for instance.
-    - missing translations would display meaningless keys on screen (`top_menu.welcome` instead of `Hello there, User!`
-    on the said untranslated French page). That is good it as would force translation to be complete before publishing -
-    however, bad as translation issues would be remarkably awful in the interface. Some libraries, though, include an
-    option to specify a given language as "fallback", having a similar behavior as the other approach.
+Sie erhalten „kostenloses“ L10n für eine Sprache – die Quellsprache.
+Der einzige Nachteil: Wenn Sie den eigentlichen Text ändern möchten, müssen Sie ihn msgidin mehreren Sprachdateien ersetzen.
 
-The [Gettext manual][manual] favors the first approach as, in general, it is easier for translators and users in
-case of trouble. That is how we will be working here as well. However, the [Symfony documentation][symfony-keys] favors
-keyword-based translation, to allow for independent changes of all translations without affecting templates as well.
 
-### Everyday usage
-In a typical application, you would use some Gettext functions while writing static text in your pages. Those sentences
-would then appear in `.po` files, get translated, compiled into `.mo` files and then, used by Gettext when rendering
-the actual interface. Given that, let's tie together what we have discussed so far in a step-by-step example:
+1. _`msgid` als echter Satz_.
+    Die Hauptvorteile sind:
+    - Auch wenn Teile der Software in einer bestimmten Sprache nicht übersetzt sind, behält der angezeigte Schlüssel immer noch eine gewisse Bedeutung.
+Beispiel: Wenn Du selbtst vom Englischen ins Spanische übersetzst, aber Hilfe beim Übersetzen ins Französische brauchst, veröffentlichst Du die neue Seite eben mit fehlenden französischen Sätzen, diese Teile der Website werden stattdessen in Englisch angezeigt;
+    - es ist für den Übersetzer viel einfacher zu verstehen, was vor sich geht, und auf der Grundlage der `msgid` eine richtige Übersetzung anzufertigen;
+    - Du erhältst "gratis"-l10n for one language - für eine Sprache – die Quellsprache;
+    - Der einzige Nachteil: Wenn Du den eigentlichen Text ändern möchtest, musst Du die `msgid` in mehreren Sprachdateien ersetzen.
 
-#### 1. A sample template file, including some different gettext calls
+2. _`msgid` als eindeutiger, strukturierter Schlüssel_.
+Er beschreibt strukturiert die Rolle des Satzes in der Anwendung und enthält das Template oder den Teil, in dem sich der String anstelle Deines Inhalts befindet.
+    - Dies ist eine großartige Möglichkeit, den Code zu organisieren und den Textinhalt von der Templatelogik zu trennen.
+    - Dies könnte jedoch zu Problemen für den Übersetzer führen, da der Kontext übersehen wird. Für weitere Übersetzungen wird eine Quellsprachendatei wird als Grundlage  benötigt. Beispiel: Der Entwickler verfügt idealerweise über eine `en.po`-Datei, welche die Übersetzer lesen können, um  zu verstehen, was sie in die `fr.po`-Datei schreiben sollen.
+    - Fehlende Übersetzungen würden bedeutungslose IDs auf dem Bildschirm anzeigen (`top_menu.welcome` anstatt `Hello there, User!` auf der o.g. unübersetzten französischen Page).
+Das ist gut dafür, dass die Übersetzung vor der Veröffentlichung abgeschlossen sein muss – schlecht ist es jedoch, da Übersetzungsprobleme das Nutzererlebnis erheblich beeinträchtigen würden
+Einige Libraries bieten jedoch die Möglichkeit, eine bestimmte Sprache als "Fallback" festzulegen, was ein ähnliches Verhalten wie der obige Ansatz hat.
+
+Das [Gettext-Handbuch][manual] bevorzugt den ersten Ansatz, da dieser im Allgemeinen für Übersetzer und Benutzer im Problemfall einfacher ist. So werden wir auch hier vorgehen. Die Symfony-Dokumentation bevorzugt jedoch die schlüsselwortbasierte Übersetzung, um unabhängige Änderungen aller Übersetzungen zu ermöglichen, ohne dass auch die Templates davon betroffen sind.
+
+### Alltagsgebrauch
+In einer typischen Anwendung verwendest Du Gettext-Funktionen beim Schreiben statischer Texte auf Deinen Seiten. Diese Sätze erscheinen dann in `.po`-Dateien, werden übersetzt, in `.mo`-Dateien kompiliert und anschließend von Gettext beim Rendern der eigentlichen Benutzeroberfläche verwendet. Lassen Sie uns daher die bisherigen Ausführungen in einem Schritt-für-Schritt-Beispiel zusammenfassen:
+
+#### 1. Eine Beispiel-Template, einschließlich einiger Gettext-Aufrufe
 {% highlight php %}
 <?php include 'i18n_setup.php' ?>
 <div id="header">
@@ -217,13 +211,16 @@ the actual interface. Given that, let's tie together what we have discussed so f
 <p><?=gettext('We\'re now translating some strings')?></p>
 {% endhighlight %}
 
-- [`gettext()`][func] simply translates a `msgid` into its corresponding `msgstr` for a given language. There's also
-the shorthand function `_()` that works the same way;
-- [`ngettext()`][n_func] does the same but with plural rules;
-- There are also [`dgettext()`][d_func] and [`dngettext()`][dn_func], that allow you to override the domain for a single
-call. More on domain configuration in the next example.
+gettext()übersetzt einfach ein msgid in das entsprechende Element msgstr für eine bestimmte Sprache. Es gibt auch eine Kurzfunktion _(), die auf die gleiche Weise funktioniert.
+ngettext() macht dasselbe, aber mit Pluralregeln;
+Es gibt auch dgettext()und dngettext(), mit denen Du die Domäne für einen einzelnen Anruf überschreiben kannst. Mehr zur Domänenkonfiguration im nächsten Beispiel.
 
-#### 2. A sample setup file (`i18n_setup.php` as used above), selecting the correct locale and configuring Gettext
+- [`gettext()`][func] übersetzt einfach ein `msgid`  in das entsprechende `msgstr`-Element für eine bestimmte Sprache. Es gibt auch eine Kurzfunktion `_()`, die genauso funktioniert;
+- [`ngettext()`][n_func] macht dasselbe, aber mit Pluralregeln;
+- Es gibt auch [`dgettext()`][d_func] und [`dngettext()`][dn_func], mit denen Du die Domäne für einen einzelnen Anruf überschreiben kannst. Mehr zur Domänenkonfiguration im nächsten Beispiel.
+
+#### 2. Eine Setup-Datei (`i18n_setup.php` wie oben), wählt das richtige Gebietsschemas und Konfiguration von Gettext aus.
+
 {% highlight php %}
 <?php
 /**
@@ -281,20 +278,17 @@ textdomain('main');
 ?>
 {% endhighlight %}
 
-#### 3. Preparing translation for the first run
-One of the great advantages Gettext has over custom framework i18n packages is its extensive and powerful file format.
-"Oh man, that’s quite hard to understand and edit by hand, a simple array would be easier!" Make no mistake,
-applications like [Poedit] are here to help - _a lot_. You can get the program from [their website][poedit_download],
-it’s free and available for all platforms. It’s a pretty easy tool to get used to, and a very powerful one at the same
-time - using all features Gettext has available. This guide is based on PoEdit 1.8.
+#### 3. Übersetzung für den ersten Durchgang vorbereiten
+Einer der großen Vorteile von Gettext gegenüber benutzerdefinierten Framework-i18n-Paketen ist sein umfangreiches und leistungsstarkes Dateiformat.
+"Oh Mann, das ist ziemlich schwer zu verstehen und manuell zu bearbeiten - ein simples Array wäre echt leichter!" Mach' Dir keine Sorgen: Anwendungen wie [Poedit] helfen Dir dabei – und zwar sehr.
+Du kannst das Programm von der [Website herunterladen][poedit_download]; es ist kostenlos und für alle Plattformen verfügbar.
+Es ist ein recht einfach zu bedienendes und gleichzeitig sehr leistungsstarkes Tool, das alle Funktionen von Gettext nutzt. Diese Anleitung basiert auf PoEdit 1.8.
 
-In the first run, you should select “File > New...” from the menu. You’ll be asked straight ahead for the language:
-here you can select/filter the language you want to translate to, or use that format we mentioned before, such as
-`en_US` or `pt_BR`.
+Wählen Sie im ersten Durchgang “File > New...” aus dem Menü. Du wirst direkt nach der Sprache gefragt: Hier kannst Du die gewünschte Sprache auswählen/filtern oder das oben erwähnte Format wie `en_US` oder `pt_BR` nutzen.
 
-Now, save the file - using that directory structure we mentioned as well. Then you should click “Extract from sources”,
-and here you’ll configure various settings for the extraction and translation tasks. You’ll be able to find all those
-later through “Catalog > Properties”:
+Speichere die Datei nun – in der ebenfalls beschriebenen Verzeichnisstruktur. Klicke anschließend auf “Extract from sources” und konfiguriere hier verschiedene Einstellungen für die Extraktions- und Übersetzungsaufgaben. Diese findest Du später unter “Catalog > Properties”:
+
+
 
 - Source paths: here you must include all folders from the project where `gettext()` (and siblings) are called - this
 is usually your templates/views folder(s). This is the only mandatory setting;
