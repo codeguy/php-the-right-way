@@ -66,7 +66,7 @@ Auch hier verwenden wir [Poedit] zum Erstellen von Übersetzungsdateien. Du wirs
 
 ### Struktur
 
-#### Types of files
+#### Drei verschiedene Dateien
 Bei der Arbeit mit gettext arbeitest Du üblicherweise mit drei Dateien. Die wichtigsten sind PO- (Portable Object) und MO- (Machine Object) Dateien. Erstere ist eine Liste lesbarer "übersetzter Objekte" und letztere die entsprechende Binärdatei, die gettext bei der Lokalisierung interpretiert.
 Es gibt außerdem eine POT-Datei (Template), die alle vorhandenen Schlüssel aus Deinen Quelldateien enthält und als Leitfaden zum Generieren und Aktualisieren aller PO-Dateien dient. Diese Template-Dateien sind nicht zwingend erforderlich: Je nach verwendetem l10n-Tool reichen PO/MO-Dateien aus. Du benötigst immer ein Paar PO/MO-Dateien pro Sprache und Region, aber nur eine POT-Datei pro Domänen.
 
@@ -288,76 +288,53 @@ Wählen Sie im ersten Durchgang “File > New...” aus dem Menü. Du wirst dire
 
 Speichere die Datei nun – in der ebenfalls beschriebenen Verzeichnisstruktur. Klicke anschließend auf “Extract from sources” und konfiguriere hier verschiedene Einstellungen für die Extraktions- und Übersetzungsaufgaben. Diese findest Du später unter “Catalog > Properties”:
 
+- Quellpfade: Hier musst Du alle Ordner des Projekts angeben, in dem `gettext()` (und verwandte) aufgerufen werden. Dies sind normalerweise Deine Templates-/View-Ordner. Dies ist die einzige obligatorische Einstellung;
 
+- Übersetzungseigenschaften:
+    - Projektname und -version, Team und deren E-Mail-Adressen: Nützliche Informationen, die in den Header der .po-Datei aufgenommen werden;
+    - Pluralformen: Hier sind die zuvor erwähnten Regeln – es gibt dort auch einen Link mit Beispielen. Du kannst meistens die Standardeinstellung beibehalten, da PoEdit bereits eine praktische Datenbank mit Pluralregeln für viele Sprachen enthält.
+    - Charsets: vorzugsweise UTF-8;
+    - Quellcode-Charset: Lege hier den von Deiner Codebasis verwendeten Zeichensatz fest – wahrscheinlich auch UTF-8, oder? :-)
+- Quellschlüsselwörter: Die zugrunde liegende Software kennt `gettext()`-Funktionsaufrufe in verschiedenen Programmiersprachen, aber Du kannst auch eigene Übersetzungsfunktionen erstellen. Hier fügst Du die anderen Methoden hinzu. Dies wird später im Abschnitt "Tipps" erläutert.
 
-- Source paths: here you must include all folders from the project where `gettext()` (and siblings) are called - this
-is usually your templates/views folder(s). This is the only mandatory setting;
-- Translation properties:
-    - Project name and version, Team and Team’s email address: useful information that goes in the .po file header;
-    - Plural forms: here go those rules we mentioned before - there’s a link in there with samples as well. You can
-    leave it with the default option most of the time, as PoEdit already includes a handy database of plural rules for
-    many languages.
-    - Charsets: UTF-8, preferably;
-    - Source code charset: set here the charset used by your codebase - probably UTF-8 as well, right?
-- Source keywords: The underlying software knows how `gettext()` and similar function calls look like in several
-programming languages, but you might as well create your own translation functions. It will be here you’ll add those
-other methods. This will be discussed later in the “Tips” section.
+Nachdem Sie diese Punkte festgelegt haben, durchsucht PoEdit Ihre Quelldateien nach allen Lokalisierungsaufrufen.
+Nach jedem Scan zeigt PoEdit eine Zusammenfassung der gefundenen und entfernten Einträge an. Neue Einträge werden in die Übersetzungstabelle eingefügt, und Du fängst mit der Eingabe der lokalisierten Versionen der Strings an. Speichere die Datei, und eine .mo-Datei wird im selben Ordner (neu) kompiliert. Und schon ist Dein Projekt internationalisiert.
 
-After setting those points it will run a scan through your source files to find all the localization calls. After every
-scan PoEdit will display a summary of what was found and what was removed from the source files. New entries will fed
-empty into the translation table, and you’ll start typing in the localized versions of those strings. Save it and a .mo
-file will be (re)compiled into the same folder and ta-dah: your project is internationalized.
+#### 4. Übersetzen von Strings
+Wie Du vielleicht schon bemerkt hast, gibt es zwei Haupttypen lokalisierter Zeichenfolgen: Einfache und solche mit Pluralformen.
+Erstere bestehen lediglich aus zwei Feldern: Quelle und lokalisierter String. Der Quellstring kann nicht geändert werden, da Gettext/Poedit keine Möglichkeit zur Änderung Deiner Quelldateien bietet.
+Du musst die Quelle selbst ändern und die Dateien erneut scannen.
+Tipp: Klicke mit der rechten Maustaste auf eine Übersetzungszeile, um Hinweise zu den Quelldateien und Zeilen zu erhalten, in denen dieser String verwendet wird.
+Zeichenfolgen mit Pluralformen hingegen enthalten zwei Felder zur Anzeige der beiden Quellzeichenfolgen und Registerkarten zur Konfiguration der verschiedenen Endformen.
 
-#### 4. Translating strings
-As you may have noticed before, there are two main types of localized strings: simple ones and those with plural
-forms. The first ones have simply two boxes: source and localized string. The source string cannot be modified as
-Gettext/Poedit do not include the powers to alter your source files - you should change the source itself and rescan
-the files. Tip: you may right-click a translation line and it will hint you with the source files and lines where that
-string is being used.
-On the other hand, plural form strings include two boxes to show the two source strings, and tabs so you can configure
-the different final forms.
+Wenn Du Deine Quellen ändern und die Übersetzungen aktualisieren musst, klicke einfach auf "Aktualisieren". Poedit scannt den Code erneut, entfernt nicht vorhandene Einträge, verbindet geänderte und fügt neue hinzu.
+Es kann auch versuchen, einige Übersetzungen aufgrund Deiner anderen Übersetzungen zu erraten. Diese Versuche und die geänderten Einträge werden mit einem "Fuzzy"-Marker markiert, der auf eine Überprüfung hinweist und in der Liste goldgelb angezeigt wird.
+Dies ist auch nützlich, wenn Du ein Übersetzungsteam hast und jemand versucht, etwas zu schreiben, bei dem er sich nicht sicher ist: Markiereie einfach "Fuzzy", und jemand anderes überprüft später.
 
-Whenever you change your sources and need to update the translations, just hit Refresh and Poedit will rescan the code,
-removing non-existent entries, merging the ones that changed and adding new ones. It may also try to guess some
-translations, based on other ones you did. Those guesses and the changed entries will receive a "Fuzzy" marker,
-indicating it needs review, appearing golden in the list. It is also useful if you have a translation team and someone
-tries to write something they are not sure about: just mark Fuzzy, and someone else will review later.
+Abschliessend empfehlen wir , "Ansicht > Nicht übersetzte Einträge zuerst" aktiviert zu lassen, da dies _sehr hilft_, keine Einträge zu vergessen.
+Von diesem Menü aus kannst Du auch Teile der Benutzeroberfläche öffnen, in denen Du bei Bedarf Kontextinformationen für Übersetzer hinterlassen knnst.
 
-Finally, it is advised to leave "View > Untranslated entries first" marked, as it will help you _a lot_ to not forget
-any entry. From that menu, you can also open parts of the UI that allow you to leave contextual information for
-translators if needed.
+### Tipps & Tricks
 
-### Tips & Tricks
+#### Mögliche Caching-Probleme
+Wenn Du PHP als Modul auf Apache  (`mod_php`) ausführst, können Probleme mit dem caching der `.mo`-Datei auftreten. Dies geschieht beim ersten Lesen. Um die Datei zu aktualisieren, ist möglicherweise ein Serverneustart erforderlich. Unter Nginx und PHP5 genügen in der Regel ein paar Seitenaktualisierungen, um den Übersetzungscache zu aktualisieren. Unter PHP7 ist dies selten erforderlich.
 
-#### Possible caching issues
-If you are running PHP as a module on Apache (`mod_php`), you might face issues with the `.mo` file being cached. It
-happens the first time it is read, and then, to update it, you might need to restart the server. On Nginx and PHP5 it
-usually takes only a couple of page refreshes to refresh the translation cache, and on PHP7 it is rarely needed.
+#### Zusätzliche Hilfsfunktionen
+Viele bevorzugen, da es einfacher zu verwenden ist, `_()` anstatt `gettext()`. Viele benutzerdefinierte i18n-Bibliotheken von Frameworks verwenden ebenfalls etwas Ähnliches wie `t()`, um übersetzten Code zu verkürzen.
+Dies ist jedoch die einzige Funktion mit einer Verknüpfung. Du kannst Deinem Projekt weitere hinzufügen, z. B. `__()` oder `_n()` für `ngettext()`, oder vielleicht eine ausgefallene `_r()`-Funktion, die `gettext()` und `sprintf()` Aufrufe verbindet.
+Andere Bibliotheken, wie z. B. [Gettext von php-gettext][php-gettext], bieten ebenfalls solche Hilfsfunktionen.
 
-#### Additional helper functions
-As preferred by many people, it is easier to use `_()` instead of `gettext()`. Many custom i18n libraries from
-frameworks use something similar to `t()` as well, to make translated code shorter. However, that is the only function
-that sports a shortcut. You might want to add in your project some others, such as `__()` or `_n()` for `ngettext()`,
-or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other libraries, such as
-[php-gettext's Gettext][php-gettext] also provide helper functions like these.
+In diesen Fällen musst Du Gettext mitteilen, wie die Strings aus diesen neuen Funktionen extrahiert werden sollen. Keine Sorge, es ist ganz einfach.
+Es handelt sich lediglich um ein Feld in der `.po`-Datei bzw. eine Einstellung in Poedit. Im Editor finden Sie diese Option unter "Katalog > Eigenschaften > Quellschlüsselwörter". Denken Sie daran: Gettext kennt bereits die Standardfunktionen für viele Sprachen. Sei also nicht beunruhigt, wenn die Liste leer erscheint. Du musst dort die Spezifikationen Deiner neuen Funktionen in einem [bestimmten Format][func_format] einfügen:
 
-In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
-Don't be afraid; it is very easy. It is just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
-that option is inside "Catalog > Properties > Source keywords". Remember: Gettext already knows the default functions
-for many languages, so don’t be afraid if that list seems empty. You need to include there the specifications of those
-new functions, following [a specific format][func_format]:
+- wenn Du so etwas wie `t()` erstellst, gibt es einfach die Übersetzung für einen String zurück, die Du als `t` angeben kannst. Gettext weiß, dass das einzige Funktionsargument der zu übersetzende String ist.
+- Wenn die Funktion mehr als ein Argument hat, kannst Du angeben, in welchem ​​Argument der erste String steht – und bei Bedarf ebenso die Pluralform.
+Wenn wir unsere Funktion beispielsweise wie folgt aufrufen: `__('one user', '%d users', $number)`, wäre die Spezifikation `__:1,2`, was bedeutet, dass die erste Form das erste Argument und die zweite Form das zweite Argument ist.
+Wenn Ihre Zahl stattdessen das erste Argument ist, wäre die Spezifikation `__:2,3`, was bedeutet, dass die erste Form das zweite Argument ist, und so weiter.
 
-- if you create something like `t()` that simply returns the translation for a string, you can specify it as `t`.
-Gettext will know the only function argument is the string to be translated;
-- if the function has more than one argument, you can specify in which one the first string is - and if needed, the
-plural form as well. For instance, if we call our function like this: `__('one user', '%d users', $number)`, the
-specification would be `__:1,2`, meaning the first form is the first argument, and the second form is the second
-argument. If your number comes as the first argument instead, the spec would be `__:2,3`, indicating the first form is
-the second argument, and so on.
+Nachdem Du diese neuen Regeln in die `.po`-Datei aufgenommen hast, werden Deine neuen Zeichenfolgen durch einen neuen Scan genauso einfach wie zuvor eingefügt.
 
-After including those new rules in the `.po` file, a new scan will bring in your new strings just as easy as before.
-
-### References
+### Verweise
 
 * [Wikipedia: i18n and l10n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
 * [Wikipedia: Gettext](https://en.wikipedia.org/wiki/Gettext)
