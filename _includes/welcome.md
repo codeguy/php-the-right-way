@@ -45,7 +45,7 @@ Diese Übersetzung ins Deutsche wird von [Henrik Pantle](http://henrik-pantle.de
 
 Die neueste Version von _PHP - aber richtig_ ist in der englischen Originalversion als _PHP: The Right Way_ auch in den Formaten PDF, EPUB und MOBI verfügbar. [Zu Leanpub][1]
 
-## Wie Mithelfen
+## Wie Mithelfen?
 
 Hilf mit, diese Website zur besten Ressource für neue PHP-Programmierer zu machen! [Contribute on GitHub][2]
 
