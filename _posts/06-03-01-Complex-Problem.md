@@ -3,52 +3,53 @@ isChild: true
 anchor:  complex_problem
 ---
 
-## Complex Problem {#complex_problem_title}
+## Komplexes Problem {#complex_problem_title}
 
-If you have ever read about Dependency Injection then you have probably seen the terms *"Inversion of Control"* or
-*"Dependency Inversion Principle"*. These are the complex problems that Dependency Injection solves.
+Wenn Sie schon einmal etwas über Dependency Injection gelesen haben, sind Ihnen wahrscheinlich die Begriffe *"Inversion of Control"* oder *"Dependency Inversion Principle"* begegnet . Dependency Injection löst komplexe Probleme.
 
-### Inversion of Control
+### Inversion of Control (Umkehrung der Kontrolle)
 
-Inversion of Control is as it says, "inverting the control" of a system by keeping organizational control entirely
-separate from our objects. In terms of Dependency Injection, this means loosening our dependencies by controlling and
-instantiating them elsewhere in the system.
+Inversion of Control bedeutet, wie der Name schon sagt, die "Umkehrung der Kontrolle" eines Systems, indem die organisatorische Steuerung vollständig von unseren Objekten getrennt gehalten wird.
+Im Sinne von Dependency Injection bedeutet dies, unsere Abhängigkeiten zu lockern, indem wir sie an anderer Stelle im System steuern und instanziieren.
 
-For years, PHP frameworks have been achieving Inversion of Control, however, the question became, which part of control
-are we inverting, and where to? For example, MVC frameworks would generally provide a super object or base controller
-that other controllers must extend to gain access to its dependencies. This **is** Inversion of Control, however,
-instead of loosening dependencies, this method simply moved them.
+PHP-Frameworks setzen seit Jahren auf Inversion of Control. Es stellte sich jedoch die Frage, welchen Teil der Steuerung wir invertieren und wohin?
+Beispielsweise stellen MVC-Frameworks üblicherweise ein Superobjekt oder einen Basiscontroller bereit, den andere Controller erweitern müssen, um auf dessen Abhängigkeiten zugreifen zu können. Dies **ist** Inversion of Control.
+Anstatt Abhängigkeiten zu lösen, werden sie bei dieser Methode jedoch einfach verschoben.
 
-Dependency Injection allows us to more elegantly solve this problem by only injecting the dependencies we need, when we
-need them, without the need for any hard coded dependencies at all.
+Mithilfe der Abhängigkeitsinjektion können wir dieses Problem eleganter lösen, indem wir nur die Abhängigkeiten injizieren, die wir brauchen, wenn wir sie brauchen, ohne dass überhaupt fest codierte Abhängigkeiten erforderlich sind.
 
 ### S.O.L.I.D.
 
-#### Single Responsibility Principle
+SOLID ist ein Akronym für die ersten fünf Prinzipien des objektorientierten Designs (OOD) von Robert C. Martin und steht für:
+  - S – Single-Responsibility-Prinzip (Prinzip der eindeutigen Verantwortlichkeit)
+  - O – Open/Closed-Prinzip (Prinzip der Offen- und Verschlossenheit)
+  - L – Liskovsches Substitutionsprinzip
+  - I – Interface-Segregation-Prinzip (Prinzip der Schnittstellentrennung)
+  - D – Dependency-Inversion-Prinzip (Abhängigkeit-Umkehr-Prinzip)
 
-The Single Responsibility Principle is about actors and high-level architecture. It states that “A class should have
-only one reason to change.” This means that every class should _only_ have responsibility over a single part of the
-functionality provided by the software. The largest benefit of this approach is that it enables improved code
-_reusability_. By designing our class to do just one thing, we can use (or re-use) it in any other program without
-changing it.
 
-#### Open/Closed Principle
+#### Single Responsibility Prinzip
 
-The Open/Closed Principle is about class design and feature extensions. It states that “Software entities (classes,
-modules, functions, etc.) should be open for extension, but closed for modification.” This means that we should design
-our modules, classes and functions in a way that when a new functionality is needed, we should not modify our existing
-code but rather write new code that will be used by existing code. Practically speaking, this means that we should write
-classes that implement and adhere to _interfaces_, then type-hint against those interfaces instead of specific classes.
+DasSingle Responsibility Prinzip befasst sich mit Akteuren und High-Level-Architektur. Es besagt: "Eine Klasse sollte nur einen Grund haben, sich zu ändern."
+Das bedeutet, dass jede Klasse _ausschließlich_ für einen Teil der von der Software bereitgestellten Funktionalität verantwortlich sein sollte. 
+Der größte Vorteil dieses Ansatzes ist die verbesserte _Wiederverwendbarkeit_ von Code.
+Indem wir unsere Klasse nur für eine Funktion konzipieren, können wir sie in jedem anderen Programm verwenden (oder wiederverwenden), ohne sie ändern zu müssen.
 
-The largest benefit of this approach is that we can very easily extend our code with support for something new without
-having to modify existing code, meaning that we can reduce QA time, and the risk for negative impact to the application
-is substantially reduced. We can deploy new code, faster, and with more confidence.
+#### Open/Closed Prinzip
 
-#### Liskov Substitution Principle
+Das Open/Closed-Prinzip befasst sich mit Klassendesign und Funktionserweiterungen. Es besagt: "Software-Entitäten (Klassen, Module, Funktionen usw.) sollten für Erweiterungen offen, aber für Modifikationen geschlossen sein."
+Wir sollten also unsere Module, Klassen und Funktionen so gestalten, dass wir bei Bedarf an neuer Funktionalität den bestehenden Code nicht ändern, sondern neuen Code schreiben, der vom vorhandenen Code genutzt wird.
+In der Praxis bedeutet das, wir schreiben Klassen, welche _Schnittstellen_ implementieren und einhalten, und dann Typ-Hinweise dafür erstellen anstelle spezifische Klassen.
 
-The Liskov Substitution Principle is about subtyping and inheritance. It states that “Child classes should never break
-the parent class’ type definitions.” Or, in Robert C. Martin’s words, “Subtypes must be substitutable for their base
-types.”
+Der größte Vorteil dieses Ansatzes besteht darin, dass wir unseren Code ganz einfach um Funktionalität erweitern können, ohne den bestehenden Code ändern zu müssen. Dadurch verkürzen wir die QA-Zeit (QA: Quality Assurance). Das Risiko negativer Auswirkungen auf die Applikation wird erheblich reduziert. Wir können neuen Code schneller und zuverlässiger bereitstellen.
+
+#### Liskovsches Substitutionsprinzip
+
+Das Liskovsche Substitutionsprinzip befasst sich mit Subtypisierung und Vererbung. Es besagt: "Unterklassen dürfen niemals die Typdefinitionen der übergeordneten Klasse brechen." Oder, mit Robert C. Martins Worten: "Subtypen müssen durch ihre Basistypen substituierbar sein."
+
+Wenn wir beispielsweise eine Schnittstelle haben, die eine Methode `FileInterface` finiert, und wir Klassen haben, die beide die Schnittstelle implementieren , können wir davon ausgehen, dass die Verwendung der Methode immer das gewünschte Ergebnis liefert. Wenn wir später eine Klasse oder eine Klasse erstellen, die die Schnittstelle implementiert, wissen wir bereits, was die Methode bewirkt. Der größte Vorteil dieses Ansatzes besteht darin, dass wir flexible und leicht konfigurierbare Programme erstellen können, da wir beim Ändern eines Objekts eines Typs (z. B. ) in ein anderes nichts anderes im Programm ändern müssen.embed()AudioVideoFileInterfaceembed()PDFGistFileInterfaceembed()FileInterface
+
+
 
 For example, if we have a `FileInterface` interface which defines an `embed()` method, and we have `Audio` and `Video`
 classes which both implement the `FileInterface` interface, then we can expect that the usage of the `embed()` method will always
@@ -57,7 +58,7 @@ interface, we will already know and understand what the `embed()` method will do
 is that we have the ability to build flexible and easily-configurable programs, because when we change one object of a
 type (e.g., `FileInterface`) to another we don't need to change anything else in our program.
 
-#### Interface Segregation Principle
+#### Interface-Segregation-Prinzip
 
 The Interface Segregation Principle (ISP) is about _business-logic-to-clients_ communication. It states that “No client
 should be forced to depend on methods it does not use.” This means that instead of having a single monolithic interface
@@ -69,7 +70,7 @@ class would not. Conversely, a `Motorcycle` or `Tricycle` class would be interes
 `Car` or `Bus` class would not. There is no need to have all of these types of vehicles implement support for both
 `steeringWheel()` as well as `handlebars()`, so we should break-apart the source interface.
 
-#### Dependency Inversion Principle
+#### Dependency-Inversion-Prinzip
 
 The Dependency Inversion Principle is about removing hard-links between discrete classes so that new functionality can
 be leveraged by passing a different class. It states that one should *"Depend on Abstractions. Do not depend on
