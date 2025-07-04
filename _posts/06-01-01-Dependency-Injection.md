@@ -7,7 +7,7 @@ anchor: dependency_injection
 
 From [Wikipedia](https://wikipedia.org/wiki/Dependency_injection):
 
->Dependency Injection ist ein Software-Entwurfsmuster, welches das Entfernen fest codierter Abhängigkeiten ermöglicht
+>Dependency Injection ist ein Software-Entwurfsmuster, welches fest codierte Abhängigkeiten ersetzt
 >und deren Änderung sowohl zur Laufzeit als auch zur Kompilierzeit ermöglicht.
 
 Dieses Zitat lässt das Konzept viel komplizierter klingen, als es tatsächlich ist.
