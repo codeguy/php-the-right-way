@@ -45,37 +45,27 @@ Der größte Vorteil dieses Ansatzes besteht darin, dass wir unseren Code ganz e
 
 #### Liskovsches Substitutionsprinzip
 
-Das Liskovsche Substitutionsprinzip befasst sich mit Subtypisierung und Vererbung. Es besagt: "Unterklassen dürfen niemals die Typdefinitionen der übergeordneten Klasse brechen." Oder, mit Robert C. Martins Worten: "Subtypen müssen durch ihre Basistypen substituierbar sein."
+Das Liskovsche Substitutionsprinzip befasst sich mit Subtypisierung und Vererbung. Es besagt: "Unterklassen dürfen niemals die Typdefinitionen der übergeordneten Klasse brechen."
+Oder, mit Robert C. Martins Worten: "Subtypen müssen durch ihre Basistypen substituierbar sein."
 
-Wenn wir beispielsweise eine Schnittstelle haben, die eine Methode `FileInterface` finiert, und wir Klassen haben, die beide die Schnittstelle implementieren , können wir davon ausgehen, dass die Verwendung der Methode immer das gewünschte Ergebnis liefert. Wenn wir später eine Klasse oder eine Klasse erstellen, die die Schnittstelle implementiert, wissen wir bereits, was die Methode bewirkt. Der größte Vorteil dieses Ansatzes besteht darin, dass wir flexible und leicht konfigurierbare Programme erstellen können, da wir beim Ändern eines Objekts eines Typs (z. B. ) in ein anderes nichts anderes im Programm ändern müssen.embed()AudioVideoFileInterfaceembed()PDFGistFileInterfaceembed()FileInterface
-
-
-
-For example, if we have a `FileInterface` interface which defines an `embed()` method, and we have `Audio` and `Video`
-classes which both implement the `FileInterface` interface, then we can expect that the usage of the `embed()` method will always
-do the thing that we intend. If we later create a `PDF` class or a `Gist` class which implement the `FileInterface`
-interface, we will already know and understand what the `embed()` method will do. The largest benefit of this approach
-is that we have the ability to build flexible and easily-configurable programs, because when we change one object of a
-type (e.g., `FileInterface`) to another we don't need to change anything else in our program.
+Wenn wir zum Beispiel eine `FileInterface`-Schnittstelle haben, die eine  `embed()`-Methode `FileInterface` definiert, und wir `Audio`- und `Video`-Klassen haben, die beide die  `FileInterface`-Schnittstelle implementieren, können wir davon ausgehen, dass die Verwendung der `embed()`-Methode immer das gewünschte Ergebnis liefert.
+Wenn wir später eine`PDF`-Klasse oder eine `Gist`-Klasse erstellen, die die `FileInterface`-Schnittstelle implementiert, wissen und verstehen wir bereits, was die `embed()`-Methode bewirkt.
+Der größte Vorteil dieses Ansatzes besteht darin, dass wir flexible und leicht konfigurierbare Programme erstellen können, da wir beim Ändern eines Objekts eines Typs (z. B. `FileInterface`) in ein anderes, nichts weiter im Programm abändern müssen.
 
 #### Interface-Segregation-Prinzip
 
-The Interface Segregation Principle (ISP) is about _business-logic-to-clients_ communication. It states that “No client
-should be forced to depend on methods it does not use.” This means that instead of having a single monolithic interface
-that all conforming classes need to implement, we should instead provide a set of smaller, concept-specific interfaces
-that a conforming class implements one or more of.
+Das Interface-Segregation-Prinzip (ISP) befasst sich mit der Kommunikation zwischen _Geschäftslogik und Clients_.
+Es besagt: "Kein Client sollte gezwungen werden, sich auf Methoden zu verlassen, die er nicht nutzt." 
+Das bedeutet: Anstatt einer einzigen monolithischen Schnittstelle, die alle konformen Klassen implementieren muss, sollten wir stattdessen eine Reihe kleinerer, konzeptspezifischer Schnittstellen bereitstellen, von denen eine konforme Klasse dann eine oder mehrere davon implementiert.
 
-For example, a `Car` or `Bus` class would be interested in a `steeringWheel()` method, but a `Motorcycle` or `Tricycle`
-class would not. Conversely, a `Motorcycle` or `Tricycle` class would be interested in a `handlebars()` method, but a
-`Car` or `Bus` class would not. There is no need to have all of these types of vehicles implement support for both
-`steeringWheel()` as well as `handlebars()`, so we should break-apart the source interface.
+Beispielsweise wäre eine `Auto` oder `Bus`-Klasse an einer `steuerrad()`-Methode interessiert, eine `Motorrad` oder `Dreirad`-Klasse jedoch nicht. Umgekehrt wäre eine `Motorrad` oder `Dreirad`-Klasse  an einer `lenkstange()`-Methode interessiert, eine  `Auto` oder `Bus`-Klasse jedoch nicht.
+Es ist nicht erforderlich, dass alle diese Vehikel sowohl `steuerrad()` als auch `lenkstange()` unterstützen , daher sollten wir die Quellschnittstelle aufteilen.
 
 #### Dependency-Inversion-Prinzip
 
-The Dependency Inversion Principle is about removing hard-links between discrete classes so that new functionality can
-be leveraged by passing a different class. It states that one should *"Depend on Abstractions. Do not depend on
-concretions."*. Put simply, this means our dependencies should be interfaces/contracts or abstract classes rather than
-concrete implementations. We can easily refactor the above example to follow this principle.
+Das Prinzip der Abhängigkeitsumkehrung (Dependency-Inversion-Prinzip) entfernt Hardlinks zwischen diskreten Klassen, um durch die Übergabe einer anderen Klasse neue Funktionalitäten zu nutzen.
+Es besagt: *"Verlasse dich auf Abstraktionen. Verlasse dich nicht auf Konkretionen."*
+Vereinfacht ausgedrückt: Unsere Abhängigkeiten (dependencies) sollen Schnittstellen/Verträge oder abstrakte Klassen anstatt konkreter Implementierungen sein. Wir können das obige Beispiel leicht umgestalten, um diesem Prinzip zu folgen.
 
 {% highlight php %}
 <?php
@@ -93,14 +83,10 @@ interface AdapterInterface {}
 class MysqlAdapter implements AdapterInterface {}
 {% endhighlight %}
 
-There are several benefits to the `Database` class now depending on an interface rather than a concretion.
+Dass die `Database`-Klasse nun von einer Schnittstelle und nicht von einer Konkretion abhängt, hat mehrere Vorteile.
 
-Consider that we are working in a team and the adapter is being worked on by a colleague. In our first example, we
-would have to wait for said colleague to finish the adapter before we could properly mock it for our unit tests. Now
-that the dependency is an interface/contract we can happily mock that interface knowing that our colleague will build
-the adapter based on that contract.
+Nehmen wir an, wir arbeiten in einem Team und ein Kollege arbeitet gerade am Adapter.
+In unserem ersten Beispiel müssten wir warten, bis der Kollege den Adapter fertiggestellt hat, bevor wir ihn für unsere Unit-Tests simulieren können.
+Da die Abhängigkeit nun eine Schnittstelle/ein Vertrag ist, können wir diese Schnittstelle problemlos simulieren, da wir wissen, dass unser Kollege den Adapter basierend auf diesem Vertrag erstellt.
 
-An even bigger benefit to this method is that our code is now much more scalable. If a year down the line we decide
-that we want to migrate to a different type of database, we can write an adapter that implements the original interface
-and injects that instead, no more refactoring would be required as we can ensure that the adapter follows the contract
-set by the interface.
+Ein noch größerer Vorteil dieser Methode ist die deutlich bessere Skalierbarkeit unseres Codes. Sollten wir uns nach einem Jahr für die Migration zu einem anderen Datenbanktyp entscheiden, können wir einen Adapter schreiben, der die ursprüngliche Schnittstelle implementiert und diese stattdessen einfügt (inject). Ein weiteres Refactoring ist nicht erforderlich, da wir sicherstellen können, dass der Adapter den von der Schnittstelle festgelegten Vertrag einhält.
