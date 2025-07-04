@@ -5,13 +5,6 @@ anchor:  further_reading
 
 ## Weitere Informationen {#further_reading_title}
 
-Weitere Informationen
-
-Was ist Dependency Injection?
-Abhängigkeitsinjektion: Eine Analogie
-Abhängigkeitsinjektion: Hä?
-Dependency Injection als Werkzeug zum Testen
-
 * [Was ist Dependency Injection?](http://fabien.potencier.org/what-is-dependency-injection.html)
 * [Dependency Injection: Eine Analogie](https://mwop.net/blog/260-Dependency-Injection-An-analogy.html)
 * [Dependency Injection: Hä?!](https://code.tutsplus.com/tutorials/dependency-injection-huh--net-26903)
