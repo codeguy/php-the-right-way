@@ -3,13 +3,12 @@ isChild: true
 anchor:  basic_concept
 ---
 
-## Basic Concept {#basic_concept_title}
+## Grundkonzept {#basic_concept_title}
 
-We can demonstrate the concept with a simple, yet naive example.
 
-Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the adapter in the
-constructor and create a hard dependency. This makes testing difficult and means the `Database` class is very tightly
-coupled to the adapter.
+Wir können das Konzept anhand eines einfachen, aber naiven Beispiels demonstrieren.
+
+Hier haben wir eine `Database`-Klasse, die einen Adapter benötigt, um mit der Datenbank zu kommunizieren. Wir instanziieren den Adapter im Konstruktor und erstellen eine fest Abhängigkeit. Dies erschwert das Testen und bedeutet, dass die `Database`-Klasse sehr eng an den Adapter gekoppelt ist.
 
 {% highlight php %}
 <?php
@@ -28,8 +27,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-This code can be refactored to use Dependency Injection and therefore loosen the dependency.
-Here, we inject the dependency in a constructor and use the [constructor property promotion][php-constructor-promotion] so it is available as a property across the class:
+Dieser Code kann umgestaltet werden, um Dependency Injection zu verwenden und so die Abhängigkeit zu lockern. Hier injizieren wir die Abhängigkeit in einen Konstruktor und nutzen die [constructor property promotion][php-constructor-promotion], sodass sie als Eigenschaft in der gesamten Klasse verfügbar ist:
 
 {% highlight php %}
 <?php
@@ -45,8 +43,6 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class its dependency rather than creating it itself. We could even create a method
-that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we
-could set it directly.
+Jetzt geben wir der `Database`-Klasse ihre Abhängigkeit, anstatt sie selbst zu erstellen. Wir könnten sogar eine Methode erstellen, die ein Argument der dependency akzeptiert und es entsprechend festlegt. Wenn die `$adapter`-Eigenschaft `public` wäre, könnten wir sie direkt festlegen.
 
 [php-constructor-promotion]: https://www.php.net/manual/en/language.oop5.decon.php#language.oop5.decon.constructor.promotion
