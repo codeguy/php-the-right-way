@@ -1,4 +1,5 @@
 ---
+title:   Weitere Informationen
 isChild: true
 anchor:  further_reading
 ---
