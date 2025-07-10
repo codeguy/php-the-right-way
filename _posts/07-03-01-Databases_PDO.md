@@ -29,7 +29,7 @@ PDO übersetzt nicht Ihre SQL-Abfragen und emuliert auch keine fehlenden Funktio
 
 Noch wichtiger ist, dass Du mit `PDO` fremde Eingaben (z. B. IDs) sicher in Deine SQL-Abfragen einfügen kannst, ohne Dir über SQL-Injection-Angriffe auf die Datenbank Gedanken machen zu müssen. Dies ist mithilfe von PDO-Anweisungen und gebundenen Parametern möglich.
 
-Nehmen wir an, ein PHP-Skript erhält eine numerische ID als Abfrageparameter. Diese ID soll verwendet werden, um einen Benutzerdatensatz aus einer Datenbank abzurufen. Folgendermassen solle man es **nicht** machen:
+Nehmen wir an, ein PHP-Skript erhält eine numerische ID als Abfrageparameter. Diese ID soll verwendet werden, um einen Benutzerdatensatz aus einer Datenbank abzurufen. Folgendermaßen solle man es **nicht** machen:
 
 {% highlight php %}
 <?php
@@ -37,10 +37,12 @@ $pdo = new PDO('sqlite:/path/db/users.db');
 $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
-This is terrible code. You are inserting a raw query parameter into a SQL query. This will get you hacked in a
-heartbeat, using a practice called [SQL Injection]. Just imagine if a hacker passes in an inventive `id` parameter by
-calling a URL like `http://domain.com/?id=1%3BDELETE+FROM+users`. This will set the `$_GET['id']` variable to `1;DELETE
-FROM users` which will delete all of your users! Instead, you should sanitize the ID input using PDO bound parameters.
+Das ist schrecklicher Code. Sie fügen einen rohen Abfrage-Parameter in eine SQL-Abfrage ein.
+Das führt im Handumdrehen zu Hackerangriffen, die sich [SQL-Injection][SQL Injection] nennen.
+Stell Dir vor, ein Hacker übergibt einen erfinderischen `id` -Parameter, indem er eine URL wie `http://domain.com/?id=1%3BDELETE+FROM+users` aufruft.
+Dadurch wird die Variable `$_GET['id']` auf `1;DELETE
+FROM users` gesetzt, was alle Ihre Benutzer löscht!
+Du solltest stattdessen die ID-Eingabe mit PDO-gebundenen Parametern bereinigen.
 
 {% highlight php %}
 <?php
@@ -51,18 +53,18 @@ $stmt->bindParam(':id', $id, PDO::PARAM_INT); // <-- Automatically sanitized for
 $stmt->execute();
 {% endhighlight %}
 
-This is correct code. It uses a bound parameter on a PDO statement. This escapes the foreign input ID before it is
-introduced to the database preventing potential SQL injection attacks.
+Dies ist der korrekte Code. Er verwendet einen gebundenen Parameter in einer PDO-Anweisung.
+Dies verhindert den Eintrag der Fremdeingabe-ID in die Datenbank und schützt so vor potenziellen SQL-Injection-Angriffen.
 
-For writes, such as INSERT or UPDATE, it's especially critical to still [filter your data](#data_filtering) first and sanitize it for other things (removal of HTML tags, JavaScript, etc).  PDO will only sanitize it for SQL, not for your application.
+Bei Schreibvorgängen wie INSERT oder UPDATE ist es besonders wichtig, zunächst [die Daten  zu filtern](#data_filtering) und für andere Zwecke (z. B. Entfernung von HTML-Tags, JavaScript usw.) zu bereinigen.
+PDO bereinigt die Daten nur für SQL, nicht für Deine Anwendung.
 
 * [Learn about PDO][pdo]
 
-You should also be aware that database connections use up resources and it was not unheard-of to have resources
-exhausted if connections were not implicitly closed, however this was more common in other languages. Using PDO you can
-implicitly close the connection by destroying the object by ensuring all remaining references to it are deleted, i.e.
-set to NULL. If you don't do this explicitly, PHP will automatically close the connection when your script ends -
-unless of course you are using persistent connections.
+Beachte auch, dass Datenbankverbindungen Ressourcen verbrauchen. 
+Es kam schon vor, dass Ressourcen erschöpft waren, wenn Verbindungen nicht implizit geschlossen wurden. Dies war jedoch in anderen Sprachen häufiger der Fall.
+Mit PDO kannst Du die Verbindung implizit schließen, indem Du das Objekt destroyst und sicherstellst, dass alle verbleibenden Referenzen darauf gelöscht, d. h. auf NULL gesetzt werden. 
+Wenn Du das nicht explizit machst, schließt PHP die Verbindung automatisch, wenn Dein Skript endet – es sei denn, Du verwendest persistente Verbindungen.
 
 * [Learn about PDO connections]
 
