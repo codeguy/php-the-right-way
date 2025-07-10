@@ -1,10 +1,10 @@
 ---
 isChild: true
-title:   PDO Extension
+title:   PDO-Erweiterung
 anchor:  pdo_extension
 ---
 
-## PDO Extension {#pdo_extension_title}
+## PDO-Erweiterung {#pdo_extension_title}
 
 [PDO] ist eine Biblieothek zur abstrakten Datenbankverbindung, welche eine gemeinsame Schnittstelle für die Kommunikation mit vielen verschiedenen Datenbanken bietet und seit Version 5.1.0 bestandteil von PHP ist.
 Beispielsweise können Sie im Wesentlichen identischen Code für die Schnittstelle zu MySQL oder SQLite verwenden:
