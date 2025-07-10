@@ -9,31 +9,31 @@ Die meisten GNU/Linux-Distributionen enthalten PHP aus den offiziellen Repositor
 
 ### Ubuntu-basierte Distributionen
 
-Für Ubuntu und Debian-basierte GNU/Linux-Distributionen werden die besten Alternativen für native Pakete beispielsweise von [Ondřej Surý][Ondrej Sury Blog] bereitgestellt und gepflegt. Dies geschieht über sein Personal Package Archive (PPA) für Ubuntu und DPA/bikeshed für Debian. Anweisungen dazu finden Sie unten.
+Für Ubuntu und Debian-basierte GNU/Linux-Distributionen werden die besten Alternativen für native Pakete beispielsweise von [Ondřej Surý][Ondrej Sury Blog] bereitgestellt und gepflegt. Dies geschieht über sein Personal Package Archive (PPA) für Ubuntu und DPA/bikeshed für Debian. Anweisungen dazu findest Du weiter unten.
 
-Für Ubuntu-Distributionen bietet das [PPA von Ondřej Surý][Ondrej Sury PPA] unterstützte PHP-Versionen sowie zahlreiche PECL-Erweiterungen. Um dieses PPA zu Ihrem System hinzuzufügen, führen Sie die folgenden Schritte in Ihrem Terminal aus:
+Für Ubuntu-Distributionen bietet das [PPA von Ondřej Surý][Ondrej Sury PPA] unterstützte PHP-Versionen sowie zahlreiche PECL-Erweiterungen. Um dieses PPA zu Deinem System hinzuzufügen, führst Du folgende Schritte im Terminal aus:
 
-1. Fügen Sie zunächst das PPA mit dem folgenden Befehl zu den Softwarequellen Ihres Systems hinzu:
+1. Füge zunächst das PPA mit dem folgenden Befehl zu den Softwarequellen Deines Systems hinzu:
 
    ```bash
    sudo add-apt-repository ppa:ondrej/php
    ```
 
-2. Aktualisieren Sie nach dem Hinzufügen des PPA die Paketliste Ihres Systems:
+2. Aktualisier nach dem Hinzufügen des PPA die Paketliste Deines Systems:
 
    ```bash
    sudo apt update
    ```
 
-Dadurch wird sichergestellt, dass Ihr System auf die neuesten im PPA verfügbaren PHP-Pakete zugreifen und diese installieren kann.
+Dadurch wird sichergestellt, dass Dein System auf die neuesten im PPA verfügbaren PHP-Pakete zugreifen und diese installieren kann.
 
 ### Debian-basierte Distributionen
 
 Für Debian-basierte Distributionen stellt Ondřej Surý auch einen [bikeshed][bikeshed] (Debian-Äquivalent eines PPA) zur Verfügung. Um den Bikeshed Deinem System hinzuzufügen und zu aktualisieren, gehe wie folgt vor:
 
-1. Stelle sicher, dass Sie Root-Zugriff haben. Andernfalls müssen Sie möglicherweise `sudo` für die folgenden Befehle verwenden.
+1. Stelle sicher, dass Du Root-Zugriff hast. Andernfalls musst Du möglicherweise `sudo` für die folgenden Befehle verwenden.
 
-2. Aktualisiere die Paketliste Ihres Systems:
+2. Aktualisiere die Paketliste Deines Systems:
 
    ```bash
    sudo apt-get update
