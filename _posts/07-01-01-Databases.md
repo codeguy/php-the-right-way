@@ -5,14 +5,13 @@ anchor: databases
 
 # Datenbanken {#databases_title}
 
-Many times your PHP code will use a database to persist information. You have a few options to connect and interact
-with your database. The recommended option **until PHP 5.1.0** was to use native drivers such as [mysqli], [pgsql],
-[mssql], etc.
+Dein PHP-Code verwendet häufig eine Datenbank, um Informationen zu speichern.
+Du hast verschiedene Möglichkeiten, eine Verbindung zu Deiner Datenbank herzustellen und mit ihr zu interagieren.
+**Bis PHP 5.1.0** wurde die Verwendung nativer Treiber wie [mysqli], [pgsql], [mssql] usw. empfohlen.
 
-Native drivers are great if you are only using _one_ database in your application, but if, for example, you are using
-MySQL and a little bit of MSSQL, or you need to connect to an Oracle database, then you will not be able to use the
-same drivers. You'll need to learn a brand new API for each database &mdash; and that can get silly.
-
+Native Treiber sind ideal, wenn Du in ihrer Anwendung nur eine Datenbank verwendest.
+Wenn Du jedoch beispielsweise MySQL und ein wenig MSSQL verwendest oder eine Verbindung zu einer Oracle-Datenbank herstellen musst, kannst Du nicht dieselben Treiber verwenden.
+Du musst für jede Datenbank eine brandneue API erlernen – und das kann nervig sein.
 
 [mysqli]: https://www.php.net/mysqli
 [pgsql]: https://www.php.net/pgsql
