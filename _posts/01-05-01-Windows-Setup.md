@@ -6,7 +6,7 @@ anchor:  windows_setup
 ## Windows Setup {#windows_setup_title}
 
 Du kannst die Binärdateien von [windows.php.net/download][php-downloads] herunterladen.
-Nach der PHP-Extraktion empfiehlt es sich, den [PATH][windows-path] auf das Stammverzeichnis Ihres PHP-Ordners (wo sich php.exe befindet) zu setzen, damit Sie PHP von überall ausführen können.
+Nach der PHP-Extraktion empfiehlt es sich, den [PATH][windows-path] auf das Stammverzeichnis Deines PHP-Ordners (wo sich php.exe befindet) zu setzen, damit Du PHP von überall ausführen Kannst.
 
 Für Schulungen und die lokale Entwicklung Kannst Du den integrierten Webserver mit PHP 5.4+ nutzen, sodass Du Dich nicht um die Konfiguration kümmern musst.
 Wenn Du eine All-in-One-Lösung mit vollwertigem Webserver und MySQL wünschst, helfen Dir Tools wie  [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] und [WAMP][wamp], eine Windows-Entwicklungsumgebung schnell zum Laufen zu bringen. Allerdings unterscheiden sich diese Tools etwas von der Produktionsumgebung. Achte daher auf Umgebungsunterschiede, wenn Du unter Windows arbeitest und unter Linux deployst.
