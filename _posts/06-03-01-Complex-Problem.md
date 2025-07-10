@@ -1,4 +1,5 @@
 ---
+title:   Komplexes Problem
 isChild: true
 anchor:  complex_problem
 ---
