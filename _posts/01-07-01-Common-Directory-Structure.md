@@ -1,5 +1,5 @@
 ---
-title:   übliche Datei- und Verzeichnisstruktur
+title:   Gemeinsame Datei- und Verzeichnisstruktur
 isChild: true
 anchor:  common_directory_structure
 ---
