@@ -1,4 +1,5 @@
 ---
+title:   Grundkonzept
 isChild: true
 anchor:  basic_concept
 ---
