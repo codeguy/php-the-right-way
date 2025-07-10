@@ -9,9 +9,9 @@ Es ist wichtig, dass der PHP-Code (so nah wie möglich) einem gemeinsamen Codest
 
 Die [Framework Interop Group][fig] hat eine Reihe von Stilempfehlungen vorgeschlagen und verabschiedet. Nicht alle beziehen sich auf den Codestil, aber [PSR-1][psr1], [PSR-12][psr12], [PSR-4][psr4] and [PER Coding Style][per-cs] machen es.
 Diese Empfehlungen stellen lediglich eine Reihe von Regeln dar, die von vielen Projekten wie Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium usw. übernommen werden.
-Sie können diese Empfehlungen für Ihre eigenen Projekte verwenden oder Ihren persönlichen Stil beibehalten.
+Du kannst diese Empfehlungen für Deine eigenen Projekte verwenden oder Deinen persönlichen Stil beibehalten.
 
-Idealerweise schreiben Sie PHP-Code, der einem bekannten Standard entspricht. Dies kann eine beliebige Kombination von PSRs oder einer der Codierungsstandards von PEAR oder Zend sein.
+Idealerweise schreibst Du PHP-Code, der einem bekannten Standard entspricht. Dies kann eine beliebige Kombination von PSRs oder einer der Codierungsstandards von PEAR oder Zend sein.
 So können andere Entwickler Ihren Code problemlos lesen und bearbeiten, und Anwendungen, die die Komponenten implementieren, gewährleisten Konsistenz auch bei der Verwendung von viel Drittanbieter-Code.
 
 * [lies über PSR-1][psr1]
@@ -26,7 +26,7 @@ Du kannst [PHP_CodeSniffer][phpcs] verwenden, um Code anhand einer dieser Empfeh
 Du kannst das Code-Layout automatisch korrigieren, indem Du eines der folgenden Tools verwendest:
 
 - Einer davon ist der  [PHP Coding Standards Fixer][phpcsfixer], der über eine sehr gut getestete Codebasis verfügt.
-- Außerdem können Sie Ihren Code mit dem in PHP_CodeSniffer enthaltenen Tool [PHP Code Beautifier and Fixer][phpcbf] entsprechend anpassen.
+- Außerdem kannst Du Deinen Code mit dem in PHP-CodeSniffer enthaltenen Tool [PHP Code Beautifier and Fixer][phpcbf] entsprechend anpassen.
 - 
 Und Du kannst `phpcs` manuell von der Shell aus ausführen:
 
@@ -40,7 +40,7 @@ Wenn Du über PHP_CodeSniffer verfügst, kannst Du die von ihm gemeldeten Code-L
 
     phpcbf -w --standard=PSR1 file.php
 
-Alternativ können Sie den [PHP Coding Standards Fixer][phpcsfixer] verwenden.
+Alternativ kannst Du den [PHP Coding Standards Fixer][phpcsfixer] verwenden.
 Dieser zeigt Dir, welche Fehler die Codestruktur vor der Behebung aufwies.
 
     php-cs-fixer fix -v --rules=@PSR1 file.php
