@@ -6,9 +6,9 @@ anchor:  pdo_extension
 
 ## PDO Extension {#pdo_extension_title}
 
-[PDO] is a database connection abstraction library &mdash; built into PHP since 5.1.0 &mdash; that provides a common
-interface to talk with many different databases. For example, you can use basically identical code to interface with
-MySQL or SQLite:
+[PDO] ist eine Biblieothek zur abstrakten Datenbankverbindung, welche eine gemeinsame Schnittstelle für die Kommunikation mit vielen verschiedenen Datenbanken bietet und seit Version 5.1.0 bestandteil von PHP ist.
+Beispielsweise können Sie im Wesentlichen identischen Code für die Schnittstelle zu MySQL oder SQLite verwenden:
+
 
 {% highlight php %}
 <?php
@@ -25,15 +25,11 @@ $row = $statement->fetch(PDO::FETCH_ASSOC);
 echo htmlentities($row['some_field']);
 {% endhighlight %}
 
-PDO will not translate your SQL queries or emulate missing features; it is purely for connecting to multiple types of
-database with the same API.
+PDO übersetzt nicht Ihre SQL-Abfragen und emuliert auch keine fehlenden Funktionen. Es dient lediglich zur Verbindung mit verschiedenen Datenbanktypen mit derselben API.
 
-More importantly, `PDO` allows you to safely inject foreign input (e.g. IDs) into your SQL queries without worrying
-about database SQL injection attacks.
-This is possible using PDO statements and bound parameters.
+Noch wichtiger ist, dass Du mit `PDO` fremde Eingaben (z. B. IDs) sicher in Deine SQL-Abfragen einfügen kannst, ohne Dir über SQL-Injection-Angriffe auf die Datenbank Gedanken machen zu müssen. Dies ist mithilfe von PDO-Anweisungen und gebundenen Parametern möglich.
 
-Let's assume a PHP script receives a numeric ID as a query parameter. This ID should be used to fetch a user record
-from a database. This is the `wrong` way to do this:
+Nehmen wir an, ein PHP-Skript erhält eine numerische ID als Abfrageparameter. Diese ID soll verwendet werden, um einen Benutzerdatensatz aus einer Datenbank abzurufen. Folgendermassen solle man es **nicht** machen:
 
 {% highlight php %}
 <?php
