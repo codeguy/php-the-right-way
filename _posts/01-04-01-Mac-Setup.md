@@ -45,7 +45,7 @@ Und Du kannst den `select` Befehl ausführen, um Dein aktives PHP zu wechseln:
 
 ### Installier PHP mit phpbrew
 
-[phpbrew] ist ein Tool zur Installation und Verwaltung mehrerer PHP-Versionen. Dies ist besonders nützlich, wenn zwei verschiedene Anwendungen/Projekte unterschiedliche PHP-Versionen erfordern und Sie keine virtuellen Maschinen verwenden.
+[phpbrew] ist ein Tool zur Installation und Verwaltung mehrerer PHP-Versionen. Dies ist besonders nützlich, wenn zwei verschiedene Anwendungen/Projekte unterschiedliche PHP-Versionen erfordern und Du keine virtuellen Maschinen verwendest.
 
 ### Installiere PHP mit Liip's binary installer
 
