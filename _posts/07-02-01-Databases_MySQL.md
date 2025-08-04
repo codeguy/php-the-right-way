@@ -23,7 +23,7 @@ Generell sollte mysql **nicht mehr** verwendet werden.
 Dies ist nicht nur eine grobe Vereinfachung, sondern lässt auch die Vorteile von mysqli außer Acht, wie z. B. die Parameterbindung, welche auch in [PDO][pdo] verfügbar ist.**
 
 * [MySQLi Prepared Statements][mysqli_prepared_statements]
-* [PHP: Choosing an API for MySQL][mysql_api]
+* [PHP: Auswahl einer API für MySQL][mysql_api]
 
 [mysql]: https://www.php.net/mysqli
 [mysql_removed]: https://www.php.net/manual/migration70.removed-exts-sapis.php
