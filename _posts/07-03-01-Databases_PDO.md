@@ -6,7 +6,7 @@ anchor:  pdo_extension
 
 ## PDO-Erweiterung {#pdo_extension_title}
 
-[PDO] ist eine Biblieothek zur abstrakten Datenbankverbindung, welche eine gemeinsame Schnittstelle für die Kommunikation mit vielen verschiedenen Datenbanken bietet und seit Version 5.1.0 bestandteil von PHP ist.
+PHP Data Objects ([PDO]) ist eine Bibliothek zur abstrakten Datenbankverbindung, welche eine gemeinsame Schnittstelle für die Kommunikation mit vielen verschiedenen Datenbanken bietet und seit Version 5.1.0 bestandteil von PHP ist.
 Beispielsweise können Sie im Wesentlichen identischen Code für die Schnittstelle zu MySQL oder SQLite verwenden:
 
 
@@ -37,7 +37,7 @@ $pdo = new PDO('sqlite:/path/db/users.db');
 $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 {% endhighlight %}
 
-Das ist schrecklicher Code. Sie fügen einen rohen Abfrage-Parameter in eine SQL-Abfrage ein.
+Das ist schrecklicher Code. Du fügst einen rohen Abfrage-Parameter in eine SQL-Abfrage ein.
 Das führt im Handumdrehen zu Hackerangriffen, die sich [SQL-Injection][SQL Injection] nennen.
 Stell Dir vor, ein Hacker übergibt einen erfinderischen `id` -Parameter, indem er eine URL wie `http://domain.com/?id=1%3BDELETE+FROM+users` aufruft.
 Dadurch wird die Variable `$_GET['id']` auf `1;DELETE
@@ -59,14 +59,14 @@ Dies verhindert den Eintrag der Fremdeingabe-ID in die Datenbank und schützt so
 Bei Schreibvorgängen wie INSERT oder UPDATE ist es besonders wichtig, zunächst [die Daten  zu filtern](#data_filtering) und für andere Zwecke (z. B. Entfernung von HTML-Tags, JavaScript usw.) zu bereinigen.
 PDO bereinigt die Daten nur für SQL, nicht für Deine Anwendung.
 
-* [Learn about PDO][pdo]
+* [Mehr zu PDO][pdo]
 
 Beachte auch, dass Datenbankverbindungen Ressourcen verbrauchen. 
 Es kam schon vor, dass Ressourcen erschöpft waren, wenn Verbindungen nicht implizit geschlossen wurden. Dies war jedoch in anderen Sprachen häufiger der Fall.
 Mit PDO kannst Du die Verbindung implizit schließen, indem Du das Objekt destroyst und sicherstellst, dass alle verbleibenden Referenzen darauf gelöscht, d. h. auf NULL gesetzt werden. 
 Wenn Du das nicht explizit machst, schließt PHP die Verbindung automatisch, wenn Dein Skript endet – es sei denn, Du verwendest persistente Verbindungen.
 
-* [Learn about PDO connections]
+* [über PDO Verbindungen und Verbindungsmanagement][PDO connections]
 
 
 [pdo]: https://www.php.net/pdo
