@@ -66,7 +66,7 @@ Es kam schon vor, dass Ressourcen erschöpft waren, wenn Verbindungen nicht impl
 Mit PDO kannst Du die Verbindung implizit schließen, indem Du das Objekt destroyst und sicherstellst, dass alle verbleibenden Referenzen darauf gelöscht, d. h. auf NULL gesetzt werden. 
 Wenn Du das nicht explizit machst, schließt PHP die Verbindung automatisch, wenn Dein Skript endet – es sei denn, Du verwendest persistente Verbindungen.
 
-* [über PDO Verbindungen und Verbindungsmanagement][PDO connections]
+* [über PDO Verbindungen und Verbindungsmanagement][Learn about PDO connections]
 
 
 [pdo]: https://www.php.net/pdo
