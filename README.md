@@ -11,13 +11,13 @@ Dies ist das GitHub Repository für das Projekt „PHP - aber richtig“.
 
 ## Spread the Word!
 
-_PHP - aber richtig_ bietet Web-Banner, die Sie auf Ihrer Website verwenden können. Zeigen Sie Ihre Unterstützung und zeigen Sie neuen PHP-Entwicklern, wo sie wertvolle Informationen finden können!
+_PHP - aber richtig_ bietet Web-Banner, die Du auf Deiner Website verwenden kanst. Zeige Deine Unterstützung und zeige neuen PHP-Entwicklern, wo sie wertvolle Informationen finden können!
 
 [hier die Banner Images](https://www.phptherightway.com/banners.html)
 
 ## How to Contribute
 
-Sie sollten für genaue Anweisungen und Tipps die Datei `CONTRIBUTING.md` lesen. Falls Sie eine kurze Zusammenfassung bevorzugen:
+Du solltest für genaue Anweisungen und Tipps die Datei `CONTRIBUTING.md` lesen. Falls Du eine kurze Zusammenfassung bevorzugst:
 
 1. Forken und bearbeiten
 2. Optional [Ruby](https://rvm.io/rvm/install/) mit [Jekyll](https://github.com/mojombo/jekyll/) Gem installieren, um eine lokale Vorschau zu erhalten
@@ -25,9 +25,9 @@ Sie sollten für genaue Anweisungen und Tipps die Datei `CONTRIBUTING.md` lesen.
 
 ### Contributor Style Guide
 
-1. Verwenden Sie amerikanisches Englisch (*nur primäres englisches Repository*).
-2. Verwenden Sie vier (4) Leerzeichen zum Einrücken von Text; verwenden Sie keine Tabulatoren.
-3. Brechen Sie den gesamten Text auf 120 Zeichen um.
+1. Verwende amerikanisches Englisch (*nur primäres englisches Repository*).
+2. Verwende vier (4) Leerzeichen zum Einrücken von Text; verwenden Sie keine Tabulatoren.
+3. Breche den gesamten Text auf 120 Zeichen um.
 4. Codebeispiele sollten PSR-1 oder höher entsprechen.
 
 ## Wo
@@ -58,18 +58,18 @@ Sie sollten für genaue Anweisungen und Tipps die Datei `CONTRIBUTING.md` lesen.
 
 ### Übersetzungen
 
-Wenn Sie _PHP - aber richtig_ übersetzen möchten, forken Sie das original-Repository auf GitHub und veröffentlichen Sie Ihren lokalisierten Fork in Ihrem eigenen GitHub-Konto. Wir verlinken Ihre Übersetzung vom Originaldokument aus.
+Wenn Du _PHP - aber richtig_ übersetzen möchtest, forke das Original-Repository auf GitHub und veröffentliche Deinen lokalisierten Fork in Deinem eigenen GitHub-Konto. Wir verlinken Deine Übersetzung vom Originaldokument aus.
 
-Um Fragmentierung und Leserverwirrung zu vermeiden, wählen Sie bitte eine dieser Optionen:
+Um Fragmentierung und Leserverwirrung zu vermeiden, wähle bitte eine dieser Optionen:
 
 1. Wir verlinken Ihren GitHub Pages-Fork mit `[username].github.io/php-the-right-way`.
 2. Wir verlinken Ihren GitHub Pages-Fork mit einer Subdomain (z. B. "de.phptherightway.com“).
 
-Wenn Sie eine Subdomain verwenden, tragen Sie diese in die `CNAME`-Datei ein und bitten Sie uns, einen DNS für Sie einzurichten. Wenn Sie keine Subdomain verwenden, entfernen Sie die `CNAME`-Datei vollständig, da Ihr Fork sonst beim Pushen nicht erstellt wird.
+Wenn Du eine Subdomain verwendest, trage diese in die `CNAME`-Datei ein und bitte uns, einen DNS für Dich einzurichten. Wenn Du keine Subdomain verwendest, entferne die `CNAME`-Datei vollständig, da Dein Fork sonst beim Pushen nicht erstellt wird.
 
-Fügen Sie Informationen zu Ihrer Übersetzung auf der [Wiki-Seite](https://github.com/codeguy/php-the-right-way/wiki/Translations) hinzu.
+Füge Informationen zu Deine Übersetzung auf der [Wiki-Seite](https://github.com/codeguy/php-the-right-way/wiki/Translations) hinzu.
 
-Wenn Ihre Übersetzung fertig ist, öffnen Sie ein Thema im Issue Tracker, um uns dies mitzuteilen.
+Wenn Deine Übersetzung fertig ist, öffne ein Thema im Issue Tracker, um uns dies mitzuteilen.
 
 
 ## Warum
