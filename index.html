@@ -8,7 +8,7 @@ sitemap: true
     {{ welcome_content|markdownify }}
 </section>
 
-{% capture backtotop %}[Back to Top](#top){:.top}{% endcapture %}
+{% capture backtotop %}[zurück nach Oben](#top){:.top}{% endcapture %}
 {% for post in site.posts reversed %}
 {% if post.isChild != true and loop.first != true %}<div class="back-to-top">{{ backtotop|markdownify }}</div>{% endif %}
 <section class="chapter" id="{{ post.anchor }}">
