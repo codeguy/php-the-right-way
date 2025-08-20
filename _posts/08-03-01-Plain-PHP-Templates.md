@@ -1,24 +1,24 @@
 ---
-title: Plain PHP Templates
+title: Einfache PHP-Templates
 isChild: true
 anchor:  plain_php_templates
 ---
 
-## Plain PHP Templates {#plain_php_templates_title}
+## Einfache PHP-Templates {#plain_php_templates_title}
 
-Plain PHP templates are simply templates that use native PHP code. They are a natural choice since PHP is actually a
-template language itself. That simply means that you can combine PHP code within other code, like HTML. This is
-beneficial to PHP developers as there is no new syntax to learn, they know the functions available to them, and their
-code editors already have PHP syntax highlighting and auto-completion built-in. Further, plain PHP templates tend to be
-very fast as no compiling stage is required.
+Einfache PHP-Templates sind Vorlagen, die nativen PHP-Code verwenden. 
+Sie bieten sich an, da PHP selbst eine Template Sprache ist. Das bedeutet, dass Du PHP-Code in anderen Code, 
+beispielsweise HTML, integrieren kannst. Dies ist für PHP-Entwickler von Vorteil, 
+da sie keine neue Syntax erlernen müssen, die ihnen zur Verfügung stehenden Funktionen kennen
+und ihre Code-Editoren bereits über integrierte PHP-Syntaxhervorhebung und Autovervollständigung verfügen. 
+Außerdem sind einfache PHP-Templates in der Regel sehr schnell, da keine Kompilierungsphase erforderlich ist.
 
-Every modern PHP framework employs some kind of template system, most of which use plain PHP by default. Outside of
-frameworks, libraries like [Plates][plates] or [Aura.View][aura] make working with plain PHP templates easier by
-offering modern template functionality such as inheritance, layouts and extensions.
+Jedes moderne PHP-Framework verwendet ein Template-System, wobei die meisten standardmäßig reines PHP verwenden. 
+Außerhalb von Frameworks erleichtern Bibliotheken wie [Plates][plates] oder [Aura.View][aura] die Arbeit
+mit reinen PHP-Templates, indem sie moderne Template-Funktionen wie Vererbung, Layouts und Erweiterungen bieten.
 
-### Simple example of a plain PHP template
-
-Using the [Plates][plates] library.
+### Einfaches Beispiel eines einfachen PHP-Templates
+unter Verwendung der [Plates][plates] library:
 
 {% highlight php %}
 <?php // user_profile.php ?>
@@ -31,9 +31,8 @@ Using the [Plates][plates] library.
 <?php $this->insert('footer') ?>
 {% endhighlight %}
 
-### Example of plain PHP templates using inheritance
-
-Using the [Plates][plates] library.
+### Beispiel für einfaches PHP-Template mit Vererbung
+unter Verwendung der [Plates][plates] library:
 
 {% highlight php %}
 <?php // template.php ?>
