@@ -1,4 +1,5 @@
 ---
+title:   Vorteile
 isChild: true
 anchor:  templating_benefits
 ---
