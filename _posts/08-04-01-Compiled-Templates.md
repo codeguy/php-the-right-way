@@ -1,22 +1,24 @@
 ---
+title:   Kompilierte Templates
 isChild: true
 anchor:  compiled_templates
 ---
 
-## Compiled Templates {#compiled_templates_title}
+## Kompilierte Templates {#compiled_templates_title}
 
-While PHP has evolved into a mature, object oriented language, it [hasn't improved much][article_templating_engines] as
-a templating language. Compiled templates, like [Twig], [Brainy], or [Smarty]*, fill this void by offering a new syntax that has
-been geared specifically to templating. From automatic escaping, to inheritance and simplified control structures,
-compiled templates are designed to be easier to write, cleaner to read and safer to use. Compiled templates can even be
-shared across different languages, [Mustache] being a good example of this. Since these templates must be compiled
-there is a slight performance hit, however this is very minimal when proper caching is used.
+Obwohl sich PHP zu einer ausgereiften, objektorientierten Sprache entwickelte,
+hat es sich als Template-Sprache [kaum verbessert][article_templating_engines]. 
+Kompilierte Templates wie  [Twig], [Brainy], or [Smarty]* füllen diese Lücke mit einer neuen,
+speziell auf Template-Entwicklung ausgerichteten Syntax. 
+Von automatischem Escapen, über Vererbung bis hin zu vereinfachten Kontrollstrukturen sind kompilierte Templates einfacher zu schreiben, übersichtlicher zu lesen und sicherer in der Anwendung.
+Kompilierte Templates können sogar sprachübergreifend genutzt werden, wofür  [Mustache] ein gutes Beispiel ist.
+Da diese Templates kompiliert werden müssen, kommt es zu leichten Performance-Einbußen, die jedoch bei korrektem Caching minimal sind.
 
-**While Smarty offers automatic escaping, this feature is NOT enabled by default.*
+**Smarty bietet zwar automatisches Escapen, diese Funktion ist jedoch standardmäßig NICHT aktiviert.*
 
-### Simple example of a compiled template
+### Einfaches Beispiel eines kompilierten Templates
 
-Using the [Twig] library.
+unter Verwendung der [Twig] library.
 
 {% highlight html+jinja %}
 {% raw %}
@@ -29,9 +31,10 @@ Using the [Twig] library.
 {% endraw %}
 {% endhighlight %}
 
-### Example of compiled templates using inheritance
 
-Using the [Twig] library.
+### Beispiel eines kompilierten Templates mit Vererbung
+
+unter Verwendung der [Twig] library.
 
 {% highlight html+jinja %}
 {% raw %}
