@@ -1,15 +1,15 @@
 ---
 isChild: true
-title:   Interacting with Databases
+title:   Interaktion mit Datenbanken
 anchor:  databases_interacting
 ---
 
 _____________________________________________________________
 
-## Interacting with Databases {#databases_interacting_title}
+## Interaktion mit Datenbanken {#databases_interacting_title}
 
-When developers first start to learn PHP, they often end up mixing their database interaction up with their
-presentation logic, using code that might look like this:
+Wenn Entwickler anfangen, PHP zu lernen, vermischen sie häufig ihre Datenbankinteraktion mit ihrer 
+Präsentationslogik und verwenden Code, der beispielsweise so aussehen könnte:
 
 {% highlight php %}
 <ul>
@@ -21,13 +21,12 @@ foreach ($db->query('SELECT * FROM table') as $row) {
 </ul>
 {% endhighlight %}
 
-This is bad practice for all sorts of reasons, mainly that it's hard to debug, hard to test, hard to read and it is
-going to output a lot of fields if you don't put a limit on there.
+Dies ist aus vielerlei Gründen eine schlechte Vorgehensweise, vor allem, weil es schwierig zu debuggen, 
+zu testen und zu lesen ist und weil es zu einer Ausgabe vieler Felder kommt, wenn man hier keine Limits festlegt.
 
-While there are many other solutions to doing this - depending on if you prefer [OOP](/#object-oriented-programming) or
-[functional programming](/#functional-programming) - there must be some element of separation.
+Zwar gibt es hierfür viele andere Lösungen – je nachdem, ob Sie [OOP](/#object-oriented-programming) oder [funktionale Programmierung](/#functional-programming) bevorzugen –, doch muss es ein gewisses Element der Trennung geben.
 
-Consider the most basic step:
+Betrachte den grundlegendsten Schritt:
 
 {% highlight php %}
 <?php
@@ -41,11 +40,12 @@ foreach ($results as $row) {
 }
 {% endhighlight %}
 
-That is a good start. Put those two items in two different files and you've got some clean separation.
+Das ist ein guter Anfang. Speichere diese beiden Elemente in zwei verschiedene Dateien 
+und Du erhältst eine saubere Trennung.
 
-Create a class to place that method in and you have a "Model". Create a simple `.php` file to put the presentation
-logic in and you have a "View", which is very nearly [MVC] - a common OOP architecture for most
-[frameworks](/#frameworks).
+Erstelle eine Klasse, in die Du diese Methode einfügst, und Du hast ein „Modell“. Erstelle eine einfache 
+`.php`-Datei, in welche Du die Präsentationslogik einfügst, und Du erhälst eine „View (Ansicht)“, 
+die fast [MVC] entspricht – einer gängigen OOP-Architektur für die meisten [Frameworks](/#frameworks).
 
 **foo.php**
 
@@ -90,9 +90,9 @@ class FooModel
 <?php endforeach ?>
 {% endhighlight %}
 
-This is essentially the same as what most modern frameworks are doing, albeit a little more manual. You might not
-need to do all of that every time, but mixing together too much presentation logic and database interaction can be a
-real problem if you ever want to [unit-test](/#unit-testing) your application.
-
+Dies entspricht im Wesentlichen dem, was die meisten modernen Frameworks tun, wenn auch etwas manueller. 
+Du musst dies möglicherweise nicht jedes Mal tun, aber eine zu starke Vermischung von Präsentationslogik
+und Datenbankinteraktion kann ein echtes Problem darstellen, wenn Du Deine Anwendung [Unit-Tests](/#unit-testing)
+unterziehen möchtest.
 
 [MVC]: https://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
