@@ -11,7 +11,7 @@ Die [mysql]-Erweiterung für PHP ist unglaublich alt und wurde durch zwei andere
 - [mysqli]
 - [pdo]
 
-Die Entwicklung von [mysql] wurde nicht nur vor langer Zeit schon eingestellt, sondern **[wurde in PHP 7.0 auch offiziell entfernt][mysql_removed]**.
+Die Entwicklung von [mysql] wurde nicht nur schon vor langer Zeit eingestellt, sondern es **[wurde in PHP 7.0 auch offiziell entfernt][mysql_removed]**.
 
 Um nicht in den `php.ini`-Einstellungen nach dem verwendeten Modul suchen zu müssen, können Sie in Ihrem bevorzugten Editor nach `mysql_*` suchen. Wenn Funktionen wie `mysql_connect()` und `mysql_query()` angezeigt werden, wird `mysql` verwendet.
 
