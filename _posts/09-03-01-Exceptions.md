@@ -4,7 +4,7 @@ isChild: true
 anchor:  exceptions
 ---
 
-## Exceptions (Ausnahmen){#exceptions_title}
+## Exceptions (Ausnahmen) {#exceptions_title}
 
 Ausnahmen sind ein Standardbestandteil der meisten gängigen Programmiersprachen, werden von PHP-Programmierern jedoch oft übersehen. 
 Sprachen wie Ruby enthalten extrem viele Ausnahmen. Wenn also etwas schiefgeht, z. B. eine fehlgeschlagene HTTP-Anfrage, eine fehlerhafte DB-Abfrage oder sogar ein nicht gefundenes Bild-Asset, wird von Ruby (oder den verwendeten [Gem]s) eine Ausnahme auf dem Bildschirm ausgegeben, sodass Sie sofort wissen, dass ein Fehler vorliegt.
