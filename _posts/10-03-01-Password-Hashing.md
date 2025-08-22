@@ -31,14 +31,14 @@ Darüber hinaus solltest Du einen [speziellen Passwort-Hashing-Algorithmus][6] a
 
 Glücklicherweise ist dies heutzutage mit PHP einfach.
 
-**Hashing passwords with `password_hash`**
+**Hashing von Paswprtern mit `password_hash`**
 
-In PHP 5.5 `password_hash()` was introduced. At this time it is using BCrypt, the strongest algorithm currently
-supported by PHP. It will be updated in the future to support more algorithms as needed though. The `password_compat`
-library was created to provide forward compatibility for PHP >= 5.3.7.
+`password_hash()` wurde mit PHP 5.5 eingeführt. 
+Derzeit verwendet es BCrypt, den derzeit stärksten von PHP unterstützten Algorithmus.
+Es wird jedoch in Zukunft aktualisiert, um bei Bedarf weitere Algorithmen zu unterstützen. 
+Die `password_compat`-Bibliothek wurde erstellt, um die Vorwärtskompatibilität für PHP >= 5.3.7 zu gewährleisten.
 
-Below we hash a string, and then check the hash against a new string. Because our two source strings are different
-('secret-password' vs. 'bad-password') this login will fail.
+Im Folgenden hashen wir eine Zeichenfolge und vergleichen den Hash dann mit einer neuen Zeichenfolge. Da unsere beiden Quellzeichenfolgen unterschiedlich sind ('secret-password' vs. 'bad-password'), schlägt diese Anmeldung fehl.
 
 {% highlight php %}
 <?php
@@ -53,12 +53,12 @@ if (password_verify('bad-password', $passwordHash)) {
 }
 {% endhighlight %}
 
-`password_hash()` takes care of password salting for you. The salt is stored, along with the algorithm and "cost", as part of the hash.  `password_verify()` extracts this to determine how to check the password, so you don't need a separate database field to store your salts.
+`password_hash()` nimmt Dir das Salting des Passworts ab. Das Salt wird zusammen mit dem Algorithmus und den "Kosten" als Teil des Hashs gespeichert. `password_verify()` extrahiert dies, um zu bestimmen, wie das Passwort überprüft werden soll, sodass Sie kein separates Datenbankfeld zum Speichern der Salts benötigt wird.
 
-* [Learn about `password_hash()`] [1]
+* [Mehr über `password_hash()`] [1]
 * [`password_compat` for PHP >= 5.3.7 && < 5.5] [2]
-* [Learn about hashing in regards to cryptography] [3]
-* [Learn about salts] [5]
+* [Lerne über Hashing im Zusammenhang mit Kryptografie] [3]
+* Erfahre mehr über _salts_] [5]
 * [PHP `password_hash()` RFC] [4]
 
 
