@@ -60,7 +60,7 @@ Verwende ein sicheres, standardmäßiges Datenaustauschformat wie JSON (via [`js
 Durch die Validierung wird sichergestellt, dass die Eingabe Deinen Erwartungen entspricht.
 Beispielsweise solltest Du bei eine E-Mail-Adresse, eine Telefonnummer oder das Alter validieren, wenn Du eine Benutzer-Registrierung verarbeitest.
 
-[Siehe Validation Filters][3]
+[Siehe: Validation Filters][3]
 
 
 [1]: https://www.php.net/book.filter
