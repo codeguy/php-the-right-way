@@ -5,34 +5,31 @@ anchor:  password_hashing
 
 ## Password Hashing {#password_hashing_title}
 
-Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a
-database and later used to authenticate users upon login.
+Irgendwann erstellt jeder eine PHP-Anwendung, die auf Benutzeranmeldung basiert. Benutzernamen und Passwörter werden in einer Datenbank gespeichert und später zur Authentifizierung der Benutzer bei der Anmeldung verwendet.
 
-It is important that you properly [_hash_][3] passwords before storing them. Hashing and encrypting are [two very different things][7]
-that often get confused.
+Es ist wichtig, dass wir Passwörter vor dem Speichern ordnungsgemäß [_hashen_][3]. Hashing und Verschlüsselung sind [zwei sehr unterschiedliche Dinge][7], die oft verwechselt werden.
 
-Hashing is an irreversible, one-way function. This produces a fixed-length string that cannot be feasibly reversed.
-This means you can compare a hash against another to determine if they both came from the same source string, but you
-cannot determine the original string. If passwords are not hashed and your database is accessed by an unauthorized
-third-party, all user accounts are now compromised.
+Hashing ist eine unumkehrbare Einwegfunktion. 
+Es entsteht eine Zeichenfolge mit fester Länge, die nicht rückgängig gemacht werden kann. 
+Du kannst also einen Hash mit einem anderen vergleichen, um festzustellen, ob beide aus derselben Quellzeichenfolge stammen, aber Du kannst die ursprüngliche Zeichenfolge _nicht wieder ermitteln_.
+Wenn Passwörter nicht gehasht werden und ein unbefugter Dritter auf Deine Datenbank Zugriff erlangt, sind alle Benutzerkonten kompromittiert!
 
-Unlike hashing, encryption is reversible (provided you have the key). Encryption is useful in other areas, but is a poor
-strategy for securely storing passwords.
+Im Gegensatz zum Hashing ist die Verschlüsselung umkehrbar (vorausgesetzt, Du verfügen über den Schlüssel). 
+Verschlüsselung ist in anderen Bereichen nützlich, stellt jedoch keine gute Strategie für die sichere Speicherung von Passwörtern dar.
 
-Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of "rainbow tables" (a reverse list of cryptographic hashes for common passwords.)
+Passwörter sollten außerdem individuell  [_salted (gesalzen werden)_][5], indem jedem Passwort vor dem Hashing eine zufällige Zeichenfolge hinzugefügt wird.
+Dies verhindert Wörterbuchangriffe und die Verwendung von "Rainbow Tables" (eine umgekehrte Liste kryptografischer Hashes für gängige Passwörter).
 
-Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor.
+Hashing und Salting sind von entscheidender Bedeutung, da Benutzer häufig dasselbe Passwort für mehrere Dienste verwenden und die Passwortqualität schlecht sein kann.
 
-Additionally, you should use [a specialized _password hashing_ algorithm][6] rather than fast, general-purpose
-cryptographic hash function (e.g. SHA256). The short list of acceptable password hashing algorithms (as of June 2018)
-to use are:
+Darüber hinaus solltest Du einen [speziellen Passwort-Hashing-Algorithmus][6] anstelle einer schnellen, universellen kryptografischen Hash-Funktion (z. B. SHA256) verwenden. Die kurze Liste der zulässigen Passwort-Hashing-Algorithmen (Stand: Juni 2018) lautet:
 
 * Argon2 (available in PHP 7.2 and newer)
 * Scrypt
 * **Bcrypt** (PHP provides this one for you; see below)
 * PBKDF2 with HMAC-SHA256 or HMAC-SHA512
 
-Fortunately, nowadays PHP makes this easy.
+Glücklicherweise ist dies heutzutage mit PHP einfach.
 
 **Hashing passwords with `password_hash`**
 
