@@ -1,15 +1,16 @@
 ---
+title:   PHP-Konferenzen
 isChild: true
 anchor:  conferences
 ---
 
-## PHP Conferences {#conferences_title}
+## PHP-Konferenzen {#conferences_title}
 
-The PHP community also hosts larger regional and national conferences in many countries around the world. Well-known
-members of the PHP community usually speak at these larger events, so it's a great opportunity to learn directly from
-industry leaders.
+Die PHP-Community veranstaltet außerdem größere regionale und nationale Konferenzen in vielen Ländern weltweit. 
+Bei diesen größeren Veranstaltungen sprechen in der Regel bekannte Mitglieder der PHP-Community. 
+Dies ist eine großartige Gelegenheit, direkt von Branchenführern zu lernen.
 
-[Find a PHP Conference][php-conf]
+[Finde eine PHP-Konference][php-conf]
 
 
 [php-conf]: https://www.php.net/conferences/index.php
