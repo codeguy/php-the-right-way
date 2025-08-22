@@ -1,6 +1,6 @@
 ---
 anchor: documenting
-title:  Documenting your Code
+title:  Dokumentieren Deines Codes
 ---
 
-# Documenting your Code {#documenting_title}
+# Dokumentieren Deines Codes {#documenting_title}
