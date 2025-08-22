@@ -1,35 +1,37 @@
 ---
+title:   Sicherheit von Webanwendungen
 isChild: true
 anchor:  web_application_security
 ---
 
-## Web Application Security {#web_application_security_title}
+## Sicherheit von Webanwendungen {#web_application_security_title}
 
-It is very important for every PHP developer to learn [the basics of web application security][4], which can be broken
-down into a handful of broad topics:
+Für jeden PHP-Entwickler ist es sehr wichtig , die [Grundlagen der Sicherheit von Webanwendungen][4] zu erlernen, die sich in eine Handvoll allgemeiner Themen unterteilen lassen:
 
-1. Code-data separation.
-   * When data is executed as code, you get SQL Injection, Cross-Site Scripting, Local/Remote File Inclusion, etc.
-   * When code is printed as data, you get information leaks (source code disclosure or, in the case of C programs,
-     enough information to bypass [ASLR][5]).
-2. Application logic.
-   * Missing authentication or authorization controls.
-   * Input validation.
-3. Operating environment.
-   * PHP versions.
-   * Third party libraries.
-   * The operating system.
-4. Cryptography weaknesses.
-   * [Weak random numbers][6].
-   * [Chosen-ciphertext attacks][7].
-   * [Side-channel information leaks][8].
+Code-Daten-Trennung.
+Wenn Daten als Code ausgeführt werden, kommt es zu SQL-Injection, Cross-Site-Scripting, lokaler/Remote-Dateieinbindung usw.
+Wenn Code als Daten gedruckt wird, kommt es zu Informationslecks (Offenlegung des Quellcodes oder im Fall von C-Programmen genügend Informationen, um ASLR zu umgehen ).
 
-There are bad people ready and willing to exploit your web application. It is important that you take necessary
-precautions to harden your web application's security. Luckily, the fine folks at
-[The Open Web Application Security Project][1] (OWASP) have compiled a comprehensive list of known security issues and
-methods to protect yourself against them. This is a must read for the security-conscious developer. [Survive The Deep End: PHP Security][3] by Padraic Brady is also another good web application security guide for PHP.
+1. Code-data separation. (Trennung von Quellcode und Daten)
+   * Wenn Daten als Code ausgeführt werden, kommt es zu SQL-Injection, Cross-Site-Scripting, lokaler/Remote-Dateieinbindung usw.
+   * Wenn Code als Daten angezeigt wird, kommt es zu Informationslecks (Offenlegung des Quellcodes oder im Fall von C-Programmen genügend Informationen, um [ASLR][5] zu umgehen).
+3. Anwendungslogik.
+   * Fehlende Authentifizierungs- oder Autorisierungskontrollen.
+   * Eingabevalidierung.
+4. Operating environment. (Betriebsumgebung)
+   * PHP-Versionen.
+   * Bibliotheken von Drittanbietern. (Third party libraries)
+   * Das Betriebssystem.
+5. Schwächen der Kryptografie. (Cryptography weaknesses)
+   * [Schwache Zufallszahlen (Weak random numbers)][6].
+   * [Angriffe mit asugewähltem Chiffretext (Chosen-ciphertext attacks)][7].
+   * [Informationslecks über Seitenkanäle (Side-channel information leaks)][8].
 
-* [Read the OWASP Security Guide][2]
+Es gibt Kriminelle, die Deine Webanwendung ausnutzen wollen. Treffe daher unbedingt die notwendigen Vorkehrungen, 
+um die Sicherheit Deiner Webanwendung zu erhöhen. Glücklicherweise haben die Experten von [The Open Web Application Security Project][1]  eine umfassende Liste bekannter Sicherheitsprobleme und Schutzmaßnahmen zusammengestellt.
+Diese Lektüre ist Pflichtlektüre für sicherheitsbewusste Entwickler. [Survive The Deep End: PHP Security][3] von Padraic Brady ist ein weiterer guter Leitfaden zur Sicherheit von Webanwendungen für PHP.
+
+* [Lese den OWASP-Sicherheitsleitfaden][2]
 
 
 [1]: https://www.owasp.org/
