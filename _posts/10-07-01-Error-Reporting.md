@@ -1,18 +1,18 @@
 ---
+title:   Error Reporting (Fehler-Reporting)
 isChild: true
 anchor:  error_reporting
 ---
 
-## Error Reporting {#error_reporting_title}
+## Error Reporting (Fehler-Reporting) {#error_reporting_title}
 
-Error logging can be useful in finding the problem spots in your application, but it can also expose information about
-the structure of your application to the outside world. To effectively protect your application from issues that could
-be caused by the output of these messages, you need to configure your server differently in development versus
-production (live).
+Die Fehlerprotokollierung kann hilfreich sein, um Problemstellen in Deiner Anwendung zu finden,
+kann aber auch Informationen über die Struktur Deiner Anwendung nach außen offen legen.
+Um Deine Anwendung effektiv vor Problemen zu schützen, welche durch die Ausgabe dieser Meldungen verursacht werden könnten, musst Du Deinen Server in der Entwicklung (dev) anders konfigurieren als in der Produktion (live).
 
-### Development
+### Development (Entwicklung)
 
-To show every possible error during **development**, configure the following settings in your `php.ini`:
+Um alle möglichen Fehler während der Entwicklung anzuzeigen, konfiguriere die folgenden Einstellungen in Deiner `php.ini`:
 
 {% highlight ini %}
 display_errors = On
@@ -20,6 +20,9 @@ display_startup_errors = On
 error_reporting = -1
 log_errors = On
 {% endhighlight %}
+
+> Die Übergabe des Wertes `-1` zeigt alle möglichen Fehler an, auch wenn in zukünftigen PHP-Versionen neue Ebenen und Konstanten hinzugefügt werden. Die `E_ALL`-Konstante verhält sich ab PHP 5.4 genau so.
+> [php.net](https://www.php.net/function.error-reporting)
 
 > Passing in the value `-1` will show every possible error, even when new levels and constants are added in future PHP
 > versions. The `E_ALL` constant also behaves this way as of PHP 5.4. -
