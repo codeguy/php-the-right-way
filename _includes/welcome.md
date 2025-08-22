@@ -19,6 +19,7 @@ Das Original, _PHP the right way_ wurde in viele Sprachen übersetzt:
 
 * [English](https://www.phptherightway.com)
 * [Español](https://phpdevenezuela.github.io/php-the-right-way)
+* [Deutsch](https://skipper-henrik.github.io/php-the-right-way/)
 * [Français](https://eilgin.github.io/php-the-right-way/)
 * [Indonesia](https://id.phptherightway.com)
 * [Italiano](https://it.phptherightway.com)
