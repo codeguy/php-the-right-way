@@ -6,6 +6,8 @@ anchor:  php_paas_providers
 
 ## PHP PaaS Providers {#php_paas_providers_title}
 
+_PaaS: Platform as a Service_
+
 * [Amezmo](https://www.amezmo.com)
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
 * [Bref Cloud](https://bref.sh/cloud)
