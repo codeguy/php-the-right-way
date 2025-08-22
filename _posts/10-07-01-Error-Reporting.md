@@ -21,26 +21,20 @@ error_reporting = -1
 log_errors = On
 {% endhighlight %}
 
-> Die Übergabe des Wertes `-1` zeigt alle möglichen Fehler an, auch wenn in zukünftigen PHP-Versionen neue Ebenen und Konstanten hinzugefügt werden. Die `E_ALL`-Konstante verhält sich ab PHP 5.4 genau so.
+> Die Übergabe des Wertes `-1` zeigt alle möglichen Fehler an, auch wenn in zukünftigen PHP-Versionen neue Ebenen und Konstanten hinzugefügt werden. Die `E_ALL`-Konstante verhält sich ab PHP 5.4 genau so. -
 > [php.net](https://www.php.net/function.error-reporting)
 
-> Passing in the value `-1` will show every possible error, even when new levels and constants are added in future PHP
-> versions. The `E_ALL` constant also behaves this way as of PHP 5.4. -
-> [php.net](https://www.php.net/function.error-reporting)
+Die `E_STRICT` Fehlerstufenkonstante (error level constant) wurde in PHP 5.3.0 eingeführt und ist nicht Teil von  `E_ALL`. Wurde jedoch in 5.4.0 Teil von `E_ALL`. Was bedeutet das? In Bezug auf die Meldung aller möglichen Fehler in Version 5.3 bedeutet dies, dass Du entweder `-1` oder  `E_ALL | E_STRICT` verwenden musst.
 
-The `E_STRICT` error level constant was introduced in 5.3.0 and is not part of `E_ALL`, however it became part of
-`E_ALL` in 5.4.0. What does this mean? In terms of reporting every possible error in version 5.3 it means you must
-use either `-1` or `E_ALL | E_STRICT`.
+**Melden aller möglichen Fehler, je nach PHP-Version**
 
-**Reporting every possible error by PHP version**
+* &lt; 5.3: `-1` oder `E_ALL`
+* &nbsp; 5.3: `-1` oder `E_ALL | E_STRICT`
+* &gt; 5.3: `-1` oder `E_ALL`
 
-* &lt; 5.3 `-1` or `E_ALL`
-* &nbsp; 5.3 `-1` or `E_ALL | E_STRICT`
-* &gt; 5.3 `-1` or `E_ALL`
+### Production (Produktion)
 
-### Production
-
-To hide errors on your **production** environment, configure your `php.ini` as:
+Um Fehler in Deiner Produktionsumgebung zu verbergen, konfiguriere Deine `php.ini` wie folgt:
 
 {% highlight ini %}
 display_errors = Off
@@ -49,8 +43,8 @@ error_reporting = E_ALL
 log_errors = On
 {% endhighlight %}
 
-With these settings in production, errors will still be logged to the error logs for the web server, but will not be
-shown to the user. For more information on these settings, see the PHP manual:
+Mit diesen Einstellungen werden Fehler in der Produktion weiterhin in den Fehlerprotokollen des Webservers protokolliert, dem Benutzer jedoch nicht angezeigt.
+Weitere Informationen zu diesen Einstellungen findest Du im PHP-Handbuch:
 
 * [error_reporting](https://www.php.net/errorfunc.configuration#ini.error-reporting)
 * [display_errors](https://www.php.net/errorfunc.configuration#ini.display-errors)
