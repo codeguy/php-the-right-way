@@ -27,7 +27,7 @@ Neue anonyme Funktionen (mit Unterstützung für Closures) sind seit PHP 5.3 (20
 PHP 5.4 hat die Möglichkeit hinzugefügt, Closures an den Gültigkeitsbereich eines Objekts zu binden und hat außerdem die Unterstützung für aufrufbare Funktionen verbessert, sodass diese in fast allen Fällen austauschbar mit anonymen Funktionen verwendet werden können.
 
 
-* Lesen Sie weiter zum Thema [Functional Programming in PHP](/pages/Functional-Programming.html)
+* Lies weiter zum Thema [Funktionale Programmierung in PHP](pages/Functional-Programming.html)
 * [mehr über anonyme Funktionen][anonymous-functions]
 * [mehr über the Closure class][closure-class]
 * [Weitere Details in der Closures RFC][closures-rfc]
