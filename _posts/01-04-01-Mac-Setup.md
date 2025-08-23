@@ -28,7 +28,7 @@ brew unlink php
 brew link --overwrite php@8.3
 ```
 
-### Installier PHP mit Macports
+### Installiere PHP mit Macports
 
 Das [MacPorts]-Projekt ist eine Open-Source-Community-Initiative zur Entwicklung eines benutzerfreundlichen Systems zum Kompilieren, Installieren und Aktualisieren von Open-Source-Software auf Befehlszeilen-, X11- oder Aqua-Basis auf dem macOS-Betriebssystem.
 
@@ -43,7 +43,7 @@ Und Du kannst den `select` Befehl ausführen, um Dein aktives PHP zu wechseln:
 
     sudo port select --set php php83
 
-### Installier PHP mit phpbrew
+### Installiere PHP mit phpbrew
 
 [phpbrew] ist ein Tool zur Installation und Verwaltung mehrerer PHP-Versionen. Dies ist besonders nützlich, wenn zwei verschiedene Anwendungen/Projekte unterschiedliche PHP-Versionen erfordern und Du keine virtuellen Maschinen verwendest.
 
