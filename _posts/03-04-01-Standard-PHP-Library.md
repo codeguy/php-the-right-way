@@ -4,9 +4,9 @@ isChild: true
 anchor:  standard_php_library
 ---
 
-## Standard-PHP-Library {#standard_php_library_title}
+## Standard-PHP-Library (SPL) {#standard_php_library_title}
 
-Die Standard-PHP-Library (SPL) ist im Lieferumfang von PHP enthalten und bietet eine Sammlung von Klassen und Schnittstellen. Sie besteht hauptsächlich aus häufig benötigten Datenstrukturklassen (Stack, Queue, Heap usw.) und Iteratoren, die diese Datenstrukturen durchlaufen können, oder Ihren eigenen Klassen, die SPL-Schnittstellen implementieren.
+Die SPL ist im Lieferumfang von PHP enthalten und bietet eine Sammlung von Klassen und Schnittstellen. Sie besteht hauptsächlich aus häufig benötigten Datenstrukturklassen (Stack, Queue, Heap usw.) und Iteratoren, die diese Datenstrukturen durchlaufen können, oder Ihren eigenen Klassen, die SPL-Schnittstellen implementieren.
 
 * [über die the SPL][spl]
 * [SPL Video-Kourse on LinkedIn.com (paid)][linkedin]
