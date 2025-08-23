@@ -1,23 +1,24 @@
 ---
 isChild: true
 anchor:  components
+title:   Komponenten
 ---
 
-## Components {#components_title}
+## Komponenten {#components_title}
 
-As mentioned above "Components" are another approach to the common goal of creating, distributing and implementing
-shared code. Various component repositories exist, the main two of which are:
+Wie bereits erwähnt, sind "Komponenten" ein weiterer Ansatz für das Ziel, gemeinsamen Code zu erstellen, zu verteilen und zu implementieren. 
+Es gibt verschiedene Komponenten-Repositories, die beiden wichtigsten sind:
 
 * [Packagist]
 * [PEAR]
 
-Both of these repositories have command line tools associated with them to help the installation and upgrade processes,
-and have been explained in more detail in the [Dependency Management] section.
+Beide Repositories haben Befehlszeilentools, um die Installations- und Upgradeprozesse zu unterstützen.
+Diese werden im Abschnitt [Dependency Management]  ausführlicher erläutert .
 
-There are also component-based frameworks and component-vendors that offer no framework at all. These projects provide
-another source of packages which ideally have little to no dependencies on other packages, or specific frameworks.
+Es gibt auch komponentenbasierte Frameworks und Komponentenanbieter, die überhaupt kein Framework anbieten.
+Diese Projekte bieten eine weitere Quelle für Pakete, die im Idealfall wenig bis keine Abhängigkeiten von anderen Paketen oder bestimmten Frameworks aufweisen.
 
-For example, you can use the [FuelPHP Validation package], without needing to use the FuelPHP framework itself.
+Du kannst beispielsweise das [FuelPHP Validation package] verwenden, ohne das FuelPHP-Framework selbst verwenden zu müssen.
 
 * [Aura]
 * CakePHP Components
@@ -36,9 +37,7 @@ For example, you can use the [FuelPHP Validation package], without needing to us
     * [Eloquent ORM]
     * [Queue]
 
-_Laravel's [Illuminate components] will become better decoupled from the Laravel framework. For now, only the
-components best decoupled from the Laravel framework are listed above._
-
+_Die [Illuminate-Komponenten][Illuminate components] von Laravel werden weiter vom Laravel-Framework entkoppelt werden. Derzeit sind oben nur die Komponenten aufgelistet, die am besten vom Laravel-Framework entkoppelt sind._
 
 [Packagist]: /#composer_and_packagist
 [PEAR]: /#pear
