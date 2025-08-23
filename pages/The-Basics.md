@@ -249,7 +249,7 @@ EOD;                        // closing 'EOD' must be on its own line, and to the
 
 * [Nowdoc-Syntax](https://www.php.net/language.types.string#language.types.string.syntax.nowdoc)
 
-#### Heredoc-Hyntax
+#### Heredoc-Syntax
 
 Die Heredoc-Syntax verhält sich intern genauso wie doppelte Anführungszeichen, ist jedoch darüber hinaus für die Verwendung mehrzeiliger Zeichenfolgen geeignet, ohne dasss Verkettung notwendig wäre.
 
