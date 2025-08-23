@@ -3,13 +3,14 @@ isChild: true
 anchor:  command_line_interface
 ---
 
-## Command Line Interface {#command_line_interface_title}
+## Command Line Interface (CLI) {#command_line_interface_title}
 
-PHP wurde zum Schreiben von Webanwendungen entwickelt, eignet sich aber auch zum Skripting von Befehlszeilenschnittstellenprogrammen / command line interface (CLI) programs. PHP-CLI-Programme können helfen,  gängige Aufgaben wie Tests, Bereitstellung und Anwendungsadministration zu automatisieren.
+PHP wurde zum Schreiben von Webanwendungen entwickelt, eignet sich aber auch zum Skripting von CLI-Programmen.
+PHP-CLI-Programme können helfen, gängige Aufgaben wie Tests, Bereitstellung und Anwendungsadministration zu automatisieren.
 
 PHP-CLI-Programme sind leistungsstark, da Du den Code Deiner App direkt verwenden kannst, ohne dafür eine Web-GUI erstellen und sichern zu müssen. Achte jedoch darauf, Deine PHP-CLI-Skripte **niemals** in Deinem public web root zu platzieren!
 
-Versuchen Sie, PHP über Ihre Befehlszeile auszuführen:
+Versuche PHP über Ihre Befehlszeile auszuführen:
 
 {% highlight console %}
 > php -i
