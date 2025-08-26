@@ -3,20 +3,19 @@ isChild: true
 anchor:  complementary_testing_tools
 ---
 
-## Complementary Testing Tools {#complementary_testing_tools_title}
+## Complementary Testing Tools (Ergänzende Testtools) {#complementary_testing_tools_title}
 
-Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper
-libraries useful for any preferred approach taken.
+Neben individuellen Test- und verhaltensgesteuerten Frameworks gibt es auch eine Reihe generischer Frameworks
+und Hilfsbibliotheken, die für jeden bevorzugten Ansatz nützlich sind..
 
 ### Tool Links
 
-* [Selenium] is a browser automation tool which can be [integrated with PHPUnit]
-* [Mockery] is a Mock Object Framework which can be integrated with [PHPUnit] or [PHPSpec]
-* [Prophecy] is a highly opinionated yet very powerful and flexible PHP object mocking framework. It's integrated with
-[PHPSpec] and can be used with [PHPUnit].
+* [Selenium] ist ein Browser-Automatisierungstool, das in [PHPUnit integriert][integrated with PHPUnit] werden kann.
+* [Mockery] ist ein Mock Object Framework, das in [PHPUnit] or [PHPSpec] integriert werden kann.
+* [Prophecy] ist ein sehr eigenwilliges, aber dennoch sehr leistungsfähiges und flexibles PHP-Framework zum Objekt-Mocking. Es ist in [PHPSpec] integriert und kann mit [PHPUnit] verwendet werden.
 * [php-mock] is a library to help to mock PHP native functions.
-* [Infection] is a PHP implementation of [Mutation Testing] to help to measure the effectiveness of your tests.
-* [PHPUnit Polyfills] is a library that allows for creating PHPUnit cross-version compatible tests when a test suite needs to run against a range of PHPUnit versions.
+* [Infection] ist eine PHP-Implementierung von [Mutation Testing] welche Dir dabei hilft, die Effektivität Deiner Tests zu messen.
+* [PHPUnit Polyfills] ist eine Bibliothek, die das Erstellen von versionsübergreifenden PHPUnit  kompatiblen Tests ermöglicht, wenn eine Testsuite mit einer Reihe von PHPUnit-Versionen ausgeführt werden muss.
 
 
 [Selenium]: https://www.selenium.dev/
