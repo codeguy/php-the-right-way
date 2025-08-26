@@ -40,7 +40,7 @@ Das Original, _PHP the right way_ wurde in viele Sprachen übersetzt:
 * [简体中文](https://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](https://laravel-taiwan.github.io/php-the-right-way)
 
-Diese Übersetzung ins Deutsche wurde mit Hilfe _translate.google.com_ von [Henrik Pantle](http://henrik-pantle.de) aka [skipper-henrik](https://github.com/skipper-henrik/) besorgt.
+Diese Übersetzung ins Deutsche wurde mit Hilfe _translate.google.com_ von [Henrik Pantle](http://henrik-pantle.de) aka [skipper-henrik](https://github.com/skipper-henrik/) besorgt. Verbesserungen und Vorschläge bitte via github.
 
 ## Buch
 
