@@ -11,7 +11,7 @@ PHP bietet Frameworks für beide Arten von BDD.
 
 Mit StoryBDD schreibst Du human-readable stories, die das Verhalten Deiner Anwendung beschreiben.
 Diese Geschichten können dann als Tests mit Deinrer Anwendung ausgeführt werden.
-Das in PHP-Anwendungen für StoryBDD verwendete Framework ist[Behat], welches von Ruby's [Cucumber]-Projekt inspiriert ist und die Gherkin-DSL zur Beschreibung des Funktionsverhaltens implementiert (DSL: Domain Specific Language).
+Das in PHP-Anwendungen für StoryBDD verwendete Framework ist [Behat], welches von Ruby's [Cucumber]-Projekt inspiriert ist und die Gherkin-DSL zur Beschreibung des Funktionsverhaltens implementiert (DSL: Domain Specific Language).
 
 Mit SpecBDD schreibst Du Spezifikationen, die beschreiben, wie sich Dein eigentlicher Code verhalten soll. 
 Anstatt eine Funktion oder Methode zu testen, beschreibst Du, wie sich diese Funktion oder Methode verhalten soll. 
