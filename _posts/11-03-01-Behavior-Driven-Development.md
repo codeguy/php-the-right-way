@@ -3,21 +3,21 @@ isChild: true
 anchor:  behavior_driven_development
 ---
 
-## Behavior Driven Development {#behavior_driven_development_title}
+## Behavior Driven Development (BDD) {#behavior_driven_development_title}
 
-There are two different types of Behavior-Driven Development (BDD): SpecBDD and StoryBDD. SpecBDD focuses on technical
-behavior of code, while StoryBDD focuses on business or feature behaviors or interactions. PHP has frameworks for both
-types of BDD.
+Es gibt zwei verschiedene Arten von BDD: SpecBDD und StoryBDD.
+SpecBDD konzentriert sich auf das technische Verhalten des Codes, während StoryBDD sich auf das geschäftliche Verhalten oder die Interaktion von Funktionen konzentriert.
+PHP bietet Frameworks für beide Arten von BDD.
 
-With StoryBDD, you write human-readable stories that describe the behavior of your application. These stories can then
-be run as actual tests against your application. The framework used in PHP applications for StoryBDD is [Behat], which
-is inspired by Ruby's [Cucumber] project and implements the Gherkin DSL for describing feature behavior.
+Mit StoryBDD schreibst Du human-readable stories, die das Verhalten Deiner Anwendung beschreiben.
+Diese Geschichten können dann als Tests mit Deinrer Anwendung ausgeführt werden.
+Das in PHP-Anwendungen für StoryBDD verwendete Framework ist[Behat], welches von Ruby's [Cucumber]-Projekt inspiriert ist und die Gherkin-DSL zur Beschreibung des Funktionsverhaltens implementiert (DSL: Domain Specific Language).
 
-With SpecBDD, you write specifications that describe how your actual code should behave. Instead of testing a function
-or method, you are describing how that function or method should behave. PHP offers the [PHPSpec] framework for this
-purpose. This framework is inspired by the [RSpec project][Rspec] for Ruby.
+Mit SpecBDD schreibst Du Spezifikationen, die beschreiben, wie sich Dein eigentlicher Code verhalten soll. 
+Anstatt eine Funktion oder Methode zu testen, beschreibst Du, wie sich diese Funktion oder Methode verhalten soll. 
+PHP bietet hierfür das [PHPSpec] - Framework. Dieses Framework ist vom [RSpec project][Rspec]  für Ruby inspiriert.
 
-### BDD Links
+### Weiterführende BDD Links
 
 * [Behat], the StoryBDD framework for PHP, inspired by Ruby's [Cucumber] project;
 * [PHPSpec], the SpecBDD framework for PHP, inspired by Ruby's [RSpec] project;
