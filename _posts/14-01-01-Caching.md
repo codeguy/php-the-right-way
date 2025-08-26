@@ -2,7 +2,8 @@
 anchor: caching
 ---
 
-# Caching {#caching_title}
+# Caching (Zwischenspeicherung) {#caching_title}
 
-PHP is pretty quick by itself, but bottlenecks can arise when you make remote connections, load files, etc. 
-Thankfully, there are various tools available to speed up certain parts of your application, or reduce the number of times these various time-consuming tasks need to run.
+PHP ist an sich ziemlich schnell, aber beim Herstellen von Remoteverbindungen, Laden von Dateien usw. können Engpässe auftreten.
+Glücklicherweise stehen verschiedene Tools zur Verfügung, mit denen Du bestimmte Teile Deiner Anwendung beschleunigen
+oder die Anzahl der Ausführungen dieser verschiedenen zeitaufwändigen Aufgaben reduzieren kannst.
