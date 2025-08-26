@@ -1,5 +1,6 @@
 ---
 anchor: caching
+title:  Caching (Zwischenspeicherung)
 ---
 
 # Caching (Zwischenspeicherung) {#caching_title}
