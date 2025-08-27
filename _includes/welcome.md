@@ -30,7 +30,7 @@ Das Original, _PHP the right way_ wurde in viele Sprachen übersetzt:
 * [Srpski](https://phpsrbija.github.io/php-the-right-way/)
 * [Türkçe](https://hkulekci.github.io/php-the-right-way/)
 * [български](https://bg.phptherightway.com)
-* [Русский язык](https://getjump.github.io/ru-php-the-right-way)
+* [Русский](https://nazares.github.io/php-the-right-way/)
 * [Українська](https://iflista.github.io/php-the-right-way/)
 * [العربية](https://adaroobi.github.io/php-the-right-way/)
 * [فارسى](https://novid.github.io/php-the-right-way/)
