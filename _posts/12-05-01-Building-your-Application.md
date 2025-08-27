@@ -88,17 +88,17 @@ Es lässt sich über den Dienst OpsWorks gut in Amazon Web Services integrieren.
 
 ### Continuous Integration (Kontinuierliche Integration)
 
-> Continuous Integration is a software development practice where members of a team integrate their work frequently,
-> usually each person integrates at least daily — leading to multiple integrations per day. Many teams find that this
-> approach leads to significantly reduced integration problems and allows a team to develop cohesive software more
-> rapidly.
+> Continuous Integration ist eine Softwareentwicklungspraxis, bei der Teammitglieder ihre Arbeit häufig integrieren.
+> In der Regel integriert jede Person mindestens täglich, was zu mehreren Integrationen pro Tag führt.
+>  Viele Teams stellen fest, dass dieser Ansatz die Integrationsprobleme deutlich reduziert und es dem Team ermöglicht, schneller zusammenhängende Software zu entwickeln.
 
 *-- Martin Fowler*
 
-There are different ways to implement continuous integration for PHP. [Travis CI] has done a great job of
-making continuous integration a reality even for small projects. Travis CI is a hosted continuous integration service.
-It can be integrated with GitHub and offers support for many languages including PHP.
-GitHub has continuous integration workflows with [GitHub Actions][github_actions].
+Es gibt verschiedene Möglichkeiten, Continuous Integration für PHP zu implementieren. 
+[Travis CI] hat hervorragende Arbeit geleistet, um Continuous Integration auch für kleine Projekte zu ermöglichen.
+Travis CI ist ein gehosteter Continuous-Integration-Dienst.
+Er lässt sich in GitHub integrieren und bietet Unterstützung für viele Sprachen, darunter auch PHP.
+GitHub bietet Continuous-Integration-Workflows mit [GitHub Actions][github_actions].
 
 #### Further reading:
 
