@@ -1,14 +1,16 @@
 ---
 isChild: true
 anchor:  shared_servers
+title:   Shared Servers (Gemeinsam genutzte Server)
 ---
 
-## Shared Servers {#shared_servers_title}
+## Shared Servers (Gemeinsam genutzte Server) {#shared_servers_title}
 
-PHP has shared servers to thank for its popularity. It is hard to find a host without PHP installed, but be sure it's
-the latest version. Shared servers allow you and other developers to deploy websites to a single machine. The upside to
-this is that it has become a cheap commodity. The downside is that you never know what kind of a ruckus your
-neighboring tenants are going to create; loading down the server or opening up security holes are the main concerns. If
-your project's budget can afford to avoid shared servers, you should.
+PHP verdankt seine Popularität Shared Servern.
+Es ist schwierig, einen Host ohne installiertes PHP zu finden, aber stellen Sie sicher, dass es die neueste PHP-Version ist. 
+Shared Server ermöglichen es Dir und anderen Entwicklern, Websites auf einem einzigen Rechner bereitzustellen.
+Der Vorteil ist, dass es mittlerweile günstig ist. Der Nachteil ist, dass Du nie wissen kannst, welchen Aufruhr Deine Nachbarn (Mitnutzer) verursachen werden; 
+die grösste Sorgen sind die Überlastung des Servers oder das Öffnen von Sicherheitslücken. 
+Wenn Dein Projektbudget es zulässt, Shared Server zu vermeiden, solltest Du dies tun.
 
-Make sure your shared servers are offering the latest versions of PHP.
+Nochmal: Stelle sicher, dass Deine gemeinsam genutzten Server die neuesten PHP-Versionen anbieten.
