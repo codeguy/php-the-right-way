@@ -5,8 +5,7 @@ title:  Virtualisierung
 
 # Virtualisierung {#virtualization_title}
 
-Wenn Du Deine Anwendung in unterschiedlichen Entwicklungs- und Produktionsumgebungen ausführst,
-können bei der Live-Schaltung merkwürdige Fehler auftreten. 
+Wenn Du Deine Anwendung in unterschiedlichen Entwicklungs- und Produktionsumgebungen ausführst,können bei der Live-Schaltung merkwürdige Fehler auftreten. 
 Außerdem ist es schwierig, verschiedene Entwicklungsumgebungen mit der gleichen Version für alle verwendeten Bibliotheken auf dem neuesten Stand zu halten, wenn Du mit einem Entwicklerteam arbeitest.
 
 Wenn Du unter Windows entwickelst und unter Linux (oder anderen Nicht-Windows-Systemen) deployst oder im Team entwickelst,
