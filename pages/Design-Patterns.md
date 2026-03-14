@@ -82,7 +82,7 @@ class NotificationLogger {
     private function __clone(){}
 
     //Prevent unserialisation which would lead to create a new instance
-    private function __wakeup(){}
+    public function __wakeup(){}
 
     //Creates new instance if it does not exist, otherwise it returns the existing instance
     public static function getInstance(){
