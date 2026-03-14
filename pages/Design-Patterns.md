@@ -84,7 +84,7 @@ class NotificationLogger {
     //Prevent unserialisation which would lead to create a new instance
     private function __wakeup(){}
 
-    //Creates new instance if it does not exit, otherwise it returns the existing instance
+    //Creates new instance if it does not exist, otherwise it returns the existing instance
     public static function getInstance(){
         self::$instance =  self::$instance ? self::$instance : new static();
         return self::$instance;
