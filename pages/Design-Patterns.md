@@ -71,27 +71,33 @@ one instance of a particular class. The singleton pattern enables us to do this.
 {% highlight php %}
 <?php
 
-class NotificationLogger {
-    private static $instance;
+final class NotificationLogger {
+    private static ?self $instance = null;
 
-    //The constructor is protected to prevent creating tons of instances
-    protected function __construct()
+    // The constructor is private to prevent creating instances from outside
+    private function __construct()
     {}
 
-    //Prevent cloning the instance
-    private function __clone(){}
+    // Prevent cloning the instance
+    private function __clone(): void {}
 
-    //Prevent unserialisation which would lead to create a new instance
-    public function __wakeup(){}
-
-    //Creates new instance if it does not exist, otherwise it returns the existing instance
-    public static function getInstance(){
-        self::$instance =  self::$instance ? self::$instance : new static();
-        return self::$instance;
+    // Prevent unserialisation which would lead to create a new instance (legacy PHP mechanism, kept for backward compatibility)
+    public function __wakeup(): void {
+        throw new \LogicException("Cannot unserialize singleton");
     }
 
-    public function log(string $message){
-        echo "[SINGLETON LOG] $message";
+    // Prevent unserialisation (modern PHP mechanism)
+    public function __unserialize(array $data): void {
+        throw new \LogicException("Cannot unserialize singleton");
+    }
+
+    // Creates new instance if it does not exist, otherwise it returns the existing instance
+    public static function getInstance(): self {
+        return self::$instance ??= new self();
+    }
+
+    public function log(string $message): void {
+        echo "[SINGLETON LOG] {$message}";
     }
 }
 
@@ -99,7 +105,7 @@ class NotificationLogger {
 $logger1 = NotificationLogger::getInstance();
 $logger2 = NotificationLogger::getInstance();
 
-// prove they are the same instance
+// Prove they are the same instance
 var_dump($logger1 === $logger2); // bool(true)
 $logger1->log("Application started");
 
