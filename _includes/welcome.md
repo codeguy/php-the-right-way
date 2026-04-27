@@ -20,7 +20,7 @@ and examples as they become available.
 _PHP: The Right Way_ is translated into many different languages:
 
 * [English](https://www.phptherightway.com)
-* [Español](https://phpdevenezuela.github.io/php-the-right-way)
+* [Español](https://es.phptherightway.com)
 * [Français](https://eilgin.github.io/php-the-right-way/)
 * [Indonesia](https://id.phptherightway.com)
 * [Italiano](https://it.phptherightway.com)
