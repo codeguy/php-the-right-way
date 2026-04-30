@@ -13,6 +13,8 @@ This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 
 _PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
 developers know where to find good information!
+PHP is a popular general-purpose scripting language that is especially suited to web development.
+
 
 [See Banner Images](https://www.phptherightway.com/banners.html)
 
