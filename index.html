@@ -3,7 +3,9 @@ layout: default
 sitemap: true
 ---
 
-{% capture welcome_content %}{% include welcome.md %}{% endcapture %}
+{% capture welcome_content %}
+{% include welcome.md %}
+{% endcapture %}
 <section class="chapter" id="welcome">
     {{ welcome_content|markdownify }}
 </section>
@@ -11,6 +13,7 @@ sitemap: true
 {% capture backtotop %}[Back to Top](#top){:.top}{% endcapture %}
 {% for post in site.posts reversed %}
 {% if post.isChild != true and loop.first != true %}<div class="back-to-top">{{ backtotop|markdownify }}</div>{% endif %}
+
 <section class="chapter" id="{{ post.anchor }}">
     {{ post.content }}
 </section>
