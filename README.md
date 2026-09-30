@@ -38,6 +38,7 @@ You should read the `CONTRIBUTING.md` file for precise instructions and tips. Bu
 * [English](https://www.phptherightway.com)
 * [Español](https://phpdevenezuela.github.io/php-the-right-way)
 * [Français](https://eilgin.github.io/php-the-right-way/)
+* [German](https://skipper-henrik.github.io/php-the-right-way/)
 * [Indonesia](https://id.phptherightway.com)
 * [Italiano](https://it.phptherightway.com)
 * [Polski](https://pl.phptherightway.com)
