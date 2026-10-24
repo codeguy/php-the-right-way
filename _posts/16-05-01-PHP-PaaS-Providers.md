@@ -20,6 +20,7 @@ anchor:  php_paas_providers
 * [IBM Cloud](https://cloud.ibm.com/docs/openwhisk?topic=openwhisk-prep#prep_php)
 * [Lumen](https://www.lumen.com/)
 * [Microsoft Azure](https://azure.microsoft.com/)
+* [Pethost](https://pethost.dev/blog/deploy-php-app/)
 * [Pivotal Web Services](https://network.pivotal.io/)
 * [Platform.sh](https://platform.sh/)
 * [Red Hat OpenShift](https://www.openshift.com/)
